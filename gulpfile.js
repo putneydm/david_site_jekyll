@@ -40,44 +40,46 @@ var mainBowerFiles = require('main-bower-files');
 
 var paths = {
   pageTemplates : {
-   input : 'source/templates/{*.html,*shtml}',
-   testing: 'site/templates',
-   dist : 'dist/templates'
+   input : 'src/templates/{*.html,*shtml}',
+   testing: 'test/_layouts/'
+  //  dist : 'dist/templates'
   },
   scripts : {
-    input : 'source/scripts/**/*.js',
-    exclude : 'source/scripts/exclude/*.js',
-    bower : 'source/scripts/bower_components/**/*.js',
-    vendor : 'source/scripts/vendor/*.js',
-    testing : 'site/scripts/',
+    input : 'src/scripts/**/*.js',
+    exclude : 'src/scripts/exclude/*.js',
+    bower : 'src/scripts/bower_components/**/*.js',
+    vendor : 'src/scripts/vendor/*.js',
+    testing : 'test/scripts/',
     dist : 'dist/scripts/'
   },
   bower : {
-   components : 'source/scripts/bower_components',
-   json : 'source/scripts/bower.json',
-   vendor : 'source/scripts/vendor/'
+   components : 'src/scripts/bower_components',
+   json : 'src/scripts/bower.json',
+   vendor : 'src/scripts/vendor/'
   },
   styles : {
-    input : 'source/sass/*.scss',
-    exclude : '!source/sass/partials/*scss',
-    testing : 'site/css',
+    input : 'src/sass/styles.scss',
+    inputInline : 'src/sass/{blog_embedded_styles.scss,index_embeded_styles.scss,main_embedded_styles.scss}',
+    outputInline : 'src/inline_css',
+    exclude : '!src/sass/partials/*.scss',
+    testing : 'test/css',
     dist : 'dist/css',
     watch : 'source/sass/**/*.scss'
   },
   images : {
-    input : 'source/photos_in/{*.jpg, *.tiff, *.png}',
-    output : 'source/photos_out/',
-    testing : 'site/siteart/',
+    input : 'src/photos_in/{*.jpg,*.tiff,*.png}',
+    output : 'src/photos_out/',
+    testing : 'test/siteart/',
     dist : 'dist/siteart/'
   },
   svg : {
-    input : 'source/svg/*.svg',
-    testing : 'site/svg/',
-    dist : 'dist/svg/'
+    input : 'src/svg/*.svg',
+    // testing : 'test/svg/',
+    // dist : 'dist/svg/'
   },
   fonts : {
-    input : 'source/fonts/*.css',
-    testing : 'site/fonts/',
+    input : 'src/fonts/*.css',
+    testing : 'test/fonts/',
     dist : 'dist/fonts/'
   }
 };
