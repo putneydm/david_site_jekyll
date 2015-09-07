@@ -6,15 +6,15 @@ This repo contains only source. Dependencies must be installed it and must be bu
 
 ## Install
 
-* npm install to install gulp dependencies
-* bower install to install bower dependencies
-* gulp to build test and dist folders
+* `npm install` to install gulp dependencies
+* `bower install` to install bower dependencies
+* `gulp` to build test and dist folders
 * install jekyll in test folders
-* gulp listen to listen for changes and update the site
+* `gulp listen` to listen for changes and update the site
 
 ## Use
 
-* gulp listen builds out the site for deployment
+* `gulp listen` builds out the site for deployment
 
 
 ## Structure
