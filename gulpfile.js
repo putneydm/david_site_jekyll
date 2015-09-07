@@ -1,5 +1,5 @@
 
-var gulp = require('gulp'); // Lead with Gulp because all tasks will need it
+var gulp = require('gulp');
 
 //scripts
 var concat = require('gulp-concat');
@@ -22,9 +22,7 @@ var cssBase64 = require('gulp-css-base64');
 
 //utility
 var rename = require('gulp-rename');
-//var copy = require('gulp-copy');
 var clean = require('gulp-rimraf');
-//var filter = require('gulp-filter');
 var stylish = require('jshint-stylish');
 var rename = require('gulp-rename');
 var watch = require('gulp-watch');
@@ -89,7 +87,7 @@ var paths = {
 gulp.task('templates', function() {
    gulp.src(paths.pageTemplates.input)
    .pipe(gulp.dest(paths.pageTemplates.testing))
-   .pipe(gulp.dest(paths.pageTemplates.dist));
+  //  .pipe(gulp.dest(paths.pageTemplates.dist));
 });
 
 // concatenates scripts, but not items in exclude folder. includes vendor folder
@@ -126,7 +124,7 @@ gulp.task('css', function() {
       browsers: ['last 2 versions'],
       cascade: false
    }))
-   .pipe(gulp.dest(paths.styles.testing))
+    .pipe(gulp.dest(paths.styles.testing))
     .pipe(minifyCSS({
       keepBreaks:false
     }))
@@ -157,8 +155,8 @@ gulp.task('svg', function () {
             basename: 'svgsprite',
             extname: '.svg'
         }))
-        .pipe(gulp.dest(paths.svg.testing))
-        .pipe(gulp.dest(paths.svg.dist));
+        // .pipe(gulp.dest(paths.svg.testing))
+        // .pipe(gulp.dest(paths.svg.dist));
 });
 
 // moves bower dependencies to vendor
@@ -174,37 +172,6 @@ gulp.task('bower', function() {
 
 // creates blog images in four sizes, minifies, moves to testing and dist
 gulp.task('blog-images', function () {
-
- // x-Large images
-  // gulp.src(paths.images.input)
-  //   .pipe(gm(function (gmfile) {
-  //     return gmfile.setFormat('jpg'),
-  //            gmfile.resample(72, 72),
-  //            gmfile.thumbnail(900, '530!'),
-  //            gmfile.quality(82),
-  //            gmfile.filter('triangle'),
-  //            gmfile.unsharp('0.25x0.25+8+0.065'),
-  //            gmfile.interlace('none'),
-  //            gmfile.colorspace('sRGB'),
-  //            gmfile.crop(900, 530, 0, 0);
-  //     }, {
-  //       imageMagick: true
-  //     }
-  //   ))
-  //
-  //   // Crunches Images
-  //   .pipe(imagemin({
-  //     progressive: true,
-  //     use: [jpegtran()]
-  //   }))
-  //
-  //   // Renames Images
-  //   .pipe(rename({
-  //     prefix: 'xlarge_'
-  //   }))
-  //
-  //   .pipe(gulp.dest(paths.images.testing))
-  //   .pipe(gulp.dest(paths.images.dist));
 
   // Large images
   gulp.src(paths.images.input)
@@ -461,8 +428,6 @@ gulp.task('hero', function () {
    gulp.src(paths.images.input)
    .pipe(clean())
    .pipe(gulp.dest(paths.images.output));
-
-
 });
 
 
@@ -676,6 +641,7 @@ gulp.task('listen', function () {
     // css
         gulp.watch(paths.styles.watch).on('change', function(file) {
         gulp.start('css');
+        gulp.start('css-inline');
       //  gulp.start('refresh');
     });
 
