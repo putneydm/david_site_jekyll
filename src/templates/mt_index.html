@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<title>David Putney | This is my site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+	<$mt:Var name="og_title" value="David Putney design portfolio"$>
+	<$mt:Var name="og_description" value="I’m David Putney, a web designer and developer living in the Boston, Mass. area. I specialize in UI/UX, and designing and building media and content-driven websites."$>
+	<$mt:Var name="og_keywords" value="David Putney, design, portfolio, web development, front-end developer, web design, mobile first, responsive design, HTML, CSS, jQuery"$>
+	<$mt:Var name="og_image" value="http://www.davidputney.com/siteart/med_hero_index.jpg"$>
+	<$mt:Var name="og_url" value="http://davidputney.com/"$>
+	<$mt:Include module="meta_tags"$>
+<style type="text/css" media="all">
+    <$mt:Include module="embedded_CSS_main"$>
+		<$mt:Include module="embedded_CSS_index"$>
+
+</style>
+<noscript>
+<style>
+	.hero-art {background-image:url("siteart/hero_index.jpg");}
+	@media screen and (max-width: 50em){.hero-art{background-image:url("siteart/sm_hero_index.jpg")}
+</style>
+</noscript>
+<$mt:Include module="css_links"$>
+<$mt:Include module="fonts_links"$>
+</head>
+<body id="index-page" class="one" data-pagetype="index-page">
+	<div class="svg-import hidden" aria-hidden="true">
+	<$mt:Include module="svg_icons"$>
+	</div>
+	<ul class="hidden">
+		<li><a href="#nav-start">Skip to navigation</a></li>
+		<li><a href="#main">Skip to content</a></li>
+	</ul>
+
+
+
+<header class="large-billboard">
+		<$mt:Include module="page_header"$>
+		<div id="hero-image" class="hero-art backgound-set  filter-me" data-image="index">
+			<h1 class="main-header-nameplate" id="main-header-nameplate">David Putney</h1>
+		<nav class="clearfix">
+			<ul id="navigation-menu" class="nav-menu-display">
+     		<$mt:Include module="nav_links"$>
+			</ul>
+		</nav>
+			<svg class="hero-art-curve">
+					<use xlink:href="#inside_page_mask" />
+				</svg>
+			</span>
+		</div>
+		</header>
+
+<main id="main">
+		<h2 class="triple-module-head" id="main-subhead">Hi. I&#146;m <span itemprop="name">David Putney</span>. I do <span itemprop="title">UI/UX, visual design and front-end web development</span> in the <span itemprop="locality">Boston</span> area. I specialize in designing and building beautiful and functional media and content-driven websites.</h2>
+
+<section class="teaser-module-container">
+	<mt:Var name="page" value="index">
+	<$mt:Include module="blog_module"$>
+</section>
+<section class="teaser-module-container">
+	<h2 class="section-header-index"><a href="archive/design.html" rel="next">Design</a></h2>
+	<p class="page-subhead">Portfolio of professional sites I designed or developed.</p>
+<$mt:Var name="counter" value="0"$>
+    <mt:Entries category="Design" include_blogs="2">
+		<mt:If tag="EntryDataType" eq="header">
+		<mt:If name="counter" lt="2">
+			<$mt:Var name="page_category" value="design"$>
+			<$mt:Include module="front_page_teaser"$>
+			<$mt:SetVar name="counter" op="+" value="1"$>
+		</mt:if>
+	</mt:if>
+    </mt:Entries>
+	<a href="archive/design.html" class="button">Additional design work
+		<span aria-hidden="true">
+			<svg class="button-icon">
+			  <use xlink:href="#arrow-right" />
+			</svg>
+		</span>
+	</a>
+</section>
+<section class="teaser-module-container">
+	<h3 class="section-header-index"><a href="archive/design.html" rel="next"> Projects </a></h3>
+	<p class="page-subhead">Portfolio of hackathon entries or sites that I made for fun.</p>
+    <$mt:Var name="counter" value="0"$>
+    <mt:Entries category="Projects" include_blogs="2">
+		<mt:If tag="EntryDataType" eq="header">
+			<mt:If name="counter" lt="2">
+				<$mt:Var name="page_category" value="projects"$>
+				<$mt:Include module="front_page_teaser"$>
+				<$mt:SetVar name="counter" op="+" value="1"$>
+			</mt:if>
+		</mt:if>
+    </mt:Entries>
+	<a href="archive/design.html" class="button">Additional projects
+	<span aria-hidden="true">
+		<svg class="button-icon">
+		  <use xlink:href="#arrow-right" />
+		</svg>
+    </span>
+	</a>
+</section>
+</main>
+<$mt:Include module="footer"$>
+</body>
+<$mt:Include module="js_links"$>
+</html>

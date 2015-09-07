@@ -1,0 +1,11 @@
+dist/
+test/
+source/scripts/vendor/
+src/scripts/bower_components/
+src/photos_out/
+src/photos_in/
+node_modules/
+src/sass/bourbon/
+bower_components/
+
+npm-debug.log

@@ -1,0 +1,40 @@
+<aside id="blog-teaser-wrapper" class="blog-teaser-wrapper">
+<ul class="blog-teaser-list">
+	<mt:Entries category="blog entry/promote" lastn="1" unique="1" random="1">
+	<li class="blog-teaser-item blog-teaser-highlight">
+		<a href="<mt:entrypermalink>" rel="canonical">
+		<figure class="blog-teaser-image med-photo-overlay">
+		<mt:If tag="EntryDataImage_one">
+		<img src="<$mt:BlogArchiveURL$>siteart/xsmall_<mt:EntryDataImage_one>.jpg" alt="<mt:If tag="EntryDataImage_alt"><mt:EntryDataImage_alt></mt:If>">
+		</mt:If>
+		</figure>
+		<mt:If tag="EntryDataPromo_blurb">
+			<h4 class="blog-teaser-hed"><mt:EntryDataPromo_blurb  smarty_pants="1">
+			<svg class="teaser-arrow-icon">
+				<use xlink:href="#arrow-right" />
+			</svg>
+		</h4>
+		</mt:If>
+		</a>
+	</li>
+	</mt:Entries>
+	<mt:Entries category="blog entry AND NOT promote" lastn="3" unique="1">
+<li class="blog-teaser-item blog-teaser-highlight">
+		<a href="<mt:entrypermalink>" rel="canonical">
+		<figure class="blog-teaser-image med-photo-overlay">
+		<mt:If tag="EntryDataImage_one">
+		<img src="<$mt:BlogArchiveURL$>siteart/xsmall_<mt:EntryDataImage_one>.jpg" alt="<mt:If tag="EntryDataImage_alt"><mt:EntryDataImage_alt></mt:If>">
+		</mt:If>
+		</figure>
+		<mt:If tag="EntryDataPromo_blurb">
+			<h4 class="blog-teaser-hed"><mt:EntryDataPromo_blurb  smarty_pants="1">
+				<svg class="teaser-arrow-icon">
+				  <use xlink:href="#arrow-right" />
+				</svg>
+			</h4>
+		</mt:If>
+		</a>
+	</li>
+	</mt:Entries>
+</ul>
+</aside>

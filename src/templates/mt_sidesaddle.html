@@ -1,0 +1,38 @@
+<article class="sidesaddle-module">		
+	<header><h2 class="section-header"><span>~ </span><mt:EntryTitle><span> ~</span></h2></header>
+	 <mt:If tag="EntryDataImage_one">      
+		<$mt:EntryDataImage_one setvar="image_one"$>             
+	 </mt:If>     
+	<mt:If tag="EntryDataImage_two">      
+		<$mt:EntryDataImage_two setvar="image_two"$>             
+	</mt:If>       
+	<mt:If tag="EntryDataImage_three">      
+		<$mt:EntryDataImage_three setvar="image_three"$>             
+	</mt:If> 
+<$mt:EntryDataSlideshow setvar="value"$>              
+	<mt:If name="value" eq="1">
+		<figure class="sidesaddle-module-image slideshow wide-photo-overlay">
+			<div class="slide-container" id="slideshow">
+				<div>
+					<img src="<$mt:BlogURL$>siteart/slide_one_<$mt:Var name="image_one"$>.jpg" alt="" class="slide-one"/>
+				</div>
+				<div>
+				<img src="<$mt:BlogURL$>siteart/slide_two_<$mt:Var name="image_one"$>.jpg" alt="" class="slide-two"/></div>
+			</div>
+		</figure> 
+       
+<mt:Else>   
+	<figure class="sidesaddle-module-image wide-photo-overlay">			
+		<picture>
+			<source srcset="<$mt:BlogURL$>siteart/shallow_small_<$mt:Var name="image_one"$>.jpg" media="(min-width: 750px)">
+			<source srcset="<$mt:BlogURL$>siteart/shallow_xsmall_<$mt:Var name="image_one"$>.jpg" media="(min-width: 551px)">
+			<source srcset="<$mt:BlogURL$>siteart/shallow_small_<$mt:Var name="image_one"$>.jpg" media="(min-width: 350px)">
+			<source srcset="<$mt:BlogURL$>siteart/shallow_xsmall_<$mt:Var name="image_one"$>.jpg">
+			<img src="<$mt:BlogURL$>siteart/shallow_small_<$mt:Var name="image_one"$>.jpg" class="lazyload" alt="">
+		</picture>  						
+	</figure>			
+</mtIf>  		
+	<div class="sidesaddle-module-textblock clearfix">
+		<mt:EntryBody>
+	</div>
+</article>

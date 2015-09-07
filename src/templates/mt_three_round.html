@@ -1,0 +1,26 @@
+<article>
+	<header><h2 class="section-header"><span>~</span> <$mt:EntryTitle smarty_pants="1"$> <span>~</span></h2></header>
+    <p class="big-image-module-text-block"><$mt:EntryBody smarty_pants="1"$></p>
+
+<mt:If tag="EntryDataImage_one"><$mt:EntryDataImage_one setvar="image_one"$></mt:If> 
+<mt:If tag="EntryDataImage_two"><$mt:EntryDataImage_two setvar="image_two"$></mt:If>   
+<mt:If tag="EntryDataImage_three"><$mt:EntryDataImage_three setvar="image_three"$></mt:If> 
+                    
+<ul class="triple-module-portfolio clearfix">		
+	<li>
+	<figure class="triple-module-image-portfolio round-photo-overlay">
+		<img src="<$mt:BlogURL$>siteart/square_<$mt:Var name="image_one"$>.jpg" class="lazyload" alt="">
+	</figure>
+	</li>
+	<li>
+	<figure class="triple-module-image-portfolio round-photo-overlay">
+		<img src="<$mt:BlogURL$>siteart/square_<$mt:Var name="image_two"$>.jpg" class="lazyload" alt="">
+	</figure>
+	</li>		
+	<li>
+	<figure class="triple-module-image-portfolio round-photo-overlay">
+		<img src="<$mt:BlogURL$>siteart/square_<$mt:Var name="image_three"$>.jpg" class="lazyload" alt="">
+	</figure>
+	</li>		
+</ul>          
+</article>	

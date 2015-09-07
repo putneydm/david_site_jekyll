@@ -1,0 +1,29 @@
+<mt:EntryCategories>
+<$mt:ArchiveLink type="Category" setvar="page_link"$>
+</mt:EntryCategories>
+
+
+
+<article class="teaser-module clearfix">
+		<header>
+        <h4 class="teaser-module-head"><a href="<$mt:Var name="page_link"$>" rel="next"><$mt:EntryTitle$></a></h4>
+		</header>
+
+		<div class="teaser-module-abstract">
+		<p><$mt:EntryBody strip_tags="1" smarty_pants="1"$> <a href="<$mt:Var name="page_link"$>" rel="next" class="teaser-module-abstract-link">More </a></p>
+		</div>
+
+		<a href="<$mt:Var name="page_link"$>" rel="next">
+		<div class="teaser-module-art">
+		<figure class="teaser-module-mainart med-photo-overlay">
+
+			<picture>          
+				<source srcset="<$mt:BlogArchiveURL$>siteart/large_<mt:EntryDataImage_one>.jpg" media="(min-width:550px)">
+				<source srcset="<$mt:BlogArchiveURL$>siteart/med_<mt:EntryDataImage_one>.jpg" media="(min-width:350px)">
+				<source srcset="<$mt:BlogArchiveURL$>siteart/xsmall_<mt:EntryDataImage_one>.jpg">
+				<img src="<$mt:BlogArchiveURL$>siteart/med_<mt:EntryDataImage_one>.jpg" alt="">
+			</picture>	  
+		</figure>				
+		</a>
+	
+	</article>

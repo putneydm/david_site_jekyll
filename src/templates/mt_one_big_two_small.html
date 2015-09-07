@@ -1,0 +1,46 @@
+<article class="big-image-module">
+	<header><h2 class="section-header"><span>~</span> <$mt:EntryTitle$> <span>~</span></h2></header>	
+	<div class="big-image-module-text-block">
+		<$mt:EntryBody$>	
+	</div>    
+<mt:If tag="EntryDataImage_one">      
+	<$mt:EntryDataImage_one setvar="image_one"$>             
+</mt:If>     
+<mt:If tag="EntryDataImage_two">      
+	<$mt:EntryDataImage_two setvar="image_two"$>             
+</mt:If>       
+<mt:If tag="EntryDataImage_three">      
+	<$mt:EntryDataImage_three setvar="image_three"$>             
+</mt:If>    
+<div class="big-image-module-image-container clearfix">
+	<figure class="big-image-module-main slide-show">
+		<div class="med-photo-overlay"></div>
+		<picture>
+			<source srcset="<$mt:BlogURL$>siteart/large_<$mt:Var name="image_one"$>.jpg" media="(min-width: 450px)">
+			<source srcset="<$mt:BlogURL$>siteart/med_<$mt:Var name="image_one"$>.jpg">
+			<img src="<$mt:BlogURL$>siteart/large_<$mt:Var name="image_one"$>.jpg" class="lazyload" alt="">
+		</picture>  
+	</figure>
+	<div class="big-image-module-secondary-container ">	
+	<figure class="big-image-module-secondary wide-photo-overlay">
+		<picture>
+			<source srcset="<$mt:BlogURL$>siteart/shallow_small_<$mt:Var name="image_two"$>.jpg" media="(min-width: 900px)">
+			<source srcset="<$mt:BlogURL$>siteart/shallow_xsmall_<$mt:Var name="image_two"$>.jpg" media="(min-width: 600px)">
+			<source srcset="<$mt:BlogURL$>siteart/shallow_small_<$mt:Var name="image_two"$>.jpg" media="(min-width: 350px)">
+			<source srcset="<$mt:BlogURL$>siteart/shallow_xsmall_<$mt:Var name="image_two"$>.jpg">
+			<img src="<$mt:BlogURL$>siteart/shallow_small_<$mt:Var name="image_two"$>.jpg" class="lazyload" alt="">
+		</picture>  	
+	</figure>
+			
+	<figure class="big-image-module-secondary wide-photo-overlay">	
+		<picture>
+			<source srcset="<$mt:BlogURL$>siteart/shallow_small_<$mt:Var name="image_three"$>.jpg" media="(min-width: 900px)">
+			<source srcset="<$mt:BlogURL$>siteart/shallow_xsmall_<$mt:Var name="image_three"$>.jpg" media="(min-width: 600px)">
+			<source srcset="<$mt:BlogURL$>siteart/shallow_small_<$mt:Var name="image_three"$>.jpg" media="(min-width: 350px)">
+			<source srcset="<$mt:BlogURL$>siteart/shallow_xsmall_<$mt:Var name="image_three"$>.jpg">
+			<img src="<$mt:BlogURL$>siteart/shallow_small_<$mt:Var name="image_three"$>.jpg" class="lazyload" alt="">
+		</picture>  	
+	</figure>				
+	</div>
+</div>
+</article>

@@ -1,0 +1,92 @@
+.no-multiplebgs
+{
+	.hero-art
+	{
+	width:1300px;
+	margin:0 auto;
+	position:relative;
+	background-image:url('../siteart/cruxbg_ie.jpg');
+	overflow:hidden;
+	background-size:100%;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../siteart/cruxbg_ie.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../siteart/cruxbg_ie.jpg', sizingMethod='scale')";
+	}
+}
+
+.no-svg
+	{
+	
+		.svg-container
+		{
+		display:none;
+		}
+	
+		.svg-fallback
+		{
+		display:block;
+		width:78px;
+		height:58px;
+		margin:0 auto;
+		background-repeat:no-repeat;
+		background-position:center center;
+		}
+		
+		.rocket
+		{
+		background-image:url('../siteart/rocket.png');	
+		}
+
+		.wrench
+		{
+		background-image:url('../siteart/wrench.png');	
+		}
+		
+		.code
+		{
+		background-image:url('../siteart/code.png');	
+		}
+		
+		.footer-links	
+			{
+			
+			li
+			{
+			background-repeat:no-repeat;
+			background-position:center center;
+
+			a
+			{
+
+			
+			}
+
+
+			}
+			
+			.twitter-link
+			{
+			background-image:url('../siteart/twitter.png');		
+			}
+			
+			.mail-link
+			{
+			background-image:url('../siteart/mail.png');		
+			}	
+			
+			.facebook-link
+			{
+			background-image:url('../siteart/mail.png');
+			border:1px solid red;
+			}
+			
+			.github-link
+			{
+			background-image:url('../siteart/github.png');	
+			border:1px solid red;
+			}			
+			
+			}
+		
+	
+	}
+	

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<title>David Putney | <mt:EntryTitle></title>
+<!-- this is a page -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="shortcut icon" href="http://www.davidputney.com/favicon.ico" />
+
+<mt:EntryBody smarty_pants="0" words="300" setvar="og_description"$>
+<mt:EntryTitle smarty_pants="0" setvar="og_title"$>
+<mt:EntryPermalink smarty_pants="0" setvar="og_url"$>
+<$mt:Var name="og_content" value="article"$>
+<mt:If tag="EntryDataImage_one">
+
+<mt:EntryDataImage_one smarty_pants="0" setvar="og_image"$>
+<$mt:Var name="og_image" value="http://www.davidputney.com/siteart/large_" prepend="1"$>
+<$mt:Var name="og_image" value=".jpg" append="1"$>
+<mt:Else>
+<$mt:Var name="og_image" value="http://www.davidputney.com/siteart/sm_hero_blog.jpg"$>
+</mt:If>
+
+<$mt:Include module="meta_tags"$>
+
+<style rel="stylesheet" type="text/css" media="all">
+<$mt:Include module="embedded_CSS_main"$>
+<$mt:Include module="blog_embedded_styles"$>
+</style>
+
+<$mt:Include module="fonts_links"$>
+<$mt:Include module="css_links"$>
+</head>
+
+<body data-pagetype="blog-entry">
+<div class="svg-import hidden" aria-hidden="true">
+	<$mt:Include module="svg_icons"$>
+</div>
+
+<header class="no-billboard">
+ <$mt:Include module="page_header"$>
+</header>
+
+<main id="main">
+
+<div id="blog-container" class="blog-container blog-single-entry">
+
+<article class="blog-entry">
+
+<mt:If tag="EntryDataImage_one">
+<$mt:Include module="blog_image"$>
+</mt:If>
+
+	<h1 class="blog-headline"><mt:EntryTitle smarty_pants="1"></h1>
+
+    <p class="blog-entry-date"><mt:EntryDate format="%A, %b %e, %Y"></p>
+
+<div class="blog-entry-text">
+<mt:EntryBody smarty_pants="1">
+
+<mt:If tag="EntryDataPull_quote">
+<aside class="blog-pullquote">
+<q><mt:EntryDataPull_quote smarty_pants="1"></q>
+</aside>
+</mt:If>
+<mt:EntryMore smarty_pants="1">
+</div>
+<footer class="blog-entry-footer">
+<mt:If tag="EntryDataFootnotes">
+<$mt:Include module="footnotes"$>
+<$mt:Include module="footnote_return"$>
+</mt:If>
+<$mt:Include module="blog_sig"$>
+	<ul class="blog-tags">
+<mt:EntryTags>
+    <li><a href="<$mt:TagSearchLink$>" rel="tag"><mt:TagName></a></li>
+</mt:EntryTags>
+	</ul>
+
+<$mt:Include module="blog_entry_teasers_inside"$>
+
+<mt:ignore>
+<!--
+<ul class="blog-related-links-list">
+<mt:EntryNext by_category="1">
+<li><span class="blog-related-links-label">Next </span><a href="<$mt:EntryPermalink$>" rel="next"><mt:entrytitle smarty_pants="1"></a></li>
+</mt:EntryNext>
+<mt:EntryPrevious by_category="1">
+<li><span class="blog-related-links-label">Previous </span><a href="<$mt:EntryPermalink$>" rel="prev"><mt:entrytitle smarty_pants="1"></a></li>
+</mt:EntryPrevious>
+</ul>
+-->
+</mt:ignore>
+</footer>
+</article>
+
+
+
+</div>
+
+</main>
+    <$mt:Include module="footer"$>
+</body>
+<$mt:Include module="js_links"$>
+<$mt:Include module="google_analytics"$>
+</html>

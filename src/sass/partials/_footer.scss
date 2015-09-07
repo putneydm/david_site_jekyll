@@ -1,0 +1,208 @@
+.site-footer {
+	height:330px;
+	width:100%;
+	//background-color:#f6f5f1;
+	display:block;
+//	 box-shadow: 0 0 40px 15px rgba($med, .4);
+	}
+.site-footer-inactive {
+	opacity:0;
+	}
+.site-footer-active {
+	opacity:1;
+	transition:opacity .3s ease-in;
+	transition-delay: .5s;
+	}
+.footer-links {
+	width:100%;
+	margin:0 0 rem(50) 0;
+	position:relative;
+	display:flex;
+	justify-content: center;
+	li {
+		width:rem(55);
+		height:rem(55);
+		margin:0 rem(20) 0;
+		box-shadow:0px 0px 30px 15px rgba($med, .3);
+		flex-grow:0;
+		border-radius:50%;
+		background-color:white;
+		text-align:center;
+		overflow:hidden;
+		a {
+		display:block;
+		width:55px;
+		height:55px;
+		transition:background-color .2s ease-in;
+		background-image:none;
+			&:hover {
+			background-color:$aqua;
+			color:white;
+				.footer-icon { fill:white }
+		}
+	}
+	@media screen and (max-width:em(400)) { margin:40px 10px 0;		}
+}
+}
+.footer-icon {
+	width:rem(20);
+	height:rem(20);
+	fill:$aqua;
+	transition: fill .2s;
+	margin-top:rem(18);
+}
+//.mail-icon {fill:red;}
+
+.site-footer-inactive {
+	.mail-link {
+		opacity:0;
+		transform: scale(.1,.1);
+	}
+	.twitter-link {
+		opacity:0;
+		transform: scale(.1,.1);
+	}
+	.facebook-link {
+		opacity:0;
+		transform: scale(.1,.1);
+	}
+	.github-link {
+		opacity:0;
+		transform: scale(.1,.1);
+	}
+}
+
+.site-footer-active {
+	.mail-link {
+		opacity:1;
+		transition:opacity 0 .5s ease-in;
+		transform: scale(1,1);
+		transition-duration: .4s;
+		transition-delay: .5s;
+		transition-timing-function: cubic-bezier(.91,-0.01,.29,1.84);
+	}
+	.twitter-link {
+		opacity:1;
+		transition:opacity 0 .7s ease-in;
+		transform: scale(1,1);
+		transition-duration: .4s;
+		transition-delay: .7s;
+		transition-timing-function: cubic-bezier(.91,-0.01,.29,1.84);
+	}
+	.facebook-link {
+		opacity:1;
+		transition:opacity 0 .9s ease-in;
+		transform: scale(1,1);
+		transition-duration: .4s;
+		transition-delay: .9s;
+		transition-timing-function: cubic-bezier(.91,-0.01,.29,1.84);
+	}
+	.github-link {
+		opacity:1;
+		transition:opacity 0 1.1s ease-in;
+		transform: scale(1,1);
+		transition-duration: .4s;
+		transition-delay: 1.1s;
+		transition-timing-function: cubic-bezier(.91,-0.01,.29,1.84);
+	}
+}
+
+@keyframes linksBounce {
+    0%   {top:0;height:55px}
+    50%  {top:-20px;height:55px}
+    85%  {top:15px;height:10px}
+    100% {top:0;height:55px; scale: 1;}
+}
+.scroll-to-top {
+	position:fixed;
+	right:15px;
+	bottom:30px;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	background-color:$aqua;
+	text-align:center;
+	line-height:40px;
+	color:white;
+	opacity:0;
+	display:none;
+	background-image:none;
+	z-index:1;
+	@media screen and (max-width:rem(900)) {display:block;}
+		&:hover {
+			color:white;
+			background-image:none;
+			background-color:$dark-aqua;
+			transition:background-color .2s;
+		}
+	}
+	.scroll-up-icon {width:rem(10);height:rem(10);fill:white;}
+
+.scroll-to-top-inactive {
+	opacity:0;
+	transition:opacity .2s ease-in;
+}
+.scroll-to-top-active {
+	opacity:.9;
+	transition:opacity .2s ease-in;
+	}
+.footer-tagline {
+	color:$med;
+	font-size:em(11);
+	text-align:center;
+	margin:0 20px 5px;
+	padding:0;
+}
+.svg-import {
+	height:0;
+	width:0;
+	overflow:hidden;
+}
+.footer-navigation-menu {
+	width:100%;
+	text-align:center;
+	margin:0 auto 40px;
+	background-image: linear-gradient(to bottom, transparent 75%, $med 75%);
+	background-size: 60% 2px;
+	background-origin: padding-box;
+	background-position: center 100%;
+	background-repeat: no-repeat;
+	padding:0 0 25px;
+		@media screen and (max-width:em(420)){
+		margin:0px auto 20px;
+		}
+	li {
+		display:inline-block;
+		font-family:$sans;
+		font-size:em(20);
+		margin:40px 0 0;
+		text-transform:capitalize;
+		font-weight:700;
+			@media screen and (max-width:em(450))	{
+			font-size:em(16);
+			}
+			&:after {
+			content:' | ';
+			display:inline-block;
+			margin:0 15px;
+			color:$light;
+			letter-spacing: -.2em;
+				@media screen and (max-width:em(420)){
+				margin:0 5px;
+				}
+			}
+			&:nth-child(4){
+				&:after	{content:''; margin:0px;}
+			}
+			@media screen and (max-width:em(420)) {
+				margin:20px 0 0;
+				font-size:em(16);
+			}
+		a {
+			color:$med;
+			background:none;
+			text-shadow:none;
+			&:hover { color:$aqua;}
+		}
+	}
+}

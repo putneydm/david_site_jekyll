@@ -1,0 +1,21 @@
+{
+  "name": "scripts",
+  "version": "0.0.0",
+  "authors": [
+    "putneydm <david@davidputney.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lazysizes": "~1.1.3",
+    "picturefill": "~2.3.1",
+    "respond": "~1.4.2",
+    "html5shiv": "~3.7.2"
+  }
+}

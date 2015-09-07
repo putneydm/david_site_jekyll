@@ -1,0 +1,31 @@
+<aside class="reefers">
+<h2 class="reefers-head">MORE PROJECTS</h2>
+
+<ul class="reefers-list">
+<mt:entries category="Projects" unique="1">
+   <mt:If tag="EntryDataType" eq="header">	
+	<li>
+    <a href="<mt:BlogURL>Projects/<mt:EntryDataBody_two>/" rel="next">
+    <figure class="reefers-image reefers-overlay">
+	<img src="<mt:BlogURL>siteart/square_<mt:EntryDataImage_one>.jpg" class="lazyload"/>
+	</figure>
+	<$MTEntryTitle$>
+     </a>    
+	</li>
+</mt:if>
+
+</mt:entries>
+<mt:entries category="Design" unique="1">
+   <mt:If tag="EntryDataType" eq="header">	
+	<li>
+    <a href="<mt:BlogURL>design/<mt:EntryDataBody_two>/" rel="next">
+	<figure class="reefers-image reefers-overlay">
+	<img src="<mt:BlogURL>siteart/square_<mt:EntryDataImage_one>.jpg" class="lazyload"/>
+	</figure>
+	<$MTEntryTitle$>
+     </a>    
+	</li>
+</mt:if>
+</mt:entries>
+</ul>
+</aside>

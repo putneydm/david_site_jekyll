@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<title>Davidputney.com | <$mt:CategoryLabel$></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta charset="utf-8">
+<!-- meta tags  -->
+	<$mt:Include module="meta_tags"$>
+	<mt:entries>
+	<mt:If tag="EntryDataCat_hero_art">
+		<mt:If tag="EntryDataType" eq="header">
+			<$mt:EntryDataCat_hero_art setvar="hero_art"$>
+		</mt:if>
+	</mt:if>
+</mt:entries>
+<style rel="stylesheet" type="text/css" media="all">
+	<$mt:Include module="embedded_CSS_main"$>
+</style>
+<noscript>
+	<style>
+	.hero-art-portfolio{background-image: url('<$mt:BlogURL$>siteart/hero_<$mt:Var name="hero_art"$>.jpg');}@media screen and (max-width: 46.875em) {.hero-art-portfolio {background-image: url('<$mt:BlogURL$>siteart/sm_hero_<$mt:Var name="hero_art"$>.jpg');}}</style>
+</noscript>
+<link href="<mt:BlogURL>css/styles.css" rel="stylesheet" type="text/css" media="all" />
+<$mt:Include module="css_links"$>
+<$mt:Include module="fonts_links"$>
+<style type="text/css" media="all">
+	<mt:Entries>
+		<mt:If tag="EntryDataType" eq="parallax">
+		<mt:EntryDataImage_one setvar="image_one">
+		<mt:Include module="parallax_styles">
+		</mt:If>
+	</mt:Entries>
+</style>
+</head>
+<body data-pagetype="portfolio-page">
+	<div class="svg-import hidden" aria-hidden="true">
+	<$mt:Include module="svg_icons"$>
+	</div>
+	<ul class="hidden">
+		<li><a href="#nav-start">Skip to navigation</a></li>
+		<li><a href="#main">Skip to content</a></li>
+	</ul>
+	<header class="small-billboard">
+	 <$mt:Include module="page_header"$>
+	 <div id="hero-image" class="hero-art backgound-set  filter-me" data-image="<$mt:Var name="hero_art"$>">
+	 	<svg class="hero-art-curve">
+	 			<use xlink:href="#inside_page_mask" />
+	 		</svg>
+	 	</span>
+	 </div>	
+	</header>
+	<div class="hero-art-portfolio-overlay"></div>
+<main id="main">
+	<section>
+		<div class="portfolio-introduction-container">
+			<header class="portfolio-introduction">
+				<mt:Entries>
+					 <mt:If tag="EntryDataType" eq="header">
+								<h1 class="portfolio-project-name"><$MTEntryTitle smarty_pants="1"$></h1>
+							<p class="page-subhead"><mt:EntryDataCategory_subhead smarty_pants="1"$></p>
+					 </mt:If>
+				</mt:Entries>
+			</header>
+		</div>
+	<div class="teaser-module-container">
+		<mt:entries>
+			 <mt:If tag="EntryDataRank" eq="1">
+			 <mt:include module="teaser_types">
+			</mt:if>
+		</mt:entries>
+		<mt:entries>
+			 <mt:If tag="EntryDataRank" eq="2">
+			 <mt:include module="teaser_types">
+			</mt:if>
+		</mt:entries>
+		<mt:entries>
+			 <mt:If tag="EntryDataRank" eq="3">
+			 <mt:include module="teaser_types">
+			</mt:if>
+		</mt:entries>
+		<mt:entries>
+			<mt:If tag="EntryDataRank" eq="4">
+			 <mt:include module="teaser_types">
+			</mt:if>
+		</mt:entries>
+		<mt:entries>
+			<mt:If tag="EntryDataRank" eq="5">
+			 <mt:include module="teaser_types">
+			</mt:if>
+		</mt:entries>
+		<mt:entries>
+			<mt:If tag="EntryDataRank" eq="6">
+			 <mt:include module="teaser_types">
+			</mt:if>
+		</mt:entries>
+		<mt:entries>
+			<mt:If tag="EntryDataRank" eq="7">
+			 <mt:include module="teaser_types">
+			</mt:if>
+		</mt:entries>
+		<mt:entries>
+			<mt:If tag="EntryDataRank" eq="8">
+			 <mt:include module="teaser_types">
+			</mt:if>
+		</mt:entries>
+		<mt:entries>
+			<mt:If tag="EntryDataRank" eq="9">
+			 <mt:include module="teaser_types">
+			</mt:if>
+		</mt:entries>
+		<mt:entries>
+			<mt:If tag="EntryDataRank" eq="10">
+			 <mt:include module="teaser_types">
+			</mt:if>
+		</mt:entries>
+	<mt:Entries>
+		<mt:If tag="EntryDataType" eq="header">
+		<mt:If tag="EntryDataLive_site">
+			<a href="<mt:EntryDataLive_site>" class="button" rel="nofollow">View the live site
+				<span aria-hidden="true">
+					<svg class="button-icon">
+		  				<use xlink:href="#arrow-right" />
+					</svg>
+				</span>
+			</a>
+		</mt:If>
+		</mt:If>
+	</mt:Entries>
+</div>
+<$mt:Include module="reefers"$>
+</section>
+</main>
+<$mt:Include module="footer"$>
+</body>
+<$mt:Include module="js_links"$>
+</html>

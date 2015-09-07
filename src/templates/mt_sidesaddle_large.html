@@ -1,0 +1,30 @@
+<article class="sidesaddle-module">		
+    <header><h2 class="section-header"><span>~ </span><mt:EntryTitle smarty_pants="1"><span> ~</span></h2></header>
+	<mt:If tag="EntryDataImage_one"><$mt:EntryDataImage_one setvar="image_one"$></mt:If>     
+	<mt:If tag="EntryDataImage_two"><$mt:EntryDataImage_two setvar="image_two"$></mt:If>      
+	<mt:If tag="EntryDataImage_three"><$mt:EntryDataImage_three setvar="image_three"$></mt:If> 
+	<$mt:EntryDataSlideshow setvar="value"$>              
+<mt:If name="value" eq="1">
+ <div class="slideshow sidesaddle-module-image slideshow-deep med-photo-overlay">
+	 <figure class="slideshow-image">
+		<img src="<$mt:BlogURL$>siteart/slide_one_<$mt:Var name="image_one"$>.jpg" alt="" class="slide-one"/> 
+    </figure>
+	 <figure class="slideshow-image">
+		<img src="<$mt:BlogURL$>siteart/slide_two_<$mt:Var name="image_two"$>.jpg" alt="" class="slide-two"/>
+    </figure>
+</div>    
+<mt:Else>   
+	<figure class="sidesaddle-module-image med-photo-overlay">
+		<picture>
+			<source srcset="<$mt:BlogURL$>siteart/med_<$mt:Var name="image_one"$>.jpg" media="(min-width: 750px)">
+			<source srcset="<$mt:BlogURL$>siteart/xsmall_<$mt:Var name="image_one"$>.jpg" media="(min-width: 551px)">
+			<source srcset="<$mt:BlogURL$>siteart/med_<$mt:Var name="image_one"$>.jpg" media="(min-width: 350px)">
+			<source srcset="<$mt:BlogURL$>siteart/xsmall_<$mt:Var name="image_one"$>.jpg">
+			<img src="<$mt:BlogURL$>siteart/small_<$mt:Var name="image_one"$>.jpg" class="lazyload" alt="">
+		</picture>  					
+	</figure>			
+</mtIf>  		
+	<div class="sidesaddle-module-textblock clearfix">
+		<mt:EntryBody smarty_pants="1">
+	</div>
+</article>

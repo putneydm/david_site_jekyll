@@ -1,0 +1,106 @@
+.main-header-nameplate
+	{
+	font-family:$flair;
+	font-size:em(120);
+	text-align:center;
+	margin:0 auto;
+	line-height:95%;
+	padding:0;
+	color:white;
+	font-style:italic;
+	text-shadow: 0 rem(2) rem(8) rgba(30, 30, 30, 0.4);
+	position:absolute;
+	width:100%;
+	bottom:rem(145);
+	left:0;
+	opacity:0;
+	transform: scale(.98,.98);
+	user-select: none;
+	user-select: none; 
+		@media screen and (max-width:em(800)) {
+		font-size:em(84);
+		padding:rem(12) rem(20) rem(15);
+		bottom:rem(110);
+		}
+		@media screen and (max-width:em(425)) {
+		font-size:em(60);
+		padding:rem(10) 0 rem(8);
+		bottom:rem(225);
+		}
+	a { background-image:none;text-shadow:none, none;}
+}
+.nav-menu-display {
+	width:100%;
+	height:auto;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	bottom:rem(60);
+	opacity:0;
+	transform: scale(.95,.95);
+		@media screen and (max-width:em(750)) {
+			margin:0 0 rem(8);
+			}
+		@media screen and (max-width:em(425)) {
+			top:rem(210);
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			}
+		li {
+			font-size:em(20);
+			font-family:$sans;
+			text-transform:uppercase;
+			color:white;
+			padding:rem(3) rem(6) rem(30);
+			letter-spacing:.03em;
+			text-shadow:0 0 rem(8) rgba(30, 30, 30, 0.7);
+			text-align: center;
+			a {
+				background-image:none;
+				color:white;
+				text-shadow:0 0 rem(15) rgba(30, 30, 30, 0.5);
+			}
+			&::after {
+				content:'|';
+				display:inline-block;
+				margin:0 0 0 rem(12);
+				color:white;
+				letter-spacing:-.1em;
+			}
+			&:nth-child(4) {
+				padding-right:0;
+				&:after{content:'';display:none;}
+			}
+				@media screen and (max-width:em(800)) {
+					font-size:em(16);
+				}
+				@media screen and (max-width:em(425)) {
+					width:100%;
+					margin:0 0;
+					padding:rem(3) 0 rem(35);
+						&:after {content:''; display:none;}
+				}
+		}
+}
+.triple-module-head {
+	width:100%;;
+	font-size:em(22);
+	margin:rem(40) auto;
+	padding:0 rem(20);
+	text-align:center;
+	color:$med;
+	opacity:0;
+	max-width:rem(1100);
+	min-height:rem(200);
+	transform: scale(.95,.95);
+	line-height:150%;
+		@media screen  and (max-width:em(600)) {
+		font-size:em(18);
+		}
+	}
+.triple-module-head--active	{
+	opacity:1;
+	transform: scale(1,1);
+	transition:opacity .5s 1.1s,  transform .4s 1.1s ease-out;
+	}
