@@ -133,6 +133,20 @@ gulp.task('css', function() {
     .pipe(gulp.dest(paths.styles.dist));
 });
 
+gulp.task('css-inline', function() {
+  gulp.src([paths.styles.exclude, paths.styles.inputInline])
+   .pipe(scsslint())
+   .pipe(sass())
+   .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+   }))
+    .pipe(minifyCSS({
+      keepBreaks:false
+    }))
+    .pipe(gulp.dest(paths.styles.outputInline))
+});
+
 // creates svg sprite and moves it to testing and dist
 gulp.task('svg', function () {
     return gulp
