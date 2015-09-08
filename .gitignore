@@ -3,6 +3,7 @@ test/
 source/scripts/vendor/
 src/scripts/bower_components/
 src/photos_out/
+src/inline_css/
 src/photos_in/
 node_modules/
 src/sass/bourbon/
