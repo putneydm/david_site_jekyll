@@ -32,6 +32,7 @@ var stylish = require('jshint-stylish');
 var rename = require('gulp-rename');
 var watch = require('gulp-watch');
 var livereload = require('gulp-livereload');
+var fileinclude = require('gulp-file-include');
 
 //svg
 var svgstore = require('gulp-svgstore');
