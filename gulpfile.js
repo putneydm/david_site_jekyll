@@ -100,10 +100,42 @@ var paths = {
 
 // tasks
 // moves page templates from src to testing and dist
+gulp.task('layouts', function() {
+   gulp.src(paths.pageLayouts.input)
+   .pipe(fileinclude({
+     prefix: '@@',
+     basepath: '@file'
+   }))
+  //  .pipe(htmltidy({doctype: 'html5',
+  //                hideComments: true,
+  //                indent: true}))
+   .pipe(gulp.dest(paths.pageLayouts.testing))
+  //  .pipe(gulp.dest(paths.pageLayouts.dist));
+});
 gulp.task('templates', function() {
    gulp.src(paths.pageTemplates.input)
+   .pipe(fileinclude({
+     prefix: '@@',
+     basepath: '@file'
+   }))
+  //  .pipe(htmltidy({doctype: 'html5',
+  //                hideComments: true,
+  //                indent: true}))
    .pipe(gulp.dest(paths.pageTemplates.testing))
-  //  .pipe(gulp.dest(paths.pageTemplates.dist));
+  //  .pipe(gulp.dest(paths.pageLayouts.dist));
+});
+
+gulp.task('includes', function() {
+   gulp.src(paths.includes.input)
+   .pipe(fileinclude({
+     prefix: '@@',
+     basepath: '@file'
+   }))
+  //  .pipe(htmltidy({doctype: 'html5',
+  //                hideComments: true,
+  //                indent: true}))
+   .pipe(gulp.dest(paths.includes.testing))
+  //  .pipe(gulp.dest(paths.pageLayouts.dist));
 });
 
 // concatenates scripts, but not items in exclude folder. includes vendor folder
