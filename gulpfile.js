@@ -42,9 +42,19 @@ var mainBowerFiles = require('main-bower-files');
 
 
 var paths = {
-  pageTemplates : {
-   input : 'src/templates/{*.html,*shtml}',
+  pageLayouts : {
+   input : 'src/layouts/{*.html,*shtml}',
    testing: 'test/_layouts/'
+  //  dist : 'dist/templates'
+  },
+  pageTemplates : {
+   input : 'src/templates/**/{*.html,*shtml}',
+   testing: 'test/'
+  //  dist : 'dist/templates'
+  },
+  includes : {
+   input : 'src/includes/*.html',
+   testing: 'test/_includes/'
   //  dist : 'dist/templates'
   },
   scripts : {
@@ -76,8 +86,8 @@ var paths = {
     dist : 'dist/siteart/'
   },
   svg : {
-    input : 'src/svg/*.svg',
-    // testing : 'test/svg/',
+    input : 'src/svg/svg_in/*.svg',
+    output : 'src/svg/'
     // dist : 'dist/svg/'
   },
   fonts : {
