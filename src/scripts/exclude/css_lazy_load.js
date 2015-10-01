@@ -2,26 +2,7 @@ var cssLoad = {
   intialize: function () {
      "use strict";
      console.log('styles');
-      var pageIdent = document.getElementsByTagName('BODY')[0].getAttribute('data-pagetype');
-      var styleLink = this.loadCSSInit(pageIdent);
-      this.loadCSS( styleLink );
-   },
-   loadCSSInit: function ( pageIdent ) {
-      if (pageIdent === 'section-page') {
-         return '../css/styles.css';
-      }
-      if (pageIdent === 'portfolio-page') {
-         return '../../css/styles.css';
-      }
-      if (pageIdent === 'blog-entry') {
-         return '../../css/styles.css';
-      }
-      if (pageIdent === 'index-page') {
-         return 'css/styles.css';
-      }
-      else {
-         return '../css/styles.css';
-      }
+     this.loadCSS( '/css/styles.css' );
    },
    loadCSS: function ( href, before, media, callback ){
          "use strict";
@@ -56,6 +37,3 @@ var cssLoad = {
          return ss;
       },
 };
-(function() {
-  cssLoad.intialize();
-})();
