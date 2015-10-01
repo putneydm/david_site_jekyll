@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+  {% assign hero-art = page.heroArt %}
+
+
+<body id="index-page" class="one" data-pagetype="index-page">
+<div class="svg-import hidden" aria-hidden="true">
+    @@include('../svg/svgsprite.svg')
+</div>
+<ul class="hidden">
+  <li><a href="#nav-start">Skip to navigation</a></li>
+  <li><a href="#main">Skip to content</a></li>
+</ul>
+
+<header class="large-billboard">
+	    {% include mt_page_header.html %}
+	<div id="hero-image" class="hero-art backgound-set  filter-me" data-image="{{hero-art}}">
+		<h1 class="main-header-nameplate" id="main-header-nameplate">David Putney</h1>
+	<nav class="clearfix">
+		<ul id="navigation-menu" class="nav-menu-display">
+      @@include('../includes/partials/mt_nav_links.html')
+		</ul>
+	</nav>
+		<svg class="hero-art-curve">
+				<use xlink:href="#inside_page_mask" />
+			</svg>
+		</span>
+	</div>
+</header>
+<main id="main">
+  <h2 class="triple-module-head triple-module-head--active" id="main-subhead">Hi. I’m <span itemprop="name">David Putney</span>. I do <span itemprop="title">UI/UX, visual design and front-end web development</span> in the <span itemprop="locality">Boston</span> area. I specialize in designing and building beautiful and functional media and content-driven websites.</h2>
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+  </main>
+
+    {% include mt_footer.html %}
+
+  </body>
+  @@include('partials/mt_js_links.html')
+</html>
