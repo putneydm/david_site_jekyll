@@ -9,6 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
+disclaimer: This is the personal website of David M. Putney. It is not affiliated with any current or former employers.
 
 # Build settings
 markdown: kramdown
