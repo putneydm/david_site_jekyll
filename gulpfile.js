@@ -12,6 +12,11 @@ var minifyCSS = require('gulp-minify-css'); // Add var prefix for consistency
 var scsslint = require('gulp-scss-lint');
 var autoprefixer = require('gulp-autoprefixer');
 
+// html
+ var htmltidy = require('gulp-htmltidy');
+ var htmlmin = require('gulp-html-minifier');
+ var htmlmin = require('gulp-html-minifier');
+
 //images
 var imagemin = require('gulp-imagemin');
 var jpegtran = require('imagemin-jpegtran');
