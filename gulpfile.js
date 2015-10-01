@@ -203,7 +203,7 @@ gulp.task('svg', function () {
             basename: 'svgsprite',
             extname: '.svg'
         }))
-        // .pipe(gulp.dest(paths.svg.testing))
+         .pipe(gulp.dest(paths.svg.output))
         // .pipe(gulp.dest(paths.svg.dist));
 });
 
