@@ -710,13 +710,15 @@ gulp.task('refresh', ['compile', 'pages', 'images'], function () {
     livereload.changed();
 });
 
-
 // Compile files, generate docs, and run unit tests (default)
 gulp.task('default', [
-	'templates',
+  'css-inline',
+  'templates',
+  'layouts',
+  'includes',
 	'css',
 	'svg',
 	'bower',
 	'concat',
-	'minifyScripts'
+	// 'minifyScripts'
 ]);
