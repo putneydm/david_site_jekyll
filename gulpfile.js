@@ -673,8 +673,16 @@ gulp.task('listen', function () {
     livereload.listen();
     // page templates
     gulp.watch(paths.pageLayouts.input).on('change', function(file) {
+        gulp.start('layouts');
+      //  gulp.start('refresh');
+    });
     gulp.watch(paths.pageTemplates.input).on('change', function(file) {
         gulp.start('templates');
+      //  gulp.start('refresh');
+    });
+    // includes
+    gulp.watch(paths.includes.input).on('change', function(file) {
+        gulp.start('includes');
       //  gulp.start('refresh');
     });
     // scripts
