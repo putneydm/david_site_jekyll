@@ -672,6 +672,7 @@ gulp.task('fonts', function () {
 gulp.task('listen', function () {
     livereload.listen();
     // page templates
+    gulp.watch(paths.pageLayouts.input).on('change', function(file) {
     gulp.watch(paths.pageTemplates.input).on('change', function(file) {
         gulp.start('templates');
       //  gulp.start('refresh');
