@@ -1,0 +1,12 @@
+<figure class="blog-image med-photo-overlay">
+	<img
+		srcset="siteart/large_{{ post.image }}.jpg 1400w,
+		        siteart/med_{{ post.image }}.jpg 900w,
+		        siteart/xsmall_{{ post.image }}.jpg 450w"
+		sizes="(min-width:43.75rem) 43.75rem, 100vw"
+		src="/siteart/med_{{ post.imageAlt }}.jpg"
+		  {% if post.imageAlt %}
+				alt="{{ post.imageAlt }}">
+		  {% endif%}
+	</img>
+</figure>
