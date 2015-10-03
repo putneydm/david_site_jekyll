@@ -1,3 +1,4 @@
+
 # Site settings
 title: Your awesome title
 email: your-email@domain.com
@@ -10,6 +11,7 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 disclaimer: This is the personal website of David M. Putney. It is not affiliated with any current or former employers.
+sitekeywords: ['David Putney', 'blogger', 'blog', 'writer', 'design', 'portfolio', 'web development', 'front-end developer', 'web design', 'mobile first', 'responsive design', 'HTML', 'CSS', 'JavaScript', 'jQuery']
 
 # Build settings
 markdown: kramdown
