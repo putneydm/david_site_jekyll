@@ -3,27 +3,25 @@ layout: index_layout
 title: David Putney
 tagLine: This is my site
 heroArt: index
+pagetype: index
+description: "I'm David Putney, a web designer and developer living in the Boston, Mass. area. I specialize in UI/UX, and designing and building media and content-driven websites."
+keywords: ["one", "two"]
 ---
 
-  @@include('partials/mt_blog_module.html')
+<section class="teaser-module-container">
+    @@include('partials/mt_blog_module.html')
+</section>
 
+<section class="teaser-module-container">
+  	<h2 class="section-header-index"><a href="archive/design.html" rel="next">Design</a></h2>
+  	<p class="page-subhead">Portfolio of professional sites I designed or developed.</p>
+    {% assign postType = site.categories.design %}
+    @@include('partials/mt_front_page_teaser.html')
+</section>
 
-<div class="home">
-
-  <h1 class="page-heading">Posts ssss yy</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<section class="teaser-module-container">
+  <h2 class="section-header-index"><a href="archive/design.html" rel="next">Projects</a></h2>
+  <p class="page-subhead">Portfolio of professional sites I designed or developed.</p>
+  {% assign postType = site.categories.projects] %}
+  @@include('partials/mt_front_page_teaser.html')
+</section>
