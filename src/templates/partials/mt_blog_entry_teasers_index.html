@@ -7,8 +7,6 @@
 	{% for post in site.categories.blog-entry limit: 4 %}
 	{% assign random = site.time | date: "%s%N" | modulo: site.categories.promo.size %}
 	{% assign randomPost = site.posts[random] %}
-	<!-- <p> random post {{randomPost.promo}}</p>
-	<p> non random post {{post.promo}}</p> -->
 	{% if randomPost.promo == site.posts.promo %}
 		 <p> match {{site.posts}}</p>
 		 {% assign random = site.time | date: "%s%N" | modulo: site.categories.promo.size %}
