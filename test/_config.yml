@@ -15,3 +15,7 @@ sitekeywords: ['David Putney', 'blogger', 'blog', 'writer', 'design', 'portfolio
 
 # Build settings
 markdown: kramdown
+
+tag_page_layout: tag_index
+tag_page_dir: tag
+
