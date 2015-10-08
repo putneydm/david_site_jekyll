@@ -19,3 +19,5 @@ markdown: kramdown
 tag_page_layout: tag_index
 tag_page_dir: tag
 
+paginate: 3
+paginate_path: "/blog/page:num/"
