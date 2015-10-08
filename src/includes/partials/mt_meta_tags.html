@@ -4,7 +4,26 @@
 
 {% if pageType == 'index' %}
 	{% capture ogImage %}hero_{{page.heroArt }}.jpg{% endcapture %}
-	{% assign ogTitle = page.tagLine %}
+	{% assign ogTitle = site.tagLine %}
+	{% assign ogDescription = site.description %}
+	{% assign ogKeywords = page.keywords | join: ', ' %}
+{% endif %}
+
+{% if pageType == 'blog-entry' %}
+	{% capture ogImage %}large_{{page.image }}.jpg{% endcapture %}
+	{% assign ogTitle = page.title %}
+	{% assign ogDescription = page.content | truncatewords: "120" escape markdownify strip_html '<sup>' | remove:'<sup>' '</sup>' | remove:'</sup>' %}
+	{% assign ogKeywords = page.tags | join: ', ' %}
+{% endif %}
+
+{% if pageType == 'tag-index' %}
+	{% assign ogTitle = site.tagLine %}
+	{% assign ogDescription = site.description %}
+	{% assign ogKeywords = page.keywords | join: ', ' %}
+{% endif %}
+
+{% if pageType == 'blog' %}
+	{% assign ogTitle = site.tagLine %}
 	{% assign ogDescription = page.description %}
 	{% assign ogKeywords = page.keywords | join: ', ' %}
 {% endif %}
