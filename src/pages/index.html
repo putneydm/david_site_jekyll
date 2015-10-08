@@ -1,0 +1,24 @@
+---
+layout: index_default
+heroArt: index
+pagetype: index
+
+---
+<!-- testing  here -->
+<section class="teaser-module-container">
+    @@include('_partials/index_components/mt_blog_module.html')
+</section>
+
+<section class="teaser-module-container">
+  	<h2 class="section-header-index"><a href="archive/design.html" rel="next">Design</a></h2>
+  	<p class="page-subhead">Portfolio of professional sites I designed or developed.</p>
+    {% assign postType = site.categories.design %}
+    @@include('_partials/index_components/mt_front_page_teaser.html')
+</section>
+
+<section class="teaser-module-container">
+  <h2 class="section-header-index"><a href="archive/design.html" rel="next">Projects</a></h2>
+  <p class="page-subhead">Portfolio of professional sites I designed or developed.</p>
+  {% assign postType = site.categories.projects] %}
+  @@include('_partials/index_components/mt_front_page_teaser.html')
+</section>

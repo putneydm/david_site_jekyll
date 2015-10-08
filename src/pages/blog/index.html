@@ -1,0 +1,73 @@
+---
+layout: page_layout
+heroArt: provincetown
+pagetype: blog
+head: As I was saying ...
+subhead: A blog about stuff. Updated as need merits.
+description: I'm David Putney, and this is my blog. I write here about topics of interest to me. It's updated as need merits.
+keywords: [blog, writing, technology, movies, music, culture]
+---
+<header class="portfolio-introduction-container">
+<div id="blog-container" class="blog-container">
+
+{% for post in paginator.posts %}
+
+<article class="blog-entry">
+    @@include('../../layouts/partials/blog_components/blog_image_test.html')
+
+  	<h1 class="blog-headline"><a href="{{post.url}}">{{ post.title }}</a></h1>
+    <p class="blog-entry-date">{{ post.date | date: "%B %d, %Y" }}</p>
+
+  <div class="blog-entry-text">
+      {{ post.content }}
+  </div>
+  <footer class="blog-entry-footer">
+  <mt:If tag="EntryDataFootnotes">
+
+  	<ul class="blog-tags">
+      {% for tag in post.tags %}
+        <li><a href="/tag/{{tag}}.html"> {{ tag }}</a></li>
+      {% endfor %}
+  	</ul>
+  </footer>
+</article>
+{% endfor %}
+
+  {% if paginator.next_page %}
+  {% assign post-offset =  paginator.page | times: paginator.per_page %}
+
+  <aside id="blog-teaser-wrapper" class="blog-teaser-wrapper">
+  <h4 class="blog-teaser-label">You might also like </h4>
+  <ul class="blog-teaser-list">
+  {% for post in site.categories.blog-entry limit:4 offset:post-offset %}
+  <li class="blog-teaser-item">
+  		<a href="{{ post.url }}" rel="canonical">
+  		<figure class="blog-teaser-image med-photo-overlay">
+  		<img src="/siteart/xsmall_{{ post.image}}.jpg" alt="{{ post.imageAlt}}">
+  		</figure>
+  			<h4 class="blog-teaser-hed">{{ post.promo markdownify | strip_html }}
+  			<svg class="teaser-arrow-icon">
+  				<use xlink:href="#arrow-right" />
+  			</svg>
+  		</h4>
+  		</a>
+  	</li>
+  {% endfor %}
+</ul>
+</aside>
+{% endif %}
+
+
+  @@include('../../layouts/partials/blog_components/mt_footnote_return.html')
+
+</div>
+<div class="pagination">
+  {% if paginator.previous_page and page != 1 %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% endif %}
+</div>
+</div>
