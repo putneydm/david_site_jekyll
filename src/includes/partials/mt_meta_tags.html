@@ -50,7 +50,7 @@
 <meta name="twitter:image" content="{{ogImage}}" />
 <!-- other -->
 <meta name="description" itemprop="description" content="{{ogDescription}}" />
-<meta name="keywords" itemprop="keywords" content="{{ogKeywords}}, {{ogSiteKeywords}}" />
+<meta name="keywords" itemprop="keywords" content="{% if ogKeywords %}{{ogKeywords}}, {% endif %}{{ogSiteKeywords}}" />
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
 <meta name="news_keywords" content="David Putney, design, web design, internet design, web sites, CSS, HTML, jQuery" />
 <meta name="geo.placename" content="Boston, Massachusetts">
