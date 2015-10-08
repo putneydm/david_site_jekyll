@@ -45,13 +45,15 @@ var mainBowerFiles = require('main-bower-files');
 var paths = {
   pageLayouts : {
    input : 'src/layouts/{*.html,*shtml}',
-   testing: 'test/_layouts/'
+   testing: 'test/_layouts/',
+   watch: 'src/layouts/*/{*.html,*shtml}',
   //  dist : 'dist/templates'
   },
-  pageTemplates : {
-   input : 'src/templates/**/{*.html,*shtml}',
-   testing: 'test/'
-  //  dist : 'dist/templates'
+  pages : {
+    input : 'src/pages/*/*',
+    exclude : 'src/pages/{_partials,_partials/**}',
+    testing : 'test/',
+    watch : 'src/pages/**/*.html',
   },
   includes : {
    input : 'src/includes/*.html',
@@ -112,8 +114,9 @@ gulp.task('layouts', function() {
    .pipe(gulp.dest(paths.pageLayouts.testing))
   //  .pipe(gulp.dest(paths.pageLayouts.dist));
 });
-gulp.task('templates', function() {
-   gulp.src(paths.pageTemplates.input)
+gulp.task('pages', function() {
+
+   gulp.src(['!' + paths.pages.exclude, paths.pages.input])
    .pipe(fileinclude({
      prefix: '@@',
      basepath: '@file'
@@ -121,7 +124,7 @@ gulp.task('templates', function() {
   //  .pipe(htmltidy({doctype: 'html5',
   //                hideComments: true,
   //                indent: true}))
-   .pipe(gulp.dest(paths.pageTemplates.testing))
+   .pipe(gulp.dest(paths.pages.testing))
   //  .pipe(gulp.dest(paths.pageLayouts.dist));
 });
 
@@ -672,12 +675,12 @@ gulp.task('fonts', function () {
 gulp.task('listen', function () {
     livereload.listen();
     // page templates
-    gulp.watch(paths.pageLayouts.input).on('change', function(file) {
+    gulp.watch(paths.pageLayouts.watch).on('change', function(file) {
         gulp.start('layouts');
       //  gulp.start('refresh');
     });
-    gulp.watch(paths.pageTemplates.input).on('change', function(file) {
-        gulp.start('templates');
+    gulp.watch(paths.pages.watch).on('change', function(file) {
+        gulp.start('pages');
       //  gulp.start('refresh');
     });
     // includes
@@ -701,8 +704,6 @@ gulp.task('listen', function () {
         gulp.start('css-inline');
       //  gulp.start('refresh');
     });
-
-
 });
 
 // Run livereload after file change
@@ -713,7 +714,7 @@ gulp.task('refresh', ['compile', 'pages', 'images'], function () {
 // Compile files, generate docs, and run unit tests (default)
 gulp.task('default', [
   'css-inline',
-  'templates',
+  'pages',
   'layouts',
   'includes',
 	'css',
