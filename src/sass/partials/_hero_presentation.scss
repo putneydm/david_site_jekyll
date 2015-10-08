@@ -36,7 +36,6 @@
 	.hero-art {
 		@include aspect-ratio (100, 0, 23, 8.56);
 		min-height:rem(350);
-		background-image:url('<$mt:BlogURL$>siteart/pl_hero_<$mt:Var name="hero_art"$>.jpg');
 			@media screen and (max-width:em(950)){
 				background-size: auto 350px;
 			}
@@ -59,7 +58,6 @@
 .large-billboard {
 	.hero-art {
 		@include aspect-ratio (100, 0, 23, 10.4);
-		background-image:url('siteart/pl_hero_index.jpg');
 		min-height:em(365);
 		&::before {
 			@include aspect-ratio (100, 0, 23, 10.4);
