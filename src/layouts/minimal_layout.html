@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+	{% include head.html %}
+
+	<div class="svg-import hidden" aria-hidden="true">
+	    @@include('../svg/svgsprite.svg')
+	</div>
+	<ul class="hidden">
+	  <li><a href="#nav-start">Skip to navigation</a></li>
+	  <li><a href="#main">Skip to content</a></li>
+	</ul>
+	<header class="no-billboard">
+		    {% include mt_page_header.html %}
+	</header>
+<main id="main">
+{{content}}
+</main>
+{% include mt_footer.html %}
+</body>
+  @@include('partials/mt_js_links.html')
+</html>
