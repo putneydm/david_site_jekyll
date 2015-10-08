@@ -1,0 +1,28 @@
+<div id="blog-container" class="blog-container">
+{% for post in site.categories.blog-entry limit: 1 %}
+<h2 class="section-header-index"><a href="http://www.davidputney.com/blog" rel="next">Blog</a></h2>
+<a href="{{ post.url}}" rel="next">
+
+	@@include('blog_image_test.html')
+
+</a>
+<h3 class="blog-headline"><a href="{{ post.url}}" rel="canonical">{{ post.title | markdownify | strip_html }}</a></h3>
+<p class="blog-entry-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+<div class="blog-entry-text-index">
+	{{ post.content | truncatewords: 700 }}
+
+</div>
+<div class="blog-button-wrapper">
+<a href="{{ post.url}}" rel="canonical" class="button blog-more-button">Continue reading
+	<span aria-hidden="true">
+		<svg class="button-icon">
+			<use xlink:href="#arrow-right" />
+		</svg>
+	</span>
+</a>
+<!-- sets variable with identity of post so I can check it against randomizer -->
+{% assign entry = post %}
+{% endfor %}
+</div>
+		@@include('mt_blog_entry_teasers_index.html')
+</div>
