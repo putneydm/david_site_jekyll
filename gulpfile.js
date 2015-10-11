@@ -50,7 +50,7 @@ var paths = {
   //  dist : 'dist/templates'
   },
   pages : {
-    input : 'src/pages/*/*',
+    input : 'src/pages/**/*',
     exclude : 'src/pages/{_partials,_partials/**}',
     testing : 'test/',
     watch : 'src/pages/**/*.html',
