@@ -12,13 +12,15 @@ pagetype: index
 <section class="teaser-module-container">
   	<h2 class="section-header-index"><a href="archive/design.html" rel="next">Design</a></h2>
   	<p class="page-subhead">Portfolio of professional sites I designed or developed.</p>
-    {% assign postType = site.categories.design %}
+    {% for post in site.design limit: 2 %}
     @@include('_partials/index_components/mt_front_page_teaser.html')
+    {% endfor %}
 </section>
 
 <section class="teaser-module-container">
   <h2 class="section-header-index"><a href="archive/design.html" rel="next">Projects</a></h2>
   <p class="page-subhead">Portfolio of professional sites I designed or developed.</p>
-  {% assign postType = site.categories.projects] %}
+  {% for post in site.projects limit: 2 %}
   @@include('_partials/index_components/mt_front_page_teaser.html')
+  {% endfor %}
 </section>
