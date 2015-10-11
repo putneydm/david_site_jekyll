@@ -78,9 +78,9 @@ var paths = {
     inputInline : 'src/sass/{blog_embedded_styles.scss,index_embeded_styles.scss,main_embedded_styles.scss}',
     outputInline : 'src/inline_css',
     exclude : '!src/sass/partials/*.scss',
-    testing : 'test/css',
+    testing : 'test/css/',
     dist : 'dist/css',
-    watch : 'source/sass/**/*.scss'
+    watch : 'src/sass/**/*.scss'
   },
   images : {
     input : 'src/photos_in/{*.jpg,*.tiff,*.png}',
