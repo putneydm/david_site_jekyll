@@ -1,5 +1,3 @@
-{% for post in postType limit: 2 %}
-
 <article class="teaser-module clearfix">
 		<header>
         <h4 class="teaser-module-head"><a href="{{ post.url}}" rel="next">{{ post.title | markdownify | strip_html }}</a></h4>
@@ -13,14 +11,11 @@
 		<div class="teaser-module-art">
 		<figure class="teaser-module-mainart med-photo-overlay">
 			<picture>
-				<source srcset="siteart/large_{{post.image}}.jpg" media="(min-width:550px)">
-				<source srcset="siteart/med_{{post.image}}.jpg" media="(min-width:350px)">
-				<source srcset="siteart/xsmall_{{post.image}}.jpg">
-				<img src="siteart/large_{{post.image}}.jpg" alt="">
+				<source srcset="/siteart/large_{{post.image}}.jpg" media="(min-width:550px)">
+				<source srcset="/siteart/med_{{post.image}}.jpg" media="(min-width:350px)">
+				<source srcset="/siteart/xsmall_{{post.image}}.jpg">
+				<img src="/siteart/large_{{post.image}}.jpg" alt="">
 			</picture>
 		</figure>
 		</a>
-
 	</article>
-
-	{% endfor %}
