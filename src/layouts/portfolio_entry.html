@@ -1,36 +1,25 @@
 ---
 layout: page_layout
 ---
-<div id="blog-container" class="blog-container blog-single-entry">
-
-<article class="blog-entry">
-
+<article class="teaser-module-container">
+  {% if page.slides %}
+  @@include('partials/portfolio/slide_show.html')
+    {% else %}
     @@include('partials/blog_components/blog_image_test.html')
+    {% endif %}
 
-  	<h1 class="blog-headline">{{ page.title }}</h1>
-    <p class="blog-entry-date">{{ page.date | date: "%B %d, %Y" }}</p>
-
-  <div class="blog-entry-text">
-      {{content}}
-  </div>
-  <footer class="blog-entry-footer">
-  <mt:If tag="EntryDataFootnotes">
-
-  @@include('partials/blog_components/mt_footnote_return.html')
-  @@include('partials/blog_components/mt_blog_sig.html')
-
-  	<ul class="blog-tags">
-      {% for tag in page.tags %}
-        <li><a href="/tag/{{tag}}.html"> {{ tag }}</a></li>
-      {% endfor %}
-  <!-- <mt:EntryTags>
-      <li><a href="<$mt:TagSearchLink$>" rel="tag"><mt:TagName></a></li>
-  </mt:EntryTags> -->
-  	</ul>
-    @@include('partials/blog_components/mt_blog_entry_teasers_inside.html')
-
-  </footer>
-
-</article>
-
+<div class="portfolio-text-block">
+    {{page.content}}
 </div>
+{% if page.images %}
+  @@include('partials/portfolio/triple_image.html')
+{% endif %}
+
+{% if page.video %}
+  @@include('partials/portfolio/video_embed.html')
+{% endif %}
+
+{% if page.url %}
+  @@include('partials/portfolio/button.html')
+{% endif %}
+</article>
