@@ -1,37 +1,32 @@
 .about-container {
 	@extend .teaser-module-container;
-	padding-top:rem(20);
 	width:100%;
-	max-width:rem(950);
+	max-width:rem(700);
 	margin:0 auto;
-		p {
-		font-size:rem(15);
-		line-height:150%;
-		column-count: 2;
-		column-gap: rem(30);
-		column-rule: 1px solid $light;
-				@media screen and (max-width:rem(650))	{
-					column-count: 1;
-				}
-				@media screen and (max-width:rem(500))	{
-					font-size:rem(14);
-					line-height:150%;
-				}
-		}
+	padding:0;
 }
-.about-section {
-	margin:0 0 rem(60) 0;
-	display:block;
-	float:none;
-}
-.about-section-header {
-	@extend .section-header;
-	font-size:rem(30);
-	transition:font-size .3s;
-	@media screen and (max-width:em(500)) {
-		font-size:rem(22);
+.about-information {
+	p {
+	font-size:rem(16);
+	line-height:150%;
+			@media screen and (max-width:rem(650))	{
+				column-count: 1;
+			}
+			@media screen and (max-width:rem(500))	{
+				font-size:rem(15);
+				line-height:150%;
+			}
+			&:nth-child(2):first-letter {
+				float: left;
+				color: $med;
+				font-size: em(53);
+				line-height: 80%;
+				margin: 5px 5px 0 0;
+				font-family: $sans;
+					@media screen and (max-width:em(500)) { font-size: em(53); }
+				}
+			}
 	}
-}
 .about-mugshot {
 	width:rem(120);
 	height:rem(120);
