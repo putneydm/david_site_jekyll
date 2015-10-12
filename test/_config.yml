@@ -1,11 +1,8 @@
 
 # Site settings
 title: David Putney
-email: your-email@domain.com
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://davidputney.com" # the base hostname & protocol for your site
 disclaimer: This is the personal website of David M. Putney. It is not affiliated with any current or former employers.
 description: "I'm David Putney, a web designer and developer living in the Boston, Mass. area. I specialize in UI/UX, and designing and building media and content-driven websites."
 tagLine: This is my site
@@ -20,9 +17,26 @@ tag_page_dir: tag
 paginate: 3
 paginate_path: "/blog/page:num/"
 
-
 collections:
   projects:
     output: true
     permalink: /projects/:path/
     layout: page_layout
+  about:
+    output: true
+    permalink: /about/:path/
+    layout: page_layout
+
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/index.html"
+        - "/blog/index.html"
+        - "/projects/shirtify/index.html"
+        - "/about/index.html"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
