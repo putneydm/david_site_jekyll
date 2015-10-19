@@ -226,6 +226,11 @@ gulp.task('bower', function() {
     .pipe(gulp.dest(paths.bower.vendor))
 });
 
+gulp.task('posts', function() {
+   gulp.src(paths.posts.input)
+   .pipe(gulp.dest(paths.posts.output))
+});
+
 // creates blog images in four sizes, minifies, moves to testing and dist
 gulp.task('blog-images', function () {
 
@@ -675,6 +680,14 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest(paths.fonts.dist));
 });
 
+gulp.task('browserSync', function() {
+  browserSync({
+    server: {
+      baseDir: 'app'
+    },
+  })
+})
+
 // gulp watches
 // Spin up livereload server and listen for file changes
 gulp.task('listen', function () {
@@ -707,8 +720,11 @@ gulp.task('listen', function () {
         gulp.watch(paths.styles.watch).on('change', function(file) {
         gulp.start('css');
         gulp.start('css-inline');
-      //  gulp.start('refresh');
+        // gulp.start('browserSync');
     });
+        gulp.watch(paths.posts.input).on('change', function(file) {
+        gulp.start('posts');
+});
 });
 
 // Run livereload after file change
@@ -726,5 +742,6 @@ gulp.task('default', [
 	'svg',
 	'bower',
 	'concat',
+  'posts'
 	// 'minifyScripts'
 ]);
