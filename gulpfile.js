@@ -94,10 +94,14 @@ var paths = {
     output : 'src/svg/'
     // dist : 'dist/svg/'
   },
-  fonts : {
-    input : 'src/fonts/*.css',
-    testing : 'test/fonts/',
-    dist : 'dist/fonts/'
+  fonts: {
+    input: 'src/fonts/*.css',
+    testing: 'test/fonts/',
+    dist: 'dist/fonts/'
+  },
+  posts:   {
+    input: 'src/posts/**/*.markdown',
+    output: 'test/_posts/'
   }
 };
 
