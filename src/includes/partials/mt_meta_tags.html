@@ -16,15 +16,16 @@
 	{% assign ogKeywords = page.tags | join: ', ' %}
 {% endif %}
 
-{% if pageType == 'tag-index' %}
-	{% assign ogTitle = site.tagLine %}
+{% if pageType == 'tag-archive' %}
+	{% capture ogTitle %}{{  page.tag | capitalize }} archive | {{site.title}}{% endcapture %}
 	{% assign ogDescription = site.description %}
 	{% assign ogKeywords = page.keywords | join: ', ' %}
 {% endif %}
 
-{% if pageType == 'blog' %}
-	{% assign ogTitle = site.tagLine %}
-	{% assign ogDescription = page.description %}
+{% if pageType == 'blog' or  pageType == portfolio'%}
+	{% capture ogImage %}hero_{{page.heroArt }}.jpg{% endcapture %}
+	{% assign ogTitle = page.head %}
+	{% assign ogDescription = 'page.description' %}
 	{% assign ogKeywords = page.keywords | join: ', ' %}
 {% endif %}
 
@@ -33,7 +34,7 @@
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <!-- facebook -->
-<meta property="og:title" content="David Putney {{ogTitle}}" />
+<meta property="og:title" content="{{ogTitle}}" />
 <meta property="og:site_name" content="David Putney | This is my site"/>
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
 <meta property="og:description" content="{{ogDescription}}" />
