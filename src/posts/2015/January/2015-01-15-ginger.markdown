@@ -1,0 +1,37 @@
+---
+layout: single_blog_entry
+pagetype: blog-entry
+title:  Ginger
+date:   2015-01-15 13:21:07
+categories: blog-entry
+subhead:
+tags: [Avant Garde,branding,fonts,gingers,Montserrat,Thomas Jefferson,typography,web sites]
+image:  ginger
+imageAlt: "Hipster with horrifying ginger dreadlocks. "
+promo: "Good news! We are building our personal brand again!"
+---  
+
+It is said that Thomas Jefferson was such an inveterate tinker that [Monticello][1] was in a simultaneous state of being built while falling down.
+
+Likewise this site.
+
+Davidputney.com been in a continual state of repair and renovation since launch. (I'm sure you all noticed the new data-URI/local storage [font loader.][2]) My latest change, is a bit more public.
+
+I swapped out the sans serif font [Montserrat][3] with another sans, [Ginger][4]. It's a font I'd seen some time ago, but was reminded of it by one of my [former colleagues][8].
+
+Ginger and Montserrat are both geometric fonts, but Monserrat has a bit of a modern edge. Ginger has an [Avant Garde-ish][5] mid-20th Century feel, as if it should be in a Don Draper advertising campaign.
+
+Ginger has a smaller [x-height][6], -- generally I don't like fonts with small x-heights -- so I had to do some further tweaking to get the scaling right. And by "right" I mean I'll change it six more times this week.
+
+Don't worry, though. I did some cache busting to make sure it loads properly. If you don't see the new font, I'll gladly refund your money.
+
+But, setting aesthetics aside, the addition of Ginger puts Davidputney.com&reg; strongly "on brand" vis-a-vis my [hair color][7] and lack of ability to tan. And that's what we do these days anyway, is build our personal brand on FaceTweet.
+
+[1]: https://books.google.com/books?id=GGK1XO0jVEoC&pg=PA137&lpg=PA137&dq=monticello+disrepair&source=bl&ots=Dsq8kj-KcJ&sig=dcqx68jTHmW8DkwboCHbZ13Wr6c&hl=en&sa=X&ei=Gb-3VIatDYLksATJ6YDYDQ&ved=0CCgQ6AEwAQ#v=onepage&q=monticello%20disrepair&f=false
+[2]: http://www.davidputney.com/2015/01/uris-mine-and-hours.html
+[3]: http://www.fontsquirrel.com/fonts/montserrat
+[4]: http://www.hypefortype.com/browse-fonts/font-categories/headline/ginger.html
+[5]: https://www.myfonts.com/fonts/itc/avant-garde-gothic/
+[6]: http://en.wikipedia.org/wiki/X-height
+[7]: http://lens.blogs.nytimes.com/2014/06/11/redhead-photo-sperm-bank-invitro/?_r=0
+[8]: https://twitter.com/elainanatario
