@@ -2,15 +2,13 @@
 {% for post in site.categories.blog-entry limit: 1 %}
 <h2 class="section-header-index"><a href="http://www.davidputney.com/blog" rel="next">Blog</a></h2>
 <a href="{{ post.url}}" rel="next">
-
 	@@include('../../../layouts/partials/blog_components/blog_image_test.html')
-
 </a>
-<h3 class="blog-headline"><a href="{{ post.url}}" rel="canonical">{{ post.title | markdownify | strip_html }}</a></h3>
+<h3 class="blog-headline"><a href="{{ post.url}}" rel="canonical">{% if post.altTitle %}{{ post.altTitle | markdownify | strip_html }} {% else %} {{ post.title | markdownify | strip_html }}{% endif%}
+</a></h3>
 <p class="blog-entry-date">{{ post.date | date: "%b %-d, %Y" }}</p>
 <div class="blog-entry-text-index">
 	{{ post.content | truncatewords: 700 }}
-
 </div>
 <div class="blog-button-wrapper">
 <a href="{{ post.url}}" rel="canonical" class="button blog-more-button">Continue reading
