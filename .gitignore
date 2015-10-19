@@ -1,5 +1,6 @@
 dist/
 test/
+!test/_config.yml
 source/scripts/vendor/
 src/scripts/bower_components/
 src/photos_out/
