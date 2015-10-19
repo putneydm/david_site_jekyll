@@ -33,6 +33,7 @@ var rename = require('gulp-rename');
 var watch = require('gulp-watch');
 var livereload = require('gulp-livereload');
 var fileinclude = require('gulp-file-include');
+var browserSync = require('browser-sync');
 
 //svg
 var svgstore = require('gulp-svgstore');
