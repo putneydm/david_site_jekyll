@@ -195,9 +195,9 @@ gulp.task('css-inline', function() {
       browsers: ['last 2 versions'],
       cascade: false
    }))
-    // .pipe(minifyCSS({
-    //   keepBreaks:false
-    // }))
+    .pipe(minifyCSS({
+      keepBreaks:false
+    }))
     .pipe(gulp.dest(paths.styles.outputInline))
 });
 
