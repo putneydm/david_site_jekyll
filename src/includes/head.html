@@ -1,6 +1,5 @@
 
 <head>
-<!-- head changed -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,19 +12,8 @@
   <style>
     @@include('../inline_css/main_embedded_styles.css')
     @@include('../inline_css/index_embeded_styles.css')
-    {% if page.pageType %}
-      {% assign pagetype = page.pageType %}
-    {% endif %}
-    {% if pagetype == "blog-entry" %}
-      @@include('../inline_css/blog_embedded_styles.css')
-    {% endif %}
-    {% if page.heroArt %}
-    /*testing*/
-    .hero-art{background-image: url('/siteart/hero_{{page.heroArt}}.jpg');}@media screen and (max-width: 46.875em) {.hero-art {background-image: url('/siteart/sm_hero_{{page.heroArt}}.jpg');}}
-    {% endif %}
+    {% if page.pagetype %}{% assign page-type = page.pagetype %}{% endif %}
+    {% if page-type == "blog-entry" or page-type == "blog" %}@@include('../inline_css/blog_embedded_styles.css'){% endif %}
+    {% if page.heroArt %}.hero-art{background-image: url('/siteart/hero_{{page.heroArt}}.jpg');}@media screen and (max-width: 46.875em) {.hero-art {background-image: url('/siteart/sm_hero_{{page.heroArt}}.jpg');}}{% endif %}
   </style>
-  <!-- @@include('partials/mt_css_links.html')
-  @@include('partials/mt_fonts_links.html') -->
-
-<!-- <link rel="stylesheet" type="text/css" href="http://www.davidputney.com/css/styles.css"> -->
 </head>
