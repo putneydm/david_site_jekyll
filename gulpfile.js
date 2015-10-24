@@ -120,17 +120,12 @@ gulp.task('layouts', function() {
   //  .pipe(gulp.dest(paths.pageLayouts.dist));
 });
 gulp.task('pages', function() {
-
    gulp.src(['!' + paths.pages.exclude, paths.pages.input])
    .pipe(fileinclude({
      prefix: '@@',
      basepath: '@file'
    }))
-  //  .pipe(htmltidy({doctype: 'html5',
-  //                hideComments: true,
-  //                indent: true}))
    .pipe(gulp.dest(paths.pages.testing))
-  //  .pipe(gulp.dest(paths.pageLayouts.dist));
 });
 
 gulp.task('includes', function() {
