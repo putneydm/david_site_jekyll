@@ -1,39 +1,49 @@
 
 	<aside id="blog-teaser-wrapper" class="blog-teaser-wrapper">
 	<h4 class="blog-teaser-label">You might also like</h4>
-	<ul class="blog-teaser-list">
+	<ul class="blog-teaser-list blog-teaser-inside">
 
-		{% assign currentEntry = page %}
+		<!-- {% assign currentEntry = page %} -->
 
-		 {% assign random = site.time | date: "%s%N" | modulo: site.categories.blog-entry.size %}
-			{% for post in site.categories.blog-entry%}
-				 {% if post ==  site.posts[random] and post.promo != currentEntry.promo and site.posts[random].categories contains 'promo' %}
-				<li class="blog-teaser-item blog-teaser-highlight">
-					<a href="{{ site.posts[random].url }}" rel="canonical">
-					<figure class="blog-teaser-image med-photo-overlay">
-					<img src="/siteart/xsmall_{{ site.posts[random].image}}.jpg" alt="{{ site.posts[random].imageAlt}}">
-					</figure>
-						<h4 class="blog-teaser-hed">random post {{ site.posts[random].title markdownify | strip_html }}
-						<svg class="teaser-arrow-icon">
-							<use xlink:href="#arrow-right" />
-						</svg>
-					</h4>
-					</a>
-				</li>
-				 {% break %}
+		{% assign myArray = site.array %}
+		{% assign postArray = site.array %}
+
+		{% for post in site.categories.blog-entry limit: 3 offset:1 %}
+			{% assign postArray = postArray | push: post.title %}
+		{% endfor %}
+
+		{% for post in site.categories.promo %}
+				{% if post.title != postArray[0] or item.title != postArray[1] or item.title != postArray[2] %}
+					{% assign myArray = myArray | push: post %}
 				{% endif %}
 		{% endfor %}
+		{% assign size = myArray.size %}
+		{% assign randompost = site.time | date: "%s%N" | modulo: size %}
+
+		<li class="blog-teaser-item blog-teaser-highlight">
+			<a href="{{ myArray[randompost].url }}" rel="canonical">
+			<figure class="blog-teaser-image med-photo-overlay">
+			<img src="/siteart/xsmall_{{ myArray[randompost].image}}.jpg" alt="{{ myArray[randompost].imageAlt}}">
+			</figure>
+				<h4 class="blog-teaser-hed">{{ myArray[randompost].promo markdownify | strip_html }}{{ randompost }}
+				<svg class="teaser-arrow-icon">
+					<use xlink:href="#arrow-right" />
+				</svg>
+			</h4>
+			</a>
+		</li>
+
 
 		{% for post in site.categories.blog-entry limit: 5 %}
 		{% if post.promo != currentEntry.promo %}
 		<span class="hidden">{% increment counter %}</span>
 		{% if counter < 4 %}
 			<li class="blog-teaser-item">
-					<a href="<mt:entrypermalink>" rel="canonical">
+					<a href="{{post.url}}" rel="canonical">
 					<figure class="blog-teaser-image med-photo-overlay">
 					<img src="/siteart/xsmall_{{post.image}}.jpg" alt="{{post.imageAlt}}">
 					</figure>
-						<h4 class="blog-teaser-hed">{{counter}} {{ post.promo }}
+						<h4 class="blog-teaser-hed">{{ post.promo }}
 						<svg class="teaser-arrow-icon">
 							<use xlink:href="#arrow-right" />
 						</svg>
