@@ -203,8 +203,8 @@ $cap-height: 		0.68;
 @mixin aspect-ratio($viewport,$margin,$width,$height){
   $ratio:$height / $width;
   $elHeight:$viewport * $ratio;
-  width:calc(#{$viewport}vw - #{$margin}px);
-  height:calc(#{$elHeight}vw - #{$margin}px);
+  width:#{$viewport}vw;
+  height:#{$elHeight}vw;
   // display:flex;
   // align-items:center;
   // justify-content:center;
