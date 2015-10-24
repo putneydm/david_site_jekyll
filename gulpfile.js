@@ -187,7 +187,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('css-inline', function() {
-  gulp.src([paths.styles.exclude, paths.styles.inputInline])
+  gulp.src([paths.styles.inputInline])
    .pipe(scsslint())
    .pipe(sass())
    .pipe(autoprefixer({
