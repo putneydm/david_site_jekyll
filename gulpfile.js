@@ -54,6 +54,8 @@ var paths = {
     exclude : 'src/pages/{_partials,_partials/**}',
     testing : 'test/',
     watch : 'src/pages/**/*.html',
+    site : 'test/_site/**/*html',
+    deploy : 'dist/'
   },
   includes : {
    input : 'src/includes/*.html',
