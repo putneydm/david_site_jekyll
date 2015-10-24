@@ -134,11 +134,15 @@ gulp.task('includes', function() {
      prefix: '@@',
      basepath: '@file'
    }))
-  //  .pipe(htmltidy({doctype: 'html5',
-  //                hideComments: true,
-  //                indent: true}))
    .pipe(gulp.dest(paths.includes.testing))
-  //  .pipe(gulp.dest(paths.pageLayouts.dist));
+});
+gulp.task('deploy', function() {
+   gulp.src(paths.pages.site)
+   .pipe(htmltidy({doctype: 'html5',
+         hideComments: true,
+         indent: true}))
+    .pipe(minifyHTML())
+   .pipe(gulp.dest(paths.pages.deploy));
 });
 
 // concatenates scripts, but not items in exclude folder. includes vendor folder
