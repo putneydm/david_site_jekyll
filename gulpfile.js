@@ -33,6 +33,7 @@ var watch = require('gulp-watch');
 var livereload = require('gulp-livereload');
 var fileinclude = require('gulp-file-include');
 var browserSync = require('browser-sync');
+var del = require('del');
 
 //svg
 var svgstore = require('gulp-svgstore');
@@ -76,12 +77,16 @@ var paths = {
   },
   styles : {
     input : 'src/sass/styles.scss',
-    inputInline : 'src/sass/{blog_embedded_styles.scss,index_embeded_styles.scss,main_embedded_styles.scss}',
+    inputInline : 'src/sass/inline_styles/{blog_embedded_styles.scss,index_embeded_styles.scss,main_embedded_styles.scss}',
     outputInline : 'src/inline_css',
     exclude : '!src/sass/partials/*.scss',
     testing : 'test/css/',
     dist : 'dist/css',
     watch : 'src/sass/**/*.scss'
+  },
+  remove: {
+      input: 'test/css/*.css',
+      exclude: '!test/css/styles.css'
   },
   images : {
     input : 'src/photos_in/{*.jpg,*.tiff,*.png}',
@@ -147,8 +152,7 @@ gulp.task('deploy', function() {
 
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
- //   var filterItems = filter(['!' + paths.scripts.exclude, '!' + paths.scripts.bower, '!' + paths.scripts.vendor]);
-   gulp.src([paths.scripts.input,'!' + paths.scripts.exclude, '!' + paths.scripts.bower])
+   gulp.src(paths.scripts.input)
    .pipe(concat('scripts.js'))
    .pipe(gulp.dest(paths.scripts.testing))
    .pipe(minifyJS())
@@ -188,7 +192,7 @@ gulp.task('css', function() {
 
 gulp.task('css-inline', function() {
   gulp.src([paths.styles.inputInline])
-   .pipe(scsslint())
+  //  .pipe(scsslint())
    .pipe(sass())
    .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -228,6 +232,12 @@ gulp.task('bower', function() {
 gulp.task('posts', function() {
    gulp.src(paths.posts.input)
    .pipe(gulp.dest(paths.posts.output))
+});
+
+gulp.task('clean', function () {
+  return del([
+    paths.remove.input, paths.remove.exclude
+  ]);
 });
 
 // creates blog images in four sizes, minifies, moves to testing and dist
@@ -718,7 +728,11 @@ gulp.task('listen', function () {
     // css
         gulp.watch(paths.styles.watch).on('change', function(file) {
         gulp.start('css');
+        // gulp.start('browserSync');
+    });
+        gulp.watch(paths.styles.inputInline).on('change', function(file) {
         gulp.start('css-inline');
+        gulp.start('pages');
         // gulp.start('browserSync');
     });
         gulp.watch(paths.posts.input).on('change', function(file) {
@@ -733,14 +747,15 @@ gulp.task('refresh', ['compile', 'pages', 'images'], function () {
 
 // Compile files, generate docs, and run unit tests (default)
 gulp.task('default', [
+  'css',
   'css-inline',
   'pages',
   'layouts',
   'includes',
-	'css',
+  'concat',
 	'svg',
 	'bower',
-	'concat',
-  'posts'
+  'posts',
+  'clean'
 	// 'minifyScripts'
 ]);
