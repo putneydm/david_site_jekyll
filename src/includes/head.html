@@ -14,7 +14,9 @@
     @@include('../inline_css/main_embedded_styles.css')
     @@include('../inline_css/index_embeded_styles.css')
     {% if page.pagetype %}{% assign page-type = page.pagetype %}{% endif %}
-    {% if page-type == "blog-entry" or page-type == "blog" %}@@include('../inline_css/blog_embedded_styles.css'){% endif %}
-    {% if page.heroArt %}.hero-art{background-image: url('/siteart/hero_{{page.heroArt}}.jpg');}@media screen and (max-width: 46.875em) {.hero-art {background-image: url('/siteart/sm_hero_{{page.heroArt}}.jpg');}}{% endif %}
+    {% if page-type == "blog-entry" or page-type == "blog" %}
+/*{{page-type}}*/
+
+    @@include('../inline_css/blog_embedded_styles.css'){% endif %}
   </style>
 </head>
