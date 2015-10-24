@@ -14,8 +14,7 @@ var autoprefixer = require('gulp-autoprefixer');
 
 // html
  var htmltidy = require('gulp-htmltidy');
- var htmlmin = require('gulp-html-minifier');
- var htmlmin = require('gulp-html-minifier');
+ var minifyHTML = require('gulp-minify-html');
 
 //images
 var imagemin = require('gulp-imagemin');
