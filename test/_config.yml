@@ -12,6 +12,8 @@ permalink: /:year/:month/:title.html
 # Build settings
 markdown: kramdown
 
+array: []
+
 tag_page_layout: tag_index
 tag_page_dir: tag
 
