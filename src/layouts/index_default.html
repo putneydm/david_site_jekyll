@@ -5,9 +5,6 @@
   {% assign hero-art = page.heroArt %}
 
 <body id="index-page" class="one" data-pagetype="index-page">
-<div class="svg-import hidden" aria-hidden="true">
-    @@include('../svg/svgsprite.svg')
-</div>
 <ul class="hidden">
   <li><a href="#nav-start">Skip to navigation</a></li>
   <li><a href="#main">Skip to content</a></li>
@@ -38,7 +35,9 @@
   </main>
 
     {% include mt_footer.html %}
-
+    <div class="svg-import hidden" aria-hidden="true">
+        @@include('../svg/svgsprite.svg')
+    </div>
   </body>
   @@include('partials/mt_js_links.html')
 </html>
