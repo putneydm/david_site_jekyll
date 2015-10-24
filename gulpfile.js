@@ -440,13 +440,13 @@ gulp.task('hero', function () {
     .pipe(gm(function (gmfile){
       return gmfile.setFormat('jpg'),
           gmfile.resample(72, 72),
-          gmfile.thumbnail(900, '352^'),
+          gmfile.thumbnail(700, '261^'),
           gmfile.quality(10),
           gmfile.filter('triangle'),
           gmfile.unsharp('0.25x0.25+8+0.065'),
           gmfile.interlace('none'),
           gmfile.colorspace('sRGB'),
-          gmfile.crop(900, 352, 0, 0);
+          gmfile.crop(700, 261, 0, 0);
     }, {
       imageMagick: true
     }))
@@ -471,13 +471,13 @@ gulp.task('hero', function () {
     .pipe(gm(function (gmfile){
       return gmfile.setFormat('jpg'),
        gmfile.resample(72, 72),
-       gmfile.thumbnail(500, '208^'),
+       gmfile.thumbnail(300, '112^'),
        gmfile.quality(10),
        gmfile.filter('triangle'),
        gmfile.unsharp('0.25x0.25+8+0.065'),
        gmfile.interlace('none'),
        gmfile.colorspace('sRGB'),
-       gmfile.crop(500, 208, 0, 0);
+       gmfile.crop(300, 112, 0, 0);
     }, {
       imageMagick: true
     }))
