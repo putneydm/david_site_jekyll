@@ -172,6 +172,9 @@
 	flex-wrap: wrap;
 	flex-direction:row;
 }
+.blog-teaser-inside {
+	flex-direction: row-reverse;
+}
 .blog-teaser-label {
 	margin:0 0 rem(10) rem(5);
 }
