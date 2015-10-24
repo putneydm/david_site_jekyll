@@ -3,7 +3,7 @@ layout: single_blog_entry
 pagetype: blog-entry
 title:  Flipping the script
 date:   2015-06-27 15:30:33
-categories: blog-entry promo
+categories: blog-entry
 subhead:
 tags: ["JavaScript","coding","CSS","jQuery","front-end web development","HTML","web development"]
 image: why-does-my-iphone-battery-die-so-fast-cover

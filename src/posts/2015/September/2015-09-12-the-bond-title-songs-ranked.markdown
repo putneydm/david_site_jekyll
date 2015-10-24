@@ -8,7 +8,7 @@ subhead:
 tags: ["James Bond",movies,music,"personal favorites","pop culture"]
 image: bond-songs-ranked
 imageAlt: "Daniel Craig looking menacing in a tuxedo."
-promo: "Ad blocking is a crisis of news orgs\' own making, but it is a crisis nonetheless."
+promo: "Bond title songs, ranked"
 ---  
 
 Even as Sam Smith rustles through Tom Petty's back catalog looking for a [melody][1] for his new Bond tune, we take a look back at 50 years of songs from the venerable film series. We're just going to be honest here that this list is so authoritative and complete that it's the only one you will ever need.

@@ -1,7 +1,7 @@
 ---
 layout: single_blog_entry
 pagetype: blog-entry
-title:  on wickedness
+title:  "It isn't evil being green"
 altTitle:  "It isn't evil being green"
 date:   2015-09-26 14:18:49 PM
 categories: blog-entry
@@ -86,7 +86,7 @@ The lion, drunk with power, sings a [song][15] of a plush life of satin robes (n
 
 Without making any effort to examine Oz's geopolitical and economic situation, Dorothy and her group immediately throw in with the Emerald City central authority.
 
-Although the mission she is sent on is defined as the more innocuous goal of capturing of the Wicked Witch of the West's broomstick, it's true nature could not be clearer. They were to be the Wizard's personal [SEAL Team 6][17].
+Although the mission she is sent on is defined as the more innocuous goal of capturing of the Wicked Witch of the West's broomstick, its true nature could not be clearer. They were to be the Wizard's personal [SEAL Team 6][17].
 
 And this isn't just wild supposition about the mission. Outside the Witch's castle the scarecrow is clearly seen carrying a gun.
 

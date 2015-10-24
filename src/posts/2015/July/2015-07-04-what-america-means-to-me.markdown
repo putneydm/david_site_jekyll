@@ -3,7 +3,7 @@ layout: single_blog_entry
 pagetype: blog-entry
 title:  "What America Means to Me"
 date:   2015-07-04 18:47:24
-categories: blog-entry promo
+categories: blog-entry
 subhead:
 tags: ["cute stories about me","Independence Day","July 4th","reminiscing","wayback machine"]
 image: essay_contest
