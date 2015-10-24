@@ -41,13 +41,12 @@ var svgmin = require('gulp-svgmin');
 //bower
 var mainBowerFiles = require('main-bower-files');
 
-
 var paths = {
   pageLayouts : {
    input : 'src/layouts/{*.html,*shtml}',
    testing: 'test/_layouts/',
    watch: 'src/layouts/*/{*.html,*shtml}',
-  //  dist : 'dist/templates'
+   dist : 'dist/'
   },
   pages : {
     input : 'src/pages/**/*',
