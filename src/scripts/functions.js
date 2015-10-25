@@ -22,7 +22,6 @@ var pageFunctions = {
     if (heroImage) {
       var heroImageName = heroImage.getAttribute('data-image');
     }
-
     //measurements
     var windowWidth = window.innerWidth; // finds width of browser window
     var heroArtHeight;
@@ -43,7 +42,8 @@ var pageFunctions = {
 
     // onload actions
     this.nameplateAnimate(siteNameplate, navigation, heroImage, siteSubhead); // animates nameplate
-    this.setBackground(heroImageName, pageType, windowWidth); // swaps out hero image on load.
+    this.setBackground(heroImageName, windowWidth); // swaps out hero image on load.
+
     this.addLink();
 
     //scroll actions
@@ -320,34 +320,22 @@ trackProgressBar: function () {
     }
   },
   // sets bg image on hero image
-  setBackground: function (heroImageName, pageType, windowWidth) {
+  setBackground: function (heroImageName, windowWidth) {
    var self = this;
-      var imageURL = self.setHeroURL(pageType, windowWidth) + heroImageName + '.jpg';
+      var imageURL = self.setHeroURL(windowWidth) + heroImageName + '.jpg';
       var img = new Image();
       img.onload = function(){
       document.getElementById('hero-image').style.backgroundImage = 'url('+imageURL+')';
       };
       img.src = imageURL;
   },
-  setHeroURL: function(pageType, windowWidth) {
+  setHeroURL: function(windowWidth) {
    // tests page width and page type to set proper URL for image loader
-    if (pageType === 'index-page' && windowWidth < 700) {
-      return 'siteart/med_hero_';
+    if (windowWidth < 700) {
+      return '/siteart/sm_hero_';
       }
-    if (pageType === 'index-page' && windowWidth > 700 && windowWidth < 5000) {
-      return 'siteart/hero_';
-      }
-    if (pageType === 'section-page' && windowWidth < 700) {
-      return '../siteart/med_hero_';
-      }
-    if (pageType === 'section-page' && windowWidth > 700 && windowWidth < 5000) {
-       return '../siteart/hero_';
-      }
-    if (pageType === 'portfolio-page' && windowWidth < 700) {
-      return '../../siteart/med_hero_';
-      }
-    if (pageType === 'portfolio-page' && windowWidth > 700 && windowWidth < 5000) {
-      return '../../siteart/hero_';
+    if (windowWidth > 700) {
+      return '/siteart/hero_';
       }
   },
   addLink: function() {
