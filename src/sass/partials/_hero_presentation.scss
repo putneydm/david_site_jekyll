@@ -83,11 +83,3 @@
 		margin:rem(20) auto 0;
 		}
 }
-.filter-me
-	{
-		&:not(.hero-art-curve) {
-			filter: blur(2px) grayscale(70%);
-			transition: .3s -webkit-filter linear;
-			transition:filter .3s;
-		}
-	}
