@@ -38,6 +38,7 @@
 		min-height:rem(350);
 			@media screen and (max-width:em(950)){
 				background-size: auto 350px;
+				background-attachment: scroll;
 			}
 			&::before {
 				@include aspect-ratio (100, 0, 23, 8.56);
