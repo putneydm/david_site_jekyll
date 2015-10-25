@@ -22,7 +22,7 @@ pageType: blog-entry
 
   	<ul class="blog-tags">
       {% for tag in page.tags %}
-        <li><a href="/tag/{{tag | replace:' ','-'}}.html">{{ tag }}</a></li>
+        <li><a href="/tag/{{tag | replace:' ','-'}}.html" rel="tag">{{ tag }}</a></li>
       {% endfor %}
   	</ul>
     @@include('partials/blog_components/mt_blog_entry_teasers_inside.html')
