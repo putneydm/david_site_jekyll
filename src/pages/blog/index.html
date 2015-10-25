@@ -26,7 +26,7 @@ keywords: [blog, writing, technology, movies, music, culture]
   <footer class="blog-entry-footer">
   	<ul class="blog-tags">
       {% for tag in post.tags %}
-        <li><a href="/tag/{{tag | replace:' ','-'}}.html">{{ tag }}</a></li>
+        <li><a href="/tag/{{tag | replace:' ','-'}}.html" rel="tag">{{ tag }}</a></li>
       {% endfor %}
   	</ul>
   </footer>
@@ -42,12 +42,12 @@ keywords: [blog, writing, technology, movies, music, culture]
           <svg class="teaser-arrow-icon arrow-icon-left">
             <use xlink:href="#arrow-right" />
           </svg>
-            <a href="{{ paginator.previous_page_path }}" class="">Back</a>
+            <a href="{{ paginator.previous_page_path }}" rel="prev" class="">Back</a>
           {% endif %}
         </div>
         <div class="pagination-direction">
           {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+            <a href="{{ paginator.next_page_path }}" rel="next" class="next">Next</a>
             <svg class="teaser-arrow-icon">
       				<use xlink:href="#arrow-right" />
       			</svg>
