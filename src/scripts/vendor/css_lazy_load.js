@@ -37,3 +37,7 @@ var cssLoad = {
          return ss;
       },
 };
+
+(function() {
+  cssLoad.intialize();
+})();

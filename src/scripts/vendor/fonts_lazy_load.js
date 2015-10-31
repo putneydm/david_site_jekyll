@@ -46,3 +46,7 @@ initFontsWoffTwo: function (pageType) {
 // (function() {
 //   fontLoad.intialize();
 // })();
+
+(function() {
+  fontLoad.intialize();
+})();
