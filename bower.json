@@ -1,0 +1,23 @@
+{
+  "name": "david_site_jekyll",
+  "description": "my jekyll site",
+  "main": "index",
+  "authors": [
+    "David Putney <david@davidputney.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/putneydm/david_site_jekyll",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "picturefill": "~3.0.1"
+  }
+}
