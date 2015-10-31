@@ -1,13 +1,4 @@
-.teaser-module-container{
-	margin:0 auto;
-	padding:rem(80) rem(40) 0;
-	max-width:rem(1100);
-	position:relative;
-	@media screen and (max-width:em(450))
-		{
-		padding:rem(40) rem(15) 0;
-		}
-}
+
 .teaser-module	{
 	@include spanner_too (12, 1100, 0, 12);
 	margin:0 0 rem(60) 0;
