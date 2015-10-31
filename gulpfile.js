@@ -254,36 +254,36 @@ gulp.task('clean', function () {
 // creates blog images in four sizes, minifies, moves to testing and dist
 gulp.task('blog-images', function () {
 
-  // Large images
-  gulp.src(paths.images.input)
-    .pipe(gm(function (gmfile) {
-         return gmfile.setFormat('jpg'),
-      		 gmfile.resample(72, 72),
-             gmfile.thumbnail(1400, '824!'),
-             gmfile.quality(82),
-             gmfile.filter('triangle'),
-             gmfile.unsharp('0.25x0.25+8+0.065'),
-             gmfile.interlace('none'),
-             gmfile.colorspace('sRGB'),
-            gmfile.crop(1400, 824, 0, 0);
-      }, {
-        imageMagick: true
-      }
-    ))
+// Large images
+gulp.src(paths.images.input)
+  .pipe(gm(function (gmfile) {
+     return gmfile.setFormat('jpg'),
+  		gmfile.resample(72, 72),
+      gmfile.thumbnail(1400, '824!'),
+      gmfile.quality(82),
+      gmfile.filter('triangle'),
+      gmfile.unsharp('0.25x0.25+8+0.065'),
+      gmfile.interlace('none'),
+      gmfile.colorspace('sRGB'),
+      gmfile.crop(1400, 824, 0, 0);
+  }, {
+    imageMagick: true
+  }
+))
 
-    // Crunches Images
-    .pipe(imagemin({
-      progressive: true,
-      use: [jpegtran()]
-    }))
+  // Crunches Images
+  .pipe(imagemin({
+    progressive: true,
+    use: [jpegtran()]
+  }))
 
-    // Renames Images
-    .pipe(rename({
-      prefix: 'large_'
-    }))
+  // Renames Images
+  .pipe(rename({
+    prefix: 'large_'
+  }))
 
-    .pipe(gulp.dest(paths.images.testing))
-    .pipe(gulp.dest(paths.images.dist));
+  .pipe(gulp.dest(paths.images.testing))
+  .pipe(gulp.dest(paths.images.dist));
 
   // x-small images
   gulp.src(paths.images.input)
@@ -690,14 +690,14 @@ gulp.task('hero-index', function () {
 // update this if I ever need to change fonts
 gulp.task('fonts', function () {
     return gulp.src(paths.fonts.input)
-         .pipe(cssBase64({
-            maxImageSize: 8*10024 // bytes
-        }))
-        .pipe(gulp.dest(paths.fonts.testing))
-        .pipe(minifyCSS({
-          keepBreaks:false
-        }))
-        .pipe(gulp.dest(paths.fonts.dist));
+    .pipe(cssBase64({
+      maxImageSize: 8*10024 // bytes
+    }))
+    .pipe(gulp.dest(paths.fonts.testing))
+    .pipe(minifyCSS({
+      keepBreaks:false
+    }))
+    .pipe(gulp.dest(paths.fonts.dist));
 });
 
 gulp.task('browserSync', function() {
