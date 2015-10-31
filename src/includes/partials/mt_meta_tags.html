@@ -1,34 +1,42 @@
-
 {% assign pageType = page.pagetype %}
 {% assign ogSiteKeywords = site.sitekeywords | join: ', ' %}
-
-{% if pageType == 'index' %}
+<!-- og image -->
+{% if page.heroArt %}
 	{% capture ogImage %}hero_{{page.heroArt }}.jpg{% endcapture %}
-	{% assign ogTitle = site.tagLine %}
-	{% assign ogDescription = site.description %}
-	{% assign ogKeywords = page.keywords | join: ', ' %}
+{% else %}
+	{% capture ogImage %}med_placeholder.jpg{% endcapture %}
 {% endif %}
 
+<!-- of keywords  -->
 {% if pageType == 'blog-entry' %}
-	{% capture ogImage %}large_{{page.image }}.jpg{% endcapture %}
-	{% assign ogTitle = page.title %}
-	{% assign ogDescription = page.content | truncatewords: "120" escape markdownify strip_html '<sup>' | remove:'<sup>' '</sup>' | remove:'</sup>' %}
 	{% assign ogKeywords = page.tags | join: ', ' %}
+{% else %}
+	{% assign ogKeywords = page.keywords | join: ', ' %}
 {% endif %}
 
-{% if pageType == 'tag-archive' %}
-	{% capture ogTitle %}{{  page.tag | capitalize }} archive | {{site.title}}{% endcapture %}
+<!-- og description -->
+{% if pageType == 'blog-entry' or pageType == 'portfolio_entry' %}
+	{% assign ogDescription = page.content | truncatewords: "120" | escape | strip_html | remove:'<sup>' | remove: '&lt;p&gt;' | remove: '&lt;/p&gt;'%}
+{% elsif pageType == 'tag-archive' or pageType == 'index' %}
 	{% assign ogDescription = site.description %}
-	{% assign ogKeywords = page.keywords | join: ', ' %}
+{% else %}
+	{% assign ogDescription = page.description %}
 {% endif %}
 
-{% if pageType == 'blog' or  pageType == portfolio'%}
-	{% capture ogImage %}hero_{{page.heroArt }}.jpg{% endcapture %}
+<!-- og title -->
+{% if pageType == 'blog' or  pageType == portfolio' %}
 	{% assign ogTitle = page.head %}
-	{% assign ogDescription = 'page.description' %}
-	{% assign ogKeywords = page.keywords | join: ', ' %}
+{% elsif pageType == 'tag-archive' %}
+	{% capture ogTitle %}{{  page.tag | capitalize }} archive | {{site.title}}{% endcapture %}
+{% elsif pageType == 'blog-entry' %}
+	{% assign ogTitle = page.title %}
+{% elsif pageType == 'index' %}
+	{% assign ogTitle = site.tagLine %}
+{% else %}
+ 	{% assign ogTitle = page.head %}
 {% endif %}
 
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="HandheldFriendly" content="True">
