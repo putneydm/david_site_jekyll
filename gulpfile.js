@@ -737,8 +737,9 @@ gulp.task('listen', function () {
       //  gulp.start('refresh');
     });
     // css
-        gulp.watch(paths.styles.watch).on('change', function(file) {
-        gulp.start('css');
+    gulp.watch(paths.styles.watch).on('change', function(file) {
+      gulp.start('css');
+      gulp.start('css-inline');
         // gulp.start('browserSync');
     });
         gulp.watch(paths.styles.inputInline).on('change', function(file) {
