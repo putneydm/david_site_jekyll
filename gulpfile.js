@@ -745,6 +745,11 @@ gulp.task('listen', function () {
         gulp.watch(paths.styles.inputInline).on('change', function(file) {
         gulp.start('css-inline');
         gulp.start('pages');
+    gulp.watch(paths.posts.input).on('change', function(file) {
+      gulp.start('posts');
+    });
+    gulp.watch(paths.collections.input).on('change', function(file) {
+      gulp.start('collections');
         // gulp.start('browserSync');
     });
         gulp.watch(paths.posts.input).on('change', function(file) {
