@@ -15,4 +15,11 @@
     {% endif %}
     {% include main_embedded_styles.css %}
   </style>
+<noscript>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/fonts/fontsWoff_r2.css">
+  <style>
+    {% if page.heroArt %}.hero-art{background-image: url('/siteart/hero_{{page.heroArt}}.jpg');}@media screen and (max-width: 46.875em) {.hero-art {background-image: url('/siteart/sm_hero_{{page.heroArt}}.jpg');}}{% endif %}
+  </style>
+</noscript>
 </head>
