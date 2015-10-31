@@ -123,8 +123,8 @@ gulp.task('layouts', function() {
      basepath: '@file'
    }))
   //  .pipe(htmltidy({doctype: 'html5',
-  //                hideComments: true,
-  //                indent: true}))
+  //    hideComments: true,
+  //    indent: true}))
    .pipe(gulp.dest(paths.pageLayouts.testing))
   //  .pipe(gulp.dest(paths.pageLayouts.dist));
 });
@@ -134,9 +134,11 @@ gulp.task('pages', function() {
      prefix: '@@',
      basepath: '@file'
    }))
+  //  .pipe(htmltidy({doctype: 'html5',
+  //    hideComments: true,
+  //    indent: true}))
    .pipe(gulp.dest(paths.pages.testing))
 });
-
 gulp.task('includes', function() {
    gulp.src(paths.includes.input)
    .pipe(fileinclude({
@@ -145,11 +147,12 @@ gulp.task('includes', function() {
    }))
    .pipe(gulp.dest(paths.includes.testing))
 });
+
 gulp.task('deploy', function() {
    gulp.src(paths.pages.site)
    .pipe(htmltidy({doctype: 'html5',
-         hideComments: true,
-         indent: true}))
+       hideComments: true,
+       indent: true}))
     .pipe(minifyHTML())
    .pipe(gulp.dest(paths.pages.deploy));
 });
