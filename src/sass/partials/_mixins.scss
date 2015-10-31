@@ -141,12 +141,12 @@
 
 @mixin underscore-body ($color, $position)
 	{
-	color:$color;
+	// color:$color;
 	background-image: -moz-linear-gradient(top, transparent 75%, $color 75%);
 	background-image: -webkit-linear-gradient(top, transparent 75%, $color 75%);
 	background-image: -o-linear-gradient(top, transparent 75%, $color 75%);
 	background-image: linear-gradient(to bottom, transparent 75%, $color 75%);
-	background-size: 12px 12px;
+	background-size: 20px 20px;
 	background-origin: padding-box;
 	background-position: 0 $position;
 	background-repeat: repeat-x;
