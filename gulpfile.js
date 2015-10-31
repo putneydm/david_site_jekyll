@@ -240,6 +240,10 @@ gulp.task('posts', function() {
    gulp.src(paths.posts.input)
    .pipe(gulp.dest(paths.posts.output))
 });
+gulp.task('collections', function() {
+   gulp.src(paths.collections.input)
+   .pipe(gulp.dest(paths.collections.output))
+});
 
 gulp.task('clean', function () {
   return del([
