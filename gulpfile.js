@@ -769,6 +769,7 @@ gulp.task('default', [
   'pages',
   'layouts',
   'includes',
+  'collections',
   'concat',
 	'svg',
 	'bower',
