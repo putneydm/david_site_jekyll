@@ -28,27 +28,21 @@
 				padding:3px 12px 5px 0;
 			}
 		}
-.triple-module-head {
-	opacity:1;
-	line-height:150%;
-	top:0;
-	transform: scale(1,1);
 	}
-}
-.footer-links {
-		li {
-			a {
-				.footer-icon {
-					fill:$aqua;
+	.footer-links {
+			li {
+				a {
+					.footer-icon {
+						fill:$aqua;
+					}
 				}
 			}
-		}
-}
-.footer-icon {
-	fill:$light;
-}
-.blog-teaser-item {
-	transform: translateY(0);
-	opacity:1;
-}
+	}
+	.footer-icon {
+		fill:$light;
+	}
+	.blog-teaser-item {
+		transform: translateY(0);
+		opacity:1;
+	}
 }
