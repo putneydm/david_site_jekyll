@@ -214,23 +214,23 @@ gulp.task('css-inline', function() {
 // creates svg sprite and moves it to testing and dist
 gulp.task('svg', function () {
     return gulp
-        .src(paths.svg.input)
-        .pipe(svgmin())
-        .pipe(svgstore())
-        .pipe(rename ({
-            basename: 'svgsprite',
-            extname: '.svg'
-        }))
-         .pipe(gulp.dest(paths.svg.output))
-        // .pipe(gulp.dest(paths.svg.dist));
+    .src(paths.svg.input)
+    .pipe(svgmin())
+    .pipe(svgstore())
+    .pipe(rename ({
+        basename: 'svgsprite',
+        extname: '.svg'
+    }))
+     .pipe(gulp.dest(paths.svg.output))
+    // .pipe(gulp.dest(paths.svg.dist));
 });
 
 // moves bower dependencies to vendor
 gulp.task('bower', function() {
    return gulp.src(mainBowerFiles({
     paths: {
-        bowerDirectory: paths.bower.components,
-        bowerJson: paths.bower.json
+      bowerDirectory: paths.bower.components,
+      bowerJson: paths.bower.json
     }
 }))
     .pipe(gulp.dest(paths.bower.vendor))
