@@ -159,8 +159,8 @@ h3 {
 		display:inline-block;
 		font-weight:700;
 		margin:0 0 0px 0;
-			a { color:$aqua;
-				&:hover { color:$dark_aqua; }
+			a { color:$aqua;background-image:none;
+				&:hover { color:$dark_aqua; background-image:none;}
 		}
 			&:before {
 				content:' | ';
