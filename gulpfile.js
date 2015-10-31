@@ -43,70 +43,74 @@ var svgmin = require('gulp-svgmin');
 var mainBowerFiles = require('main-bower-files');
 
 var paths = {
-  pageLayouts : {
-   input : 'src/layouts/{*.html,*shtml}',
+  pageLayouts: {
+   input: 'src/layouts/{*.html,*shtml}',
    testing: 'test/_layouts/',
    watch: 'src/layouts/*/{*.html,*shtml}',
-   dist : 'dist/'
+   dist: 'dist/'
   },
-  pages : {
-    input : 'src/pages/**/*',
-    exclude : 'src/pages/{_partials,_partials/**}',
-    testing : 'test/',
-    watch : 'src/pages/**/*.html',
-    site : 'test/_site/**/*html',
-    deploy : 'dist/'
+  pages: {
+    input: 'src/pages/**/*',
+    exclude: 'src/pages/{_partials,_partials/**}',
+    testing: 'test/',
+    watch: 'src/pages/**/*.html',
+    site: 'test/_site/**/*html',
+    deploy: 'dist/'
   },
-  includes : {
-   input : 'src/includes/*.html',
+  includes: {
+   input: 'src/includes/*.html',
    testing: 'test/_includes/'
-  //  dist : 'dist/templates'
+  //  dist: 'dist/templates'
   },
-  scripts : {
-    input : 'src/scripts/**/*.js',
-    exclude : 'src/scripts/exclude/*.js',
-    bower : 'src/scripts/bower_components/**/*.js',
-    vendor : 'src/scripts/vendor/*.js',
-    testing : 'test/scripts/',
-    dist : 'dist/scripts/'
+  scripts: {
+    input: 'src/scripts/**/*.js',
+    exclude: 'src/scripts/exclude/*.js',
+    bower: 'src/scripts/bower_components/**/*.js',
+    vendor: 'src/scripts/vendor/*.js',
+    testing: 'test/scripts/',
+    dist: 'dist/scripts/'
   },
-  bower : {
-   components : 'src/scripts/bower_components',
-   json : 'src/scripts/bower.json',
-   vendor : 'src/scripts/vendor/'
+  bower: {
+   components: 'bower_components',
+   json: 'bower.json',
+   vendor: 'src/scripts/vendor/'
   },
-  styles : {
-    input : 'src/sass/styles.scss',
-    inputInline : 'src/sass/inline_styles/{blog_embedded_styles.scss,index_embeded_styles.scss,main_embedded_styles.scss}',
-    outputInline : 'src/inline_css',
-    exclude : '!src/sass/partials/*.scss',
-    testing : 'test/css/',
-    dist : 'dist/css',
-    watch : 'src/sass/**/*.scss'
+  styles: {
+    input: 'src/sass/styles.scss',
+    inputInline: 'src/sass/inline_styles/{blog_embedded_styles.scss,index_embeded_styles.scss,main_embedded_styles.scss}',
+    outputInline: 'test/_includes',
+    exclude: '!src/sass/partials/*.scss',
+    testing: 'test/css/',
+    dist: 'dist/css',
+    watch: 'src/sass/**/*.scss'
   },
   remove: {
       input: 'test/css/*.css',
       exclude: '!test/css/styles.css'
   },
-  images : {
-    input : 'src/photos_in/{*.jpg,*.tiff,*.png}',
-    output : 'src/photos_out/',
-    testing : 'test/siteart/',
-    dist : 'dist/siteart/'
+  images: {
+    input: 'src/photos_in/{*.jpg,*.tiff,*.png}',
+    output: 'src/photos_out/',
+    testing: 'test/siteart/',
+    dist: 'dist/siteart/'
   },
-  svg : {
-    input : 'src/svg/svg_in/*.svg',
-    output : 'src/svg/'
-    // dist : 'dist/svg/'
+  svg: {
+    input: 'src/svg/svg_in/*.svg',
+    output: 'src/svg/'
+    // dist: 'dist/svg/'
   },
   fonts: {
     input: 'src/fonts/*.css',
     testing: 'test/fonts/',
     dist: 'dist/fonts/'
   },
-  posts:   {
+  posts: {
     input: 'src/posts/**/*.markdown',
     output: 'test/_posts/'
+  },
+  collections: {
+    input: 'src/collections/**/*.markdown',
+    output: 'test/'
   }
 };
 
