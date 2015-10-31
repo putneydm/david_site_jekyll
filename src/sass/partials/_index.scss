@@ -203,12 +203,11 @@
 }
 
 .blog-teaser-wrapper--active {
-	border:1px siolid blue;
 
 	.blog-teaser-item {
 		transform: translateY(0);
 		opacity:1;
-		transition:transform .4s ease-in, opacity .2s ease-in;
+		transition:transform .4s cubic-bezier(.55,.3,.38,1.55), opacity .2s ease-in;
 
 		&:nth-child(1) {transition-delay: .2s}
 		&:nth-child(2) {}
