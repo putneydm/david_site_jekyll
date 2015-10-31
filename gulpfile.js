@@ -727,13 +727,13 @@ gulp.task('listen', function () {
       //  gulp.start('refresh');
     });
     // scripts
-        gulp.watch(paths.scripts.input).on('change', function(file) {
-        gulp.start('concat');
+    gulp.watch(paths.scripts.input).on('change', function(file) {
+      gulp.start('concat');
       //  gulp.start('refresh');
     });
     // scripts exclude
-        gulp.watch(paths.scripts.exclude).on('change', function(file) {
-        gulp.start('minifyScripts');
+    gulp.watch(paths.scripts.exclude).on('change', function(file) {
+      gulp.start('minifyScripts');
       //  gulp.start('refresh');
     });
     // css
@@ -742,9 +742,10 @@ gulp.task('listen', function () {
       gulp.start('css-inline');
         // gulp.start('browserSync');
     });
-        gulp.watch(paths.styles.inputInline).on('change', function(file) {
-        gulp.start('css-inline');
-        gulp.start('pages');
+    // gulp.watch(paths.styles.inputInline).on('change', function(file) {
+    //   gulp.start('css-inline');
+    //     // gulp.start('browserSync');
+    // });
     gulp.watch(paths.posts.input).on('change', function(file) {
       gulp.start('posts');
     });
@@ -752,9 +753,6 @@ gulp.task('listen', function () {
       gulp.start('collections');
         // gulp.start('browserSync');
     });
-        gulp.watch(paths.posts.input).on('change', function(file) {
-        gulp.start('posts');
-});
 });
 
 // Run livereload after file change
