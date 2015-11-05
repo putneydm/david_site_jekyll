@@ -12,11 +12,12 @@
 {% if page.image or post.image %}
 <figure class="blog-image med-photo-overlay">
 	<img
-		srcset="/siteart/large_{{ image }}.jpg 1400w,
+		data-srcset="/siteart/large_{{ image }}.jpg 1400w,
 		        /siteart/med_{{ image }}.jpg 900w,
 		        /siteart/xsmall_{{ image }}.jpg 450w"
 		sizes="(min-width:43.75rem) 43.75rem, 100vw"
-		src="/siteart/med_{{ image }}.jpg"
+		data-src="/siteart/med_{{ image }}.jpg"
+		class="lazyload"
 		  {% if alt %}
 				alt="{{ alt }}">
       {% endif%}
