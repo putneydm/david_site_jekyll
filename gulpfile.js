@@ -161,6 +161,11 @@ gulp.task('deploy', function() {
    .pipe(gulp.dest(paths.pages.deploy));
 });
 
+gulp.task('sitemap', function() {
+   gulp.src(paths.sitemap.input)
+   .pipe(gulp.dest(paths.sitemap.output));
+});
+
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
    gulp.src(paths.scripts.input)
@@ -746,10 +751,9 @@ gulp.task('listen', function () {
       gulp.start('css-inline');
         // gulp.start('browserSync');
     });
-    // gulp.watch(paths.styles.inputInline).on('change', function(file) {
-    //   gulp.start('css-inline');
-    //     // gulp.start('browserSync');
-    // });
+    gulp.watch(paths.sitemap.input).on('change', function(file) {
+      gulp.start('sitemap');
+    });
     gulp.watch(paths.posts.input).on('change', function(file) {
       gulp.start('posts');
     });
@@ -776,6 +780,7 @@ gulp.task('default', [
 	'svg',
 	'bower',
   'posts',
+  'sitemap',
   'clean'
 	// 'minifyScripts'
 ]);
