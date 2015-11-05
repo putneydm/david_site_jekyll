@@ -6,7 +6,7 @@
 </a>
 <h3 class="blog-headline"><a href="{{ post.url}}" rel="canonical">{% if post.altTitle %}{{ post.altTitle | markdownify | strip_html }} {% else %} {{ post.title | markdownify | strip_html }}{% endif%}
 </a></h3>
-<p class="blog-entry-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+<p class="blog-entry-date">{{ post.date | date: "%A, %B %-d, %Y" }}</p>
 <div class="blog-entry-text-index">
 	{{ post.content | truncatewords: 700 }}
 </div>
