@@ -19,7 +19,7 @@ keywords: [blog, writing, technology, movies, music, culture]
 
 
   	<h1 class="blog-headline"><a href="{{post.url}}">{% if post.altTitle %}{{ post.altTitle | markdownify | strip_html }} {% else %} {{ post.title | markdownify | strip_html }}{% endif%}</a></h1>
-    <p class="blog-entry-date">{{ post.date | date: "%B %d, %Y" }}</p>
+    <p class="blog-entry-date">{{ post.date | date: "%A, %B %-d, %Y" }}</p>
 
   <div class="blog-entry-text">
       {{ post.content }}
