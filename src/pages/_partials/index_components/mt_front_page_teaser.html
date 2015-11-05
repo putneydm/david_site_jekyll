@@ -4,7 +4,10 @@
 		</header>
 
 		<div class="teaser-module-abstract">
-		<p>	{{ post.content | truncatewords: 70 | strip_html }} <a href="{{post.url}}" rel="next" class="teaser-module-abstract-link">More </a></p>
+		<p>	{{ post.content | truncatewords: 70 | strip_html }} <a href="{{post.url}}" rel="next" class="teaser-module-abstract-link">More
+			<svg class="teaser-arrow-icon">
+				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+				</svg></a></p>
 		</div>
 
 		<a href="{{post.url}}" rel="next">
