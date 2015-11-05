@@ -20,11 +20,10 @@ Frontman Rivers Cuomo spent years battling crushing depression -- the "put tinfo
 Wanting to be on an "island in the sun" isn't just about a holiday week in the tropics. When he sings "We'll never feel bad anymore," it's his deepest wish as well as one of life's most impossible tasks.
 
 How can you never feel bad any more? Truth is, you can't.
-[1]: https://open.spotify.com/track/2MLHyLy5z5l5YRp7momlgw
+
+[1]:https://open.spotify.com/track/2MLHyLy5z5l5YRp7momlgw
 [2]:https://open.spotify.com/album/3jWhmYMAWw5NvHTTeiQtfl
 
------
-EXTENDED BODY:
 I'm not actually here to critically re-evaluate mid-period Weezer. Earlier this week I [wrote][3] a short (for me) blog post about the first real day of spring -- sunny, warm, flowers blooming, leaves finally on the trees.
 
 Walking down a lovely sun-dappled street with tree limbs sagging with blossoms, it just felt good. I wanted to write about that. So, I did.
