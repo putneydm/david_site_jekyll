@@ -9,7 +9,12 @@ heroArt: shirtify
 head: Shirtwarn
 slides: ['shirt_compare', 'shirt_compare2']
 images: ['shirtify_spreadsheet', 'shirtfiy_calc', 'shirtify_chart']
-video: http://player.d.nationalgeographic.com/players/ngsvideo/share/?feed=http://feed.theplatform.com/f/ngs/dCCn2isYZ9N9&guid=00000147-4ac1-dc4d-a3f7-cefb50da0001&link=http://video.nationalgeographic.com/video/
-url: http://mosthorriblethingever.com/team_impact/
+url: http://www.shirtwarn.com/
 ---
-A friend of mine had the same shirt and we always seemed to wear it on the same day. Shirtify is a joke, but it’s a joke that actually worked. The back end is a Google spreadsheet of dates on which I wore my shirt. It calculates the average intervals between wearings and predicts when the next likely time that I will wear the shirt. The threat level warnings — based on Homeland Security terror threat levels — is real-time info. The details chart is made in Flot and updates when the spreadsheet changes.
+A friend of mine had the same shirt and we always seemed to wear it on the same day. This site aims to predict the future to avoid the embarrassment of a fashion faux pas.
+
+Originally, the my idea was to make a site where I could simply post that I was wearing the shirt. But I decided to try something more complicated and celver. The back end is a Google spreadsheet of dates on which I wore my shirt. It calculates the average intervals between wearings and predicts the next likely date that I will wear the shirt.
+
+The threat level warnings — based on Homeland Security terror threat levels — is real-time info. The details chart is made in Flot and updates when the spreadsheet changes.
+
+ Shirtify is a joke, but it’s a joke that actually works/worked. And, as always, it's free to play. 
