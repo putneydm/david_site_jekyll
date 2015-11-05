@@ -120,6 +120,7 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *Three Amigos*
 * *The Gay Divorcee*
 * *The Black Hole*
+* *F.I.S.T.*
 * *The Secret Life of Walter Mitty*
 * *The Lovely Bones*
 * *Great Balls of Fire!*
