@@ -14,10 +14,10 @@
 		<div class="teaser-module-art">
 		<figure class="teaser-module-mainart med-photo-overlay">
 			<picture>
-				<source srcset="/siteart/large_{{post.image}}.jpg" media="(min-width:550px)">
-				<source srcset="/siteart/med_{{post.image}}.jpg" media="(min-width:350px)">
-				<source srcset="/siteart/xsmall_{{post.image}}.jpg">
-				<img src="/siteart/large_{{post.image}}.jpg" alt="">
+				<source data-srcset="/siteart/large_{{post.image}}.jpg" media="(min-width:550px)">
+				<source data-srcset="/siteart/med_{{post.image}}.jpg" media="(min-width:350px)">
+				<source data-srcset="/siteart/xsmall_{{post.image}}.jpg">
+				<img class="lazyload" data-src="/siteart/large_{{post.image}}.jpg" alt="">
 			</picture>
 		</figure>
 		</a>
