@@ -177,24 +177,49 @@
 	margin:0 0 rem(10) rem(5);
 }
 .blog-teaser-item {
-	width:calc(20% - 5px);
-	margin-right:5px;
-	padding:rem(5);
-	border-radius:2px;
-	flex-grow:1;
-	transform: translateY(60px);
-	opacity:0;
 
-		&:nth-child(1) {order:2 ; flex-grow:2.2; 	width:calc(22% - 5px);}
-		&:nth-child(2) {order:1}
-		&:nth-child(3) {order:3}
-		&:nth-child(4) {order:4}
+}
+
+// if there are four items
+.blog-teaser-item:first-child:nth-last-child(n+4),
+.blog-teaser-item:first-child:nth-last-child(n+4) ~ * {
+	flex-basis:calc(19% - 5px);
+	flex-grow:1;
+
+	&:nth-child(1) {order:2 ; flex-grow:1.5; 	flex-basis:calc(25% - 5px);}
+	&:nth-child(2) {order:1}
+	&:nth-child(3) {order:3}
+	&:nth-child(4) {order:4}
+
 	@media screen and (max-width:rem(650)) {
 		 padding:rem(5) rem(5) 0 rem(5);
 	}
 	@media screen and (max-width:rem(550)) {
-		width:calc(50% - 5px);
-		&:nth-child(1) {width:calc(50% - 5px);order:3}
+		flex-basis:calc(50% - 5px);
+		flex-grow:0;
+		&:nth-child(1) {flex-basis:calc(50% - 5px);order:3}
+		&:nth-child(3) {order:2}
+	}
+
+}
+
+// if there are fewer than four
+.blog-teaser-item {
+	flex-basis:25%;
+	margin-right:5px;
+	padding:rem(5);
+	border-radius:2px;
+	flex-grow:0;
+	transform: translateY(60px);
+	opacity:0;
+
+	@media screen and (max-width:rem(650)) {
+		 padding:rem(5) rem(5) 0 rem(5);
+	}
+	@media screen and (max-width:rem(550)) {
+		flex-basis:calc(50% - 5px);
+		flex-grow:0;
+		&:nth-child(1) {flex-basis:calc(50% - 5px);order:3}
 		&:nth-child(3) {order:2}
 	}
 	a {
@@ -202,6 +227,8 @@
 		&:hover {.teaser-arrow-icon{fill:$aqua;transition:fill .2s} }
 	}
 }
+
+
 .blog-teaser-image {
 	padding:0;
 	margin:0;
