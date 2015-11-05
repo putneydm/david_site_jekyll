@@ -1,7 +1,7 @@
 ---
 layout: single_blog_entry
 pagetype: blog-entry
-title:  The problem with \"Jurassic Park\"
+title:  "The problem with \"Jurassic Park\""
 date:   2015-06-14 13:10:23
 categories: blog-entry
 subhead:
