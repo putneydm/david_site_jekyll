@@ -111,6 +111,10 @@ var paths = {
   collections: {
     input: 'src/collections/**/*.markdown',
     output: 'test/'
+  },
+  sitemap: {
+    input: 'test/_site/sitemap.xml',
+    output: 'dist/'
   }
 };
 
