@@ -33,11 +33,9 @@
 			</a>
 		</li>
 
-
+		{% assign countArray = site.array %}
 		{% for post in site.categories.blog-entry limit: 5 %}
-		{% if post.promo != currentEntry.promo %}
-		<span class="hidden">{% increment counter %}</span>
-		{% if counter < 4 %}
+		{% if post.promo != currentEntry.promo and countArray.size < 3 %}
 			<li class="blog-teaser-item">
 					<a href="{{post.url}}" rel="canonical">
 					<figure class="blog-teaser-image med-photo-overlay">
@@ -50,7 +48,7 @@
 						</h4>
 					</a>
 				</li>
-			{% endif %}
+				{% assign countArray = countArray | push: post.title %}
 		{% endif %}
 	{% endfor %}
 </ul>
