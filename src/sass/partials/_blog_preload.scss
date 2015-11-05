@@ -46,8 +46,8 @@
   .blog-image {
   	width:100%;
   	margin:0px;
-  	padding:0px;
   	margin:0 auto rem(40);
   	position:relative;
-  	img { width:100%;}
+		padding:59% 0 0;
+  	img { width:100%;position:absolute;top:0;}
   }
