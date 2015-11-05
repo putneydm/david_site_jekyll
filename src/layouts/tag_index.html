@@ -13,7 +13,7 @@ pagetype: tag-archive
 {% for tag in post.tags %}
 {% if tag == page.tag %}
 <article class="search-results-entry">
-<h2 class="blog-headline"><a href="{{post.url}}" rel="next">{{post.title  }}</a></h2>
+<h2 class="blog-headline"><a href="{{post.url}}" rel="canonical">{{post.title | markdownify | strip_html }}</a></h2>
     <p class="blog-entry-date">{{ page.date | date: "%B %d, %Y" }}</p>
 
 <div class="blog-entry-text">
