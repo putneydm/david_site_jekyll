@@ -17,7 +17,7 @@ pagetype: tag-archive
     <p class="blog-entry-date">{{ page.date | date: "%B %d, %Y" }}</p>
 
 <div class="blog-entry-text">
-<p>{{post.content | truncatewords: 150}}&nbsp;<a href="{{post.url}}" rel="next" class="search-results-link">More</a></p>
+<p>{{post.content | truncatewords: 100}}&nbsp;<a href="{{post.url}}" rel="canonical" class="search-results-link">More</a></p>
 </div>
 </article>
 {% endif %}
