@@ -2,7 +2,7 @@
 layout: single_blog_entry
 pagetype: blog-entry
 title:  Steal this site
-date: 2015-11-01 15:33:33
+date: 2015-11-07 15:33:33
 categories: blog-entry
 subhead:
 tags: [Jekyll,CMS,static site generator,web development,Git,CSS]
