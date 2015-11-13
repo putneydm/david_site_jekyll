@@ -227,14 +227,12 @@
 		&:hover {.teaser-arrow-icon{fill:$aqua;transition:fill .2s} }
 	}
 }
-
-
 .blog-teaser-image {
-	padding:0;
+	padding:59% 0 0;
 	margin:0;
 	position:relative;
+		img {position: absolute;top:0}
 }
-
 .blog-teaser-wrapper--active {
 
 	.blog-teaser-item {
