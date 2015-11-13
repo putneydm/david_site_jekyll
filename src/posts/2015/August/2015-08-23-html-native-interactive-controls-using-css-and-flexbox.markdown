@@ -22,7 +22,7 @@ Styling forms can be tricky, but it is possible to apply a little CSS [sorcery][
 Not only does this allow design freedom, presentation stays in the CSS and more [semantic markup][3] is possible -- a big deal for those who depend on [screen readers][4]. Strip away the CSS and any JS, and the functions of the buttons would be entirely unchanged.
 
 Here's the basic markup for two side-by-side buttons. The `<span>` allows button text to be targeted. But any markup would work.
-
+{% highlight html %}
     <input id="btn-one" type="radio" name="button" value="one" />
     <label for="btn-one" class="btn">
         <span>Label text</span>
@@ -32,9 +32,11 @@ Here's the basic markup for two side-by-side buttons. The `<span>` allows button
     <label for="btn-two" class="btn">
         <span>label text</span>
     </label>
+{% endhighlight %}   
 
 The first step is to hide the radio button itself. Don't use `display:none` or `aria-hidden` because the buttons need to remain accessible:
 
+{% highlight css %}
     [type="radio"] {
          border: 0;
          clip: rect(0 0 0 0);
@@ -44,9 +46,11 @@ The first step is to hide the radio button itself. Don't use `display:none` or `
          position: absolute;
          width: 1px;
     }
+{% endhighlight %}   
 
 Next, style the label to look like a button. Use `+` to target the first `<label>` after the radio.
 
+{% highlight css %}
     [type="radio"] + label {
          width:5rem;
          height:5rem;
@@ -60,13 +64,16 @@ Next, style the label to look like a button. Use `+` to target the first `<label
          transform: scale(.8);
          transition:transform .3s cubic-bezier(.94,-0.66,.33,2.56) .1s;
     }
+{% endhighlight %}   
 
 This creates a default button. The next step is the active state using `:checked`.
 
+{% highlight css %}
     [type="radio"]:checked + label {
          transform: scale(1.1,1.1);
          transition:transform .3s cubic-bezier(.94,-0.66,.33,2.56);
     }
+{% endhighlight %}   
 
 These "buttons" can be styled any way they need to be just like any other element. Transitions add some bounce between states.
 
@@ -85,6 +92,7 @@ Another design called for a three-option selector. Click on the button and the s
 
 The markup for the buttons is the same as previously shown, with one addition.
 
+{% highlight html %}
     <div class="btn-wrapper">
 
          <input id="btn-one" type="radio" name="button" value="one" />
@@ -102,9 +110,11 @@ The markup for the buttons is the same as previously shown, with one addition.
              <span>label text</span>
          </label>
     </div>
+{% endhighlight %}   
 
 Because flexbox is needed for the buttons to work properly, they are inside a flexbox wrapper and arranged in a column that is justified at flex start.
 
+{% highlight css %}
     .btn-wrapper {
          width:9rem;
          height:auto;
@@ -113,12 +123,15 @@ Because flexbox is needed for the buttons to work properly, they are inside a fl
          justify-content: flex-start;
          margin:2.5rem auto;
     }
+{% endhighlight %}   
 
 Flexbox source order is how the magic happens. The radio buttons will default to a source order of 1, 2, 3, ... . If the checked radio button is a assigned a source order of -1 it will always be ahead of these other elements.
 
+{% highlight css %}
     [type="radio"]:checked + label {
          order:-1;
     }
+{% endhighlight %}    
 
 A few lines of jQuery/JS adds the accordion action. Here's the result:
 

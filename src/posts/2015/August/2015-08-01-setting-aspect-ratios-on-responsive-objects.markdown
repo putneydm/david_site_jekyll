@@ -23,27 +23,34 @@ But, applying a combination of viewport units, calc, object-fit and flexbox to t
 
 First step: set the width of the container. My image container needed have a 55px<sup>[1][4]</sup> margin on the left and the page had a 15px left and right margin. I was targeting mobile, so I set my container width at 100 percent of the [viewport width][3] minus these amounts.
 
+{% highlight css %}
     .container {
         width: calc(100vw - 85px);
     }
+  {% endhighlight %}  
 
 Since the container will be square, use the width of the container to set the height using viewport width units:
 
+{% highlight css %}
     .container {
         height: calc(100vw - 85px);
     }
+{% endhighlight %}  
 
 Use [flexbox][6] on the wrapper to center the contents vertically and horizontally.
 
+{% highlight css %}
     .container {
         display:flex;
         align-items: center;
         justify-content: center;
         overflow:hidden;
     }
+{% endhighlight %}  
 
 The full code for the container looks like this.
 
+{% highlight css %}
     .container {
         width: calc(100vw - 85px);
         height: calc(100vw - 85px);
@@ -52,31 +59,39 @@ The full code for the container looks like this.
         justify-content: center;
         overflow:hidden;
     }
+  {% endhighlight %}    
 
 Since the size and shape of the image in the container isn't defined, the image will need some styles to handle this. Set the image to always be 100 percent of its container height and width.
 
+{% highlight css %}
     image {
         width:100%;
         height:100%;
     }
+  {% endhighlight %}  
 
 However, this distorts the image to the shape of the container. [Object-fit][7] handles this problem by sizing the image to always fill the container without distorting it, similar to background-size:cover. Here's the finished code:
 
+{% highlight css %}
     image {
         object-fit:cover;
         width:100%;
         height:100%;
     }
+  {% endhighlight %}  
 
 The result is an image that is centered and cropped inside a container that maintains a perfect aspect ratio on window resize. Here's a [CodePen][8] with an example of the code and how it works.
 
 And, since the container height is a function of width, [calc][9] can be used to create any aspect ratio, such as 16 x 9:
 
-    width: 30vw;
-    height: calc(30vw * .5625);
+{% highlight css %}
+  width: 30vw;
+  height: calc(30vw * .5625);
+{% endhighlight %}      
 
 I made a mixin that can be passed viewport width, margins, and aspect ratio and do all the math.
 
+{% highlight scss %}
     @mixin aspect-ratio($viewport,$margin,$width,$height){
         $ratio:$height / $width;
         $elHeight:$viewport * $ratio;
@@ -87,13 +102,17 @@ I made a mixin that can be passed viewport width, margins, and aspect ratio and 
         justify-content:center;
         overflow:hidden;
     }
+{% endhighlight %}  
 
 If it is passed a viewport width of 30, a margin of 10px, and a ratio of 16 x 9,
 
+{% highlight scss %}
     @include aspect-ratio(30, 10, 16, 9);
+{% endhighlight %}     
 
 It compiles to:
 
+{% highlight css %}
     .image-wrapper-test {
         margin: 10px auto 40px;
         width: calc(30vw - 10px);
@@ -102,6 +121,7 @@ It compiles to:
         align-items: center;
         justify-content: center;
         overflow: hidden; }
+{% endhighlight %}         
 
 This comes with some caveats. This is still a complicated solution to a simple problem, as viewport units are not the easiest measure to work with. You'll need an [autoprefixer][12]. It also runs into support problems on [Opera Mini][10], and -- wait for it  -- [Internet Explorer][11].
 

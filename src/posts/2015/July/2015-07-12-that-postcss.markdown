@@ -36,9 +36,11 @@ PostCSS resembles the task runners [Gulp][2] or [Grunt][3] in that all alone it 
 
 Like Gulp and Grunt it's meant to be extensible, flexible and customizable for a developer or project's particular needs.
 
-Those who use Gulp or Grunt for their projects will likely find even more to like. PostCSS runs on Node and installs via[NPM][4]. This is the install code for Gulp. It should be familiar.
+Those who use Gulp or Grunt for their projects will likely find even more to like. PostCSS runs on Node and installs via [NPM][4]. This is the install code for Gulp. It should be familiar.
 
+{% highlight bash %}
     $ npm install --save-dev gulp-postcss
+{% endhighlight %}  
 
 This allows PostCSS to fit easily into existing Grunt or Gulp workflows. In Gulp, it's included like any other task. NPM also installs the plugins, and they can be saved as dev dependencies.
 
@@ -46,17 +48,19 @@ To use them, pass plugins to the PostCSS task as an argument. If there's more th
 
 Here's Gulp code for adding an autoprefixer:
 
-    var postcss = require('gulp-postcss')
-    var autoprefixer = require('autoprefixer-core');
+{% highlight javascript %}
+var postcss = require('gulp-postcss')
+var autoprefixer = require('autoprefixer-core');
 
-    gulp.task('css', function () {
-        var processors = [
-        autoprefixer({browsers: ['last 1 version']})
-        ];
-    return gulp.src('./src/*.css')
-    .pipe(postcss(processors))
-    .pipe(gulp.dest('./dest'));
-    });
+gulp.task('css', function () {
+    var processors = [
+    autoprefixer({browsers: ['last 1 version']})
+    ];
+return gulp.src('./src/*.css')
+.pipe(postcss(processors))
+.pipe(gulp.dest('./dest'));
+});
+  {% endhighlight %}  
 
 Because of the modular nature of PostCSS, getting it up and going is more involved than installing SASS or LESS. On a basic level, using it involves figuring out what you need your preprocessor to do -- loops, nesting, variables, autoprefixing, etc -- and getting everything in place.
 

@@ -25,6 +25,7 @@ Like many methods in CSS, it's a clever-yet-hideous [hack][6] that uses a [backg
 
 I've created a [SASS][5] mixin that automagically creates the background gradient. You pass it an argument for the color and top position for the underscore, the latter expressed as percentage.
 
+{% highlight css %}
     @mixin underscore ($color, $position)
 	{
 	color:$color;
@@ -38,6 +39,7 @@ I've created a [SASS][5] mixin that automagically creates the background gradien
 	background-repeat: repeat-x;
 	text-shadow:1px 1px 0px white, -1px 1px 0px white ;
 	}
+{% endhighlight %}  
 
 Like most hacky CSS fixes, it's not really [fire and forget][7]. You'll probably have to counteract its effects in some other declarations.
 
