@@ -3,6 +3,8 @@
 <!-- og image -->
 {% if page.heroArt %}
 	{% capture ogImage %}hero_{{page.heroArt }}.jpg{% endcapture %}
+{% elsif page.image %}
+		{% capture ogImage %}med_{{page.image }}.jpg{% endcapture %}
 {% else %}
 	{% capture ogImage %}med_placeholder.jpg{% endcapture %}
 {% endif %}
