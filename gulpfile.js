@@ -115,7 +115,11 @@ var paths = {
   sitemap: {
     input: 'test/_site/sitemap.xml',
     output: 'dist/'
-  }
+  },
+  drafts: {
+    input: 'src/drafts/*.markdown',
+    output: 'test/_drafts/'
+  },
 };
 
 // tasks
@@ -164,6 +168,11 @@ gulp.task('deploy', function() {
 gulp.task('sitemap', function() {
    gulp.src(paths.sitemap.input)
    .pipe(gulp.dest(paths.sitemap.output));
+});
+
+gulp.task('drafts', function() {
+   gulp.src(paths.drafts.input)
+   .pipe(gulp.dest(paths.drafts.output));
 });
 
 // concatenates scripts, but not items in exclude folder. includes vendor folder
@@ -761,6 +770,10 @@ gulp.task('listen', function () {
       gulp.start('collections');
         // gulp.start('browserSync');
     });
+    gulp.watch(paths.drafts.input).on('change', function(file) {
+      gulp.start('drafts');
+        // gulp.start('browserSync');
+    });
 });
 
 // Run livereload after file change
@@ -781,6 +794,7 @@ gulp.task('default', [
 	'bower',
   'posts',
   'sitemap',
+  'drafts',
   'clean'
 	// 'minifyScripts'
 ]);
