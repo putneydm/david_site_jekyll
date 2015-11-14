@@ -140,6 +140,7 @@ gulp.task('layouts', function() {
   //  .pipe(htmltidy({doctype: 'html5',
   //    hideComments: true,
   //    indent: true}))
+  .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
    .pipe(gulp.dest(paths.pageLayouts.testing))
   //  .pipe(gulp.dest(paths.pageLayouts.dist));
 });
