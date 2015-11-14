@@ -43,6 +43,12 @@ var svgmin = require('gulp-svgmin');
 //bower
 var mainBowerFiles = require('main-bower-files');
 
+// gets today's date
+var date = new Date();
+// creates file names based on date
+var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.css';
+var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
+
 var paths = {
   pageLayouts: {
    input: 'src/layouts/{*.html,*shtml}',
