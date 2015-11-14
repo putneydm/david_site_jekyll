@@ -1,13 +1,9 @@
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title | | remove:'\' }} | {{ site.title }} {% else %}{{ site.title }} | {{site.tagLine}}{% endif %}</title>
   @@include('partials/mt_meta_tags.html')
+  <title>{% if page.title %}{{ page.title | | remove:'\' }} | {{ site.title }} {% else %}{{ site.title }} | {{site.tagLine}}{% endif %}</title>
   <style>
     {% if page.heroArt %}.hero-art{background-image: url('/siteart/pl_hero_{{page.heroArt}}.jpg');}@media screen and (max-width: 46.875em) {.hero-art {background-image: url('/siteart/pl_hero_small_{{page.heroArt}}.jpg');}}{% endif %}
-
     {% if page.pagetype == "index" %}
       {% include index_embeded_styles.css %}
     {% elsif page.pagetype == "blog" or page.pagetype == "blog-entry" %}
