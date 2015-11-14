@@ -1,6 +1,7 @@
 dist/
-test/
+test/*
 !test/_config.yml
+!test/_posts
 source/scripts/vendor/
 src/scripts/bower_components/
 src/photos_out/
