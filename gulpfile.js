@@ -34,6 +34,7 @@ var livereload = require('gulp-livereload');
 var fileinclude = require('gulp-file-include');
 var browserSync = require('browser-sync');
 var del = require('del');
+var replace = require('gulp-replace');
 
 //svg
 var svgstore = require('gulp-svgstore');
