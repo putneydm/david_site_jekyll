@@ -153,6 +153,7 @@ gulp.task('pages', function() {
   //  .pipe(htmltidy({doctype: 'html5',
   //    hideComments: true,
   //    indent: true}))
+  .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
    .pipe(gulp.dest(paths.pages.testing))
 });
 gulp.task('includes', function() {
@@ -191,6 +192,13 @@ gulp.task('concat', function() {
    .pipe(minifyJS())
    .pipe(gulp.dest(paths.scripts.dist));
 });
+
+gulp.task('cachebustScripts', function() {
+  return gulp.src('source/layouts/mt_js_links.html')
+  .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
+
+});
+
 
 // lints main javascript file for site
 gulp.task('lint', function() {
