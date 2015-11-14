@@ -186,8 +186,10 @@ gulp.task('drafts', function() {
 
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
+   console.log(filename);
    gulp.src(paths.scripts.input)
-   .pipe(concat('scripts.js'))
+   .pipe(concat(scriptname)) // renames to file w/ todays date for cachebusting
+   .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
    .pipe(gulp.dest(paths.scripts.testing))
    .pipe(minifyJS())
    .pipe(gulp.dest(paths.scripts.dist));
@@ -224,6 +226,7 @@ gulp.task('css', function() {
       browsers: ['last 2 versions'],
       cascade: false
    }))
+    .pipe(rename(filename))
     .pipe(gulp.dest(paths.styles.testing))
     .pipe(minifyCSS({
       keepBreaks:false
