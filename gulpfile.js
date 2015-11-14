@@ -198,9 +198,7 @@ gulp.task('concat', function() {
 gulp.task('cachebustScripts', function() {
   return gulp.src('source/layouts/mt_js_links.html')
   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
-
 });
-
 
 // lints main javascript file for site
 gulp.task('lint', function() {
@@ -782,17 +780,17 @@ gulp.task('listen', function () {
     gulp.watch(paths.sitemap.input).on('change', function(file) {
       gulp.start('sitemap');
     });
-    gulp.watch(paths.posts.input).on('change', function(file) {
-      gulp.start('posts');
-    });
+    // gulp.watch(paths.posts.input).on('change', function(file) {
+    //   gulp.start('posts');
+    // });
     gulp.watch(paths.collections.input).on('change', function(file) {
       gulp.start('collections');
         // gulp.start('browserSync');
     });
-    gulp.watch(paths.drafts.input).on('change', function(file) {
-      gulp.start('drafts');
-        // gulp.start('browserSync');
-    });
+    // gulp.watch(paths.drafts.input).on('change', function(file) {
+    //   gulp.start('drafts');
+    //     // gulp.start('browserSync');
+    // });
 });
 
 // Run livereload after file change
@@ -811,9 +809,9 @@ gulp.task('default', [
   'concat',
 	'svg',
 	'bower',
-  'posts',
+  // 'posts',
   'sitemap',
-  'drafts',
+  // 'drafts',
   'clean'
 	// 'minifyScripts'
 ]);
