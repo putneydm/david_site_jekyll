@@ -1,0 +1,42 @@
+{
+  "firebase": "davidsite",
+  "public": "./",
+  "clean_urls": true,
+  "error_page": "404.html",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ],
+  "headers": [ {
+      "source" : "/fonts/*.css",
+      "headers" : [ {
+      "key" : "Cache-Control",
+      "value" : "max-age=2592000"
+    } ]
+    }, {
+      "source" : "/siteart/*.@(jpg|jpeg|gif|png)",
+      "headers" : [ {
+      "key" : "Cache-Control",
+      "value" : "max-age=2592000"
+      } ]
+    }, {
+      "source" : "/css/*.css",
+      "headers" : [ {
+      "key" : "Cache-Control",
+      "value" : "max-age=2592000"
+      } ]
+    }, {
+      "source" : "/scripts/*.js",
+      "headers" : [ {
+      "key" : "Cache-Control",
+      "value" : "max-age=2592000"
+      } ]
+    }, {
+      "source" : "404.html",
+      "headers" : [ {
+      "key" : "Cache-Control",
+      "value" : "max-age=7200"
+      } ]
+    } ]
+}
