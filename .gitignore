@@ -1,4 +1,5 @@
-dist/
+dist/*
+!dist/firebase.json
 test/*
 !test/_config.yml
 !test/_posts
