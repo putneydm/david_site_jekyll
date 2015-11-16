@@ -1,8 +1,5 @@
 <article class="teaser-module clearfix">
-		<header>
-        <h4 class="teaser-module-head"><a href="{{ post.url}}" rel="next">{{ post.title | markdownify | strip_html }}</a></h4>
-		</header>
-
+    <h4 class="teaser-module-head"><a href="{{ post.url}}" rel="next">{{ post.title | markdownify | strip_html }}</a></h4>
 		<div class="teaser-module-abstract">
 		<p>	{{ post.content | truncatewords: 70 | strip_html }} <a href="{{post.url}}" rel="next" class="teaser-module-abstract-link">More
 			<svg class="teaser-arrow-icon">
@@ -20,5 +17,6 @@
 				<img class="lazyload" data-src="/siteart/large_{{post.image}}.jpg" alt="">
 			</picture>
 		</figure>
-		</a>
-	</article>
+	</div>
+	</a>
+</article>
