@@ -3,32 +3,22 @@ layout: minimal_layout
 pageType: blog-entry
 ---
 <div id="blog-container" class="blog-container blog-single-entry">
-
 <article class="blog-entry">
-
     @@include('partials/blog_components/blog_image_test.html')
-
   	<h1 class="blog-headline">{% if page.altTitle %}{{ page.altTitle | markdownify | strip_html }} {% else %} {{ page.title | markdownify | strip_html }}{% endif%}</h1>
     <p class="blog-entry-date">{{ page.date | date: "%A, %B %-d, %Y" }}</p>
-
   <div class="blog-entry-text">
       {{content}}
   </div>
   <footer class="blog-entry-footer">
-  <mt:If tag="EntryDataFootnotes">
-
   @@include('partials/blog_components/mt_footnote_return.html')
   @@include('partials/blog_components/mt_blog_sig.html')
-
   	<ul class="blog-tags">
       {% for tag in page.tags %}
         <li><a href="/tag/{{tag | replace:' ','-' | replace:'&','&amp;' | downcase }}.html" rel="tag">{{ tag }}</a></li>
       {% endfor %}
   	</ul>
     @@include('partials/blog_components/mt_blog_entry_teasers_inside.html')
-
   </footer>
-
 </article>
-
 </div>
