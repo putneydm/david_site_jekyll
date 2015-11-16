@@ -7,7 +7,7 @@ categories: blog-entry promo
 subhead:
 tags: [CSS,front-end developement,LESS,NPM,PostCSS,preprocessors,SASS,Stylus]
 image: mugatu
-imageAlt: "Will Farrell as Mugatu in \"Zoolander\""
+imageAlt: "Will Farrell as Mugatu in Zoolander"
 promo: "Just another CSS preprocessor? PostCSS brings something new to the table."
 ---  
 

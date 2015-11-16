@@ -7,7 +7,7 @@ categories: blog-entry promo
 subhead:
 tags: [business,decline,failure,internet,news,newspapers,Toonces the Driving Cat,Turkmenistan,web]
 image:  no_fate
-imageAlt: "\"No fate\" carved into a table top from \"Terminator 2: Judgement Day\""
+imageAlt: "No fate carved into a table top from Terminator 2: Judgement Day"
 promo: "The newspaper industry is spending too much time longing for the old days to save itself."
 ---  
 
