@@ -9,6 +9,9 @@ tags: ['recollections', 'memories', 'college', 'Daily Eastern News', 'Eastern Il
 image: old_main
 imageAlt: "Me posing like an idiot in front of Old Main at Eastern Illinois University."
 promo: "You can't go home again, but you can certainly visit it"
+quote: "I spent the summer going through the motions of a person headed off to school in the fall, but with a sense of doom."
+blogimage: old_main
+blogalt: this is a test
 ---  
 
 On a lovely early fall day in 1992, I was walking across campus.
@@ -36,6 +39,12 @@ But from a young age I knew I didn't want that. But I didn't know what I wanted.
 By 1992 I had been getting my life on track. I'd done two years of junior college, and even though I'd been accepted at Eastern I had no money.
 
 I spent the summer going through the motions of a person headed off to school in the fall, but with a sense of doom. I filled out the forms for housing and picked my classes, fearing that in September I'd be staying home.
+
+{% if page.quote %}
+  <aside class="blog-pullquote">
+  <q>{{page.quote}}</q>
+  </aside>
+{% endif %}
 
 My funk deepened as fall approached.
 
