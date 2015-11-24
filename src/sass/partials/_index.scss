@@ -80,7 +80,7 @@
 		}
 }
 .med-photo-overlay {
-	&:after {
+	&::after {
 		position:absolute;
 		top:0;
 		left:0;
@@ -94,7 +94,7 @@
 		}
 }
 .wide-photo-overlay{
-	&:after{
+	&::after{
 		position:absolute;
 		top:0;
 		display:block;
@@ -108,7 +108,7 @@
 		}
 }
 .round-photo-overlay{
-	&:after{
+	&::after{
 		position:absolute;
 		top:0;
 		display:block;
