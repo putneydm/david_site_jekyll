@@ -2,7 +2,7 @@
 # Site settings
 title: David Putney
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://davidputney.com" # the base hostname & protocol for your site
+url: "https://www.davidputney.com" # the base hostname & protocol for your site
 disclaimer: This is the personal website of David M. Putney. It is not affiliated with any current or former employers.
 description: "I\'m David Putney, a web designer and developer living in the Boston, Mass. area. I specialize in UI/UX, and designing and building media and content-driven websites."
 tagLine: This is my site
