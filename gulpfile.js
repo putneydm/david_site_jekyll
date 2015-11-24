@@ -165,7 +165,7 @@ gulp.task('includes', function() {
    .pipe(gulp.dest(paths.includes.testing))
 });
 
-gulp.task('deploy', function() {
+gulp.task('deploy', ['sitemap'], function() {
    gulp.src(paths.pages.site)
    .pipe(htmltidy({doctype: 'html5',
        hideComments: true,
@@ -173,6 +173,7 @@ gulp.task('deploy', function() {
     .pipe(minifyHTML())
    .pipe(gulp.dest(paths.pages.deploy));
 });
+
 
 gulp.task('sitemap', function() {
    gulp.src(paths.sitemap.input)
