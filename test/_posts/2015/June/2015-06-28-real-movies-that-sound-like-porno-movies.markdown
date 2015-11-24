@@ -3,7 +3,7 @@ layout: single_blog_entry
 pagetype: blog-entry
 title:  Real movies that sound like porn movies
 date:   2015-06-28 09:03:52
-categories: blog-entry
+categories: blog-entry promo
 subhead:
 tags: [lists,movies,stupid stuff,things for Buzzfeed to steal,worn-out-jokes]
 image:  xxx-neon-sign
