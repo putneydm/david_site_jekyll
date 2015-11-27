@@ -16,7 +16,6 @@
 	opacity:0;
 	transform: scale(.98,.98);
 	user-select: none;
-	will-change:transform;
 		@media screen and (max-width:em(800)) {
 		font-size:em(84);
 		padding:rem(12) rem(20) rem(15);
@@ -38,7 +37,6 @@
 	bottom:rem(60);
 	opacity:0;
 	transform: scale(.95,.95);
-	will-change:transform;
 		@media screen and (max-width:em(750)) {
 			margin:0 0 rem(8);
 			}
@@ -96,7 +94,6 @@
 	min-height:rem(200);
 	transform: scale(.95,.95);
 	line-height:150%;
-	will-change:transform;
 		@media screen  and (max-width:em(600)) {
 		font-size:em(18);
 		}
@@ -104,5 +101,5 @@
 .triple-module-head--active	{
 	opacity:1;
 	transform: scale(1,1);
-	transition:opacity .5s 1.1s, transform .4s 1.1s ease-out;
+	transition:opacity .5s 1.1s,  transform .4s 1.1s ease-out;
 	}

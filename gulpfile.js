@@ -51,9 +51,9 @@ var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date
 
 var paths = {
   pageLayouts: {
-   input: 'src/layouts/**/{*.html,*shtml}',
+   input: 'src/layouts/{*.html,*shtml}',
    testing: 'test/_layouts/',
-   watch: 'src/layouts/**/{*.html,*shtml}',
+   watch: 'src/layouts/*/{*.html,*shtml}',
    dist: 'dist/'
   },
   pages: {
@@ -162,7 +162,6 @@ gulp.task('includes', function() {
      prefix: '@@',
      basepath: '@file'
    }))
-   .pipe(replace(/cachebustthiscss/g,  filename )) // adds cachebusted name of css to js links file
    .pipe(gulp.dest(paths.includes.testing))
 });
 

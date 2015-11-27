@@ -12,9 +12,6 @@ keywords: [Jekyll, typography, UI/UX, blogging, blog, about]
 {% for post in site.about %}
   <article class="about-information">
     <figure class="about-mugshot">
-      <noscript>
-        <img src="/siteart/{{post.image}}.jpg">
-      </noscript>
 			<img class="lazyload" data-src="/siteart/{{post.image}}.jpg" alt="David M. Putney mugshot">
 		</figure>
       {{ post.content }}

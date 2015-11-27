@@ -1,5 +1,6 @@
 var pageFunctions = {
   intialize: function () {
+  "use strict";
   console.log('works');
 
     // objects
@@ -555,6 +556,5 @@ trackProgressBar: function () {
   }
 };
 (function() {
-  "use strict";
   pageFunctions.intialize();
 })();

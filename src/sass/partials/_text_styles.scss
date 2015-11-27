@@ -1,6 +1,6 @@
 //html, body { height: 100%; overflow:auto;}
 figure {
-	img{width:100%;background-color:$xxlight;}
+	img{width:100%;}
 }
 img {display:block;
 	a{ border:0;}
@@ -155,7 +155,4 @@ ol li::before {
 
 
 		}
-}
-img {
-	font-size:rem(12);
 }
