@@ -19,6 +19,9 @@
 		<a href="{{ myArray[randompost].url }}" rel="canonical">
 		<figure class="blog-teaser-image med-photo-overlay">
 		<img class="lazyload" data-src="/siteart/xsmall_{{ myArray[randompost].image}}.jpg" alt="{{ myArray[randompost].imageAlt}}">
+		<noscript>
+			<img src="/siteart/xsmall_{{ myArray[randompost].image}}.jpg" alt="{{ myArray[randompost].imageAlt}}">
+		</noscript>
 		</figure>
 			<h4 class="blog-teaser-hed">{{ myArray[randompost].promo markdownify | strip_html }}
 			<svg class="teaser-arrow-icon">
@@ -33,6 +36,9 @@
 		<a href="{{ post.url}}" rel="canonical">
 		<figure class="blog-teaser-image med-photo-overlay">
 		<img class="lazyload" data-src="/siteart/xsmall_{{post.image}}.jpg" alt="{{post.imageAlt}}">
+		<noscript>
+			<img src="/siteart/xsmall_{{post.image}}.jpg" alt="{{post.imageAlt}}">
+		</noscript>
 		</figure>
 		<mt:If tag="EntryDataPromo_blurb">
 			<h4 class="blog-teaser-hed">{{ post.promo | markdownify | strip_html }}
