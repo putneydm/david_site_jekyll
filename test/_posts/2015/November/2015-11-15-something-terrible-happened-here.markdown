@@ -8,7 +8,7 @@ subhead:
 tags: ['terrorism', 'National September 11 Memorial & Museum', 'all the feels', 'sadness', 'life', 'Boston', 'Marathon Bombing']
 image: sept_11_memorial
 imageAlt: "A photo of the memorial wall at the National September 11 Memorial & Museum"
-promo: "In times of horror, remember that they world is still a decent place"
+promo: "In times of horror, remember that the world is still a decent place"
 quote: "It\'s a singularly moving experience. But to be there is also discordant."
 blogimage:
 blogalt:
