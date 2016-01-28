@@ -51,6 +51,7 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *Five Easy Pieces*
 * *Inside Man*
 * *Winter's Bone*
+* _Return to Paradise_
 * *The Deep*
 * *Like Father, Like Son*
 * *An Officer and a Gentleman*
@@ -65,6 +66,7 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *While We're Young*
 * *Let the Right One In*
 * *For the Boys*
+* _Inside Out_
 * *Mr. Peabody and Sherman*
 * *Non-Stop*
 * *Stroker Ace*
