@@ -12,6 +12,10 @@ permalink: /:year/:month/:title.html
 # Build settings
 markdown: kramdown
 
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
 array: []  #empty array
 
 tag_page_layout: tag_index
