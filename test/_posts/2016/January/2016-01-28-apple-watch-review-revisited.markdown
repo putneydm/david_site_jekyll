@@ -14,7 +14,7 @@ quote: "But the Watch is a far more ambitious product than that. That\'s where i
 
 I work many mornings from a coffee shop near my apartment before heading into the office.
 
-When people come in for coffee, being Americans, they politely form a rigidly hierarchal queue. And being Americans in 2016, they almost immediately [pull out][7] their phone and start fiddling with it.
+When people come in for coffee, being Americans, they politely form a rigidly hierarchical queue. And being Americans in 2016, they almost immediately [pull out][7] their phone and start fiddling with it.
 
 We're less than a decade into the [smartphone era][15], and the device has become so ingrained in our lives that spending a few minutes with our own thoughts is less compelling than what's on our magic internet-connected pocket computer.
 
