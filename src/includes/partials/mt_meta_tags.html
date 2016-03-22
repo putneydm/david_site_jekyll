@@ -18,7 +18,7 @@
 
 <!-- og description -->
 {% if pageType == 'blog-entry' or pageType == 'portfolio_entry' %}
-	{% assign ogDescription = page.content | truncatewords: "120" | escape | strip_html | remove:'<sup>' | remove: '&lt;p&gt;' | remove: '&lt;/p&gt;'%}
+	{% assign ogDescription = page.content | truncatewords: "120" | strip_html | xml_escape %}
 {% elsif pageType == 'tag-archive' or pageType == 'index' %}
 	{% assign ogDescription = site.description %}
 {% else %}
