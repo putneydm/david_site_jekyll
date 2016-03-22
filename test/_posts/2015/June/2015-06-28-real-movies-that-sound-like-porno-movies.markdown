@@ -48,6 +48,7 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *The Dark Knight Rises*
 * *Spaceballs*
 * *Glory*
+* *Straight Outta Compton*
 * *Five Easy Pieces*
 * *Inside Man*
 * *Winter's Bone*
@@ -69,6 +70,7 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * _Inside Out_
 * *Mr. Peabody and Sherman*
 * *Non-Stop*
+* *Steve Jobs*
 * *Stroker Ace*
 * *Enter the Dragon*
 * *Not Without My Daughter*
@@ -82,6 +84,7 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *The African Queen*
 * *Topper*
 * *Nuts*
+* *The Big Short*
 * *The Third Man*
 * *The 400 Blows*
 * *Oz the Great and Powerful*
