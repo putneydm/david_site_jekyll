@@ -31,7 +31,7 @@
 {% elsif pageType == 'tag-archive' %}
 	{% capture ogTitle %}{{  page.tag | capitalize }} archive | {{site.title}}{% endcapture %}
 {% elsif pageType == 'blog-entry' %}
-	{% assign ogTitle = page.title %}
+	{% assign ogTitle = page.title | xml_escape %}
 {% elsif pageType == 'index' %}
 	{% assign ogTitle = site.tagLine %}
 {% else %}
