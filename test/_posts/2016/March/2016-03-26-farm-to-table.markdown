@@ -7,7 +7,7 @@ categories: blog-entry
 tags: ['cows', 'farming', 'farm life', 'authenticity', 'childhood tales']
 image: my_pet_goat
 imageAlt: "Me, as a child, wrestling a goat."
-promo: ""
+promo: "When it came to farming, my uncle totally killed it"
 quote: "My uncle went to the middle of the paddock, the cow bent its head down as expected and my uncle fired three times - crack crack crack"
 ---  
 
