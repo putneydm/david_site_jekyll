@@ -72,6 +72,7 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *Non-Stop*
 * *Steve Jobs*
 * *Stroker Ace*
+* _Dirty Grandpa_
 * *Enter the Dragon*
 * *Not Without My Daughter*
 * *Monster's Ball*

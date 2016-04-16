@@ -3,7 +3,7 @@ layout: single_blog_entry
 pagetype: blog-entry
 title:  Bond title songs, ranked
 date:   2015-09-12 16:35:52
-categories: blog-entry
+categories: blog-entry promo
 subhead:
 tags: ["James Bond",movies,music,"personal favorites","pop culture"]
 image: bond-songs-ranked

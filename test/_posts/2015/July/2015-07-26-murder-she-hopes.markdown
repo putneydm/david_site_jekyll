@@ -3,7 +3,7 @@ layout: single_blog_entry
 pagetype: blog-entry
 title:  Murder, she hopes
 date:   2015-07-26 13:20:55
-categories: blog-entry
+categories: blog-entry promo
 subhead:
 tags: [1980s,dystopian nightmares,Jessica Fletcher,murder,mysteries,television]
 image:  murder_she_wrote

@@ -3,7 +3,7 @@ layout: single_blog_entry
 pagetype: blog-entry
 title:  UX from hell
 date:   2015-04-26 14:11:24
-categories: blog-entry
+categories: blog-entry promo
 subhead:
 tags: [advertising,news,newspapers,shitshows,user experience,UX,websites]
 image:  hell23

@@ -4,7 +4,7 @@ pagetype: blog-entry
 title:  "It isn't evil being green"
 altTitle:  "It isn't evil being green"
 date:   2015-09-26 14:18:49 PM
-categories: blog-entry
+categories: blog-entry promo
 subhead:
 tags: [deconstruction,film,movies,postmoderninsm,stupid stuff,Wizard of Oz]
 image: wicked_witch

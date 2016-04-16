@@ -3,7 +3,7 @@ layout: single_blog_entry
 pagetype: blog-entry
 title: "Farm to table"
 date: 2016-03-26
-categories: blog-entry
+categories: blog-entry promo
 tags: ['cows', 'farming', 'farm life', 'authenticity', 'childhood tales']
 image: my_pet_goat
 imageAlt: "Me, as a child, wrestling a goat."

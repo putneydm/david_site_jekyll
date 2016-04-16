@@ -3,7 +3,7 @@ layout: single_blog_entry
 pagetype: blog-entry
 title: "\"Gun nuts\""
 date: 2015-12-06
-categories: blog-entry
+categories: blog-entry promo
 subhead:
 tags: ['bad ideas for blog posts', 'crime', 'gun control', 'guns', 'opinions', 'politics']
 image: gun_nut
