@@ -419,13 +419,14 @@ trackProgressBar: function () {
       this.setInactiveState(false);
     }
   },
-  handleScrollButton: function (scrollPosition, scrollButton) {
+  handleScrollButton: function (scrollPosition) {
     var self = this;
-    var isButtonActive = scrollButton.classList.contains('scroll-to-top-active');
-    if (scrollPosition > 300 && isButtonActive === false) {
+    var scrollButton = document.querySelector('#scroll-to-top'),
+        active = scrollButton.classList.contains('scroll-to-top-active');
+    if (scrollPosition > 300 && !active) {
       self.addShit(scrollButton, 'scroll-to-top-active');
     }
-    if (scrollPosition < 300 && isButtonActive === true) {
+    if (scrollPosition < 300 && active) {
       self.removeShit(scrollButton, 'scroll-to-top-active');
       self.addShit(scrollButton, 'scroll-to-top-inactive');
     }
