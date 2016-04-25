@@ -1,2 +1,18 @@
 <!--  scripts -->
-<script src="/scripts/*cachebustthis*" defer></script>
+{% assign pageType = page.pagetype %}
+<script src="/scripts/*cachebustthis*"></script>
+<script>
+(function() {
+  "use strict";
+  pageFunctions.intialize();
+  {% if pageType == 'blog' %}
+    pageFunctions.intializeBlog();
+  {% endif%}
+  {% if pageType == 'blog-entry' %}
+    pageFunctions.intializeBlogEntry();
+  {% endif%}
+  {% if pageType == 'index' %}
+    pageFunctions.initializeIndex();
+  {% endif%}
+})();
+</script>
