@@ -34,32 +34,35 @@ var pageFunctions = {
     self.initScrollListener('index');
     self.setBackground();
   },
+  initScrollListener: function (pageType) {
    var self=this;
-
    document.onscroll = function() {
-    var scrollPosition = self.getScrollPosition(); // gets scroll position from function
+     var scrollPosition = self.getScrollPosition();
+     if (pageType === "blog") {
+       self.handleNavAnimate();
+       self.setActiveBlogItem();
+       self.handleFootnoteButton (scrollPosition);
+       self.handleScrollProgress();
+       self.initBlogTeasers();
+     }
+     else if (pageType === "blogEntry") {
+       self.handleBlogItems(blogEntries);
+       self.initScrollBarListener();
+       self.handleFootnoteButton (scrollPosition);
+       self.handleManualScrollback(scrollPosition);
+     }
+     else if (pageType === 'index') {
+       self.handleHeroAnimate(scrollPosition);
+       self.handleNavAnimate(scrollPosition);
+       self.initBlogTeasers();
+     }
+     self.handleScrollButton(scrollPosition);
+     self.handleSiteFooter(scrollPosition);
+     self.handleManualScrollback(scrollPosition);
 
-    self.initNavHeaderAnimate(heroImage, heroArtHeight,topNav)
-
-    self.handleScrollButton(scrollPosition, scrollToTopButton);
-    // if (heroImage) {
-    //   self.handleHeroArt(scrollPosition, heroImage, heroArtHeight);
-    // }
-    self.handleSiteFooter(scrollPosition);
-    self.handleScrollBackButton (scrollPosition);
-    self.handleFootnoteButton (scrollPosition);
-  //  self.initProgressBar();
-
-      self.initBlogTeasers();
-
-   if (blogEntries) {
-      self.handleBlogItems(blogEntries);
-      self.initScrollBarListener();
-  	}
-    return this;
-  };
+    //  self.handleScrollBackButton (scrollPosition);
+   }
   },
-  //   initializes stuff
   initJsTest: function () {
     // checks for js and removes no-js tag from body
     document.getElementsByTagName('HTML')[0].classList.remove('no-js');
