@@ -494,11 +494,13 @@ trackProgressBar: function () {
     currentTime--;
     return change*(currentTime*currentTime*currentTime + 1) + start;
   },
-  expandMenu: function(topNav) {
+  expandMenu: function() {
     var self = this;
-    var button = document.getElementById('menu-button');
-    var header = document.getElementById('inside-header')
-    var classTest =   topNav.classList.contains('nav-list--open');
+    var button = document.querySelector('#menu-button'),
+        header = document.querySelector('#inside-header'),
+        topNav = document.querySelector('#nav-menu'),
+        classTest = topNav.classList.contains('nav-list--open');
+
     if (classTest === false) {
       self.addShit(topNav, 'nav-list--open');
       self.addShit(button, 'nav-menu-button--active');
