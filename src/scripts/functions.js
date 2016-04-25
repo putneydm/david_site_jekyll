@@ -531,7 +531,3 @@ trackProgressBar: function () {
     return scrollPosition;
   }
 };
-(function() {
-  "use strict";
-  pageFunctions.intialize();
-})();
