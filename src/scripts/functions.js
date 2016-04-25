@@ -70,9 +70,7 @@ var pageFunctions = {
     }
   },
   initJsTest: function () {
-    // checks for js and removes no-js tag from body
-    document.getElementsByTagName('HTML')[0].classList.remove('no-js');
-//    documentBody.className += ' no-js';
+    document.querySelectorAll('HTML')[0].classList.remove('no-js');
   },
   initScrollButton: function (scrollToTopButton){
     var self = this;
