@@ -90,34 +90,25 @@ var pageFunctions = {
       e.preventDefault();
     });
   },
-  initFootnoteClick: function () {
-    // this adds listener to sup tags using event delegation
-    var self = this;
-    // Get the element, add a click listener
-    var blogContainer =  document.getElementById("blog-container");
+  initFootnoteClick: function() {
+    // this adds listener to sup tags
+    var self=this;
+    var blogContainer =    document.querySelector("#blog-container");
 
-    if (blogContainer) {
-      blogContainer.addEventListener("click", function(e) {
-        var linkType = e.target.parentNode.tagName;  // checks if it is a sup tag
-        // if it is, it gets an event handler added to it and prevent default
-        if (linkType === 'SUP') {
-          e.preventDefault();
-          if(e.target && e.target.nodeName === "A") {
-            var footNoteLink = document.getElementsByTagName('SUP');
-            // tests if the clicked item is set to active state
-            var activeState = self.hasClass(footNoteLink, 'footnote-link-active');
-            if (activeState === true) {
-              self.setInactiveState(false); // removes active state of other footnote links
-            }
-            var footnoteID =  e.target.getAttribute("href").slice(1); //gets id of footnote
-            self.setActiveState (e.target.parentNode, footnoteID);
-          }
-        }
-        else {
-          // function normally
-        }
-      });
-    }
+    blogContainer.addEventListener("click", function(e) {
+      var linkType = e.target.parentNode.tagName === 'SUP';  //
+      var activeItems = [].slice.call(document.querySelectorAll(".footnote-link-active"));
+      if (activeItems) {
+        activeItems.forEach(function(el) {
+          el.classList.remove('footnote-link-active');
+        });
+      }
+      if(linkType && e.target && e.target.nodeName === "A") {
+        var footnoteID =  e.target.getAttribute("href").slice(1); //gets id of footnote
+        self.setFootnoteActiveState(e.target.parentNode, footnoteID);
+      }
+    e.preventDefault();
+  });
   },
   initScrollBackButton: function () {
     var self = this;
