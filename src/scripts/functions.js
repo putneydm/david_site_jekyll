@@ -273,17 +273,15 @@ trackProgressBar: function () {
     progressBar.style.width = '0%';
    }
  },
- initBlogTeasers: function () {
+ initBlogTeasers: function(foo) {
    var self = this;
-   var el = document.getElementById('blog-teaser-wrapper');
-   if (el) {
-     var ready = self.isElementVisible(el);
-     var elDist = self.getElemDistance(el) - (window.innerHeight * .75);
-     var pos = self.getScrollPosition();
-   }
+   console.log('teasers', foo);
+   var el = document.querySelector('#blog-teaser-wrapper');
+   var active = el.classList.contains('blog-teaser-wrapper--active');
+   var rect = el.getBoundingClientRect();
 
-   if (el && ready == true && pos > elDist) {
-      self.addShit(el, 'blog-teaser-wrapper--active')
+   if (rect.top <= window.innerHeight * .75) {
+     self.addShit(el, 'blog-teaser-wrapper--active')
    }
  },
   // onload functions
