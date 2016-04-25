@@ -432,11 +432,11 @@ trackProgressBar: function () {
   },
   handleSiteFooter: function(scrollPosition) {
     var self = this;
-    var siteFooter = document.getElementById('site-footer'),
+    var siteFooter = document.querySelector('#site-footer'),
        isVisible = self.isElementVisible(siteFooter),
-       isFooterActive = siteFooter.classList.contains('site-footer-active');
+       active = siteFooter.classList.contains('site-footer-active');
 
-    if (scrollPosition > 300 && isFooterActive === false) {
+    if (scrollPosition > 300 && !active) {
       self.addShit(siteFooter, 'site-footer-inactive');
       }
     if (isVisible === true) {
