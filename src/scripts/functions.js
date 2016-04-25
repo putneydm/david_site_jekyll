@@ -529,16 +529,6 @@ trackProgressBar: function () {
   getScrollPosition: function () {
     var scrollPosition = window.scrollY;
     return scrollPosition;
-  },
-  hasClass: function (element, className) {
-    // test if element has a class name or not
-      var result = element.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(element.className);
-        if (result === true) {
-          return true;
-        }
-        else {
-          return false;
-        }
   }
 };
 (function() {
