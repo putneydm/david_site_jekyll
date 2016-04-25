@@ -72,13 +72,14 @@ var pageFunctions = {
   initJsTest: function () {
     document.querySelectorAll('HTML')[0].classList.remove('no-js');
   },
-  initScrollButton: function (scrollToTopButton){
+  initScrollButton: function() {
     var self = this;
-      scrollToTopButton.addEventListener("click", function(e){
-      e.preventDefault();
-      var scrollStart = self.getScrollPosition();
+    var scrollToTopButton = document.querySelector('#scroll-to-top'),
+        scrollStart = self.getScrollPosition();
+    scrollToTopButton.addEventListener("click", function(e) {
       self.scrollToGeneric(0, 500, scrollStart);
-  });
+      e.preventDefault();
+    });
   },
   initMenuButton: function (topNav, menuButton){
     var self = this;
