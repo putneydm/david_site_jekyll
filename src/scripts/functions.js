@@ -81,11 +81,13 @@ var pageFunctions = {
       e.preventDefault();
     });
   },
-  initMenuButton: function (topNav, menuButton){
+  initMenuButton: function() {
     var self = this;
+    var menuButton = document.querySelector('#menu-button'),
+        navMenu = document.querySelector('#nav-menu');
     menuButton.addEventListener("click", function(e){
+      self.expandMenu();
       e.preventDefault();
-      self.expandMenu(topNav);
     });
   },
   initFootnoteClick: function () {
