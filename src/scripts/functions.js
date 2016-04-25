@@ -163,116 +163,6 @@ var pageFunctions = {
       self.removeShit(el, ['nav-fixed-bar--transition', 'nav-fixed-bar--active', 'nav-fixed-bar--retracted']);
     }
   },
-  handleBlogItems: function (elem) {
-  // get location of each blog item, return item name and location
-  var self = this;
-  var counter  = 0;
-     while (counter < elem.length) {
-         var $blogEntry = elem[counter],
-             blogEntryLocation  = $blogEntry.getBoundingClientRect();
-         self.testBlogItemsLocation($blogEntry, blogEntryLocation);
-     counter ++;
-     }
-  },
-  testBlogItemsLocation: function (elem, elemLocation) {
-  // gets location info on blog items, decides whether it should be active, inactive and neutral
-  var self = this;
-  var blogEntryTop = elemLocation.top,
-      blogEntryBottom = elemLocation.bottom,
-      changePoint = document.documentElement.clientHeight * 0.25;
-
-		if (blogEntryTop <= changePoint && blogEntryBottom >= changePoint) {
-         //make active
-         self.setBlogItemActive(elem);
-		}
-		 else if (blogEntryBottom <= changePoint) {
-         // make inactive
-         self.setBlogItemNotActive(elem);
-		}
-		 else if (blogEntryTop >= changePoint) {
-         // make neutral
-         self.setBlogItemDefault(elem);
-			}
-  },
-	setBlogItemActive: function (elem) {
-	   // adds active state to blog item
-	   // sets active state on scroll down
-	   var self = this;
-		if (elem.classList.contains('inactive-blog-item')) {
-			self.removeShit(elem, 'inactive-blog-item');
-			setTimeout(function(){
-				self.addShit(elem, 'active-blog-item');
-			}, 5000);
-		}
-		//sets active state on scroll back
-		else {
-		self.addShit(elem, 'active-blog-item');
-		}
-		return elem;
-	},
-	setBlogItemNotActive: function (elem) {
-	// removes active state and adds inactive state
-      var self = this;
-      self.removeShit(elem, 'active-blog-item');
-      self.addShit(elem, 'inactive-blog-item');
-	},
-	setBlogItemDefault: function (elem) {
-		var self = this;
-		if (elem.classList.contains ('active-blog-item')) {
-				self.removeShit(elem, 'active-blog-item');
-		}
-		else {
-		// do nothing
-		}
-	},
-	initScrollBarListener: function  () {
-	   // gets active item, passes it to increment scroll bar function, if triggers scroll bar reset
-		var self = this;
-		  var activeItem = self.trackActiveItem();
-		  if (activeItem === undefined) {
-		  	self.trackProgressBar();
-		  }
-		  else {
-			 var scrollWidth = self.calculateScroll(activeItem);
-			 self.incrementScrollBar(scrollWidth);
-		  }
-	},
-	trackActiveItem: function () {
-	   // finds active item on page, returns it
-		var activeItem = document.getElementsByClassName('active-blog-item');
-		return activeItem[0];
-	},
-	calculateScroll: function (elem) {
-	   // gets dimensions of active blog item, computes scroll bar width, returns width
-		var activeItemDimensions = elem.getBoundingClientRect(),
-          activeItemBottom = activeItemDimensions.bottom,
-		    activeItemHeight = elem.clientHeight,
-		    changePoint = document.documentElement.clientHeight * 0.25,
-		    progressBarWidth = (Math.round(((activeItemHeight - (activeItemBottom - changePoint)) / activeItemHeight) * 100 ));
-		return progressBarWidth;
-	},
-incrementScrollBar: function (increment) {
-      // increments scroll bar
-		var progressBar = document.getElementById('scroll-progress');
-      if (increment > 100) {
-      	increment = 100;
-      }
-      progressBar.style.width = increment + '%';
-},
-trackProgressBar: function () {
-   var self = this;
-   var scrollPosition = self.getScrollPosition();
-   if (scrollPosition < 90) {
-		   self.resetProgressBar();
-		}
-},
- resetProgressBar: function () {
-   // resets progress bar to zero when it's between active blog entries.
-   var progressBar = document.getElementById('scroll-progress');
-   if (progressBar) {
-    progressBar.style.width = '0%';
-   }
- },
  initBlogTeasers: function(foo) {
    var self = this;
    console.log('teasers', foo);
@@ -443,6 +333,52 @@ trackProgressBar: function () {
     if (isVisible === true) {
       self.addShit(siteFooter, 'site-footer-active');
     }
+  },
+  handleScrollProgress: function() {
+    var self=this;
+    var progressBar = document.getElementById('scroll-progress');
+    var activeItem = document.querySelector('.entry--active');
+    if (activeItem) {
+      var percent = self.calculateBlogPercentage(activeItem);
+      progressBar.style.width = percent + '%';
+    }
+    if (!activeItem) {
+      progressBar.style.width = '0%';
+    }
+  },
+  calculateBlogPercentage: function(activeItem) {
+    var self=this;
+      var activeItemPos = activeItem.getBoundingClientRect().top - (window.innerHeight * .15);
+      var itemHeight = activeItem.clientHeight;
+      var percentCalc =  Math.round((activeItemPos / itemHeight) * -100);
+      return percentCalc < 0 ? 0:
+        percentCalc > 100 ? 100:
+        percentCalc;
+  },
+  setActiveBlogItem: function() {
+    var self=this;
+    var windowHeight = window.innerHeight;
+    var triggerLine = windowHeight * .15;
+    self.entryList.forEach(function(el) {
+      var itemBounds = el.getBoundingClientRect();
+      var active = el.classList.contains('entry--active');
+      var deactivated = el.classList.contains('entry--deactivated');
+      // console.log(foo.top);
+      if (itemBounds.top <= triggerLine && !active && !deactivated) {
+        el.classList.add('entry--active');
+      }
+      if (itemBounds.bottom <= triggerLine && active && !deactivated) {
+        el.classList.remove('entry--active');
+        el.classList.add('entry--deactivated');
+      }
+      if (itemBounds.bottom >= triggerLine && !active && deactivated) {
+        el.classList.remove('entry--deactivated');
+        el.classList.add('entry--active');
+      }
+      if (itemBounds.top >= triggerLine && active) {
+        el.classList.remove('entry--active');
+      }
+    });
   },
   // functions that return data or change elements
   getElemDistance: function ( elem ) {
