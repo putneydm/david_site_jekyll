@@ -136,34 +136,31 @@ var pageFunctions = {
       self.addShit(el, 'hero-art-portfolio--visible');
     }
   },
-  handleNavAnimate: function (el,elHeight) {
+  handleNavAnimate: function() {
     var self=this;
-    var scrollPosition = self.getScrollPosition ();
-    var extended = el.classList.contains('nav-fixed-bar--extended');
-    var retracted = el.classList.contains('nav-fixed-bar--retracted');
-    //adds styles  on scroll down
 
-    if (scrollPosition > 120 && retracted === false) {
-      self.addShit(el, 'nav-fixed-bar--active');
-      self.addShit(el, 'nav-fixed-bar--retracted');
-      return false;
+    console.log('nav animate');
+
+    var el = document.getElementById('inside-header'),
+        elHeight = el.clientHeight * 0.70,
+        scrollPosition = self.getScrollPosition(),
+        extended = el.classList.contains('nav-fixed-bar--extended'),
+        retracted = el.classList.contains('nav-fixed-bar--retracted');
+
+    //adds styles  on scroll down
+    if (scrollPosition > 120 && !retracted) {
+      self.addShit(el, ['nav-fixed-bar--active', 'nav-fixed-bar--retracted']);
     }
-    if (scrollPosition > elHeight + 150 && retracted === true) {
-      self.addShit(el, 'nav-fixed-bar--transition');
-      self.addShit(el, 'nav-fixed-bar--extended');
+    if (scrollPosition > elHeight + 150 && retracted) {
+      self.addShit(el, ['nav-fixed-bar--transition', 'nav-fixed-bar--extended']);
       self.removeShit(el, 'nav-fixed-bar--retracted');
-      return false;
     }
-    if (scrollPosition < elHeight && extended === true) {
+    if (scrollPosition < elHeight && extended) {
       self.removeShit(el, 'nav-fixed-bar--extended');
       self.addShit(el, 'nav-fixed-bar--retracted');
-    //  self.removeShit(el, 'nav-fixed-bar--transition');
     }
-    if (scrollPosition < 120 && retracted === true) {
-      self.removeShit(el, 'nav-fixed-bar--transition');
-      self.removeShit(el, 'nav-fixed-bar--active');
-      self.removeShit(el, 'nav-fixed-bar--retracted');
-    //  self.removeShit(el, 'nav-fixed-bar--transition');
+    if (scrollPosition < 120 && retracted) {
+      self.removeShit(el, ['nav-fixed-bar--transition', 'nav-fixed-bar--active', 'nav-fixed-bar--retracted']);
     }
   },
   handleBlogItems: function (elem) {
