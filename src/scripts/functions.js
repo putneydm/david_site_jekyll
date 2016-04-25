@@ -1,27 +1,39 @@
 var pageFunctions = {
   intialize: function () {
   console.log('works');
-
+    var self=this;
+    //  test for js
+    self.initJsTest(document.body);
 
     // init listeners
-    this.initScrollButton(scrollToTopButton, documentBody);
-    this.initMenuButton(navMenu, menuButton);
-    this.initFootnoteClick(topNav, menuButton);
-    this.initScrollBackButton();
-  //  this.initProgressBar();
-
-    this.initScrollListener(scrollToTopButton, heroImage, topNav, heroArtHeight, blogEntries);
-
-    // onload actions
-    this.nameplateAnimate(siteNameplate, navigation, heroImage, siteSubhead); // animates nameplate
-    this.setBackground(heroImageName, windowWidth); // swaps out hero image on load.
-
+    this.initScrollButton();
+    this.initMenuButton();
     this.addLink();
+    this.initResizeListener();
+  },
+  intializeBlog: function() {
+    var self=this;
+    self.setBackground(); // swaps out hero image on load.
+    self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
+    self.initFootnoteClick();
+    this.initScrollBackButton();
+    self.initScrollListener('blog');
 
-    //scroll actions
+    console.log(self.entryList);
 
   },
-  initScrollListener: function (scrollToTopButton, heroImage, topNav, heroArtHeight, blogEntries) {
+  intializeBlogEntry: function() {
+    var self=this;
+    self.initFootnoteClick();
+    this.initScrollBackButton();
+    self.initScrollListener('blogEntry');
+  },
+  initializeIndex: function() {
+    var self=this;
+    self.nameplateAnimate(); // animates nameplate
+    self.initScrollListener('index');
+    self.setBackground();
+  },
    var self=this;
 
    document.onscroll = function() {
