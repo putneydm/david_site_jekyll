@@ -329,66 +329,76 @@ trackProgressBar: function () {
     });
   },
 // sets interactive functions on page
-  setActiveState: function (activeFootnoteLink, targetFootnote) {
+  setFootnoteActiveState: function(activeFootnoteLink, targetFootnote) {
     var self = this;
-    var navHeight = document.getElementById('inside-header').offsetHeight,
-      // find items
-      activeFootnote  = document.getElementById(targetFootnote).parentNode,
-      scrollBackButton = document.getElementById('btn-footnote-return'),
-      // find locations
-      linkLocation = self.getElemDistance( activeFootnoteLink ),
+    var navHeight = document.querySelector('#inside-header').offsetHeight,
+      activeFootnote  = document.querySelector('#' + targetFootnote).parentNode,
+      scrollBackButton = document.querySelector('#btn-footnote-return'),
+      linkLocation = self.getElemDistance(activeFootnoteLink),
       targetFootnoteLocation = self.getElemDistance( activeFootnote ) - (navHeight + 150);
-
-    // set active state of link
-    self.addShit(activeFootnoteLink, 'footnote-link-active')
-        .addShit(activeFootnote, 'list-item-active') // set active state of footnote
-        .addShit(scrollBackButton, 'btn-footnote-return-active') // set active state of button
-        .scrollToGeneric (targetFootnoteLocation, 200, linkLocation);  // scroll to location
+    self.addShit(scrollBackButton, 'btn-footnote-return-active')
+    self.addShit(activeFootnoteLink, 'footnote-link-active');
+    self.addShit(activeFootnote, 'list-item-active');
+    self.scrollToGeneric(targetFootnoteLocation, 200, linkLocation);
   },
-  setInactiveState: function (scrollBackOption) {
+  setInactiveState: function(scrollBackOption) {
     var self = this;
-    var activeFootnoteLink = document.getElementsByClassName('footnote-link-active')[0],
-      activeFootnote = document.getElementsByClassName('list-item-active')[0],
-      footNoteReturnButton = document.getElementById('btn-footnote-return');
-
-      var scrollBackTo;
-      var scrollBackFrom;
+    var activeFootnoteLink = document.querySelectorAll('.footnote-link-active')[0],
+      activeFootnote = document.querySelectorAll('.list-item-active')[0],
+      footNoteReturnButton = document.querySelector('#btn-footnote-return');
     if (activeFootnoteLink && activeFootnote && footNoteReturnButton) {
       var scrollBackTo = self.getElemDistance( activeFootnoteLink ) - 250;
       var scrollBackFrom = self.getElemDistance( activeFootnote );
     }
     // set links to inactive
-    if (scrollBackOption === false) {
+    if (!scrollBackOption) {
       self.handleInactiveState(activeFootnote, footNoteReturnButton, activeFootnoteLink);
     }
-    if (scrollBackOption === true) {
+    if (scrollBackOption) {
       self.handleInactiveState(activeFootnote, footNoteReturnButton, activeFootnoteLink);
       self.scrollToGeneric (scrollBackTo, 200, scrollBackFrom);  // adds scrollback
     }
   },
-  handleInactiveState: function(activeFootnote, footNoteReturnButton, activeFootnoteLink) {
+  handleInactiveState: function() {
     var self = this;
+
+    console.log('handleInactiveState');
+
+    var activeFootnoteLink = document.querySelectorAll('.footnote-link-active')[0],
+      activeFootnote = document.querySelectorAll('.list-item-active')[0],
+      footNoteReturnButton = document.querySelector('#btn-footnote-return');
     var activeParagraph = activeFootnoteLink.parentNode;
 
-    // remove active state of footnote
-    self.removeShit(activeFootnote, 'list-item-active')
-        .addShit(activeParagraph, 'footnote-paragraph-active')
-        .removeShit(footNoteReturnButton, 'btn-footnote-return-active');
-    setTimeout(function(){
-      self.removeShit(activeFootnoteLink, 'footnote-link-active')
-          .removeShit(activeParagraph, 'footnote-paragraph-active');
-    }, 4000);
-  },
-  handleScrollBackButton: function (scrollPosition) {
-      var self = this;
-      var footnoteLinkSelected = document.getElementsByClassName('footnote-link-selected')[0],
-        activeButton = document.getElementsByClassName('btn-footnote-return-active')[0],
-        activeFootnote = document.getElementsByClassName('list-item-active')[0];
+    var active = activeFootnoteLink.classList.contains('list-item-active');
 
-      if (footnoteLinkSelected && activeButton && activeFootnote) {
-      var scrollBackTo = (self.getElemDistance( footnoteLinkSelected )) - 250,
-        scrollBackNote = self.getElemDistance( activeFootnote );
-      self.handleButton(scrollPosition,scrollBackTo,scrollBackNote);
+    console.log('active', activeFootnoteLink);
+
+    // remove active state of footnote
+
+      console.log('if state');
+      self.removeShit(activeFootnote, 'list-item-active');
+      self.addShit(activeParagraph, 'footnote-paragraph-active');
+      self.removeShit(footNoteReturnButton, 'btn-footnote-return-active');
+      setTimeout(function(){
+      self.removeShit(activeFootnoteLink, 'footnote-link-active');
+      self.removeShit(activeParagraph, 'footnote-paragraph-active');
+      }, 4000);
+  },
+  handleManualScrollback: function() {
+    var self=this;
+    console.log('manual scrollback');
+
+    var activeFootnoteLink = document.querySelectorAll('.footnote-link-active')[0],
+      activeFootnote = document.querySelectorAll('.list-item-active'),
+      footNoteReturnButton = document.querySelector('#btn-footnote-return');
+
+      if (activeFootnoteLink) {
+        var foo = activeFootnoteLink.getBoundingClientRect();
+      }
+
+      if (foo && foo.top >= 250) {
+        console.log('reset');
+        self.handleInactiveState();
       }
   },
   handleFootnoteButton: function (scrollPosition) {
