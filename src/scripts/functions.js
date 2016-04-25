@@ -321,18 +321,12 @@ trackProgressBar: function () {
       };
   },
   addLink: function() {
-    var footerLinkCounter = 0;
-    var objectData = ['email-link', 'twitter-link', 'facebook-link'];
-    var links = ['<a href="mailto:david@davidputney.com?Subject=Website%20feedback" target="_top">', '<a href="https://twitter.com/putneydm">', '<a href="https://www.facebook.com/david.putney">'];
+    var linkList = [{"name": "email-link", "link": "mailto:david@davidputney.com?Subject=Website%20feedback"}, {"name": "twitter-link", "link": "https://twitter.com/putneydm"}, {"name": "facebook-link",  "link": "https://www.facebook.com/david.putney"}];
 
-    while (footerLinkCounter < objectData.length) {
-      var target = objectData[footerLinkCounter],
-        addLink = links[footerLinkCounter],
-        orgHtml = document.getElementById(target).innerHTML,
-        newHtml = addLink + orgHtml + "</a>";
-      document.getElementById(target).innerHTML = newHtml;
-      footerLinkCounter++;
-    }
+    linkList.forEach(function (el){
+      var targetEl = document.querySelector('#' + el.name);
+      targetEl.innerHTML = "<a href=\"" + el.link + "\">" + targetEl.innerHTML + '</a>'
+    });
   },
 // sets interactive functions on page
   setActiveState: function (activeFootnoteLink, targetFootnote) {
