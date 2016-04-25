@@ -63,6 +63,12 @@ var pageFunctions = {
     //  self.handleScrollBackButton (scrollPosition);
    }
   },
+  initResizeListener: function(){
+    var self=this;
+    window.onresize = function(e) {
+      console.log('resized');
+    }
+  },
   initJsTest: function () {
     // checks for js and removes no-js tag from body
     document.getElementsByTagName('HTML')[0].classList.remove('no-js');
