@@ -455,12 +455,22 @@ trackProgressBar: function () {
     return location >= 0 ? location : 0;
   },
   addShit: function (object, style) {
-    object.classList.add(style);
-    return this;
+    if (style.constructor === Array) {
+      style.forEach(function(el) {
+        object.classList.add(el);
+      });
+    } else {
+      object.classList.add(style);
+    }
   },
   removeShit: function (object, style) {
-    object.classList.remove(style);
-    return this;
+    if (style.constructor === Array) {
+      style.forEach(function(el) {
+        object.classList.remove(el);
+      });
+    } else {
+      object.classList.remove(style);
+    }
   },
   removeShitTimer: function (el, style, time) {
     var self = this;
