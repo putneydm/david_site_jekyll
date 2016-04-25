@@ -120,20 +120,18 @@ var pageFunctions = {
       });
     }
   },
-  initNavHeaderAnimate: function (heroImage, heroArtHeight,topNav) {
-    var self=this;
-    self.handleHeroAnimate(heroImage,heroArtHeight);
-    self.handleNavAnimate(topNav,heroArtHeight);
-  },
-  handleHeroAnimate:function (el, elHeight) {
+  handleHeroAnimate: function() {
     var self = this;
-    var scrollPosition = self.getScrollPosition ();
-    if (elHeight < scrollPosition + 150) {
+        scrollPosition = self.getScrollPosition(),
+        el = document.getElementById('hero-image'),
+        elHeight = el.clientHeight * 0.70,
+        active = el.classList.contains('hero-art-portfolio--hidden');
+
+    if (elHeight < scrollPosition + 150 && !active) {
       self.removeShit(el, 'hero-art-portfolio--visible');
-      self.addShit(el, 'hero-art-portfolio--hidden')
-      return false;
+      self.addShit(el, 'hero-art-portfolio--hidden');
     }
-    if (elHeight > scrollPosition + 150) {
+    if (elHeight > scrollPosition + 150 && active) {
       self.removeShit(el, 'hero-art-portfolio--hidden');
       self.addShit(el, 'hero-art-portfolio--visible');
     }
