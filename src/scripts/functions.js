@@ -298,23 +298,27 @@ trackProgressBar: function () {
       self.addShit(siteSubhead, 'triple-module-head--active');
   },
   // sets bg image on hero image
-  setBackground: function (heroImageName, windowWidth) {
+  setBackground: function () {
    var self = this;
-      var imageURL = self.setHeroURL(windowWidth) + heroImageName + '.jpg';
+
+   console.log('set background');
+
+   var heroImage = document.querySelector('#hero-image'),
+       heroImageName = heroImage.getAttribute('data-image'),
+       windowWidth = window.innerWidth; // finds width of browser window
+      var imageURL = windowWidth > 700
+        ? '/siteart/hero_' + heroImageName + '.jpg'
+        : '/siteart/sm_hero_'  + heroImageName + '.jpg';
+
+
+        console.log(imageURL);
+
       var img = new Image();
+      img.src = imageURL;
       img.onload = function(){
+        console.log('on load');
       document.getElementById('hero-image').style.backgroundImage = 'url('+imageURL+')';
       };
-      img.src = imageURL;
-  },
-  setHeroURL: function(windowWidth) {
-   // tests page width and page type to set proper URL for image loader
-    if (windowWidth < 700) {
-      return '/siteart/sm_hero_';
-      }
-    if (windowWidth > 700) {
-      return '/siteart/hero_';
-      }
   },
   addLink: function() {
     var footerLinkCounter = 0;
