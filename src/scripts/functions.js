@@ -2,33 +2,6 @@ var pageFunctions = {
   intialize: function () {
   console.log('works');
 
-    // objects
-    var siteNameplate = document.getElementById('main-header-nameplate'),
-      navigation = document.getElementById('navigation-menu'),
-      heroImage = document.getElementById('hero-image'),
-      siteSubhead = document.getElementById('main-subhead'),
-      scrollToTopButton = document.getElementById('scroll-to-top'),
-      documentBody = document.body,
-      menuButton = document.getElementById('menu-button'),
-      navMenu = document.getElementById('nav-menu'),
-      topNav = document.getElementById('inside-header'),
-      blogEntries = document.getElementsByClassName('blog-entry-text');
-
-    //data
-    var pageType = document.getElementsByTagName('Body')[0].getAttribute('data-pagetype');
-
-    var heroImageName;
-    if (heroImage) {
-      var heroImageName = heroImage.getAttribute('data-image');
-    }
-    //measurements
-    var windowWidth = window.innerWidth; // finds width of browser window
-    var heroArtHeight;
-    if (heroImage) {
-      var heroArtHeight = heroImage.clientHeight * 0.70;
-    }
-    //js test
-    this.initJsTest(documentBody);
 
     // init listeners
     this.initScrollButton(scrollToTopButton, documentBody);
