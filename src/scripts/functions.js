@@ -286,16 +286,16 @@ trackProgressBar: function () {
  },
   // onload functions
   // animates nameplate on page load
-  nameplateAnimate: function (siteNameplate, navigation, heroImage, siteSubhead) {
-   var self = this;
-   if (siteNameplate)  {
+  nameplateAnimate: function () {
+    var self = this;
+    var siteNameplate = document.querySelector('#main-header-nameplate'),
+      navigation = document.querySelector('#navigation-menu'),
+      heroImage = document.querySelector('#hero-image'),
+      siteSubhead = document.querySelector('#main-subhead');
+
       self.addShit(siteNameplate, 'main-header-nameplate--active');
       self.addShit(navigation, 'navigation-menu--active');
       self.addShit(siteSubhead, 'triple-module-head--active');
-    }
-    if (heroImage)  {
-      self.removeShit(heroImage, 'filter-me');
-    }
   },
   // sets bg image on hero image
   setBackground: function (heroImageName, windowWidth) {
