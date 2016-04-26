@@ -3,7 +3,7 @@ var pageFunctions = {
   console.log('works');
     var self=this;
     //  test for js
-    self.initJsTest(document.body);
+    this.initJsTest(document.body);
 
     // init listeners
     this.initScrollButton();
@@ -18,9 +18,6 @@ var pageFunctions = {
     self.initFootnoteClick();
     this.initScrollBackButton();
     self.initScrollListener('blog');
-
-    console.log(self.entryList);
-
   },
   intializeBlogEntry: function() {
     var self=this;
@@ -35,10 +32,11 @@ var pageFunctions = {
     self.setBackground();
   },
   initScrollListener: function (pageType) {
-   var self=this;
+    var self=this;
    document.onscroll = function() {
-     var scrollPosition = self.getScrollPosition();
-     if (pageType === "blog") {
+    var scrollPosition = self.getScrollPosition();
+
+    if (pageType === "blog") {
        self.handleNavAnimate();
        self.setActiveBlogItem();
        self.handleFootnoteButton (scrollPosition);
@@ -66,7 +64,6 @@ var pageFunctions = {
   initResizeListener: function(){
     var self=this;
     window.onresize = function(e) {
-      console.log('resized');
     }
   },
   initJsTest: function () {
@@ -138,9 +135,6 @@ var pageFunctions = {
   },
   handleNavAnimate: function() {
     var self=this;
-
-    console.log('nav animate');
-
     var el = document.getElementById('inside-header'),
         elHeight = el.clientHeight * 0.70,
         scrollPosition = self.getScrollPosition(),
@@ -163,12 +157,11 @@ var pageFunctions = {
       self.removeShit(el, ['nav-fixed-bar--transition', 'nav-fixed-bar--active', 'nav-fixed-bar--retracted']);
     }
   },
- initBlogTeasers: function(foo) {
+ initBlogTeasers: function() {
    var self = this;
-   console.log('teasers', foo);
-   var el = document.querySelector('#blog-teaser-wrapper');
-   var active = el.classList.contains('blog-teaser-wrapper--active');
-   var rect = el.getBoundingClientRect();
+   var el = document.querySelector('#blog-teaser-wrapper'),
+       active = el.classList.contains('blog-teaser-wrapper--active'),
+       rect = el.getBoundingClientRect();
 
    if (rect.top <= window.innerHeight * .75) {
      self.addShit(el, 'blog-teaser-wrapper--active')
@@ -179,36 +172,29 @@ var pageFunctions = {
   nameplateAnimate: function () {
     var self = this;
     var siteNameplate = document.querySelector('#main-header-nameplate'),
-      navigation = document.querySelector('#navigation-menu'),
-      heroImage = document.querySelector('#hero-image'),
-      siteSubhead = document.querySelector('#main-subhead');
+        navigation = document.querySelector('#navigation-menu'),
+        heroImage = document.querySelector('#hero-image'),
+        siteSubhead = document.querySelector('#main-subhead');
 
-      self.addShit(siteNameplate, 'main-header-nameplate--active');
-      self.addShit(navigation, 'navigation-menu--active');
-      self.addShit(siteSubhead, 'triple-module-head--active');
+    self.addShit(siteNameplate, 'main-header-nameplate--active');
+    self.addShit(navigation, 'navigation-menu--active');
+    self.addShit(siteSubhead, 'triple-module-head--active');
   },
   // sets bg image on hero image
   setBackground: function () {
    var self = this;
-
-   console.log('set background');
-
    var heroImage = document.querySelector('#hero-image'),
        heroImageName = heroImage.getAttribute('data-image'),
-       windowWidth = window.innerWidth; // finds width of browser window
-      var imageURL = windowWidth > 700
-        ? '/siteart/hero_' + heroImageName + '.jpg'
-        : '/siteart/sm_hero_'  + heroImageName + '.jpg';
+       windowWidth = window.innerWidth, // finds width of browser window
+       imageURL = windowWidth > 700
+          ? '/siteart/hero_' + heroImageName + '.jpg'
+          : '/siteart/sm_hero_'  + heroImageName + '.jpg';
 
-
-        console.log(imageURL);
-
-      var img = new Image();
-      img.src = imageURL;
-      img.onload = function(){
-        console.log('on load');
+   var img = new Image();
+   img.src = imageURL;
+   img.onload = function(){
       document.getElementById('hero-image').style.backgroundImage = 'url('+imageURL+')';
-      };
+    };
   },
   addLink: function() {
     var linkList = [{"name": "email-link", "link": "mailto:david@davidputney.com?Subject=Website%20feedback"}, {"name": "twitter-link", "link": "https://twitter.com/putneydm"}, {"name": "facebook-link",  "link": "https://www.facebook.com/david.putney"}];
@@ -251,21 +237,12 @@ var pageFunctions = {
   },
   handleInactiveState: function() {
     var self = this;
-
-    console.log('handleInactiveState');
-
     var activeFootnoteLink = document.querySelectorAll('.footnote-link-active')[0],
-      activeFootnote = document.querySelectorAll('.list-item-active')[0],
-      footNoteReturnButton = document.querySelector('#btn-footnote-return');
-    var activeParagraph = activeFootnoteLink.parentNode;
-
-    var active = activeFootnoteLink.classList.contains('list-item-active');
-
-    console.log('active', activeFootnoteLink);
-
+        activeFootnote = document.querySelectorAll('.list-item-active')[0],
+        footNoteReturnButton = document.querySelector('#btn-footnote-return'),
+        activeParagraph = activeFootnoteLink.parentNode,
+        active = activeFootnoteLink.classList.contains('list-item-active');
     // remove active state of footnote
-
-      console.log('if state');
       self.removeShit(activeFootnote, 'list-item-active');
       self.addShit(activeParagraph, 'footnote-paragraph-active');
       self.removeShit(footNoteReturnButton, 'btn-footnote-return-active');
@@ -276,16 +253,13 @@ var pageFunctions = {
   },
   handleManualScrollback: function() {
     var self=this;
-    console.log('manual scrollback');
-
     var activeFootnoteLink = document.querySelectorAll('.footnote-link-active')[0],
-      activeFootnote = document.querySelectorAll('.list-item-active'),
-      footNoteReturnButton = document.querySelector('#btn-footnote-return');
+        activeFootnote = document.querySelectorAll('.list-item-active'),
+        footNoteReturnButton = document.querySelector('#btn-footnote-return');
 
       if (activeFootnoteLink) {
         var foo = activeFootnoteLink.getBoundingClientRect();
       }
-
       if (foo && foo.top >= 250) {
         console.log('reset');
         self.handleInactiveState();
@@ -300,7 +274,7 @@ var pageFunctions = {
 
     if (footnoteLinkSelected && activeFootnote) {
       var scrollBackTo = (self.getElemDistance( footnoteLinkSelected )) - 250;
-         scrollBackNote = self.getElemDistance( activeFootnote );
+      var scrollBackNote = self.getElemDistance( activeFootnote );
     }
     else if (scrollPosition > scrollBackNote + 40) {
       this.setInactiveState(false);
@@ -313,6 +287,7 @@ var pageFunctions = {
     var self = this;
     var scrollButton = document.querySelector('#scroll-to-top'),
         active = scrollButton.classList.contains('scroll-to-top-active');
+
     if (scrollPosition > 300 && !active) {
       self.addShit(scrollButton, 'scroll-to-top-active');
     }
@@ -324,20 +299,20 @@ var pageFunctions = {
   handleSiteFooter: function(scrollPosition) {
     var self = this;
     var siteFooter = document.querySelector('#site-footer'),
-       isVisible = self.isElementVisible(siteFooter),
-       active = siteFooter.classList.contains('site-footer-active');
+        isVisible = self.isElementVisible(siteFooter),
+        active = siteFooter.classList.contains('site-footer-active');
 
     if (scrollPosition > 300 && !active) {
       self.addShit(siteFooter, 'site-footer-inactive');
       }
-    if (isVisible === true) {
+    if (isVisible) {
       self.addShit(siteFooter, 'site-footer-active');
     }
   },
   handleScrollProgress: function() {
     var self=this;
-    var progressBar = document.getElementById('scroll-progress');
-    var activeItem = document.querySelector('.entry--active');
+    var progressBar = document.getElementById('scroll-progress'),
+        activeItem = document.querySelector('.entry--active');
     if (activeItem) {
       var percent = self.calculateBlogPercentage(activeItem);
       progressBar.style.width = percent + '%';
@@ -348,21 +323,22 @@ var pageFunctions = {
   },
   calculateBlogPercentage: function(activeItem) {
     var self=this;
-      var activeItemPos = activeItem.getBoundingClientRect().top - (window.innerHeight * .15);
-      var itemHeight = activeItem.clientHeight;
-      var percentCalc =  Math.round((activeItemPos / itemHeight) * -100);
+    var activeItemPos = activeItem.getBoundingClientRect().top - (window.innerHeight * .15),
+        itemHeight = activeItem.clientHeight,
+        percentCalc =  Math.round((activeItemPos / itemHeight) * -100);
       return percentCalc < 0 ? 0:
         percentCalc > 100 ? 100:
         percentCalc;
   },
   setActiveBlogItem: function() {
     var self=this;
-    var windowHeight = window.innerHeight;
-    var triggerLine = windowHeight * .15;
+    var windowHeight = window.innerHeight,
+        triggerLine = windowHeight * .15;
+
     self.entryList.forEach(function(el) {
-      var itemBounds = el.getBoundingClientRect();
-      var active = el.classList.contains('entry--active');
-      var deactivated = el.classList.contains('entry--deactivated');
+      var itemBounds = el.getBoundingClientRect(),
+          active = el.classList.contains('entry--active'),
+          deactivated = el.classList.contains('entry--deactivated');
       // console.log(foo.top);
       if (itemBounds.top <= triggerLine && !active && !deactivated) {
         el.classList.add('entry--active');
@@ -418,6 +394,7 @@ var pageFunctions = {
   scrollToGeneric: function(to, duration, start) {
     // slow scrolls to location send destination, duration of scroll and start point
     var self = this;
+    console.log('scroll');
     var documentBody = document.body,
       html = document.getElementsByTagName('HTML')[0],
       scrollFunction = self.easeOutCubic,
@@ -470,7 +447,6 @@ var pageFunctions = {
     if (rect.right < 0 || rect.bottom < 0 || rect.left > vWidth || rect.top > vHeight) {
       return false;
       }
-
     // Return true if any of its four corners are visible
     return (
         el.contains(efp(rect.left,  rect.top)) ||  el.contains(efp(rect.right, rect.top)) ||  el.contains(efp(rect.right, rect.bottom)) ||  el.contains(efp(rect.left,  rect.bottom)) );
