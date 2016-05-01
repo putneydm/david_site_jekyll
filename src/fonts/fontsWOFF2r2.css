@@ -23,9 +23,3 @@
     font-weight: bold;
     font-style: normal;
 }
-@font-face {
-    font-family: 'Lavenderia';
-    src: url(fonts_in/woff2/lavanderia_sturdy-webfont.woff2);
-    font-weight: bold;
-    font-style: italic;
-}
