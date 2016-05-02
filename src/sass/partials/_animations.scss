@@ -78,13 +78,14 @@
 		display:none;
 	}
 }
-
 .nav-list--open {
-	height:rem(220);
-	opacity: 1;
-	padding:rem(25) 0;
-	transform: scale(1);
-	transition: height .3s ease-in-out, opacity .3s ease-in .2s, transform .2s ease-in-out .3s;
+	@media screen and (max-width:rem(560))	{
+		height:rem(220);
+		opacity: 1;
+		padding:rem(25) 0;
+		transform: scale(1);
+		transition: height .3s ease-in-out, opacity .3s ease-in .2s, transform .2s ease-in-out .3s;
+	}
 }
 .nav-list--close {
 	height:rem(0);
