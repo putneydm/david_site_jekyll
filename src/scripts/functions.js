@@ -172,6 +172,28 @@ var pageFunctions = {
       self.addShit(nav, 'nav-list--display');
     }
   },
+  handleInsideNavTransition: function(pos) {
+    var self=this;
+    console.log('inside nav');
+    var header = document.querySelector('#inside-header');
+    var nav = document.querySelector('#nav-menu');
+    var logo = document.querySelector('#header-logo');
+    var heroArt = document.querySelector('#hero-image').clientHeight;
+
+    var active = header.classList.contains('nav-fixed-bar--nodisplay');
+
+    if (active && pos >= heroArt) {
+      self.removeShit(header, 'nav-fixed-bar--nodisplay');
+      self.removeShit(logo, 'main-header-logo--nodisplay');
+      self.removeShit(nav, 'nav-list--nodisplay');
+    }
+    if (!active && pos <= heroArt) {
+      self.addShit(header, 'nav-fixed-bar--nodisplay');
+      self.addShit(logo, 'main-header-logo--nodisplay');
+      self.addShit(nav, 'nav-list--nodisplay');
+    }
+
+  },
   handleNavAnimate: function() {
     var self=this;
     var el = document.getElementById('inside-header'),
