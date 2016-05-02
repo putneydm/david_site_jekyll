@@ -31,20 +31,18 @@
 			margin:rem(30);
 			}
 }
-.nav-menu-display {
+.nav-list--display {
 	width:100%;
 	height:auto;
-	position: absolute;
 	display: flex;
 	justify-content: center;
-	bottom:rem(60);
 	opacity:0;
-	transform: scale(.95,.95);
+	transform: scale(1,1);
 	will-change:transform;
 		@media screen and (max-width:em(750)) {
 			margin:0 0 rem(8);
 			}
-		@media screen and (max-width:em(425)) {
+		@media screen and (max-width:em(430)) {
 			top:rem(210);
 			display: flex;
 			justify-content: center;
@@ -59,6 +57,7 @@
 			letter-spacing:.03em;
 			text-shadow:0 0 rem(8) rgba(30, 30, 30, 0.7);
 			text-align: center;
+			list-style-type: none;
 			a {
 				background-image:none;
 				color:white;
