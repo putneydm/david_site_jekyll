@@ -23,6 +23,7 @@ var pageFunctions = {
     var self=this;
     self.initFootnoteClick();
     this.initScrollBackButton();
+    self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
     self.initScrollListener('blogEntry');
   },
   initializeIndex: function() {
