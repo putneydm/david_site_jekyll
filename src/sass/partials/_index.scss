@@ -140,16 +140,14 @@
 		}
 }
 .section-header-index {
-	font-size:em(48);
-	font-family:$flair;
-	font-weight:bold;
-	font-style:italic;
+	font-size:em(36);
+	font-family:$sans;
+	font-weight:700;
 	text-align:center;
 	color:$aqua;
-	transform:font-size .3s;
-	margin-bottom:rem(5);
+	margin-bottom:rem(10);
 	@media screen and (max-width:em(500)) {
-		font-size:em(36);
+		font-size:em(30);
 		}
 		a {
 		background-image:none;
