@@ -39,13 +39,14 @@ var pageFunctions = {
    document.onscroll = function() {
     var scrollPosition = self.getScrollPosition();
 
-    if (pageType === "blog") {
-       self.handleNavAnimate();
+      if (pageType === "blog") {
+       self.handleInsideNavTransition(scrollPosition);
+       self.handleNavAnimate(scrollPosition);
        self.setActiveBlogItem();
-       self.handleFootnoteButton (scrollPosition);
        self.handleScrollProgress();
+       self.handleFootnoteButton (scrollPosition);
+       self.handleManualScrollback(scrollPosition);
        self.initBlogTeasers();
-     }
      else if (pageType === "blogEntry") {
        self.handleBlogItems(blogEntries);
        self.initScrollBarListener();
