@@ -241,9 +241,8 @@ var pageFunctions = {
   // animates nameplate on page load
   nameplateAnimate: function () {
     var self = this;
-    var siteNameplate = document.querySelector('#main-header-nameplate'),
-        navigation = document.querySelector('#navigation-menu'),
-        heroImage = document.querySelector('#hero-image'),
+    var siteNameplate = document.querySelector('#header-logo'),
+        navigation = document.querySelector('#nav-menu'),
         siteSubhead = document.querySelector('#main-subhead');
 
     self.addShit(siteNameplate, 'main-header-nameplate--active');
