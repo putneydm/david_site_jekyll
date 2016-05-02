@@ -145,6 +145,33 @@ var pageFunctions = {
       self.addShit(el, 'hero-art-portfolio--visible');
     }
   },
+  handleIndexNavTransition: function(pos) {
+    var self=this;
+    var header = document.querySelector('#inside-header');
+    var nav = document.querySelector('#nav-menu');
+    var logo = document.querySelector('#header-logo');
+    var heroArt = document.querySelector('#hero-image').clientHeight;
+
+    var active = header.classList.contains('nav-fixed-bar--display');
+
+    if (active && pos >= heroArt) {
+      self.removeShit(header, 'nav-fixed-bar--display');
+      self.removeShit(logo, 'main-header-logo--display');
+      self.removeShit(nav, 'nav-list--display');
+      self.addShit(header, 'nav-fixed-bar');
+      self.addShit(logo, 'main-header-logo');
+      self.addShit(nav, 'nav-list');
+    }
+    if (!active && pos <= heroArt) {
+      self.removeShit(header, 'nav-fixed-bar');
+      self.removeShit(logo, 'main-header-logo');
+      self.removeShit(nav, 'nav-list');
+
+      self.addShit(header, 'nav-fixed-bar--display');
+      self.addShit(logo, 'main-header-logo--display');
+      self.addShit(nav, 'nav-list--display');
+    }
+  },
   handleNavAnimate: function() {
     var self=this;
     var el = document.getElementById('inside-header'),
