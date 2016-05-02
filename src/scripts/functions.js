@@ -105,6 +105,7 @@ var pageFunctions = {
     var blogContainer =    document.querySelector("#blog-container");
 
     blogContainer.addEventListener("click", function(e) {
+      // e.preventDefault();
       var linkType = e.target.parentNode.tagName === 'SUP';  //
       var activeItems = [].slice.call(document.querySelectorAll(".footnote-link-active"));
       if (activeItems) {
