@@ -1,12 +1,13 @@
 ---
 layout: page_layout
+pagetype: portfolio_entry
 ---
 <article class="teaser-module-container">
   {% if page.slides %}
-  @@include('partials/portfolio/slide_show.html')
-    {% else %}
+    @@include('partials/portfolio/slide_show.html')
+  {% else %}
     @@include('partials/blog_components/blog_image_test.html')
-    {% endif %}
+  {% endif %}
 
 <div class="portfolio-text-block">
     {{page.content}}
