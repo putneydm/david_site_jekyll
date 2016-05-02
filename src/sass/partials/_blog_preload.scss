@@ -7,9 +7,6 @@
 .blog-entry {
 	margin-bottom:40px;
 	padding-bottom:30px;
-	background-image: -moz-linear-gradient(top, transparent 75%, $dark 75%);
-	background-image: -webkit-linear-gradient(top, transparent 75%, $dark 75%);
-	background-image: -o-linear-gradient(top, transparent 75%, $dark 75%);
 	background-image: linear-gradient(to bottom, transparent 75%, $dark 75%);
 	background-size: 60% 2px;
 	background-origin: padding-box;
