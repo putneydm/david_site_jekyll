@@ -196,26 +196,35 @@ var pageFunctions = {
   },
   handleNavAnimate: function() {
     var self=this;
-    var el = document.getElementById('inside-header'),
-        elHeight = el.clientHeight * 0.70,
-        scrollPosition = self.getScrollPosition(),
-        extended = el.classList.contains('nav-fixed-bar--extended'),
-        retracted = el.classList.contains('nav-fixed-bar--retracted');
 
-    //adds styles  on scroll down
-    if (scrollPosition > 120 && !retracted) {
-      self.addShit(el, ['nav-fixed-bar--active', 'nav-fixed-bar--retracted']);
+    var header = document.querySelector('#inside-header');
+    var heroArt = document.querySelector('#hero-image').clientHeight;
+
+    var button = document.querySelector('#menu-button'),
+        topNav = document.querySelector('#nav-menu'),
+        active = topNav.classList.contains('nav-list--open');
+
+    var trigger = heroArt * 1.25;
+    var extended = header.classList.contains('nav-fixed-bar--extend');
+    var topNav = document.querySelector('#nav-menu');
+    var navOpen = topNav.classList.contains('nav-list--open');
+    var pos = self.getScrollPosition();
+
+    if (!extended && pos >= trigger) {
+      header.classList.add('nav-fixed-bar--extend');
     }
-    if (scrollPosition > elHeight + 150 && retracted) {
-      self.addShit(el, ['nav-fixed-bar--transition', 'nav-fixed-bar--extended']);
-      self.removeShit(el, 'nav-fixed-bar--retracted');
+    if (!navOpen && extended && pos <= trigger) {
+      header.classList.add('nav-fixed-bar--retract');
     }
-    if (scrollPosition < elHeight && extended) {
-      self.removeShit(el, 'nav-fixed-bar--extended');
-      self.addShit(el, 'nav-fixed-bar--retracted');
+    if (extended && pos <= heroArt) {
+      header.classList.remove('nav-fixed-bar--extend');
+      header.classList.remove('nav-fixed-bar--retract');
     }
-    if (scrollPosition < 120 && retracted) {
-      self.removeShit(el, ['nav-fixed-bar--transition', 'nav-fixed-bar--active', 'nav-fixed-bar--retracted']);
+    if (navOpen && pos <= trigger) {
+      header.classList.remove('nav-fixed-bar--extend');
+      self.removeShit(topNav, 'nav-list--open');
+      self.removeShit(button, 'nav-menu-button--active');
+      self.removeShit(header, 'menu-container--active');
     }
   },
  initBlogTeasers: function() {
