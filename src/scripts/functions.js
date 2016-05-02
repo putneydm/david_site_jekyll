@@ -32,6 +32,11 @@ var pageFunctions = {
     self.initScrollListener('index');
     self.setBackground();
   },
+  initializePortfolio: function() {
+    var self=this;
+    self.initScrollListener('portfolio_entry');
+    self.setBackground();
+  },
   initScrollListener: function (pageType) {
     var self=this;
    document.onscroll = function() {
