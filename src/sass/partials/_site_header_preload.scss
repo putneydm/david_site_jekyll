@@ -114,6 +114,11 @@
 		}
 	}
 }
+.nav-list--nodisplay {
+	 li {
+		 a {color:white;}
+	 }
+}
 // variations for different versions of header
 .small-billboard {
 	.nav-fixed-bar {
