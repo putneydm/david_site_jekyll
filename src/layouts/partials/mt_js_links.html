@@ -14,5 +14,8 @@
   {% if pageType == 'index' %}
     pageFunctions.initializeIndex();
   {% endif%}
+  {% if pageType == 'portfolio_entry' %}
+    pageFunctions.initializePortfolio();
+  {% endif%}
 })();
 </script>
