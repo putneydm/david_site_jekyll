@@ -492,14 +492,14 @@ var pageFunctions = {
     var button = document.querySelector('#menu-button'),
         header = document.querySelector('#inside-header'),
         topNav = document.querySelector('#nav-menu'),
-        classTest = topNav.classList.contains('nav-list--open');
+        active = topNav.classList.contains('nav-list--open');
 
-    if (classTest === false) {
+    if (!active) {
       self.addShit(topNav, 'nav-list--open');
       self.addShit(button, 'nav-menu-button--active');
       self.addShit(header, 'menu-container--active');
     }
-    else {
+    if (active) {
       self.removeShit(topNav, 'nav-list--open');
       self.addShit(topNav, 'nav-list--close');
       self.removeShit(button, 'nav-menu-button--active');
