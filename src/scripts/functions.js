@@ -56,7 +56,11 @@ var pageFunctions = {
        self.initBlogTeasers();
      }
      else if (pageType === 'index') {
-       self.handleHeroAnimate(scrollPosition);
+      self.handleHeroAnimate(scrollPosition);
+      self.handleNavAnimate(scrollPosition);
+      self.handleIndexNavTransition(scrollPosition);
+      self.initBlogTeasers();
+     }
        self.handleNavAnimate(scrollPosition);
        self.initBlogTeasers();
      }
