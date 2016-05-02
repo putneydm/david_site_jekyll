@@ -1,33 +1,35 @@
-.main-header-nameplate
-	{
-	font-family:$flair;
-	font-size:em(120);
-	text-align:center;
-	margin:0 auto;
-	line-height:95%;
-	padding:0;
-	color:white;
-	font-style:italic;
-	text-shadow: 0 rem(2) rem(8) rgba(30, 30, 30, 0.4);
+.nav-fixed-bar--display {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	position:absolute;
+	bottom:rem(100);
 	width:100%;
-	bottom:rem(145);
-	left:0;
+		@media screen and (max-width:rem(430))	{
+			top:0;
+			bottom:initial;
+		}
+	.nav-menu-button{ display:none; }
+}
+.main-header-logo--display {
+	fill:white;
+	// to get height divide the width by 4
+	height:rem(125);
+	width:rem(500);
 	opacity:0;
-	transform: scale(.98,.98);
-	user-select: none;
+	transform: scale(1,1);
 	will-change:transform;
-		@media screen and (max-width:em(800)) {
-		font-size:em(84);
-		padding:rem(12) rem(20) rem(15);
-		bottom:rem(110);
-		}
-		@media screen and (max-width:em(425)) {
-		font-size:em(60);
-		padding:rem(10) 0 rem(8);
-		bottom:rem(225);
-		}
-	a { background-image:none;text-shadow:none, none;}
+	filter: drop-shadow(0px 0px 12px rgba(30, 30, 30, 0.4));
+			@media screen and (max-width:em(800)) {
+			height:rem(100);
+			width:rem(400);
+			}
+			@media screen and (max-width:em(430)) {
+			height:rem(70);
+			width:rem(280);
+			margin:rem(30);
+			}
 }
 .nav-menu-display {
 	width:100%;
