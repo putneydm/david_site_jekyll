@@ -17,25 +17,30 @@
 		}
 		a {background-image: none;}
 }
-.nav-site-logo {
-	font-family:$flair;
-	font-size:em(42);
-	font-style:italic;
-	font-weight:bold;
-	margin:rem(8) 0 0 0;
-	line-height:100%;
-	padding:rem(20);
-	transition:color 0s;
-		@media screen and (max-width:em(700)) {
-			font-size:em(42);
-			padding:rem(10);
-		}
-		@media screen and (max-width:em(570)) {
-			font-size:em(60);
-			margin:rem(10) 0 0 0;
-			padding:rem(10) 0;
-		}
-		a {color:white;transition:color 0s;}
+.main-header-logo {
+	fill:$aqua;
+	// to get height divide the width by 4
+	height:rem(65);
+	width:rem(260);
+	margin:rem(12) 0 rem(12) rem(15);
+	opacity:1; //change back to 0
+	transform: scale(1,1);
+	will-change:transform;
+	transition:fill .2s;
+	cursor:pointer;
+			@media screen and (max-width:em(700)) {
+				height:rem(55);
+				width:rem(220);
+			}
+			@media screen and (max-width:em(430)) {
+				height:rem(50);
+				width:rem(200);
+				margin:rem(9) 0 0;
+			}
+		&:hover {fill:$x-light_aqua;transition:fill .2s;}
+}
+.main-header-logo--nodisplay {
+	fill:white;
 }
 .nav-menu-button {
 	display:none;
