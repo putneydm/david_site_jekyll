@@ -47,11 +47,13 @@ var pageFunctions = {
        self.handleFootnoteButton (scrollPosition);
        self.handleManualScrollback(scrollPosition);
        self.initBlogTeasers();
-     else if (pageType === "blogEntry") {
-       self.handleBlogItems(blogEntries);
-       self.initScrollBarListener();
+      }
+     if (pageType === "blogEntry") {
+       self.setActiveBlogItem();
+       self.handleScrollProgress();
        self.handleFootnoteButton (scrollPosition);
        self.handleManualScrollback(scrollPosition);
+       self.initBlogTeasers();
      }
      else if (pageType === 'index') {
        self.handleHeroAnimate(scrollPosition);
