@@ -5,6 +5,9 @@
 (function() {
   "use strict";
   pageFunctions.intialize();
+  {% if pageType == 'blog' or pageType == 'blog-entry' %}
+    pageFunctions.intializeBlogEntry();
+  {% endif%}
   {% if pageType == 'blog' %}
     pageFunctions.intializeBlog();
   {% endif%}
