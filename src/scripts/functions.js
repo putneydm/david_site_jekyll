@@ -381,7 +381,7 @@ var pageFunctions = {
   handleScrollProgress: function() {
     var self=this;
     var progressBar = document.getElementById('scroll-progress'),
-        activeItem = document.querySelector('.entry--active');
+        activeItem = document.querySelector('.entry--active .blog-entry-text');
     if (activeItem) {
       var percent = self.calculateBlogPercentage(activeItem);
       progressBar.style.width = percent + '%';
