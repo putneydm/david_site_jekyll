@@ -14,9 +14,6 @@ var pageFunctions = {
   intializeBlog: function() {
     var self=this;
     self.setBackground(); // swaps out hero image on load.
-    self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
-    self.initFootnoteClick();
-    this.initScrollBackButton();
     self.initScrollListener('blog');
   },
   intializeBlogEntry: function() {
