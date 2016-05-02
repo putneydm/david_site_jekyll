@@ -61,8 +61,10 @@ var pageFunctions = {
       self.handleIndexNavTransition(scrollPosition);
       self.initBlogTeasers();
      }
+     else if (pageType === 'portfolio_entry') {
+       self.handleInsideNavTransition(scrollPosition);
        self.handleNavAnimate(scrollPosition);
-       self.initBlogTeasers();
+       self.handleHeroAnimate(scrollPosition);
      }
      self.handleScrollButton(scrollPosition);
      self.handleSiteFooter(scrollPosition);
