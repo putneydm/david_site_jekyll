@@ -4,11 +4,7 @@
 	{
 	$gutter_calc: percentage($gutter / $container_width);
 	$box_calc: percentage(($container_width / $number_of_columns) / $container_width);
-
-
-
 	$gutter_subtract: $gutter_calc / $number_of_columns;
-
 	width: ($box_calc + $gutter_subtract) - $gutter_calc;
 	margin:$gutter_calc $gutter_calc 0 0;
 
@@ -98,21 +94,14 @@
 	float:none;
 	}
 
-@mixin eminator ($size)
-	{
+@mixin eminator ($size) {
 	font-size:$size
-	}
+}
 
-@mixin trans ($color)
-	{
+@mixin trans ($color) {
 	background-color:rgba( $color, 0.2 )
-
-	}
-
-
-
-@mixin hoverer ($hover_color)
-	{
+}
+@mixin hoverer ($hover_color) {
 	color:$hover_color;
 	background-image: -moz-linear-gradient(top, transparent 75%, $hover_color 75%);
 	background-image: -webkit-linear-gradient(top, transparent 75%, $hover_color 75%);
@@ -122,11 +111,10 @@
 	background-origin: padding-box;
 	background-position: 0 95%;
 	background-repeat: repeat-x;
-	}
+}
 
 
-@mixin underscore ($color, $position)
-	{
+@mixin underscore ($color, $position) {
 	color:$color;
 	background-image: -moz-linear-gradient(top, transparent 75%, $color 75%);
 	background-image: -webkit-linear-gradient(top, transparent 75%, $color 75%);
@@ -137,10 +125,9 @@
 	background-position: 0 $position;
 	background-repeat: repeat-x;
 	text-shadow:1px 1px 0px white, -1px 1px 0px white ;
-	}
+}
 
-@mixin underscore-body ($color, $position)
-	{
+@mixin underscore-body ($color, $position) {
 	// color:$color;
 	background-image: -moz-linear-gradient(top, transparent 75%, $color 75%);
 	background-image: -webkit-linear-gradient(top, transparent 75%, $color 75%);
@@ -151,7 +138,7 @@
 	background-position: 0 $position;
 	background-repeat: repeat-x;
 //	text-shadow:1px 1px 0px white, -1px 1px 0px white ;
-	}
+}
 
 $base-font-size: 	16px;
 $base-line-height:  $base-font-size*1.5;
