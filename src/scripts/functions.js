@@ -117,7 +117,6 @@ var pageFunctions = {
         var footnoteID =  e.target.getAttribute("href").slice(1); //gets id of footnote
         self.setFootnoteActiveState(e.target.parentNode, footnoteID);
       }
-    e.preventDefault();
   });
   },
   initScrollBackButton: function () {
