@@ -121,7 +121,7 @@
 }
 // variations for different versions of header
 .small-billboard {
-	.nav-fixed-bar {
+	.nav-fixed-bar--nodisplay {
 		&::after {
 			background-image: linear-gradient(to bottom, rgba(102,102,102,0.65) 0%,rgba(0,0,0,0) 100%);
 			background-size: cover;
