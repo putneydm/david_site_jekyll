@@ -26,17 +26,18 @@ var pageFunctions = {
   },
   initializeIndex: function() {
     var self=this;
+    self.setBackground();
     self.nameplateAnimate(); // animates nameplate
     self.getElementsIndex();
     self.getElementsHero();
     self.initScrollListener('index');
-    self.setBackground();
   },
   initializePortfolio: function() {
     var self=this;
-    self.initScrollListener('portfolio_entry');
     self.setBackground();
     self.getElementsHero();
+    self.initScrollListener('portfolio_entry');
+  },
   getElementsAll: function() {
     var self=this;
     self.header = document.querySelector('#inside-header');
