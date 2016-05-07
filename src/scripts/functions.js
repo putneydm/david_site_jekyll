@@ -308,7 +308,6 @@ var pageFunctions = {
 
       var scrollBackTo = self.getElemDistance( activeFootnoteLink ) - 250;
       var scrollBackFrom = self.getElemDistance( activeFootnote );
-    }
     // set links to inactive
     if (!scrollBackOption) {
       self.handleInactiveState(activeFootnote, footNoteReturnButton, activeFootnoteLink);
