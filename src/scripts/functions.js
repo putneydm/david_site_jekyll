@@ -98,6 +98,8 @@ var pageFunctions = {
   initResizeListener: function(){
     var self=this;
     window.onresize = function(e) {
+    self.heroArtHeight = document.querySelector('#hero-image').clientHeight;
+    self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
     }
   },
   initJsTest: function () {
