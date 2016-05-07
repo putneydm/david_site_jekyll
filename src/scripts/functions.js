@@ -234,11 +234,10 @@ var pageFunctions = {
       header.classList.add('nav-fixed-bar--retract');
     }
     if (extended && pos <= heroArt) {
-      header.classList.remove('nav-fixed-bar--extend');
-      header.classList.remove('nav-fixed-bar--retract');
+      self.removeShit(header, ["nav-fixed-bar--extend", "nav-fixed-bar--retract"]);
     }
     if (navOpen && pos <= trigger) {
-      header.classList.remove('nav-fixed-bar--extend');
+      self.removeShit(header, 'nav-fixed-bar--extend');
       self.removeShit(topNav, 'nav-list--open');
       self.removeShit(button, 'nav-menu-button--active');
       self.removeShit(header, 'menu-container--active');
