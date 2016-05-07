@@ -107,9 +107,9 @@ var pageFunctions = {
   },
   initScrollButton: function() {
     var self = this;
-    var scrollToTopButton = document.querySelector('#scroll-to-top'),
-        scrollStart = self.getScrollPosition();
+    var scrollToTopButton = document.querySelector('#scroll-to-top');
     scrollToTopButton.addEventListener("click", function(e) {
+      var scrollStart = self.getScrollPosition();
       self.scrollToGeneric(0, 500, scrollStart);
       e.preventDefault();
     });
