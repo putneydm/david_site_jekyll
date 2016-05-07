@@ -3,8 +3,6 @@ var fontLoad = {
      "use strict";
       // console.log('fonts');
       var pageType = document.getElementsByTagName('Body')[0].getAttribute('data-pagetype');
-      // var woff = this.initFontsWoff(pageType);
-      // var woff2 = this.initFontsWoffTwo(pageType);
       var woff = '/fonts/fontsWOFF_r2.css';
       var woff2 = '/fonts/fontsWOFF2r2.css';
       this.loadFont('font-file', woff, woff2)
