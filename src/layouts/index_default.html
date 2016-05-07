@@ -5,18 +5,18 @@
   {% assign hero-art = page.heroArt %}
 
 <body id="index-page" class="one" data-pagetype="index-page">
+
 <ul class="hidden">
   <li><a href="#nav-start">Skip to navigation</a></li>
   <li><a href="#main">Skip to content</a></li>
 </ul>
-
 <header class="large-billboard">
 	<div id="hero-image" class="hero-art backgound-set" data-image="{{hero-art}}">
     <div id="inside-header" class="nav-fixed-bar--display">
-        <h1 class="hidden"><a href="/" rel="index">David Putney</a></h1>
         <svg id="header-logo" class="main-header-logo--display" aria-hidden="true">
           <use xlink:href="#nameplate" />
         </svg>
+        <h1 class="hidden"><a href="/" rel="index">David Putney</a></h1>
       <nav>
         <ul id="nav-menu" class="nav-list--display">
             @@include('../includes/partials/mt_nav_links.html')
