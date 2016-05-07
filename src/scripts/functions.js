@@ -1,6 +1,5 @@
 var pageFunctions = {
   intialize: function () {
-  console.log('works');
     var self=this;
     this.initJsTest(); //test for js
     this.initScrollButton();
@@ -478,7 +477,6 @@ var pageFunctions = {
   scrollToGeneric: function(to, duration, start) {
     // slow scrolls to location send destination, duration of scroll and start point
     var self = this;
-    console.log('scroll');
     var documentBody = document.body,
       html = document.getElementsByTagName('HTML')[0],
       scrollFunction = self.easeOutCubic,
