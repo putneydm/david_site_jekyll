@@ -212,9 +212,8 @@ var pageFunctions = {
       self.addShit(logo, 'main-header-logo--nodisplay');
       self.addShit(nav, 'nav-list--nodisplay');
     }
-
   },
-  handleNavAnimate: function() {
+  handleNavAnimate: function(pos) {
     var self=this;
 
     var header = self.header,
