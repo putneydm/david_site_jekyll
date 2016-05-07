@@ -156,7 +156,7 @@ var pageFunctions = {
   handleHeroAnimate: function() {
     var self = this;
         scrollPosition = self.getScrollPosition(),
-        el = document.getElementById('hero-image'),
+        el = self.heroArt,
         elHeight = el.clientHeight * 0.70,
         active = el.classList.contains('hero-art-portfolio--hidden');
 
@@ -171,12 +171,11 @@ var pageFunctions = {
   },
   handleIndexNavTransition: function(pos) {
     var self=this;
-    var header = document.querySelector('#inside-header');
-    var nav = document.querySelector('#nav-menu');
-    var logo = document.querySelector('#header-logo');
-    var heroArt = document.querySelector('#hero-image').clientHeight;
-
-    var active = header.classList.contains('nav-fixed-bar--display');
+    var header = self.header,
+        nav = self.navMenu,
+        logo = self.logo,
+        heroArt =self.heroArtHeight;
+        active = header.classList.contains('nav-fixed-bar--display');
 
     if (active && pos >= heroArt) {
       self.removeShit(header, 'nav-fixed-bar--display');
@@ -198,13 +197,11 @@ var pageFunctions = {
   },
   handleInsideNavTransition: function(pos) {
     var self=this;
-    console.log('inside nav');
-    var header = document.querySelector('#inside-header');
-    var nav = document.querySelector('#nav-menu');
-    var logo = document.querySelector('#header-logo');
-    var heroArt = document.querySelector('#hero-image').clientHeight;
-
-    var active = header.classList.contains('nav-fixed-bar--nodisplay');
+    var header = self.header,
+        nav = self.navMenu,
+        logo = self.logo,
+        heroArt = self.heroArtHeight,
+        active = header.classList.contains('nav-fixed-bar--nodisplay');
 
     if (active && pos >= heroArt) {
       self.removeShit(header, 'nav-fixed-bar--nodisplay');
@@ -221,18 +218,14 @@ var pageFunctions = {
   handleNavAnimate: function() {
     var self=this;
 
-    var header = document.querySelector('#inside-header');
-    var heroArt = document.querySelector('#hero-image').clientHeight;
-
-    var button = document.querySelector('#menu-button'),
-        topNav = document.querySelector('#nav-menu'),
-        active = topNav.classList.contains('nav-list--open');
-
-    var trigger = heroArt * 1.25;
-    var extended = header.classList.contains('nav-fixed-bar--extend');
-    var topNav = document.querySelector('#nav-menu');
-    var navOpen = topNav.classList.contains('nav-list--open');
-    var pos = self.getScrollPosition();
+    var header = self.header,
+        heroArt = self.heroArtHeight,
+        button = self.menuButton,
+        topNav = self.navMenu,
+        active = topNav.classList.contains('nav-list--open'),
+        trigger = heroArt * 1.25,
+        extended = header.classList.contains('nav-fixed-bar--extend'),
+        navOpen = topNav.classList.contains('nav-list--open');
 
     if (!extended && pos >= trigger) {
       header.classList.add('nav-fixed-bar--extend');
@@ -300,7 +293,7 @@ var pageFunctions = {
 // sets interactive functions on page
   setFootnoteActiveState: function(activeFootnoteLink, targetFootnote) {
     var self = this;
-    var navHeight = document.querySelector('#inside-header').offsetHeight,
+    var navHeight = self.header.offsetHeight,
       activeFootnote  = document.querySelector('#' + targetFootnote).parentNode,
       scrollBackButton = document.querySelector('#btn-footnote-return'),
       linkLocation = self.getElemDistance(activeFootnoteLink),
@@ -314,8 +307,8 @@ var pageFunctions = {
     var self = this;
     var activeFootnoteLink = document.querySelectorAll('.footnote-link-active')[0],
       activeFootnote = document.querySelectorAll('.list-item-active')[0],
-      footNoteReturnButton = document.querySelector('#btn-footnote-return');
-    if (activeFootnoteLink && activeFootnote && footNoteReturnButton) {
+      footNoteReturnButton = self.footNoteReturnButton;
+
       var scrollBackTo = self.getElemDistance( activeFootnoteLink ) - 250;
       var scrollBackFrom = self.getElemDistance( activeFootnote );
     }
@@ -348,13 +341,12 @@ var pageFunctions = {
     var self=this;
     var activeFootnoteLink = document.querySelectorAll('.footnote-link-active')[0],
         activeFootnote = document.querySelectorAll('.list-item-active'),
-        footNoteReturnButton = document.querySelector('#btn-footnote-return');
+        footNoteReturnButton = self.footNoteReturnButton;
 
       if (activeFootnoteLink) {
         var foo = activeFootnoteLink.getBoundingClientRect();
       }
       if (foo && foo.top >= 250) {
-        console.log('reset');
         self.handleInactiveState();
       }
   },
@@ -378,7 +370,7 @@ var pageFunctions = {
   },
   handleScrollButton: function (scrollPosition) {
     var self = this;
-    var scrollButton = document.querySelector('#scroll-to-top'),
+    var scrollButton = self.scrollButton,
         active = scrollButton.classList.contains('scroll-to-top-active');
 
     if (scrollPosition > 300 && !active) {
@@ -391,7 +383,7 @@ var pageFunctions = {
   },
   handleSiteFooter: function(scrollPosition) {
     var self = this;
-    var siteFooter = document.querySelector('#site-footer'),
+    var siteFooter = self.siteFooter,
         isVisible = self.isElementVisible(siteFooter),
         active = siteFooter.classList.contains('site-footer-active');
 
@@ -404,7 +396,7 @@ var pageFunctions = {
   },
   handleScrollProgress: function() {
     var self=this;
-    var progressBar = document.getElementById('scroll-progress'),
+    var progressBar = self.scrollProgress,
         activeItem = document.querySelector('.entry--active .blog-entry-text');
     if (activeItem) {
       var percent = self.calculateBlogPercentage(activeItem);
