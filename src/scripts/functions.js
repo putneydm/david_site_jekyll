@@ -68,38 +68,31 @@ var pageFunctions = {
    document.onscroll = function() {
     var scrollPosition = self.getScrollPosition();
 
-      if (pageType === "blog") {
+    if (pageType === "blog") {
        self.handleInsideNavTransition(scrollPosition);
        self.handleNavAnimate(scrollPosition);
-       self.setActiveBlogItem();
-       self.handleScrollProgress();
-       self.handleFootnoteButton (scrollPosition);
-       self.handleManualScrollback(scrollPosition);
-       self.initBlogTeasers();
       }
-     if (pageType === "blogEntry") {
+     if (pageType === "blogEntry" || pageType === "blog") {
        self.setActiveBlogItem();
        self.handleScrollProgress();
        self.handleFootnoteButton (scrollPosition);
        self.handleManualScrollback(scrollPosition);
        self.initBlogTeasers();
      }
-     else if (pageType === 'index') {
+     if (pageType === 'index' || pageType === 'portfolio_entry') {
       self.handleHeroAnimate(scrollPosition);
       self.handleNavAnimate(scrollPosition);
+     }
+     if (pageType === 'index') {
       self.handleIndexNavTransition(scrollPosition);
       self.initBlogTeasers();
      }
-     else if (pageType === 'portfolio_entry') {
+     if (pageType === 'portfolio_entry') {
        self.handleInsideNavTransition(scrollPosition);
-       self.handleNavAnimate(scrollPosition);
-       self.handleHeroAnimate(scrollPosition);
      }
-     self.handleScrollButton(scrollPosition);
-     self.handleSiteFooter(scrollPosition);
-     self.handleManualScrollback(scrollPosition);
-
-    //  self.handleScrollBackButton (scrollPosition);
+       self.handleScrollButton(scrollPosition);
+       self.handleSiteFooter(scrollPosition);
+       self.handleManualScrollback(scrollPosition);
    }
   },
   initResizeListener: function(){
