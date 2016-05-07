@@ -244,7 +244,7 @@ var pageFunctions = {
   },
  initBlogTeasers: function() {
    var self = this;
-   var el = document.querySelector('#blog-teaser-wrapper'),
+   var el = self.blogTeaser,
        active = el.classList.contains('blog-teaser-wrapper--active'),
        rect = el.getBoundingClientRect();
 
