@@ -1,7 +1,6 @@
 var fontLoad = {
   intialize: function () {
      "use strict";
-      console.log('fonts');
       var pageType = document.getElementsByTagName('Body')[0].getAttribute('data-pagetype');
       // var woff = this.initFontsWoff(pageType);
       // var woff2 = this.initFontsWoffTwo(pageType);
