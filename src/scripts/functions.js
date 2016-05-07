@@ -7,14 +7,18 @@ var pageFunctions = {
     this.initMenuButton();
     this.addLink();
     this.initResizeListener();
+    this.getElementsAll();
   },
   intializeBlog: function() {
     var self=this;
     self.setBackground(); // swaps out hero image on load.
+    self.getElementsHero();
+    self.getElementsBlog();
     self.initScrollListener('blog');
   },
   intializeBlogEntry: function() {
     var self=this;
+    self.getElementsBlog();
     self.initFootnoteClick();
     this.initScrollBackButton();
     self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
@@ -23,6 +27,8 @@ var pageFunctions = {
   initializeIndex: function() {
     var self=this;
     self.nameplateAnimate(); // animates nameplate
+    self.getElementsIndex();
+    self.getElementsHero();
     self.initScrollListener('index');
     self.setBackground();
   },
@@ -30,6 +36,31 @@ var pageFunctions = {
     var self=this;
     self.initScrollListener('portfolio_entry');
     self.setBackground();
+    self.getElementsHero();
+  getElementsAll: function() {
+    var self=this;
+    self.header = document.querySelector('#inside-header');
+    self.navMenu = document.querySelector('#nav-menu');
+    self.logo = document.querySelector('#header-logo');
+    self.menuButton = document.querySelector('#menu-button');
+    self.topNav = document.querySelector('#nav-menu'),
+    self.siteFooter = document.querySelector('#site-footer');
+    self.scrollButton = document.querySelector('#scroll-to-top');
+  },
+  getElementsHero: function() {
+    var self=this;
+    self.heroArt = document.querySelector('#hero-image');
+    self.heroArtHeight = document.querySelector('#hero-image').clientHeight;
+  },
+  getElementsBlog: function () {
+    var self=this;
+    self.footNoteReturnButton = document.querySelector('#btn-footnote-return');
+    self.scrollProgress = document.querySelector('#scroll-progress');
+    self.blogTeaser = document.querySelector('#blog-teaser-wrapper');
+  },
+  getElementsIndex: function() {
+    var self=this;
+    self.blogTeaser = document.querySelector('#blog-teaser-wrapper');
   },
   initScrollListener: function (pageType) {
     var self=this;
