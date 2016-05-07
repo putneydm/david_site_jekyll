@@ -2,10 +2,7 @@ var pageFunctions = {
   intialize: function () {
   console.log('works');
     var self=this;
-    //  test for js
-    this.initJsTest(document.body);
-
-    // init listeners
+    this.initJsTest(); //test for js
     this.initScrollButton();
     this.initMenuButton();
     this.addLink();
