@@ -40,6 +40,21 @@
   	font-size:em(15);
 		margin-bottom:rem(18);
   }
+	.blog-read-time {
+		text-align: center;
+		letter-spacing: .05em;
+		text-transform: uppercase;
+		font-size:rem(12);
+		margin-bottom:rem(15);
+		&::before {
+			display:block;
+			width:150px;
+			content: " ";
+			height:1px;
+			border-top: 1px solid $med;
+			margin:0 auto rem(8);
+		}
+	}
   .blog-image {
   	width:100%;
   	margin:0px;
