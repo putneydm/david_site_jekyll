@@ -5,11 +5,10 @@
 	@@include('partials/skip_links.html')
 	@@include('partials/portfolio_pages/hero_presentation.html')
 <main id="main">
-<header class="portfolio-introduction-container">
-	<h1 class="portfolio-project-name">{{page.head markdownify strip_html}}</h1>
-	<p class="page-subhead">{{{page.subhead markdownify strip_html}}</p>
-</header>
-{{content}}
+	@@include('partials/portfolio_pages/intro_text_block.html')
+
+	{{content}}
+
 </main>
 	@@include('partials/footer/footer.html')
 <div class="svg-import hidden" aria-hidden="true">
