@@ -5,10 +5,6 @@
   {% assign hero-art = page.heroArt %}
 
 <body id="index-page" class="one" data-pagetype="index-page">
-  <ul class="hidden">
-    <li><a href="#nav-start">Skip to navigation</a></li>
-    <li><a href="#main">Skip to content</a></li>
-  </ul>
   <header class="large-billboard">
 
     <div id="hero-image" class="hero-art backgound-set" data-image="{{hero-art}}">
@@ -41,6 +37,7 @@
 
   </header>
 
+  @@include('partials/skip_links.html')
 <main id="main">
   <h2 class="triple-module-head" id="main-subhead">Hi. I’m <span itemprop="name">David Putney</span>. I do <span itemprop="title">UI/UX, visual design and front-end web development</span> in the <span itemprop="locality">Boston</span> area. I specialize in designing and building beautiful and functional media and content-driven websites.</h2>
     <div class="page-content">
