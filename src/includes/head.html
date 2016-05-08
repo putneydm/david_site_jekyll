@@ -1,6 +1,6 @@
 
 <head>
-  @@include('partials/mt_meta_tags.html')
+  @@include('partials/meta_tags.html')
   <title>{% if page.title %}{{ page.title | | remove:'\' }} | {{ site.title }} {% else %}{{ site.title }} | {{site.tagLine}}{% endif %}</title>
   <style>
     {% if page.heroArt %}.hero-art{background-image: url('/siteart/pl_hero_{{page.heroArt}}.jpg');}@media screen and (max-width: 46.875em) {.hero-art {background-image: url('/siteart/pl_hero_small_{{page.heroArt}}.jpg');}}{% endif %}
