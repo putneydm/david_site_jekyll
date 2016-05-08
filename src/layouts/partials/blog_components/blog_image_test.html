@@ -23,7 +23,10 @@
       {% endif%}
 	</img>
 	<noscript>
-		<img src="/siteart/large_{{ image }}.jpg">
+		<img src="/siteart/large_{{ image }}.jpg"
+		{% if alt %}
+				alt="{{ alt }}">
+      {% endif%} >
 	</noscript>
 </figure>
 {% endif %}
