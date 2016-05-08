@@ -1,7 +1,7 @@
 var cssLoad = {
   intialize: function () {
 "use strict";
-console.log('styles');
+// console.log('styles');
 this.loadCSS('/css/styles.css');
    },
    loadCSS: function ( href, before, media, callback ){
