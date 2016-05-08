@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js">
-
 	{% include head.html %}
-	<header class="small-billboard">
-		{% include mt_page_header.html %}
-	<div id="hero-image" class="hero-art backgound-set" data-image="{{page.heroArt}}">
-		<svg class="hero-art-curve">
-				<use xlink:href="#inside_page_mask" />
-			</svg>
-	</div>
-	</header>
 <body>
 	@@include('partials/skip_links.html')
+	@@include('partials/portfolio_pages/hero_presentation.html')
 <main id="main">
 <header class="portfolio-introduction-container">
 	<h1 class="portfolio-project-name">{{page.head markdownify strip_html}}</h1>
