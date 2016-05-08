@@ -38,14 +38,14 @@ pageType: blog-entry
       {{content}}
   </div>
   <footer class="blog-entry-footer">
-  @@include('partials/blog_components/mt_footnote_return.html')
-  @@include('partials/blog_components/mt_blog_sig.html')
+  @@include('partials/blog_components/footnote_return.html')
+  @@include('partials/blog_components/blog_sig.html')
   	<ul class="blog-tags">
       {% for tag in page.tags %}
         <li><a href="/tag/{{tag | replace:' ','-' | replace:'&','&amp;' | downcase }}.html" rel="tag">{{ tag }}</a></li>
       {% endfor %}
   	</ul>
-    @@include('partials/blog_components/mt_blog_entry_teasers_inside.html')
+    @@include('partials/blog_components/blog_entry_teasers_inside.html')
   </footer>
 </article>
 </div>
