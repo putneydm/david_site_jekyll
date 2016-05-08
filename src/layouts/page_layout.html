@@ -2,10 +2,6 @@
 <html class="no-js">
 
 	{% include head.html %}
-	<ul class="hidden">
-	  <li><a href="#nav-start">Skip to navigation</a></li>
-	  <li><a href="#main">Skip to content</a></li>
-	</ul>
 	<header class="small-billboard">
 		{% include mt_page_header.html %}
 	<div id="hero-image" class="hero-art backgound-set" data-image="{{page.heroArt}}">
@@ -14,6 +10,7 @@
 			</svg>
 	</div>
 	</header>
+	@@include('partials/skip_links.html')
 <main id="main">
 <header class="portfolio-introduction-container">
 	<h1 class="portfolio-project-name">{{page.head markdownify strip_html}}</h1>
