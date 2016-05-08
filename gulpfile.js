@@ -198,7 +198,7 @@ gulp.task('concat', function() {
 });
 
 gulp.task('cachebustScripts', function() {
-  return gulp.src('source/layouts/mt_js_links.html')
+  return gulp.src('source/layouts/js_links.html')
   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
 });
 
