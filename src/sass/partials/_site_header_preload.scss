@@ -56,12 +56,12 @@
 		@media screen and (max-width:em(560)) {
 			display:block;
 		}
-	a{color:$aqua;display:block;}
+	a{color:$x-light-aqua;display:block;}
 }
 .nav-menu-button-icn {
 	width:rem(11);
 	height:rem(8);
-	fill:$aqua;
+	fill:$x-light-aqua;
 	margin:0 auto;
 }
 .nav-list-wrapper {width:100%;}
