@@ -18,7 +18,7 @@ keywords: [blog, writing, technology, movies, music, culture]
   	<h2 class="blog-headline"><a href="{{post.url}}">{% if post.altTitle %}{{ post.altTitle | markdownify | strip_html }} {% else %} {{ post.title | markdownify | strip_html }}{% endif%}</a></h2>
     <p class="blog-entry-date">{{ post.date | date: "%A, %B %-d, %Y" }}</p>
 
-  {% assign readCalc =  post.content | number_of_words | divided_by: 180 | round %}
+    {% assign readCalc =  post.content | number_of_words | divided_by: 180 | round %}
 
     {% if readCalc == 0 %}
       {% assign readTime = "Less than one" %}
