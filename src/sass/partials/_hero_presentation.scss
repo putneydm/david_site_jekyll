@@ -6,24 +6,23 @@
 	background-size: 100%;
 	background-repeat: no-repeat;
 	border-bottom: 1px solid white;
-	&::after {
+	&::after, &::before {
+		position:absolute;
 		width:100%;
-		height:rem(1);
 		content:'';
 		top:0;
 		left:0;
 		display:block;
-		box-shadow: 0 0 120px 60px rgba(153, 153, 153, 0.4);
+		pointer-events: none;
+	}
+	&::after {
+		height:rem(1);
+		box-shadow: 0 0 120px 60px rgba(60, 60, 60, 0.4);
 		transform: translate(0,0);
 	}
 	&::before {
-		content:'';
-		position: absolute;
-		top:0;
-		left:0;
 		background-color: white;
 		opacity:0;
-		pointer-events: none;
 	}
 }
 .hero-art-curve {
