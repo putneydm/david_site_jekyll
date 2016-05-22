@@ -126,32 +126,12 @@
 			opacity:.6;
 		}
 		}
-		// .nav-fixed-bar--active {
-		// 		&::after {
-		// 		display:none;
-		// 		}
-		// }
 }
-// .large-billboard {
-// 	.nav-fixed-bar {
-// 		// top:120px;
-// 	}
-// 	.nav-fixed-bar--active {
-// 		top:0;
-// 	}
-// }
 .no-billboard {
-	// .nav-fixed-bar--retracted{
-	// 	transform: translateY(0);
-	// }
 	.nav-fixed-bar {
 		background-color:white;
 		box-shadow:0 0 40px 15px rgba($med, .4);
-		// z-index:10;
 		position: fixed;
-		// left:0;
-		// top:0;
-		// transition: height.2s ease-in-out;
 	.main-header-logo {
 			fill:$aqua;
 			&:hover {fill:$light-aqua}
