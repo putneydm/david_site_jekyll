@@ -1,4 +1,4 @@
-<div id="blog-container" class="blog-container">
+<article id="blog-container" class="blog-container">
 {% for post in site.categories.blog-entry limit: 1 %}
 <h2 class="section-header-index"><a href="http://www.davidputney.com/blog" rel="next">Blog</a></h2>
 <a href="{{ post.url}}" rel="next">
@@ -48,6 +48,6 @@
 <!-- sets variable with identity of post so I can check it against randomizer -->
 {% assign entry = post %}
 {% endfor %}
-</div>
 		@@include('mt_blog_entry_teasers_index.html')
 </div>
+</article>
