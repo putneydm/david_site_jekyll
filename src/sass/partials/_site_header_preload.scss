@@ -31,7 +31,6 @@
 	margin:rem(12) 0 rem(12) rem(15);
 	opacity:1; //change back to 0
 	transform: scale(1,1);
-	will-change:transform;
 	transition:fill .2s;
 	cursor:pointer;
 			@media screen and (max-width:em(700)) {
