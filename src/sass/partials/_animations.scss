@@ -98,3 +98,18 @@
 		display:none;
 	}
 }
+// nav bar animations
+.nav-fixed-bar--extend {
+	transform: translateY(0);
+	transition:transform .3s ease-in;
+	.nav-menu-button {
+		a{color:$aqua;display:block;}
+	}
+	.nav-menu-button-icn {
+		fill:$aqua;
+	}
+}
+.nav-fixed-bar--retract {
+	transform: translateY(-120px);
+	transition:transform .3s ease-in;
+}

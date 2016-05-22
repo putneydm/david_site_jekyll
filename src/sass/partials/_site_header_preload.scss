@@ -23,14 +23,6 @@
 		box-shadow: none;
 		position:absolute;
 }
-.nav-fixed-bar--extend {
-	transform: translateY(0);
-	transition:transform .3s ease-in;
-}
-.nav-fixed-bar--retract {
-	transform: translateY(-120px);
-	transition:transform .3s ease-in;
-}
 .main-header-logo {
 	fill:$aqua;
 	// to get height divide the width by 4
