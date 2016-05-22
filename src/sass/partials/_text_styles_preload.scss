@@ -6,15 +6,6 @@ margin:0;
 font-family:$droid;
 -webkit-font-smoothing: antialiased;
 }
-.clearfix {
-	&::after{
-	content:'';
-	width:100%;
-	height:0;
-	clear:both;
-	display:block;
-	}
-}
 a {
 	@include underscore-body ($x-light-aqua, 90%);
 	transition:color .2s ease-in, background .2s ease-in;
