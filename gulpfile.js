@@ -664,7 +664,7 @@ gulp.task('hero-index', function () {
   gulp.src(paths.images.input)
     .pipe(gm(function (gmfile){
        return gmfile.setFormat('jpg'),
-          gmfile.resample(72, 72),
+          gmfile.resample(20, 20),
           gmfile.thumbnail(900, '407^'),
           gmfile.quality(10),
           gmfile.filter('triangle'),
