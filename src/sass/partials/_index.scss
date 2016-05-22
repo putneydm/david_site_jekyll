@@ -155,7 +155,8 @@
 		}
 }
 .blog-teaser-wrapper {
-	margin: rem(60) 0 0;
+	margin: rem(60) auto 0;
+	max-width:700px;
 	width:100%;
 	@media screen and (max-width:em(500)) {
 			margin: rem(40) 0 0;
