@@ -80,6 +80,7 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *Heaven is for Real*
 * *Wild*
 * *In Too Deep*
+* *Get Hard*
 * *Small Soldiers*
 * *Man of Steel*
 * *The African Queen*
@@ -94,9 +95,11 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *Snow White and the Seven Dwarfs*
 * *Snow White and the Huntsman*
 * *Coming to America*
+* *Inside Llewyn Davis*
 * *Carlito's Way*
 * *What's Eating Gilbert Grape?*
 * *White House Down*
+* *Risen*
 * *That Thing You Do!*
 * *Harry and the Hendersons*
 * *As Good as It Gets*
