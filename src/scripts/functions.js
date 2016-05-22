@@ -277,6 +277,7 @@ var pageFunctions = {
   },
   // sets bg image on hero image
   setBackground: function () {
+    console.log('setbackground');
    var self = this;
    var heroImage = document.querySelector('#hero-image'),
        heroImageName = heroImage.getAttribute('data-image'),
@@ -287,6 +288,7 @@ var pageFunctions = {
 
    var img = new Image();
    img.src = imageURL;
+   console.log(img);
    img.onload = function(){
       document.getElementById('hero-image').style.backgroundImage = 'url('+imageURL+')';
     };
