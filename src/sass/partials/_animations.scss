@@ -69,13 +69,19 @@
 }
 .nav-menu-button--active {
 	margin:0 0 rem(15);
-	a{color:$aqua !important;}
+	a{color:$x-light-aqua}
 	.nav-menu-button-icn--open {
 		display:block;
-		fill:$aqua;
+		fill:$x-light-aqua;
 	}
 	.nav-menu-button-icn--closed {
 		display:none;
+	}
+}
+.nav-fixed-bar--extend {
+	.nav-menu-button--active {
+		a { color:$aqua }
+		.nav-menu-button-icn--open { fill:$aqua;}
 	}
 }
 .nav-list--open {
@@ -98,6 +104,7 @@
 		display:none;
 	}
 }
+
 // nav bar animations
 .nav-fixed-bar--extend {
 	transform: translateY(0);
