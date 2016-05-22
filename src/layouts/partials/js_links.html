@@ -6,24 +6,18 @@
   "use strict";
   ready(function() {
   pageFunctions.intialize();
-  {% if pageType == 'blog' or pageType == 'blog-entry' %}
-    pageFunctions.intializeBlogEntry();
-  {% endif%}
-  {% if pageType == 'blog' %}
-    pageFunctions.intializeBlog();
-  {% endif%}
-  {% if pageType == 'blog-entry' %}
-    pageFunctions.intializeBlogEntry();
-  {% endif%}
-  {% if pageType == 'index' %}
-    pageFunctions.initializeIndex();
-  {% endif%}
-  {% if pageType == 'portfolio_entry' %}
-    pageFunctions.initializePortfolio();
-  {% endif%}
-  {% if pageType == 'about' %}
-    pageFunctions.initializePortfolio();
-  {% endif%}
+    {% if pageType == 'blog' or pageType == 'blog-entry' %}
+      pageFunctions.intializeBlogEntry();
+    {% endif%}
+    {% if pageType == 'blog' %}
+      pageFunctions.intializeBlog();
+    {% endif%}
+    {% if pageType == 'index' %}
+      pageFunctions.initializeIndex();
+    {% endif%}
+    {% if pageType == 'portfolio_entry' or pageType == 'about' %}
+      pageFunctions.initializePortfolio();
+    {% endif%}
   });
 })();
 </script>
