@@ -43,8 +43,9 @@
 	</span>
 </a>
 <!-- sets variable with identity of post so I can check it against randomizer -->
-{% assign entry = post %}
-{% endfor %}
-		@@include('mt_blog_entry_teasers_index.html')
+	{% assign entry = post %}
+	{% endfor %}
 </div>
 </article>
+
+@@include('blog_entry_teasers_index.html')
