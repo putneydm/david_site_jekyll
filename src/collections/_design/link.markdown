@@ -4,6 +4,7 @@ subhead: A colorful, lively daily newspaper aimed at a younger audience
 image: PotterCover
 imageAlt: Image of Liunk cover with Daniel Radcliff as Harry Potter
 layout: portfolio_entry
+pagetype: portfolio_entry
 heroArt: nflinsidec
 head: Link
 images: ['kitty', 'link2', 'link3']

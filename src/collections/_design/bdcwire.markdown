@@ -4,6 +4,7 @@ subhead: A news and lifestyle website aimed at younger readers
 image: bdcwire_fp_one
 imageAlt: Screenshot of the BDCwire home page.
 layout: portfolio_entry
+pagetype: portfolio_entry
 heroArt: bdcwire
 head: BDCwire
 images: ['bcdw_circ_1', 'bcdw_circ_2', 'bcdw_circ_3']
