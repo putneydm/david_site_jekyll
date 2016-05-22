@@ -1,5 +1,5 @@
 <article class="teaser-module clearfix">
-    <h4 class="teaser-module-head"><a href="{{ post.url}}" rel="next">{{ post.title | markdownify | strip_html }}</a></h4>
+    <h1 class="teaser-module-head"><a href="{{ post.url}}" rel="next">{{ post.title | markdownify | strip_html }}</a></h1>
 		<div class="teaser-module-abstract">
 		<p>	{{ post.content | truncatewords: 70 | strip_html }} <a href="{{post.url}}" rel="next" class="teaser-module-abstract-link">More
 			<svg class="teaser-arrow-icon">

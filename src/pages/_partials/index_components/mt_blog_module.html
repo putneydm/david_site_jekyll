@@ -7,9 +7,6 @@
 	</a></h1>
 	<p class="blog-entry-date">{{ post.date | date: "%A, %B %-d, %Y" }}</p>
 
-<div class="blog-entry-text-index">
-	{{ post.content | truncatewords: 170 }}
-</div>
 	{% assign readCalc =  post.content | number_of_words | divided_by: 180 | round %}
 	{% if readCalc == 0 %}
 		{% assign readTime = "Less than one" %}
@@ -34,8 +31,12 @@
 	{% else %}
 		{% assign readTime = readCalc %}
 	{% endif %}
+	<p class="blog-read-time">{{ readTime }}-minute read</p>
+	<div class="blog-entry-text-index">
+		{{ post.content | truncatewords: 170 }}
+	</div>
 <div class="blog-button-wrapper">
-<a href="{{ post.url}}" rel="canonical" class="button blog-more-button">Continue reading
+	<a href="{{ post.url}}" rel="canonical" class="button blog-more-button">Continue reading
 	<span aria-hidden="true">
 		<svg class="button-icon">
 			<use xlink:href="#arrow-right" />
