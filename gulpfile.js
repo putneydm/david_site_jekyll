@@ -501,7 +501,7 @@ gulp.task('hero', function () {
   gulp.src(paths.images.input)
     .pipe(gm(function (gmfile){
       return gmfile.setFormat('jpg'),
-          gmfile.resample(72, 72),
+          gmfile.resample(20, 20),
           gmfile.thumbnail(700, '261^'),
           gmfile.quality(10),
           gmfile.filter('triangle'),
@@ -532,7 +532,7 @@ gulp.task('hero', function () {
   gulp.src(paths.images.input)
     .pipe(gm(function (gmfile){
       return gmfile.setFormat('jpg'),
-       gmfile.resample(72, 72),
+       gmfile.resample(20, 20),
        gmfile.thumbnail(300, '112^'),
        gmfile.quality(10),
        gmfile.filter('triangle'),
@@ -570,12 +570,12 @@ gulp.task('hero-index', function () {
     .pipe(gm(function (gmfile){
       return gmfile.setFormat('jpg'),
        gmfile.resample(72, 72),
-       gmfile.thumbnail(2300, '1040^'),
+       gmfile.thumbnail(2300, '1040!'),
        gmfile.quality(82),
        gmfile.filter('triangle'),
        gmfile.unsharp('0.25x0.25+8+0.065'),
        gmfile.interlace('none'),
-       gmfile.colorspace('sRGB'),
+       gmfile.colorspace('sRGB')
        gmfile.crop(2300, 1040, 0, 0);
 
              // gulp // Again, I don't think this belongs here
@@ -695,7 +695,7 @@ gulp.task('hero-index', function () {
   gulp.src(paths.images.input)
     .pipe(gm(function (gmfile){
       return gmfile.setFormat('jpg'),
-          gmfile.resample(72, 72),
+          gmfile.resample(20, 20),
           gmfile.thumbnail(500, '227^'),
           gmfile.quality(82),
           gmfile.filter('triangle'),
