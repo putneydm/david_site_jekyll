@@ -1,13 +1,11 @@
 <article id="blog-container" class="blog-container">
 {% for post in site.categories.blog-entry limit: 1 %}
-<a href="{{ post.url}}" rel="next">
-	@@include('../../../layouts/partials/blog_components/blog_image_test.html')
-</a>
-<h3 class="blog-headline"><a href="{{ post.url}}" rel="canonical">{% if post.altTitle %}{{ post.altTitle | markdownify | strip_html }} {% else %} {{ post.title | markdownify | strip_html }}{% endif%}
-</a></h3>
-<p class="blog-entry-date">{{ post.date | date: "%A, %B %-d, %Y" }}</p>
-
-<p class="blog-read-time">{{ readTime }}-minute read</p>
+	<a href="{{ post.url}}" rel="next">
+		@@include('../../../layouts/partials/blog_components/blog_image_test.html')
+	</a>
+	<h1 class="blog-headline"><a href="{{ post.url}}" rel="canonical">{% if post.altTitle %}{{ post.altTitle | markdownify | strip_html }} {% else %} {{ post.title | markdownify | strip_html }}{% endif%}
+	</a></h1>
+	<p class="blog-entry-date">{{ post.date | date: "%A, %B %-d, %Y" }}</p>
 
 <div class="blog-entry-text-index">
 	{{ post.content | truncatewords: 170 }}
