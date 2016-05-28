@@ -18,6 +18,9 @@
     {% if pageType == 'portfolio_entry' or pageType == 'about' %}
       pageFunctions.initializePortfolio();
     {% endif%}
+    {% if pageType == 'search' %}
+      searchFunctions.initialize();
+    {% endif%}
   });
 })();
 </script>
