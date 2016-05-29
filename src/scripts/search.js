@@ -10,6 +10,15 @@ var searchFunctions = {
       self.siteData = data;
     });
   },
+  loadStopWords: function() {
+    var self=this;
+
+    var s = self.getJSON('/stopwords.json');
+    s.then(function(data) {
+      self.stopWords = data;
+      console.log(self.stopWords);
+    });
+  },
   firebaseInit: function() {
     var self=this;
     self.myFirebaseRef = new Firebase("https://putneysearch.firebaseio.com/");
