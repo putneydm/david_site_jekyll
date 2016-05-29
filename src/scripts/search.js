@@ -26,6 +26,14 @@ var searchFunctions = {
       function(error) {
         console.log('failed');
       };
+
+      var s = self.firebaseGet('stopWords');
+      s.then(function(data) {
+        console.log('got stopwords');
+      }),
+      function(error) {
+        console.log('failed');
+      }
     });
   },
   loadSiteData: function() {
