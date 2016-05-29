@@ -27,18 +27,18 @@ I've created a [SASS][5] mixin that automagically creates the background gradien
 
 {% highlight css %}
     @mixin underscore ($color, $position)
-	{
-	color:$color;
-	background-image: -moz-linear-gradient(top, transparent 75%, $hover_color 75%);
-	background-image: -webkit-linear-gradient(top, transparent 75%, $hover_color 75%);
-	background-image: -o-linear-gradient(top, transparent 75%, $hover_color 75%);
-	background-image: linear-gradient(to bottom, transparent 75%, $hover_color 75%);
-	background-size: 2px 2px;
-	background-origin: padding-box;
-	background-position: 0 $position;
-	background-repeat: repeat-x;
-	text-shadow:1px 1px 0px white, -1px 1px 0px white ;
-	}
+  {
+  color:$color;
+  background-image: -moz-linear-gradient(top, transparent 75%, $hover_color 75%);
+  background-image: -webkit-linear-gradient(top, transparent 75%, $hover_color 75%);
+  background-image: -o-linear-gradient(top, transparent 75%, $hover_color 75%);
+  background-image: linear-gradient(to bottom, transparent 75%, $hover_color 75%);
+  background-size: 2px 2px;
+  background-origin: padding-box;
+  background-position: 0 $position;
+  background-repeat: repeat-x;
+  text-shadow:1px 1px 0px white, -1px 1px 0px white ;
+  }
 {% endhighlight %}  
 
 Like most hacky CSS fixes, it's not really [fire and forget][7]. You'll probably have to counteract its effects in some other declarations.
