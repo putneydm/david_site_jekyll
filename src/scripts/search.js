@@ -21,8 +21,11 @@ var searchFunctions = {
     getButton.addEventListener('click', function(e) {
       var p = self.firebaseGet('entries');
       p.then(function(data) {
-        console.log(data);
-      });
+        console.log('got it');
+      }),
+      function(error) {
+        console.log('failed');
+      };
     });
   },
   loadSiteData: function() {
