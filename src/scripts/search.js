@@ -17,6 +17,13 @@ var searchFunctions = {
       self.firebaseSet(self.siteData, 'entries');
       self.firebaseSet(self.stopWords, 'stopwords');
     });
+    var getButton = document.querySelector("#get");
+    getButton.addEventListener('click', function(e) {
+      var p = self.firebaseGet('entries');
+      p.then(function(data) {
+        console.log(data);
+      });
+    });
   },
   loadSiteData: function() {
     var self=this;
