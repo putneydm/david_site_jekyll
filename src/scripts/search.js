@@ -1,6 +1,15 @@
 var searchFunctions = {
   initialize: function() {
     console.log('search');
+  },
+  loadSiteData: function() {
+    var self=this;
+
+    var p = self.getJSON('/site-feed.json');
+    p.then(function(data) {
+      self.siteData = data;
+    });
+  },
   firebaseInit: function() {
     var self=this;
     self.myFirebaseRef = new Firebase("https://putneysearch.firebaseio.com/");
