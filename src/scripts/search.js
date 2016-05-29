@@ -1,6 +1,10 @@
 var searchFunctions = {
   initialize: function() {
     console.log('search');
+  firebaseInit: function() {
+    var self=this;
+    self.myFirebaseRef = new Firebase("https://putneysearch.firebaseio.com/");
+  },
   firebaseSet: function(dataSet, child) {
     var self=this;
 
