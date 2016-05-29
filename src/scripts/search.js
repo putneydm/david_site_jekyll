@@ -1,6 +1,14 @@
 var searchFunctions = {
   initialize: function() {
+    var self=this;
+    self.initializeListeners();
     console.log('search');
+
+    self.loadSiteData();
+    self.loadStopWords();
+    self.firebaseInit();
+
+  },
   initializeListeners: function() {
     var self=this;
     console.log('listen');
