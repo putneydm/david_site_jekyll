@@ -1,6 +1,14 @@
 var searchFunctions = {
   initialize: function() {
     console.log('search');
+  initializeListeners: function() {
+    var self=this;
+    console.log('listen');
+    var jsonButton = document.querySelector('#json');
+    jsonButton.addEventListener('click', function(e) {
+      self.firebaseSet(self.siteData, 'entries');
+      self.firebaseSet(self.stopWords, 'stopwords');
+    });
   },
   loadSiteData: function() {
     var self=this;
