@@ -39,7 +39,6 @@ var searchFunctions = {
     var s = self.getJSON('/stopwords.json');
     s.then(function(data) {
       self.stopWords = data;
-      console.log(self.stopWords);
     });
   },
   firebaseInit: function() {
