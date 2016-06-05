@@ -221,5 +221,28 @@ var searchFunctions = {
       }
     });
   },
+  handleLoginDisplay: function(loggedIn, error) {
+    var self=this;
+
+    // var loggedInScreen = document.querySelector('#loggedin-screen');
+    // var loggedOutScreen = document.querySelector('#loggedout-screen');
+    //
+    //   if (loggedIn) {
+    //     loggedOutScreen.classList.add('log-screen--disabled');
+    //     loggedInScreen.classList.remove('log-screen--disabled');
+    //     loggedInScreen.classList.add('log-screen--active');
+    //   }
+    //   else {
+    //     loggedInScreen.classList.add('log-screen--disabled');
+    //     loggedOutScreen.classList.remove('log-screen--disabled');
+    //     loggedOutScreen.classList.add('log-screen--active');
+    //   }
+    //
+    //   if (error) {
+    //
+    //     console.log('error', error);
+    //     var errorMessage = document.querySelector('#error-message');
+    //     errorMessage.innerHTML = error;
+    //   }
   }
 };
