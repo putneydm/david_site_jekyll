@@ -15,3 +15,39 @@
 // .search-results-entry {
 // 	@extend .blog-entry;
 // }
+
+.login-wrapper {
+  position: relative;
+  margin:rem(40) auto 0;
+  height:rem(450);
+}
+.form-field {
+  width:100%;
+  height:rem(70);
+  border:1px solid $light;
+  font-size:rem(20);
+  padding:rem(30) rem(15);
+  font-family:$sans;
+  color:$med;
+  outline: none;
+  border-radius: rem(3);
+    &:focus {
+      box-shadow: 0 0 rem(15) $light_aqua;
+    }
+}
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    color:$med !important;
+}
+.form-btn {
+  border:0px;
+  margin:rem(40) auto 0;
+}
+.loggedout-screen, .loggedin-screen {
+  position: absolute;
+  top:0;
+  border:1px;
+  height:rem(450);
+  width:100%;
+}
