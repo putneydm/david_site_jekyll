@@ -8,6 +8,8 @@ var searchFunctions = {
     self.loadStopWords();
     self.firebaseInit();
 
+    self.checkLogin();
+
   },
   initializeListeners: function() {
     var self=this;
@@ -98,5 +100,18 @@ var searchFunctions = {
       };
     });
     return p;
+  checkLogin: function() {
+    var self=this;
+    self.myFirebaseRef.onAuth(function(authData) {
+      if (authData) {
+        console.log("User " + authData.uid + " is logged in with " + authData.provider);
+        self.uid = authData.uid;
+        self.handleLoginDisplay(true)
+      } else {
+        console.log("User is logged out");
+        self.handleLoginDisplay(false)
+      }
+    });
+  },
   }
 };
