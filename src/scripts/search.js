@@ -48,6 +48,41 @@ var searchFunctions = {
       self.logout();
       console.log('logout button');
     });
+
+    var testLink = document.querySelector('#test-link');
+    var loggedOut = document.querySelector('#loggedout-screen');
+    var loggedOutActive = loggedOut.classList.contains('log-screen--active');
+
+    testLink.addEventListener('click', function() {
+      loggedOut.classList.remove('log-screen--active');
+      loggedOut.classList.add('log-screen--out');
+    });
+    var testLinkToo = document.querySelector('#test-link-too');
+    testLinkToo.addEventListener('click', function() {
+      loggedOut.classList.remove('log-screen--disabled');
+      loggedOut.classList.add('log-screen--in');
+    });
+    var testLinkShake = document.querySelector('#test-link-shake');
+    testLinkShake.addEventListener('click', function() {
+      loggedOut.classList.add('log-screen--shake');
+    });
+    loggedOut.addEventListener('animationend', function() {
+      console.log('slide out end');
+      var loggedOutActive = loggedOut.classList.contains('log-screen--out');
+      var shakeActive = loggedOut.classList.contains('log-screen--shake');
+
+      if (loggedOutActive) {
+        loggedOut.classList.add('log-screen--disabled');
+        loggedOut.classList.remove('log-screen--out');
+      }
+      if (!loggedOutActive) {
+        loggedOut.classList.add('log-screen--active');
+        loggedOut.classList.remove('log-screen--in');
+      }
+      if (shakeActive) {
+        loggedOut.classList.remove('log-screen--shake');
+      }
+    })
   },
   loadSiteData: function() {
     var self=this;
