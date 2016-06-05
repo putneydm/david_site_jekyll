@@ -16,8 +16,9 @@ var searchFunctions = {
     console.log('listen');
     var jsonButton = document.querySelector('#json');
     jsonButton.addEventListener('click', function(e) {
-      self.firebaseSet(self.siteData, 'entries');
-      self.firebaseSet(self.stopWords, 'stopwords');
+
+      self.firebaseSet(self.siteData, 'users/' + self.uid + '/entries');
+      self.firebaseSet(self.stopWords, 'users/' + self.uid + '/stopwords');
     });
     var getButton = document.querySelector("#get");
     getButton.addEventListener('click', function(e) {
