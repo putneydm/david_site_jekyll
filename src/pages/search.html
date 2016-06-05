@@ -5,13 +5,24 @@ pagetype: search
 ---
 <!-- testing  here -->
 <section class="blog-container blog-single-entry">
-  <p>Hello world</p>
-  <input type="text" placeholder="Search term">
+  <!-- <input type="text" placeholder="Search term">
   <input type="button" value="Submit">
-  <br><br>
-  <input id="json" type="button" value="JSON">
+  <br><br> -->
 
-  <br><br>
-  <input id="get" type="button" value="get">
+  <div class="login-wrapper">
+    <p id="error-message"></p>
+    <div id="loggedout-screen" class="loggedout-screen log-screen--active">
+      <input id="username" class="form-field" type="email" placeholder="E mail"><br><br>
+      <input id="password" class="form-field" type="password" placeholder="Password"><br><br>
+      <input id="login" class="button form-btn" type="button" value="Log In">
+    </div>
+    <div id="loggedin-screen" class="loggedin-screen log-screen--active">
+      <input id="json" class="button form-btn" type="button" value="Save to DB">
+      <br><br>
+      <input id="get" class="button form-btn" type="button" value="Retreive from DB">
+      <br><br>
+      <input id="logout" class="button form-btn" type="button" value="Log Out">
+    </div>
+  </div>
 
 </section>
