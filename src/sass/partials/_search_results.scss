@@ -99,3 +99,17 @@ input:-webkit-autofill {
     opacity:.5;
   }
 }
+@keyframes slideInDown{
+  0% {
+    transform: translateY(-450px) scale(.9);
+    opacity:.5;
+  }
+  50% {
+    transform: translateY(-225px) scale(.9);
+    opacity:.5;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity:1;
+  }
+}
