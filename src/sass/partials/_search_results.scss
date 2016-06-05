@@ -75,3 +75,17 @@ input:-webkit-autofill {
   animation: headShake .2s cubic-bezier(.66,.43,.36,1.39);
   animation-iteration-count: 4;
 }
+@keyframes headShake {
+  0% {
+      transform:translateX(0px);
+  }
+  25% {
+    transform:translateX(-20px);
+  }
+  50% {
+    transform:translateX(0px);
+  }
+  75% {
+    transform:translateX(20px);
+  }
+}
