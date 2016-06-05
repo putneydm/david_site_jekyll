@@ -101,6 +101,57 @@ var searchFunctions = {
       };
     });
     return p;
+  },
+  login: function() {
+    var self=this;
+    var ref = self.myFirebaseRef;
+
+    console.log('login');
+
+    function authHandler(error, authData) {
+      if (error) {
+        // console.log("Login Failed!", error);
+        self.handleLoginDisplay(false, error)
+      } else {
+        console.log("Authenticated successfully with payload:", authData);
+        self.uid = authData.uid;
+        self.handleLoginDisplay(true);
+      }
+    }
+    var login = document.querySelector('#username').value;
+    var pwd = document.querySelector('#password').value;
+
+    ref.authWithPassword({
+      email    : login,
+      password : pwd
+    }, authHandler);
+
+    // puts me into database
+
+    var isNewUser = false;
+    ref.onAuth(function(authData) {
+      if (authData && isNewUser) {
+        // save the user's profile into the database so we can list users,
+        // use them in Security and Firebase Rules, and show profiles
+        ref.child("users").child(authData.uid).set({
+          provider: authData.provider,
+          name: getName(authData)
+        });
+      }
+    });
+    // find a suitable name based on the meta info given by each provider
+    function getName(authData) {
+      switch(authData.provider) {
+         case 'password':
+           return authData.password.email.replace(/@.*/, '');
+         case 'twitter':
+           return authData.twitter.displayName;
+         case 'facebook':
+           return authData.facebook.displayName;
+      }
+    }
+
+  },
   checkLogin: function() {
     var self=this;
     self.myFirebaseRef.onAuth(function(authData) {
