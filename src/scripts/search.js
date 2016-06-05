@@ -43,6 +43,11 @@ var searchFunctions = {
     login.addEventListener('click', function() {
       self.login()
     });
+    var logout = document.querySelector('#logout');
+    logout.addEventListener('click', function() {
+      self.logout();
+      console.log('logout button');
+    });
   },
   loadSiteData: function() {
     var self=this;
