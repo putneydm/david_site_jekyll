@@ -152,6 +152,17 @@ var searchFunctions = {
     }
 
   },
+  logout: function() {
+    var self=this;
+    var ref = self.myFirebaseRef;
+
+    self.myFirebaseRef.unauth(function(error) {
+      error
+      // ? console.log('logout failed')
+      ? self.handleLoginDisplay(true, error)
+      : self.handleLoginDisplay(false);
+    });
+  },
   checkLogin: function() {
     var self=this;
     self.myFirebaseRef.onAuth(function(authData) {
