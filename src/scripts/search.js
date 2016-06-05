@@ -38,6 +38,11 @@ var searchFunctions = {
         console.log('failed');
       }
     });
+
+    var login = document.querySelector('#login');
+    login.addEventListener('click', function() {
+      self.login()
+    });
   },
   loadSiteData: function() {
     var self=this;
