@@ -51,3 +51,27 @@ input:-webkit-autofill {
   height:rem(450);
   width:100%;
 }
+.loggedout-screen.log-screen--active {
+  transform: translateY(0) scale(1);
+  opacity:1;
+}
+.loggedout-screen.log-screen--out {
+  animation: slideOutUp .3s ease-in;
+  animation-iteration-count: 1;
+}
+.loggedout-screen.log-screen--disabled {
+  transform: translateY(-450px) scale(.9);
+  opacity:.5;
+}
+.loggedout-screen.log-screen--in {
+  animation: slideInDown .3s cubic-bezier(1,.8,.94,1.27);
+  animation-iteration-count: 1;
+}
+.loggedin-screen.log-screen--active {
+  border:2px solid orange;
+  display:none;
+}
+.loggedout-screen.log-screen--shake {
+  animation: headShake .2s cubic-bezier(.66,.43,.36,1.39);
+  animation-iteration-count: 4;
+}
