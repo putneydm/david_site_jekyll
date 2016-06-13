@@ -41,8 +41,9 @@ var searchFunctions = {
 
     var login = document.querySelector('#login');
     login.addEventListener('click', function() {
-      self.login()
+      self.login();
     });
+
     var logout = document.querySelector('#logout');
     logout.addEventListener('click', function() {
       self.logout();
@@ -51,18 +52,24 @@ var searchFunctions = {
 
     var testLink = document.querySelector('#test-link');
     var loggedOut = document.querySelector('#loggedout-screen');
-    var loggedOutActive = loggedOut.classList.contains('log-screen--active');
+    var loggedIn = document.querySelector('#loggedin-screen');
+
     self.intializeAnimationListener(loggedOut);
     self.intializeAnimationListener(loggedIn);
 
-    testLink.addEventListener('click', function() {
-      loggedOut.classList.remove('log-screen--active');
-      loggedOut.classList.add('log-screen--out');
+
+    var loginWrapper = document.querySelector('#login-wrapper');
+
+    loginWrapper.addEventListener('click', function(e) {
+        if (e.target &&e.target.classList.contains('form-field')) {
+          e.target.classList.add('form-field-validate');
+        }
     });
-    var testLinkToo = document.querySelector('#test-link-too');
-    testLinkToo.addEventListener('click', function() {
-      loggedOut.classList.remove('log-screen--disabled');
-      loggedOut.classList.add('log-screen--in');
+
+    loginWrapper.addEventListener('focusout', function(e) {
+        if (e.target &&e.target.classList.contains('form-field')) {
+          self.handleError(e.target, e.target.validity.valid);
+        }
     });
 
     var usernameField = document.querySelector('#username');
@@ -201,16 +208,16 @@ var searchFunctions = {
     var self=this;
     var ref = self.myFirebaseRef;
 
-    console.log('login');
+    // console.log('login');
 
     function authHandler(error, authData) {
       if (error) {
         // console.log("Login Failed!", error);
-        self.handleLoginDisplay(false, error)
+        self.handleLoginDisplay(false, error);
+        // console.log('error in login function', error);
       } else {
         console.log("Authenticated successfully with payload:", authData);
         self.uid = authData.uid;
-        self.handleLoginDisplay(true);
         self.handleLoginAnimations(true);
       }
     }
@@ -255,8 +262,8 @@ var searchFunctions = {
     self.myFirebaseRef.unauth(function(error) {
       error
       // ? console.log('logout failed')
-      ? self.handleLoginDisplay(true, error)
-      : self.handleLoginDisplay(false);
+      ? self.handleLoginAnimations(true, error)
+      : self.handleLoginAnimations(false);
     });
   },
   checkLogin: function() {
