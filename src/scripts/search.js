@@ -52,6 +52,8 @@ var searchFunctions = {
     var testLink = document.querySelector('#test-link');
     var loggedOut = document.querySelector('#loggedout-screen');
     var loggedOutActive = loggedOut.classList.contains('log-screen--active');
+    self.intializeAnimationListener(loggedOut);
+    self.intializeAnimationListener(loggedIn);
 
     testLink.addEventListener('click', function() {
       loggedOut.classList.remove('log-screen--active');
@@ -65,6 +67,25 @@ var searchFunctions = {
     var testLinkShake = document.querySelector('#test-link-shake');
     testLinkShake.addEventListener('click', function() {
       loggedOut.classList.add('log-screen--shake');
+  intializeAnimationListener: function(el) {
+
+    el.addEventListener('animationend', function() {
+        var slideOut = el.classList.contains('log-screen--out');
+        var slideIn = el.classList.contains('log-screen--in');
+        var shake = el.classList.contains('log-screen--shake');
+
+        if (shake) {
+          el.classList.remove('log-screen--shake');
+        }
+        if (slideOut) {
+          el.classList.add('log-screen--disabled');
+          el.classList.remove('log-screen--out');
+          el.classList.add('fuck');
+        }
+        if (slideIn) {
+          el.classList.add('log-screen--active');
+          el.classList.remove('log-screen--in');
+        }
     });
     loggedOut.addEventListener('animationend', function() {
       console.log('slide out end');
