@@ -70,6 +70,10 @@
   animation-iteration-count: 1;
   transition: border .2s;
 }
+.form-field--error {
+  border:1px solid $aqua;
+  transition: border .2s;
+}
 /* Change the white to any color ;) */
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
