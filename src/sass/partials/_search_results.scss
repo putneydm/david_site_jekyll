@@ -109,22 +109,21 @@ input:-webkit-autofill {
 .loggedout-screen.log-screen--active {
   transform: translateY(0) scale(1);
   opacity:1;
+  will-change:transform, opacity;
 }
 .loggedout-screen.log-screen--out {
-  animation: slideOutUp .3s ease-in;
+  animation: slideOutUp .3s ease-in-out;
   animation-iteration-count: 1;
 }
 .loggedout-screen.log-screen--disabled {
-  transform: translateY(-450px) scale(.9);
-  opacity:.5;
+  transform: translateY(-450px) scale(.8);
+  opacity:0;
+  // display:none;
+  pointer-events:none;
 }
 .loggedout-screen.log-screen--in {
-  animation: slideInDown .3s cubic-bezier(1,.8,.94,1.27);
+  animation: slideInDown .3s ease-in-out;
   animation-iteration-count: 1;
-}
-.loggedin-screen.log-screen--active {
-  border:2px solid orange;
-  display:none;
 }
 .loggedout-screen.log-screen--shake {
   animation: headShake .2s cubic-bezier(.66,.43,.36,1.39);
