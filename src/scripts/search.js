@@ -67,6 +67,38 @@ var searchFunctions = {
     var testLinkShake = document.querySelector('#test-link-shake');
     testLinkShake.addEventListener('click', function() {
       loggedOut.classList.add('log-screen--shake');
+  handleError: function(el, valid, sysError) {
+    var self=this;
+
+    console.log(sysError);
+
+    var errorContainer = el.parentNode.querySelector('.login-error-message');
+
+    var target = el.id;
+
+    if (!sysError && target === 'username' ) {
+      var errorMessage = 'Please enter a valid e mail address.';
+
+    } else if (!sysError && target === 'password') {
+
+      var errorMessage = 'Please enter a password with six characters or more.';
+
+    } else {
+      var errorMessage = String(sysError).replace(/Error:\s/g, '');
+    }
+
+    if (valid) {
+      errorContainer.innerHTML = ' ';
+      errorContainer.classList.remove('login-error-message--active');
+      el.classList.remove('form-field--error');
+    } else {
+      console.log('invalid');
+      errorContainer.classList.add('login-error-message--active');
+      errorContainer.innerHTML = errorMessage;
+      el.classList.add('form-field--error');
+    }
+
+  },
   intializeAnimationListener: function(el) {
 
     el.addEventListener('animationend', function() {
