@@ -130,6 +130,26 @@ input:-webkit-autofill {
   animation: headShake .2s cubic-bezier(.66,.43,.36,1.39);
   animation-iteration-count: 4;
 }
+
+.loggedin-screen.log-screen--active {
+  transform: translateY(0) scale(1);
+  opacity:1;
+  will-change:transform, opacity;
+}
+.loggedin-screen.log-screen--out {
+  animation: slideOutDown .3s ease-in-out;
+  animation-iteration-count: 1;
+}
+.loggedin-screen.log-screen--disabled {
+  transform: translateY(450px) scale(.8);
+  opacity:0;
+  // display:none;
+  pointer-events:none;
+}
+.loggedin-screen.log-screen--in {
+  animation: slideInUp .3s ease-in-out;
+  animation-iteration-count: 1;
+}
 @keyframes headShake {
   0% {
       transform:translateX(0px);
