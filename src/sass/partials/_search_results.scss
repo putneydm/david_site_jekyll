@@ -200,3 +200,17 @@ input:-webkit-autofill {
   }
 }
 
+@keyframes slideInUp{
+  0% {
+    transform: translateY(500px) scale(.8);
+    opacity:.5;
+  }
+  50% {
+    transform: translateY(250px) scale(.8);
+    opacity:.5;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity:1;
+  }
+}
