@@ -261,16 +261,19 @@ var searchFunctions = {
   },
   checkLogin: function() {
     var self=this;
-    self.myFirebaseRef.onAuth(function(authData) {
+
+    var authData = self.myFirebaseRef.getAuth();
+
+    // self.myFirebaseRef.getAuth(function(authData) {
       if (authData) {
         console.log("User " + authData.uid + " is logged in with " + authData.provider);
         self.uid = authData.uid;
-        self.handleLoginDisplay(true)
+        self.handleLoginDisplay(true);
       } else {
         console.log("User is logged out");
-        self.handleLoginDisplay(false)
+        self.handleLoginDisplay(false);
       }
-    });
+    // });
   },
   handleLoginDisplay: function(loggedIn, error) {
     var self=this;
