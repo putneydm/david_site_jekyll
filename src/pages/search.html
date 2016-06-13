@@ -17,10 +17,14 @@ pagetype: search
       <input id="password" class="form-field" type="password" placeholder="Password"><br><br>
       <input id="login" class="button form-btn" type="button" value="Log In">
       <form>
+        <div id="email-wrapper" class="form-field-wrapper">
           <label id="label" for="username">E-mail</label>
           <p class="login-error-message">Please enter a valid e mail address.</p>
+        </div>
+        <div class="form-field-wrapper">
           <input id="password" class="form-field" type="password" required pattern=".{6,}">
           <label for="password">Password</label>
+        </div>
       </form>
     </div>
     <div id="loggedin-screen" class="loggedin-screen log-screen--active">
