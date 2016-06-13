@@ -340,5 +340,12 @@ var searchFunctions = {
       //
       // }
   },
+  handleAnimateOut: function(el) {
+    el.classList.remove('log-screen--active');
+    el.classList.add('log-screen--out');
+  },
+  handleAnimateIn: function(el) {
+    el.classList.remove('log-screen--disabled');
+    el.classList.add('log-screen--in');
   }
 };
