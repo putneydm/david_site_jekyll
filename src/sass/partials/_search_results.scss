@@ -214,3 +214,16 @@ input:-webkit-autofill {
     opacity:1;
   }
 }
+@keyframes formsLabel {
+0% {
+  transform: translateY(0);
+  font-size:rem(20);
+}
+100% {
+  transform: translateY(-50px);
+  font-size:rem(15);
+}
+
+
+
+}
