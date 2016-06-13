@@ -176,11 +176,11 @@ input:-webkit-autofill {
 }
 @keyframes slideInDown{
   0% {
-    transform: translateY(-450px) scale(.9);
+    transform: translateY(-500px) scale(.8);
     opacity:.5;
   }
   50% {
-    transform: translateY(-225px) scale(.9);
+    transform: translateY(-250px) scale(.8);
     opacity:.5;
   }
   100% {
