@@ -74,6 +74,22 @@
   border:1px solid $aqua;
   transition: border .2s;
 }
+
+.login-error-message {
+  opacity:0;
+  font-family:$sans;
+  font-size:rem(15);
+  text-align: center;
+  height:rem(28);
+  color:$aqua;
+  margin:0 auto rem(40);
+  transition: opacity .2s;
+}
+.login-error-message--active {
+  opacity:1;
+  transition: opacity .2s;
+}
+
 /* Change the white to any color ;) */
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
