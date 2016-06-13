@@ -64,6 +64,23 @@ var searchFunctions = {
       loggedOut.classList.remove('log-screen--disabled');
       loggedOut.classList.add('log-screen--in');
     });
+
+    var usernameField = document.querySelector('#username');
+    var passwordField = document.querySelector('#password');
+
+
+    loginWrapper.addEventListener('keydown', function(e) {
+      var keyPress=e.keyCode
+        ? event.keyCode
+        : event.charCode;
+
+        if (keyPress === 13) {
+          self.handleError(usernameField, usernameField.validity.valid);
+          self.handleError(passwordField, passwordField.validity.valid);
+        }
+
+      });
+  },
   handleError: function(el, valid, sysError) {
     var self=this;
 
