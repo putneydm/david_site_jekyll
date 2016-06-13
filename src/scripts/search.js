@@ -64,9 +64,6 @@ var searchFunctions = {
       loggedOut.classList.remove('log-screen--disabled');
       loggedOut.classList.add('log-screen--in');
     });
-    var testLinkShake = document.querySelector('#test-link-shake');
-    testLinkShake.addEventListener('click', function() {
-      loggedOut.classList.add('log-screen--shake');
   handleError: function(el, valid, sysError) {
     var self=this;
 
