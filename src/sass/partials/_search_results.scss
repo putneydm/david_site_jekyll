@@ -188,3 +188,15 @@ input:-webkit-autofill {
     opacity:1;
   }
 }
+
+@keyframes slideOutDown {
+  25% {
+    transform: translateY(125px);
+    opacity:1;
+  }
+  100% {
+    transform: translateY(500px) scale(.8);
+    opacity:.5;
+  }
+}
+
