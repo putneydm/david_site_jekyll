@@ -214,6 +214,7 @@ var searchFunctions = {
         console.log("Authenticated successfully with payload:", authData);
         self.uid = authData.uid;
         self.handleLoginDisplay(true);
+        self.handleLoginAnimations(true);
       }
     }
     var login = document.querySelector('#username').value;
@@ -297,5 +298,47 @@ var searchFunctions = {
     //     var errorMessage = document.querySelector('#error-message');
     //     errorMessage.innerHTML = error;
     //   }
+  handleLoginAnimations: function(loggedIn, error) {
+    var self=this;
+
+    var loggedInScreen = document.querySelector('#loggedin-screen');
+    var loggedOutScreen = document.querySelector('#loggedout-screen');
+
+      if (loggedIn) {
+        self.handleAnimateOut(loggedOutScreen);
+        self.handleAnimateIn(loggedInScreen);
+
+      }
+      else {
+        self.handleAnimateIn(loggedOutScreen);
+        self.handleAnimateOut(loggedInScreen);
+      }
+
+
+      console.log('this is an error', error);
+
+      // if (error) {
+      // loggedOutScreen.classList.add('log-screen--shake');
+      //  var el =   /password/gi.test(error)
+      //  ? document.querySelector('#password')
+      //  : document.querySelector('#username')
+      //
+      //  self.handleError(el, error);
+      //
+      // }
+
+
+      // if (error) {
+      //   console.log('error x', error);
+      //   var errorMessage = document.querySelector('#error-message');
+      //   var errorContainer = document.querySelector('#login-error-wrapper');
+      //   errorMessage.innerHTML = error;
+      //
+      //   console.log('errorContainer', errorContainer);
+      //
+      //   errorContainer.classList.add('login-error-wrapper--enabled')
+      //
+      // }
+  },
   }
 };
