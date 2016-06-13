@@ -119,23 +119,6 @@ var searchFunctions = {
           el.classList.remove('log-screen--in');
         }
     });
-    loggedOut.addEventListener('animationend', function() {
-      console.log('slide out end');
-      var loggedOutActive = loggedOut.classList.contains('log-screen--out');
-      var shakeActive = loggedOut.classList.contains('log-screen--shake');
-
-      if (loggedOutActive) {
-        loggedOut.classList.add('log-screen--disabled');
-        loggedOut.classList.remove('log-screen--out');
-      }
-      if (!loggedOutActive) {
-        loggedOut.classList.add('log-screen--active');
-        loggedOut.classList.remove('log-screen--in');
-      }
-      if (shakeActive) {
-        loggedOut.classList.remove('log-screen--shake');
-      }
-    })
   },
   loadSiteData: function() {
     var self=this;
