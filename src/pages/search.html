@@ -14,10 +14,10 @@ pagetype: search
       <p id="error-message" class="login-error-message"></p>
     <div id="loggedout-screen" class="loggedout-screen log-screen--active">
       <input id="username" class="form-field" type="email" placeholder="E mail"><br><br>
-      <input id="password" class="form-field" type="password" placeholder="Password"><br><br>
       <input id="login" class="button form-btn" type="button" value="Log In">
       <form>
         <div id="email-wrapper" class="form-field-wrapper">
+          <input id="username" class="form-field" type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
           <label id="label" for="username">E-mail</label>
           <p class="login-error-message">Please enter a valid e mail address.</p>
         </div>
