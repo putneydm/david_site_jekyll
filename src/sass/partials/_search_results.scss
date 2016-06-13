@@ -166,11 +166,11 @@ input:-webkit-autofill {
 }
 @keyframes slideOutUp {
   25% {
-    transform: translateY(-112px);
+    transform: translateY(-125px);
     opacity:1;
   }
   100% {
-    transform: translateY(-450px) scale(.9);
+    transform: translateY(-500px) scale(.8);
     opacity:.5;
   }
 }
