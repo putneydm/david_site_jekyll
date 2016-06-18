@@ -1,4 +1,4 @@
-var searchFunctions = {
+var searchAdminFunctions = {
   initialize: function() {
     var self=this;
     self.initializeListeners();
