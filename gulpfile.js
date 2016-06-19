@@ -142,12 +142,11 @@ gulp.task('layouts', function() {
      prefix: '@@',
      basepath: '@file'
    }))
-  //  .pipe(htmltidy({doctype: 'html5',
-  //    hideComments: true,
-  //    indent: true}))
-  .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
-   .pipe(gulp.dest(paths.pageLayouts.testing))
-  //  .pipe(gulp.dest(paths.pageLayouts.dist));
+   // replaces placeholder text with cachebusted name
+  .pipe(replace(/\*cachebustthis\*/g,  scriptname )) //main js
+  .pipe(replace(/\*cachebustadmin\*/g,  searchAdminName )) // search admin
+  .pipe(replace(/\*cachebustsearch\*/g,  searchName )) // search page
+  .pipe(gulp.dest(paths.pageLayouts.testing))
 });
 gulp.task('pages', function() {
    gulp.src(['!' + paths.pages.exclude, paths.pages.input])
