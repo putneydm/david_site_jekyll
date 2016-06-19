@@ -46,9 +46,13 @@ var mainBowerFiles = require('main-bower-files');
 // gets today's date
 var date = new Date();
 // creates file names based on date
-var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.css';
-var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
 var dateValue = date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear();
+
+var filename = 'styles-' + dateValue + '.css';
+var scriptname = 'script-' + dateValue + '.js';
+var searchAdminName = 'script-' + dateValue + '-search_admin.js';
+var searchName = 'script-' + dateValue + '-search.js';
+
 
 var paths = {
   pageLayouts: {
