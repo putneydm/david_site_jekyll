@@ -1,6 +1,12 @@
 <!--  scripts -->
 {% assign pageType = page.pagetype %}
 <script src="/scripts/*cachebustthis*"></script>
+{% if pageType == 'searchAdmin' %}
+<script src="/scripts/*cachebustadmin*"></script>
+{% endif%}
+{% if pageType == 'search' %}
+<script src="/scripts/*cachebustsearch*"></script>
+{% endif%}
 <script>
 (function() {
   "use strict";
