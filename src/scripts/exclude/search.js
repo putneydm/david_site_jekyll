@@ -1,6 +1,11 @@
 var searchFunctions = {
   initialize: function() {
     console.log('search works');
+    var self=this;
+    self.initializeListeners();
+    self.firebaseInit();
+    self.getData();
+  },
   initializeListeners: function() {
     var self=this;
     var submitBtn = document.querySelector('#submit-search');
