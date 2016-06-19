@@ -121,7 +121,6 @@ var searchAdminFunctions = {
   },
   loadStopWords: function() {
     var self=this;
-
     var s = self.getJSON('/stopwords.json');
     s.then(function(data) {
       self.stopWords = data;
@@ -133,9 +132,7 @@ var searchAdminFunctions = {
   },
   firebaseSet: function(dataSet, child) {
     var self=this;
-
     var entries = self.myFirebaseRef.child(child);
-
     entries.set( dataSet,
     function (error) {
       error
@@ -145,12 +142,11 @@ var searchAdminFunctions = {
   },
   firebaseGet: function(child) {
     var self=this;
-
     // Get a database reference to our posts
     var ref = self.myFirebaseRef.child(child);
     var p = new Promise (function(resolve, reject) {
-      ref.on("value", function(snapshot) {
-        resolve(snapshot.val())
+    ref.on("value", function(snapshot) {
+      resolve(snapshot.val())
       }, function (errorObject) {
         reject("The read failed: " + errorObject.code)
       });
@@ -159,15 +155,14 @@ var searchAdminFunctions = {
   },
   getJSON: function(url) {
     var self=this;
-
     var p = new Promise (function(resolve, reject) {
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.open("GET", url);
       xmlhttp.send();
       xmlhttp.onload = function() {
         xmlhttp.readyState == 4 && xmlhttp.status == 200
-        ? resolve(JSON.parse(xmlhttp.responseText))
-        : reject('fail');
+        ?resolve(JSON.parse(xmlhttp.responseText))
+        :reject('fail');
       };
     });
     return p;
@@ -175,8 +170,6 @@ var searchAdminFunctions = {
   login: function() {
     var self=this;
     var ref = self.myFirebaseRef;
-
-
     function authHandler(error, authData) {
       error
       ? self.handleLoginDisplay(false, error)
@@ -185,16 +178,14 @@ var searchAdminFunctions = {
         self.handleLoginAnimations(true)
       );
     }
-    var login = document.querySelector('#username').value;
-    var pwd = document.querySelector('#password').value;
+    var login = document.querySelector('#username').value,
+        pwd = document.querySelector('#password').value;
 
     ref.authWithPassword({
-      email    : login,
-      password : pwd
+      email: login,
+      password: pwd
     }, authHandler);
-
     // puts me into database
-
     var isNewUser = false;
     ref.onAuth(function(authData) {
       if (authData && isNewUser) {
@@ -222,19 +213,15 @@ var searchAdminFunctions = {
   logout: function() {
     var self=this;
     var ref = self.myFirebaseRef;
-
     self.myFirebaseRef.unauth(function(error) {
       error
-      // ? console.log('logout failed')
       ? self.handleLoginAnimations(true, error)
       : self.handleLoginAnimations(false);
     });
   },
   checkLogin: function() {
     var self=this;
-
     var authData = self.myFirebaseRef.getAuth();
-
       authData
       ?(
       self.uid = authData.uid,
@@ -244,7 +231,8 @@ var searchAdminFunctions = {
   },
   handleLoginDisplay: function(loggedIn, error) {
     var self=this;
-
+    var loggedInScreen = document.querySelector('#loggedin-screen'),
+        loggedOutScreen = document.querySelector('#loggedout-screen');
     loggedIn
       ? (
       loggedOutScreen.classList.add('log-screen--disabled'),
@@ -260,31 +248,11 @@ var searchAdminFunctions = {
      var el =  /password/gi.test(error)
      ? document.querySelector('#password')
      : document.querySelector('#username')
-
-
      self.handleError(el, false, error);
-
     }
   },
   handleLoginAnimations: function(loggedIn, error) {
     var self=this;
-
-    var loggedInScreen = document.querySelector('#loggedin-screen');
-    var loggedOutScreen = document.querySelector('#loggedout-screen');
-
-      if (loggedIn) {
-        self.handleAnimateOut(loggedOutScreen);
-        self.handleAnimateIn(loggedInScreen);
-
-      }
-      else {
-        self.handleAnimateIn(loggedOutScreen);
-        self.handleAnimateOut(loggedInScreen);
-      }
-
-
-      console.log('this is an error', error);
-
     var loggedInScreen = document.querySelector('#loggedin-screen'),
         loggedOutScreen = document.querySelector('#loggedout-screen');
       loggedIn
