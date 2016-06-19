@@ -3,13 +3,10 @@ var searchAdminFunctions = {
     var self=this;
     self.initializeListeners();
     console.log('search');
-
     self.loadSiteData();
     self.loadStopWords();
     self.firebaseInit();
-
     self.checkLogin();
-
   },
   initializeListeners: function() {
     var self=this;
@@ -50,50 +47,37 @@ var searchAdminFunctions = {
     logout.addEventListener('click', function() {
       self.logout();
     });
-
     self.intializeAnimationListener(loggedOut);
     self.intializeAnimationListener(loggedIn);
-
-
-
     loginWrapper.addEventListener('click', function(e) {
-        if (e.target &&e.target.classList.contains('form-field')) {
-          e.target.classList.add('form-field-validate');
-        }
+      if (e.target &&e.target.classList.contains('form-field')) {
+        e.target.classList.add('form-field-validate');
+      }
     });
-
     loginWrapper.addEventListener('focusout', function(e) {
-        if (e.target &&e.target.classList.contains('form-field')) {
-          self.handleError(e.target, e.target.validity.valid);
-        }
+      if (e.target &&e.target.classList.contains('form-field')) {
+        self.handleError(e.target, e.target.validity.valid);
+      }
     });
     loginWrapper.addEventListener('keydown', function(e) {
       var keyPress=e.keyCode
         ? event.keyCode
         : event.charCode;
-
         if (keyPress === 13) {
           self.handleError(usernameField, usernameField.validity.valid);
           self.handleError(passwordField, passwordField.validity.valid);
         }
-
       });
   },
   handleError: function(el, valid, sysError) {
     var self=this;
-
-
-    var errorContainer = el.parentNode.querySelector('.login-error-message');
-
-    var target = el.id;
+    var errorContainer = el.parentNode.querySelector('.login-error-message'),
+        target = el.id;
 
     if (!sysError && target === 'username' ) {
       var errorMessage = 'Please enter a valid e mail address.';
-
     } else if (!sysError && target === 'password') {
-
       var errorMessage = 'Please enter a password with six characters or more.';
-
     } else {
       var errorMessage = String(sysError).replace(/Error:\s/g, '');
     }
