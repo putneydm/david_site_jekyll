@@ -56,5 +56,17 @@ var searchFunctions = {
     console.log('firebaseInit');
     self.myFirebaseRef = new Firebase("https://putneysearch.firebaseio.com/");
   },
+  firebaseGet: function(child) {
+    var self=this;
+    // Get a database reference to our posts
+    var ref = self.myFirebaseRef.child(child);
+    var p = new Promise (function(resolve, reject) {
+    ref.on("value", function(snapshot) {
+      resolve(snapshot.val())
+      }, function (errorObject) {
+        reject("The read failed: " + errorObject.code)
+      });
+    });
+    return p;
   }
 };
