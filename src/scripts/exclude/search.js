@@ -11,5 +11,15 @@ var searchFunctions = {
       self.getSearchFieldData();
     });
   },
+  getSearchFieldData: function() {
+    var self=this;
+    var searchInput = document.querySelector('#search-field').value;
+
+    var foo = self.stopWordsTest(searchInput);
+
+
+    console.log('stopwords results', foo);
+
+  },
   }
 };
