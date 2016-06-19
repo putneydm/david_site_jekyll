@@ -138,11 +138,9 @@ var searchAdminFunctions = {
 
     entries.set( dataSet,
     function (error) {
-      if (error) {
-        console.log('error');
-      } else {
-        console.log('saved');
-      }
+      error
+      ?console.log('error')
+      :console.log('saved');
     });
   },
   firebaseGet: function(child) {
@@ -180,15 +178,12 @@ var searchAdminFunctions = {
 
 
     function authHandler(error, authData) {
-      if (error) {
-        // console.log("Login Failed!", error);
-        self.handleLoginDisplay(false, error);
-        // console.log('error in login function', error);
-      } else {
-        console.log("Authenticated successfully with payload:", authData);
-        self.uid = authData.uid;
-        self.handleLoginAnimations(true);
-      }
+      error
+      ? self.handleLoginDisplay(false, error)
+      :(
+        self.uid = authData.uid,
+        self.handleLoginAnimations(true)
+      );
     }
     var login = document.querySelector('#username').value;
     var pwd = document.querySelector('#password').value;
@@ -241,32 +236,26 @@ var searchAdminFunctions = {
     var authData = self.myFirebaseRef.getAuth();
 
     // self.myFirebaseRef.getAuth(function(authData) {
-      if (authData) {
-        console.log("User " + authData.uid + " is logged in with " + authData.provider);
-        self.uid = authData.uid;
-        self.handleLoginDisplay(true);
-      } else {
-        console.log("User is logged out");
-        self.handleLoginDisplay(false);
-      }
-    // });
+      authData
+      ?(
+      self.uid = authData.uid,
+      self.handleLoginDisplay(true)
+      )
+      :self.handleLoginDisplay(false);
   },
   handleLoginDisplay: function(loggedIn, error) {
     var self=this;
 
-    var loggedInScreen = document.querySelector('#loggedin-screen');
-    var loggedOutScreen = document.querySelector('#loggedout-screen');
-
-    if (loggedIn) {
-      loggedOutScreen.classList.add('log-screen--disabled');
-      loggedInScreen.classList.remove('log-screen--disabled');
-      loggedInScreen.classList.add('log-screen--active');
-    }
-    else {
-      loggedInScreen.classList.add('log-screen--disabled');
-      loggedOutScreen.classList.remove('log-screen--disabled');
-      loggedOutScreen.classList.add('log-screen--active');
-    }
+    loggedIn
+      ? (
+      loggedOutScreen.classList.add('log-screen--disabled'),
+      loggedInScreen.classList.remove('log-screen--disabled'),
+      loggedInScreen.classList.add('log-screen--active')
+      ) : (
+      loggedInScreen.classList.add('log-screen--disabled'),
+      loggedOutScreen.classList.remove('log-screen--disabled'),
+      loggedOutScreen.classList.add('log-screen--active')
+      );
     if (error) {
     loggedOutScreen.classList.add('log-screen--shake');
      var el =  /password/gi.test(error)
@@ -319,6 +308,16 @@ var searchAdminFunctions = {
       //   errorContainer.classList.add('login-error-wrapper--enabled')
       //
       // }
+    var loggedInScreen = document.querySelector('#loggedin-screen'),
+        loggedOutScreen = document.querySelector('#loggedout-screen');
+      loggedIn
+      ? (
+        self.handleAnimateOut(loggedOutScreen),
+        self.handleAnimateIn(loggedInScreen)
+      ) : (
+        self.handleAnimateIn(loggedOutScreen),
+        self.handleAnimateOut(loggedInScreen)
+      );
   },
   handleAnimateOut: function(el) {
     el.classList.remove('log-screen--active');
