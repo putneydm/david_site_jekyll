@@ -91,32 +91,29 @@ var searchAdminFunctions = {
       errorContainer.innerHTML = errorMessage;
       el.classList.add('form-field--error');
     }
-
   },
   intializeAnimationListener: function(el) {
-
     el.addEventListener('animationend', function() {
     var slideOut = el.classList.contains('log-screen--out'),
         slideIn = el.classList.contains('log-screen--in'),
         shake = el.classList.contains('log-screen--shake');
 
-        if (shake) {
-          el.classList.remove('log-screen--shake');
-        }
-        if (slideOut) {
-          el.classList.add('log-screen--disabled');
-          el.classList.remove('log-screen--out');
-          el.classList.add('fuck');
-        }
-        if (slideIn) {
-          el.classList.add('log-screen--active');
-          el.classList.remove('log-screen--in');
-        }
+      if (shake) {
+        el.classList.remove('log-screen--shake');
+      }
+      if (slideOut) {
+        el.classList.add('log-screen--disabled');
+        el.classList.remove('log-screen--out');
+        el.classList.add('fuck');
+      }
+      if (slideIn) {
+        el.classList.add('log-screen--active');
+        el.classList.remove('log-screen--in');
+      }
     });
   },
   loadSiteData: function() {
     var self=this;
-
     var p = self.getJSON('/site-feed.json');
     p.then(function(data) {
       self.siteData = data;
