@@ -51,5 +51,10 @@ var searchFunctions = {
       console.log('failed');
     };
   },
+  firebaseInit: function() {
+    var self=this;
+    console.log('firebaseInit');
+    self.myFirebaseRef = new Firebase("https://putneysearch.firebaseio.com/");
+  },
   }
 };
