@@ -835,6 +835,6 @@ gulp.task('default', [
   // 'posts',
   'sitemap',
   // 'drafts',
-  'clean'
-	// 'minifyScripts'
+  'clean',
+	'minifyScripts'
 ]);
