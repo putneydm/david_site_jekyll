@@ -51,7 +51,6 @@ var searchAdminFunctions = {
       self.logout();
     });
 
-    var testLink = document.querySelector('#test-link');
     self.intializeAnimationListener(loggedOut);
     self.intializeAnimationListener(loggedIn);
 
