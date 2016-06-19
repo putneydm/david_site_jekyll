@@ -26,7 +26,7 @@ var searchAdminFunctions = {
         passwordField = document.querySelector('#password');
 
       self.firebaseSet(self.siteData, 'users/' + self.uid + '/entries');
-      self.firebaseSet(self.stopWords, 'users/' + self.uid + '/stopwords');
+      self.firebaseSet(self.stopWords, 'users/' + self.uid + '/stopWords');
     });
     var getButton = document.querySelector("#get");
     getButton.addEventListener('click', function(e) {
