@@ -13,7 +13,6 @@ var searchAdminFunctions = {
   },
   initializeListeners: function() {
     var self=this;
-    jsonButton.addEventListener('click', function(e) {
     var jsonButton = document.querySelector('#json'),
         getButton = document.querySelector("#get"),
         login = document.querySelector('#login'),
@@ -25,6 +24,7 @@ var searchAdminFunctions = {
         usernameField = document.querySelector('#username'),
         passwordField = document.querySelector('#password');
 
+    jsonButton.addEventListener('click', function(e) {
       self.firebaseSet(self.siteData, 'users/' + self.uid + '/entries');
       self.firebaseSet(self.stopWords, 'users/' + self.uid + '/stopWords');
     });
