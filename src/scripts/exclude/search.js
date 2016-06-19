@@ -39,5 +39,17 @@ var searchFunctions = {
     });
     return stopWordsMatch;
   },
+  getData: function() {
+    var self=this;
+    var p = self.firebaseGet('users/05db3ef7-a40d-4a16-9153-aa4f6bf8d25b');
+    p.then(function(data) {
+      console.log('got it');
+      self.stopWords = data.stopWords;
+      self.entries = data.entries;
+    }),
+    function(error) {
+      console.log('failed');
+    };
+  },
   }
 };
