@@ -13,7 +13,6 @@ var searchAdminFunctions = {
   },
   initializeListeners: function() {
     var self=this;
-    console.log('listen');
     var jsonButton = document.querySelector('#json');
     jsonButton.addEventListener('click', function(e) {
     var jsonButton = document.querySelector('#json'),
@@ -52,7 +51,6 @@ var searchAdminFunctions = {
     });
     logout.addEventListener('click', function() {
       self.logout();
-      console.log('logout button');
     });
 
     var testLink = document.querySelector('#test-link');
@@ -88,7 +86,6 @@ var searchAdminFunctions = {
   handleError: function(el, valid, sysError) {
     var self=this;
 
-    console.log(sysError);
 
     var errorContainer = el.parentNode.querySelector('.login-error-message');
 
@@ -110,7 +107,6 @@ var searchAdminFunctions = {
       errorContainer.classList.remove('login-error-message--active');
       el.classList.remove('form-field--error');
     } else {
-      console.log('invalid');
       errorContainer.classList.add('login-error-message--active');
       errorContainer.innerHTML = errorMessage;
       el.classList.add('form-field--error');
@@ -205,7 +201,6 @@ var searchAdminFunctions = {
     var self=this;
     var ref = self.myFirebaseRef;
 
-    // console.log('login');
 
     function authHandler(error, authData) {
       if (error) {
@@ -296,7 +291,6 @@ var searchAdminFunctions = {
       loggedOutScreen.classList.add('log-screen--active');
     }
     if (error) {
-    console.log('error in login function y', error);
     loggedOutScreen.classList.add('log-screen--shake');
      var el =  /password/gi.test(error)
      ? document.querySelector('#password')
