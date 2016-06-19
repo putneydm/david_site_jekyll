@@ -212,6 +212,9 @@ gulp.task('lint', function() {
 //minifies scripts in the exclude folder and moves unminified to testing and minified to dist
 gulp.task('minifyScripts', function() {
    gulp.src(paths.scripts.exclude)
+   .pipe(rename({
+       prefix: "script-" + dateValue + '-'
+     }))
    .pipe(gulp.dest(paths.scripts.testing))
    .pipe(minifyJS())
    .pipe(gulp.dest(paths.scripts.dist));
