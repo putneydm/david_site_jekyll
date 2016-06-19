@@ -16,21 +16,30 @@ var searchAdminFunctions = {
     console.log('listen');
     var jsonButton = document.querySelector('#json');
     jsonButton.addEventListener('click', function(e) {
+    var jsonButton = document.querySelector('#json'),
+        getButton = document.querySelector("#get"),
+        login = document.querySelector('#login'),
+        logout = document.querySelector('#logout'),
+        // testLink = document.querySelector('#test-link'),
+        loggedOut = document.querySelector('#loggedout-screen'),
+        loggedIn = document.querySelector('#loggedin-screen'),
+        loginWrapper = document.querySelector('#login-wrapper'),
+        usernameField = document.querySelector('#username'),
+        passwordField = document.querySelector('#password');
 
       self.firebaseSet(self.siteData, 'users/' + self.uid + '/entries');
       self.firebaseSet(self.stopWords, 'users/' + self.uid + '/stopwords');
     });
     var getButton = document.querySelector("#get");
     getButton.addEventListener('click', function(e) {
-      var p = self.firebaseGet('entries');
+      var p = self.firebaseGet('users/' + self.uid + '/entries');
       p.then(function(data) {
         console.log('got it');
       }),
       function(error) {
         console.log('failed');
       };
-
-      var s = self.firebaseGet('stopWords');
+      var s = self.firebaseGet('users/' + self.uid + '/stopWords');
       s.then(function(data) {
         console.log('got stopwords');
       }),
@@ -38,22 +47,15 @@ var searchAdminFunctions = {
         console.log('failed');
       }
     });
-
-    var login = document.querySelector('#login');
     login.addEventListener('click', function() {
       self.login();
     });
-
-    var logout = document.querySelector('#logout');
     logout.addEventListener('click', function() {
       self.logout();
       console.log('logout button');
     });
 
     var testLink = document.querySelector('#test-link');
-    var loggedOut = document.querySelector('#loggedout-screen');
-    var loggedIn = document.querySelector('#loggedin-screen');
-
     self.intializeAnimationListener(loggedOut);
     self.intializeAnimationListener(loggedIn);
 
@@ -71,11 +73,6 @@ var searchAdminFunctions = {
           self.handleError(e.target, e.target.validity.valid);
         }
     });
-
-    var usernameField = document.querySelector('#username');
-    var passwordField = document.querySelector('#password');
-
-
     loginWrapper.addEventListener('keydown', function(e) {
       var keyPress=e.keyCode
         ? event.keyCode
