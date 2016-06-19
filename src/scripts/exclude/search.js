@@ -21,5 +21,23 @@ var searchFunctions = {
     console.log('stopwords results', foo);
 
   },
+  stopWordsTest: function(term) {
+    var self=this;
+
+    var arr = term.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").split(' ');
+
+    console.log(arr);
+
+    function testWords(matchTerm) {
+      var match = self.stopWords.some(function(el) {
+        return el === matchTerm;
+      });
+      return match;
+    }
+    var stopWordsMatch = arr.some(function(el){
+        return el !== '' && testWords(el) === false;
+    });
+    return stopWordsMatch;
+  },
   }
 };
