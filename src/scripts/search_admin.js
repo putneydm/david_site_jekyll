@@ -28,7 +28,6 @@ var searchAdminFunctions = {
       self.firebaseSet(self.siteData, 'users/' + self.uid + '/entries');
       self.firebaseSet(self.stopWords, 'users/' + self.uid + '/stopWords');
     });
-    var getButton = document.querySelector("#get");
     getButton.addEventListener('click', function(e) {
       var p = self.firebaseGet('users/' + self.uid + '/entries');
       p.then(function(data) {
@@ -57,7 +56,6 @@ var searchAdminFunctions = {
     self.intializeAnimationListener(loggedIn);
 
 
-    var loginWrapper = document.querySelector('#login-wrapper');
 
     loginWrapper.addEventListener('click', function(e) {
         if (e.target &&e.target.classList.contains('form-field')) {
