@@ -181,10 +181,6 @@ gulp.task('sitemap', function() {
    .pipe(gulp.dest(paths.sitemap.output));
 });
 
-// gulp.task('drafts', function() {
-//    gulp.src(paths.drafts.input)
-//    .pipe(gulp.dest(paths.drafts.output));
-// });
 
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
