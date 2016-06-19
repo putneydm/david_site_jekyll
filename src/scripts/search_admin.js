@@ -13,7 +13,6 @@ var searchAdminFunctions = {
   },
   initializeListeners: function() {
     var self=this;
-    var jsonButton = document.querySelector('#json');
     jsonButton.addEventListener('click', function(e) {
     var jsonButton = document.querySelector('#json'),
         getButton = document.querySelector("#get"),
