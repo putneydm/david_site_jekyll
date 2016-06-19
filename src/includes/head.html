@@ -19,10 +19,7 @@
   </style>
 </noscript>
   {% assign pageType = page.pagetype %}
-    {% if pageType == 'searchAdmin' %}
-      <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-    {% endif%}
-    {% if pageType == 'search' %}
+    {% if pageType == 'searchAdmin' or pageType == 'search' %}
       <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
     {% endif%}
 </head>
