@@ -27,6 +27,9 @@
     {% if pageType == 'searchAdmin' %}
       searchAdminFunctions.initialize();
     {% endif%}
+    {% if pageType == 'search' %}
+      searchFunctions.initialize();
+    {% endif%}
   });
 })();
 </script>
