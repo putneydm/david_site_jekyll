@@ -157,7 +157,7 @@ gulp.task('pages', function() {
   //  .pipe(htmltidy({doctype: 'html5',
   //    hideComments: true,
   //    indent: true}))
-  .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
+  // .pipe(replace(/\*cachebustthis\*/g,  scriptname)) // adds cachebusted name of scripts to js links file
    .pipe(gulp.dest(paths.pages.testing))
 });
 gulp.task('includes', function() {
