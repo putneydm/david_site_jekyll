@@ -197,10 +197,10 @@ gulp.task('concat', function() {
    .pipe(gulp.dest(paths.scripts.dist));
 });
 
-gulp.task('cachebustScripts', function() {
-  return gulp.src('source/layouts/js_links.html')
-  .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
-});
+// gulp.task('cachebustScripts', function() {
+//   return gulp.src('source/layouts/js_links.html')
+//   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
+// });
 
 // lints main javascript file for site
 gulp.task('lint', function() {
