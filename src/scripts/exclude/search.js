@@ -6,6 +6,10 @@ var searchFunctions = {
     var submitBtn = document.querySelector('#submit-search');
 
 
+    submitBtn.addEventListener('click', function(e){
+      console.log('click');
+      self.getSearchFieldData();
+    });
   },
   }
 };
