@@ -96,9 +96,9 @@ var searchAdminFunctions = {
   intializeAnimationListener: function(el) {
 
     el.addEventListener('animationend', function() {
-        var slideOut = el.classList.contains('log-screen--out');
-        var slideIn = el.classList.contains('log-screen--in');
-        var shake = el.classList.contains('log-screen--shake');
+    var slideOut = el.classList.contains('log-screen--out'),
+        slideIn = el.classList.contains('log-screen--in'),
+        shake = el.classList.contains('log-screen--shake');
 
         if (shake) {
           el.classList.remove('log-screen--shake');
