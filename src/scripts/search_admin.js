@@ -235,7 +235,6 @@ var searchAdminFunctions = {
 
     var authData = self.myFirebaseRef.getAuth();
 
-    // self.myFirebaseRef.getAuth(function(authData) {
       authData
       ?(
       self.uid = authData.uid,
@@ -286,28 +285,6 @@ var searchAdminFunctions = {
 
       console.log('this is an error', error);
 
-      // if (error) {
-      // loggedOutScreen.classList.add('log-screen--shake');
-      //  var el =   /password/gi.test(error)
-      //  ? document.querySelector('#password')
-      //  : document.querySelector('#username')
-      //
-      //  self.handleError(el, error);
-      //
-      // }
-
-
-      // if (error) {
-      //   console.log('error x', error);
-      //   var errorMessage = document.querySelector('#error-message');
-      //   var errorContainer = document.querySelector('#login-error-wrapper');
-      //   errorMessage.innerHTML = error;
-      //
-      //   console.log('errorContainer', errorContainer);
-      //
-      //   errorContainer.classList.add('login-error-wrapper--enabled')
-      //
-      // }
     var loggedInScreen = document.querySelector('#loggedin-screen'),
         loggedOutScreen = document.querySelector('#loggedout-screen');
       loggedIn
