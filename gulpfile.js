@@ -48,6 +48,7 @@ var date = new Date();
 // creates file names based on date
 var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.css';
 var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
+var dateValue = date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear();
 
 var paths = {
   pageLayouts: {
