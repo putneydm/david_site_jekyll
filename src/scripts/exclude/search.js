@@ -56,6 +56,22 @@ var searchFunctions = {
       console.log('failed');
     };
   },
+  searchActive: function(state) {
+    var self=this;
+
+    var submitBtn = document.querySelector('#submit-search');
+    var searchField = document.querySelector('#search-field');
+    var errorOverlay = document.querySelector('#error-overlay');
+    var loader = document.querySelector('#loader');
+
+    state
+    ? (
+      submitBtn.disabled = false,
+      searchField.disabled = false,
+      self.handleLoadingScreen(false)
+    )
+    : errorOverlay.classList.add('error-overlay--active');
+  },
   firebaseInit: function() {
     var self=this;
     console.log('firebaseInit');
