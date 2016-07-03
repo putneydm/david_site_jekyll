@@ -12,7 +12,6 @@ var searchFunctions = {
 
 
     submitBtn.addEventListener('click', function(e){
-      console.log('click');
       self.getSearchFieldData();
     });
     submitSearchRetry.addEventListener('click', function(e) {
@@ -27,20 +26,12 @@ var searchFunctions = {
   getSearchFieldData: function() {
     var self=this;
     var searchInput = document.querySelector('#search-field').value;
-
     var foo = self.stopWordsTest(searchInput);
-
-
     console.log('stopwords results', foo);
-
   },
   stopWordsTest: function(term) {
     var self=this;
-
     var arr = term.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").split(' ');
-
-    console.log(arr);
-
     function testWords(matchTerm) {
       var match = self.stopWords.some(function(el) {
         return el === matchTerm;
@@ -56,7 +47,6 @@ var searchFunctions = {
     var self=this;
     var p = self.firebaseGet('users/05db3ef7-a40d-4a16-9153-aa4f6bf8d25b');
     p.then(function(data) {
-      console.log('got it');
       self.stopWords = data.stopWords;
       self.entries = data.entries;
     }),
@@ -141,5 +131,4 @@ var searchFunctions = {
       });
     });
     return p;
-  }
 };
