@@ -54,9 +54,12 @@ var searchFunctions = {
     p.then(function(data) {
       self.stopWords = data.stopWords;
       self.entries = data.entries;
+      self.searchActive(true);
+      self.handleLoadingError(false);
     }),
     function(error) {
       console.log('failed');
+      self.handleLoadingError(true);
     };
   },
   searchActive: function(state) {
