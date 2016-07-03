@@ -2,6 +2,7 @@ var searchFunctions = {
   initialize: function() {
     console.log('search works');
     var self=this;
+    self.handleLoadingScreen(true);
     self.initializeListeners();
     self.firebaseInit();
     self.getData();
