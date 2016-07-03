@@ -72,6 +72,36 @@ var searchFunctions = {
     )
     : errorOverlay.classList.add('error-overlay--active');
   },
+  handleLoadingScreen: function(state) {
+    var self=this;
+    var loader = document.querySelector('#loader');
+    var loaderIcon = document.querySelector('#loader-icon');
+    var loaderShadow = document.querySelector('#loader-shadow');
+
+    state
+      ? (
+        play(),
+        loader.classList.add('error-overlay--active')
+      )
+      : (
+        loader.addEventListener('transitionend', pause),
+        loader.classList.remove('error-overlay--active')
+      );
+
+    function pause() {
+      console.log('pause');
+      loaderIcon.classList.add('paused');
+      loaderShadow.classList.add('paused');
+      setTimeout(function(){
+        console.log('timeout');
+        loader.removeEventListener('transitionend', pause);
+      }, 100);
+    }
+    function play() {
+      loaderIcon.classList.remove('paused');
+      loaderShadow.classList.remove('paused');
+    }
+  },
   firebaseInit: function() {
     var self=this;
     console.log('firebaseInit');
