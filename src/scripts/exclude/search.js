@@ -15,6 +15,14 @@ var searchFunctions = {
       console.log('click');
       self.getSearchFieldData();
     });
+    submitSearchRetry.addEventListener('click', function(e) {
+      self.handleLoadingScreen(true);
+      self.handleLoadingError(false);
+      self.getData();
+    });
+    loaderIcon.addEventListener('animationiteration', function(e) {
+      console.log('bounce');
+    });
   },
   getSearchFieldData: function() {
     var self=this;
