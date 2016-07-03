@@ -19,7 +19,6 @@ var searchFunctions = {
     });
     submitSearchRetry.addEventListener('click', function(e) {
       self.handleLoadingScreen(true);
-      self.handleLoadingError(false);
       self.getData();
       // fakes a data load or error for testing
       // self.loadingTest();
