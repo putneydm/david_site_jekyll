@@ -110,6 +110,20 @@ var searchFunctions = {
       loaderShadow.classList.remove('paused');
     }
   },
+  handleLoadingError: function(state) {
+    var self=this;
+    var errorOverlay = document.querySelector('#error-overlay');
+
+    console.log('state', state);
+    if (state) {
+      errorOverlay.classList.add('error-overlay--active');
+      self.handleLoadingScreen(false);
+    }
+    if (!state) {
+      errorOverlay.classList.remove('error-overlay--active');
+    }
+
+  },
   firebaseInit: function() {
     var self=this;
     console.log('firebaseInit');
