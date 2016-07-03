@@ -5,6 +5,9 @@ var searchFunctions = {
     self.initializeListeners();
     self.firebaseInit();
     self.getData();
+    // this replaces getData
+    // fakes a data load
+    // self.loadingTest();
   },
   initializeListeners: function() {
     var self=this;
@@ -18,6 +21,9 @@ var searchFunctions = {
       self.handleLoadingScreen(true);
       self.handleLoadingError(false);
       self.getData();
+      // fakes a data load or error for testing
+      // self.loadingTest();
+
     });
     loaderIcon.addEventListener('animationiteration', function(e) {
       console.log('bounce');
