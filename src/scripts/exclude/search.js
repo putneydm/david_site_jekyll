@@ -131,6 +131,17 @@ var searchFunctions = {
       });
     });
     return p;
+  },
+  sleep: function(time) {
+    // return new Promise((resolve) => setTimeout(resolve, time));
+    var p = new Promise (function(resolve) {
+      setTimeout(function(){
+        resolve(time)
+      }, time);
+    });
+    return p;
+
+  },
   loadingTest: function() {
     var self=this;
 
