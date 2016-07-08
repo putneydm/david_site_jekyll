@@ -148,7 +148,6 @@ var searchFunctions = {
       self.handleLoadingError(false);
     }),
     function(error) {
-      console.log('failed');
       self.handleLoadingError(true);
     };
   },
@@ -189,7 +188,7 @@ var searchFunctions = {
       loaderIcon.classList.add('paused');
       loaderShadow.classList.add('paused');
       setTimeout(function(){
-        console.log('timeout');
+        // console.log('timeout');
         loader.removeEventListener('transitionend', pause);
       }, 100);
     }
@@ -201,8 +200,6 @@ var searchFunctions = {
   handleLoadingError: function(state) {
     var self=this;
     var errorOverlay = document.querySelector('#error-overlay');
-
-    console.log('state', state);
     if (state) {
       errorOverlay.classList.add('error-overlay--active');
       self.handleLoadingScreen(false);
@@ -210,7 +207,6 @@ var searchFunctions = {
     if (!state) {
       errorOverlay.classList.remove('error-overlay--active');
     }
-
   },
   firebaseInit: function() {
     var self=this;
