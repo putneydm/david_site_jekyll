@@ -9,6 +9,14 @@ pagetype: search
   <form>
     <div id="search-field-wrapper" class="form-field-wrapper">
       <input id="search-field" class="form-field" type="search">
+      <div id="loader" class='error-overlay loader'>
+        <p class="login-error-message">
+          Loading entries &#8230;
+        </p>
+        <div id="loader-icon" class="loader-icon"></div>
+        <div id="loader-shadow" class="loader-shadow">
+        </div>
+      </div>
       <!-- <label id="label" for="search-field">E-mail</label> -->
       <input id="submit-search" class="button form-btn" type="button"  value="Search">
     </form>
