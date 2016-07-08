@@ -6,6 +6,8 @@ var searchFunctions = {
     self.initializeListeners();
     self.firebaseInit();
     self.getData();
+    // self.searchTest();
+
     // this replaces getData
     // fakes a data load
     // self.loadingTest();
