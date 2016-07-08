@@ -34,6 +34,28 @@ var searchFunctions = {
     var searchInput = document.querySelector('#search-field').value;
     var foo = self.stopWordsTest(searchInput);
     console.log('stopwords results', foo);
+  doSearch: function(searchTerm) {
+    var self=this;
+
+    var regexp = new RegExp(self.cleanPunctuation(searchTerm), 'gi');
+    var resultsArr = [];
+
+    self.entries.map(function(el, i) {
+      var matchPost = self.cleanPunctuation(el.post).match(regexp);
+      var matchTitle = self.cleanPunctuation(el.title).match(regexp);
+
+      matchPost != null && matchTitle != null ?
+      resultsArr.push({"count" : matchPost.length + matchTitle.length,  "index": i})
+      : matchPost == null && matchTitle != null ? resultsArr.push({"count" : matchTitle.length,  "index": i})
+      : matchPost != null && matchTitle == null ? resultsArr.push({"count" : matchPost.length,  "index": i})
+      : 0 // do nothing
+    });
+
+    var resultsArrSort = resultsArr.sort(function(a, b) {
+        return b.count - a.count;
+    });
+    return resultsArrSort;
+  },
   },
   stopWordsTest: function(term) {
     var self=this;
