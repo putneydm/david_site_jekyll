@@ -15,7 +15,8 @@ var searchFunctions = {
   initializeListeners: function() {
     var self=this;
     var submitBtn = document.querySelector('#submit-search');
-
+    var submitSearchRetry = document.querySelector('#submit-search-retry');
+    var loaderIcon = document.querySelector('#loader-icon');
 
     submitBtn.addEventListener('click', function(e){
       self.getSearchFieldData();
