@@ -34,6 +34,15 @@ var searchFunctions = {
     var searchInput = document.querySelector('#search-field').value;
     var foo = self.stopWordsTest(searchInput);
     console.log('stopwords results', foo);
+    //  false = bad, true = good
+    if (foo === true) {
+      // self.doSearch(searchInput);
+      var foo = self.doSearch(searchInput);
+      console.log('foo test', foo);
+      self.handleSearchResults(foo, searchInput);
+
+    }
+  },
   doSearch: function(searchTerm) {
     var self=this;
 
