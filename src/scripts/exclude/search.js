@@ -56,6 +56,61 @@ var searchFunctions = {
     });
     return resultsArrSort;
   },
+  handleSearchResults: function(resultsArr, searchTerm) {
+    var self=this;
+
+    var searchContainer = document.querySelector('#search-results-wrapper');
+
+    searchContainer.innerHTML = '';
+
+    var entrySearch = document.createElement('H1');
+    entrySearch.classList.add('search-results-header');
+
+    resultsArr.length === 1
+      ? entrySearch.innerHTML = resultsArr.length + '&nbsp;result for “' + searchTerm + '”'
+      : entrySearch.innerHTML = resultsArr.length + '&nbsp;results for “' + searchTerm + '”';
+
+    searchContainer.appendChild(entrySearch);
+
+    resultsArr.forEach(function(el) {
+      var foo = self.entries[el.index].title;
+      var bar = self.entries[el.index].post.split(' ').slice(0, 100).join(' ');
+
+
+      var entryLink = document.createElement('A');
+      entryLink.href= self.entries[el.index].link;
+
+      var entryContainer = document.createElement('ARTICLE');
+      entryContainer.classList.add('search-results-entry');
+      var entryHeadline = document.createElement('H2');
+      entryHeadline.classList.add('blog-headline');
+
+
+
+      var entryBodyContainer = document.createElement('DIV');
+      var entryBody = document.createElement('P');
+      entryBodyContainer.classList.add('blog-entry-text');
+      entryBodyContainer.appendChild(entryBody);
+
+
+      var entryMatches = document.createElement('P');
+      entryMatches.classList.add('blog-entry-date');
+      entryHeadline.innerHTML = foo;
+      entryBody.innerHTML = bar;
+
+      entryMatches.innerHTML = el.count === 1
+        ? el.count + ' occurance found'
+        : el.count + ' occurances found';
+
+      entryContainer.appendChild(entryHeadline);
+      entryContainer.appendChild(entryMatches);
+      entryContainer.appendChild(entryBodyContainer);
+
+      entryLink.appendChild(entryContainer);
+
+      searchContainer.appendChild(entryLink);
+
+    });
   },
   stopWordsTest: function(term) {
     var self=this;
