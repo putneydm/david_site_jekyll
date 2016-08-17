@@ -179,6 +179,7 @@ gulp.task('deploy', ['sitemap'], function() {
 gulp.task('sitemap', function() {
    gulp.src(paths.sitemap.input)
    .pipe(gulp.dest(paths.sitemap.output));
+});
 
 // gulp.task('drafts', function() {
 //    gulp.src(paths.drafts.input)
