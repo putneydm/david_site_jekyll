@@ -1,0 +1,9 @@
+<style>
+  {% if page.heroArt %}.hero-art{background-image: url('/siteart/pl_hero_{{page.heroArt}}.jpg');}@media screen and (max-width: 46.875em) {.hero-art {background-image: url('/siteart/pl_hero_small_{{page.heroArt}}.jpg');}}{% endif %}
+  {% if page.pagetype == "index" %}
+    {% include index_embeded_styles.css %}
+  {% elsif page.pagetype == "blog" or page.pagetype == "blog-entry" %}
+    {% include blog_embedded_styles.css %}
+  {% endif %}
+  {% include main_embedded_styles.css %}
+</style>
