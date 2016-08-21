@@ -2,43 +2,43 @@
 var gulp = require('gulp');
 
 //scripts
-var concat = require('gulp-concat');
-var minifyJS = require('gulp-uglify');
-var jshint = require('gulp-jshint');
+var concat = require('gulp-concat'),
+    minifyJS = require('gulp-uglify'),
+    jshint = require('gulp-jshint');
 
 //css
-var sass = require('gulp-sass');
-var minifyCSS = require('gulp-minify-css'); // Add var prefix for consistency
-var scsslint = require('gulp-scss-lint');
-var autoprefixer = require('gulp-autoprefixer');
+var sass = require('gulp-sass'),
+    minifyCSS = require('gulp-minify-css'), // Add var prefix for consistency
+    scsslint = require('gulp-scss-lint'),
+    autoprefixer = require('gulp-autoprefixer');
 
 // html
- var htmltidy = require('gulp-htmltidy');
  var minifyHTML = require('gulp-minify-html');
 
 //images
-var imagemin = require('gulp-imagemin');
-var jpegtran = require('imagemin-jpegtran');
-var gm = require('gulp-gm');
+var imagemin = require('gulp-imagemin'),
+    jpegtran = require('imagemin-jpegtran'),
+    gm = require('gulp-gm');
 
 //fonts
 var cssBase64 = require('gulp-css-base64');
 
 //utility
-var rename = require('gulp-rename');
-var clean = require('gulp-rimraf');
-var stylish = require('jshint-stylish');
-var rename = require('gulp-rename');
-var watch = require('gulp-watch');
-var livereload = require('gulp-livereload');
-var fileinclude = require('gulp-file-include');
-var browserSync = require('browser-sync');
-var del = require('del');
-var replace = require('gulp-replace');
-var cleanFiles = require('gulp-clean');
+var rename = require('gulp-rename'),
+    clean = require('gulp-rimraf'),
+    stylish = require('jshint-stylish'),
+    rename = require('gulp-rename'),
+    watch = require('gulp-watch'),
+    livereload = require('gulp-livereload'),
+    fileinclude = require('gulp-file-include'),
+    browserSync = require('browser-sync'),
+    del = require('del'),
+    replace = require('gulp-replace'),
+    cleanFiles = require('gulp-clean');
+
 //svg
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
+var svgstore = require('gulp-svgstore'),
+    svgmin = require('gulp-svgmin');
 
 //bower
 var mainBowerFiles = require('main-bower-files');
