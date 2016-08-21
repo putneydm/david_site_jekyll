@@ -123,6 +123,10 @@ var paths = {
     input: 'test/_site/sitemap.xml',
     output: 'dist/'
   },
+  icons: {
+    input: 'src/touch_icons/{*.ico,*.png}',
+    output: 'dist/'
+  }
 };
 
 // moves page templates from src to testing and dist
@@ -154,6 +158,7 @@ gulp.task('includes', function() {
    .pipe(gulp.dest(paths.includes.testing))
 });
 
+gulp.task('deploy', ['sitemap', 'icons'], function() {
    gulp.src(paths.pages.site)
     .pipe(minifyHTML())
    .pipe(gulp.dest(paths.pages.deploy));
@@ -161,6 +166,11 @@ gulp.task('includes', function() {
 gulp.task('sitemap', function() {
    gulp.src(paths.sitemap.input)
    .pipe(gulp.dest(paths.sitemap.output));
+});
+// moves touch icons and favicon to dist
+gulp.task('icons', function() {
+  gulp.src(paths.icons.input)
+  .pipe(gulp.dest(paths.icons.output));
 });
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
