@@ -31,7 +31,7 @@ It's a singularly moving experience. But to be there is also discordant. I was s
 
 {% if page.quote %}
   <aside class="blog-pullquote">
-  <q>{{page.quote}}</q>
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
   </aside>
 {% endif %}
 

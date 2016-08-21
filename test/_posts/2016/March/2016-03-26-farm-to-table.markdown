@@ -39,7 +39,7 @@ My uncle went to the middle of the paddock, the cow bent its head down as expect
 
 {% if page.quote %}
   <aside class="blog-pullquote">
-  <q>{{page.quote}}</q>
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
   </aside>
 {% endif %}
 

@@ -31,7 +31,7 @@ Abrams is an avowed _Star Wars_ fan. In the runup to the _Star Trek_ relaunch he
 
 {% if page.quote %}
   <aside class="blog-pullquote">
-  <q>{{page.quote}}</q>
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
   </aside>
 {% endif %}
 
