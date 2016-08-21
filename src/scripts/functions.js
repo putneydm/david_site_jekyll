@@ -26,6 +26,7 @@ var pageFunctions = {
     self.getElementsHero();
     self.getElementsBlog();
     self.initScrollListener('blog');
+    self.initQuoteAnimate(self.blogQuotes);
   },
   intializeBlogEntry: function() {
     var self=this;
@@ -34,6 +35,7 @@ var pageFunctions = {
     this.initScrollBackButton();
     self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
     self.initScrollListener('blogEntry');
+    self.initQuoteAnimate(self.blogQuotes);
   },
   initializeIndex: function() {
     var self=this;
@@ -69,6 +71,7 @@ var pageFunctions = {
     self.footNoteReturnButton = document.querySelector('#btn-footnote-return');
     self.scrollProgress = document.querySelector('#scroll-progress');
     self.blogTeaser = document.querySelector('#blog-teaser-wrapper');
+    self.blogQuotes = [].slice.call(document.querySelectorAll(".blog-pullquote"));
   },
   getElementsIndex: function() {
     var self=this;
@@ -89,6 +92,7 @@ var pageFunctions = {
        self.handleFootnoteButton (scrollPosition);
        self.handleManualScrollback(scrollPosition);
        self.initBlogTeasers();
+       self.initQuoteAnimate(self.blogQuotes);
      }
      if (pageType === 'index' || pageType === 'portfolio_entry') {
       self.handleHeroAnimate(scrollPosition);
@@ -390,6 +394,19 @@ var pageFunctions = {
       self.removeShit(scrollButton, 'scroll-to-top-active');
       self.addShit(scrollButton, 'scroll-to-top-inactive');
     }
+  },
+  initQuoteAnimate: function(quoteList) {
+      var self=this;
+      quoteList.forEach(function(el) {
+        var visible = self.isElementVisible(el);
+        var active =
+        el.classList.contains('blog-pullquote--set');
+        if (!visible && !active) {
+          el.classList.add('blog-pullquote--set');
+        } else if (visible && active) {
+          el.classList.add('blog-pullquote--animate');
+        }
+      });
   },
   handleSiteFooter: function(scrollPosition) {
     var self = this;
