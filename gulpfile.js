@@ -44,10 +44,12 @@ var svgstore = require('gulp-svgstore'),
 var mainBowerFiles = require('main-bower-files');
 
 // gets today's date
-var date = new Date();
+var date = new Date(),
+    rando = Math.floor((Math.random() * 1000000) + 1);
+
 // creates file names based on date
-var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.css';
-var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
+var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + rando + '.css';
+var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + rando + '.js';
 
 var paths = {
   pageLayouts: {
