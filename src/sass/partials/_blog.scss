@@ -210,6 +210,16 @@ h3 {
 			}
 	}
 }
+.blog-pullquote--set {
+	transform: translateY(100px);
+	opacity:0;
+	will-change: transform, top;
+}
+.blog-pullquote--animate {
+	transform: translateY(0px);
+	opacity:1;
+	transition: transform .3s cubic-bezier(.79,.56,.69,1.26), opacity .2s ease-in;
+}
 .content-nav {
 	text-align:center;
 		li {
