@@ -128,6 +128,7 @@ var paths = {
     output: 'dist/'
   }
 };
+// *** TASKS ***
 
 // moves page templates from src to testing and dist
 gulp.task('layouts', function() {
@@ -139,6 +140,7 @@ gulp.task('layouts', function() {
   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
    .pipe(gulp.dest(paths.pageLayouts.testing))
 });
+//  compiles pages from partials
 gulp.task('pages', function() {
    gulp.src(['!' + paths.pages.exclude, paths.pages.input])
    .pipe(fileinclude({
@@ -158,11 +160,13 @@ gulp.task('includes', function() {
    .pipe(gulp.dest(paths.includes.testing))
 });
 
+// minifies and deploys pages to dist, moves sitemap and icons to dist
 gulp.task('deploy', ['sitemap', 'icons'], function() {
    gulp.src(paths.pages.site)
     .pipe(minifyHTML())
    .pipe(gulp.dest(paths.pages.deploy));
 });
+// moves sitemap to dist
 gulp.task('sitemap', function() {
    gulp.src(paths.sitemap.input)
    .pipe(gulp.dest(paths.sitemap.output));
@@ -182,6 +186,7 @@ gulp.task('concat', function() {
    .pipe(minifyJS())
    .pipe(gulp.dest(paths.scripts.dist));
 });
+//adds cachebusted
 gulp.task('cachebustScripts', function() {
   return gulp.src('source/layouts/js_links.html')
   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
@@ -270,6 +275,11 @@ gulp.task('bower', function() {
 }))
     .pipe(gulp.dest(paths.bower.vendor))
 });
+
+// gulp.task('posts', function() {
+//    gulp.src(paths.posts.input)
+//    .pipe(gulp.dest(paths.posts.output))
+// });
 
 gulp.task('collections', function() {
    gulp.src(paths.collections.input)
