@@ -211,14 +211,17 @@ h3 {
 	}
 }
 .blog-pullquote--set {
-	transform: translateY(100px);
+	transform: translateY(30px);
 	opacity:0;
-	will-change: transform, top;
+	will-change: transform, opacity;
+	@media screen and (max-width:rem(450))	{
+		transform: translateY(15px)
+	}
 }
 .blog-pullquote--animate {
 	transform: translateY(0px);
 	opacity:1;
-	transition: transform .3s cubic-bezier(.79,.56,.69,1.26), opacity .2s ease-in;
+	transition: transform .3s ease-out, opacity .25s ease-out;
 }
 .content-nav {
 	text-align:center;
