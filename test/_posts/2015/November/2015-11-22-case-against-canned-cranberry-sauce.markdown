@@ -21,7 +21,7 @@ It sits there in the bowl in a watery purple puddle _still the shape of the cont
 
 {% if page.quote %}
   <aside class="blog-pullquote">
-  <q>{{page.quote}}</q>
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
   </aside>
 {% endif %}
 

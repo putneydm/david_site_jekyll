@@ -2,52 +2,54 @@
 var gulp = require('gulp');
 
 //scripts
-var concat = require('gulp-concat');
-var minifyJS = require('gulp-uglify');
-var jshint = require('gulp-jshint');
+var concat = require('gulp-concat'),
+    minifyJS = require('gulp-uglify'),
+    jshint = require('gulp-jshint');
 
 //css
-var sass = require('gulp-sass');
-var minifyCSS = require('gulp-minify-css'); // Add var prefix for consistency
-var scsslint = require('gulp-scss-lint');
-var autoprefixer = require('gulp-autoprefixer');
+var sass = require('gulp-sass'),
+    minifyCSS = require('gulp-minify-css'), // Add var prefix for consistency
+    scsslint = require('gulp-scss-lint'),
+    autoprefixer = require('gulp-autoprefixer');
 
 // html
- var htmltidy = require('gulp-htmltidy');
  var minifyHTML = require('gulp-minify-html');
 
 //images
-var imagemin = require('gulp-imagemin');
-var jpegtran = require('imagemin-jpegtran');
-var gm = require('gulp-gm');
+var imagemin = require('gulp-imagemin'),
+    jpegtran = require('imagemin-jpegtran'),
+    gm = require('gulp-gm');
 
 //fonts
 var cssBase64 = require('gulp-css-base64');
 
 //utility
-var rename = require('gulp-rename');
-var clean = require('gulp-rimraf');
-var stylish = require('jshint-stylish');
-var rename = require('gulp-rename');
-var watch = require('gulp-watch');
-var livereload = require('gulp-livereload');
-var fileinclude = require('gulp-file-include');
-var browserSync = require('browser-sync');
-var del = require('del');
-var replace = require('gulp-replace');
-var cleanFiles = require('gulp-clean');
+var rename = require('gulp-rename'),
+    clean = require('gulp-rimraf'),
+    stylish = require('jshint-stylish'),
+    rename = require('gulp-rename'),
+    watch = require('gulp-watch'),
+    livereload = require('gulp-livereload'),
+    fileinclude = require('gulp-file-include'),
+    browserSync = require('browser-sync'),
+    del = require('del'),
+    replace = require('gulp-replace'),
+    cleanFiles = require('gulp-clean');
+
 //svg
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
+var svgstore = require('gulp-svgstore'),
+    svgmin = require('gulp-svgmin');
 
 //bower
 var mainBowerFiles = require('main-bower-files');
 
 // gets today's date
-var date = new Date();
+var date = new Date(),
+    rando = Math.floor((Math.random() * 1000000) + 1);
+
 // creates file names based on date
-var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.css';
-var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
+var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + rando + '.css';
+var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + rando + '.js';
 
 var paths = {
   pageLayouts: {
@@ -67,7 +69,6 @@ var paths = {
   includes: {
    input: 'src/includes/*.html',
    testing: 'test/_includes/'
-  //  dist: 'dist/templates'
   },
   scripts: {
     input: 'src/scripts/**/*.js',
@@ -104,7 +105,6 @@ var paths = {
   svg: {
     input: 'src/svg/svg_in/*.svg',
     output: 'src/svg/'
-    // dist: 'dist/svg/'
   },
   fonts: {
     input: 'src/fonts/*.css',
@@ -123,13 +123,13 @@ var paths = {
     input: 'test/_site/sitemap.xml',
     output: 'dist/'
   },
-  drafts: {
-    input: 'src/drafts/*.markdown',
-    output: 'test/_drafts/'
-  },
+  icons: {
+    input: 'src/touch_icons/{*.ico,*.png}',
+    output: 'dist/'
+  }
 };
+// *** TASKS ***
 
-// tasks
 // moves page templates from src to testing and dist
 gulp.task('layouts', function() {
    gulp.src(paths.pageLayouts.input)
@@ -137,22 +137,16 @@ gulp.task('layouts', function() {
      prefix: '@@',
      basepath: '@file'
    }))
-  //  .pipe(htmltidy({doctype: 'html5',
-  //    hideComments: true,
-  //    indent: true}))
   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
    .pipe(gulp.dest(paths.pageLayouts.testing))
-  //  .pipe(gulp.dest(paths.pageLayouts.dist));
 });
+//  compiles pages from partials
 gulp.task('pages', function() {
    gulp.src(['!' + paths.pages.exclude, paths.pages.input])
    .pipe(fileinclude({
      prefix: '@@',
      basepath: '@file'
    }))
-  //  .pipe(htmltidy({doctype: 'html5',
-  //    hideComments: true,
-  //    indent: true}))
   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
    .pipe(gulp.dest(paths.pages.testing))
 });
@@ -166,26 +160,22 @@ gulp.task('includes', function() {
    .pipe(gulp.dest(paths.includes.testing))
 });
 
-gulp.task('deploy', ['sitemap'], function() {
+// minifies and deploys pages to dist, moves sitemap and icons to dist
+gulp.task('deploy', ['sitemap', 'icons'], function() {
    gulp.src(paths.pages.site)
-  //  .pipe(htmltidy({doctype: 'html5',
-  //      hideComments: true,
-  //      indent: true}))
     .pipe(minifyHTML())
    .pipe(gulp.dest(paths.pages.deploy));
 });
-
-
+// moves sitemap to dist
 gulp.task('sitemap', function() {
    gulp.src(paths.sitemap.input)
    .pipe(gulp.dest(paths.sitemap.output));
 });
-
-// gulp.task('drafts', function() {
-//    gulp.src(paths.drafts.input)
-//    .pipe(gulp.dest(paths.drafts.output));
-// });
-
+// moves touch icons and favicon to dist
+gulp.task('icons', function() {
+  gulp.src(paths.icons.input)
+  .pipe(gulp.dest(paths.icons.output));
+});
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
    console.log(filename);
@@ -196,7 +186,7 @@ gulp.task('concat', function() {
    .pipe(minifyJS())
    .pipe(gulp.dest(paths.scripts.dist));
 });
-
+//adds cachebusted
 gulp.task('cachebustScripts', function() {
   return gulp.src('source/layouts/js_links.html')
   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
@@ -273,7 +263,6 @@ gulp.task('svg', function () {
         extname: '.svg'
     }))
      .pipe(gulp.dest(paths.svg.output))
-    // .pipe(gulp.dest(paths.svg.dist));
 });
 
 // moves bower dependencies to vendor
@@ -287,10 +276,11 @@ gulp.task('bower', function() {
     .pipe(gulp.dest(paths.bower.vendor))
 });
 
-gulp.task('posts', function() {
-   gulp.src(paths.posts.input)
-   .pipe(gulp.dest(paths.posts.output))
-});
+// gulp.task('posts', function() {
+//    gulp.src(paths.posts.input)
+//    .pipe(gulp.dest(paths.posts.output))
+// });
+
 gulp.task('collections', function() {
    gulp.src(paths.collections.input)
    .pipe(gulp.dest(paths.collections.output))
@@ -766,49 +756,36 @@ gulp.task('listen', function () {
     // page templates
     gulp.watch(paths.pageLayouts.watch).on('change', function(file) {
         gulp.start('layouts');
-      //  gulp.start('refresh');
     });
     gulp.watch(paths.pages.watch).on('change', function(file) {
         gulp.start('pages');
-      //  gulp.start('refresh');
     });
     // includes
     gulp.watch(paths.includes.input).on('change', function(file) {
         gulp.start('includes');
-      //  gulp.start('refresh');
     });
     // scripts
     gulp.watch(paths.scripts.input).on('change', function(file) {
       gulp.start('clean-js');
       gulp.start('concat');
-      //  gulp.start('refresh');
     });
     // scripts exclude
     gulp.watch(paths.scripts.exclude).on('change', function(file) {
       gulp.start('minifyScripts');
-      //  gulp.start('refresh');
     });
     // css
     gulp.watch(paths.styles.watch).on('change', function(file) {
       gulp.start('clean-css');
       gulp.start('css');
       gulp.start('css-inline');
-        // gulp.start('browserSync');
     });
     gulp.watch(paths.sitemap.input).on('change', function(file) {
       gulp.start('sitemap');
     });
-    // gulp.watch(paths.posts.input).on('change', function(file) {
-    //   gulp.start('posts');
-    // });
+
     gulp.watch(paths.collections.input).on('change', function(file) {
       gulp.start('collections');
-        // gulp.start('browserSync');
     });
-    // gulp.watch(paths.drafts.input).on('change', function(file) {
-    //   gulp.start('drafts');
-    //     // gulp.start('browserSync');
-    // });
 });
 
 // Run livereload after file change
@@ -829,9 +806,6 @@ gulp.task('default', [
   'concat',
 	'svg',
 	'bower',
-  // 'posts',
   'sitemap',
-  // 'drafts',
   'clean'
-	// 'minifyScripts'
 ]);

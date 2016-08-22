@@ -63,7 +63,7 @@ This is a message that's far easier to deliver by [press release][14] and legal 
 
 {% if page.quote %}
   <aside class="blog-pullquote">
-  <q>{{page.quote}}</q>
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
   </aside>
 {% endif %}
 

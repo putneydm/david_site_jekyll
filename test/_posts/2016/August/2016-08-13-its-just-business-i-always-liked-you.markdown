@@ -31,9 +31,9 @@ I'll stipulate to all of that.
 
 
 {% if page.quote %}
-  <aside class="blog-pullquote">
-  <q>{{page.quote | markdownify | strip_html }}</q>
-  </aside>
+  <div class="blog-pullquote">
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
+  </div>
 {% endif %}
 
 While it is true the internet _did_ destroy the business of newspapers, but not because "nobody pays for news any more." It was in deeper, more irreversible ways.
@@ -54,7 +54,7 @@ These monopolies can never be re-created, the conditions they spawned never reca
 
 {% if page.quotetoo %}
   <aside class="blog-pullquote">
-  <q>{{page.quote | markdownify | strip_html }}</q>
+  <blockquote>{{page.quotetoo | markdownify | strip_html }}</blockquote>
   </aside>
 {% endif %}
 

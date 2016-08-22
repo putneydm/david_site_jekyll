@@ -190,22 +190,38 @@ h3 {
 .blog-related-links-label	{ color:$med; }
 
 .blog-pullquote {
-	margin:30px 0 60px 0;
+	margin:0 0 rem(60) 0;
+	padding:rem(40) 0 0;
 	text-align: center;
 		@media screen and (max-width:em(500)) {
 			@include spanner_too (3, 700, 0, 3);
-			margin:rem(20) 0 rem(30) 0;
+			margin:0 0 rem(30) 0;
+			padding:rem(20) 0 0;
 		}
-	q {
-		font-size:em(22);
+	blockquote {
+		border-left: 0;
+		margin:0;
+		font-size:rem(22);
 		color:$med;
 		font-family:$sans;
 		line-height:160%;
-		quotes: "“" "”" "‘" "’";
 			@media screen and (max-width:em(550)) {
 			font-size:em(20);
 			}
 	}
+}
+.blog-pullquote--set {
+	transform: translateY(30px);
+	opacity:0;
+	will-change: transform, opacity;
+	@media screen and (max-width:rem(450))	{
+		transform: translateY(15px)
+	}
+}
+.blog-pullquote--animate {
+	transform: translateY(0px);
+	opacity:1;
+	transition: transform .3s ease-out, opacity .25s ease-out;
 }
 .content-nav {
 	text-align:center;
@@ -325,6 +341,7 @@ pre {
 			left:0;
 			width:0%;
 			transition:width .2s cubic-bezier(.31,.45,.45,1.33);
+			transform: translateZ(0);
 		}
 }
 .pagination-wrapper {

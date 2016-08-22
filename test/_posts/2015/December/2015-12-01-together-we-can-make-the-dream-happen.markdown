@@ -29,7 +29,7 @@ We know that $329 doesn't sound like much money to to a far-reaching internet en
 
 {% if page.quote %}
   <aside class="blog-pullquote">
-  <q>{{page.quote}}</q>
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
   </aside>
 {% endif %}
 

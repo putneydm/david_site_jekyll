@@ -26,6 +26,7 @@ var pageFunctions = {
     self.getElementsHero();
     self.getElementsBlog();
     self.initScrollListener('blog');
+    self.initQuoteAnimate(self.blogQuotes);
   },
   intializeBlogEntry: function() {
     var self=this;
@@ -34,6 +35,7 @@ var pageFunctions = {
     this.initScrollBackButton();
     self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
     self.initScrollListener('blogEntry');
+    self.initQuoteAnimate(self.blogQuotes);
   },
   initializeIndex: function() {
     var self=this;
@@ -69,6 +71,7 @@ var pageFunctions = {
     self.footNoteReturnButton = document.querySelector('#btn-footnote-return');
     self.scrollProgress = document.querySelector('#scroll-progress');
     self.blogTeaser = document.querySelector('#blog-teaser-wrapper');
+    self.blogQuotes = [].slice.call(document.querySelectorAll(".blog-pullquote"));
   },
   getElementsIndex: function() {
     var self=this;
@@ -89,6 +92,7 @@ var pageFunctions = {
        self.handleFootnoteButton (scrollPosition);
        self.handleManualScrollback(scrollPosition);
        self.initBlogTeasers();
+       self.initQuoteAnimate(self.blogQuotes);
      }
      if (pageType === 'index' || pageType === 'portfolio_entry') {
       self.handleHeroAnimate(scrollPosition);
@@ -391,6 +395,19 @@ var pageFunctions = {
       self.addShit(scrollButton, 'scroll-to-top-inactive');
     }
   },
+  initQuoteAnimate: function(quoteList) {
+      var self=this;
+      quoteList.forEach(function(el) {
+        var visible = self.isElementVisible(el);
+        var active =
+        el.classList.contains('blog-pullquote--set');
+        if (!visible && !active) {
+          el.classList.add('blog-pullquote--set');
+        } else if (visible && active) {
+          el.classList.add('blog-pullquote--animate');
+        }
+      });
+  },
   handleSiteFooter: function(scrollPosition) {
     var self = this;
     var siteFooter = self.siteFooter,
@@ -532,21 +549,30 @@ var pageFunctions = {
       self.removeShitTimer(topNav, 'nav-list--close', 500);
     }
   },
-  isElementVisible: function(el) {
-    var rect   = el.getBoundingClientRect(),
-      vWidth   = window.innerWidth || document.documentElement.clientWidth,
-      vHeight  = window.innerHeight || document.documentElement.clientHeight,
-      efp      = function (x, y) { return document.elementFromPoint(x, y); };
-    // Return false if it's not in the viewport
-    if (rect.right < 0 || rect.bottom < 0 || rect.left > vWidth || rect.top > vHeight) {
-      return false;
-      }
-    // Return true if any of its four corners are visible
-    return (
-        el.contains(efp(rect.left,  rect.top)) ||  el.contains(efp(rect.right, rect.top)) ||  el.contains(efp(rect.right, rect.bottom)) ||  el.contains(efp(rect.left,  rect.bottom)) );
-  },
+  // isElementVisible: function(el) {
+  //   var rect   = el.getBoundingClientRect(),
+  //     vWidth   = window.innerWidth || document.documentElement.clientWidth,
+  //     vHeight  = window.innerHeight || document.documentElement.clientHeight,
+  //     efp      = function (x, y) { return document.elementFromPoint(x, y); };
+  //   // Return false if it's not in the viewport
+  //   if (rect.right < 0 || rect.bottom < 0 || rect.left > vWidth || rect.top > vHeight) {
+  //     return false;
+  //     }
+  //   // Return true if any of its four corners are visible
+  //   return (
+  //       el.contains(efp(rect.left,  rect.top)) ||  el.contains(efp(rect.right, rect.top)) ||  el.contains(efp(rect.right, rect.bottom)) ||  el.contains(efp(rect.left,  rect.bottom)) );
+  // },
   getScrollPosition: function () {
     var scrollPosition = window.scrollY;
     return scrollPosition;
-  }
+  },
+  isElementVisible: function ( elem ) {
+      var distance = elem.getBoundingClientRect();
+      return (
+          distance.top >= 0 &&
+          distance.left >= 0 &&
+          distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+}
 };

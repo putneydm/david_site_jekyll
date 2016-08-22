@@ -40,7 +40,7 @@ These user experience aspects alone -- the Watch's seamless and effortless trans
 
 {% if page.quote %}
   <aside class="blog-pullquote">
-  <q>{{page.quote | markdownify | strip_html }}</q>
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
   </aside>
 {% endif %}
 

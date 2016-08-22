@@ -32,7 +32,7 @@ Every one of those gestures was beautifully fluid with extreme attention to deta
 
 {% if page.quote %}
   <aside class="blog-pullquote">
-  <q>{{page.quote}}</q>
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
   </aside>
 {% endif %}
 
