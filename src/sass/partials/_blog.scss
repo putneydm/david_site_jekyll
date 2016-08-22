@@ -341,6 +341,7 @@ pre {
 			left:0;
 			width:0%;
 			transition:width .2s cubic-bezier(.31,.45,.45,1.33);
+			transform: translateZ(0);
 		}
 }
 .pagination-wrapper {
