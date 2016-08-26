@@ -209,13 +209,14 @@
 	padding:rem(5);
 	border-radius:2px;
 	flex-grow:0;
-	transform: translateY(60px);
+	transform: translateY(rem(30));
 	opacity:0;
 
 	@media screen and (max-width:rem(650)) {
 		 padding:rem(5) rem(5) 0 rem(5);
 	}
 	@media screen and (max-width:rem(550)) {
+		transform: translateY(rem(20));
 		flex-basis:calc(50% - 5px);
 		flex-grow:0;
 		&:nth-child(1) {flex-basis:calc(50% - 5px);order:3}
