@@ -396,17 +396,17 @@ var pageFunctions = {
     }
   },
   initQuoteAnimate: function(quoteList) {
-      var self=this;
-      quoteList.forEach(function(el) {
-        var visible = self.isElementVisible(el);
-        var active =
-        el.classList.contains('blog-pullquote--set');
-        if (!visible && !active) {
-          el.classList.add('blog-pullquote--set');
-        } else if (visible && active) {
-          el.classList.add('blog-pullquote--animate');
-        }
-      });
+    var self=this;
+    quoteList.forEach(function(el) {
+      var visible = self.isElementVisible(el);
+      var active =
+      el.classList.contains('blog-pullquote--set');
+      if (!visible && !active) {
+        el.classList.add('blog-pullquote--set');
+      } else if (visible && active) {
+        el.classList.add('blog-pullquote--animate');
+      }
+    });
   },
   handleSiteFooter: function(scrollPosition) {
     var self = this;
