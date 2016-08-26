@@ -48,8 +48,8 @@ var date = new Date(),
     rando = Math.floor((Math.random() * 1000000) + 1);
 
 // creates file names based on date
-var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + rando + '.css';
-var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + rando + '.js';
+var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + 'xx.css';
+var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
 
 var paths = {
   pageLayouts: {
