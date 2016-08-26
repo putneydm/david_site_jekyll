@@ -563,8 +563,7 @@ var pageFunctions = {
   //       el.contains(efp(rect.left,  rect.top)) ||  el.contains(efp(rect.right, rect.top)) ||  el.contains(efp(rect.right, rect.bottom)) ||  el.contains(efp(rect.left,  rect.bottom)) );
   // },
   getScrollPosition: function () {
-    var scrollPosition = window.scrollY;
-    return scrollPosition;
+    return scrollPosition = window.scrollY;
   },
   isElementVisible: function ( elem ) {
       var distance = elem.getBoundingClientRect();
