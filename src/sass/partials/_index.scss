@@ -199,9 +199,7 @@
 		&:nth-child(1) {flex-basis:calc(50% - 5px);order:3}
 		&:nth-child(3) {order:2}
 	}
-
 }
-
 // if there are fewer than four
 .blog-teaser-item {
 	flex-basis:25%;
@@ -234,7 +232,6 @@
 		img {position: absolute;top:0}
 }
 .blog-teaser-wrapper--active {
-
 	.blog-teaser-item {
 		transform: translateY(0);
 		opacity:1;
