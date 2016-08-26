@@ -178,7 +178,6 @@ gulp.task('icons', function() {
 });
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
-   console.log(filename);
    gulp.src(paths.scripts.input)
    .pipe(concat(scriptname)) // renames to file w/ todays date for cachebusting
    .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
@@ -275,11 +274,6 @@ gulp.task('bower', function() {
 }))
     .pipe(gulp.dest(paths.bower.vendor))
 });
-
-// gulp.task('posts', function() {
-//    gulp.src(paths.posts.input)
-//    .pipe(gulp.dest(paths.posts.output))
-// });
 
 gulp.task('collections', function() {
    gulp.src(paths.collections.input)
@@ -766,8 +760,7 @@ gulp.task('listen', function () {
     });
     // scripts
     gulp.watch(paths.scripts.input).on('change', function(file) {
-      gulp.start('clean-js');
-      gulp.start('concat');
+      gulp.start(['concat', 'pages', 'layouts', 'clean-js']);
     });
     // scripts exclude
     gulp.watch(paths.scripts.exclude).on('change', function(file) {
@@ -775,9 +768,7 @@ gulp.task('listen', function () {
     });
     // css
     gulp.watch(paths.styles.watch).on('change', function(file) {
-      gulp.start('clean-css');
-      gulp.start('css');
-      gulp.start('css-inline');
+      gulp.start(['css', 'css-inline', 'clean-css']);
     });
     gulp.watch(paths.sitemap.input).on('change', function(file) {
       gulp.start('sitemap');
