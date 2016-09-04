@@ -49,9 +49,9 @@
 		margin-bottom:rem(15);
 		&::before {
 			display:block;
-			width:150px;
+			width:rem(150);
 			content: " ";
-			height:1px;
+			height:rem(1);
 			border-top: 1px solid $med;
 			margin:0 auto rem(8);
 		}
