@@ -109,9 +109,9 @@ var pageFunctions = {
      if (pageType === 'portfolio_entry') {
        self.handleInsideNavTransition(scrollPosition);
      }
-       self.handleScrollButton(scrollPosition);
-       self.handleSiteFooter(scrollPosition);
-       self.handleManualScrollback(scrollPosition);
+     self.handleScrollButton(scrollPosition);
+     self.handleSiteFooter(scrollPosition);
+     self.handleManualScrollback(scrollPosition);
    }
   },
   initResizeListener: function(){
