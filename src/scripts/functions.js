@@ -430,11 +430,13 @@ var pageFunctions = {
     var progressBar = self.scrollProgress,
         activeItem = document.querySelector('.entry--active .blog-entry-text');
     if (activeItem) {
-      var percent = self.calculateBlogPercentage(activeItem);
-      progressBar.style.width = percent + '%';
+      var percent = 100 - self.calculateBlogPercentage(activeItem);
+      // progressBar.style.width = percent + '%';
+      progressBar.style.transform = "translateX(-" + percent + "%)"
     }
     if (!activeItem) {
-      progressBar.style.width = '0%';
+      // progressBar.style.width = '0%';
+      progressBar.style.transform = 'translateX(-100%)';
     }
   },
   calculateBlogPercentage: function(activeItem) {
