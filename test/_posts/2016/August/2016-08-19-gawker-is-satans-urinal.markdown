@@ -8,7 +8,7 @@ subhead:
 tags: ['press', 'media', 'Gawker', 'terrible things', 'news']
 image: denton
 imageAlt: "Douchebag"
-promo: ""
+promo: "Gawker is Satan's urinal"
 quote: Even as Gawker finally tumbles ass over teakettle off the national stage, it seems no one in the news business wants to call a spade a spade.
 ---
 
