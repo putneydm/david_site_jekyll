@@ -51,6 +51,10 @@ var pageFunctions = {
     self.getElementsHero();
     self.initScrollListener('portfolio_entry');
   },
+  intializeError: function() {
+    var self=this;
+    self.initScrollListener();
+  },
   getElementsAll: function() {
     var self=this;
     self.header = document.querySelector('#inside-header');
