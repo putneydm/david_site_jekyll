@@ -437,6 +437,10 @@ var pageFunctions = {
         active = siteFooter.classList.contains('site-footer-active');
     if (isVisible) {
       self.addShit(siteFooter, 'site-footer-active');
+      self.handleWillChange("will-change-ot", siteFooter, 'LI');
+      self.handleWillChange("will-change-o", siteFooter);
+    }
+  },
   handleWillChange: function(style, mainEl, subEl) {
     var self=this;
     if (subEl) {
