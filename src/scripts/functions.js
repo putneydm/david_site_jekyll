@@ -89,6 +89,7 @@ var pageFunctions = {
     if (pageType === "blog") {
        self.handleInsideNavTransition(scrollPosition);
        self.handleNavAnimate(scrollPosition);
+       self.handleHeroAnimate(scrollPosition);
       }
      if (pageType === "blogEntry" || pageType === "blog") {
        self.setActiveBlogItem();
