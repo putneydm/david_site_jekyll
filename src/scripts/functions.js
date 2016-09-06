@@ -230,11 +230,14 @@ var pageFunctions = {
         active = header.classList.contains('nav-fixed-bar--nodisplay');
 
     if (active && pos >= heroArt) {
+      // self.addShit(header, 'will-change-ot');
       self.removeShit(header, 'nav-fixed-bar--nodisplay');
       self.removeShit(logo, 'main-header-logo--nodisplay');
       self.removeShit(nav, 'nav-list--nodisplay');
+      // self.handleWillChange('will-change-ot', header);
     }
     if (!active && pos <= heroArt) {
+      // self.addShit(header, ['will-change-ot', 'nav-fixed-bar--nodisplay'] );
       self.addShit(header, 'nav-fixed-bar--nodisplay');
       self.addShit(logo, 'main-header-logo--nodisplay');
       self.addShit(nav, 'nav-list--nodisplay');
@@ -252,14 +255,12 @@ var pageFunctions = {
         trigger = heroArt * 1.25,
         extended = header.classList.contains('nav-fixed-bar--extend'),
         navOpen = topNav.classList.contains('nav-list--open');
-
     if (!extended && pos >= trigger) {
-      header.classList.add('nav-fixed-bar--extend');
       self.addShit(header, ['will-change-ot', 'nav-fixed-bar--extend']);
       self.handleWillChange('will-change-ot', header);
+      // header.classList.add('nav-fixed-bar--extend');
     }
     if (!navOpen && extended && pos <= trigger) {
-      header.classList.add('nav-fixed-bar--retract');
       self.addShit(header, ['will-change-ot', 'nav-fixed-bar--retract']);
       self.handleWillChange('will-change-ot', header);
     }
