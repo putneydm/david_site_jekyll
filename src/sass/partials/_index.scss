@@ -175,10 +175,6 @@
 .blog-teaser-label {
 	margin:0 0 rem(10) rem(5);
 }
-.blog-teaser-item {
-	will-change:transform;
-}
-
 // if there are four items
 .blog-teaser-item:first-child:nth-last-child(n+4),
 .blog-teaser-item:first-child:nth-last-child(n+4) ~ * {

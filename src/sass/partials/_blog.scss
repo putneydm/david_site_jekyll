@@ -213,7 +213,6 @@ h3 {
 .blog-pullquote--set {
 	transform: translateY(30px);
 	opacity:0;
-	will-change: transform, opacity;
 	@media screen and (max-width:rem(450))	{
 		transform: translateY(15px)
 	}
