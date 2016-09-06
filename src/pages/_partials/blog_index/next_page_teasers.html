@@ -5,7 +5,7 @@
   <h4 class="blog-teaser-label">On the next page ... </h4>
   <ul class="blog-teaser-list">
   {% for post in site.categories.blog-entry limit:4 offset:post-offset %}
-    <li class="blog-teaser-item">
+    <li class="blog-teaser-item will-change-ot">
     		<a href="{{ post.url }}" rel="canonical">
     		<figure class="blog-teaser-image med-photo-overlay">
         {% if post.image %}
