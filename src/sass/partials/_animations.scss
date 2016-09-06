@@ -29,6 +29,10 @@
 		top:rem(160);
 	}
 }
+.triple-module-head--active	{
+	opacity:1;
+	transition:opacity .5s .9s;
+	}
 .nav-menu-button-icn--open {
 	display:none;
 }
