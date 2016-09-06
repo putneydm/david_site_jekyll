@@ -37,3 +37,9 @@ a {
 }
 img {width:100%;}
 svg {width:rem(20);height:rem(20);}
+.will-change-o {
+	will-change:opacity;
+}
+.will-change-ot {
+	will-change:opacity, transform;
+}
