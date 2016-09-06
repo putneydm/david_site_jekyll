@@ -203,8 +203,8 @@
 	padding:rem(5);
 	border-radius:2px;
 	flex-grow:0;
-	transform: translateY(rem(30));
 	opacity:0;
+	transform: translateY(rem(30));
 
 	@media screen and (max-width:rem(650)) {
 		 padding:rem(5) rem(5) 0 rem(5);
@@ -229,9 +229,9 @@
 }
 .blog-teaser-wrapper--active {
 	.blog-teaser-item {
-		transform: translateY(0);
 		opacity:1;
-		transition:transform .4s cubic-bezier(.55,.3,.38,1.55), opacity .2s ease-in;
+		transform: translateY(0);
+		transition:opacity .2s ease-in, transform .4s cubic-bezier(.55,.3,.38,1.55) ;
 
 		&:nth-child(1) {transition-delay: .2s}
 		&:nth-child(2) {}
