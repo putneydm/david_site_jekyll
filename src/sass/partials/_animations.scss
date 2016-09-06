@@ -15,14 +15,16 @@
 }
 .main-header-nameplate--active {
 	opacity:1;
-	transform: scale(1,1);
-	transition:opacity .6s .4s ease-in, transform .4s .4s cubic-bezier(1.000, 0.215, 0.020, 1.335);
+	transform: translateY(0);
+	// transform: scale(1,1);
+	transition:opacity .6s .3s ease-in, transform .4s .3s ease-out;
 }
 .navigation-menu--active {
-	bottom:rem(60);
+	// bottom:rem(60);
 	opacity:1;
-	transform: scale(1,1);
-	transition:opacity .7s .8s ease-out, transform .4s .8s ease-out;
+	transform: translateX(0);
+	// line-height:150%;
+	transition:opacity .6s .4s ease-out, transform .4s .4s ease-out;
 	@media screen and (max-width:em(425)) {
 		top:rem(160);
 	}
