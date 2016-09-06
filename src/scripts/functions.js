@@ -517,7 +517,12 @@ var pageFunctions = {
       style.forEach(function(el) {
         object.classList.add(el);
       });
-    } else {
+    } else if (object.constructor === Array) {
+        object.forEach(function(el) {
+          el.classList.add(style);
+        });
+    }
+    else {
       object.classList.add(style);
     }
   },
