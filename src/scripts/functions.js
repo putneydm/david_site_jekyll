@@ -63,6 +63,7 @@ var pageFunctions = {
     self.menuButton = document.querySelector('#menu-button');
     self.topNav = document.querySelector('#nav-menu'),
     self.siteFooter = document.querySelector('#site-footer');
+    self.siteFooterLinks = [].slice.call(document.querySelectorAll('#footer-links li'));
     self.scrollButton = document.querySelector('#scroll-to-top');
   },
   getElementsHero: function() {
@@ -75,11 +76,16 @@ var pageFunctions = {
     self.footNoteReturnButton = document.querySelector('#btn-footnote-return');
     self.scrollProgress = document.querySelector('#scroll-progress');
     self.blogTeaser = document.querySelector('#blog-teaser-wrapper');
-    self.blogQuotes = [].slice.call(document.querySelectorAll(".blog-pullquote"));
+    self.blogQuotes = [].slice.call(document.querySelectorAll('.blog-pullquote'));
+    self.blogTeasers = [].slice.call(document.querySelectorAll('.blog-teaser-item'));
+    self.BlogTeaserList = document.querySelector('.blog-teaser-list');
+
   },
   getElementsIndex: function() {
     var self=this;
     self.blogTeaser = document.querySelector('#blog-teaser-wrapper');
+    self.blogTeasers = [].slice.call(document.querySelectorAll('.blog-teaser-item'));
+    self.BlogTeaserList = document.querySelector('.blog-teaser-list');
   },
   initScrollListener: function (pageType) {
     var self=this;
