@@ -89,11 +89,12 @@
 	text-align:center;
 	color:$med;
 	opacity:0;
-	max-width:rem(1100);
+	max-width:rem(900);
 	min-height:rem(200);
-	transform: scale(.95,.95);
 	line-height:150%;
 		@media screen  and (max-width:em(600)) {
 		font-size:em(18);
+		margin:rem(30) auto;
+		line-height:140%;
 		}
 	}
