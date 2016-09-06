@@ -437,6 +437,19 @@ var pageFunctions = {
         active = siteFooter.classList.contains('site-footer-active');
     if (isVisible) {
       self.addShit(siteFooter, 'site-footer-active');
+  handleWillChange: function(style, mainEl, subEl) {
+    var self=this;
+    if (subEl) {
+      mainEl.addEventListener('transitionend', function(e) {
+        var el = e.target;
+        if (el.tagName === subEl) {
+          el.classList.remove(style);
+        }
+      });
+    } else {
+      mainEl.addEventListener('transitionend', function(e) {
+        mainEl.classList.remove(style);
+      });
     }
   },
   handleScrollProgress: function() {
