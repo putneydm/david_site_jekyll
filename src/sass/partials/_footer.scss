@@ -1,9 +1,6 @@
 .site-footer {
-	// aheight:330px;
 	width:100%;
 	display:block;
-	}
-.site-footer-inactive {
 	opacity:0;
 	}
 .site-footer-active {
@@ -49,12 +46,12 @@
 	transition: fill .2s;
 	margin-top:rem(18);
 }
-.site-footer-inactive {
+.site-footer {
 	.mail-link {
 		opacity:0;
 		transform: scale(.1,.1);
 	}
-	.twitter-link {
+ 	.twitter-link {
 		opacity:0;
 		transform: scale(.1,.1);
 	}
@@ -67,7 +64,6 @@
 		transform: scale(.1,.1);
 	}
 }
-
 .site-footer-active {
 	.mail-link {
 		opacity:1;
@@ -102,7 +98,6 @@
 		transition-timing-function: cubic-bezier(.91,-0.01,.29,1.84);
 	}
 }
-
 @keyframes linksBounce {
     0%   {top:0;height:55px}
     50%  {top:-20px;height:55px}
