@@ -201,7 +201,7 @@ var pageFunctions = {
       self.removeShit(header, 'nav-fixed-bar--display');
       self.removeShit(logo, 'main-header-logo--display');
       self.removeShit(nav, 'nav-list--display');
-      self.addShit(header, 'nav-fixed-bar');
+      self.addShit(header, ['will-change-ot', 'nav-fixed-bar']);
       self.addShit(logo, 'main-header-logo');
       self.addShit(nav, 'nav-list');
     }
@@ -232,6 +232,7 @@ var pageFunctions = {
       self.addShit(header, 'nav-fixed-bar--nodisplay');
       self.addShit(logo, 'main-header-logo--nodisplay');
       self.addShit(nav, 'nav-list--nodisplay');
+      self.handleWillChange('will-change-ot', header);
     }
   },
   handleNavAnimate: function(pos) {
@@ -248,9 +249,13 @@ var pageFunctions = {
 
     if (!extended && pos >= trigger) {
       header.classList.add('nav-fixed-bar--extend');
+      self.addShit(header, ['will-change-ot', 'nav-fixed-bar--extend']);
+      self.handleWillChange('will-change-ot', header);
     }
     if (!navOpen && extended && pos <= trigger) {
       header.classList.add('nav-fixed-bar--retract');
+      self.addShit(header, ['will-change-ot', 'nav-fixed-bar--retract']);
+      self.handleWillChange('will-change-ot', header);
     }
     if (extended && pos <= heroArt) {
       self.removeShit(header, ["nav-fixed-bar--extend", "nav-fixed-bar--retract"]);
@@ -268,8 +273,10 @@ var pageFunctions = {
        active = el.classList.contains('blog-teaser-wrapper--active'),
        rect = el.getBoundingClientRect();
 
-   if (rect.top <= window.innerHeight * .75) {
-     self.addShit(el, 'blog-teaser-wrapper--active')
+
+   if (rect.top <= window.innerHeight * .75 && !active) {
+     self.addShit(el, 'blog-teaser-wrapper--active');
+     self.handleWillChange('will-change-ot', self.BlogTeaserList, 'LI');
    }
  },
   // onload functions
@@ -283,6 +290,9 @@ var pageFunctions = {
     self.addShit(siteNameplate, 'main-header-nameplate--active');
     self.addShit(navigation, 'navigation-menu--active');
     self.addShit(siteSubhead, 'triple-module-head--active');
+    self.handleWillChange('will-change-ot', siteNameplate);
+    self.handleWillChange('will-change-ot', siteSubhead);
+    self.handleWillChange('will-change-ot', navigation);
   },
   // sets bg image on hero image
   setBackground: function () {
@@ -393,10 +403,10 @@ var pageFunctions = {
         active = scrollButton.classList.contains('scroll-to-top-active');
 
     if (scrollPosition > 300 && !active) {
-      self.addShit(scrollButton, 'scroll-to-top-active');
+      self.addShit(scrollButton, ["will-change-o", "scroll-to-top-active"]);
     }
     if (scrollPosition < 300 && active) {
-      self.removeShit(scrollButton, 'scroll-to-top-active');
+      self.removeShit(scrollButton, ['scroll-to-top-active', 'will-change-o']);
       self.addShit(scrollButton, 'scroll-to-top-inactive');
     }
   },
@@ -407,8 +417,9 @@ var pageFunctions = {
       var active =
       el.classList.contains('blog-pullquote--set');
       if (!visible && !active) {
-        el.classList.add('blog-pullquote--set');
+        self.addShit(el, ['will-change-ot', 'blog-pullquote--set'])
       } else if (visible && active) {
+        self.handleWillChange('will-change-ot', el);
         el.classList.add('blog-pullquote--animate');
       }
     });
@@ -418,10 +429,6 @@ var pageFunctions = {
     var siteFooter = self.siteFooter,
         isVisible = self.isElementVisible(siteFooter),
         active = siteFooter.classList.contains('site-footer-active');
-
-    if (scrollPosition > 300 && !active) {
-      self.addShit(siteFooter, 'site-footer-inactive');
-      }
     if (isVisible) {
       self.addShit(siteFooter, 'site-footer-active');
     }
