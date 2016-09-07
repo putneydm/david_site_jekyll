@@ -18,8 +18,8 @@
 	height:rem(125);
 	width:rem(500);
 	opacity:0;
-	transform: scale(1,1);
-	will-change:transform;
+	transform: translateY(-50px);
+	// transform: scale(1,1);
 			@media screen and (max-width:em(800)) {
 			height:rem(100);
 			width:rem(400);
@@ -36,8 +36,7 @@
 	display: flex;
 	justify-content: center;
 	opacity:0;
-	transform: scale(1,1);
-	will-change:transform;
+	transform: translateY(30px);
 		@media screen and (max-width:em(750)) {
 			margin:0 0 rem(8);
 			}
@@ -90,17 +89,12 @@
 	text-align:center;
 	color:$med;
 	opacity:0;
-	max-width:rem(1100);
+	max-width:rem(900);
 	min-height:rem(200);
-	transform: scale(.95,.95);
 	line-height:150%;
-	will-change:transform;
 		@media screen  and (max-width:em(600)) {
 		font-size:em(18);
+		margin:rem(30) auto;
+		line-height:140%;
 		}
-	}
-.triple-module-head--active	{
-	opacity:1;
-	transform: scale(1,1);
-	transition:opacity .5s 1.1s, transform .4s 1.1s ease-out;
 	}

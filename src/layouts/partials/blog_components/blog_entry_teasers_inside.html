@@ -20,7 +20,7 @@
 		{% assign size = myArray.size %}
 		{% assign randompost = site.time | date: "%s%N" | modulo: size %}
 
-		<li class="blog-teaser-item blog-teaser-highlight">
+		<li class="blog-teaser-item blog-teaser-highlight will-change-ot">
 			<a href="{{ myArray[randompost].url }}" rel="canonical">
 			<figure class="blog-teaser-image med-photo-overlay">
 			{% if myArray[randompost].image %}
@@ -47,7 +47,7 @@
 		{% assign countArray = site.array %}
 		{% for post in site.categories.blog-entry limit: 5 %}
 		{% if post.promo != currentEntry.promo and countArray.size < 3 %}
-			<li class="blog-teaser-item">
+			<li class="blog-teaser-item will-change-ot">
 					<a href="{{post.url}}" rel="canonical">
 					<figure class="blog-teaser-image med-photo-overlay">
 					{% if post.image %}

@@ -1,23 +1,23 @@
 .blog-container{
-	max-width:700px;
-	margin:0 auto 100px;
-	padding:80px 0 0 0;
+	max-width:rem(700);
+	margin:0 auto rem(100);
+	padding:rem(80) 0 0 0;
 	position:relative;
 }
 .blog-entry {
-	margin-bottom:40px;
-	padding-bottom:30px;
+	margin-bottom:rem(40);
+	padding-bottom:rem(30);
 	background-image: linear-gradient(to bottom, transparent 75%, $dark 75%);
-	background-size: 60% 2px;
+	background-size: 60% rem(2);
 	background-origin: padding-box;
 	background-position: center 100%;
 	background-repeat: no-repeat;
 	}
   .blog-single-entry{
-  	margin-top:60px;
+  	margin-top:rem(60);
   		@media screen and (max-width:em(720)) {
   			margin-top:rem(84);
-  			padding-top:0px;
+  			padding-top:0;
   		}
 			@media screen and (max-width:em(560)) {
 				margin-top:rem(115);
@@ -49,9 +49,9 @@
 		margin-bottom:rem(15);
 		&::before {
 			display:block;
-			width:150px;
+			width:rem(150);
 			content: " ";
-			height:1px;
+			height:rem(1);
 			border-top: 1px solid $med;
 			margin:0 auto rem(8);
 		}

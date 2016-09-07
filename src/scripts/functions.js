@@ -51,6 +51,10 @@ var pageFunctions = {
     self.getElementsHero();
     self.initScrollListener('portfolio_entry');
   },
+  intializeError: function() {
+    var self=this;
+    self.initScrollListener();
+  },
   getElementsAll: function() {
     var self=this;
     self.header = document.querySelector('#inside-header');
@@ -59,6 +63,7 @@ var pageFunctions = {
     self.menuButton = document.querySelector('#menu-button');
     self.topNav = document.querySelector('#nav-menu'),
     self.siteFooter = document.querySelector('#site-footer');
+    self.siteFooterLinks = [].slice.call(document.querySelectorAll('#footer-links li'));
     self.scrollButton = document.querySelector('#scroll-to-top');
   },
   getElementsHero: function() {
@@ -71,11 +76,16 @@ var pageFunctions = {
     self.footNoteReturnButton = document.querySelector('#btn-footnote-return');
     self.scrollProgress = document.querySelector('#scroll-progress');
     self.blogTeaser = document.querySelector('#blog-teaser-wrapper');
-    self.blogQuotes = [].slice.call(document.querySelectorAll(".blog-pullquote"));
+    self.blogQuotes = [].slice.call(document.querySelectorAll('.blog-pullquote'));
+    self.blogTeasers = [].slice.call(document.querySelectorAll('.blog-teaser-item'));
+    self.BlogTeaserList = document.querySelector('.blog-teaser-list');
+
   },
   getElementsIndex: function() {
     var self=this;
     self.blogTeaser = document.querySelector('#blog-teaser-wrapper');
+    self.blogTeasers = [].slice.call(document.querySelectorAll('.blog-teaser-item'));
+    self.BlogTeaserList = document.querySelector('.blog-teaser-list');
   },
   initScrollListener: function (pageType) {
     var self=this;
@@ -85,6 +95,7 @@ var pageFunctions = {
     if (pageType === "blog") {
        self.handleInsideNavTransition(scrollPosition);
        self.handleNavAnimate(scrollPosition);
+       self.handleHeroAnimate(scrollPosition);
       }
      if (pageType === "blogEntry" || pageType === "blog") {
        self.setActiveBlogItem();
@@ -105,9 +116,9 @@ var pageFunctions = {
      if (pageType === 'portfolio_entry') {
        self.handleInsideNavTransition(scrollPosition);
      }
-       self.handleScrollButton(scrollPosition);
-       self.handleSiteFooter(scrollPosition);
-       self.handleManualScrollback(scrollPosition);
+     self.handleScrollButton(scrollPosition);
+     self.handleSiteFooter(scrollPosition);
+     self.handleManualScrollback(scrollPosition);
    }
   },
   initResizeListener: function(){
@@ -196,7 +207,7 @@ var pageFunctions = {
       self.removeShit(header, 'nav-fixed-bar--display');
       self.removeShit(logo, 'main-header-logo--display');
       self.removeShit(nav, 'nav-list--display');
-      self.addShit(header, 'nav-fixed-bar');
+      self.addShit(header, ['will-change-ot', 'nav-fixed-bar']);
       self.addShit(logo, 'main-header-logo');
       self.addShit(nav, 'nav-list');
     }
@@ -219,14 +230,18 @@ var pageFunctions = {
         active = header.classList.contains('nav-fixed-bar--nodisplay');
 
     if (active && pos >= heroArt) {
+      // self.addShit(header, 'will-change-ot');
       self.removeShit(header, 'nav-fixed-bar--nodisplay');
       self.removeShit(logo, 'main-header-logo--nodisplay');
       self.removeShit(nav, 'nav-list--nodisplay');
+      // self.handleWillChange('will-change-ot', header);
     }
     if (!active && pos <= heroArt) {
+      // self.addShit(header, ['will-change-ot', 'nav-fixed-bar--nodisplay'] );
       self.addShit(header, 'nav-fixed-bar--nodisplay');
       self.addShit(logo, 'main-header-logo--nodisplay');
       self.addShit(nav, 'nav-list--nodisplay');
+      self.handleWillChange('will-change-ot', header);
     }
   },
   handleNavAnimate: function(pos) {
@@ -240,12 +255,14 @@ var pageFunctions = {
         trigger = heroArt * 1.25,
         extended = header.classList.contains('nav-fixed-bar--extend'),
         navOpen = topNav.classList.contains('nav-list--open');
-
     if (!extended && pos >= trigger) {
-      header.classList.add('nav-fixed-bar--extend');
+      self.addShit(header, ['will-change-ot', 'nav-fixed-bar--extend']);
+      self.handleWillChange('will-change-ot', header);
+      // header.classList.add('nav-fixed-bar--extend');
     }
     if (!navOpen && extended && pos <= trigger) {
-      header.classList.add('nav-fixed-bar--retract');
+      self.addShit(header, ['will-change-ot', 'nav-fixed-bar--retract']);
+      self.handleWillChange('will-change-ot', header);
     }
     if (extended && pos <= heroArt) {
       self.removeShit(header, ["nav-fixed-bar--extend", "nav-fixed-bar--retract"]);
@@ -263,8 +280,10 @@ var pageFunctions = {
        active = el.classList.contains('blog-teaser-wrapper--active'),
        rect = el.getBoundingClientRect();
 
-   if (rect.top <= window.innerHeight * .75) {
-     self.addShit(el, 'blog-teaser-wrapper--active')
+
+   if (rect.top <= window.innerHeight * .75 && !active) {
+     self.addShit(el, 'blog-teaser-wrapper--active');
+     self.handleWillChange('will-change-ot', self.BlogTeaserList, 'LI');
    }
  },
   // onload functions
@@ -278,6 +297,9 @@ var pageFunctions = {
     self.addShit(siteNameplate, 'main-header-nameplate--active');
     self.addShit(navigation, 'navigation-menu--active');
     self.addShit(siteSubhead, 'triple-module-head--active');
+    self.handleWillChange('will-change-ot', siteNameplate);
+    self.handleWillChange('will-change-ot', siteSubhead);
+    self.handleWillChange('will-change-ot', navigation);
   },
   // sets bg image on hero image
   setBackground: function () {
@@ -388,10 +410,10 @@ var pageFunctions = {
         active = scrollButton.classList.contains('scroll-to-top-active');
 
     if (scrollPosition > 300 && !active) {
-      self.addShit(scrollButton, 'scroll-to-top-active');
+      self.addShit(scrollButton, ["will-change-o", "scroll-to-top-active"]);
     }
     if (scrollPosition < 300 && active) {
-      self.removeShit(scrollButton, 'scroll-to-top-active');
+      self.removeShit(scrollButton, ['scroll-to-top-active', 'will-change-o']);
       self.addShit(scrollButton, 'scroll-to-top-inactive');
     }
   },
@@ -402,8 +424,9 @@ var pageFunctions = {
       var active =
       el.classList.contains('blog-pullquote--set');
       if (!visible && !active) {
-        el.classList.add('blog-pullquote--set');
+        self.addShit(el, ['will-change-ot', 'blog-pullquote--set'])
       } else if (visible && active) {
+        self.handleWillChange('will-change-ot', el);
         el.classList.add('blog-pullquote--animate');
       }
     });
@@ -413,12 +436,25 @@ var pageFunctions = {
     var siteFooter = self.siteFooter,
         isVisible = self.isElementVisible(siteFooter),
         active = siteFooter.classList.contains('site-footer-active');
-
-    if (scrollPosition > 300 && !active) {
-      self.addShit(siteFooter, 'site-footer-inactive');
-      }
     if (isVisible) {
       self.addShit(siteFooter, 'site-footer-active');
+      self.handleWillChange("will-change-ot", siteFooter, 'LI');
+      self.handleWillChange("will-change-o", siteFooter);
+    }
+  },
+  handleWillChange: function(style, mainEl, subEl) {
+    var self=this;
+    if (subEl) {
+      mainEl.addEventListener('transitionend', function(e) {
+        var el = e.target;
+        if (el.tagName === subEl) {
+          el.classList.remove(style);
+        }
+      });
+    } else {
+      mainEl.addEventListener('transitionend', function(e) {
+        mainEl.classList.remove(style);
+      });
     }
   },
   handleScrollProgress: function() {
@@ -426,11 +462,13 @@ var pageFunctions = {
     var progressBar = self.scrollProgress,
         activeItem = document.querySelector('.entry--active .blog-entry-text');
     if (activeItem) {
-      var percent = self.calculateBlogPercentage(activeItem);
-      progressBar.style.width = percent + '%';
+      var percent = 100 - self.calculateBlogPercentage(activeItem);
+      // progressBar.style.width = percent + '%';
+      progressBar.style.transform = "translateX(-" + percent + "%)"
     }
     if (!activeItem) {
-      progressBar.style.width = '0%';
+      // progressBar.style.width = '0%';
+      progressBar.style.transform = 'translateX(-100%)';
     }
   },
   calculateBlogPercentage: function(activeItem) {
@@ -484,7 +522,12 @@ var pageFunctions = {
       style.forEach(function(el) {
         object.classList.add(el);
       });
-    } else {
+    } else if (object.constructor === Array) {
+        object.forEach(function(el) {
+          el.classList.add(style);
+        });
+    }
+    else {
       object.classList.add(style);
     }
   },
@@ -549,19 +592,6 @@ var pageFunctions = {
       self.removeShitTimer(topNav, 'nav-list--close', 500);
     }
   },
-  // isElementVisible: function(el) {
-  //   var rect   = el.getBoundingClientRect(),
-  //     vWidth   = window.innerWidth || document.documentElement.clientWidth,
-  //     vHeight  = window.innerHeight || document.documentElement.clientHeight,
-  //     efp      = function (x, y) { return document.elementFromPoint(x, y); };
-  //   // Return false if it's not in the viewport
-  //   if (rect.right < 0 || rect.bottom < 0 || rect.left > vWidth || rect.top > vHeight) {
-  //     return false;
-  //     }
-  //   // Return true if any of its four corners are visible
-  //   return (
-  //       el.contains(efp(rect.left,  rect.top)) ||  el.contains(efp(rect.right, rect.top)) ||  el.contains(efp(rect.right, rect.bottom)) ||  el.contains(efp(rect.left,  rect.bottom)) );
-  // },
   getScrollPosition: function () {
     return scrollPosition = window.scrollY;
   },

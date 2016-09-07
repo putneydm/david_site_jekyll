@@ -6,6 +6,9 @@
 
 <body id="index-page" class="one" data-pagetype="index-page">
   @@include('partials/skip_links.html')
+  <div class="svg-import hidden" aria-hidden="true">
+      @@include('../svg/svgsprite.svg')
+  </div>
   @@include('partials/index/index_hero_presentation.html')
 <main id="main">
   @@include('partials/index/intro_text_block.html')
@@ -17,9 +20,6 @@
   </main>
 
   @@include('partials/footer/footer.html')
-    <div class="svg-import hidden" aria-hidden="true">
-        @@include('../svg/svgsprite.svg')
-    </div>
   </body>
   @@include('partials/js_links.html')
   {% include google_analytics.html %}

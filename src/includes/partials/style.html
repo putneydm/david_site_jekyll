@@ -4,6 +4,8 @@
     {% include index_embeded_styles.css %}
   {% elsif page.pagetype == "blog" or page.pagetype == "blog-entry" %}
     {% include blog_embedded_styles.css %}
+  {% elsif page.pagetype == "error" %}
+    {% include error_page.css %}
   {% endif %}
   {% include main_embedded_styles.css %}
 </style>
