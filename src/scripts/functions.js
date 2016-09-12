@@ -27,6 +27,7 @@ var pageFunctions = {
     self.getElementsBlog();
     self.initScrollListener('blog');
     self.initQuoteAnimate(self.blogQuotes);
+    this.initScrollBackButton();
   },
   intializeBlogEntry: function() {
     var self=this;
@@ -39,16 +40,16 @@ var pageFunctions = {
   },
   initializeIndex: function() {
     var self=this;
-    self.nameplateAnimate(); // animates nameplate
     self.getElementsIndex();
     self.getElementsHero();
     self.setBackground(self.heroArt);
+    self.nameplateAnimate(); // animates nameplate
     self.initScrollListener('index');
   },
   initializePortfolio: function() {
     var self=this;
-    self.setBackground();
     self.getElementsHero();
+    self.setBackground(self.heroArt);
     self.initScrollListener('portfolio_entry');
   },
   intializeError: function() {
@@ -177,7 +178,6 @@ var pageFunctions = {
       e.preventDefault();
       self.setInactiveState(true);
       });
-    }
   },
   handleHeroAnimate: function() {
     var self = this;
