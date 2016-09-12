@@ -302,22 +302,43 @@ var pageFunctions = {
     self.handleWillChange('will-change-ot', navigation);
   },
   // sets bg image on hero image
-  setBackground: function () {
-    console.log('setbackground');
+  setBackground: function(el) {
    var self = this;
-   var heroImage = document.querySelector('#hero-image'),
-       heroImageName = heroImage.getAttribute('data-image'),
+  //  var heroImage = document.querySelector('#hero-image'),
+    var heroImageName = el.getAttribute('data-image'),
        windowWidth = window.innerWidth, // finds width of browser window
+       pageType = document.querySelector('BODY').dataset.pagetype,
        imageURL = windowWidth > 700
           ? '/siteart/hero_' + heroImageName + '.jpg'
           : '/siteart/sm_hero_'  + heroImageName + '.jpg';
 
-   var img = new Image();
-   img.src = imageURL;
-   console.log(img);
-   img.onload = function(){
-      document.getElementById('hero-image').style.backgroundImage = 'url('+imageURL+')';
-    };
+     var img = new Image();
+     img.src = imageURL;
+
+    if (self.promiseCheck()) {
+      promise().then(function() {
+        el.style.backgroundImage = 'url('+imageURL+')';
+        el.classList.add('loading-overlay--loaded');
+        el.addEventListener('transitionend', function() {
+          self.removeShit(el, ['loading-overlay--loaded', 'loading-overlay--preset']);
+        });
+      });
+    } else {
+      el.style.backgroundImage = 'url('+imageURL+')';
+      self.removeShit(el, ['loading-overlay--loaded', 'loading-overlay--preset']);
+    }
+    function promise(){
+      var p = new Promise (function(resolve, reject) {
+        img.addEventListener('load', function(e) {
+          if (e) {
+            resolve('works!');
+          } else {
+            reject('failed');
+          }
+        });
+      });
+      return p
+    }
   },
   addLink: function() {
     var linkList = [{"name": "email-link", "link": "mailto:david@davidputney.com?Subject=Website%20feedback"}, {"name": "twitter-link", "link": "https://twitter.com/putneydm"}, {"name": "facebook-link",  "link": "https://www.facebook.com/david.putney"}];
