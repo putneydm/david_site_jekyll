@@ -171,9 +171,9 @@ var pageFunctions = {
   },
   initScrollBackButton: function () {
     var self = this;
-    var footnoteReturnButton = document.getElementById("btn-footnote-return");
-    if (footnoteReturnButton) {
-    footnoteReturnButton.addEventListener("click", function(e) {
+    // var footnoteReturnButton = document.getElementById("btn-footnote-return");
+    self.footNoteReturnButton.classList.add('btn-footnote-return--trans')
+    self.footNoteReturnButton.addEventListener("click", function(e) {
       e.preventDefault();
       self.setInactiveState(true);
       });
@@ -483,6 +483,7 @@ var pageFunctions = {
     var progressBar = self.scrollProgress,
         activeItem = document.querySelector('.entry--active .blog-entry-text');
     if (activeItem) {
+      progressBar.classList.add('scroll-progress--trans');
       var percent = 100 - self.calculateBlogPercentage(activeItem);
       // progressBar.style.width = percent + '%';
       progressBar.style.transform = "translateX(-" + percent + "%)"
