@@ -624,5 +624,13 @@ var pageFunctions = {
           distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
           distance.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
+},
+promiseCheck: function() {
+    var promiseSupport = false;
+  try {
+      var promiseFoo = new Promise(function (x, y) {});
+      promiseSupport = true;
+  } catch (e) {}
+  return promiseSupport
 }
 };
