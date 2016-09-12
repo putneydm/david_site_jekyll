@@ -123,14 +123,16 @@ h3 {
 	left:0;
 	right:0;
 	top:-45px;
-	transition-delay:1.5s;
-	transition:top .7s ease-in;
 	cursor:default;
 		@media screen and (max-width:em(750)) {
 			padding:rem(10);
 			font-size:rem(12);
 			max-width:rem(250);
 	}
+}
+.btn-footnote-return--trans {
+	transition-delay:1.5s;
+	transition:top .7s ease-in;
 }
 .btn-footnote-return-active {
 	transition:top .5s ease-in 1.5s;
