@@ -6,7 +6,6 @@
 	background-size: 100%;
 	background-repeat: no-repeat;
 	border-bottom: 1px solid white;
-	// transform: translate3d(0,0,0);
 	&::after, &::before {
 		position:absolute;
 		width:100%;
@@ -16,11 +15,11 @@
 		display:block;
 		pointer-events: none;
 	}
-	&::after {
-		height:rem(1);
-		box-shadow: 0 0 120px 60px rgba(60, 60, 60, 0.4);
-		transform: translate(0,0);
-	}
+	// &::after {
+	// 	height:rem(1);
+	// 	box-shadow: 0 0 120px 60px rgba(60, 60, 60, 0.4);
+	// 	transform: translate(0,0);
+	// }
 	&::before {
 		background-color: white;
 		opacity:0;
@@ -30,10 +29,27 @@
 	position:absolute;
 	bottom:-2px;
 	left:0;
+	z-index:3;
 	@include aspect-ratio (100, 0, 23, .86);
 	fill:white;
-	@media screen and (max-width:rem(500)){ bottom:-1px;}
-	@media screen and (min-width:rem(1440))	{	bottom:-4px; }
+	@media screen and (max-width:rem(500)){ bottom:-2px;}
+	@media screen and (min-width:rem(1440))	{	bottom:-6px; }
+}
+.loading-overlay--preset {
+	&::after {
+		z-index:2;
+		box-shadow: none;
+		background-position: center top;
+		background-attachment: fixed;
+		background-size: 100%;
+		opacity:1;
+	}
+}
+.loading-overlay--loaded {
+	&::after {
+		opacity:0;
+		transition:opacity .4s .3s;
+	}
 }
 .small-billboard {
 	.hero-art {
@@ -58,6 +74,29 @@
 				}
 			}
 		}
+		.loading-overlay--preset {
+			&::after {
+				@include aspect-ratio (100, 0, 23, 8.54);
+				min-height:rem(350);
+				background-attachment: scroll;
+			}
+			@media screen and (max-width:em(950)){
+				&::after {
+						background-size: auto 350px;
+						background-attachment: scroll;
+					}
+			}
+			@media screen and (max-width:em(700)) {
+				&::after {
+					height:rem(90);
+				}
+			}
+			@media screen and (max-width:em(560)) {
+				&::after {
+					height:rem(180);
+				}
+			}
+		}
 }
 .large-billboard {
 	.hero-art {
@@ -68,9 +107,21 @@
 			min-height:rem(365);
 			z-index:1;
 		}
-			&::after {display:none;}
 			@media screen and (max-width:em(800)){
 				background-size: auto 365px;
+		}
+	}
+}
+.large-billboard {
+	.loading-overlay--preset {
+		&::after {
+			@include aspect-ratio (100, 0, 23, 10.35);
+			min-height:rem(364);
+		}
+		@media screen and (max-width:em(800)){
+				&::after {
+				background-size: auto 365px;
+			}
 		}
 	}
 }

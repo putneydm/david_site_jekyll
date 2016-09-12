@@ -29,6 +29,13 @@
 			}
 		}
 	}
+	.site-footer {
+		opacity:1;
+		.mail-link, .twitter-link, .facebook-link, .github-link {
+			opacity:1;
+			transform: scale(1,1);
+		}
+	}
 	.footer-links {
 			li {
 				a {
@@ -44,5 +51,8 @@
 	.blog-teaser-item {
 		transform: translateY(0);
 		opacity:1;
+	}
+	.loading-overlay--preset {
+		&::after {content:'';display:none;}
 	}
 }

@@ -22,11 +22,12 @@ var pageFunctions = {
   },
   intializeBlog: function() {
     var self=this;
-    self.setBackground(); // swaps out hero image on load.
     self.getElementsHero();
+    self.setBackground(self.heroArt); // swaps out hero image on load.
     self.getElementsBlog();
     self.initScrollListener('blog');
     self.initQuoteAnimate(self.blogQuotes);
+    this.initScrollBackButton();
   },
   intializeBlogEntry: function() {
     var self=this;
@@ -39,16 +40,16 @@ var pageFunctions = {
   },
   initializeIndex: function() {
     var self=this;
-    self.setBackground();
-    self.nameplateAnimate(); // animates nameplate
     self.getElementsIndex();
     self.getElementsHero();
+    self.setBackground(self.heroArt);
+    self.nameplateAnimate(); // animates nameplate
     self.initScrollListener('index');
   },
   initializePortfolio: function() {
     var self=this;
-    self.setBackground();
     self.getElementsHero();
+    self.setBackground(self.heroArt);
     self.initScrollListener('portfolio_entry');
   },
   intializeError: function() {
@@ -171,13 +172,12 @@ var pageFunctions = {
   },
   initScrollBackButton: function () {
     var self = this;
-    var footnoteReturnButton = document.getElementById("btn-footnote-return");
-    if (footnoteReturnButton) {
-    footnoteReturnButton.addEventListener("click", function(e) {
+    // var footnoteReturnButton = document.getElementById("btn-footnote-return");
+    self.footNoteReturnButton.classList.add('btn-footnote-return--trans')
+    self.footNoteReturnButton.addEventListener("click", function(e) {
       e.preventDefault();
       self.setInactiveState(true);
       });
-    }
   },
   handleHeroAnimate: function() {
     var self = this;
@@ -302,22 +302,43 @@ var pageFunctions = {
     self.handleWillChange('will-change-ot', navigation);
   },
   // sets bg image on hero image
-  setBackground: function () {
-    console.log('setbackground');
+  setBackground: function(el) {
    var self = this;
-   var heroImage = document.querySelector('#hero-image'),
-       heroImageName = heroImage.getAttribute('data-image'),
+  //  var heroImage = document.querySelector('#hero-image'),
+    var heroImageName = el.getAttribute('data-image'),
        windowWidth = window.innerWidth, // finds width of browser window
+       pageType = document.querySelector('BODY').dataset.pagetype,
        imageURL = windowWidth > 700
           ? '/siteart/hero_' + heroImageName + '.jpg'
           : '/siteart/sm_hero_'  + heroImageName + '.jpg';
 
-   var img = new Image();
-   img.src = imageURL;
-   console.log(img);
-   img.onload = function(){
-      document.getElementById('hero-image').style.backgroundImage = 'url('+imageURL+')';
-    };
+     var img = new Image();
+     img.src = imageURL;
+
+    if (self.promiseCheck()) {
+      promise().then(function() {
+        el.style.backgroundImage = 'url('+imageURL+')';
+        el.classList.add('loading-overlay--loaded');
+        el.addEventListener('transitionend', function() {
+          self.removeShit(el, ['loading-overlay--loaded', 'loading-overlay--preset']);
+        });
+      });
+    } else {
+      el.style.backgroundImage = 'url('+imageURL+')';
+      self.removeShit(el, ['loading-overlay--loaded', 'loading-overlay--preset']);
+    }
+    function promise(){
+      var p = new Promise (function(resolve, reject) {
+        img.addEventListener('load', function(e) {
+          if (e) {
+            resolve('works!');
+          } else {
+            reject('failed');
+          }
+        });
+      });
+      return p
+    }
   },
   addLink: function() {
     var linkList = [{"name": "email-link", "link": "mailto:david@davidputney.com?Subject=Website%20feedback"}, {"name": "twitter-link", "link": "https://twitter.com/putneydm"}, {"name": "facebook-link",  "link": "https://www.facebook.com/david.putney"}];
@@ -462,6 +483,7 @@ var pageFunctions = {
     var progressBar = self.scrollProgress,
         activeItem = document.querySelector('.entry--active .blog-entry-text');
     if (activeItem) {
+      progressBar.classList.add('scroll-progress--trans');
       var percent = 100 - self.calculateBlogPercentage(activeItem);
       // progressBar.style.width = percent + '%';
       progressBar.style.transform = "translateX(-" + percent + "%)"
@@ -603,5 +625,13 @@ var pageFunctions = {
           distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
           distance.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
+},
+promiseCheck: function() {
+    var promiseSupport = false;
+  try {
+      var promiseFoo = new Promise(function (x, y) {});
+      promiseSupport = true;
+  } catch (e) {}
+  return promiseSupport
 }
 };
