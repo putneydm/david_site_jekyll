@@ -22,8 +22,8 @@ var pageFunctions = {
   },
   intializeBlog: function() {
     var self=this;
-    self.setBackground(); // swaps out hero image on load.
     self.getElementsHero();
+    self.setBackground(self.heroArt); // swaps out hero image on load.
     self.getElementsBlog();
     self.initScrollListener('blog');
     self.initQuoteAnimate(self.blogQuotes);
@@ -39,10 +39,10 @@ var pageFunctions = {
   },
   initializeIndex: function() {
     var self=this;
-    self.setBackground();
     self.nameplateAnimate(); // animates nameplate
     self.getElementsIndex();
     self.getElementsHero();
+    self.setBackground(self.heroArt);
     self.initScrollListener('index');
   },
   initializePortfolio: function() {
