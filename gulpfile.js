@@ -51,6 +51,8 @@ var date = new Date(),
 var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + 'xx.css';
 var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
 
+var googleAnalytics = 'UA-56763803-1';
+
 var paths = {
   pageLayouts: {
    input: 'src/layouts/**/{*.html,*shtml}',
@@ -163,6 +165,7 @@ gulp.task('includes', function() {
 // minifies and deploys pages to dist, moves sitemap and icons to dist
 gulp.task('deploy', ['sitemap', 'icons'], function() {
    gulp.src(paths.pages.site)
+   .pipe(replace(/yygoogleanlyticsxx/g,  googleAnalytics )) // google analytics number to site
     .pipe(minifyHTML())
    .pipe(gulp.dest(paths.pages.deploy));
 });
