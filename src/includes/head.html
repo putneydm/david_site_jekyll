@@ -5,5 +5,6 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
   <title>{% if page.title %}{{ page.title | | remove:'\' }} | {{ site.title }} {% else %}{{ site.title }} | {{site.tagLine}}{% endif %}</title>
   @@include('partials/style.html')
+  @@include('partials/js_embeds.html')
   @@include('partials/noscript.html')
 </head>

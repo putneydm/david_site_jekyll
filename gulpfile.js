@@ -51,6 +51,8 @@ var date = new Date(),
 var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + 'xx.css';
 var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
 
+var googleAnalytics = 'UA-56763803-1';
+
 var paths = {
   pageLayouts: {
    input: 'src/layouts/**/{*.html,*shtml}',
@@ -73,6 +75,8 @@ var paths = {
   scripts: {
     input: 'src/scripts/**/*.js',
     exclude: 'src/scripts/exclude/*.js',
+    inline: 'src/scripts/inline/*.js',
+    outputInline: 'test/_includes',
     bower: 'src/scripts/bower_components/**/*.js',
     vendor: 'src/scripts/vendor/*.js',
     testing: 'test/scripts/',
@@ -163,6 +167,7 @@ gulp.task('includes', function() {
 // minifies and deploys pages to dist, moves sitemap and icons to dist
 gulp.task('deploy', ['sitemap', 'icons'], function() {
    gulp.src(paths.pages.site)
+   .pipe(replace(/yygoogleanlyticsxx/g,  googleAnalytics )) // google analytics number to site
     .pipe(minifyHTML())
    .pipe(gulp.dest(paths.pages.deploy));
 });
@@ -178,9 +183,9 @@ gulp.task('icons', function() {
 });
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
-   gulp.src(paths.scripts.input)
+   gulp.src([paths.scripts.input, '!' + paths.scripts.inline, '!' + paths.scripts.exclude])
    .pipe(concat(scriptname)) // renames to file w/ todays date for cachebusting
-   .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
+  //  .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
    .pipe(gulp.dest(paths.scripts.testing))
    .pipe(minifyJS())
    .pipe(gulp.dest(paths.scripts.dist));
@@ -204,6 +209,13 @@ gulp.task('minifyScripts', function() {
    .pipe(gulp.dest(paths.scripts.testing))
    .pipe(minifyJS())
    .pipe(gulp.dest(paths.scripts.dist));
+});
+
+gulp.task('minifyInlineScripts', function() {
+   gulp.src(paths.scripts.inline)
+    .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
+   .pipe(minifyJS())
+   .pipe(gulp.dest(paths.scripts.outputInline))
 });
 
 gulp.task('clean-js', function() {
@@ -795,6 +807,8 @@ gulp.task('default', [
   'includes',
   'collections',
   'concat',
+  'minifyScripts',
+  'minifyInlineScripts',
 	'svg',
 	'bower',
   'sitemap',
