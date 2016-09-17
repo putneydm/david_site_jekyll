@@ -498,7 +498,7 @@ gulp.task('hero', function () {
     .pipe(gm(function (gmfile){
       return gmfile.setFormat('jpg'),
           gmfile.resample(20, 20),
-          gmfile.thumbnail(700, '261^'),
+          gmfile.thumbnail(700, '260^'),
           gmfile.quality(10),
           gmfile.filter('triangle'),
           gmfile.unsharp('0.25x0.25+8+0.065'),
