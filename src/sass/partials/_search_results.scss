@@ -1,0 +1,17 @@
+.search-results {
+	margin-top:rem(60);
+}
+.search-results-header {
+	font-family:$sans;
+	font-size:em(16);
+	margin:0 0 rem(60) 0;	
+	border-bottom:1px solid $med;
+	padding:0 0 rem(10) 0;
+}	
+.search-results-link {
+	@extend .teaser-module-abstract-link;
+	font-size:em(14);
+}	
+.search-results-entry {
+	@extend .blog-entry;
+}
