@@ -1,0 +1,87 @@
+---
+layout: single_blog_entry
+pagetype: blog-entry
+title: "Gone girl"
+date: 2016-09-25
+categories: blog-entry
+subhead:
+tags: ['Star Trek', 'Star Trek IV: The Voyage Home', 'missing persons', 'movies', 'posts nobody reads']
+image: star_trek_four
+imageAlt: "Gillian Taylor talks to Spock and Capt. Kirk"
+promo: "The dark story hiding within the funnest Star Trek movie"
+quote: From her coworker\'s perspective the whole incident is a horrifying tragedy and mystery that would haunt them for the rest of their lives.
+---  
+
+Of all the movies in the *Star Trek* canon, *Star Trek IV: The Voyage Home* is an outlier.
+
+It's a total lark, a romp, a love letter to fans who just wanted to have a damn good time watching a *Star Trek* movie. After the heavy life-and-death themes of *Star Treks II* and *III*, it was a welcome respite <sup>[1][1]</sup>.
+
+Most people remember the film for the "nuclear wessels" [scene][4] or Spock [nerve-pinching][5] the punk rocker<sup>[2][2]</sup> on the bus or Scotty [saying][15] "hello, computer" into a Mac Plus mouse.
+
+However, one aspect of the movie has bothered me for years. Inside the film's cheery lightfootedness is an overlooked, incredibly dark storyline.
+
+The plot itself is kinda silly, even by *Star Trek* standards. The Enterprise crew travels back to 1986 San Francisco -- then-present-day -- to find some humpbacked whales to bring back to the 23rd Century to appease an angry [space probe][8] that looks like a Bic lighter and soccer ball.
+
+As part of the mission, Kirk hooks up with, [Gillian Taylor][9], a cetacean biologist at San Francisco-area aquarium. At movie's end, she warps off to hang out in the 23rd Century with the Enterprise crew.
+
+The movie doesn't even begin to explore the ramifications of her sudden, strange departure.
+
+{% if page.quote %}
+  <aside class="blog-pullquote">
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
+  </aside>
+{% endif %}
+
+
+To justify it, Gillian proffers an excuse that she has "nobody here."<sup>[3][3]</sup> It's an unlikely claim, in light of her boss [telling][11] her "Don't tell me fish stories, kiddo. I've known you too long" in a mentorish tone.
+
+From her coworker's perspective the whole incident is a horrifying tragedy and mystery that would haunt them for the rest of their lives. They'd be sick with worry, dreading the worst, as they watch police piece together her movements leading up to her disappearance.
+
+The investigation would find that a day or so prior to her disappearance, as she was giving a routine aquarium [tour][12], some kooky guy jumped in the whale tank and caused a stir.
+
+Witnesses in the tour group would report that she was visibly [upset][13] over the incident. Surveillance cameras would show her heatedly arguing with a man in a bathrobe and his companion, in some sort of weird uniform. Suspicious even for San Francisco.
+
+Rather than having the pair, you know, arrested or something, she starts [hanging][16] out with of them. Witnesses at a local pizza restaurant would [report][17] Gillian and the uniformed man arriving together, then rushing off just as the food arrived.
+
+Gillian became erratic, her coworkers would report, and began missing work as her concern over the wellbeing of the whales in her charge became something akin to an obsession.
+
+The last time any of them saw her in person was when she [burst][14] into work, called her boss a son of a bitch, slapped him in a fit of rage and stormed out, driving away in her dilapidated truck. Days later it would be found abandoned in Golden Gate Park.
+
+Her last-known whereabouts would come later that day as she's spotted on surveillance video in a raucous foot chase through a hospital as she helps [kidnap][7] a critically injured Russian spy out of a secure ward.
+
+After that, she's never seen again.
+
+Compounding the mystery, the transponder signals of the whales both go silent within hours of the creatures' release because the Enterprise crew [absconded][18] with them.
+
+Was she assisting the Russians in some sort of plot, her friends might wonder? Did she get in over her head and get murdered for her mistake?
+
+Her coworkers crying and hugging each other at her candlelight memorial would find little solace as they sort through the evidence and scant details she left behind.
+
+There'd be no way for anyone to know what really happened. She'd just be gone, without a trace.
+
+
+
+1. <span id="footnote-one-stf"></span>*Star Trek IV* was the first *Star Trek* movie to screen in the then-Soviet Union. The line "the bureaucratic mentality is the only constant in the universe" got the biggest laugh.
+2. <span id="footnote-two-stf"></span>Interesting fact: [Kirk Thatcher][19], who was an associate producer on the movie, played the the punk on the bus. He wrote and performed the song playing on his boom box.
+3. <span id="footnote-three-stf"></span>The crew sure has become really lackadaisical about plucking people out of the past since the time of the episode *Yesterday is Tomorrow*.
+
+
+[1]:#footnote-one-stf
+[2]:#footnote-two-stf
+[3]:#footnote-three-stf
+[4]:https://www.youtube.com/watch?v=MdSJFrhb-HM
+[5]:https://www.youtube.com/watch?v=Gr82dZpCr48
+[6]:https://www.youtube.com/watch?v=LkqiDu1BQXY
+[7]:https://www.youtube.com/watch?v=02Or-Hx3yqc
+[8]:http://memory-alpha.wikia.com/wiki/Whale_Probe?file=Whale_Probe.jpg
+[9]:http://memory-beta.wikia.com/wiki/Gillian_Taylor
+[10]:http://education.seattlepi.com/many-years-college-doctorate-degree-1843.html
+[11]:http://movie-sounds.org/sci-fi-movie-samples/sound-clips-from-star-trek-iv-the-voyage-home-1986/don-t-tell-me-fish-stories-kiddo-i-ve-known-you-too-long
+[12]:https://www.youtube.com/watch?v=PoS1eAVNXWU
+[13]:https://www.youtube.com/watch?v=PoS1eAVNXWU&t=1m0s
+[14]:https://www.youtube.com/watch?v=m_4xrXdd0c0
+[15]:https://www.youtube.com/watch?v=xaVgRj2e5_s
+[16]:https://www.youtube.com/watch?v=YtDqlEcfr9w
+[17]:https://www.youtube.com/watch?v=MEflt_tFRa4
+[18]:https://www.youtube.com/watch?v=4CM8tTG9Yig
+[19]:http://www.imdb.com/name/nm0857130/
