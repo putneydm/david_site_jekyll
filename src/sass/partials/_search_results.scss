@@ -135,6 +135,72 @@ input:-webkit-autofill {
   animation: slideInUp .3s ease-in-out;
   animation-iteration-count: 1;
 }
+.error-overlay {
+  position:absolute;
+  top:-130px;
+  width:100%;
+  height:rem(280);
+  z-index:1;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  opacity:0;
+  pointer-events: none;
+  @media screen and (max-width:rem(600))	{
+    top:-60px;
+  }
+}
+.error-overlay--active {
+  opacity:1;
+  transition: opacity .4s;
+  pointer-events: auto;
+}
+.loader {
+  transition: opacity .4s 1s;
+  z-index:1;
+}
+.loader-icon {
+  width:rem(30);
+  height:rem(30);
+  background-color: $aqua;
+  border-radius: 50%;
+  animation-name: bounceball;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 0;
+  timing-function: ease-out;
+  animation-play-state: running;
+  animation-fill-mode: none;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right:0;
+  margin:0 auto;
+  z-index:1;
+}
+.loader-shadow {
+  width: 15px;
+  height: 7px;
+  background: rgba($med, .6);
+  border-radius: 7px / 3px;
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:0 auto;
+  box-shadow:0 0 3px 3px rgba($med, .6);
+  animation-name:shadow;
+  animation-iteration-count: infinite;
+  animation-duration: .5s;
+  animation-direction: alternate;
+  timing-function: ease-out;
+}
+.paused{
+    animation-play-state:paused;
+}
 @keyframes headShake {
   0% {
       transform:translateX(0px);
@@ -208,7 +274,30 @@ input:-webkit-autofill {
   transform: translateY(-50px);
   font-size:rem(15);
 }
-
-
-
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@keyframes bounceball {
+   from {
+     transform: translateY(0);
+     height: 15px;
+   }
+   10%  {
+     transform: translateY(0);
+     height: 30px;
+   }
+   to   {
+     transform: translateY(-100px);
+   }
+}
+@keyframes shadow {
+  0%{ opacity:1; transform: scale(1.8);}
+  60%{ opacity:0; transform: scale(.9);}
+  100%{ opacity:0; transform: scale(.9);}
 }
