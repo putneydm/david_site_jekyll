@@ -32,7 +32,7 @@ The situation that led to that uneasy peace is now upset if not totally wiped ou
 
 {% if page.quote %}
   <aside class="blog-pullquote">
-  <q>{{page.quote}}</q>
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
   </aside>
 {% endif %}
 

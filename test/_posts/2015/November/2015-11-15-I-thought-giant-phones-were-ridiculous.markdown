@@ -44,7 +44,7 @@ Apple tends to have a "we know best" attitude concerning UX matters. It's not su
 
 {% if page.quote %}
   <aside class="blog-pullquote">
-  <q>{{page.quote}}</q>
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
   </aside>
 {% endif %}
 

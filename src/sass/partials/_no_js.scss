@@ -5,7 +5,7 @@
 		top:0;
 		transform: scale(1,1);
 	}
-.main-header-nameplate{
+.main-header-logo--display{
 	opacity:1;
 	bottom:150px;
 	transform: scale(1,1);
@@ -16,7 +16,7 @@
 		bottom:225px;
 		}
 }
-.nav-menu-display {
+.nav-list--display {
 	bottom:rem(60);
 	opacity:1;
 	transform: scale(1,1);
@@ -27,6 +27,13 @@
 			@media screen and (max-width:em(425)) {
 				padding:3px 12px 5px 0;
 			}
+		}
+	}
+	.site-footer {
+		opacity:1;
+		.mail-link, .twitter-link, .facebook-link, .github-link {
+			opacity:1;
+			transform: scale(1,1);
 		}
 	}
 	.footer-links {
@@ -44,5 +51,8 @@
 	.blog-teaser-item {
 		transform: translateY(0);
 		opacity:1;
+	}
+	.loading-overlay--preset {
+		&::after {content:'';display:none;}
 	}
 }

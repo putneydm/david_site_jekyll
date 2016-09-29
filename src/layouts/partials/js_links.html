@@ -29,6 +29,9 @@
     {% endif%}
     {% if pageType == 'search' %}
       searchFunctions.initialize();
+      {% endif%}
+    {% if pageType == 'error' %}
+      pageFunctions.intializeError();
     {% endif%}
   });
 })();

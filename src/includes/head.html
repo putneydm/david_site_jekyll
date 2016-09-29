@@ -1,6 +1,8 @@
 
 <head>
   @@include('partials/meta_tags.html')
+  @@include('partials/ico_touch_icons.html')
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
   <title>{% if page.title %}{{ page.title | | remove:'\' }} | {{ site.title }} {% else %}{{ site.title }} | {{site.tagLine}}{% endif %}</title>
   <style>
     {% if page.heroArt %}.hero-art{background-image: url('/siteart/pl_hero_{{page.heroArt}}.jpg');}@media screen and (max-width: 46.875em) {.hero-art {background-image: url('/siteart/pl_hero_small_{{page.heroArt}}.jpg');}}{% endif %}
@@ -22,4 +24,7 @@
     {% if pageType == 'searchAdmin' or pageType == 'search' %}
       <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
     {% endif%}
+  @@include('partials/style.html')
+  @@include('partials/js_embeds.html')
+  @@include('partials/noscript.html')
 </head>

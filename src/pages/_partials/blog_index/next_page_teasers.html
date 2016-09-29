@@ -5,7 +5,7 @@
   <h4 class="blog-teaser-label">On the next page ... </h4>
   <ul class="blog-teaser-list">
   {% for post in site.categories.blog-entry limit:4 offset:post-offset %}
-    <li class="blog-teaser-item">
+    <li class="blog-teaser-item will-change-ot">
     		<a href="{{ post.url }}" rel="canonical">
     		<figure class="blog-teaser-image med-photo-overlay">
         {% if post.image %}
@@ -13,15 +13,21 @@
         {% else %}
         <img class="lazyload" data-src="/siteart/xsmall_placeholder.jpg" alt="Davidputney.com logo">
         {% endif %}
-
+        <noscript>
+          {% if post.image %}
+          <img src="/siteart/xsmall_{{post.image}}.jpg"  alt="{{post.imageAlt}}">
+          {% else %}
+          <img src="/siteart/xsmall_placeholder.jpg" alt="Davidputney.com logo">
+          {% endif %}
+        </noscript>
     		</figure>
     			<h4 class="blog-teaser-hed">{{ post.promo markdownify | strip_html }}
-    			<svg class="teaser-arrow-icon">
-    				<use xlink:href="#arrow-right" />
-    			</svg>
-    		</h4>
+      			<svg class="teaser-arrow-icon">
+      				<use xlink:href="#arrow-right" />
+      			</svg>
+    		  </h4>
     		</a>
-    	</li>
+    </li>
   {% endfor %}
   </ul>
 </aside>

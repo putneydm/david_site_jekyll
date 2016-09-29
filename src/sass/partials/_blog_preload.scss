@@ -49,19 +49,19 @@
 		margin-bottom:rem(15);
 		&::before {
 			display:block;
-			width:150px;
+			width:rem(150);
 			content: " ";
-			height:1px;
+			height:rem(1);
 			border-top: 1px solid $med;
 			margin:0 auto rem(8);
 		}
 	}
   .blog-image {
   	width:100%;
-  	// margin:0 auto rem(40);
 		margin:0 auto;
   	position:relative;
 		padding:59% 0 0;
 		background-color:$xxlight;
+		@media screen and (max-width:rem(430)){margin-top:-20px;}
   	img { width:100%;position:absolute;top:0;}
   }

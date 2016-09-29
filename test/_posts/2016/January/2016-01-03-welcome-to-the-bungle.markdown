@@ -32,7 +32,7 @@ The Globe CEO, Mike Sheehan describes it as "a change we had to make." Why? Agai
 
 {% if page.quote %}
   <aside class="blog-pullquote">
-  <q>{{page.quote}}</q>
+  <blockquote>{{page.quote | markdownify | strip_html }}</blockquote>
   </aside>
 {% endif %}
 

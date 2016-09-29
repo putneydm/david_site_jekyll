@@ -1,9 +1,6 @@
 .site-footer {
-	height:330px;
 	width:100%;
 	display:block;
-	}
-.site-footer-inactive {
 	opacity:0;
 	}
 .site-footer-active {
@@ -21,7 +18,7 @@
 		width:rem(55);
 		height:rem(55);
 		margin:0 rem(20) 0;
-		box-shadow:0px 0px 30px 15px rgba($med, .3);
+		box-shadow:0 0 rem(30) rem(15) rgba($med, .3);
 		flex-grow:0;
 		border-radius:50%;
 		background-color:white;
@@ -29,8 +26,8 @@
 		overflow:hidden;
 		a {
 		display:block;
-		width:55px;
-		height:55px;
+		width:rem(55);
+		height:rem(55);
 		transition:background-color .2s ease-in;
 		background-image:none;
 			&:hover {
@@ -39,7 +36,7 @@
 				.footer-icon { fill:white }
 		}
 	}
-	@media screen and (max-width:em(400)) { margin:40px 10px 0;		}
+	@media screen and (max-width:em(400)) { margin:40px 10px 0;	}
 }
 }
 .footer-icon {
@@ -49,14 +46,12 @@
 	transition: fill .2s;
 	margin-top:rem(18);
 }
-//.mail-icon {fill:red;}
-
-.site-footer-inactive {
+.site-footer {
 	.mail-link {
 		opacity:0;
 		transform: scale(.1,.1);
 	}
-	.twitter-link {
+ 	.twitter-link {
 		opacity:0;
 		transform: scale(.1,.1);
 	}
@@ -69,7 +64,6 @@
 		transform: scale(.1,.1);
 	}
 }
-
 .site-footer-active {
 	.mail-link {
 		opacity:1;
@@ -104,7 +98,6 @@
 		transition-timing-function: cubic-bezier(.91,-0.01,.29,1.84);
 	}
 }
-
 @keyframes linksBounce {
     0%   {top:0;height:55px}
     50%  {top:-20px;height:55px}
@@ -113,14 +106,14 @@
 }
 .scroll-to-top {
 	position:fixed;
-	right:15px;
-	bottom:30px;
-	width:40px;
-	height:40px;
+	right:rem(15);
+	bottom:rem(30);
+	width:rem(40);
+	height:rem(40);
 	border-radius:50%;
 	background-color:$aqua;
 	text-align:center;
-	line-height:40px;
+	line-height:rem(40);
 	color:white;
 	opacity:0;
 	display:none;
@@ -148,7 +141,7 @@
 	color:$med;
 	font-size:em(11);
 	text-align:center;
-	margin:0 20px 5px;
+	margin:0 rem(20) rem(5);
 	padding:0;
 }
 .svg-import {
@@ -159,21 +152,21 @@
 .footer-navigation-menu {
 	width:100%;
 	text-align:center;
-	margin:0 auto 40px;
+	margin:0 auto rem(40);
 	background-image: linear-gradient(to bottom, transparent 75%, $med 75%);
-	background-size: 60% 2px;
+	background-size: 60% rem(2px);
 	background-origin: padding-box;
 	background-position: center 100%;
 	background-repeat: no-repeat;
 	padding:0 0 25px;
 		@media screen and (max-width:em(420)){
-		margin:0px auto 20px;
+		margin:0 auto rem(20);
 		}
 	li {
 		display:inline-block;
 		font-family:$sans;
 		font-size:em(20);
-		margin:40px 0 0;
+		margin:rem(40) 0 0;
 		text-transform:capitalize;
 		font-weight:700;
 			@media screen and (max-width:em(450))	{
@@ -182,18 +175,18 @@
 			&::after {
 			content:' | ';
 			display:inline-block;
-			margin:0 15px;
+			margin:0 rem(15);
 			color:$light;
 			letter-spacing: -.2em;
 				@media screen and (max-width:em(420)){
-				margin:0 5px;
+				margin:0 rem(5);
 				}
 			}
 			&:nth-child(4){
-				&::after	{content:''; margin:0px;}
+				&::after	{content:''; margin:0;}
 			}
 			@media screen and (max-width:em(420)) {
-				margin:20px 0 0;
+				margin:rem(20) 0 0;
 				font-size:em(16);
 			}
 		a {

@@ -56,6 +56,7 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *The Deep*
 * *Like Father, Like Son*
 * *An Officer and a Gentleman*
+* *The Wood*
 * *Sophie's Choice*
 * *The Fast and the Furious*
 * *2 Fast 2 Furious*
@@ -89,6 +90,8 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *The Big Short*
 * *The Third Man*
 * *The 400 Blows*
+* _Bears_
+* _Step Up All In_
 * *Oz the Great and Powerful*
 * *Pacific Rim* <sup>[2][2]</sup>
 * *Grumpy Old Men*
@@ -106,6 +109,7 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *An American Tail*
 * *In & Out*
 * *Howards End*
+* _21 and Over_
 * *All the President's Men*
 * *The Package*
 * *The Firm*
@@ -126,16 +130,24 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *Bounce*
 * *Snatch*
 * *Big*
+* _Weiner_
+* _Wiener-Dog_
+* _Sisters_
 * *Three Amigos*
+* _Me Before You_
 * *The Gay Divorcee*
 * *The Black Hole*
 * *F.I.S.T.*
 * *The Secret Life of Walter Mitty*
 * *The Lovely Bones*
 * *Great Balls of Fire!*
+* _The Measure of a Man_
 * *Mr. Woodcock*
+* _Daddy's Home_
+* _Everybody Wants Some!!_
 * *Driving Miss Daisy*
 * *Her*
+* _Adult Beginners_
 * *Cheaper by the Dozen*
 * *Fantastic Four*
 * *Fantastic Four: Rise of the Silver Surfer*
@@ -143,6 +155,7 @@ promo: "Real movies that sound like porn movies. We comb through 30 years of fil
 * *Johnson Family Vacation*
 * *Four Brothers*
 * *Drillbit Taylor*
+* _90 Minutes in Heaven_
 * *Real Steel*
 * *Lethal Weapon*
 * *Limitless*

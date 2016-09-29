@@ -1,18 +1,6 @@
 /*woff*/
 @font-face {
     font-family: 'Droid Serif';
-    src: url(fonts_in/woff/droidserif-bold-webfont.woff);
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Droid Serif';
-    src: url(fonts_in/woff/droidserif-italic-webfont.woff);
-    font-weight: normal;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'Droid Serif';
     src: url(fonts_in/woff/droidserif-regular-webfont.woff);
     font-weight: normal;
     font-style: normal;

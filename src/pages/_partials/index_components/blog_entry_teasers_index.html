@@ -15,27 +15,32 @@
 		{% assign size = myArray.size %}
 		{% assign randompost = site.time | date: "%s%N" | modulo: size %}
 
-	<li class="blog-teaser-item blog-teaser-highlight">
-		<a href="{{ myArray[randompost].url }}" rel="canonical">
+		<li class="blog-teaser-item blog-teaser-highlight will-change-ot">
+			<a href="{{ myArray[randompost].url }}" rel="canonical">
+			<figure class="blog-teaser-image med-photo-overlay">
 			{% if myArray[randompost].image %}
 			<img class="lazyload" data-src="/siteart/xsmall_{{ myArray[randompost].image}}.jpg" alt="{{ myArray[randompost].imageAlt}}">
 			{% else %}
 			<img class="lazyload" data-src="/siteart/xsmall_placeholder.jpg" alt="Davidputney.com logo">
 			{% endif %}
-		<noscript>
-			<img src="/siteart/xsmall_{{ myArray[randompost].image}}.jpg" alt="{{ myArray[randompost].imageAlt}}">
-		</noscript>
-		</figure>
-			<h2 class="blog-teaser-hed">{{ myArray[randompost].promo markdownify | strip_html }}
-			<svg class="teaser-arrow-icon">
-				<use xlink:href="#arrow-right" />
-			</svg>
-		</h2>
-		</a>
-	</li>
+				<noscript>
+					{% if myArray[randompost].image %}
+					<img src="/siteart/xsmall_{{ myArray[randompost].image}}.jpg" alt="{{ myArray[randompost].imageAlt}}">
+					{% else %}
+					<img src="/siteart/xsmall_placeholder.jpg" alt="Davidputney.com logo">
+					{% endif %}
+				</noscript>
+			</figure>
+				<h4 class="blog-teaser-hed">{{ myArray[randompost].promo markdownify | strip_html }}
+				<svg class="teaser-arrow-icon">
+					<use xlink:href="#arrow-right" />
+				</svg>
+			</h4>
+			</a>
+		</li>
 
 	{% for post in site.categories.blog-entry limit: 3 offset:1 %}
-<li class="blog-teaser-item blog-teaser-highlight">
+<li class="blog-teaser-item blog-teaser-highlight will-change-ot">
 		<a href="{{ post.url}}" rel="canonical">
 		<figure class="blog-teaser-image med-photo-overlay">
 			{% if post.image %}
@@ -43,9 +48,13 @@
 			{% else %}
 			<img class="lazyload" data-src="/siteart/xsmall_placeholder.jpg" alt="Davidputney.com logo">
 			{% endif %}
-		<noscript>
-			<img src="/siteart/xsmall_{{post.image}}.jpg" alt="{{post.imageAlt}}">
-		</noscript>
+			<noscript>
+				{% if post.image %}
+				<img src="/siteart/xsmall_{{post.image}}.jpg"  alt="{{post.imageAlt}}">
+				{% else %}
+				<img src="/siteart/xsmall_placeholder.jpg" alt="Davidputney.com logo">
+				{% endif %}
+			</noscript>
 		</figure>
 			<h2 class="blog-teaser-hed">{{ post.promo | markdownify | strip_html }}
 				<svg class="teaser-arrow-icon">
