@@ -260,6 +260,11 @@ var searchFunctions = {
     })
   },
   initResizeListener: function(){
+    var self=this;
+    window.onresize = function(e) {
+      self.windowWidth = document.documentElement.clientWidth;
+    }
+  },
   fooBar: [
         {
           "title": "this is a headline", "post": "this is a post"
