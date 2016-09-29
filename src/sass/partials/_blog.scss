@@ -3,7 +3,9 @@
 	position:relative;
 		@media screen and (max-width:em(728)) { padding:0 20px; }
 		@media screen and (max-width:em(500)) { padding:0 10px; }
-		p { font-size:em(16);
+		p {
+			font-size:em(16);
+			hyphens: auto;
 			@media screen and (max-width:em(500)) { font-size:em(15); }
 		}
 		p:first-child:first-letter {
