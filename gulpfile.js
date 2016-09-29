@@ -2,50 +2,53 @@
 var gulp = require('gulp');
 
 //scripts
-var concat = require('gulp-concat');
-var minifyJS = require('gulp-uglify');
-var jshint = require('gulp-jshint');
+var concat = require('gulp-concat'),
+    minifyJS = require('gulp-uglify'),
+    jshint = require('gulp-jshint');
 
 //css
-var sass = require('gulp-sass');
-var minifyCSS = require('gulp-minify-css'); // Add var prefix for consistency
-var scsslint = require('gulp-scss-lint');
-var autoprefixer = require('gulp-autoprefixer');
+var sass = require('gulp-sass'),
+    minifyCSS = require('gulp-minify-css'), // Add var prefix for consistency
+    scsslint = require('gulp-scss-lint'),
+    autoprefixer = require('gulp-autoprefixer');
 
 // html
- var htmltidy = require('gulp-htmltidy');
  var minifyHTML = require('gulp-minify-html');
 
 //images
-var imagemin = require('gulp-imagemin');
-var jpegtran = require('imagemin-jpegtran');
-var gm = require('gulp-gm');
+var imagemin = require('gulp-imagemin'),
+    jpegtran = require('imagemin-jpegtran'),
+    gm = require('gulp-gm');
 
 //fonts
 var cssBase64 = require('gulp-css-base64');
 
 //utility
-var rename = require('gulp-rename');
-var clean = require('gulp-rimraf');
-var stylish = require('jshint-stylish');
-var rename = require('gulp-rename');
-var watch = require('gulp-watch');
-var livereload = require('gulp-livereload');
-var fileinclude = require('gulp-file-include');
-var browserSync = require('browser-sync');
-var del = require('del');
-var replace = require('gulp-replace');
-var cleanFiles = require('gulp-clean');
+var rename = require('gulp-rename'),
+    clean = require('gulp-rimraf'),
+    stylish = require('jshint-stylish'),
+    rename = require('gulp-rename'),
+    watch = require('gulp-watch'),
+    livereload = require('gulp-livereload'),
+    fileinclude = require('gulp-file-include'),
+    browserSync = require('browser-sync'),
+    del = require('del'),
+    replace = require('gulp-replace'),
+    cleanFiles = require('gulp-clean');
+
 //svg
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
+var svgstore = require('gulp-svgstore'),
+    svgmin = require('gulp-svgmin');
 
 //bower
 var mainBowerFiles = require('main-bower-files');
 
 // gets today's date
-var date = new Date();
+var date = new Date(),
+    rando = Math.floor((Math.random() * 1000000) + 1);
+
 // creates file names based on date
+// <<<<<<< HEAD
 var dateValue = date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear();
 
 var filename = 'styles-' + dateValue + '.css';
@@ -53,6 +56,12 @@ var scriptname = 'script-' + dateValue + '.js';
 var searchAdminName = 'script-' + dateValue + '-search_admin.js';
 var searchName = 'script-' + dateValue + '-search.js';
 
+// =======
+// var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + 'xx.css';
+// var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
+// >>>>>>> master
+
+var googleAnalytics = 'UA-56763803-1';
 
 var paths = {
   pageLayouts: {
@@ -72,11 +81,12 @@ var paths = {
   includes: {
    input: 'src/includes/*.html',
    testing: 'test/_includes/'
-  //  dist: 'dist/templates'
   },
   scripts: {
     input: 'src/scripts/**/*.js',
     exclude: 'src/scripts/exclude/*.js',
+    inline: 'src/scripts/inline/*.js',
+    outputInline: 'test/_includes',
     bower: 'src/scripts/bower_components/**/*.js',
     vendor: 'src/scripts/vendor/*.js',
     testing: 'test/scripts/',
@@ -89,7 +99,7 @@ var paths = {
   },
   styles: {
     input: 'src/sass/styles.scss',
-    inputInline: 'src/sass/inline_styles/{blog_embedded_styles.scss,index_embeded_styles.scss,main_embedded_styles.scss}',
+    inputInline: 'src/sass/inline_styles/{blog_embedded_styles.scss,index_embeded_styles.scss,main_embedded_styles.scss,error_page.scss}',
     outputInline: 'test/_includes',
     exclude: '!src/sass/partials/*.scss',
     testing: 'test/css/',
@@ -109,7 +119,6 @@ var paths = {
   svg: {
     input: 'src/svg/svg_in/*.svg',
     output: 'src/svg/'
-    // dist: 'dist/svg/'
   },
   fonts: {
     input: 'src/fonts/*.css',
@@ -128,13 +137,13 @@ var paths = {
     input: 'test/_site/sitemap.xml',
     output: 'dist/'
   },
-  drafts: {
-    input: 'src/drafts/*.markdown',
-    output: 'test/_drafts/'
-  },
+  icons: {
+    input: 'src/touch_icons/{*.ico,*.png}',
+    output: 'dist/'
+  }
 };
+// *** TASKS ***
 
-// tasks
 // moves page templates from src to testing and dist
 gulp.task('layouts', function() {
    gulp.src(paths.pageLayouts.input)
@@ -142,22 +151,32 @@ gulp.task('layouts', function() {
      prefix: '@@',
      basepath: '@file'
    }))
+// <<<<<<< HEAD
    // replaces placeholder text with cachebusted name
   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) //main js
   .pipe(replace(/\*cachebustadmin\*/g,  searchAdminName )) // search admin
   .pipe(replace(/\*cachebustsearch\*/g,  searchName )) // search page
   .pipe(gulp.dest(paths.pageLayouts.testing))
+// =======
+//   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
+//    .pipe(gulp.dest(paths.pageLayouts.testing))
+// >>>>>>> master
 });
+//  compiles pages from partials
 gulp.task('pages', function() {
    gulp.src(['!' + paths.pages.exclude, paths.pages.input])
    .pipe(fileinclude({
      prefix: '@@',
      basepath: '@file'
    }))
+// <<<<<<< HEAD
   //  .pipe(htmltidy({doctype: 'html5',
   //    hideComments: true,
   //    indent: true}))
   // .pipe(replace(/\*cachebustthis\*/g,  scriptname)) // adds cachebusted name of scripts to js links file
+// =======
+//   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
+// >>>>>>> master
    .pipe(gulp.dest(paths.pages.testing))
 });
 gulp.task('includes', function() {
@@ -170,37 +189,50 @@ gulp.task('includes', function() {
    .pipe(gulp.dest(paths.includes.testing))
 });
 
-gulp.task('deploy', ['sitemap'], function() {
+// minifies and deploys pages to dist, moves sitemap and icons to dist
+gulp.task('deploy', ['sitemap', 'icons'], function() {
    gulp.src(paths.pages.site)
-   .pipe(htmltidy({doctype: 'html5',
-       hideComments: true,
-       indent: true}))
+   .pipe(replace(/yygoogleanlyticsxx/g,  googleAnalytics )) // google analytics number to site
     .pipe(minifyHTML())
    .pipe(gulp.dest(paths.pages.deploy));
 });
-
-
+// moves sitemap to dist
 gulp.task('sitemap', function() {
    gulp.src(paths.sitemap.input)
    .pipe(gulp.dest(paths.sitemap.output));
 });
-
-
+// <<<<<<< HEAD
+//
+//
+// =======
+// moves touch icons and favicon to dist
+gulp.task('icons', function() {
+  gulp.src(paths.icons.input)
+  .pipe(gulp.dest(paths.icons.output));
+});
+// >>>>>>> master
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
-   console.log(filename);
-   gulp.src(paths.scripts.input)
+   gulp.src([paths.scripts.input, '!' + paths.scripts.inline, '!' + paths.scripts.exclude])
    .pipe(concat(scriptname)) // renames to file w/ todays date for cachebusting
-   .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
+  //  .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
    .pipe(gulp.dest(paths.scripts.testing))
    .pipe(minifyJS())
    .pipe(gulp.dest(paths.scripts.dist));
 });
+// <<<<<<< HEAD
 
 // gulp.task('cachebustScripts', function() {
 //   return gulp.src('source/layouts/js_links.html')
 //   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
 // });
+// =======
+//adds cachebusted
+gulp.task('cachebustScripts', function() {
+  return gulp.src('source/layouts/js_links.html')
+  .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
+});
+// >>>>>>> master
 
 // lints main javascript file for site
 gulp.task('lint', function() {
@@ -218,6 +250,13 @@ gulp.task('minifyScripts', function() {
    .pipe(gulp.dest(paths.scripts.testing))
    .pipe(minifyJS())
    .pipe(gulp.dest(paths.scripts.dist));
+});
+
+gulp.task('minifyInlineScripts', function() {
+   gulp.src(paths.scripts.inline)
+    .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
+   .pipe(minifyJS())
+   .pipe(gulp.dest(paths.scripts.outputInline))
 });
 
 gulp.task('clean-js', function() {
@@ -276,7 +315,6 @@ gulp.task('svg', function () {
         extname: '.svg'
     }))
      .pipe(gulp.dest(paths.svg.output))
-    // .pipe(gulp.dest(paths.svg.dist));
 });
 
 // moves bower dependencies to vendor
@@ -290,10 +328,6 @@ gulp.task('bower', function() {
     .pipe(gulp.dest(paths.bower.vendor))
 });
 
-gulp.task('posts', function() {
-   gulp.src(paths.posts.input)
-   .pipe(gulp.dest(paths.posts.output))
-});
 gulp.task('collections', function() {
    gulp.src(paths.collections.input)
    .pipe(gulp.dest(paths.collections.output))
@@ -505,7 +539,7 @@ gulp.task('hero', function () {
     .pipe(gm(function (gmfile){
       return gmfile.setFormat('jpg'),
           gmfile.resample(20, 20),
-          gmfile.thumbnail(700, '261^'),
+          gmfile.thumbnail(700, '260^'),
           gmfile.quality(10),
           gmfile.filter('triangle'),
           gmfile.unsharp('0.25x0.25+8+0.065'),
@@ -769,49 +803,33 @@ gulp.task('listen', function () {
     // page templates
     gulp.watch(paths.pageLayouts.watch).on('change', function(file) {
         gulp.start('layouts');
-      //  gulp.start('refresh');
     });
     gulp.watch(paths.pages.watch).on('change', function(file) {
         gulp.start('pages');
-      //  gulp.start('refresh');
     });
     // includes
     gulp.watch(paths.includes.input).on('change', function(file) {
         gulp.start('includes');
-      //  gulp.start('refresh');
     });
     // scripts
     gulp.watch(paths.scripts.input).on('change', function(file) {
-      gulp.start('clean-js');
-      gulp.start('concat');
-      //  gulp.start('refresh');
+      gulp.start(['concat', 'pages', 'layouts', 'clean-js']);
     });
     // scripts exclude
     gulp.watch(paths.scripts.exclude).on('change', function(file) {
       gulp.start('minifyScripts');
-      //  gulp.start('refresh');
     });
     // css
     gulp.watch(paths.styles.watch).on('change', function(file) {
-      gulp.start('clean-css');
-      gulp.start('css');
-      gulp.start('css-inline');
-        // gulp.start('browserSync');
+      gulp.start(['css', 'css-inline', 'clean-css']);
     });
     gulp.watch(paths.sitemap.input).on('change', function(file) {
       gulp.start('sitemap');
     });
-    // gulp.watch(paths.posts.input).on('change', function(file) {
-    //   gulp.start('posts');
-    // });
+
     gulp.watch(paths.collections.input).on('change', function(file) {
       gulp.start('collections');
-        // gulp.start('browserSync');
     });
-    // gulp.watch(paths.drafts.input).on('change', function(file) {
-    //   gulp.start('drafts');
-    //     // gulp.start('browserSync');
-    // });
 });
 
 // Run livereload after file change
@@ -830,11 +848,16 @@ gulp.task('default', [
   'includes',
   'collections',
   'concat',
+  'minifyScripts',
+  'minifyInlineScripts',
 	'svg',
 	'bower',
-  // 'posts',
   'sitemap',
-  // 'drafts',
-  'clean',
-	'minifyScripts'
+// <<<<<<< HEAD
+//   // 'drafts',
+//   'clean',
+// 	'minifyScripts'
+// =======
+  'clean'
+// >>>>>>> master
 ]);
