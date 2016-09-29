@@ -259,6 +259,7 @@ var searchFunctions = {
       )
     })
   },
+  initResizeListener: function(){
   fooBar: [
         {
           "title": "this is a headline", "post": "this is a post"
