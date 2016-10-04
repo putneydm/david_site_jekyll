@@ -3,24 +3,19 @@ layout: minimal_layout
 pagetype: searchAdmin
 
 ---
-<!-- testing  here -->
 <section class="blog-container blog-single-entry">
-  <!-- <input type="text" placeholder="Search term">
-  <input type="button" value="Submit">
-  <br><br> -->
-
   <div id="login-wrapper" class="login-wrapper">
     <div id="loggedout-screen" class="loggedout-screen log-screen--active">
       <form>
         <div id="email-wrapper" class="form-field-wrapper">
-          <input id="username" class="form-field" type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+          <input id="username" class="form-field search-admin-form-field" type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
           <label id="label" for="username">E-mail</label>
-          <p class="login-error-message">Please enter a valid e mail address.</p>
+          <p class="login-error-message login-error-message-search-admin">Please enter a valid e mail address.</p>
         </div>
         <div class="form-field-wrapper">
-          <input id="password" class="form-field" type="password" required pattern=".{6,}">
+          <input id="password" class="form-field search-admin-form-field" type="password" required pattern=".{6,}">
           <label for="password">Password</label>
-            <p class="login-error-message">Please enter a password with six characters or more.</p>
+            <p class="login-error-message login-error-message-search-admin">Please enter a password with six characters or more.</p>
         </div>
         <input id="login" class="button form-btn" type="button"  value="Submit">
       </form>
