@@ -88,7 +88,7 @@
       }
     }
 }
-.search-form-field {
+.form-field {
   width:100%;
   height:rem(76);
   border:1px solid $light;
@@ -98,7 +98,11 @@
   color:$med;
   outline: none;
   border-radius: rem(3);
-  position:relative;
+}
+.search-admin-form-field {
+    position:relative;
+}
+.search-form-field {
   margin:0 rem(30) rem(30) 0;
     @media screen and (max-width:rem(700))	{
       margin:0 0 rem(30);
@@ -129,7 +133,7 @@
   z-index: 2;
   top:0;
   left:0;
-  padding:rem(20) rem(15);
+  padding:rem(25) rem(15);
   font-family:$sans;
   color:$med;
   font-size:rem(20);
@@ -151,21 +155,21 @@
     border:1px solid $xxlight;
   }
 .login-error-message {
-  // opacity:0;
   font-family:$sans;
   font-size:rem(15);
   text-align: center;
   height:rem(28);
   color:$aqua;
-  margin:0 auto rem(40);
-  transition: opacity .2s;
+  margin:rem(8) auto rem(40);
   flex-grow:0;
   width:100%;
     @media screen and (max-width:rem(700))	{
       height:rem(48);
       margin: 0 0 rem(10) 0;
-      // order:1;
      }
+}
+.login-error-message-search-admin {
+  opacity:0;
 }
 .login-error-message--active {
   opacity:1;
@@ -386,7 +390,7 @@ input:-webkit-autofill {
   font-size:rem(20);
 }
 100% {
-  transform: translateY(-50px);
+  transform: translateY(-55px);
   font-size:rem(15);
 }
 }
