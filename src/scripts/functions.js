@@ -52,7 +52,7 @@ var pageFunctions = {
     self.setBackground(self.heroArt);
     self.initScrollListener('portfolio_entry');
   },
-  intializeError: function() {
+  intializeMinimal: function() {
     var self=this;
     self.initScrollListener();
   },
