@@ -1,8 +1,8 @@
 
-.blog-entry-text, .blog-entry-text-index {
+.blog-entry-text {
 	position:relative;
-		@media screen and (max-width:em(728)) { padding:0 20px; }
-		@media screen and (max-width:em(500)) { padding:0 10px; }
+		@media screen and (max-width:em(728)) { padding:0 rem(20); }
+		@media screen and (max-width:em(500)) { padding:0 rem(15); }
 		p { font-size:em(16);
 			@media screen and (max-width:em(500)) { font-size:em(15); }
 		}
@@ -71,8 +71,9 @@ h3 {
 	overflow-y:hidden;
 	position:relative;
 	padding:0;
-		@media screen and (max-width:em(450)) {
+		@media screen and (max-width:em(500)) {
 		max-height:rem(500);
+		margin:0 rem(15);
 		}
 	&::before {
 		width:100%;
@@ -89,6 +90,7 @@ h3 {
 	width:100%;
 	position:absolute;
 	bottom:0;
+	padding:0 rem(15);
 }
 .blog-more-button {
 	margin:0 auto;
