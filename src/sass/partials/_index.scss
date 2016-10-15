@@ -209,7 +209,7 @@
 	@media screen and (max-width:rem(650)) {
 		 padding:rem(5) rem(5) 0 rem(5);
 	}
-	@media screen and (max-width:rem(550)) {
+	@media screen and (max-width:rem(500)) {
 		transform: translateY(rem(20));
 		flex-basis:calc(50% - 5px);
 		flex-grow:0;
