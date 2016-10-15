@@ -6,6 +6,7 @@
 	background-size: 100%;
 	background-repeat: no-repeat;
 	border-bottom: 1px solid white;
+	background-color:$xlight;
 	&::after, &::before {
 		position:absolute;
 		width:100%;
