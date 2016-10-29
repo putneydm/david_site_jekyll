@@ -8,6 +8,16 @@ img {display:block;
 a {
 	img {border:0;}
 }
+	img {
+		border:0;
+	}
+	&:focus {
+		box-shadow: none;
+		background: $x-light-aqua !important;
+		box-shadow:0 0 rem(8) $x-light-aqua;
+		outline-style: none;
+		color:black !important;
+	}
 }
 p {
 	font-family:$droid;
