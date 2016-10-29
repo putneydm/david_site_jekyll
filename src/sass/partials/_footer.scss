@@ -127,7 +127,12 @@
 			transition:background-color .2s;
 		}
 	}
-	.scroll-up-icon {width:rem(10);height:rem(10);fill:white;}
+	.scroll-up-icon {
+		width:rem(10);
+		height:rem(10);
+		fill:white;
+		margin:rem(15) 0 0 0;
+	}
 
 .scroll-to-top-inactive {
 	opacity:0;
