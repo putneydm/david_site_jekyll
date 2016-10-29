@@ -103,5 +103,5 @@
 	transform: translateY(80px);
 }
 .nav--trans {
-	transition: transform .3s ease-in-out;
+	transition: transform .35s cubic-bezier(.57,.48,.48,1.15);
 }
