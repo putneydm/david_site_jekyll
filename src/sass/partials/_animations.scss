@@ -92,3 +92,16 @@
 	transform: translateY(-120px);
 	transition:transform .3s ease-in;
 }
+.nav--appear {
+	// opacity:1;
+	transform: translateY(0px);
+}
+.nav--noappear {
+	transform: translateY(-80px);
+}
+.nav-fixed-headspace.nav--noappear {
+	transform: translateY(80px);
+}
+.nav--trans {
+	transition: transform .3s ease-in-out;
+}
