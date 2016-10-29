@@ -8,8 +8,6 @@ img {display:block;
 a {
 	img {border:0;}
 }
-.clearfix{
-	&::after {content:'';width:100%;height:0;clear:both;display:block;}
 }
 p {
 	font-family:$droid;
