@@ -116,6 +116,7 @@ var pageFunctions = {
        self.handleManualScrollback(scrollPosition);
        self.initBlogTeasers();
        self.initQuoteAnimate(self.blogQuotes);
+       self.handleHeadlineSwap(scrollPosition);
      }
      if (pageType === 'index' || pageType === 'portfolio_entry') {
       self.handleHeroAnimate(scrollPosition);
@@ -299,7 +300,7 @@ var pageFunctions = {
  },
   // onload functions
   // animates nameplate on page load
-  nameplateAnimate: function () {
+  nameplateAnimate: function() {
     var self = this;
     var siteNameplate = document.querySelector('#header-logo'),
         navigation = document.querySelector('#nav-menu'),
@@ -436,7 +437,7 @@ var pageFunctions = {
       this.setInactiveState(false);
     }
   },
-  handleScrollButton: function (scrollPosition) {
+  handleScrollButton: function(scrollPosition) {
     var self = this;
     var scrollButton = self.scrollButton,
         active = scrollButton.classList.contains('scroll-to-top-active');
@@ -462,6 +463,56 @@ var pageFunctions = {
         el.classList.add('blog-pullquote--animate');
       }
     });
+  },
+  handleHeadlineSwap: function(scrollPosition) {
+    var self=this;
+
+    var activeEl = document.querySelector('.entry--active') || false,
+        sp = self.getScrollPosition(),
+        blogHeadline = document.querySelector('.entry--active .blog-headline') || false,
+        hedVis = self.headerHeadline.classList.contains('nav--appear') || false,
+        hedNoVis = self.headerHeadline.classList.contains('nav--noappear') || false,
+        hedText = blogHeadline.innerHTML || false,
+        direction = self.scrollDirection(),
+        hedPos = self.getElemDistance(blogHeadline);
+
+    // swap in headline
+    if (hedText && self.getElemDistance(blogHeadline) < sp && !hedVis && !hedNoVis) {
+      self.headerHeadline.innerHTML = hedText;
+      extendEl(self.headerHeadline);
+    }
+    // swap out headline
+    if (hedText && self.getElemDistance(blogHeadline) > sp && hedVis && !hedNoVis) {
+      var hedText = self.getElemDistance(blogHeadline);
+      retractEl(self.headerHeadline)
+      resetEl(self.headerHeadline);
+    }
+    // logo out, headline in
+    if (hedText && direction && scrollPosition > hedPos) {
+      retractEl(self.logo);
+      extendEl(self.headSpace);
+    }
+    // logo in, headline out
+    if (!direction) {
+      extendEl(self.logo);
+      retractEl(self.headSpace);
+    }
+    function retractEl(el) {
+      el.classList.remove('nav--appear');
+      el.classList.add('nav--trans');
+      el.classList.add('nav--noappear');
+    }
+    function resetEl(el) {
+      el.addEventListener('transitionend', function() {
+        el.classList.remove('nav--trans');
+        el.classList.remove('nav--noappear');
+      });
+    }
+    function extendEl(el) {
+      el.classList.remove('nav--noappear');
+      el.classList.add('nav--trans');
+      el.classList.add('nav--appear');
+    }
   },
   handleSiteFooter: function(scrollPosition) {
     var self = this;
