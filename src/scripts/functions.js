@@ -80,7 +80,10 @@ var pageFunctions = {
     self.blogQuotes = [].slice.call(document.querySelectorAll('.blog-pullquote'));
     self.blogTeasers = [].slice.call(document.querySelectorAll('.blog-teaser-item'));
     self.BlogTeaserList = document.querySelector('.blog-teaser-list');
-
+    self.headSpace = document.querySelector('#headspace');
+    self.headerHeadline = document.querySelector('#headspace .nav-blog-headline');
+    self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
+    self.logo = document.querySelector('#header-logo');
   },
   getElementsIndex: function() {
     var self=this;
