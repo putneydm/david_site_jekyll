@@ -360,10 +360,9 @@ pre {
 .pagination {
 	display:flex;
 	flex-direction: row;
-	flex-basis: 100%;
 	margin:0 0 rem(80);
 	@media screen and (max-width:em(500))	{
-	margin:0 0 rem(40);
+		margin:0 0 rem(40);
 	}
 }
 .pagination-direction {
