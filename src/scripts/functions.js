@@ -90,6 +90,8 @@ var pageFunctions = {
   },
   initScrollListener: function (pageType) {
     var self=this;
+    // var used to determine scroll direction
+    self.lastScrollTop = 0;
    document.onscroll = function() {
     var scrollPosition = self.getScrollPosition();
 
@@ -633,5 +635,28 @@ promiseCheck: function() {
       promiseSupport = true;
   } catch (e) {}
   return promiseSupport
+},
+scrollDirection: function() {
+  var self=this;
+
+  // var lastScrollTop = 0;
+     var st = window.pageYOffset || document.documentElement.scrollTop;
+     if (st > self.lastScrollTop){
+         // downscroll code
+         var dir = true;
+        //  console.log('down');
+        //  return true;
+     } else {
+        // upscroll code
+        var dir = false;
+        // console.log('up');
+        // return false
+     }
+     self.lastScrollTop = st;
+
+    //  console.log(dir);
+
+     return dir;
 }
+
 };
