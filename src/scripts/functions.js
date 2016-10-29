@@ -517,7 +517,7 @@ var pageFunctions = {
       if (itemBounds.top <= triggerLine && !active && !deactivated) {
         el.classList.add('entry--active');
       }
-      if (itemBounds.bottom <= triggerLine && active && !deactivated) {
+      if (itemBounds.bottom <= triggerLine && !deactivated) {
         el.classList.remove('entry--active');
         el.classList.add('entry--deactivated');
       }
