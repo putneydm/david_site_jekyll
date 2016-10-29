@@ -44,7 +44,7 @@
 		color: $med;
 		font-size: em(53);
 		line-height: 80%;
-		margin: 5px 5px 0 0;
+		margin: rem(5) rem(5) 0 0;
 		font-family: $sans;
 			@media screen and (max-width:em(500)) { font-size: em(53); }
 		}
