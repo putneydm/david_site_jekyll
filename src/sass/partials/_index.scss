@@ -218,7 +218,9 @@
 		&:nth-child(3) {order:2}
 	}
 	a {
-	background:none;
+		background:none;
+		display:inline-block;
+
 		&:hover {.teaser-arrow-icon{fill:$aqua;transition:fill .2s} }
 	}
 }
