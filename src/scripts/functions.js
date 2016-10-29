@@ -22,19 +22,25 @@ var pageFunctions = {
   },
   intializeBlog: function() {
     var self=this;
+    var scrollPosition = self.getScrollPosition();
     self.getElementsHero();
     self.setBackground(self.heroArt); // swaps out hero image on load.
     self.getElementsBlog();
+    self.setActiveBlogItem();
     self.initScrollListener('blog');
     self.initQuoteAnimate(self.blogQuotes);
     this.initScrollBackButton();
+    self.handleNavAnimate(scrollPosition);
+    self.handleHeroAnimate(scrollPosition);
   },
   intializeBlogEntry: function() {
     var self=this;
+    var scrollPosition = self.getScrollPosition();
     self.getElementsBlog();
     self.initFootnoteClick();
     this.initScrollBackButton();
-    self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
+    self.setActiveBlogItem();
+    self.handleNavAnimate(scrollPosition);
     self.initScrollListener('blogEntry');
     self.initQuoteAnimate(self.blogQuotes);
   },
