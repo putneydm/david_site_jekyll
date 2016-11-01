@@ -7,7 +7,7 @@ categories: blog-entry
 tags: ['Trump', 'Clinton', 'Politics', 'elections', 'voting']
 image: i_voted_Sticker
 imageAlt: "I voted sticker"
-promo: ""
+promo: "Whoever wins, we all lose"
 quote: It's also important that the country have leadership that isn't corrupt, or cynical, or entranced by bad ideas or whatever faults that might describe that pair.
 ---  
 
