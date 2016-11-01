@@ -116,7 +116,7 @@ var pageFunctions = {
        self.handleManualScrollback(scrollPosition);
        self.initBlogTeasers();
        self.initQuoteAnimate(self.blogQuotes);
-       self.handleHeadlineSwap(scrollPosition);
+       self.handleHeadlineSwap(scrollPosition, false);
      }
      if (pageType === 'index' || pageType === 'portfolio_entry') {
       self.handleHeroAnimate(scrollPosition);
