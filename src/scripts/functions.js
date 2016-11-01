@@ -553,7 +553,8 @@ var pageFunctions = {
   handleScrollProgress: function() {
     var self=this;
     var progressBar = self.scrollProgress,
-        activeItem = document.querySelector('.entry--active .blog-entry-text');
+        activeItem = document.querySelector('[data-status="active"]');
+
     if (activeItem) {
       progressBar.classList.add('scroll-progress--trans');
       var percent = 100 - self.calculateBlogPercentage(activeItem);
@@ -581,22 +582,24 @@ var pageFunctions = {
 
     self.entryList.forEach(function(el) {
       var itemBounds = el.getBoundingClientRect(),
-          active = el.classList.contains('entry--active'),
-          deactivated = el.classList.contains('entry--deactivated');
-      // console.log(foo.top);
-      if (itemBounds.top <= triggerLine && !active && !deactivated) {
-        el.classList.add('entry--active');
+          active = el.dataset.status === 'active',
+          inactive = el.dataset.status === 'inactive';
+
+      // sets item to active when it scrolls up and into position
+      if (itemBounds.top <= triggerLine && !active && !inactive) {
+        el.dataset.status = 'active';
       }
-      if (itemBounds.bottom <= triggerLine && !deactivated) {
-        el.classList.remove('entry--active');
-        el.classList.add('entry--deactivated');
+      // sets item to inactive when it scrolls up and out of window
+      if (itemBounds.bottom <= triggerLine && active && !inactive) {
+        el.dataset.status = 'inactive';
       }
-      if (itemBounds.bottom >= triggerLine && !active && deactivated) {
-        el.classList.remove('entry--deactivated');
-        el.classList.add('entry--active');
+      // sets item to active if it scrolls down and back into the window
+      if (itemBounds.bottom >= triggerLine && !active && inactive) {
+        el.dataset.status = 'active';
       }
+      // sets item to none when it scrolls down and out of the window
       if (itemBounds.top >= triggerLine && active) {
-        el.classList.remove('entry--active');
+        el.dataset.status = 'none';
       }
     });
   },

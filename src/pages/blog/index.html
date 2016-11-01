@@ -12,7 +12,7 @@ keywords: [blog, writing, technology, movies, music, culture]
 <div id="blog-container" class="blog-container">
 
 {% for post in paginator.posts %}
-<article class="blog-entry">
+<article class="blog-entry" data-status="none">
     @@include('../../layouts/partials/blog_components/blog_image_test.html')
 
   	<h1 class="blog-headline"><a href="{{post.url}}">{% if post.altTitle %}{{ post.altTitle | markdownify | strip_html }} {% else %} {{ post.title | markdownify | strip_html }}{% endif%}</a></h1>
