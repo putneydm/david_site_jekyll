@@ -98,9 +98,11 @@
 }
 .nav--noappear {
 	transform: translateY(-80px);
+		@media screen and (min-width:rem(560))	{transform:none;}
 }
 .nav-fixed-headspace.nav--noappear {
 	transform: translateY(80px);
+		@media screen and (min-width:rem(560))	{transform:none;}
 }
 .nav--trans {
 	transition: transform .32s cubic-bezier(.57,.48,.48,1.15);
