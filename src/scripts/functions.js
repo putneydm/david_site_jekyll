@@ -269,7 +269,6 @@ var pageFunctions = {
   },
   handleNavAnimate: function(pos) {
     var self=this;
-
     var header = self.header,
         heroArt = self.heroArtHeight,
         button = self.menuButton,
@@ -562,11 +561,9 @@ var pageFunctions = {
     if (activeItem) {
       progressBar.classList.add('scroll-progress--trans');
       var percent = 100 - self.calculateBlogPercentage(activeItem);
-      // progressBar.style.width = percent + '%';
       progressBar.style.transform = "translateX(-" + percent + "%)"
     }
     if (!activeItem) {
-      // progressBar.style.width = '0%';
       progressBar.style.transform = 'translateX(-100%)';
     }
   },
