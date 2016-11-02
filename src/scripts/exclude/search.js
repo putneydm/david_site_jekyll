@@ -113,7 +113,6 @@ var searchFunctions = {
     if (!errorMessage) {
       var errorMessage = 'Yeah, that search term doesn\'t really work for us.';
     }
-
     //  stopwords result false = bad, true = good
     if (stopWordsResult && containsWordChar && searchTerm.length > 2) {
       var searchResultsArr = self.doSearch(searchInput);
