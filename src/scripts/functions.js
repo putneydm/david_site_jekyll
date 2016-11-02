@@ -117,7 +117,7 @@ var pageFunctions = {
        self.handleManualScrollback(scrollPosition);
        self.initBlogTeasers();
        self.initQuoteAnimate(self.blogQuotes);
-       self.handleHeadlineSwap(scrollPosition, false);
+       self.handleHeadlineSwap(false);
      }
      if (pageType === 'index' || pageType === 'portfolio_entry') {
       self.handleHeroAnimate(scrollPosition);
@@ -475,38 +475,41 @@ var pageFunctions = {
       }
     });
   },
-  handleHeadlineSwap: function(scrollPosition) {
+  handleHeadlineSwap: function(manual) {
     var self=this;
-
-    var activeEl = document.querySelector('.entry--active') || false,
+    var activeEl = document.querySelector('[data-status="active"]') || false,
         sp = self.getScrollPosition(),
-        blogHeadline = document.querySelector('.entry--active .blog-headline') || false,
+        blogHeadline = document.querySelector('[data-status="active"] .blog-headline') || false,
         hedVis = self.headerHeadline.classList.contains('nav--appear') || false,
         hedNoVis = self.headerHeadline.classList.contains('nav--noappear') || false,
         hedText = blogHeadline.innerHTML || false,
         direction = self.scrollDirection(),
-        hedPos = self.getElemDistance(blogHeadline);
+        hedPos = self.getElemDistance(blogHeadline),
+        scrollOverriden = self.headSpace.dataset.status === 'scrollOverride' || false;
 
     // swap in headline
     if (hedText && self.getElemDistance(blogHeadline) < sp && !hedVis && !hedNoVis) {
       self.headerHeadline.innerHTML = hedText;
       extendEl(self.headerHeadline);
-    }
-    // swap out headline
-    if (hedText && self.getElemDistance(blogHeadline) > sp && hedVis && !hedNoVis) {
+    } else if (hedText && self.getElemDistance(blogHeadline) > sp && hedVis && !hedNoVis) {
       var hedText = self.getElemDistance(blogHeadline);
       retractEl(self.headerHeadline)
       resetEl(self.headerHeadline);
     }
     // logo out, headline in
-    if (hedText && direction && scrollPosition > hedPos) {
+    if (!scrollOverriden && hedText && direction && scrollPosition > hedPos) {
       retractEl(self.logo);
+      retractEl(self.anchor);
       extendEl(self.headSpace);
-    }
-    // logo in, headline out
-    if (!direction) {
+    } else if (!direction || manual && !scrollOverriden) {
       extendEl(self.logo);
+      extendEl(self.anchor);
       retractEl(self.headSpace);
+    }
+    if (manual && !scrollOverriden) {
+      self.headSpace.dataset.status = 'scrollOverride';
+    } else if (manual && scrollOverriden) {
+      self.headSpace.dataset.status = 'none';
     }
     function retractEl(el) {
       el.classList.remove('nav--appear');
@@ -681,6 +684,7 @@ var pageFunctions = {
       self.addShit(topNav, 'nav-list--open');
       self.addShit(button, 'nav-menu-button--active');
       self.addShit(header, 'menu-container--active');
+      self.handleHeadlineSwap(true) // boolean signals button press;
     }
     if (active) {
       self.removeShit(topNav, 'nav-list--open');
@@ -688,6 +692,7 @@ var pageFunctions = {
       self.removeShit(button, 'nav-menu-button--active');
       self.removeShitTimer(header, 'menu-container--active', 500);
       self.removeShitTimer(topNav, 'nav-list--close', 500);
+      self.handleHeadlineSwap(true); // boolean signals button press;
     }
   },
   getScrollPosition: function () {
