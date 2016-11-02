@@ -160,6 +160,7 @@
 	width:100%;
 	@media screen and (max-width:em(500)) {
 			margin: rem(40) 0 0;
+			padding:0 0 0 rem(5);
 		}
 }
 .blog-teaser-list {
@@ -209,7 +210,7 @@
 	@media screen and (max-width:rem(650)) {
 		 padding:rem(5) rem(5) 0 rem(5);
 	}
-	@media screen and (max-width:rem(550)) {
+	@media screen and (max-width:rem(500)) {
 		transform: translateY(rem(20));
 		flex-basis:calc(50% - 5px);
 		flex-grow:0;
@@ -217,7 +218,9 @@
 		&:nth-child(3) {order:2}
 	}
 	a {
-	background:none;
+		background:none;
+		display:inline-block;
+
 		&:hover {.teaser-arrow-icon{fill:$aqua;transition:fill .2s} }
 	}
 }

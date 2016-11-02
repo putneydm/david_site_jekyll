@@ -22,19 +22,25 @@ var pageFunctions = {
   },
   intializeBlog: function() {
     var self=this;
+    var scrollPosition = self.getScrollPosition();
     self.getElementsHero();
     self.setBackground(self.heroArt); // swaps out hero image on load.
     self.getElementsBlog();
+    self.setActiveBlogItem();
     self.initScrollListener('blog');
     self.initQuoteAnimate(self.blogQuotes);
     this.initScrollBackButton();
+    self.handleNavAnimate(scrollPosition);
+    self.handleHeroAnimate(scrollPosition);
   },
   intializeBlogEntry: function() {
     var self=this;
+    var scrollPosition = self.getScrollPosition();
     self.getElementsBlog();
     self.initFootnoteClick();
     this.initScrollBackButton();
-    self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
+    self.setActiveBlogItem();
+    self.handleNavAnimate(scrollPosition);
     self.initScrollListener('blogEntry');
     self.initQuoteAnimate(self.blogQuotes);
   },
@@ -80,7 +86,11 @@ var pageFunctions = {
     self.blogQuotes = [].slice.call(document.querySelectorAll('.blog-pullquote'));
     self.blogTeasers = [].slice.call(document.querySelectorAll('.blog-teaser-item'));
     self.BlogTeaserList = document.querySelector('.blog-teaser-list');
-
+    self.headSpace = document.querySelector('#headspace');
+    self.headerHeadline = document.querySelector('#headspace .nav-blog-headline');
+    self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
+    self.logo = document.querySelector('#header-logo');
+    self.anchor = document.querySelector('.main-header-logo-link');
   },
   getElementsIndex: function() {
     var self=this;
@@ -90,6 +100,8 @@ var pageFunctions = {
   },
   initScrollListener: function (pageType) {
     var self=this;
+    // var used to determine scroll direction
+    self.lastScrollTop = 0;
    document.onscroll = function() {
     var scrollPosition = self.getScrollPosition();
 
@@ -105,6 +117,7 @@ var pageFunctions = {
        self.handleManualScrollback(scrollPosition);
        self.initBlogTeasers();
        self.initQuoteAnimate(self.blogQuotes);
+       self.handleHeadlineSwap(false);
      }
      if (pageType === 'index' || pageType === 'portfolio_entry') {
       self.handleHeroAnimate(scrollPosition);
@@ -122,6 +135,16 @@ var pageFunctions = {
      self.handleManualScrollback(scrollPosition);
    }
   },
+  // initAnimListener: function() {
+  //   var self=this;
+  //   var headspace = document.querySelector('#headspace');
+  //
+  //
+  //   headspace.addEventListener('animationend',function(e){
+  //     headspace.classList.remove('nav-fixed-headspace--transout');
+  //   });
+  //
+  // },
   initResizeListener: function(){
     var self=this;
     window.onresize = function(e) {
@@ -246,7 +269,6 @@ var pageFunctions = {
   },
   handleNavAnimate: function(pos) {
     var self=this;
-
     var header = self.header,
         heroArt = self.heroArtHeight,
         button = self.menuButton,
@@ -288,7 +310,7 @@ var pageFunctions = {
  },
   // onload functions
   // animates nameplate on page load
-  nameplateAnimate: function () {
+  nameplateAnimate: function() {
     var self = this;
     var siteNameplate = document.querySelector('#header-logo'),
         navigation = document.querySelector('#nav-menu'),
@@ -425,7 +447,7 @@ var pageFunctions = {
       this.setInactiveState(false);
     }
   },
-  handleScrollButton: function (scrollPosition) {
+  handleScrollButton: function(scrollPosition) {
     var self = this;
     var scrollButton = self.scrollButton,
         active = scrollButton.classList.contains('scroll-to-top-active');
@@ -451,6 +473,59 @@ var pageFunctions = {
         el.classList.add('blog-pullquote--animate');
       }
     });
+  },
+  handleHeadlineSwap: function(manual) {
+    var self=this;
+    var activeEl = document.querySelector('[data-status="active"]') || false,
+        sp = self.getScrollPosition(),
+        blogHeadline = document.querySelector('[data-status="active"] .blog-headline') || false,
+        hedVis = self.headerHeadline.classList.contains('nav--appear') || false,
+        hedNoVis = self.headerHeadline.classList.contains('nav--noappear') || false,
+        hedText = blogHeadline.innerHTML || false,
+        direction = self.scrollDirection(),
+        hedPos = self.getElemDistance(blogHeadline),
+        scrollOverriden = self.headSpace.dataset.status === 'scrollOverride' || false;
+
+    // swap in headline
+    if (hedText && self.getElemDistance(blogHeadline) < sp && !hedVis && !hedNoVis) {
+      self.headerHeadline.innerHTML = hedText;
+      extendEl(self.headerHeadline);
+    } else if (hedText && self.getElemDistance(blogHeadline) > sp && hedVis && !hedNoVis) {
+      var hedText = self.getElemDistance(blogHeadline);
+      retractEl(self.headerHeadline)
+      resetEl(self.headerHeadline);
+    }
+    // logo out, headline in
+    if (!scrollOverriden && hedText && direction && scrollPosition > hedPos) {
+      retractEl(self.logo);
+      retractEl(self.anchor);
+      extendEl(self.headSpace);
+    } else if (!direction || manual && !scrollOverriden) {
+      extendEl(self.logo);
+      extendEl(self.anchor);
+      retractEl(self.headSpace);
+    }
+    if (manual && !scrollOverriden) {
+      self.headSpace.dataset.status = 'scrollOverride';
+    } else if (manual && scrollOverriden) {
+      self.headSpace.dataset.status = 'none';
+    }
+    function retractEl(el) {
+      el.classList.remove('nav--appear');
+      el.classList.add('nav--trans');
+      el.classList.add('nav--noappear');
+    }
+    function resetEl(el) {
+      el.addEventListener('transitionend', function() {
+        el.classList.remove('nav--trans');
+        el.classList.remove('nav--noappear');
+      });
+    }
+    function extendEl(el) {
+      el.classList.remove('nav--noappear');
+      el.classList.add('nav--trans');
+      el.classList.add('nav--appear');
+    }
   },
   handleSiteFooter: function(scrollPosition) {
     var self = this;
@@ -481,15 +556,14 @@ var pageFunctions = {
   handleScrollProgress: function() {
     var self=this;
     var progressBar = self.scrollProgress,
-        activeItem = document.querySelector('.entry--active .blog-entry-text');
+        activeItem = document.querySelector('[data-status="active"]');
+
     if (activeItem) {
       progressBar.classList.add('scroll-progress--trans');
       var percent = 100 - self.calculateBlogPercentage(activeItem);
-      // progressBar.style.width = percent + '%';
       progressBar.style.transform = "translateX(-" + percent + "%)"
     }
     if (!activeItem) {
-      // progressBar.style.width = '0%';
       progressBar.style.transform = 'translateX(-100%)';
     }
   },
@@ -509,22 +583,24 @@ var pageFunctions = {
 
     self.entryList.forEach(function(el) {
       var itemBounds = el.getBoundingClientRect(),
-          active = el.classList.contains('entry--active'),
-          deactivated = el.classList.contains('entry--deactivated');
-      // console.log(foo.top);
-      if (itemBounds.top <= triggerLine && !active && !deactivated) {
-        el.classList.add('entry--active');
+          active = el.dataset.status === 'active',
+          inactive = el.dataset.status === 'inactive';
+
+      // sets item to active when it scrolls up and into position
+      if (itemBounds.top <= triggerLine && !active && !inactive) {
+        el.dataset.status = 'active';
       }
-      if (itemBounds.bottom <= triggerLine && active && !deactivated) {
-        el.classList.remove('entry--active');
-        el.classList.add('entry--deactivated');
+      // sets item to inactive when it scrolls up and out of window
+      if (itemBounds.bottom <= triggerLine && active && !inactive) {
+        el.dataset.status = 'inactive';
       }
-      if (itemBounds.bottom >= triggerLine && !active && deactivated) {
-        el.classList.remove('entry--deactivated');
-        el.classList.add('entry--active');
+      // sets item to active if it scrolls down and back into the window
+      if (itemBounds.bottom >= triggerLine && !active && inactive) {
+        el.dataset.status = 'active';
       }
+      // sets item to none when it scrolls down and out of the window
       if (itemBounds.top >= triggerLine && active) {
-        el.classList.remove('entry--active');
+        el.dataset.status = 'none';
       }
     });
   },
@@ -605,6 +681,7 @@ var pageFunctions = {
       self.addShit(topNav, 'nav-list--open');
       self.addShit(button, 'nav-menu-button--active');
       self.addShit(header, 'menu-container--active');
+      self.handleHeadlineSwap(true) // boolean signals button press;
     }
     if (active) {
       self.removeShit(topNav, 'nav-list--open');
@@ -612,6 +689,7 @@ var pageFunctions = {
       self.removeShit(button, 'nav-menu-button--active');
       self.removeShitTimer(header, 'menu-container--active', 500);
       self.removeShitTimer(topNav, 'nav-list--close', 500);
+      self.handleHeadlineSwap(true); // boolean signals button press;
     }
   },
   getScrollPosition: function () {
@@ -633,5 +711,28 @@ promiseCheck: function() {
       promiseSupport = true;
   } catch (e) {}
   return promiseSupport
+},
+scrollDirection: function() {
+  var self=this;
+
+  // var lastScrollTop = 0;
+     var st = window.pageYOffset || document.documentElement.scrollTop;
+     if (st > self.lastScrollTop){
+         // downscroll code
+         var dir = true;
+        //  console.log('down');
+        //  return true;
+     } else {
+        // upscroll code
+        var dir = false;
+        // console.log('up');
+        // return false
+     }
+     self.lastScrollTop = st;
+
+    //  console.log(dir);
+
+     return dir;
 }
+
 };

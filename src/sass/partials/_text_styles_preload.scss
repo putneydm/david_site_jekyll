@@ -1,11 +1,15 @@
 * { box-sizing: border-box; }
+//html, body { height: 100%; overflow:auto;}
+html {
+	font-size:calc(1em + (0 * 1vw));
+}
 body {
 color:$body;
-font-size:100%;
 margin:0 0 rem(120);
 font-family:$droid;
 -webkit-font-smoothing: antialiased;
 }
+p {line-height: 1.65}
 h1, h2, h3 {font-family:$sans; font-weight:700;}
 a {
 	@include underscore-body ($x-light-aqua, 90%);

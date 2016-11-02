@@ -46,6 +46,14 @@
 .main-header-logo--nodisplay {
 	fill:white;
 }
+.main-header-logo-link {
+	position: relative;
+	z-index:3;
+}
+.headspace-wrapper {
+	display:none;
+	pointer-events: none;
+}
 .nav-menu-button {
 	display:none;
 	font-size:rem(10);

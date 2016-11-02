@@ -6,6 +6,7 @@
 	background-size: 100%;
 	background-repeat: no-repeat;
 	border-bottom: 1px solid white;
+	background-color:$xlight;
 	&::after, &::before {
 		position:absolute;
 		width:100%;
@@ -145,7 +146,7 @@
 	padding:rem(80) rem(40) 0;
 	max-width:rem(1100);
 	position:relative;
-		@media screen and (max-width:em(450)) { padding:rem(40) rem(15) 0;}
+		@media screen and (max-width:em(450)) { padding:rem(40) 0 0;}
 }
 .blog-teaser-wrapper {
 	width:100%;
