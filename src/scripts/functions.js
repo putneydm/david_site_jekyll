@@ -90,6 +90,7 @@ var pageFunctions = {
     self.headerHeadline = document.querySelector('#headspace .nav-blog-headline');
     self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
     self.logo = document.querySelector('#header-logo');
+    self.anchor = document.querySelector('.main-header-logo-link');
   },
   getElementsIndex: function() {
     var self=this;
