@@ -6,6 +6,7 @@
 	left:0;
 	overflow:hidden;
 	display:block;
+	pointer-events: all;
 	@media screen and (min-width:rem(560))	{
 		display:none;
 	}
