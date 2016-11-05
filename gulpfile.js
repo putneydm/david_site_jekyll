@@ -830,6 +830,11 @@ gulp.task('listen', function () {
     gulp.watch(paths.collections.input).on('change', function(file) {
       gulp.start('collections');
     });
+    gulp.watch(paths.svg.input).on('change', function(file) {
+      gulp.start('svg');
+      gulp.start('layouts');
+      gulp.start('pages');
+    });
 });
 
 // Run livereload after file change
