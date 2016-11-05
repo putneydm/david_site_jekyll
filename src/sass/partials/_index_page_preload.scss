@@ -71,8 +71,11 @@
 				margin:0 0 0 rem(12);
 				color:white;
 				letter-spacing:-.1em;
+				vertical-align: rem(1);
+				font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue";
+				font-weight:300;
 			}
-			&:nth-child(4) {
+			&:nth-child(5) {
 				padding-right:0;
 				&::after{content:'';display:none;}
 			}
