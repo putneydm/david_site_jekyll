@@ -11,7 +11,7 @@
 	top:0;
 	transform: translateY(-120px);
 	box-shadow: 0 0 40px 15px rgba($med, .4);
-		@media screen and (max-width:em(560)) {
+		@media screen and (max-width:em($header-break-2)) {
 			flex-direction: column;
 		}
 		a {background-image: none;}
@@ -32,11 +32,11 @@
 	transform: scale(1,1);
 	transition:fill .2s;
 	cursor:pointer;
-			@media screen and (max-width:em(700)) {
-				height:rem(55);
-				width:rem(220);
+			@media screen and (max-width:em($header-break-1)) {
+				height:rem(50);
+				width:rem(200);
 			}
-			@media screen and (max-width:em(430)) {
+			@media screen and (max-width:em($header-break-3)) {
 				height:rem(50);
 				width:rem(200);
 				margin:rem(9) 0 0;
@@ -60,7 +60,7 @@
 	font-family:$sans;
 	margin:0 0 rem(10);
 	text-align:center;
-		@media screen and (max-width:em(560)) {
+		@media screen and (max-width:em($header-break-2)) {
 			display:block;
 		}
 	a{color:$x-light-aqua;display:block;}
@@ -71,49 +71,71 @@
 	fill:$x-light-aqua;
 	margin:0 auto;
 }
+.icn-search-button {
+	width:rem(16);
+	height:rem(16);
+	fill:$med;
+	margin:0 rem(15) 0;
+	@media screen and (min-width:em($header-break-2)) {
+		margin:0 rem(10);
+	}
+	@media screen and (min-width:em($header-break-1)) {
+		margin:0 rem(25) 0 rem(15);
+	}
+}
 .nav-list-wrapper {width:100%;}
 .nav-list {
 	display:flex;
 	flex-direction:row;
 	justify-content: flex-end;
 	list-style-type: none;
-	margin:0 rem(10) 0 0;
-	flex-grow:2;
-	@media screen and (max-width:em(560)) {
+	margin:rem(5) rem(10) 0 0;
+	padding:0;
+	line-height:1;
+	list-style-type: none;
+	text-transform:uppercase;
+	font-family:$sans;
+	@media screen and (max-width:em($header-break-2)) {
 		flex-direction: column;
+		justify-content: space-around;
 		height:0;
-		opacity: 0;
 		overflow:hidden;
-		padding:0;
 		margin:0;
-		transform: scale(.8);
 	}
 	li {
 		font-size:em(20);
-		font-family:$sans;
-		text-transform:uppercase;
-		text-align:right;
 		margin:0 rem(5) 0 0;
 		padding:0 0 0 rem(18);
-		font-weight:700;
-		line-height:100%;
-		list-style-type: none;
-		a {color:$med;}
-		@media screen and (max-width:em(700)) {
-				font-size:rem(16);
-				margin:0 rem(5) 0 0;
+		a {
+			color:$med;
+			 &:hover{color:$aqua;}
 		}
-		@media screen and (max-width:em(560)) {
+		.icn-search-button {
+			fill:$med;
+			 &:hover{fill:$aqua;}
+		}
+		@media screen and (max-width:em($header-break-1)) {
+			font-size:rem(16);
+			margin:0 rem(5) 0 0;
+		}
+		@media screen and (max-width:em($header-break-2)) {
 			text-align:center;
 			font-size:rem(18);
-			margin:0 0 rem(20);
+			margin:rem(8) 0;
 			padding:0;
 		}
 	}
 }
-.nav-list--nodisplay {
+.nav-list.nav-list--nodisplay {
 	 li {
-		 a {color:white;}
+		 a {
+			 color:white;
+			 	&:hover{color:$x-light-aqua;}
+		 }
+		 .icn-search-button {
+			 fill:white;
+			 	&:hover{fill:$x-light-aqua;}
+		 }
 	 }
 }
 // variations for different versions of header
@@ -139,20 +161,15 @@
 		background-color:white;
 		box-shadow:0 0 40px 15px rgba($med, .4);
 		position: fixed;
-	.main-header-logo {
-			fill:$aqua;
-			&:hover {fill:$light-aqua}
-		}
-	.nav-menu-button {
-		a {color:$med;}
-	}
-	.nav-menu-button-icn {
-			fill:$light;
-	}
-	.nav-list {
-		li {
+		.main-header-logo {
+				fill:$aqua;
+				&:hover {fill:$light-aqua}
+			}
+		.nav-menu-button {
 			a {color:$med;}
 		}
-	}
+		.nav-menu-button-icn {
+				fill:$light;
+		}
 	}
 }
