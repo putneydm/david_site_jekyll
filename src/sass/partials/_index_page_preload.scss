@@ -59,6 +59,11 @@
 			a {
 				background-image:none;
 				color:white;
+				&:hover {color:$x-light-aqua;}
+			}
+			.icn-search-button {
+				fill:white;
+				&:hover {fill:$x-light-aqua;}
 			}
 			&::after {
 				content:'|';
