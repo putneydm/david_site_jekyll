@@ -11,7 +11,12 @@
       </div>
     </div>
   <nav class="nav-list-wrapper">
+
+{% if pageType  == 'blog-entry' or pageType == 'search' or pageType == 'error'%}
+  <ul id="nav-menu" class="nav-list">
+{% else %}
   <ul id="nav-menu" class="nav-list nav-list--nodisplay">
+{% endif%}
     @@include('../shared/nav_links.html')
   </ul>
 </nav>
