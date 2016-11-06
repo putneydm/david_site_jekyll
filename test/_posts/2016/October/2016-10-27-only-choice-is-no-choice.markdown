@@ -29,12 +29,6 @@ I don't want to go into an in-depth analysis of the candidates' various politica
 
 Yet people do. Put nicely, politics causes people to lose perspective on the problems with their own candidate. Or, put less delicately, politics makes people stupid.
 
-Politics creates a situation in which we literally should not trust ourselves. Wisdom, thought, experience, rationality -- all gone. People at a political rally jumping up and down and waving signs are all so sure they are right. But how, really, can they know? We're at the end of a 230-year tradition of people jumping up and down with signs at political rallies, sure they were right while quite often being completely wrong.
-
-Making matters worse, winning is equated with being correct. At best it is two lions and an antelope voting over who gets eaten for dinner.
-
-Politics is simply not a home for rational thought. But irrationality -- which we have in spades this year -- is not enough reason to forego voting.
-
 The American political system is at its heart transactional. The candidate gets what he or she wants by convincing a sufficient amount of people that they'll actually get what they want. Clinton or Trump will get the power, prestige and a place in the history books by being president. Even if we get a tax break or a social program or legalized marriage between cats and dogs, it's hard not to argue the winning candidate gets the better deal in the long run.
 
 {% if page.quote %}
@@ -43,13 +37,15 @@ The American political system is at its heart transactional. The candidate gets 
   </aside>
 {% endif %}
 
-But someone has to win. We can't just not have a president. Voting for the lesser of two evils is a longstanding American political tradition.<sup>[1][1]</sup> Our vote gets lost in a vast sea of other votes that were cast with millions of different motives, s0 holding one's nose and voting goes down a little easier. I'm doing my civic duty! It's important! USA! USA!
+But someone has to win. We can't just not have a president. Voting for the lesser of two evils is a longstanding American political tradition.<sup>[1][1]</sup> Our vote gets lost in a vast sea of other votes that were cast with millions of different motives, so holding one's nose and voting goes down a little easier. I'm doing my civic duty! It's important! USA! USA!
+
+Despite our one vote being one of a million voices, we still own that choice.
 
 It's important that the country have capable leadership that isn't corrupt, or cynical, or entranced by bad ideas or whatever faults that might describe that pair. But it's even beyond that.
 
 A friend of mine is regularly outraged by Donald Trump antics. His argument is that Trump normalizes bad things. It's a valid argument, to a degree. Unfortunately it's a dependent on who gets to decide good from bad.
 
-But the argument is correct that it important to draw a line, if only personally. Electing Trump or Clinton means that it is OK to be like Trump or Clinton in American politics. Not just OK. It makes it great. It becomes the way to win.
+But the argument is correct that it important to draw a line, if only personally. Electing Trump or Clinton means that it is OK to be like Trump or Clinton in American politics. Not just OK. Great. It becomes the way to win.
 
 Trump and Clinton are the worst pair to run for president in my lifetime -- professional wrestling announcer vs. Nixon in a pantsuit. They deserve no fealty on our part. It's not our duty or obligation to give either of them a vote. It's binary. Either they do or do not deserve a vote.
 
