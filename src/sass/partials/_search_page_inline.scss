@@ -1,0 +1,131 @@
+.site-footer {display:none;}
+
+.search-main {
+  max-width:rem(700);
+  width:100%;
+  position:relative;
+  width:100%;
+  margin:140px auto 0;
+    @media screen and (max-width:em(700)) {
+      max-width:none;
+    }
+    .blog-entry	{ background-image:none;}
+}
+.form-field-wrapper {
+  position: relative;
+  // margin-top:rem(120);
+}
+.login-wrapper {
+  position: relative;
+  margin:rem(40) auto 0;
+  height:rem(500);
+}
+.search-form {
+  display:flex;
+  flex-direction: column;
+  margin: 0 auto 0;
+    @media screen and (max-width:rem(700))	{
+      flex-direction: column;
+    }
+    .search-form-wrapper {
+      // flex-grow: 2;
+      display:flex;
+      flex-direction: row;
+      margin: 0;
+      @media screen and (max-width:rem(700))	{
+        margin: 0 rem(20);
+        flex-direction: column;
+      }
+    }
+}
+.error-overlay {
+  position:absolute;
+  width:100%;
+  left:0;
+  top:-15px;
+  height:rem(215);
+  z-index:1;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  opacity:0;
+  pointer-events: none;
+  padding:rem(45) 0 0;
+  @media screen and (max-width:rem(700))	{
+    width:100%;
+    padding:rem(25) rem(10) rem(10);
+    height:rem(205);
+  }
+}
+.error-overlay--active {
+  opacity:1;
+  transition: opacity .4s;
+  pointer-events: auto;
+}
+.error-overlay--activex {
+  opacity:1;
+  transition: opacity .4s;
+  pointer-events: auto;
+}
+.login-error-message {
+  font-family:$sans;
+  font-size:rem(15);
+  text-align: center;
+  height:rem(28);
+  color:$aqua;
+  margin:0 auto rem(40);
+  transition: opacity .2s;
+  flex-grow:0;
+  width:100%;
+    @media screen and (max-width:rem(700))	{
+      height:rem(48);
+      margin: 0 0 rem(10) 0;
+     }
+}
+.loader {
+  transition: opacity .4s 1s;
+  z-index:1;
+}
+.loader-icon {
+  width:rem(30);
+  height:rem(30);
+  background-color: $aqua;
+  border-radius: 50%;
+  animation-name: bounceball;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 0;
+  timing-function: ease-out;
+  animation-play-state: running;
+  animation-fill-mode: none;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right:0;
+  margin:0 auto;
+  z-index:1;
+}
+.loader-shadow {
+  width: 15px;
+  height: 7px;
+  background: rgba($med, .6);
+  border-radius: 7px / 3px;
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:0 auto;
+  box-shadow:0 0 3px 3px rgba($med, .6);
+  animation-name:shadow;
+  animation-iteration-count: infinite;
+  animation-duration: .5s;
+  animation-direction: alternate;
+  timing-function: ease-out;
+}
+// .error-overlay--activex {
+//   opacity:1;
+//   transition: opacity .4s;
+//   pointer-events: auto;
+// }
+//
