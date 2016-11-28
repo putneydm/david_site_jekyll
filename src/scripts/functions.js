@@ -604,6 +604,17 @@ var pageFunctions = {
       }
     });
   },
+  handleSearchTerm: function() {
+    var self=this;
+
+    var query = window.location.search.substring(1) || false;
+
+    if (query) {
+      var searchBtn = document.querySelector('#search-btn a');
+      searchBtn.href = '/search/?' + query;
+      self.handleHighlight();
+    }
+  },
   // functions that return data or change elements
   getElemDistance: function ( elem ) {
     var location = 0;
