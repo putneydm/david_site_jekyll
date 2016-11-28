@@ -78,6 +78,16 @@ var searchFunctions = {
       self.handleSearchResults(searchResultsArr, retrievedObject);
     }
   },
+  handleURLChange: function(searchTerm) {
+    var self=this;
+
+    var searchURL = self.cleanPunctuation(searchTerm).replace(/\s/g, '%20');
+
+    console.log('search term clean y', searchURL);
+
+    newUrl = "http://localhost:4000/search/?type=search_result&search_term=" + searchURL;
+    history.pushState({}, null, newUrl);
+  },
   getSearchFieldData: function() {
     var self=this;
     var searchInput = document.querySelector('#search-field').value;
