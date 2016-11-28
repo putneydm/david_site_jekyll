@@ -119,6 +119,15 @@ var pageFunctions = {
        self.initQuoteAnimate(self.blogQuotes);
        self.handleHeadlineSwap(false);
      }
+     if (pageType === "search") {
+      //  self.setActiveBlogItem();
+      //  self.handleScrollProgress();
+      //  self.handleFootnoteButton (scrollPosition);
+       self.handleManualScrollback(scrollPosition);
+       self.initBlogTeasers();
+       self.initQuoteAnimate(self.blogQuotes);
+       self.handleHeadlineSwap(false);
+     }
      if (pageType === 'index' || pageType === 'portfolio_entry') {
       self.handleHeroAnimate(scrollPosition);
       self.handleNavAnimate(scrollPosition);
