@@ -19,13 +19,10 @@ input, button {
     background-image: none;
   }
 }
-.search-results {
-	// margin-top:rem(60);
-}
 .search-results-alt {
-  margin:0 auto rem(100);
+  margin:0 auto;
+  padding-top: 0;
     @media screen and (max-width:em(750)) {
-      padding-top:0;
       margin:0 rem(10) 0;
     }
 }
