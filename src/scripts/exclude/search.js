@@ -67,6 +67,17 @@ var searchFunctions = {
     }
     });
   },
+  handleSearchReload: function() {
+    var self=this;
+
+    var retrievedObject = self.getQueryVariable('search_term');
+
+    if (retrievedObject) {
+      document.querySelector('#search-field').value = retrievedObject;
+      var searchResultsArr = self.doSearch(retrievedObject);
+      self.handleSearchResults(searchResultsArr, retrievedObject);
+    }
+  },
   getSearchFieldData: function() {
     var self=this;
     var searchInput = document.querySelector('#search-field').value;
