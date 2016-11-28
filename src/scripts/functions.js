@@ -63,6 +63,11 @@ var pageFunctions = {
     var self=this;
     self.initScrollListener();
   },
+  intializeSearch: function() {
+    var self=this;
+    self.initScrollListener();
+    self.getElementsHedSwap();
+  },
   getElementsAll: function() {
     var self=this;
     self.header = document.querySelector('#inside-header');
