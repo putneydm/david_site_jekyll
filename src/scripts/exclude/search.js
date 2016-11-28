@@ -257,7 +257,7 @@ var searchFunctions = {
 
 
       var entryLink = document.createElement('A');
-      entryLink.href= self.entries[el.index].link + '?type=search_result';
+       entryLink.href= self.entries[el.index].link + '?type=search_result&search_term=' +  searchTerm;
 
       var moreLink = document.createElement('A');
       // moreLink.href= self.entries[el.index].link + '?type=search_result';
