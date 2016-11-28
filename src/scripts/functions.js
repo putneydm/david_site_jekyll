@@ -615,6 +615,51 @@ var pageFunctions = {
       self.handleHighlight();
     }
   },
+  handleHighlight: function() {
+    var self=this;
+
+    var query = self.getQueryVariable('search_term') || false;
+    if (query) {
+      var head = document.querySelector('.blog-headline');
+      var text = document.querySelector('.blog-entry-text').childNodes;
+      var nodes = Array.prototype.slice.call(text);
+      var searchTermRegEx = new RegExp('\\b' + query + '\\b', 'gi');
+
+      self.highLight(head, searchTermRegEx);
+      nodes.forEach(function(el) {
+        self.highLight(el, searchTermRegEx);
+      });
+    }
+
+    // function highLight (el, searchTermR) {
+    //
+    //   console.log(searchTermR);
+    //
+    //     var elementText = el.textContent;
+    //     var termMatches = elementText.match(searchTermR);
+    //     if (termMatches) {
+    //       termMatches.forEach(function (match) {
+    //         elementText = elementText.replace(searchTermR, '<span  class="highlight">' + match + '</span>', 'gi');
+    //       });
+    //       el.innerHTML = elementText;
+    //     }
+    //   }
+
+    // console.log('text', nodes);
+
+
+  },
+  highLight: function(el, searchTermRegEx) {
+    var self=this;
+    var elementText = el.textContent;
+    var termMatches = elementText.match(searchTermRegEx);
+    if (termMatches) {
+      termMatches.forEach(function (match) {
+        elementText = elementText.replace(searchTermRegEx, '<span class="highlight">' + match + '</span>', 'gi');
+      });
+      el.innerHTML = elementText;
+    }
+  },
   // functions that return data or change elements
   getElemDistance: function ( elem ) {
     var location = 0;
