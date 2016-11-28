@@ -423,3 +423,11 @@ pre {
 	transform: scaleX(-1);
 	filter: FlipH;
 }
+.highlight {
+	background-color: $x-light-aqua;
+  padding: rem(0) rem(3) rem(2);
+  // font-weight: 700;
+  border-radius: rem(3);
+  margin: 0 rem(1);
+	transition: background-color .3s;
+}
