@@ -30,8 +30,11 @@
     {% if pageType == 'search' %}
       searchFunctions.initialize();
       {% endif%}
-    {% if pageType == 'error' or pageType == 'searchAdmin' or pageType == 'search' %}
+    {% if pageType == 'error' or pageType == 'searchAdmin' %}
       pageFunctions.intializeMinimal();
+          {% endif%}
+    {% if pageType == 'search' %}
+        pageFunctions.intializeSearch();
     {% endif%}
   });
 })();
