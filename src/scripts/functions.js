@@ -43,6 +43,7 @@ var pageFunctions = {
     self.handleNavAnimate(scrollPosition);
     self.initScrollListener('blogEntry');
     self.initQuoteAnimate(self.blogQuotes);
+    self.handleSearchTerm();
   },
   initializeIndex: function() {
     var self=this;
