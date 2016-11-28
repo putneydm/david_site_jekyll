@@ -28,7 +28,7 @@
 			@media screen and (max-width:em(430)) {
 			height:rem(70);
 			width:rem(280);
-			margin:rem(50) rem(30) rem(20);
+			margin:rem(45) rem(30) rem(10);
 			}
 }
 .nav-list--display {
@@ -85,7 +85,7 @@
 			@media screen and (max-width:em(430)) {
 				width:100%;
 				margin:0 0;
-				padding:rem(3) 0 rem(25);
+				padding:rem(3) 0 rem(15);
 					&::after {content:''; display:none;}
 			}
 		}
