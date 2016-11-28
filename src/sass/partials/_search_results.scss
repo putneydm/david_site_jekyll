@@ -1,15 +1,17 @@
 // search admin
-
-
-
-.search-main {
-  margin:rem(135) auto rem(10);
-    @media screen and (max-width:em(750)) {
-      padding-top:0;
-      margin:rem(140) rem(10) 0;
-    }
-    .blog-entry	{ background-image:none;}
+// .search-main {
+//   margin:rem(135) auto rem(10);
+//     @media screen and (max-width:em(750)) {
+//       padding-top:0;
+//       margin:rem(140) rem(10) 0;
+//     }
+//     .blog-entry	{ background-image:none;}
+// }
+input, button {
+  -webkit-border-radius:0; 
+  -webkit-appearance:none
 }
+
 #search-results-wrapper {
   a {
     display:block;
