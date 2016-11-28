@@ -4,22 +4,23 @@ pagetype: search
 
 ---
 
-<section class="blog-container search-main">
+<div id="error-overlay" class="error-overlay">
+  <p class="login-error-message">
+    Whoops! We couldn't load the entries.
+  </p>
+    <input id="submit-search-retry" class="button form-btn" type="button"  value="Try again">
+</div>
+<div id="loader" class='error-overlay loader error-overlay--active'>
+  <p class="login-error-message">
+    Loading entries &#8230;
+  </p>
+  <div id="loader-icon" class="loader-icon"></div>
+  <div id="loader-shadow" class="loader-shadow">
+  </div>
+</div>
+
+<section class="search-main">
     <div id="search-field-wrapper" class="form-field-wrapper">
-      <div id="error-overlay" class="error-overlay">
-        <p class="login-error-message">
-          Whoops! We couldn't load the entries.
-        </p>
-          <input id="submit-search-retry" class="button form-btn" type="button"  value="Try again">
-      </div>
-      <div id="loader" class='error-overlay loader'>
-        <p class="login-error-message">
-          Loading entries &#8230;
-        </p>
-        <div id="loader-icon" class="loader-icon"></div>
-        <div id="loader-shadow" class="loader-shadow">
-        </div>
-      </div>
       <form class="search-form">
         <div class="search-form-wrapper">
           <input id="search-field" placeholder="Search term" class="form-field search-form-field" type="search" disabled>
