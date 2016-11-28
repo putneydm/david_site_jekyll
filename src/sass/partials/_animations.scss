@@ -58,11 +58,11 @@
 }
 .nav-list--open {
 	@media screen and (max-width:rem(560))	{
-		height:rem(220);
+		height:rem(220) !important;
 		opacity: 1;
 		padding:rem(15) 0;
-		transform: scale(1);
-		transition: height .3s ease-in-out, opacity .3s ease-in .2s, transform .2s ease-in-out .3s;
+		transform: scale(1) !important;
+		transition: height .3s ease-in-out, opacity .3s ease-in .2s, transform .2s ease-in-out .4s;
 	}
 }
 .nav-list--close {
