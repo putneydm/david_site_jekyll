@@ -334,7 +334,9 @@ var searchFunctions = {
     ? (
       // submitBtn.disabled = false,
       searchField.disabled = false,
-      self.handleLoadingScreen(false)
+      self.handleLoadingScreen(false),
+      self.handleSearchReload()
+
     )
     : errorOverlay.classList.add('error-overlay--active');
   },
