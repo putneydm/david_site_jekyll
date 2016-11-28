@@ -138,6 +138,7 @@ var searchFunctions = {
     if (stopWordsResult && containsWordChar && searchTerm.length > 2) {
       var searchResultsArr = self.doSearch(searchInput);
       self.handleSearchResults(searchResultsArr, searchInput);
+      self.handleURLChange(searchInput);
     }
     else {
       self.displaySearchError(true, errorMessage);
