@@ -770,25 +770,29 @@ promiseCheck: function() {
 },
 scrollDirection: function() {
   var self=this;
+   var st = window.pageYOffset || document.documentElement.scrollTop;
+   if (st > self.lastScrollTop){
+    // downscroll code
+    var dir = true;
+   } else {
+    // upscroll code
+    var dir = false;
+   }
+   self.lastScrollTop = st;
+   return dir;
+},
+getQueryVariable: function(variable) {
+  var self=this;
 
-  // var lastScrollTop = 0;
-     var st = window.pageYOffset || document.documentElement.scrollTop;
-     if (st > self.lastScrollTop){
-         // downscroll code
-         var dir = true;
-        //  console.log('down');
-        //  return true;
-     } else {
-        // upscroll code
-        var dir = false;
-        // console.log('up');
-        // return false
-     }
-     self.lastScrollTop = st;
+   var query = window.location.search.substring(1);
+   var vars = query.split("&");
 
-    //  console.log(dir);
-
-     return dir;
+   for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    console.log('pair', pair[0]);
+    if(pair[0] == variable){return pair[1].replace(/%20/g, ' ');}
+   }
+   return(false);
 }
 
 };
