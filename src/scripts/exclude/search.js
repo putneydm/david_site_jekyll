@@ -562,12 +562,4 @@ var searchFunctions = {
      }
      return(false);
   },
-  fooBar: [
-        {
-          "title": "this is a headline", "post": "this is a post"
-        },
-        {
-          "title_too": "this is a headline too", "post": "this is a post too"
-        }
-      ]
 };
