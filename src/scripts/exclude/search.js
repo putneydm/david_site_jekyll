@@ -97,12 +97,15 @@ var searchFunctions = {
   handleSearchReload: function() {
     var self=this;
 
-    var retrievedObject = self.getQueryVariable('search_term');
+    var searchContainer = document.querySelector('#search-results-wrapper');
 
+    var retrievedObject = self.getQueryVariable('search_term');
     if (retrievedObject) {
       document.querySelector('#search-field').value = retrievedObject;
       var searchResultsArr = self.doSearch(retrievedObject);
       self.handleSearchResults(searchResultsArr, retrievedObject);
+      // searchContainer.classList.add('active');
+      self.handleResultsTransition();
     }
   },
   handleURLChange: function(searchTerm) {
