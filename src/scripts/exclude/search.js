@@ -181,15 +181,12 @@ var searchFunctions = {
   },
   doSearch: function(searchTerm) {
     var self=this;
-
-    var regexp = new RegExp('\\b' + self.cleanPunctuation(searchTerm) + '\\b', 'gi');
-    var resultsArr = [];
-
-    console.log('regexp', regexp);
+    var regexp = new RegExp('\\b' + self.cleanPunctuation(searchTerm) + '\\b', 'gi'),
+        resultsArr = [];
 
     self.entries.map(function(el, i) {
-      var matchPost = self.cleanPunctuation(el.post).match(regexp);
-      var matchTitle = self.cleanPunctuation(el.title).match(regexp);
+      var matchPost = self.cleanPunctuation(el.post).match(regexp),
+          matchTitle = self.cleanPunctuation(el.title).match(regexp);
 
       matchPost != null && matchTitle != null ?
       resultsArr.push({"count" : matchPost.length + matchTitle.length,  "index": i})
