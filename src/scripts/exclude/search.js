@@ -408,10 +408,10 @@ var searchFunctions = {
   searchActive: function(state) {
     var self=this;
 
-    var submitBtn = document.querySelector('#submit-search');
-    var searchField = document.querySelector('#search-field');
-    var errorOverlay = document.querySelector('#error-overlay');
-    var loader = document.querySelector('#loader');
+    var submitBtn = document.querySelector('#submit-search'),
+        searchField = document.querySelector('#search-field'),
+        errorOverlay = document.querySelector('#error-overlay'),
+        loader = document.querySelector('#loader');
 
     state
     ? (
