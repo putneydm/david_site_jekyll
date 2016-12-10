@@ -6,7 +6,7 @@ var searchFunctions = {
     self.windowWidth = document.documentElement.clientWidth;
     self.initializeListeners();
     self.firebaseInit();
-    self.getData();
+    self.dataTest();
     self.displaySearchHistory();
     self.initResizeListener();
   },
@@ -73,6 +73,26 @@ var searchFunctions = {
     clearSearch.addEventListener('click', function(e) {
       self.clearSearchHistory();
     });
+  dataTest: function() {
+    var self=this;
+
+    var entries = sessionStorage.entries || false,
+        stopWords = sessionStorage.stopWords || false;
+
+    entries && stopWords
+    ? (
+      self.handleLoadingScreen(false),
+      self.stopWords = JSON.parse(sessionStorage.stopWords),
+      self.entries = JSON.parse(sessionStorage.entries),
+      self.searchActive(true),
+      self.handleLoadingError(false)
+    )
+    : (
+      self.firebaseInit(),
+      self.handleLoadingScreen(true),
+      // self.loadingTest() // turn this on, and you'll get a fake firebase load that randomly fails
+      self.getData()
+    );
   },
   handleSearchReload: function() {
     var self=this;
