@@ -527,9 +527,8 @@ var searchFunctions = {
   loadingTest: function() {
     var self=this;
 
-    var rando = Math.random() * (3 - 1) + 1;
-    var state = rando < 2;
-    console.log('n', rando, state);
+    var rando = Math.random() * (3 - 1) + 1,
+        state = rando < 2;
 
     self.sleep(3000).then(function(time) {
       rando < 2
