@@ -3,11 +3,11 @@ var searchFunctions = {
     console.log('search works');
     var self=this;
     self.handleLoadingScreen(true);
+    self.windowWidth = document.documentElement.clientWidth;
     self.initializeListeners();
     self.firebaseInit();
     self.getData();
     self.initResizeListener();
-    self.windowWidth = document.documentElement.clientWidth;
   },
   initializeListeners: function() {
     var self=this;
