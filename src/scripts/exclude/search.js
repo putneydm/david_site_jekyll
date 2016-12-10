@@ -511,14 +511,6 @@ var searchFunctions = {
     });
     return p;
   },
-  setSessionStorage: function(arr) {
-    var self=this;
-    sessionStorage.setItem('searchResusltsArr', JSON.stringify(arr));
-    var obj = JSON.parse(sessionStorage.getItem('searchResusltsArr'));
-
-    // console.log('obj', obj);
-
-  },
   sleep: function(time) {
     // return new Promise((resolve) => setTimeout(resolve, time));
     var p = new Promise (function(resolve) {
