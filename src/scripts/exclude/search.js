@@ -485,13 +485,13 @@ var searchFunctions = {
   handleLoadingError: function(state) {
     var self=this;
     var errorOverlay = document.querySelector('#error-overlay');
-    if (state) {
-      errorOverlay.classList.add('error-overlay--active');
-      self.handleLoadingScreen(false);
-    }
-    if (!state) {
-      errorOverlay.classList.remove('error-overlay--active');
-    }
+
+    state
+      ? (
+        errorOverlay.classList.add('error-overlay--active'),
+        self.handleLoadingScreen(false)
+      )
+      : errorOverlay.classList.remove('error-overlay--active');
   },
   firebaseInit: function() {
     var self=this;
