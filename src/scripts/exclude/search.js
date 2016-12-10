@@ -423,19 +423,6 @@ var searchFunctions = {
     )
     : errorOverlay.classList.add('error-overlay--active');
   },
-  searchTest: function() {
-    var self=this;
-
-    console.log(self.fooBar);
-
-    var searchTerm = 'man this is a thing here';
-
-    var foo = searchTerm.match(/this is a t+\s\b/gi);
-
-    console.log(foo);
-
-
-  },
   handleLoadingScreen: function(state) {
     var self=this;
     var loader = document.querySelector('#loader');
