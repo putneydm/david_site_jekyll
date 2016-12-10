@@ -51,6 +51,7 @@
   opacity:0;
   pointer-events: none;
   padding:rem(45) 0 0;
+  transition: opacity .4s;
   @media screen and (max-width:rem(700))	{
     width:100%;
     padding:rem(25) rem(10) rem(10);
@@ -58,11 +59,6 @@
   }
 }
 .error-overlay--active {
-  opacity:1;
-  transition: opacity .4s;
-  pointer-events: auto;
-}
-.error-overlay--activex {
   opacity:1;
   transition: opacity .4s;
   pointer-events: auto;
