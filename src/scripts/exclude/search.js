@@ -7,6 +7,7 @@ var searchFunctions = {
     self.initializeListeners();
     self.firebaseInit();
     self.getData();
+    self.displaySearchHistory();
     self.initResizeListener();
   },
   initializeListeners: function() {
@@ -142,6 +143,7 @@ var searchFunctions = {
     if (stopWordsResult && containsWordChar && searchTerm.length > 2) {
       var searchResultsArr = self.doSearch(searchInput);
       self.handleSearchResults(searchResultsArr, searchInput);
+      self.displaySearchHistory();
       self.handleURLChange(searchInput);
     }
     else {
@@ -176,6 +178,32 @@ var searchFunctions = {
     var self=this;
 
     var termArr =self.cleanPunctuation(searchTerm).split(' ');
+  displaySearchHistory: function() {
+    var self=this;
+    var historyList = document.querySelector('#search-history'),
+        arr = self.getSearchHistory(),
+        clear = document.querySelector('#clear-search');
+
+    historyList.innerHTML = '';
+
+    if (arr.length > 0) {
+      arr.forEach(function(el) {
+        console.log('for each');
+        var linkURL = self.setPageURL(el);
+        var link = document.createElement('A');
+        link.href = linkURL.url;
+
+        var list = document.createElement('LI');
+        link.innerHTML = el;
+        list .dataset.term = el;
+        list.appendChild(link);
+        historyList.appendChild(list);
+      });
+      clear.classList.add('active');
+    } else {
+      clear.classList.remove('active');
+    }
+  },
 
     var termArrClean = termArr.filter(function(el) {
       return self.stopWordsTest(el);
