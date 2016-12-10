@@ -425,9 +425,9 @@ var searchFunctions = {
   },
   handleLoadingScreen: function(state) {
     var self=this;
-    var loader = document.querySelector('#loader');
-    var loaderIcon = document.querySelector('#loader-icon');
-    var loaderShadow = document.querySelector('#loader-shadow');
+    var loader = document.querySelector('#loader'),
+        loaderIcon = document.querySelector('#loader-icon'),
+        loaderShadow = document.querySelector('#loader-shadow');
 
     state
       ? (
