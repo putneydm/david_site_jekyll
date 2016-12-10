@@ -190,9 +190,14 @@ var searchFunctions = {
     searchArr = JSON.stringify(searchArr);
     sessionStorage.searches = searchArr;12
   },
+  getSearchHistory:function() {
     var self=this;
 
-    var termArr =self.cleanPunctuation(searchTerm).split(' ');
+    var arr = sessionStorage.searches
+      ? JSON.parse(sessionStorage.searches)
+      : [];
+    return arr;
+  },
   clearSearchHistory: function() {
     var self=this;
     sessionStorage.removeItem('searches');
