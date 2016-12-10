@@ -435,9 +435,15 @@ var searchFunctions = {
         loader.classList.add('error-overlay--active')
       )
       : (
-        loader.addEventListener('transitionend', pause),
-        loader.classList.remove('error-overlay--active')
+        handleScreen(loader)
       );
+
+    function handleScreen(loader) {
+      setTimeout(function(){
+        loader.addEventListener('transitionend', pause);
+        loader.classList.remove('error-overlay--active');
+      }, 2000);
+    }
 
     function pause() {
       console.log('pause');
