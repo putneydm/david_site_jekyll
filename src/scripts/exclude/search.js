@@ -168,7 +168,7 @@ var searchFunctions = {
       var errorMessage = 'Yeah, that search term doesn\'t really work for us.';
     }
     //  stopwords result false = bad, true = good
-    if (stopWordsResult && containsWordChar && searchTerm.length > 2) {
+    if (stopWordsResult && containsWordChar && !notWord) {
       var searchResultsArr = self.doSearch(searchInput);
       self.handleSearchResults(searchResultsArr, searchInput);
       self.saveSearchHistory(searchInput);
