@@ -763,7 +763,7 @@ var pageFunctions = {
       self.addShit(topNav, 'nav-list--open');
       self.addShit(button, 'nav-menu-button--active');
       self.addShit(header, 'menu-container--active');
-      self.handleHeadlineSwap(true) // boolean signals button press;
+      // self.handleHeadlineSwap(true) // boolean signals button press;
     }
     if (active) {
       self.removeShit(topNav, 'nav-list--open');
@@ -815,10 +815,9 @@ getQueryVariable: function(variable) {
 
    for (var i=0;i<vars.length;i++) {
     var pair = vars[i].split("=");
-    console.log('pair', pair[0]);
+    // console.log('pair', pair[0]);
     if(pair[0] == variable){return pair[1].replace(/%20/g, ' ');}
    }
    return(false);
 }
-
 };
