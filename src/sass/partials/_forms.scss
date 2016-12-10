@@ -96,21 +96,6 @@
 .form-field:disabled {
     border:1px solid $xxlight;
   }
-// .login-error-message {
-//   font-family:$sans;
-//   font-size:rem(15);
-//   text-align: center;
-//   height:rem(28);
-//   color:$aqua;
-//   margin:0 auto rem(40);
-//   transition: opacity .2s;
-//   flex-grow:0;
-//   width:100%;
-//     @media screen and (max-width:rem(700))	{
-//       height:rem(48);
-//       margin: 0 0 rem(10) 0;
-//      }
-// }
 .login-error-message-search-admin {
   opacity:0;
 }
