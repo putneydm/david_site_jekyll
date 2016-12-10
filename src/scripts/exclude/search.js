@@ -394,10 +394,16 @@ var searchFunctions = {
   },
   getData: function() {
     var self=this;
-    var p = self.firebaseGet('users/05db3ef7-a40d-4a16-9153-aa4f6bf8d25b');
+    console.log('get data');
+    var p = self.firebaseGet('users/05db3ef7-a40d-4a16-9153-aa4f6bf8d25b', self.myFirebaseRef);
     p.then(function(data) {
       self.stopWords = data.stopWords;
       self.entries = data.entries;
+
+      sessionStorage.setItem('entries', JSON.stringify(data.entries));
+
+      sessionStorage.setItem('stopWords', JSON.stringify(data.stopWords));
+
       self.searchActive(true);
       self.handleLoadingError(false);
     }),
