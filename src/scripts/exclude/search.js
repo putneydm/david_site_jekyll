@@ -108,13 +108,10 @@ var searchFunctions = {
   handleURLChange: function(searchTerm) {
     var self=this;
 
-    var searchURL = self.cleanPunctuation(searchTerm).replace(/\s/g, '%20');
+    var obj = self.setPageURL(searchTerm);
 
-    console.log('search term clean y', searchURL);
+    // console.log(obj);
 
-    newUrl = "http://localhost:4000/search/?type=search_result&search_term=" + searchURL;
-    history.pushState({}, null, newUrl);
-  },
   getSearchFieldData: function() {
     var self=this;
     var searchInput = document.querySelector('#search-field').value;
