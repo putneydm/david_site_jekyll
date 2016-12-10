@@ -11,11 +11,15 @@ var searchFunctions = {
   },
   initializeListeners: function() {
     var self=this;
-    var searchField = document.querySelector('#search-field');
-    var submitBtn = document.querySelector('#submit-search');
-    var submitSearchRetry = document.querySelector('#submit-search-retry');
-    var loaderIcon = document.querySelector('#loader-icon');
-    var searchResults = document.querySelector('#search-results-wrapper');
+    var searchField = document.querySelector('#search-field'),
+        submitBtn = document.querySelector('#submit-search'),
+        submitSearchRetry = document.querySelector('#submit-search-retry'),
+        loaderIcon = document.querySelector('#loader-icon'),
+        searchResults = document.querySelector('#search-results-wrapper'),
+        clearSearch = document.querySelector('#clear-search'),
+        searchContainer = document.querySelector('#search-results-wrapper');
+
+
 
     submitBtn.addEventListener('click', function(e){
       self.getSearchFieldData();
