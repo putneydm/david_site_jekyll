@@ -70,6 +70,8 @@ var searchFunctions = {
         // e.preventDefault();
       }
     }
+    clearSearch.addEventListener('click', function(e) {
+      self.clearSearchHistory();
     });
   },
   handleSearchReload: function() {
@@ -178,6 +180,11 @@ var searchFunctions = {
     var self=this;
 
     var termArr =self.cleanPunctuation(searchTerm).split(' ');
+  clearSearchHistory: function() {
+    var self=this;
+    sessionStorage.removeItem('searches');
+    self.displaySearchHistory();
+  },
   displaySearchHistory: function() {
     var self=this;
     var historyList = document.querySelector('#search-history'),
