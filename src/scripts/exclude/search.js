@@ -255,114 +255,88 @@ var searchFunctions = {
       clear.classList.remove('active');
     }
   },
+  handleSearchHistory:function() {
+    var self=this;
 
-    var termArrClean = termArr.filter(function(el) {
-      return self.stopWordsTest(el);
-    });
+    var history = document.querySelector('#search-history-wrapper');
 
-    // loops through each entry and send it to the words test function
-    self.entries.forEach(function(el, i) {
-    var arr = wordsTest(el.post);
-      if (arr !== undefined) {
-        // console.log(arr);
+    history.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      console.log('click', e.target.parentNode.nodeName);
+
+      var clickTarget = e.target.parentNode;
+      if (clickTarget.nodeName === 'LI') {
+
+        var searchInput = clickTarget.dataset.term;
+
+        var searchResultsArr = self.doSearch(searchInput);
+        self.handleSearchResults(searchResultsArr, searchInput);
+        // self.saveSearchHistory(searchInput);
+        self.displaySearchHistory();
+        self.handleURLChange(searchInput);
+
       }
+
+
+
     });
-
-    // loops through each word in the search term to see if it has a match in the entry. returns array of terms that match and their index.
-    function wordsTest(entry) {
-      matchArr = [];
-      var matchList = termArrClean.map(function(el, i) {
-        var matchItem = entry.match(el);
-        if (matchItem) {
-
-          // console.log(matchItem.index);
-
-          var myItem = new Object();
-            myItem.term = matchItem[0];
-            myItem.index = matchItem.index;
-
-            // needs a prcximity test to see if words are near each other before object is pushed to the array.
-
-          matchArr.push(myItem)
-        }
-      });
-      if (matchArr.length > 1) {
-        proximity(matchArr)
-        return matchArr;
-      }
-      // returns {'term' : 'xxxx', index: XX}
-    }
-
-
-    function proximity(arr) {
-      var fooBar = arr.filter(function(el, i) {
-
-        if (arr[i + 1]) {
-          var foo = (arr[i+1].index - el.index);
-
-          if (foo > 0 && foo < 15) {
-            return el;
-          } else {
-            return false;
-            console.log('false');
-          }
-        }
-      });
-
-        console.log(fooBar);
-
-    }
 
   },
   handleSearchResults: function(resultsArr, searchTerm) {
     var self=this;
 
-    var searchContainer = document.querySelector('#search-results-wrapper');
+    var searchTerm =  self.cleanPunctuation(searchTerm);
+    var search = document.querySelector('#search-results');
+    var searchWrapper = document.querySelector('#search-results-wrapper');
+    searchWrapper.innerHTML = '';
+    var searchHed = document.querySelector('.search-results-header') || false;
 
-    searchContainer.innerHTML = '';
 
-    var entrySearch = document.createElement('H1');
-    entrySearch.classList.add('search-results-header');
+    self.handleResultsTransition(true);
 
-    resultsArr.length === 1
-      ? entrySearch.innerHTML = resultsArr.length + '&nbsp;result for “' + searchTerm + '”'
-      : entrySearch.innerHTML = resultsArr.length + '&nbsp;results for “' + searchTerm + '”';
+
+    var resultsMessage = resultsArr.length === 1
+          ? resultsArr.length + '&nbsp;result for “' + searchTerm + '”'
+          : resultsArr.length + '&nbsp;results for “' + searchTerm + '”';
+
+    if (searchHed) {
+      searchHed.innerHTML = resultsMessage;
+    } else {
+      var entrySearch = document.createElement('H1');
+      entrySearch.classList.add('search-results-header');
+      entrySearch.innerHTML = resultsMessage;
+      search.insertBefore(entrySearch, searchWrapper);
+    }
 
     var textLength = 100;
     self.windowWidth > 700
       ? textLength = 100
       : textLength = 50;
 
-    searchContainer.appendChild(entrySearch);
-
     resultsArr.forEach(function(el) {
-      var foo = self.entries[el.index].title;
-      var bar = self.entries[el.index].post.split(' ').slice(0, textLength).join(' ');
+      var hedText = self.entries[el.index].title,
+          bodyText = self.entries[el.index].post.split(' ').slice(0, textLength).join(' '),
+          entryLink = document.createElement('A');
 
-
-      var entryLink = document.createElement('A');
-       entryLink.href= self.entries[el.index].link + '?type=search_result&search_term=' +  searchTerm;
+      entryLink.href = self.entries[el.index].link + '?type=search_result&search_term=' +  searchTerm;
 
       var moreLink = document.createElement('A');
-      // moreLink.href= self.entries[el.index].link + '?type=search_result';
-      // moreLink.innerHTML = 'more';
-      // moreLink.classList.add('search-results-link');
-
 
       var entryContainer = document.createElement('ARTICLE');
       entryContainer.classList.add('search-results-entry');
+
       var entryHeadline = document.createElement('H2');
       entryHeadline.classList.add('blog-headline');
 
       var entryBodyContainer = document.createElement('DIV');
       var entryBody = document.createElement('P');
-      // entryBodyContainer.classList.add('blog-entry-text');
       entryBodyContainer.appendChild(entryBody);
 
       var entryMatches = document.createElement('P');
       entryMatches.classList.add('blog-entry-date');
-      entryHeadline.innerHTML = foo;
-      entryBody.innerHTML = bar + '&nbsp;&#133;';
+      entryHeadline.innerHTML = hedText;
+      entryBody.innerHTML = bodyText + '&nbsp;&#133;';
 
       entryMatches.innerHTML = el.count === 1
         ? el.count + ' occurance found'
@@ -371,8 +345,10 @@ var searchFunctions = {
       entryContainer.appendChild(entryHeadline);
       entryContainer.appendChild(entryMatches);
       entryContainer.appendChild(entryBodyContainer);
-
       entryLink.appendChild(entryContainer);
+      searchWrapper.appendChild(entryLink);
+    });
+  },
   handleResultsTransition: function(state) {
     var self=this;
 
