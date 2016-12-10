@@ -73,6 +73,13 @@ var searchFunctions = {
     clearSearch.addEventListener('click', function(e) {
       self.clearSearchHistory();
     });
+    // searchContainer.addEventListener('transitionend', function(e) {
+    //   if (!searchContainer.classList.contains('active')) {
+    //     searchContainer.classList.add('active');
+    //     console.log('add');
+    //   }
+    // });
+  },
   dataTest: function() {
     var self=this;
 
