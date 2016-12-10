@@ -468,8 +468,8 @@ var searchFunctions = {
   },
   displaySearchError: function(state, error) {
     var self=this;
-    var errorField = document.querySelector('#search-field-error');
-    var searchField = document.querySelector('#search-field');
+    var errorField = document.querySelector('#search-field-error'),
+        searchField = document.querySelector('#search-field');
 
     state
     ?
