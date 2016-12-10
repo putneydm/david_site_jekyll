@@ -63,13 +63,6 @@ var searchFunctions = {
         submitBtn.disabled = true;
       }
     });
-    searchResults.addEventListener('click', function(e) {
-      if(e.target) {
-        if (e.target.nodeName === "P" || e.target.nodeName === "H2" || e.target.nodeName === "ARTICLE") {
-        console.log(e.target.parentNode);
-        // e.preventDefault();
-      }
-    }
     clearSearch.addEventListener('click', function(e) {
       self.clearSearchHistory();
     });
