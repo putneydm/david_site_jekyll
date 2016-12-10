@@ -145,6 +145,7 @@ var searchFunctions = {
     if (stopWordsResult && containsWordChar && searchTerm.length > 2) {
       var searchResultsArr = self.doSearch(searchInput);
       self.handleSearchResults(searchResultsArr, searchInput);
+      self.saveSearchHistory(searchInput);
       self.displaySearchHistory();
       self.handleURLChange(searchInput);
     }
@@ -177,6 +178,18 @@ var searchFunctions = {
     return resultsArrSort;
   },
   doSearchToo: function(searchTerm) {
+  saveSearchHistory: function(searchTerm) {
+    var self=this;
+    searchTerm = self.cleanPunctuation(searchTerm);
+    var searchArr = sessionStorage.searches
+      ? JSON.parse(sessionStorage.searches)
+      : [];
+
+    searchArr.unshift(searchTerm);
+    searchArr = searchArr.slice(0,10);
+    searchArr = JSON.stringify(searchArr);
+    sessionStorage.searches = searchArr;12
+  },
     var self=this;
 
     var termArr =self.cleanPunctuation(searchTerm).split(' ');
