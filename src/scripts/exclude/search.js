@@ -115,34 +115,14 @@ var searchFunctions = {
 
     // console.log(obj);
 
-  getSearchFieldData: function() {
-    var self=this;
-    var searchInput = document.querySelector('#search-field').value;
-    var stopWordsResult = self.stopWordsTest(searchInput);
-    var containsWordChar = /\w+/gi.test(searchInput); // false means the items has no word characters in it
-    var notWord = self.cleanPunctuation(searchInput).length < 1; // true means its one character
-    var searchTerm = self.cleanPunctuation(searchInput); // true means its one character
+    // var pageURL = window.location.href.split("?")[0];
+    // var searchURL = self.cleanPunctuation(searchTerm).replace(/\s/g, '%20');
+    // var newUrl = pageURL +  "?type=search_result&search_term=" + searchURL;
+    //
+    // var obj = { title: 'Search results | ' + searchTerm + ' | Davidputney.com', url: newUrl };
 
-    var exception = /a/i.test(searchTerm) || /i/i.test(searchTerm)
-
-    // console.log('-------');
-    // console.log('does the item have word characters', containsWordChar);
-    // console.log('the item is not one character', notWord);
-    // console.log(' is it free of stopwords', stopWordsResult);
-    // console.log('is it an exception', exception);
-
-    // for a search to happen:
-    // does it have word characters: true
-      // or
-    // is it more than one character: true
-      // or
-    // is it free of stopwords: true
-
-    // if (clean && notWord && stopWordsResult) {
-    //   console.log('search');
-    // } else {
-    //   console.log('error');
-    // }
+    history.pushState(obj, obj.title, obj.url);
+  },
   setPageURL: function(searchTerm) {
     var self = this;
 
