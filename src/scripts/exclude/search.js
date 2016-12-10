@@ -373,10 +373,19 @@ var searchFunctions = {
       entryContainer.appendChild(entryBodyContainer);
 
       entryLink.appendChild(entryContainer);
+  handleResultsTransition: function(state) {
+    var self=this;
 
-      searchContainer.appendChild(entryLink);
+    var el = document.querySelector('#search-results-wrapper'),
+        active = el.classList.contains('active');
 
-    });
+    if (state || active) {
+      el.classList.remove('active');
+      var p = self.sleep(10)
+      .then(function() {
+          el.classList.add('active');
+      });
+    }
   },
   stopWordsTest: function(term) {
     var self=this;
