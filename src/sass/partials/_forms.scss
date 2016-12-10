@@ -10,6 +10,35 @@
   border-radius: rem(3);
   position: relative;
 }
+.button {
+	display:block;
+	width:100%;
+	max-width:500px;
+	background-color:white;
+	color:$aqua;
+	font-family:$sans;
+	font-weight:700;
+	font-size:em(13);
+	padding:30px 0;
+	height:75px;
+	text-align:center;
+	border-radius:4px;
+	margin:0 auto 60px;
+	letter-spacing:.06em;
+	transition:color .2s ease-in, background-color .2s ease-in;
+	background-image:none;
+	text-shadow:none;
+	box-shadow: 0 0 40px 15px rgba($med, .3);
+	@media screen and (max-width:em(520)) {width:96%;}
+		&:hover{
+			background-color:$aqua;
+			color:white;background-image:none;
+			.button-icon {
+				fill:white;
+				transition: fill .2s;
+			}
+		}
+}
 .form-btn {
   border:0px;
   margin:rem(40) auto 0;
