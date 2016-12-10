@@ -26,6 +26,14 @@ input, button {
       margin:0 rem(10) 0;
     }
 }
+.search-results-wrapper {
+  opacity:0;
+}
+.search-results-wrapper.active {
+  opacity:1;
+  transition: .2s opacity;
+  transition-delay: .2s;
+}
 .search-results-header {
 	font-family:$sans;
 	font-size:em(16);
