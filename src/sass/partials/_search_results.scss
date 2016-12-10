@@ -19,9 +19,17 @@ input, button {
     background-image: none;
   }
 }
+// .search-results-alt {
+//   margin:0 auto;
+//   max-width:rem(700);
+//     @media screen and (max-width:em(750)) {
+//       margin:0 rem(10) 0;
+//     }
+// }
 .search-results-alt {
-  margin:0 auto;
   padding-top: 0;
+  margin:0 auto;
+  max-width:rem(700);
     @media screen and (max-width:em(750)) {
       margin:0 rem(10) 0;
     }
