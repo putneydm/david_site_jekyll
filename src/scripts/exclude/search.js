@@ -2,13 +2,13 @@ var searchFunctions = {
   initialize: function() {
     console.log('search works');
     var self=this;
-    self.handleLoadingScreen(true);
     self.windowWidth = document.documentElement.clientWidth;
+
     self.initializeListeners();
-    self.firebaseInit();
     self.dataTest();
     self.displaySearchHistory();
     self.initResizeListener();
+    self.handleSearchHistory();
   },
   initializeListeners: function() {
     var self=this;
@@ -50,7 +50,6 @@ var searchFunctions = {
     });
     searchField.addEventListener('click', function(e) {
       var errorState = searchField.classList.contains('form-field--error');
-
         if (errorState && searchField.value !== '') {
           self.displaySearchError(false);
         }
@@ -132,14 +131,18 @@ var searchFunctions = {
 
     return { title: 'Search results | ' + searchTerm + ' | Davidputney.com', url: newUrl };
   },
+  getSearchFieldData: function() {
+    var self=this;
 
-    // var errorMessage = "this is an error"
+    var searchInput = document.querySelector('#search-field').value,
+        searchTerm = self.cleanPunctuation(searchInput),
+        stopWordsResult = self.stopWordsTest(searchInput), // false means there has been a stopwords match
+        containsWordChar = /\w+/gi.test(searchInput), // false means the items has no word characters in it
+        notWord = searchTerm.length <= 1; // true means its one character
 
-    if (!containsWordChar) {
+    var exception = /a/i.test(searchTerm) || /i/i.test(searchTerm)
+    if (!containsWordChar || notWord) {
       var errorMessage = 'C\'mon. That isn\'t even a word!'
-    }
-    if (!errorMessage && searchTerm.length === 1) {
-      var errorMessage = 'C\'mon. That isn\'t even a word!';
     }
     if (!errorMessage && !stopWordsResult) {
       var errorMessage = 'Whoops! Try narrowing down your search term a bit.';
@@ -180,7 +183,6 @@ var searchFunctions = {
     });
     return resultsArrSort;
   },
-  doSearchToo: function(searchTerm) {
   saveSearchHistory: function(searchTerm) {
     var self=this;
     searchTerm = self.cleanPunctuation(searchTerm);
@@ -343,6 +345,7 @@ var searchFunctions = {
   stopWordsTest: function(term) {
     var self=this;
     var arr = term.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").split(' ');
+
     function testWords(matchTerm) {
       var match = self.stopWords.some(function(el) {
         return el === matchTerm;
@@ -383,11 +386,9 @@ var searchFunctions = {
 
     state
     ? (
-      // submitBtn.disabled = false,
       searchField.disabled = false,
       self.handleLoadingScreen(false),
       self.handleSearchReload()
-
     )
     : errorOverlay.classList.add('error-overlay--active');
   },
@@ -418,7 +419,6 @@ var searchFunctions = {
       loaderIcon.classList.add('paused');
       loaderShadow.classList.add('paused');
       setTimeout(function(){
-        // console.log('timeout');
         loader.removeEventListener('transitionend', pause);
       }, 100);
     }
@@ -459,10 +459,10 @@ var searchFunctions = {
     console.log('firebaseInit');
     self.myFirebaseRef = new Firebase("https://putneysearch.firebaseio.com/");
   },
-  firebaseGet: function(child) {
+  firebaseGet: function(child, db) {
     var self=this;
     // Get a database reference to our posts
-    var ref = self.myFirebaseRef.child(child);
+    var ref = db.child(child);
     var p = new Promise (function(resolve, reject) {
     ref.on("value", function(snapshot) {
       resolve(snapshot.val())
