@@ -143,9 +143,15 @@ var searchFunctions = {
     // } else {
     //   console.log('error');
     // }
+  setPageURL: function(searchTerm) {
+    var self = this;
 
-    // var errorMessage;
+    var pageURL = window.location.href.split("?")[0];
+    var searchURL = self.cleanPunctuation(searchTerm).replace(/\s/g, '%20');
+    var newUrl = pageURL +  "?type=search_result&search_term=" + searchURL;
 
+    return { title: 'Search results | ' + searchTerm + ' | Davidputney.com', url: newUrl };
+  },
 
     // var errorMessage = "this is an error"
 
