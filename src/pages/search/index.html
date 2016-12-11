@@ -5,17 +5,21 @@ pagetype: search
 ---
 
 <div id="error-overlay" class="error-overlay">
+  <div class="error-wrapper">
   <p class="login-error-message">
     Whoops! We couldn't load the entries.
   </p>
     <input id="submit-search-retry" class="button form-btn" type="button"  value="Try again">
+  </div>
 </div>
-<div id="loader" class='error-overlay'>
-  <p class="login-error-message">
-    Loading entries &#8230;
-  </p>
-  <div id="loader-icon" class="loader-icon"></div>
-  <div id="loader-shadow" class="loader-shadow">
+<div id="loader" class="error-overlay">
+  <div class="error-wrapper">
+    <p class="login-error-message">
+      Loading entries &#8230;
+    </p>
+    <div id="loader-icon" class="loader-icon"></div>
+    <div id="loader-shadow" class="loader-shadow">
+    </div>
   </div>
 </div>
 
