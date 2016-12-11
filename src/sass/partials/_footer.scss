@@ -18,7 +18,8 @@
 		width:rem(55);
 		height:rem(55);
 		margin:0 rem(20) 0;
-		box-shadow:0 0 rem(30) rem(15) rgba($med, .3);
+		// box-shadow:0 0 rem(30) rem(15) rgba($med, .3);
+		box-shadow: 0 rem(18) rem(75) 0 rgba($dark, .3);
 		flex-grow:0;
 		border-radius:50%;
 		background-color:white;

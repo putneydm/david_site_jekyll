@@ -10,7 +10,9 @@
 	justify-content:space-between;
 	top:0;
 	transform: translateY(-120px);
-	box-shadow: 0 0 40px 15px rgba($med, .4);
+	// box-shadow: 0 0 40px 15px rgba($med, .4);
+	box-shadow: 0 0 rem(175) rgba($dark, .3);
+
 		@media screen and (max-width:em($header-break-2)) {
 			flex-direction: column;
 		}

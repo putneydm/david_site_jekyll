@@ -28,7 +28,8 @@
 	transition:color .2s ease-in, background-color .2s ease-in;
 	background-image:none;
 	text-shadow:none;
-	box-shadow: 0 0 40px 15px rgba($med, .3);
+	// box-shadow: 0 0 40px 15px rgba($med, .3);
+  box-shadow: 0 rem(18) rem(75) 0 rgba($dark, .3);
 	@media screen and (max-width:em(520)) {width:96%;}
 		&:hover{
 			background-color:$aqua;
@@ -45,7 +46,8 @@
 }
 .form-btn:disabled {
   color:$x-light_aqua;
-  box-shadow: 0 0 15px 8px rgba(153, 153, 153, 0.15);
+  // box-shadow: 0 0 15px 8px rgba(153, 153, 153, 0.15);
+  box-shadow: 0 rem(9) rem(35) 0 rgba($med, .3);
   &:hover {background-color: white;}
 }
 .form-btn-mini {
