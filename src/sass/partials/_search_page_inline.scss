@@ -6,9 +6,13 @@
   width:100%;
   position:relative;
   width:100%;
-  margin:140px auto 0;
+  margin:rem(200) auto 0;
     @media screen and (max-width:em(700)) {
       max-width:none;
+      margin:rem(150) auto 0;
+    }
+    @media screen and (max-width:em(425)) {
+      margin:rem(130) auto 0;
     }
     .blog-entry	{ background-image:none;}
 }
