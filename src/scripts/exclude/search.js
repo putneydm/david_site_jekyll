@@ -241,26 +241,16 @@ var searchFunctions = {
 
     history.addEventListener('click', function(e) {
       e.preventDefault();
-
-      console.log('click', e.target.parentNode.nodeName);
-
       var clickTarget = e.target.parentNode;
       if (clickTarget.nodeName === 'LI') {
-
         var searchInput = clickTarget.dataset.term;
-
         var searchResultsArr = self.doSearch(searchInput);
         self.handleSearchResults(searchResultsArr, searchInput);
         // self.saveSearchHistory(searchInput);
         self.displaySearchHistory();
         self.handleURLChange(searchInput);
-
       }
-
-
-
     });
-
   },
   handleSearchResults: function(resultsArr, searchTerm) {
     var self=this;
