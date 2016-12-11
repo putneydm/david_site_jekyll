@@ -38,27 +38,52 @@
       }
     }
 }
+// .error-overlay {
+//   position:fixed;
+//   width:100vw;
+//   left:0;
+//   top:0;
+//   height:100vh;
+//   z-index:1;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: white;
+//   opacity:0;
+//   pointer-events: none;
+//   padding:rem(45) 0 0;
+//   transition: opacity .4s;
+//   @media screen and (max-width:rem(700))	{
+//     width:100%;
+//     padding:rem(25) rem(10) rem(10);
+//     height:rem(205);
+//   }
+// }
 .error-overlay {
-  position:absolute;
-  width:100%;
-  left:0;
-  top:-15px;
-  height:rem(215);
-  z-index:1;
-  flex-direction: column;
+  width:100vw;
+  height:100vh;
+  border:1px solid red;
+  position: fixed;
+  display: flex;
   align-items: center;
+  justify-content: center;
   background-color: white;
+  top:0;
   opacity:0;
   pointer-events: none;
-  padding:rem(45) 0 0;
+  z-index: 1;
   transition: opacity .4s;
-  @media screen and (max-width:rem(700))	{
-    width:100%;
-    padding:rem(25) rem(10) rem(10);
-    height:rem(205);
-  }
+}
+.error-wrapper {
+  min-width:rem(400);
+  height:rem(200);
+  position: relative;
 }
 .error-overlay--active {
+  opacity:1;
+  transition: opacity .4s;
+  pointer-events: auto;
+}
+.error-overlay--activex {
   opacity:1;
   transition: opacity .4s;
   pointer-events: auto;
