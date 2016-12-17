@@ -3,12 +3,20 @@ var searchFunctions = {
     console.log('search works');
     var self=this;
     self.windowWidth = document.documentElement.clientWidth;
+    self.getElements();
 
     self.initializeListeners();
     self.dataTest();
     self.displaySearchHistory();
     self.initResizeListener();
     self.handleSearchHistory();
+  },
+  getElements: function() {
+    var self=this;
+
+    self.search = document.querySelector('#search-results');
+    self.searchWrapper = document.querySelector('#search-results-wrapper');
+    self.searchField = document.querySelector('#search-field');
   },
   initializeListeners: function() {
     var self=this;
@@ -19,7 +27,6 @@ var searchFunctions = {
         searchResults = document.querySelector('#search-results-wrapper'),
         clearSearch = document.querySelector('#clear-search'),
         searchContainer = document.querySelector('#search-results-wrapper');
-
 
 
     submitBtn.addEventListener('click', function(e){
@@ -65,12 +72,6 @@ var searchFunctions = {
     clearSearch.addEventListener('click', function(e) {
       self.clearSearchHistory();
     });
-    // searchContainer.addEventListener('transitionend', function(e) {
-    //   if (!searchContainer.classList.contains('active')) {
-    //     searchContainer.classList.add('active');
-    //     console.log('add');
-    //   }
-    // });
   },
   dataTest: function() {
     var self=this;
@@ -111,23 +112,14 @@ var searchFunctions = {
     var self=this;
 
     var obj = self.setPageURL(searchTerm);
-
-    // console.log(obj);
-
-    // var pageURL = window.location.href.split("?")[0];
-    // var searchURL = self.cleanPunctuation(searchTerm).replace(/\s/g, '%20');
-    // var newUrl = pageURL +  "?type=search_result&search_term=" + searchURL;
-    //
-    // var obj = { title: 'Search results | ' + searchTerm + ' | Davidputney.com', url: newUrl };
-
     history.pushState(obj, obj.title, obj.url);
   },
   setPageURL: function(searchTerm) {
     var self = this;
 
-    var pageURL = window.location.href.split("?")[0];
-    var searchURL = self.cleanPunctuation(searchTerm).replace(/\s/g, '%20');
-    var newUrl = pageURL +  "?type=search_result&search_term=" + searchURL;
+    var pageURL = window.location.href.split("?")[0],
+        searchURL = self.cleanPunctuation(searchTerm).replace(/\s/g, '%20'),
+        newUrl = pageURL +  "?type=search_result&search_term=" + searchURL;
 
     return { title: 'Search results | ' + searchTerm + ' | Davidputney.com', url: newUrl };
   },
@@ -212,7 +204,8 @@ var searchFunctions = {
     var self=this;
     var historyList = document.querySelector('#search-history'),
         arr = self.getSearchHistory(),
-        clear = document.querySelector('#clear-search');
+        clear = document.querySelector('#clear-search'),
+        wrapper = document.querySelector('#search-history-wrapper');
 
     historyList.innerHTML = '';
 
@@ -230,6 +223,7 @@ var searchFunctions = {
         historyList.appendChild(list);
       });
       clear.classList.add('active');
+      wrapper.classList.remove('hide');
     } else {
       clear.classList.remove('active');
     }
@@ -238,6 +232,7 @@ var searchFunctions = {
     var self=this;
 
     var history = document.querySelector('#search-history-wrapper');
+    // var searchField = document.querySelector('#search-field');
 
     history.addEventListener('click', function(e) {
       e.preventDefault();
@@ -249,6 +244,7 @@ var searchFunctions = {
         // self.saveSearchHistory(searchInput);
         self.displaySearchHistory();
         self.handleURLChange(searchInput);
+        self.searchField.value = searchInput;
       }
     });
   },
@@ -256,27 +252,12 @@ var searchFunctions = {
     var self=this;
 
     var searchTerm =  self.cleanPunctuation(searchTerm);
-    var search = document.querySelector('#search-results');
-    var searchWrapper = document.querySelector('#search-results-wrapper');
-    searchWrapper.innerHTML = '';
-    var searchHed = document.querySelector('.search-results-header') || false;
+    // var search = document.querySelector('#search-results');
+    // var searchWrapper = document.querySelector('#search-results-wrapper');
 
-
+    self.searchWrapper.innerHTML = '';
     self.handleResultsTransition(true);
-
-
-    var resultsMessage = resultsArr.length === 1
-          ? resultsArr.length + '&nbsp;result for “' + searchTerm + '”'
-          : resultsArr.length + '&nbsp;results for “' + searchTerm + '”';
-
-    if (searchHed) {
-      searchHed.innerHTML = resultsMessage;
-    } else {
-      var entrySearch = document.createElement('H1');
-      entrySearch.classList.add('search-results-header');
-      entrySearch.innerHTML = resultsMessage;
-      search.insertBefore(entrySearch, searchWrapper);
-    }
+    self.handleSearchHed(resultsArr, searchTerm);
 
     var textLength = 100;
     self.windowWidth > 700
@@ -288,22 +269,19 @@ var searchFunctions = {
           bodyText = self.entries[el.index].post.split(' ').slice(0, textLength).join(' '),
           entryLink = document.createElement('A');
 
+      var moreLink = document.createElement('A'),
+          entryContainer = document.createElement('ARTICLE'),
+          entryHeadline = document.createElement('H2'),
+          entryBodyContainer = document.createElement('DIV'),
+          entryBody = document.createElement('P'),
+          entryMatches = document.createElement('P');
+
       entryLink.href = self.entries[el.index].link + '?type=search_result&search_term=' +  searchTerm;
 
-      var moreLink = document.createElement('A');
-
-      var entryContainer = document.createElement('ARTICLE');
       entryContainer.classList.add('search-results-entry');
-
-      var entryHeadline = document.createElement('H2');
       entryHeadline.classList.add('blog-headline');
-
-      var entryBodyContainer = document.createElement('DIV');
-      var entryBody = document.createElement('P');
-      entryBodyContainer.appendChild(entryBody);
-
-      var entryMatches = document.createElement('P');
       entryMatches.classList.add('blog-entry-date');
+
       entryHeadline.innerHTML = hedText;
       entryBody.innerHTML = bodyText + '&nbsp;&#133;';
 
@@ -311,12 +289,33 @@ var searchFunctions = {
         ? el.count + ' occurance found'
         : el.count + ' occurances found';
 
+      entryBodyContainer.appendChild(entryBody);
       entryContainer.appendChild(entryHeadline);
       entryContainer.appendChild(entryMatches);
       entryContainer.appendChild(entryBodyContainer);
       entryLink.appendChild(entryContainer);
-      searchWrapper.appendChild(entryLink);
+      self.searchWrapper.appendChild(entryLink);
     });
+  },
+  handleSearchHed: function(resultsArr, searchTerm) {
+    var self=this;
+    var searchHed = document.querySelector('.search-results-header') || false;
+    // var search = document.querySelector('#search-results');
+    // var searchWrapper = document.querySelector('#search-results-wrapper');
+    self.searchWrapper.innerHTML = '';
+
+    var resultsMessage = resultsArr.length === 1
+          ? resultsArr.length + '&nbsp;result for “' + searchTerm + '”'
+          : resultsArr.length + '&nbsp;results for “' + searchTerm + '”';
+
+    if (searchHed) {
+      searchHed.innerHTML = resultsMessage;
+    } else {
+      var entrySearch = document.createElement('H1');
+      entrySearch.classList.add('search-results-header');
+      entrySearch.innerHTML = resultsMessage;
+      self.search.insertBefore(entrySearch, self.searchWrapper);
+    }
   },
   handleResultsTransition: function(state) {
     var self=this;
