@@ -165,11 +165,15 @@
     margin: 0 rem(10) rem(60);
   }
 }
+.search-history-wrapper.hide {
+  .search-history-hed {
+    opacity:0;
+  }
+}
 .search-history-hed {
   font-size:rem(16);
   margin:0 rem(10) 0 0;
   line-height: 1.45;
-  // flex-shrink: 0;
   display: inline;
 }
 .search-history-list {
