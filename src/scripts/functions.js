@@ -819,5 +819,14 @@ getQueryVariable: function(variable) {
     if(pair[0] == variable){return pair[1].replace(/%20/g, ' ');}
    }
    return(false);
-}
+},
+lsTest: function() {
+  try {
+    localStorage.setItem("name", "Hello World!"); //saves to the database, "key", "value"
+    localStorage.removeItem("name");
+    return true;
+  } catch (e) {
+    return false;
+  }
+},
 };

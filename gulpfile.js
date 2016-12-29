@@ -34,7 +34,8 @@ var rename = require('gulp-rename'),
     browserSync = require('browser-sync'),
     del = require('del'),
     replace = require('gulp-replace'),
-    cleanFiles = require('gulp-clean');
+    cleanFiles = require('gulp-clean'),
+    flatten = require('gulp-flatten');
 
 //svg
 var svgstore = require('gulp-svgstore'),
@@ -79,7 +80,7 @@ var paths = {
     deploy: 'dist/'
   },
   includes: {
-   input: 'src/includes/*.html',
+   input: 'src/includes/*',
    testing: 'test/_includes/'
   },
   scripts: {
@@ -186,6 +187,7 @@ gulp.task('includes', function() {
      basepath: '@file'
    }))
    .pipe(replace(/cachebustthiscss/g,  filename )) // adds cachebusted name of css to js links file
+   .pipe(flatten())
    .pipe(gulp.dest(paths.includes.testing))
 });
 

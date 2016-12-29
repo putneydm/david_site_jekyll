@@ -4,7 +4,6 @@ var searchFunctions = {
     var self=this;
     self.windowWidth = document.documentElement.clientWidth;
     self.getElements();
-
     self.initializeListeners();
     self.dataTest();
     self.displaySearchHistory();
@@ -14,6 +13,7 @@ var searchFunctions = {
   getElements: function() {
     var self=this;
 
+    self.sessionAvail = pageFunctions.lsTest();
     self.search = document.querySelector('#search-results');
     self.searchWrapper = document.querySelector('#search-results-wrapper');
     self.searchField = document.querySelector('#search-field');
@@ -182,10 +182,12 @@ var searchFunctions = {
       ? JSON.parse(sessionStorage.searches)
       : [];
 
-    searchArr.unshift(searchTerm);
-    searchArr = searchArr.slice(0,10);
-    searchArr = JSON.stringify(searchArr);
-    sessionStorage.searches = searchArr;12
+      if (self.sessionAvail) {
+        searchArr.unshift(searchTerm);
+        searchArr = searchArr.slice(0,10);
+        searchArr = JSON.stringify(searchArr);
+        sessionStorage.searches = searchArr;
+      }
   },
   getSearchHistory:function() {
     var self=this;
@@ -354,10 +356,10 @@ var searchFunctions = {
       self.stopWords = data.stopWords;
       self.entries = data.entries;
 
-      sessionStorage.setItem('entries', JSON.stringify(data.entries));
-
-      sessionStorage.setItem('stopWords', JSON.stringify(data.stopWords));
-
+      if (self.sessionAvail) {
+        sessionStorage.setItem('entries', JSON.stringify(data.entries));
+        sessionStorage.setItem('stopWords', JSON.stringify(data.stopWords));
+      }
       self.searchActive(true);
       self.handleLoadingError(false);
     }),
