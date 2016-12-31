@@ -771,13 +771,10 @@ promiseCheck: function() {
 scrollDirection: function() {
   var self=this;
    var st = window.pageYOffset || document.documentElement.scrollTop;
-   if (st > self.lastScrollTop){
-    // downscroll code
-    var dir = true;
-   } else {
-    // upscroll code
-    var dir = false;
-   }
+
+   var dir = st > self.lastScrollTop
+   ? true // downscroll
+   : false; //upscroll
    self.lastScrollTop = st;
    return dir;
 },
