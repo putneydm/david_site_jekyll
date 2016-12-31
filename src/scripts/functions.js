@@ -319,7 +319,7 @@ var pageFunctions = {
        rect = el.getBoundingClientRect();
 
 
-   if (rect.top <= window.innerHeight * .75 && !active) {
+   if (rect.top <= window.innerHeight * 0.75 && !active) {
      self.addShit(el, 'blog-teaser-wrapper--active');
      self.handleWillChange('will-change-ot', self.BlogTeaserList, 'LI');
    }
@@ -595,7 +595,7 @@ var pageFunctions = {
   setActiveBlogItem: function() {
     var self=this;
     var windowHeight = window.innerHeight,
-        triggerLine = windowHeight * .15;
+        triggerLine = windowHeight * 0.15;
 
     self.entryList.forEach(function(el) {
       var itemBounds = el.getBoundingClientRect(),
