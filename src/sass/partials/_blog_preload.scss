@@ -15,12 +15,12 @@
 	}
   .blog-single-entry{
   	margin-top:rem(60);
-  		@media screen and (max-width:em(720)) {
-  			margin-top:rem(84);
+  		@media screen and (max-width:em(700)) {
+  			margin-top:rem(74);
   			padding-top:0;
   		}
-			@media screen and (max-width:em(560)) {
-				margin-top:rem(111);
+			@media screen and (max-width:em(650)) {
+				margin-top:rem(105);
 			}
   		.blog-entry	{ background-image:none;}
   }
