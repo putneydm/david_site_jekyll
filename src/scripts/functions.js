@@ -436,12 +436,13 @@ var pageFunctions = {
     var self=this;
     var activeFootnoteLink = document.querySelectorAll('.footnote-link-active')[0],
         activeFootnote = document.querySelectorAll('.list-item-active'),
-        footNoteReturnButton = self.footNoteReturnButton;
+        footNoteReturnButton = self.footNoteReturnButton,
+        bound;
 
       if (activeFootnoteLink) {
-        var foo = activeFootnoteLink.getBoundingClientRect();
+        bound = activeFootnoteLink.getBoundingClientRect();
       }
-      if (foo && foo.top >= 250) {
+      if (bound && bound.top >= 250) {
         self.handleInactiveState();
       }
   },
