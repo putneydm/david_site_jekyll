@@ -161,16 +161,6 @@ var pageFunctions = {
      self.handleManualScrollback(scrollPosition);
    }
   },
-  // initAnimListener: function() {
-  //   var self=this;
-  //   var headspace = document.querySelector('#headspace');
-  //
-  //
-  //   headspace.addEventListener('animationend',function(e){
-  //     headspace.classList.remove('nav-fixed-headspace--transout');
-  //   });
-  //
-  // },
   initResizeListener: function(){
     var self=this;
     window.onresize = function(e) {
