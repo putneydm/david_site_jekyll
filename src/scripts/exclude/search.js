@@ -246,10 +246,9 @@ var searchFunctions = {
     self.handleResultsTransition(true);
     self.handleSearchHed(resultsArr, searchTerm);
 
-    var textLength = 100;
-    self.windowWidth > 700
-      ? textLength = 100
-      : textLength = 50;
+    var textLength = self.windowWidth > 700
+      ? 100
+      : 50;
 
     resultsArr.forEach(function(el) {
       var hedText = self.entries[el.index].title,
