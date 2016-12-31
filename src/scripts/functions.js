@@ -747,8 +747,9 @@ var pageFunctions = {
       self.handleHeadlineSwap(true); // boolean signals button press;
     }
   },
-  getScrollPosition: function () {
-    return scrollPosition = window.scrollY;
+  getScrollPosition: function() {
+    var sp = window.scrollY;
+    return sp;
   },
   isElementVisible: function ( elem ) {
       var distance = elem.getBoundingClientRect();
