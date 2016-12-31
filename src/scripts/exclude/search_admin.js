@@ -14,7 +14,6 @@ var searchAdminFunctions = {
         getButton = document.querySelector("#get"),
         login = document.querySelector('#login'),
         logout = document.querySelector('#logout'),
-        // testLink = document.querySelector('#test-link'),
         loggedOut = document.querySelector('#loggedout-screen'),
         loggedIn = document.querySelector('#loggedin-screen'),
         loginWrapper = document.querySelector('#login-wrapper'),
@@ -39,7 +38,7 @@ var searchAdminFunctions = {
       }),
       function(error) {
         console.log('failed');
-      }
+      };
     });
     login.addEventListener('click', function() {
       self.login();
@@ -67,30 +66,28 @@ var searchAdminFunctions = {
           self.handleError(usernameField, usernameField.validity.valid);
           self.handleError(passwordField, passwordField.validity.valid);
         }
-      });
+    });
   },
   handleError: function(el, valid, sysError) {
     var self=this;
     var errorContainer = el.parentNode.querySelector('.login-error-message'),
         target = el.id;
 
-    if (!sysError && target === 'username' ) {
-      var errorMessage = 'Please enter a valid e mail address.';
-    } else if (!sysError && target === 'password') {
-      var errorMessage = 'Please enter a password with six characters or more.';
-    } else {
-      var errorMessage = String(sysError).replace(/Error:\s/g, '');
-    }
+    var errorMessage = !sysError && target === 'username'
+      ? 'Please enter a valid e mail address.' :
+      !sysError && target === 'password' ? 'Please enter a password with six characters or more.'
+      : String(sysError).replace(/Error:\s/g, '');
 
-    if (valid) {
-      errorContainer.innerHTML = ' ';
-      errorContainer.classList.remove('login-error-message--active');
-      el.classList.remove('form-field--error');
-    } else {
-      errorContainer.classList.add('login-error-message--active');
-      errorContainer.innerHTML = errorMessage;
-      el.classList.add('form-field--error');
-    }
+    valid
+      ?(
+        errorContainer.innerHTML = ' ',
+        errorContainer.classList.remove('login-error-message--active'),
+        el.classList.remove('form-field--error')
+      ):
+        errorContainer.classList.add('login-error-message--active'),
+        errorContainer.innerHTML = errorMessage,
+        el.classList.add('form-field--error'
+      );
   },
   intializeAnimationListener: function(el) {
     el.addEventListener('animationend', function() {
@@ -104,7 +101,6 @@ var searchAdminFunctions = {
       if (slideOut) {
         el.classList.add('log-screen--disabled');
         el.classList.remove('log-screen--out');
-        el.classList.add('fuck');
       }
       if (slideIn) {
         el.classList.add('log-screen--active');
@@ -136,8 +132,8 @@ var searchAdminFunctions = {
     entries.set( dataSet,
     function (error) {
       error
-      ?console.log('error')
-      :console.log('saved');
+      ? console.log('error')
+      : console.log('saved');
     });
   },
   firebaseGet: function(child) {
@@ -146,9 +142,9 @@ var searchAdminFunctions = {
     var ref = self.myFirebaseRef.child(child);
     var p = new Promise (function(resolve, reject) {
     ref.on("value", function(snapshot) {
-      resolve(snapshot.val())
+      resolve(snapshot.val());
       }, function (errorObject) {
-        reject("The read failed: " + errorObject.code)
+        reject("The read failed: " + errorObject.code);
       });
     });
     return p;
@@ -208,7 +204,6 @@ var searchAdminFunctions = {
            return authData.facebook.displayName;
       }
     }
-
   },
   logout: function() {
     var self=this;
@@ -247,7 +242,7 @@ var searchAdminFunctions = {
     loggedOutScreen.classList.add('log-screen--shake');
      var el =  /password/gi.test(error)
      ? document.querySelector('#password')
-     : document.querySelector('#username')
+     : document.querySelector('#username');
      self.handleError(el, false, error);
     }
   },
