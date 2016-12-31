@@ -221,7 +221,7 @@ gulp.task('cachebustScripts', function() {
 
 // lints main javascript file for site
 gulp.task('lint', function() {
-  return gulp.src('source/scripts/functions.js')
+  return gulp.src('src/scripts/functions.js')
     .pipe(jshint())
     .pipe(jshint.reporter(stylish));
 });
@@ -800,7 +800,7 @@ gulp.task('listen', function () {
     });
     // scripts
     gulp.watch(paths.scripts.input).on('change', function(file) {
-      gulp.start(['concat', 'pages', 'layouts', 'clean-js']);
+      gulp.start(['concat', 'lint', 'pages', 'layouts', 'clean-js']);
     });
     // scripts exclude
     gulp.watch(paths.scripts.exclude).on('change', function(file) {
@@ -845,6 +845,7 @@ gulp.task('default', [
 	'svg',
 	'bower',
   'sitemap',
+  'lint',
 // <<<<<<< HEAD
 //   // 'drafts',
 //   'clean',
