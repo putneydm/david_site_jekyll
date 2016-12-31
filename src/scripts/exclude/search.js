@@ -52,13 +52,13 @@ var searchFunctions = {
     });
     searchField.addEventListener('click', function(e) {
       var errorState = searchField.classList.contains('form-field--error');
-        if (errorState && searchField.value !== '') {
-          self.displaySearchError(false);
-        }
-        if (searchField.value.length == 0) {
-          submitBtn.disabled = true;
-        }
-      });
+      if (errorState && searchField.value !== '') {
+        self.displaySearchError(false);
+      }
+      if (searchField.value.length === 0) {
+        submitBtn.disabled = true;
+      }
+    });
     searchField.addEventListener('blur', function(e) {
       if (searchField.value.length === 0) {
         submitBtn.disabled = true;
