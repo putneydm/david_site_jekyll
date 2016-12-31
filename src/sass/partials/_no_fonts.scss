@@ -1,0 +1,16 @@
+.no-fonts {
+  .blog-headline {
+    line-height: 1.4;
+    font-size:rem(22);
+    @media screen and (min-width:rem(500))	{
+      font-size:rem(24);
+    }
+
+  }
+  .blog-entry-text p {
+    font-size:rem(16);
+    @media screen and (min-width:rem(500))	{
+      font-size:rem(17);
+    }
+  }
+}

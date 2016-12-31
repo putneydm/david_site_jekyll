@@ -25,6 +25,8 @@ lsTest: function() {
     return false;
   }
 }
+                document.querySelectorAll('HTML')[0].classList.remove('no-fonts');
+            document.querySelectorAll('HTML')[0].classList.remove('no-fonts');
 };
 (function() {
   fontLoad.intialize();
