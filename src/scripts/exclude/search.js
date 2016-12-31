@@ -126,16 +126,13 @@ var searchFunctions = {
         containsWordChar = /\w+/gi.test(searchInput), // false means the items has no word characters in it
         notWord = searchTerm.length <= 1; // true means its one character
 
-    var exception = /a/i.test(searchTerm) || /i/i.test(searchTerm)
-    if (!containsWordChar || notWord) {
-      var errorMessage = 'C\'mon. That isn\'t even a word!'
-    }
-    if (!errorMessage && !stopWordsResult) {
-      var errorMessage = 'Whoops! Try narrowing down your search term a bit.';
-    }
-    if (!errorMessage) {
-      var errorMessage = 'Yeah, that search term doesn\'t really work for us.';
-    }
+    var exception = /a/i.test(searchTerm) || /i/i.test(searchTerm);
+
+    var errorMessage = !containsWordChar || notWord
+    ? 'C\'mon. That isn\'t even a word!'
+    : !stopWordsResult ? 'Whoops! Try narrowing down your search term a bit.'
+    : 'Yeah, that search term doesn\'t really work for us.';
+
     //  stopwords result false = bad, true = good
     if (stopWordsResult && containsWordChar && !notWord) {
       var searchResultsArr = self.doSearch(searchInput);
