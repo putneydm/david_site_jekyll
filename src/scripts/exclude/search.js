@@ -82,7 +82,7 @@ var searchFunctions = {
       self.searchActive(true),
       self.handleLoadingError(false)
     )
-    : (
+    :(
       self.firebaseInit(),
       self.handleLoadingScreen(true),
       // self.loadingTest() // turn this on, and you'll get a fake firebase load that randomly fails
@@ -98,7 +98,6 @@ var searchFunctions = {
       document.querySelector('#search-field').value = retrievedObject;
       var searchResultsArr = self.doSearch(retrievedObject);
       self.handleSearchResults(searchResultsArr, retrievedObject);
-      // searchContainer.classList.add('active');
       self.handleResultsTransition();
     }
   },
@@ -182,7 +181,6 @@ var searchFunctions = {
   },
   getSearchHistory:function() {
     var self=this;
-
     var arr = sessionStorage.searches
       ? JSON.parse(sessionStorage.searches)
       : [];
@@ -204,14 +202,13 @@ var searchFunctions = {
 
     if (arr.length > 0) {
       arr.forEach(function(el) {
-        console.log('for each');
         var linkURL = self.setPageURL(el);
         var link = document.createElement('A');
         link.href = linkURL.url;
 
         var list = document.createElement('LI');
         link.innerHTML = el;
-        list .dataset.term = el;
+        list.dataset.term = el;
         list.appendChild(link);
         historyList.appendChild(list);
       });
@@ -234,7 +231,6 @@ var searchFunctions = {
         var searchInput = clickTarget.dataset.term;
         var searchResultsArr = self.doSearch(searchInput);
         self.handleSearchResults(searchResultsArr, searchInput);
-        // self.saveSearchHistory(searchInput);
         self.displaySearchHistory();
         self.handleURLChange(searchInput);
         self.searchField.value = searchInput;
@@ -244,9 +240,7 @@ var searchFunctions = {
   handleSearchResults: function(resultsArr, searchTerm) {
     var self=this;
 
-    var searchTerm =  self.cleanPunctuation(searchTerm);
-    // var search = document.querySelector('#search-results');
-    // var searchWrapper = document.querySelector('#search-results-wrapper');
+    searchTerm = self.cleanPunctuation(searchTerm);
 
     self.searchWrapper.innerHTML = '';
     self.handleResultsTransition(true);
@@ -361,7 +355,7 @@ var searchFunctions = {
   searchActive: function(state) {
     var self=this;
 
-    var submitBtn = document.querySelector('#submit-search'),
+    var submitBtn = document.querySelector('#submit-search');
         searchField = document.querySelector('#search-field'),
         errorOverlay = document.querySelector('#error-overlay'),
         loader = document.querySelector('#loader');
@@ -413,14 +407,13 @@ var searchFunctions = {
     var self=this;
     var errorField = document.querySelector('#search-field-error'),
         searchField = document.querySelector('#search-field');
-
     state
     ?
       (
       searchField.classList.add('form-field--error'),
       errorField.innerHTML = error
       )
-    : (
+    :(
       searchField.classList.remove('form-field--error'),
       errorField.innerHTML = ''
     );
@@ -433,8 +426,7 @@ var searchFunctions = {
       ? (
         errorOverlay.classList.add('error-overlay--active'),
         self.handleLoadingScreen(false)
-      )
-      : errorOverlay.classList.remove('error-overlay--active');
+      ): errorOverlay.classList.remove('error-overlay--active');
   },
   firebaseInit: function() {
     var self=this;
@@ -447,9 +439,9 @@ var searchFunctions = {
     var ref = db.child(child);
     var p = new Promise (function(resolve, reject) {
     ref.on("value", function(snapshot) {
-      resolve(snapshot.val())
+      resolve(snapshot.val());
       }, function (errorObject) {
-        reject("The read failed: " + errorObject.code)
+        reject("The read failed: " + errorObject.code);
       });
     });
     return p;
@@ -457,7 +449,7 @@ var searchFunctions = {
   sleep: function(time) {
     var p = new Promise (function(resolve) {
       setTimeout(function(){
-        resolve(time)
+        resolve(time);
       }, time);
     });
     return p;
@@ -481,14 +473,14 @@ var searchFunctions = {
       :(
         self.handleLoadingError(true),
         console.log(state, 'fake failed')
-      )
-    })
+      );
+    });
   },
   initResizeListener: function(){
     var self=this;
     window.onresize = function(e) {
       self.windowWidth = document.documentElement.clientWidth;
-    }
+    };
   },
   getQueryVariable: function(variable) {
     var self=this;
