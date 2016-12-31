@@ -454,8 +454,8 @@ var pageFunctions = {
     		scrollBackNote;
 
     if (footnoteLinkSelected && activeFootnote) {
-      var scrollBackTo = (self.getElemDistance( footnoteLinkSelected )) - 250;
-      var scrollBackNote = self.getElemDistance( activeFootnote );
+      scrollBackTo = (self.getElemDistance( footnoteLinkSelected )) - 250;
+      scrollBackNote = self.getElemDistance( activeFootnote );
     }
     else if (scrollPosition > scrollBackNote + 40) {
       this.setInactiveState(false);
