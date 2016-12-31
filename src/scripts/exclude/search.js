@@ -23,11 +23,9 @@ var searchFunctions = {
     var searchField = document.querySelector('#search-field'),
         submitBtn = document.querySelector('#submit-search'),
         submitSearchRetry = document.querySelector('#submit-search-retry'),
-        loaderIcon = document.querySelector('#loader-icon'),
         searchResults = document.querySelector('#search-results-wrapper'),
         clearSearch = document.querySelector('#clear-search'),
         searchContainer = document.querySelector('#search-results-wrapper');
-
 
     submitBtn.addEventListener('click', function(e){
       self.getSearchFieldData();
