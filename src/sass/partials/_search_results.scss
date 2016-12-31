@@ -181,9 +181,27 @@ input, button {
 //   animation-direction: alternate;
 //   timing-function: ease-out;
 // }
-// .paused{
-//     animation-play-state:paused;
-// }
+.paused{
+    animation-play-state:paused;
+}
+@keyframes bounceball {
+   from {
+     transform: translateY(0);
+     height: 15px;
+   }
+   10%  {
+     transform: translateY(0);
+     height: 30px;
+   }
+   to   {
+     transform: translateY(-100px);
+   }
+}
+@keyframes shadow {
+  0%{ opacity:1; transform: scale(1.8);}
+  60%{ opacity:0; transform: scale(.9);}
+  100%{ opacity:0; transform: scale(.9);}
+}
 // @keyframes headShake {
 //   0% {
 //       transform:translateX(0px);
