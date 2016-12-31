@@ -92,9 +92,8 @@ var searchFunctions = {
   handleSearchReload: function() {
     var self=this;
 
-    var searchContainer = document.querySelector('#search-results-wrapper');
-
-    var retrievedObject = self.getQueryVariable('search_term');
+    var searchContainer = document.querySelector('#search-results-wrapper'),
+        retrievedObject = self.getQueryVariable('search_term');
     if (retrievedObject) {
       document.querySelector('#search-field').value = retrievedObject;
       var searchResultsArr = self.doSearch(retrievedObject);
