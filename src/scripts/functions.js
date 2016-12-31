@@ -798,5 +798,5 @@ lsTest: function() {
   } catch (e) {
     return false;
   }
-},
+}
 };
