@@ -484,7 +484,7 @@ var pageFunctions = {
       var active =
       el.classList.contains('blog-pullquote--set');
       if (!visible && !active) {
-        self.addShit(el, ['will-change-ot', 'blog-pullquote--set'])
+        self.addShit(el, ['will-change-ot', 'blog-pullquote--set']);
       } else if (visible && active) {
         self.handleWillChange('will-change-ot', el);
         el.classList.add('blog-pullquote--animate');
@@ -509,7 +509,7 @@ var pageFunctions = {
       extendEl(self.headerHeadline);
     } else if (hedText && self.getElemDistance(blogHeadline) > sp && hedVis && !hedNoVis) {
       var hedText = self.getElemDistance(blogHeadline);
-      retractEl(self.headerHeadline)
+      retractEl(self.headerHeadline);
       resetEl(self.headerHeadline);
     }
     // logo out, headline in
@@ -578,7 +578,7 @@ var pageFunctions = {
     if (activeItem) {
       progressBar.classList.add('scroll-progress--trans');
       var percent = 100 - self.calculateBlogPercentage(activeItem);
-      progressBar.style.transform = "translateX(-" + percent + "%)"
+      progressBar.style.transform = "translateX(-" + percent + "%)";
     }
     if (!activeItem) {
       progressBar.style.transform = 'translateX(-100%)';
