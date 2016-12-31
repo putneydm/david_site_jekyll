@@ -40,13 +40,13 @@ var searchFunctions = {
     searchField.addEventListener('keyup', function(e) {
       var errorState = searchField.classList.contains('form-field--error');
 
-      if (errorState && e.keyCode != 13) {
+      if (errorState && e.keyCode !== 13) {
         self.displaySearchError(false);
       }
       if (!errorState && searchField.value.length >= 1) {
         submitBtn.disabled = false;
       }
-      if (searchField.value.length == 0) {
+      if (searchField.value.length === 0) {
         submitBtn.disabled = true;
       }
     });
@@ -60,7 +60,7 @@ var searchFunctions = {
         }
       });
     searchField.addEventListener('blur', function(e) {
-      if (searchField.value.length == 0) {
+      if (searchField.value.length === 0) {
         submitBtn.disabled = true;
       }
     });
