@@ -212,7 +212,7 @@ var pageFunctions = {
   initScrollBackButton: function () {
     var self = this;
     // var footnoteReturnButton = document.getElementById("btn-footnote-return");
-    self.footNoteReturnButton.classList.add('btn-footnote-return--trans')
+    self.footNoteReturnButton.classList.add('btn-footnote-return--trans');
     self.footNoteReturnButton.addEventListener("click", function(e) {
       e.preventDefault();
       self.setInactiveState(true);
