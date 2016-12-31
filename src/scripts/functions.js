@@ -765,7 +765,7 @@ promiseCheck: function() {
       var promiseFoo = new Promise(function (x, y) {});
       promiseSupport = true;
   } catch (e) {}
-  return promiseSupport
+  return promiseSupport;
 },
 scrollDirection: function() {
   var self=this;
