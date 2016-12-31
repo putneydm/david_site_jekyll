@@ -508,7 +508,6 @@ var pageFunctions = {
       self.headerHeadline.innerHTML = hedText;
       extendEl(self.headerHeadline);
     } else if (hedText && self.getElemDistance(blogHeadline) > sp && hedVis && !hedNoVis) {
-      var hedText = self.getElemDistance(blogHeadline);
       retractEl(self.headerHeadline);
       resetEl(self.headerHeadline);
     }
