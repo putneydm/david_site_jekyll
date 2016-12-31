@@ -394,7 +394,7 @@ var pageFunctions = {
       scrollBackButton = document.querySelector('#btn-footnote-return'),
       linkLocation = self.getElemDistance(activeFootnoteLink),
       targetFootnoteLocation = self.getElemDistance( activeFootnote ) - (navHeight + 150);
-    self.addShit(scrollBackButton, 'btn-footnote-return-active')
+    self.addShit(scrollBackButton, 'btn-footnote-return-active');
     self.addShit(activeFootnoteLink, 'footnote-link-active');
     self.addShit(activeFootnote, 'list-item-active');
     self.scrollToGeneric(targetFootnoteLocation, 200, linkLocation);
