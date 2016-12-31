@@ -647,24 +647,6 @@ var pageFunctions = {
         self.highLight(el, searchTermRegEx);
       });
     }
-
-    // function highLight (el, searchTermR) {
-    //
-    //   console.log(searchTermR);
-    //
-    //     var elementText = el.textContent;
-    //     var termMatches = elementText.match(searchTermR);
-    //     if (termMatches) {
-    //       termMatches.forEach(function (match) {
-    //         elementText = elementText.replace(searchTermR, '<span  class="highlight">' + match + '</span>', 'gi');
-    //       });
-    //       el.innerHTML = elementText;
-    //     }
-    //   }
-
-    // console.log('text', nodes);
-
-
   },
   highLight: function(el, searchTermRegEx) {
     var self=this;
