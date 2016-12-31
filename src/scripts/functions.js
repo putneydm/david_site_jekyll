@@ -697,7 +697,7 @@ var pageFunctions = {
     var self = this;
     setTimeout(function(){
       self.removeShit(el, style);
-    }, time)
+    }, time);
   },
   scrollToGeneric: function(to, duration, start) {
     // slow scrolls to location send destination, duration of scroll and start point
