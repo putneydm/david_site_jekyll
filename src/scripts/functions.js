@@ -586,7 +586,7 @@ var pageFunctions = {
   },
   calculateBlogPercentage: function(activeItem) {
     var self=this;
-    var activeItemPos = activeItem.getBoundingClientRect().top - (window.innerHeight * .15),
+    var activeItemPos = activeItem.getBoundingClientRect().top - (window.innerHeight * 0.15),
         itemHeight = activeItem.clientHeight,
         percentCalc =  Math.round((activeItemPos / itemHeight) * -100);
       return percentCalc < 0 ? 0:
