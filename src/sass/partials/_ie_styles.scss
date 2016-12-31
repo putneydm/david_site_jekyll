@@ -15,12 +15,12 @@
 
 .no-svg
 	{
-	
+
 		.svg-container
 		{
 		display:none;
 		}
-	
+
 		.svg-fallback
 		{
 		display:block;
@@ -30,25 +30,25 @@
 		background-repeat:no-repeat;
 		background-position:center center;
 		}
-		
+
 		.rocket
 		{
-		background-image:url('../siteart/rocket.png');	
+		background-image:url('../siteart/rocket.png');
 		}
 
 		.wrench
 		{
-		background-image:url('../siteart/wrench.png');	
+		background-image:url('../siteart/wrench.png');
 		}
-		
+
 		.code
 		{
-		background-image:url('../siteart/code.png');	
+		background-image:url('../siteart/code.png');
 		}
-		
-		.footer-links	
+
+		.footer-links
 			{
-			
+
 			li
 			{
 			background-repeat:no-repeat;
@@ -57,36 +57,35 @@
 			a
 			{
 
-			
+
 			}
 
 
 			}
-			
+
 			.twitter-link
 			{
-			background-image:url('../siteart/twitter.png');		
+			background-image:url('../siteart/twitter.png');
 			}
-			
+
 			.mail-link
 			{
-			background-image:url('../siteart/mail.png');		
-			}	
-			
+			background-image:url('../siteart/mail.png');
+			}
+
 			.facebook-link
 			{
 			background-image:url('../siteart/mail.png');
-			border:1px solid red;
+			// border:1px solid red;
 			}
-			
+
 			.github-link
 			{
-			background-image:url('../siteart/github.png');	
-			border:1px solid red;
-			}			
-			
+			background-image:url('../siteart/github.png');
+			// border:1px solid red;
 			}
-		
-	
+
+			}
+
+
 	}
-	
