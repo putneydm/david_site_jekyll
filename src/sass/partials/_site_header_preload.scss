@@ -97,6 +97,7 @@
 	list-style-type: none;
 	text-transform:uppercase;
 	font-family:$sans;
+	font-weight:bold;
 	@media screen and (max-width:em($header-break-2)) {
 		flex-direction: column;
 		justify-content: space-around;
