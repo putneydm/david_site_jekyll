@@ -152,16 +152,11 @@ gulp.task('layouts', function() {
      prefix: '@@',
      basepath: '@file'
    }))
-// <<<<<<< HEAD
    // replaces placeholder text with cachebusted name
   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) //main js
   .pipe(replace(/\*cachebustadmin\*/g,  searchAdminName )) // search admin
   .pipe(replace(/\*cachebustsearch\*/g,  searchName )) // search page
   .pipe(gulp.dest(paths.pageLayouts.testing))
-// =======
-//   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
-//    .pipe(gulp.dest(paths.pageLayouts.testing))
-// >>>>>>> master
 });
 //  compiles pages from partials
 gulp.task('pages', function() {
@@ -170,14 +165,6 @@ gulp.task('pages', function() {
      prefix: '@@',
      basepath: '@file'
    }))
-// <<<<<<< HEAD
-  //  .pipe(htmltidy({doctype: 'html5',
-  //    hideComments: true,
-  //    indent: true}))
-  // .pipe(replace(/\*cachebustthis\*/g,  scriptname)) // adds cachebusted name of scripts to js links file
-// =======
-//   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
-// >>>>>>> master
    .pipe(gulp.dest(paths.pages.testing))
 });
 gulp.task('includes', function() {
@@ -203,10 +190,6 @@ gulp.task('sitemap', function() {
    gulp.src(paths.sitemap.input)
    .pipe(gulp.dest(paths.sitemap.output));
 });
-// <<<<<<< HEAD
-//
-//
-// =======
 // moves touch icons and favicon to dist
 gulp.task('icons', function() {
   gulp.src(paths.icons.input)
