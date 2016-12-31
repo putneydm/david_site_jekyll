@@ -37,9 +37,6 @@ var searchFunctions = {
       // fakes a data load or error for testing
       // self.loadingTest();
     });
-    // loaderIcon.addEventListener('animationiteration', function(e) {
-    //   // console.log('bounce');
-    // });
     searchField.addEventListener('keyup', function(e) {
       var errorState = searchField.classList.contains('form-field--error');
 
