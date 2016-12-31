@@ -154,11 +154,11 @@ var searchFunctions = {
       var matchPost = self.cleanPunctuation(el.post).match(regexp),
           matchTitle = self.cleanPunctuation(el.title).match(regexp);
 
-      matchPost != null && matchTitle != null ?
+      matchPost !== null && matchTitle !== null ?
       resultsArr.push({"count" : matchPost.length + matchTitle.length,  "index": i})
-      : matchPost == null && matchTitle != null ? resultsArr.push({"count" : matchTitle.length,  "index": i})
-      : matchPost != null && matchTitle == null ? resultsArr.push({"count" : matchPost.length,  "index": i})
-      : 0 // do nothing
+      : matchPost === null && matchTitle !== null ? resultsArr.push({"count" : matchTitle.length,  "index": i})
+      : matchPost !== null && matchTitle === null ? resultsArr.push({"count" : matchPost.length,  "index": i})
+      : false; // do nothing
     });
 
     var resultsArrSort = resultsArr.sort(function(a, b) {
