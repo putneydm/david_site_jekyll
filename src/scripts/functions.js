@@ -159,14 +159,14 @@ var pageFunctions = {
      self.handleScrollButton(scrollPosition);
      self.handleSiteFooter(scrollPosition);
      self.handleManualScrollback(scrollPosition);
-   }
+   };
   },
   initResizeListener: function(){
     var self=this;
     window.onresize = function(e) {
     self.heroArtHeight = document.querySelector('#hero-image').clientHeight;
     self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
-    }
+   };
   },
   initJsTest: function () {
     document.querySelectorAll('HTML')[0].classList.remove('no-js');
@@ -375,7 +375,7 @@ var pageFunctions = {
           }
         });
       });
-      return p
+      return p;
     }
   },
   addLink: function() {
@@ -383,7 +383,7 @@ var pageFunctions = {
 
     linkList.forEach(function (el){
       var targetEl = document.querySelector('#' + el.name);
-      targetEl.innerHTML = "<a href=\"" + el.link + "\">" + targetEl.innerHTML + '</a>'
+      targetEl.innerHTML = "<a href=\"" + el.link + "\">" + targetEl.innerHTML + '</a>';
     });
   },
 // sets interactive functions on page
