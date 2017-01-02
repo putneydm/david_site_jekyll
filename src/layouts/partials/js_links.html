@@ -1,4 +1,5 @@
 <!--  scripts -->
+<!-- this is a test -->
 {% assign pageType = page.pagetype %}
 <script src="/scripts/*cachebustthis*"></script>
 {% if pageType == 'searchAdmin' %}
@@ -26,15 +27,18 @@
     {% endif%}
     {% if pageType == 'searchAdmin' %}
       searchAdminFunctions.initialize();
+      pageFunctions.intializeMinimal();
     {% endif%}
     {% if pageType == 'search' %}
       searchFunctions.initialize();
+      pageFunctions.intializeSearch();
       {% endif%}
-    {% if pageType == 'error' or pageType == 'searchAdmin' %}
+    {% if pageType == 'error' %}
       pageFunctions.intializeMinimal();
-          {% endif%}
-    {% if pageType == 'search' %}
-        pageFunctions.intializeSearch();
+    {% endif%}
+    // this is a hack to make the tag archive page work. For some reason pagetype doesn't work on this page.
+    {% if pageType == nil %}
+      pageFunctions.intializeMinimal();
     {% endif%}
   });
 })();
