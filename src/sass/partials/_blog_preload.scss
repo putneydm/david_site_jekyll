@@ -4,6 +4,20 @@
 	padding:rem(80) 0 0 0;
 	position:relative;
 }
+.tag-results {
+  padding-top: 0;
+  margin:rem(180) auto 0;
+  max-width:rem(700);
+	@media screen and (max-width:em(720)) {
+		margin:rem(180) rem(10) 0;
+	}
+    @media screen and (max-width:em(450)) {
+      margin:rem(140) rem(10) 0;
+    }
+	.blog-entry-text {
+		padding:0;
+	}
+}
 .blog-entry {
 	margin-bottom:rem(40);
 	padding-bottom:rem(30);
