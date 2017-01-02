@@ -318,7 +318,6 @@ var pageFunctions = {
        active = el.classList.contains('blog-teaser-wrapper--active'),
        rect = el.getBoundingClientRect();
 
-
    if (rect.top <= window.innerHeight * 0.75 && !active) {
      self.addShit(el, 'blog-teaser-wrapper--active');
      self.handleWillChange('will-change-ot', self.BlogTeaserList, 'LI');
@@ -501,7 +500,8 @@ var pageFunctions = {
         hedText = blogHeadline.innerHTML || false,
         direction = self.scrollDirection(),
         hedPos = self.getElemDistance(blogHeadline),
-        scrollOverriden = self.headSpace.dataset.status === 'scrollOverride' || false;
+        scrollOverriden = self.headSpace.dataset.status === 'scrollOverride' || false,
+        scrollPosition = self.getScrollPosition();
 
     // swap in headline
     if (hedText && self.getElemDistance(blogHeadline) < sp && !hedVis && !hedNoVis) {
