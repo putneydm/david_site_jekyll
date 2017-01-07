@@ -2,6 +2,24 @@
 layout: minimal_layout
 pageType: blog-entry
 ---
+<div id="highlight-clicker" class="highlight-clicker">
+  <div id="highlight-clicker-close" class="clicker-btn close-btn active">
+    <svg class="icn-solid">
+      <use xlink:href="#clear" />
+    </svg>
+  </div>
+  <span id="highlight-count"></span>
+  <div id="highlight-clicker-down" class="clicker-btn active">
+    <svg class="icn">
+      <use xlink:href="#arrow-down" />
+    </svg>
+  </div>
+  <div id="highlight-clicker-up" class="clicker-btn">
+    <svg class="icn">
+      <use xlink:href="#arrow-up" />
+    </svg>
+  </div>
+</div>
 <div id="blog-container" class="blog-container blog-single-entry">
 <article class="blog-entry" data-status="none">
     @@include('partials/blog_components/blog_image_test.html')
