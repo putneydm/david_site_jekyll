@@ -653,10 +653,103 @@ var pageFunctions = {
     var termMatches = elementText.match(searchTermRegEx);
     if (termMatches) {
       termMatches.forEach(function (match) {
-        elementText = elementText.replace(searchTermRegEx, '<span class="highlight">' + match + '</span>', 'gi');
+        elementText = elementText.replace(searchTermRegEx, '<span class="search-highlight">' + match + '</span>', 'gi');
       });
       el.innerHTML = elementText;
     }
+  },
+  highlightLocations: function() {
+    var self=this;
+    var highlights = document.querySelectorAll('.search-highlight');
+    var nodes = Array.prototype.slice.call(highlights);
+    return highlights;
+  },
+  handleHighlightClick: function() {
+    var self=this;
+
+    var clicker = document.querySelector('#highlight-clicker');
+    var highlights = self.highlightLocations();
+    var counter;
+    var highlightCount = document.querySelector('#highlight-count');
+
+    var messageTally = highlights.length === 1
+    ? ' match found'
+    : ' matches found'
+
+    highlightCount.innerHTML = highlights.length + messageTally;
+
+    if (self.getScrollPosition() > window.innerHeight) {
+      clicker.classList.add('active');
+    }
+
+    clicker.addEventListener('click', function(e) {
+      if (!clicker.classList.contains('active')) {
+        clicker.classList.add('active');
+      }
+
+      if (e.target.id === 'highlight-clicker-down') {
+
+        var clickerUp = document.querySelector('#highlight-clicker-up');
+
+
+        console.log(highlights.length, clickerUp.classList.contains('active'));
+
+        if (highlights.length > 1 && !clickerUp.classList.contains('active')) {
+          console.log('add active');
+          clickerUp.classList.add('active');
+        }
+
+        if (counter !== undefined) {
+          highlights[counter].classList.remove('active');
+          // document.querySelector('#highlight-clicker-up').classList.add('active');
+        }
+        if (counter < highlights.length - 1) {
+          counter++;
+        } else {
+          counter = 0;
+        }
+        self.handleHighlightScroll(highlights, counter);
+      }
+      if (e.target.id === 'highlight-clicker-up') {
+
+        highlights[counter].classList.remove('active');
+
+        if (counter === 0) {
+          counter = (highlights.length - 1);
+        } else {
+          counter--;
+        }
+        self.handleHighlightScroll(highlights, counter);
+      }
+      if (e.target.id === 'highlight-clicker-close') {
+        console.log('highlight clicker');
+        clicker.classList.add('hidden');
+        highlights.forEach(function(el) {
+          el.classList.remove('search-highlight');
+        });
+      }
+    });
+  },
+  handleHighlightScroll: function(highlights, counter) {
+    var self=this;
+    var currLoc = self.getScrollPosition();
+    // var foo = window.innerHeight * .35;
+    var highlightCount = document.querySelector('#highlight-count');
+    var loc = self.getElemDistance(highlights[counter]);
+    // loc = loc - foo;
+    // to, time, from
+
+    console.log('highlight scroll');
+
+    var foo = window.innerWidth < 450
+    ? window.innerHeight * 0.50
+    : window.innerHeight * 0.35;
+
+    self.scrollToGeneric(loc-foo, 200, currLoc);
+
+    highlights[counter].classList.add('active');
+
+    highlightCount.innerHTML = (counter + 1) + ' of ' + highlights.length;
   },
   // functions that return data or change elements
   getElemDistance: function ( elem ) {
