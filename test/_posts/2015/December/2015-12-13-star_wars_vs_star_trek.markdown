@@ -53,7 +53,7 @@ One might quickly jump to _The Star Wars Holiday Special,_ which is canon becaus
 
 {% if page.quotetwo %}
   <aside class="blog-pullquote">
-  <q>{{page.quotetwo}}</q>
+  <blockquote>{{page.quotetwo}}</blockquote>
   </aside>
 {% endif %}
 
