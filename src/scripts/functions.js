@@ -762,10 +762,21 @@ var pageFunctions = {
       el.classList.remove('active');
     }
   },
+  intializeHighlight: function() {
+    var self=this;
 
-      if (e.target.id === 'highlight-clicker-down') {
+    var query = self.handleSearchTerm();
 
-        var clickerUp = document.querySelector('#highlight-clicker-up');
+    if (query) {
+      var highlights = self.handleHighlight();
+    }
+    if (highlights && highlights.length > 0) {
+      var clicker = document.querySelector('#highlight-clicker');
+      self.handleMessageTally(highlights);
+      self.handleHighlightClick(highlights);
+      self.handleClickerStatus(clicker, 'hide', true);
+    }
+  },
   handleHighlightClick: function(highlights) {
     var self=this;
 
