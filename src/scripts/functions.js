@@ -805,41 +805,36 @@ var pageFunctions = {
     : ' matches found'
     highlightCount.innerHTML = arr.length + messageTally;
   },
+  clickCounter: undefined,
+  incrementSearchCounter: function(el, arr) {
+    var self=this;
+      if (el.id === 'highlight-clicker-down') {
+        var clickerUp = document.querySelector('#highlight-clicker-up');
 
-        if (highlights.length > 1 && !clickerUp.classList.contains('active')) {
-          console.log('add active');
+        if (arr.length > 1 && !clickerUp.classList.contains('active')) {
           clickerUp.classList.add('active');
         }
 
-        if (counter !== undefined) {
-          highlights[counter].classList.remove('active');
-          // document.querySelector('#highlight-clicker-up').classList.add('active');
+        if (self.clickCounter !== undefined) {
+          arr[self.clickCounter].classList.remove('active');
         }
-        if (counter < highlights.length - 1) {
-          counter++;
+        if (self.clickCounter < arr.length - 1) {
+          self.clickCounter++;
         } else {
-          counter = 0;
+          self.clickCounter = 0;
         }
-        self.handleHighlightScroll(highlights, counter);
+        self.handleHighlightScroll(arr, self.clickCounter);
       }
-      if (e.target.id === 'highlight-clicker-up') {
-
-        highlights[counter].classList.remove('active');
-
-        if (counter === 0) {
-          counter = (highlights.length - 1);
+      if (el.id === 'highlight-clicker-up') {
+        arr[self.clickCounter].classList.remove('active');
+        if (self.clickCounter === 0) {
+          self.clickCounter = (arr.length - 1);
         } else {
-          counter--;
+          self.clickCounter--;
         }
-        self.handleHighlightScroll(highlights, counter);
+        self.handleHighlightScroll(arr, self.clickCounter);
       }
-      if (e.target.id === 'highlight-clicker-close') {
-        console.log('highlight clicker');
-        clicker.classList.add('hidden');
-        highlights.forEach(function(el) {
-          el.classList.remove('search-highlight');
-        });
-      }
+  },
   truncateURL: function() {
     var self=this;
     console.log('truncate');
