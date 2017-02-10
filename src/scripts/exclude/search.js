@@ -454,7 +454,7 @@ var searchFunctions = {
     return p;
   },
   cleanPunctuation: function(term) {
-    return term.replace(/[\'.,\/#!$%\^&\*;:{}=\-_`~()–’“”]/g,"").replace(/\s+$/g,"");
+    return term.replace(/[\'.,\/#!$%\^&\*;:{}=\-_`~()–’“”[&[:alnum:];]]/g,"").replace(/\s+$/g,"");
   },
   loadingTest: function() {
     var self=this;
