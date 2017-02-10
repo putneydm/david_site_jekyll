@@ -150,14 +150,10 @@ var searchFunctions = {
         resultsArr = [];
 
     self.entries.map(function(el, i) {
-      var matchPost = self.cleanPunctuation(el.post).match(regexp),
-          matchTitle = self.cleanPunctuation(el.title).match(regexp);
-
-      matchPost !== null && matchTitle !== null ?
-      resultsArr.push({"count" : matchPost.length + matchTitle.length,  "index": i})
-      : matchPost === null && matchTitle !== null ? resultsArr.push({"count" : matchTitle.length,  "index": i})
-      : matchPost !== null && matchTitle === null ? resultsArr.push({"count" : matchPost.length,  "index": i})
-      : false; // do nothing
+      var match = self.cleanPunctuation(el.post + el.title).match(regexp) || false;
+      if (match) {
+        resultsArr.push({"count" : match.length,  "index": i})
+      }
     });
 
     var resultsArrSort = resultsArr.sort(function(a, b) {
