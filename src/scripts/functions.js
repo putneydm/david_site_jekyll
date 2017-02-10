@@ -728,6 +728,14 @@ var pageFunctions = {
           el.classList.remove('search-highlight');
         });
       }
+  truncateURL: function() {
+    var self=this;
+    console.log('truncate');
+    var urlNew = window.location.href.split('?')[0];
+    var obj = { url: urlNew, title: document.title };
+    history.pushState(obj, obj.title, obj.url);
+    return obj;
+  },
     });
   },
   handleHighlightScroll: function(highlights, counter) {
