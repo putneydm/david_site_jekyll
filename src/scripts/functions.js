@@ -891,7 +891,6 @@ lsTest: function() {
   } catch (e) {
     return false;
   }
-}
 },
 cleanPunctuation: function(term) {
   return term.replace(/[\'.,\/#!$%\^&\*;:{}=\-_`~()–’“”]/g,"").replace(/\s+$/g,"");
