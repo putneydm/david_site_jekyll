@@ -765,9 +765,26 @@ var pageFunctions = {
       if (e.target.id === 'highlight-clicker-down') {
 
         var clickerUp = document.querySelector('#highlight-clicker-up');
+  handleHighlightClick: function(highlights) {
+    var self=this;
 
+    var clicker = document.querySelector('#highlight-clicker');
 
-        console.log(highlights.length, clickerUp.classList.contains('active'));
+    if (self.getScrollPosition() > window.innerHeight) {
+      self.handleClickerStatus(clicker, 'active', true);
+    }
+    clicker.addEventListener('click', function(e) {
+      if (!clicker.classList.contains('active')) {
+        self.handleClickerStatus(clicker, 'active', true);
+      }
+      if (e.target.id === 'highlight-clicker-down' || e.target.id === 'highlight-clicker-up') {
+        self.incrementSearchCounter(e.target, highlights);
+      }
+      if (e.target.id === 'highlight-clicker-close') {
+        self.handleClickerClose(highlights, clicker);
+      }
+    });
+  },
   handleMessageTally: function(arr) {
     var self=this;
     var highlightCount = document.querySelector('#highlight-count');
