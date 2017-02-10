@@ -693,6 +693,14 @@ var pageFunctions = {
 
 
         console.log(highlights.length, clickerUp.classList.contains('active'));
+  handleMessageTally: function(arr) {
+    var self=this;
+    var highlightCount = document.querySelector('#highlight-count');
+    var messageTally = arr.length === 1
+    ? ' match found'
+    : ' matches found'
+    highlightCount.innerHTML = arr.length + messageTally;
+  },
 
         if (highlights.length > 1 && !clickerUp.classList.contains('active')) {
           console.log('add active');
