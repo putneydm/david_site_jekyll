@@ -736,7 +736,14 @@ var pageFunctions = {
     history.pushState(obj, obj.title, obj.url);
     return obj;
   },
+  handleClickerClose: function(arr, el) {
+    var self=this;
+    self.handleClickerStatus(el, 'hide', false);
+    arr.forEach(function(el) {
+      el.classList.remove('search-highlight');
     });
+    self.truncateURL();
+    document.querySelector('#search-btn a').href = '/search';
   },
   handleHighlightScroll: function(highlights, counter) {
     var self=this;
