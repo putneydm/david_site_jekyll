@@ -626,41 +626,24 @@ var pageFunctions = {
     var self=this;
 
     var query = window.location.search.substring(1) || false;
-
     if (query) {
       var searchBtn = document.querySelector('#search-btn a');
       searchBtn.href = '/search/?' + query;
-      self.handleHighlight();
+      // self.handleHighlight();
     }
+    return query;
   },
   handleHighlight: function() {
     var self=this;
-
     var query = self.getQueryVariable('search_term') || false;
+    var cont = document.querySelector('.blog-entry-text');
+    var hed = document.querySelector('.blog-headline');
     if (query) {
-      var head = document.querySelector('.blog-headline');
-      var text = document.querySelector('.blog-entry-text').childNodes;
-      var nodes = Array.prototype.slice.call(text);
-      var searchTermRegEx = new RegExp('\\b' + query + '\\b', 'gi');
-
-      self.highLight(head, searchTermRegEx);
-      nodes.forEach(function(el) {
-        self.highLight(el, searchTermRegEx);
-      });
+      self.highlightTerm(query, cont);
+      self.highlightTerm(query, hed);
     }
+    return self.getHighlightLocations() || false;
   },
-  highLight: function(el, searchTermRegEx) {
-    var self=this;
-    var elementText = el.textContent;
-    var termMatches = elementText.match(searchTermRegEx);
-    if (termMatches) {
-      termMatches.forEach(function (match) {
-        elementText = elementText.replace(searchTermRegEx, '<span class="search-highlight">' + match + '</span>', 'gi');
-      });
-      el.innerHTML = elementText;
-    }
-  },
-  highlightLocations: function() {
   highlightTerm: function(text, element) {
     var self=this;
     text = text.split(' ').join('(\\W+|\s+)');
@@ -736,6 +719,7 @@ var pageFunctions = {
   //     return false;
   //   }
   // },
+  getHighlightLocations: function() {
     var self=this;
     var highlights = document.querySelectorAll('.search-highlight');
     var nodes = Array.prototype.slice.call(highlights);
@@ -857,13 +841,8 @@ var pageFunctions = {
   handleHighlightScroll: function(highlights, counter) {
     var self=this;
     var currLoc = self.getScrollPosition();
-    // var foo = window.innerHeight * .35;
     var highlightCount = document.querySelector('#highlight-count');
     var loc = self.getElemDistance(highlights[counter]);
-    // loc = loc - foo;
-    // to, time, from
-
-    console.log('highlight scroll');
 
     var foo = window.innerWidth < 450
     ? window.innerHeight * 0.50
