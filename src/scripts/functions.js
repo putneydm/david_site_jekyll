@@ -739,28 +739,29 @@ var pageFunctions = {
     var nodes = Array.prototype.slice.call(highlights);
     return highlights;
   },
-  handleHighlightClick: function() {
+  handleClickerStatus: function(el, action, status) {
     var self=this;
-
     var clicker = document.querySelector('#highlight-clicker');
-    var highlights = self.highlightLocations();
-    var counter;
-    var highlightCount = document.querySelector('#highlight-count');
 
-    var messageTally = highlights.length === 1
-    ? ' match found'
-    : ' matches found'
+    console.log('clicker status');
 
-    highlightCount.innerHTML = highlights.length + messageTally;
+    // true = make it show up
+    // false = hide it
 
-    if (self.getScrollPosition() > window.innerHeight) {
-      clicker.classList.add('active');
+    if (action === 'hide' && status) {
+      el.classList.remove('hidden');
+    } else if (action === "hide" && !status) {
+      el.classList.add('hidden');
     }
 
-    clicker.addEventListener('click', function(e) {
-      if (!clicker.classList.contains('active')) {
-        clicker.classList.add('active');
-      }
+    // true = make it active
+    // false = remove active
+    if (action === 'active' && status) {
+      el.classList.add('active');
+    } else if (action === "active" && !status) {
+      el.classList.remove('active');
+    }
+  },
 
       if (e.target.id === 'highlight-clicker-down') {
 
