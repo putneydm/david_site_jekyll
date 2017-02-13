@@ -649,8 +649,6 @@ var pageFunctions = {
     text = text.split(' ').join('(\\W+|\s+)');
     var pattern = new RegExp('\\b' + text + '\\b', 'ig');
 
-    console.log('pattern', pattern);
-
     element.childNodes.forEach(function (childNode) {
       if (childNode.childNodes.length) {
         childNode.parentNode.replaceChild(self.highlightTerm(text, childNode), childNode);
@@ -668,57 +666,6 @@ var pageFunctions = {
     });
     return element;
   },
-  // highlightItems: function(el, matchArr, term) {
-  //   var self=this;
-  //
-  //   var elConst = el.innerHTML;
-  //   var item = term.length;
-  //   var inner = el.innerHTML;
-  //
-  //   matchArr.forEach(function(index, i) {
-  //     elConst = elConst.substr(0, index) + '<emphasis class="search-highlight">' + elConst.substr(index, item) + '</emphasis>' + elConst.substr(index + item, elConst.length - (index + item));
-  //   });
-  //   el.innerHTML = elConst;
-  // },
-  // fixShit: function() {
-  //   var self=this;
-  //   var olList = document.querySelector('OL') || false;
-  //   var superScripts = document.querySelectorAll('SUP') || false;
-  //   var re = /&lt;emphasis class=" search-highlight"="">/ig;
-  //   var reToo = /&gt;/ig;
-  //   var reThree = /<emphasis class=" search-highlight"="">/gi
-  //   if (superScripts) {
-  //     superScripts.forEach(function(el) {
-  //       var bar = el.innerHTML.replace(re, '');
-  //       var barToo = bar.replace(reToo, '>');
-  //       el.innerHTML = barToo;
-  //     });
-  //   }
-  //   if (olList) {
-  //     var olSpan = olList.querySelectorAll('LI') || false;
-  //     olSpan.forEach(function(el, i) {
-  //       var bar = el.innerHTML.replace(reThree, '');
-  //       var barToo = bar.replace(reToo, '>');
-  //       el.innerHTML = barToo;
-  //     });
-  //   }
-  // },
-  // getMatchIndexes: function(str, toMatch) {
-  //   var self=this;
-  //
-  //   var re = new RegExp('\\b' + toMatch + '\\b', 'gi'),
-  //       indexMatches = [], match;
-  //
-  //   while (match = re.exec(str)) {
-  //
-  //     indexMatches.push(match.index);
-  //   }
-  //   if (indexMatches.length > 0) {
-  //     return indexMatches.reverse();
-  //   } else {
-  //     return false;
-  //   }
-  // },
   getHighlightLocations: function() {
     var self=this;
     var highlights = document.querySelectorAll('.search-highlight');
