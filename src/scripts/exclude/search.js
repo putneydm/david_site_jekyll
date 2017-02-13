@@ -170,42 +170,103 @@ var searchFunctions = {
   doSearchToo: function(index, query) {
     var self=this;
 
-    var searchFoo = query.split(' ');
-    var arr = [];
+    // var searchFoo = query.split(' ');
 
-    searchFoo.forEach(function(el) {
+    var searchFoo = query.split(' ').filter(function(el) {
       if (self.stopWordsTest(el.toLowerCase())) {
-
-        var regexp = new RegExp('\\b' + self.cleanPunctuation(el) + '\\b', 'i');
-
-        var match = self.cleanPunctuation(self.entries[index].post + self.entries[index].title).match(regexp) || false;
-        if (match) {
-          arr.push(match);
-        }
+        return el;
       }
     });
 
-    if (arr && arr.length >= 2) {
+    // console.log(testFoo);
 
-      var length = query.length + 15;
+    var arr = [];
 
-      arr = arr.sort(function(a, b) {
-          return a.index - b.index;
+
+    var matchArr = [];
+
+  searchFoo.forEach(function(el) {
+
+    var myRe = new RegExp('\\b' + el + '\\b', 'gi')
+    var str = self.entries[index].post;
+    var myArray;
+    while ((myArray = myRe.exec(str)) !== null) {
+      matchArr.push({match: el, index: myRe.lastIndex});
+    }
+    });
+    var finalFooLength = 0;
+    var result = matchArr.some(function(el, i) {
+      var start = (el.index - query.length) - 20;
+      var end = (el.index + query.length) + 20;
+      var finalFoo = matchArr.filter(function(element) {
+
+        if (el.match !== element.match && element.index > start && element.index < end) {
+          // console.log(el.match, element.match);
+          // console.log('near match');
+          return element.match;
+        }
       });
 
-  //   (last item length + index of last item) - index of first item
-    var sum = (arr[arr.length - 1][0].length + arr[arr.length - 1].index) - arr[0].index;
+      console.log(finalFoo.length);
 
-     if (sum < length) {
-       console.log(arr[0].input.substring(0, 200));
-       var percent = arr.length / searchFoo.length;
-       return [true, percent];
-     } else {
-       return [false];
-     }
-   } else {
-     return [false];
-   }
+      if (finalFoo.length > 1) {
+        // console.log(finalFoo);
+
+        finalFooLength = finalFoo.length;
+        // console.log(self.entries[index].post.substring(0, 150));
+        return true;
+      } else {
+        return false;
+      }
+    });
+
+    console.log('result', result);
+
+    if (result) {
+      return [result, finalFooLength / searchFoo.length]
+    } else {
+      return [false];
+    }
+
+
+
+    // console.log(finalFoo.length);
+
+
+
+  //   searchFoo.forEach(function(el) {
+  //     if (self.stopWordsTest(el.toLowerCase())) {
+  //
+  //       var regexp = new RegExp('\\b' + self.cleanPunctuation(el) + '\\b', 'i');
+  //
+  //       var match = self.cleanPunctuation(self.entries[index].post + self.entries[index].title).match(regexp) || false;
+  //       if (match) {
+  //         arr.push(match);
+  //       }
+  //     }
+  //   });
+  //
+  //   if (arr && arr.length >= 2) {
+  //
+  //     var length = query.length + 15;
+  //
+  //     arr = arr.sort(function(a, b) {
+  //         return a.index - b.index;
+  //     });
+  //
+  // //   (last item length + index of last item) - index of first item
+  //   var sum = (arr[arr.length - 1][0].length + arr[arr.length - 1].index) - arr[0].index;
+  //
+  //    if (sum < length) {
+  //     //  console.log(arr[0].input.substring(0, 200));
+  //      var percent = arr.length / searchFoo.length;
+  //      return [true, percent];
+  //    } else {
+  //      return [false];
+  //    }
+  //  } else {
+  //    return [false];
+  //  }
   },
   saveSearchHistory: function(searchTerm) {
     var self=this;
