@@ -152,14 +152,60 @@ var searchFunctions = {
     self.entries.map(function(el, i) {
       var match = self.cleanPunctuation(el.post + el.title).match(regexp) || false;
       if (match) {
-        resultsArr.push({"count" : match.length,  "index": i})
-      }
+        resultsArr.push({"count" : match.length,  "index": i, type: 'exact'})
+      } else {
+        var nearMatch = self.doSearchToo(i, self.cleanPunctuation(searchTerm));
+        // console.log('-----');
+        // console.log('nearMatch', nearMatch);
+        if (nearMatch[0]) {
+           resultsArr.push({"count" : nearMatch[1],  "index": i, type: 'near'})
+        }
+       }
     });
-
     var resultsArrSort = resultsArr.sort(function(a, b) {
         return b.count - a.count;
     });
     return resultsArrSort;
+  },
+  doSearchToo: function(index, query) {
+    var self=this;
+
+    var searchFoo = query.split(' ');
+    var arr = [];
+
+    searchFoo.forEach(function(el) {
+      if (self.stopWordsTest(el.toLowerCase())) {
+
+        var regexp = new RegExp('\\b' + self.cleanPunctuation(el) + '\\b', 'i');
+
+        var match = self.cleanPunctuation(self.entries[index].post + self.entries[index].title).match(regexp) || false;
+        if (match) {
+          arr.push(match);
+        }
+      }
+    });
+
+    if (arr && arr.length >= 2) {
+
+      var length = query.length + 15;
+
+      arr = arr.sort(function(a, b) {
+          return a.index - b.index;
+      });
+
+  //   (last item length + index of last item) - index of first item
+    var sum = (arr[arr.length - 1][0].length + arr[arr.length - 1].index) - arr[0].index;
+
+     if (sum < length) {
+       console.log(arr[0].input.substring(0, 200));
+       var percent = arr.length / searchFoo.length;
+       return [true, percent];
+     } else {
+       return [false];
+     }
+   } else {
+     return [false];
+   }
   },
   saveSearchHistory: function(searchTerm) {
     var self=this;
