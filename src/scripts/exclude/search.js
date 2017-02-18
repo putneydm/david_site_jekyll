@@ -150,17 +150,19 @@ var searchFunctions = {
         resultsArr = [];
 
     self.entries.map(function(el, i) {
-      var match = self.cleanPunctuation(el.post + el.title).match(regexp) || false;
+      var match = self.cleanPunctuation(el.post + ' ' +  el.title).match(regexp) || false;
       if (match) {
         resultsArr.push({"count" : match.length,  "index": i, type: 'exact'})
-      } else {
+      }
         var nearMatch = self.doSearchToo(i, self.cleanPunctuation(searchTerm));
-        // console.log('-----');
-        // console.log('nearMatch', nearMatch);
         if (nearMatch[0]) {
-           resultsArr.push({"count" : nearMatch[1],  "index": i, type: 'near'})
+           var foo = resultsArr.some(function(el) {
+             return el.index === i;
+           });
+           if (!foo) {
+             resultsArr.push({"count" : nearMatch[1],  "index": i, type: 'near'});
+           }
         }
-       }
     });
     var resultsArrSort = resultsArr.sort(function(a, b) {
         return b.count - a.count;
@@ -170,7 +172,6 @@ var searchFunctions = {
   doSearchToo: function(index, query) {
     var self=this;
 
-    // var searchFoo = query.split(' ');
 
     var searchFoo = query.split(' ').filter(function(el) {
       if (self.stopWordsTest(el.toLowerCase())) {
@@ -178,95 +179,52 @@ var searchFunctions = {
       }
     });
 
-    // console.log(testFoo);
 
     var arr = [];
-
-
     var matchArr = [];
 
-  searchFoo.forEach(function(el) {
+    searchFoo.forEach(function(el) {
+      var regex = new RegExp('\\b' + el + '\\b', 'gi')
+      var str = self.entries[index].title + " " + self.entries[index].post;
+      // var myArray;
 
-    var myRe = new RegExp('\\b' + el + '\\b', 'gi')
-    var str = self.entries[index].post;
-    var myArray;
-    while ((myArray = myRe.exec(str)) !== null) {
-      matchArr.push({match: el, index: myRe.lastIndex});
-    }
-    });
-    var finalFooLength = 0;
-    var result = matchArr.some(function(el, i) {
-      var start = (el.index - query.length) - 20;
-      var end = (el.index + query.length) + 20;
-      var finalFoo = matchArr.filter(function(element) {
-
-        if (el.match !== element.match && element.index > start && element.index < end) {
-          // console.log(el.match, element.match);
-          // console.log('near match');
-          return element.match;
-        }
-      });
-
-      console.log(finalFoo.length);
-
-      if (finalFoo.length > 1) {
-        // console.log(finalFoo);
-
-        finalFooLength = finalFoo.length;
-        // console.log(self.entries[index].post.substring(0, 150));
-        return true;
-      } else {
-        return false;
+      while((match = regex.exec(str)) !== null){
+        // console.log('match', match);
+        // console.log('-----');
+          var matchRecord = {};
+          matchRecord.match = el;
+          matchRecord.index = match.index; //Might want to increment by 1 to make Human Readable?
+          matchArr.push(matchRecord);
       }
     });
 
-    console.log('result', result);
+    var fooBar = false;
 
-    if (result) {
-      return [result, finalFooLength / searchFoo.length]
+    fooBar = matchArr.filter(function(el) {
+
+        var varbl = matchArr.some(function(toMatch) {
+          var startPos = (el.index - query.length) - 30;
+          var endPos = (el.index + query.length) + 30;
+
+          return el.match !== toMatch.match && toMatch.index >= startPos && toMatch.index <= endPos;
+        });
+        return varbl;
+      });
+
+    if (fooBar && fooBar.length > 0) {
+      var newBar = fooBar.map(function(el) {
+        return el.match;
+      });
+
+      var uniqueArray = newBar.filter(function(el, i) {
+        return newBar.indexOf(el) == i;
+      });
+
+        return [true, (uniqueArray.length / searchFoo.length)] ;
+
     } else {
-      return [false];
+     return [false];
     }
-
-
-
-    // console.log(finalFoo.length);
-
-
-
-  //   searchFoo.forEach(function(el) {
-  //     if (self.stopWordsTest(el.toLowerCase())) {
-  //
-  //       var regexp = new RegExp('\\b' + self.cleanPunctuation(el) + '\\b', 'i');
-  //
-  //       var match = self.cleanPunctuation(self.entries[index].post + self.entries[index].title).match(regexp) || false;
-  //       if (match) {
-  //         arr.push(match);
-  //       }
-  //     }
-  //   });
-  //
-  //   if (arr && arr.length >= 2) {
-  //
-  //     var length = query.length + 15;
-  //
-  //     arr = arr.sort(function(a, b) {
-  //         return a.index - b.index;
-  //     });
-  //
-  // //   (last item length + index of last item) - index of first item
-  //   var sum = (arr[arr.length - 1][0].length + arr[arr.length - 1].index) - arr[0].index;
-  //
-  //    if (sum < length) {
-  //     //  console.log(arr[0].input.substring(0, 200));
-  //      var percent = arr.length / searchFoo.length;
-  //      return [true, percent];
-  //    } else {
-  //      return [false];
-  //    }
-  //  } else {
-  //    return [false];
-  //  }
   },
   saveSearchHistory: function(searchTerm) {
     var self=this;
