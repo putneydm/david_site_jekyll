@@ -146,6 +146,45 @@ var searchFunctions = {
   },
   doSearch: function(searchTerm) {
     var self=this;
+
+    var searchRegex = new RegExp('"\\s+and\\s+"|[\+\&]', 'gi');
+    var dualSearch = searchTerm.match(searchRegex) || false;
+
+    if (dualSearch) {
+
+      var searchTermArr = searchTerm.split(dualSearch);
+
+        var test = self.entries.forEach(function(entry, iEntry) {
+
+          var entryCount = 0;
+
+           var fooTest = searchTermArr.every(function(term) {
+
+               elFoo = self.cleanPunctuation(term).replace(/^\s+|\s+$/, '');
+                var regexp = new RegExp('\\b' + elFoo + '\\b', 'gi');
+                var match = self.cleanPunctuation(entry.post + ' ' +  entry.title).match(regexp) || false;
+
+                if (match) {
+                  console.log(match.length);
+                  entryCount = entryCount + match.length;
+                  return true;
+                } else {
+                  return false;
+                }
+            });
+
+            if (fooTest) {
+
+              console.log('match', self.entries[iEntry].title);
+              console.log(entryCount);
+              console.log('---------');
+
+            }
+        });
+      }
+
+
+
     var regexp = new RegExp('\\b' + self.cleanPunctuation(searchTerm) + '\\b', 'gi'),
         resultsArr = [];
 
