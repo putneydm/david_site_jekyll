@@ -125,6 +125,9 @@ var searchFunctions = {
         containsWordChar = /\w+/gi.test(searchInput), // false means the items has no word characters in it
         notWord = searchTerm.length <= 1; // true means its one character
 
+
+        // console.log(searchTerm);
+
     var exception = /a/i.test(searchTerm) || /i/i.test(searchTerm);
 
     var errorMessage = !containsWordChar || notWord
@@ -149,98 +152,48 @@ var searchFunctions = {
 
     var searchRegex = new RegExp('"\\s+and\\s+"|[\+\&]', 'gi');
     var dualSearch = searchTerm.match(searchRegex) || false;
+    var resultsArr = [];
 
     if (dualSearch) {
+        self.entries.forEach(function(el, i) {
+          fooBar = self.doDualSearch(searchTerm, dualSearch, i);
 
-      var searchTermArr = searchTerm.split(dualSearch);
-
-        var test = self.entries.forEach(function(entry, iEntry) {
-
-          var entryCount = 0;
-
-           var fooTest = searchTermArr.every(function(term) {
-
-               elFoo = self.cleanPunctuation(term).replace(/^\s+|\s+$/, '');
-                var regexp = new RegExp('\\b' + elFoo + '\\b', 'gi');
-                var match = self.cleanPunctuation(entry.post + ' ' +  entry.title).match(regexp) || false;
-
-                if (match) {
-                  console.log(match.length);
-                  entryCount = entryCount + match.length;
-                  return true;
-                } else {
-                  return false;
-                }
-            });
-
-            if (fooTest) {
-
-              console.log('match', self.entries[iEntry].title);
-              console.log(entryCount);
-              console.log('---------');
-
-            }
-        });
-      }
-
-
-
-    var regexp = new RegExp('\\b' + self.cleanPunctuation(searchTerm) + '\\b', 'gi'),
-        resultsArr = [];
-
-    self.entries.map(function(el, i) {
-      var match = self.cleanPunctuation(el.post + ' ' +  el.title).match(regexp) || false;
-      if (match) {
-        resultsArr.push({"count" : match.length,  "index": i, type: 'exact'})
-      }
-        var nearMatch = self.doSearchToo(i, self.cleanPunctuation(searchTerm));
-        if (nearMatch[0]) {
-           var foo = resultsArr.some(function(el) {
-             return el.index === i;
-           });
-           if (!foo) {
-             resultsArr.push({"count" : nearMatch[1],  "index": i, type: 'near'});
-           }
+          console.log(fooBar);
+          if (fooBar) {
+          resultsArr.push(fooBar);
         }
+        });
+    } else {
+
+    var regexp = new RegExp('\\b' + self.cleanPunctuation(searchTerm) + '\\b', 'gi');
+
+    self.entries.forEach(function(el, i) {
+      var match = self.doExactSearch(el, i, regexp);
+      var nearMatch = self.doNearSearch(i, self.cleanPunctuation(searchTerm));
+
+      if (match) {
+        resultsArr.push(match);
+      }
+      if (nearMatch) {
+        resultsArr.push(nearMatch);
+      }
     });
+  }
     var resultsArrSort = resultsArr.sort(function(a, b) {
         return b.count - a.count;
     });
     return resultsArrSort;
   },
-  doSearchToo: function(index, query) {
+  doNearSearch: function(index, query) {
     var self=this;
 
 
-    var searchFoo = query.split(' ').filter(function(el) {
-      if (self.stopWordsTest(el.toLowerCase())) {
-        return el;
-      }
-    });
+    var matchArr = self.findMatchIndexes(query, index);
 
 
-    var arr = [];
-    var matchArr = [];
+    var results = false;
 
-    searchFoo.forEach(function(el) {
-      var regex = new RegExp('\\b' + el + '\\b', 'gi')
-      var str = self.entries[index].title + " " + self.entries[index].post;
-      // var myArray;
-
-      while((match = regex.exec(str)) !== null){
-        // console.log('match', match);
-        // console.log('-----');
-          var matchRecord = {};
-          matchRecord.match = el;
-          matchRecord.index = match.index; //Might want to increment by 1 to make Human Readable?
-          matchArr.push(matchRecord);
-      }
-    });
-
-    var fooBar = false;
-
-    fooBar = matchArr.filter(function(el) {
-
+    results = matchArr.filter(function(el) {
         var varbl = matchArr.some(function(toMatch) {
           var startPos = (el.index - query.length) - 30;
           var endPos = (el.index + query.length) + 30;
@@ -250,20 +203,99 @@ var searchFunctions = {
         return varbl;
       });
 
-    if (fooBar && fooBar.length > 0) {
-      var newBar = fooBar.map(function(el) {
+
+    var fooBar = {};
+      // reduces array to just matches
+    if (results && results.length > 0) {
+      var newBar = results.map(function(el) {
         return el.match;
       });
-
+      // removes redundencies from array
       var uniqueArray = newBar.filter(function(el, i) {
         return newBar.indexOf(el) == i;
       });
-
-        return [true, (uniqueArray.length / searchFoo.length)] ;
-
+      fooBar.count = (uniqueArray.length / query.split(' ').length);
+      fooBar.index = index;
+      fooBar.type = 'near';
     } else {
-     return [false];
+      fooBar = false;
     }
+  return fooBar;
+  },
+  findMatchIndexes: function(query, index) {
+    var self = this;
+
+    var searchTermArr = query.split(' ').filter(function(el) {
+      if (self.stopWordsTest(el.toLowerCase())) {
+        return el;
+      }
+    });
+
+    var matchArr = [];
+    searchTermArr.forEach(function(el) {
+      var regex = new RegExp('\\b' + el + '\\b', 'gi')
+
+      while((match = regex.exec(self.entries[index].title + " " + self.entries[index].post)) !== null){
+          var matchRecord = {};
+          matchRecord.match = el;
+          matchRecord.index = match.index;
+          matchArr.push(matchRecord);
+      }
+    });
+    return matchArr;
+  },
+  doExactSearch: function(el, i, regexp) {
+    var self=this;
+
+    var match = self.cleanPunctuation(el.post + ' ' +  el.title).match(regexp) || false;
+
+    if (match) {
+      var matchInfo = {};
+        matchInfo.count = match.length;
+        matchInfo.index = i;
+        matchInfo.type = 'exact';
+    } else {
+        var matchInfo = false;
+    }
+
+    return matchInfo;
+
+  },
+  doDualSearch: function(searchTerm, dualSearch, index) {
+    var self=this;
+
+    var searchTermArr = searchTerm.split(dualSearch[0]);
+
+    console.log('searchTermArr', searchTermArr);
+
+    var matchRecord = {};
+    var entryCount = 0;
+        var matchTest = searchTermArr.every(function(term, i) {
+           var termClean = self.cleanPunctuation(term).replace(/^\s+/gi, '').replace(/\\s+$/, '');
+           var regexp = new RegExp('\\b' + termClean + '\\b', 'gi');
+
+            var match = self.cleanPunctuation(self.entries[index].post + ' ' +  self.entries[index].title).match(regexp) || false;
+
+            if (match) {
+              entryCount = entryCount + match.length;
+              return true;
+            } else {
+              return false;
+            }
+
+      });
+
+      if (matchTest) {
+          console.log('matchTest', matchTest);
+          matchRecord.count = entryCount;
+          matchRecord.index = index;
+          matchRecord.type = 'dual';
+          console.log(matchRecord);
+          console.log('-------');
+      } else {
+        matchRecord = false;
+      }
+      return matchRecord;
   },
   saveSearchHistory: function(searchTerm) {
     var self=this;
@@ -430,6 +462,7 @@ var searchFunctions = {
     }
   },
   stopWordsTest: function(term) {
+    // false means there has been a stopwords match
     var self=this;
     var arr = term.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").split(' ');
 
@@ -566,8 +599,11 @@ var searchFunctions = {
     return p;
   },
   cleanPunctuation: function(term) {
-    return term.replace(/[\'.,\/#!$%\^&\*;:{}=\-_`~()–’“”[&[:alnum:];]]/g,"").replace(/\s+$/g,"");
+    return term.replace(/[\'.,\/#!$%\^&\*;:{}=\-_`~()–’“”"]/g,"").replace(/\+/gi, "").replace(/\s+$/g,"");
   },
+  // cleanPunctuation: function(term) {
+  //   return term.replace(/[\'.,\/#!$%\^&\*;:{}=\-_`~()–’“”]/g,"").replace(/\s+$/g,"");
+  // },
   loadingTest: function() {
     var self=this;
 
