@@ -96,7 +96,7 @@ var searchFunctions = {
         retrievedObject = self.getQueryVariable('search_term');
     if (retrievedObject) {
       document.querySelector('#search-field').value = retrievedObject;
-      var searchResultsArr = self.doSearch(retrievedObject);
+      var searchResultsArr = self.handleSearchTypes(retrievedObject);
       self.handleSearchResults(searchResultsArr, retrievedObject);
       self.handleResultsTransition();
     }
@@ -137,7 +137,7 @@ var searchFunctions = {
 
     //  stopwords result false = bad, true = good
     if (stopWordsResult && containsWordChar && !notWord) {
-      var searchResultsArr = self.doSearch(searchInput);
+      var searchResultsArr = self.handleSearchTypes(searchInput);
       self.handleSearchResults(searchResultsArr, searchInput);
       self.saveSearchHistory(searchInput);
       self.displaySearchHistory();
@@ -147,80 +147,87 @@ var searchFunctions = {
       self.displaySearchError(true, errorMessage);
     }
   },
-  doSearch: function(searchTerm) {
+  handleSearchTypes: function(searchTerm) {
     var self=this;
 
     var searchRegex = new RegExp('"\\s+and\\s+"|[\+\&]', 'gi');
     var dualSearch = searchTerm.match(searchRegex) || false;
     var resultsArr = [];
 
-    if (dualSearch) {
-        self.entries.forEach(function(el, i) {
-          fooBar = self.doDualSearch(searchTerm, dualSearch, i);
-
-          console.log(fooBar);
-          if (fooBar) {
-          resultsArr.push(fooBar);
-        }
-        });
-    } else {
-
-    var regexp = new RegExp('\\b' + self.cleanPunctuation(searchTerm) + '\\b', 'gi');
-
     self.entries.forEach(function(el, i) {
-      var match = self.doExactSearch(el, i, regexp);
-      var nearMatch = self.doNearSearch(i, self.cleanPunctuation(searchTerm));
 
-      if (match) {
-        resultsArr.push(match);
-      }
-      if (nearMatch) {
-        resultsArr.push(nearMatch);
+      var searchResult = {};
+      if (dualSearch) {
+        // if it is a dual search, do dual search
+        dualSearchResult = self.handleDualSearch(searchTerm, i, dualSearch);
+
+        /// if there's a result push build result and push to array
+        if (dualSearchResult) {
+          resultsArr.push(self.compileSearchResults(dualSearchResult, i, 'dual'));
+        }
+      } else {
+        // if not dual search, do exact match search
+        var exactMatchResult = self.handleExactSearch(searchTerm, i);
+
+        // if search result, build result and push to array
+        if (exactMatchResult) {
+          resultsArr.push(self.compileSearchResults(exactMatchResult, i, 'exact'));
+        } else {
+          // if there's no exact match, do a near-match search
+          var nearMatchResult = self.handleNearSearch( self.cleanPunctuation(searchTerm), i);
+          // if there's a near-match result, build result and push to array
+          if (nearMatchResult) {
+            resultsArr.push(self.compileSearchResults(nearMatchResult, i, 'near'));
+          }
+        }
       }
     });
-  }
     var resultsArrSort = resultsArr.sort(function(a, b) {
         return b.count - a.count;
     });
     return resultsArrSort;
   },
-  doNearSearch: function(index, query) {
+  compileSearchResults: function(result, index, type) {
     var self=this;
+    var searchResult = {};
+    searchResult.count = result;
+    searchResult.index = index;
+    searchResult.type = type;
+    return searchResult;
+  },
+  handleNearSearch: function(query, index) {
+    var self=this;
+    var matchArr = self.findMatchIndexes(query, index),
+        results = false;
 
+    // Filters down the matchArr to only entries that are proximate to each other
+    // filter function uses a 'some' loop to test if items are proximate. True stays in the array, false is filtered out
+    nearMatches = matchArr.filter(function(el) {
+      // this loop returns true if they are proximate, false if not.
+        var proximityMatch = matchArr.some(function(element) {
+          var startIndex = (el.index - query.length) - 30,
+              endIndex = (el.index + query.length) + 30;
 
-    var matchArr = self.findMatchIndexes(query, index);
-
-
-    var results = false;
-
-    results = matchArr.filter(function(el) {
-        var varbl = matchArr.some(function(toMatch) {
-          var startPos = (el.index - query.length) - 30;
-          var endPos = (el.index + query.length) + 30;
-
-          return el.match !== toMatch.match && toMatch.index >= startPos && toMatch.index <= endPos;
+          return el.match !== element.match && element.index >= startIndex && element.index <= endIndex;
         });
-        return varbl;
+        return proximityMatch;
       });
 
-
-    var fooBar = {};
-      // reduces array to just matches
-    if (results && results.length > 0) {
-      var newBar = results.map(function(el) {
+    var matchCount;
+    // reduces array to just strings that matched
+    if (nearMatches && nearMatches.length > 0) {
+      var nearMatchesTerms = nearMatches.map(function(el) {
         return el.match;
       });
       // removes redundencies from array
-      var uniqueArray = newBar.filter(function(el, i) {
-        return newBar.indexOf(el) == i;
+      var nearMatchesReduced = nearMatchesTerms.filter(function(el, i) {
+        return nearMatchesTerms.indexOf(el) == i;
       });
-      fooBar.count = (uniqueArray.length / query.split(' ').length);
-      fooBar.index = index;
-      fooBar.type = 'near';
+      matchCount = (nearMatchesReduced.length / query.split(' ').length);
     } else {
-      fooBar = false;
+      matchCount = false;
     }
-  return fooBar;
+  return matchCount;
   },
   findMatchIndexes: function(query, index) {
     var self = this;
@@ -234,7 +241,6 @@ var searchFunctions = {
     var matchArr = [];
     searchTermArr.forEach(function(el) {
       var regex = new RegExp('\\b' + el + '\\b', 'gi')
-
       while((match = regex.exec(self.entries[index].title + " " + self.entries[index].post)) !== null){
           var matchRecord = {};
           matchRecord.match = el;
@@ -244,58 +250,33 @@ var searchFunctions = {
     });
     return matchArr;
   },
-  doExactSearch: function(el, i, regexp) {
+  handleExactSearch: function(searchTerm, i) {
     var self=this;
+    var regexp = new RegExp('\\b' + self.cleanPunctuation(searchTerm) + '\\b', 'gi');
+    var match = self.cleanPunctuation(self.entries[i].post + ' ' +  self.entries[i].title).match(regexp) || false;
 
-    var match = self.cleanPunctuation(el.post + ' ' +  el.title).match(regexp) || false;
-
-    if (match) {
-      var matchInfo = {};
-        matchInfo.count = match.length;
-        matchInfo.index = i;
-        matchInfo.type = 'exact';
-    } else {
-        var matchInfo = false;
-    }
-
-    return matchInfo;
-
+  return match
+      ? match.length
+      : false;
   },
-  doDualSearch: function(searchTerm, dualSearch, index) {
+  handleDualSearch: function(searchTerm, index, splitCharacter) {
     var self=this;
 
-    var searchTermArr = searchTerm.split(dualSearch[0]);
-
-    console.log('searchTermArr', searchTermArr);
-
-    var matchRecord = {};
-    var entryCount = 0;
+    var searchTermArr = searchTerm.split(splitCharacter[0]),
+        entryCount = 0;
+        // checks to see if it matches all items in search array
         var matchTest = searchTermArr.every(function(term, i) {
-           var termClean = self.cleanPunctuation(term).replace(/^\s+/gi, '').replace(/\\s+$/, '');
-           var regexp = new RegExp('\\b' + termClean + '\\b', 'gi');
+          var termClean = self.cleanPunctuation(term).replace(/^\s+/gi, '').replace(/\\s+$/, ''),
+              regexp = new RegExp('\\b' + termClean + '\\b', 'gi');
 
-            var match = self.cleanPunctuation(self.entries[index].post + ' ' +  self.entries[index].title).match(regexp) || false;
+          var match = self.cleanPunctuation(self.entries[index].post + ' ' +  self.entries[index].title).match(regexp) || [];
 
-            if (match) {
-              entryCount = entryCount + match.length;
-              return true;
-            } else {
-              return false;
-            }
-
+          entryCount = entryCount + match.length;
+          return match.length > 0;
       });
-
-      if (matchTest) {
-          console.log('matchTest', matchTest);
-          matchRecord.count = entryCount;
-          matchRecord.index = index;
-          matchRecord.type = 'dual';
-          console.log(matchRecord);
-          console.log('-------');
-      } else {
-        matchRecord = false;
-      }
-      return matchRecord;
+      return matchTest
+        ? entryCount
+        : false;
   },
   saveSearchHistory: function(searchTerm) {
     var self=this;
@@ -361,7 +342,7 @@ var searchFunctions = {
       var clickTarget = e.target.parentNode;
       if (clickTarget.nodeName === 'LI') {
         var searchInput = clickTarget.dataset.term;
-        var searchResultsArr = self.doSearch(searchInput);
+        var searchResultsArr = self.handleSearchTypes(searchInput);
         self.handleSearchResults(searchResultsArr, searchInput);
         self.displaySearchHistory();
         self.handleURLChange(searchInput);
