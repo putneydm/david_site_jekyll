@@ -94,7 +94,9 @@ var searchFunctions = {
 
     var searchContainer = document.querySelector('#search-results-wrapper'),
         retrievedObject = self.getQueryVariable('search_term');
+
     if (retrievedObject) {
+      retrievedObject = retrievedObject.replace(/%22/gi, '\"');
       document.querySelector('#search-field').value = retrievedObject;
       var searchResultsArr = self.handleSearchTypes(retrievedObject);
       self.handleSearchResults(searchResultsArr, retrievedObject);
@@ -105,14 +107,18 @@ var searchFunctions = {
     var self=this;
 
     var obj = self.setPageURL(searchTerm);
+    console.log('obj url', obj.url);
     history.pushState(obj, obj.title, obj.url);
   },
   setPageURL: function(searchTerm) {
     var self = this;
 
     var pageURL = window.location.href.split("?")[0],
-        searchURL = self.cleanPunctuation(searchTerm).replace(/\s/g, '%20'),
+        searchURL = searchTerm.replace(/\s/g, '%20'),
+        // searchURL = self.cleanPunctuation(searchTerm).replace(/\s/g, '%20'),
         newUrl = pageURL +  "?type=search_result&search_term=" + searchURL;
+
+        // console.log('searchURL', searchURL);
 
     return { title: 'Search results | ' + searchTerm + ' | Davidputney.com', url: newUrl };
   },
@@ -150,7 +156,7 @@ var searchFunctions = {
   handleSearchTypes: function(searchTerm) {
     var self=this;
 
-    var searchRegex = new RegExp('"\\s+and\\s+"|[\+\&]', 'gi');
+    var searchRegex = new RegExp('\\+|"\\sand\\s"|"and"|\\&', 'gi');
     var dualSearch = searchTerm.match(searchRegex) || false;
     var resultsArr = [];
 
@@ -197,6 +203,8 @@ var searchFunctions = {
   },
   handleNearSearch: function(query, index) {
     var self=this;
+    query = self.cleanPunctuation(query);
+    console.log('near query', query);
     var matchArr = self.findMatchIndexes(query, index),
         results = false;
 
@@ -250,9 +258,9 @@ var searchFunctions = {
     });
     return matchArr;
   },
-  handleExactSearch: function(searchTerm, i) {
+  handleExactSearch: function(query, i) {
     var self=this;
-    var regexp = new RegExp('\\b' + self.cleanPunctuation(searchTerm) + '\\b', 'gi');
+    var regexp = new RegExp('\\b' + self.cleanPunctuation(query) + '\\b', 'gi');
     var match = self.cleanPunctuation(self.entries[i].post + ' ' +  self.entries[i].title).match(regexp) || false;
 
   return match
@@ -261,18 +269,16 @@ var searchFunctions = {
   },
   handleDualSearch: function(searchTerm, index, splitCharacter) {
     var self=this;
-
     var searchTermArr = searchTerm.split(splitCharacter[0]),
         entryCount = 0;
         // checks to see if it matches all items in search array
         var matchTest = searchTermArr.every(function(term, i) {
           var termClean = self.cleanPunctuation(term).replace(/^\s+/gi, '').replace(/\\s+$/, ''),
               regexp = new RegExp('\\b' + termClean + '\\b', 'gi');
-
           var match = self.cleanPunctuation(self.entries[index].post + ' ' +  self.entries[index].title).match(regexp) || [];
 
           entryCount = entryCount + match.length;
-          return match.length > 0;
+          return termClean.length > 0 && match.length > 0;
       });
       return matchTest
         ? entryCount
@@ -280,7 +286,7 @@ var searchFunctions = {
   },
   saveSearchHistory: function(searchTerm) {
     var self=this;
-    searchTerm = self.cleanPunctuation(searchTerm);
+    // searchTerm = self.cleanPunctuation(searchTerm);
     var searchArr = sessionStorage.searches
       ? JSON.parse(sessionStorage.searches)
       : [];
@@ -321,7 +327,7 @@ var searchFunctions = {
 
         var list = document.createElement('LI');
         link.innerHTML = el;
-        list.dataset.term = el;
+        list.dataset.term = el.replace(/"/gi, "%22");
         list.appendChild(link);
         historyList.appendChild(list);
       });
@@ -341,7 +347,7 @@ var searchFunctions = {
       e.preventDefault();
       var clickTarget = e.target.parentNode;
       if (clickTarget.nodeName === 'LI') {
-        var searchInput = clickTarget.dataset.term;
+        var searchInput = clickTarget.dataset.term.replace(/%22/g, "\"");
         var searchResultsArr = self.handleSearchTypes(searchInput);
         self.handleSearchResults(searchResultsArr, searchInput);
         self.displaySearchHistory();
@@ -353,7 +359,7 @@ var searchFunctions = {
   handleSearchResults: function(resultsArr, searchTerm) {
     var self=this;
 
-    searchTerm = self.cleanPunctuation(searchTerm);
+    // searchTerm = self.cleanPunctuation(searchTerm);
 
     self.searchWrapper.innerHTML = '';
     self.handleResultsTransition(true);
@@ -364,6 +370,9 @@ var searchFunctions = {
       : 50;
 
     resultsArr.forEach(function(el) {
+
+      console.log(el.type);
+
       var hedText = self.entries[el.index].title,
           bodyText = self.entries[el.index].post.split(' ').slice(0, textLength).join(' '),
           entryLink = document.createElement('A');
@@ -400,8 +409,6 @@ var searchFunctions = {
   handleSearchHed: function(resultsArr, searchTerm) {
     var self=this;
     var searchHed = document.querySelector('.search-results-header') || false;
-    // var search = document.querySelector('#search-results');
-    // var searchWrapper = document.querySelector('#search-results-wrapper');
 
     self.searchWrapper.innerHTML = '';
 
