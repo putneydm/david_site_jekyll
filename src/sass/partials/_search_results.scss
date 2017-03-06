@@ -48,6 +48,10 @@ input, button {
 	margin:0 0 rem(60) 0;
 	border-bottom:1px solid $med;
 	padding:0 0 rem(10) 0;
+  color:$dark;
+}
+.search-results-header > span {
+  color:black;
 }
 .search-results-link {
 	@extend .teaser-module-abstract-link;
