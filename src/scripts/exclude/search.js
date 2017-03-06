@@ -384,21 +384,10 @@ var searchFunctions = {
       entryHeadline.innerHTML = hedText;
       entryBody.innerHTML = bodyText + '&nbsp;&#133;';
 
-      // console.log('-----');
-      // console.log(self.entries[el.index].title);
-      // console.log(el.count);
-      // console.log(el.type);
-
       entryMatches.innerHTML = el.count < 1
       ? Math.round(el.count * 100) + " percent of phrase matches"
       : el.count === 1 ? "Phrase matches | " + el.count + ' occurance found'
       : "Phrase matches | " + el.count + ' occurances found';
-
-
-
-      // entryMatches.innerHTML = el.count === 1
-      //   ? el.count + ' occurance found'
-      //   : el.count + ' occurances found';
 
       entryBodyContainer.appendChild(entryBody);
       entryContainer.appendChild(entryHeadline);
