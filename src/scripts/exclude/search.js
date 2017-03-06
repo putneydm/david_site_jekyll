@@ -420,11 +420,16 @@ var searchFunctions = {
           : resultsArr.length + '&nbsp;results for “' + searchTerm + '”';
 
     if (searchHed) {
+      newSpan.innerHTML = searchTerm;
       searchHed.innerHTML = resultsMessage;
+      searchHed.appendChild(newSpan);
     } else {
       var entrySearch = document.createElement('H1');
       entrySearch.classList.add('search-results-header');
       entrySearch.innerHTML = resultsMessage;
+      newSpan.innerHTML = searchTerm;
+      entrySearch.innerHTML = resultsMessage;
+      entrySearch.appendChild(newSpan);
       self.search.insertBefore(entrySearch, self.searchWrapper);
     }
   },
