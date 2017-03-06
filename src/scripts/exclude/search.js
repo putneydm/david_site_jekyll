@@ -413,11 +413,14 @@ var searchFunctions = {
     var searchHed = document.querySelector('.search-results-header') || false;
     // var search = document.querySelector('#search-results');
     // var searchWrapper = document.querySelector('#search-results-wrapper');
+
     self.searchWrapper.innerHTML = '';
 
+    var newSpan = document.createElement('span');
+
     var resultsMessage = resultsArr.length === 1
-          ? resultsArr.length + '&nbsp;result for “' + searchTerm + '”'
-          : resultsArr.length + '&nbsp;results for “' + searchTerm + '”';
+          ? resultsArr.length + '&nbsp;result for '
+          : resultsArr.length + '&nbsp;results for ';
 
     if (searchHed) {
       newSpan.innerHTML = searchTerm;
