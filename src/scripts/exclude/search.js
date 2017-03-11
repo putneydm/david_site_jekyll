@@ -391,10 +391,32 @@ var searchFunctions = {
       entryHeadline.innerHTML = hedText;
       entryBody.innerHTML = bodyText + '&nbsp;&#133;';
 
-      entryMatches.innerHTML = el.count < 1
-      ? Math.round(el.count * 100) + " percent of phrase matches"
-      : el.count === 1 ? "Phrase matches | " + el.count + ' occurance found'
-      : "Phrase matches | " + el.count + ' occurances found';
+
+      console.log('el type', el.type);
+      console.log(searchTerm.split(' ').length);
+      console.log("-----");
+
+      // var entryMatches.innerHTML;
+      if (el.type === "dual") {
+        entryMatches.innerHTML = "Phrase matches | " + el.count + " found";
+        // dual: Both phrases match | XX found
+
+      } else if (el.type === "near"){
+          var searchLength = searchTerm.split(' ').length;
+
+        // near: X out of X words match
+        entryMatches.innerHTML = "Words match | " + (searchLength * el.count) + " out of " + searchLength;
+      } else {
+        entryMatches.innerHTML = "Phrase matches | " + el.count + "  found" ;
+      }
+
+      // exact Phrase matches | XX found
+
+
+      // entryMatches.innerHTML = el.count < 1
+      // ? Math.round(el.count * 100) + " percent of phrase matches"
+      // : el.count === 1 ? "Phrase matches | " + el.count + ' occurance found'
+      // : "Phrase matches | " + el.count + ' occurances found';
 
       entryBodyContainer.appendChild(entryBody);
       entryContainer.appendChild(entryHeadline);
