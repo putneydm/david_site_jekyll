@@ -370,7 +370,6 @@ var searchFunctions = {
 
     resultsArr.forEach(function(el) {
 
-      console.log(el.type);
 
       var hedText = self.entries[el.index].title,
           bodyText = self.entries[el.index].post.split(' ').slice(0, textLength).join(' '),
