@@ -204,7 +204,6 @@ var searchFunctions = {
   handleNearSearch: function(query, index) {
     var self=this;
     query = self.cleanPunctuation(query);
-    console.log('near query', query);
     var matchArr = self.findMatchIndexes(query, index),
         results = false;
 
