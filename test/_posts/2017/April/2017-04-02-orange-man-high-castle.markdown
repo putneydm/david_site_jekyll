@@ -7,8 +7,8 @@ categories: blog-entry
 subhead:
 tags: ['Trump', 'politics', 'fascism', 'presidency', 'elections']
 image: emperor_trump
-imageAlt: "Emperor Donald Trump the First, Glorious & Eternal"
-promo: ""
+imageAlt: "Emperor Donald Trump the First, Glorious and Eternal"
+promo: "The Orange Man in the High Castle"
 quote: A Trump administration inquiry found dangerous structural faults in every building housing every news organization in America except Fox News and Brietbart.
 ---  
 
@@ -60,7 +60,7 @@ Gays were lured with the promise of free Lady Gaga concert only to find that "La
 
 Dominoes fell swiftly after that. All universities were shut down. Months later, as the Trump's armies swept through Canada and Mexico unchecked, Trump announced the founding the United Trump Empire of America. Soon after, all of South America rapidly fell. Then the Middle East and its vast oil reserves.
 
-Efforts to block Trump via constitutional authority also proved fruitless, as Trump's plan to repeal and replace the Constitution proved easy. Trump one day had just swapped in a his own version. So few Americans know what's in the constitution that hardly anyone even noticed that the duties of the president were expanded to include "suppressing dissent in such manner as he sees fit," "deciding all constitutional matters" and "banging hot chicks."
+Efforts to block Trump via constitutional authority also proved fruitless, as Trump's plan to repeal and replace the Constitution was among his easiest victories. Trump one day had just swapped in a his own version. So few Americans know what's in the constitution that hardly anyone even noticed that the duties of the president were expanded to include "suppressing dissent in such manner as he sees fit," "deciding all constitutional matters" and "banging hot chicks."
 
 With that, 240 years of constitutional authority were replaced by the Trump organization and one man's vulgar appetites.
 
