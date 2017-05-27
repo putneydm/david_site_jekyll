@@ -21,6 +21,10 @@
     {% if pageType == 'error' %}
       pageFunctions.intializeError();
     {% endif%}
+    // this is a hack to make the tag archive page work. For some reason pagetype doesn't work on this page.
+    {% if pageType == nil %}
+      pageFunctions.intializeMinimal();
+    {% endif%}
   });
 })();
 </script>
