@@ -248,19 +248,12 @@ gulp.task('css', function() {
   .pipe(scsslint())
   .pipe(sass())
   .pipe(postcss(plugins))
-  // .pipe(autoprefixer({
-  //     browsers: ['last 2 versions'],
-  //     cascade: false
-  //  }))
     .pipe(rename(filename))
     .pipe(gulp.dest(paths.styles.testing))
 
     .pipe(postcss([
       cssnano()
     ]))
-    // .pipe(minifyCSS({
-    //   keepBreaks:false
-    // }))
     .pipe(gulp.dest(paths.styles.dist));
 });
 
@@ -279,21 +272,14 @@ gulp.task('css-inline', function() {
     pixelstorem({
       base: 16,
       unit: "rem",
-      exclude: ['border', 'box-shadow'],
+      exclude: ['border', 'border-left', 'border-right', 'border-top', 'border-bottom', 'background-size','box-shadow' ],
       mediaQueries: true
     })
   ];
   gulp.src([paths.styles.inputInline])
-  //  .pipe(scsslint())
+   .pipe(scsslint())
    .pipe(sass())
    .pipe(postcss(plugins))
-  //  .pipe(autoprefixer({
-  //     browsers: ['last 2 versions'],
-  //     cascade: false
-  //  }))
-    // .pipe(minifyCSS({
-    //   keepBreaks:false
-    // }))
     .pipe(gulp.dest(paths.styles.outputInline))
 });
 
