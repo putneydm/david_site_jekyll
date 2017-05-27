@@ -1,5 +1,5 @@
 .about-container {
-	@extend .teaser-module-container;
+	@extend .teaser-module-container !optional;
 	width:100%;
 	max-width:rem(700);
 	margin:0 auto;
