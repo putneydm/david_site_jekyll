@@ -10,7 +10,8 @@ var concat = require('gulp-concat'),
 var sass = require('gulp-sass'),
     minifyCSS = require('gulp-minify-css'), // Add var prefix for consistency
     scsslint = require('gulp-scss-lint'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('autoprefixer'),
+    cssnano = require('cssnano');
 
 // html
  var minifyHTML = require('gulp-minify-html');
@@ -42,6 +43,11 @@ var svgstore = require('gulp-svgstore'),
 
 //bower
 var mainBowerFiles = require('main-bower-files');
+
+// postcss
+var postcss = require('gulp-postcss'),
+    pixelstorem = require('postcss-pixels-to-rem');
+    gradient = require('postcss-easing-gradients');
 
 // gets today's date
 var date = new Date(),
@@ -227,18 +233,34 @@ gulp.task('clean-js', function() {
 
 // lints and minifies css, moves to testing and dist
 gulp.task('css', function() {
+
+  var plugins = [
+    autoprefixer({browsers: ['last 2 versions']}),
+    gradient(),
+    pixelstorem({
+      base: 16,
+      unit: "rem",
+      exclude: ['border', 'border-left', 'border-right', 'border-top', 'border-bottom', 'background-size','box-shadow' ],
+      mediaQueries: true
+    })
+  ];
   gulp.src([paths.styles.input, paths.styles.exclude])
   .pipe(scsslint())
   .pipe(sass())
-  .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-   }))
+  .pipe(postcss(plugins))
+  // .pipe(autoprefixer({
+  //     browsers: ['last 2 versions'],
+  //     cascade: false
+  //  }))
     .pipe(rename(filename))
     .pipe(gulp.dest(paths.styles.testing))
-    .pipe(minifyCSS({
-      keepBreaks:false
-    }))
+
+    .pipe(postcss([
+      cssnano()
+    ]))
+    // .pipe(minifyCSS({
+    //   keepBreaks:false
+    // }))
     .pipe(gulp.dest(paths.styles.dist));
 });
 
@@ -250,16 +272,28 @@ gulp.task('clean-css', function() {
 })
 
 gulp.task('css-inline', function() {
+  var plugins = [
+    autoprefixer({browsers: ['last 2 versions']}),
+    cssnano(),
+    gradient(),
+    pixelstorem({
+      base: 16,
+      unit: "rem",
+      exclude: ['border', 'box-shadow'],
+      mediaQueries: true
+    })
+  ];
   gulp.src([paths.styles.inputInline])
   //  .pipe(scsslint())
    .pipe(sass())
-   .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-   }))
-    .pipe(minifyCSS({
-      keepBreaks:false
-    }))
+   .pipe(postcss(plugins))
+  //  .pipe(autoprefixer({
+  //     browsers: ['last 2 versions'],
+  //     cascade: false
+  //  }))
+    // .pipe(minifyCSS({
+    //   keepBreaks:false
+    // }))
     .pipe(gulp.dest(paths.styles.outputInline))
 });
 
@@ -798,6 +832,7 @@ gulp.task('refresh', ['compile', 'pages', 'images'], function () {
 
 // Compile files, generate docs, and run unit tests (default)
 gulp.task('default', [
+  'minifyInlineScripts',
   'clean-js',
   'clean-css',
   'css',
@@ -808,7 +843,6 @@ gulp.task('default', [
   'collections',
   'concat',
   'minifyScripts',
-  'minifyInlineScripts',
 	'svg',
 	'bower',
   'sitemap',
