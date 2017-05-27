@@ -16,11 +16,18 @@
 		display:block;
 		pointer-events: none;
 	}
-	// &::after {
-	// 	height:rem(1);
-	// 	box-shadow: 0 0 120px 60px rgba(60, 60, 60, 0.4);
-	// 	transform: translate(0,0);
-	// }
+	&::after {
+		height:rem(225);
+		transform: translate(0,0);
+		// background: scrim-gradient(
+		// 	 transparent,
+		// 	 black
+		//  );
+		//  mix-blend-mode:multiply;
+		 bottom:0;
+		 top:initial;
+		 opacity: 0.3;
+	}
 	&::before {
 		background-color: white;
 		opacity:0;
