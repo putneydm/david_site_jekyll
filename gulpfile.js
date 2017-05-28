@@ -804,7 +804,7 @@ gulp.task('listen', function () {
     });
     // css
     gulp.watch(paths.styles.watch).on('change', function(file) {
-      gulp.start(['css', 'css-inline', 'clean-css']);
+      gulp.start(['css', 'css-inline']);
     });
     gulp.watch(paths.sitemap.input).on('change', function(file) {
       gulp.start('sitemap');
@@ -825,12 +825,12 @@ gulp.task('default', [
   'minifyInlineScripts',
   'clean-js',
   'clean-css',
-  'css',
   'css-inline',
   'pages',
   'layouts',
   'includes',
   'collections',
+  'css',
   'concat',
   'minifyScripts',
 	'svg',
