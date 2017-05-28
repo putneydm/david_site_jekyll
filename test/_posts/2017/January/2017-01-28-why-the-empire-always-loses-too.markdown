@@ -1,7 +1,7 @@
 ---
 layout: single_blog_entry
 pagetype: blog-entry
-title: "Test file"
+title: "Why the Empire always loses"
 date: 2017-01-28
 categories: blog-entry
 subhead:
@@ -10,7 +10,7 @@ image: troops_three
 imageAlt: "Stormtrooper hitting his head"
 promo: "Why the Empire always loses"
 quote: Even a cobbled-together band of rebels pilots know the importance of protocols such as radio discipline.
----  
+---
 
 It’s really all TK-421’s fault.
 
