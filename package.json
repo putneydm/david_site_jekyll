@@ -38,5 +38,10 @@
     "main-bower-files": "^2.8.2",
     "postcss-easing-gradients": "^1.2.3",
     "uglify": "^0.1.5"
+  },
+  "scripts": {
+    "start": "gulp && gulp listen",
+    "jekyll": "jekyll serve",
+    "deploy": "gulp deploy && firebase deploy"
   }
 }
