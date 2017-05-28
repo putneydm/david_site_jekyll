@@ -4,7 +4,6 @@ pagetype: blog-entry
 title: "Now on NPM: Convert your pixels to rems or ems using this PostCSS plugin"
 date: 2017-05-28
 categories: blog-entry
-subhead:
 tags: ['NPM', 'PostCSS', 'Bourbon', 'pixels to rems', 'pixels to ems']
 promo: "Convert your pixels to rems or ems using postCSS-pixels-to-rem"
 ---
