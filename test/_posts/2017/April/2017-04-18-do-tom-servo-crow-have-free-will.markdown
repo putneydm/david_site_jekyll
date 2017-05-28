@@ -9,7 +9,7 @@ image: joel-hodgson-tom-servo-crow-mst3k
 imageAlt: "Joel, Tom Servo and Crow T. Robot"
 promo: "Do Tom Servo and Crow T. Robot have free will?"
 quote: Even the most high-minded endeavors, let alone experiments by evil scientists, are subject to both intimacy and animosities while under such pressures
----  
+---
 When lists of sci-fi artificial intelligence are compiled, the robots from _Mystery Science Theater 3000_ rarely get their due.
 
 They may seem to be thrown together out of household junk. But their abilities far surpass those of many better-known sci-fi counterparts, such as [HAL 9000][5] from _2001: A Space Odyssey_, [Lt. Cmdr. Data][6] from _Star Trek: The Next Generation_ or [C-3PO][7] and [R2-D2][8] of the _Star Wars_ franchise.
