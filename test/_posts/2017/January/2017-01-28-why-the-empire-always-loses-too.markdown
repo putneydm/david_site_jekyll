@@ -1,7 +1,7 @@
 ---
 layout: single_blog_entry
 pagetype: blog-entry
-title: "Test file"
+title: "Why the Empire always loses  "
 date: 2017-01-28
 categories: blog-entry
 subhead:
