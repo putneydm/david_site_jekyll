@@ -240,7 +240,7 @@ gulp.task('css', function() {
     pixelstorem({
       base: 16,
       unit: "rem",
-      exclude: ['border', 'border-left', 'border-right', 'border-top', 'border-bottom', 'background-size','box-shadow' ],
+      exclude: ['border', 'border-left', 'border-right', 'border-top', 'border-bottom', 'background-size' ],
       mediaQueries: true
     })
   ];
@@ -272,7 +272,7 @@ gulp.task('css-inline', function() {
     pixelstorem({
       base: 16,
       unit: "rem",
-      exclude: ['border', 'border-left', 'border-right', 'border-top', 'border-bottom', 'background-size','box-shadow' ],
+      exclude: ['border', 'border-left', 'border-right', 'border-top', 'border-bottom', 'background-size' ],
       mediaQueries: true
     })
   ];
