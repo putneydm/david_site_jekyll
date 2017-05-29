@@ -192,49 +192,6 @@ gulp.task('icons', function() {
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
    gulp.src([paths.scripts.input, '!' + paths.scripts.inline, '!' + paths.scripts.exclude])
-   .pipe(eslint({
-     "parser": "babel-eslint",
-   rules: {
-         'no-alert': 0,
-         'no-bitwise': 0,
-         'camelcase': 1,
-         'curly': 1,
-         'eqeqeq': 0,
-         'no-eq-null': 0,
-         'guard-for-in': 1,
-         'no-empty': 1,
-         'no-use-before-define': 1,
-         'no-obj-calls': 2,
-         'no-unused-vars': 1,
-         'new-cap': 1,
-         'no-shadow': 0,
-         'strict': 1,
-         'no-invalid-regexp': 2,
-         'comma-dangle': 2,
-         'no-undef': 1,
-         'no-new': 1,
-         'no-extra-semi': 1,
-         'no-debugger': 2,
-         'no-caller': 1,
-         'semi': 1,
-         'quotes': 1,
-         'no-unreachable': 2,
-         'jsx-quotes': 1
-       },
-   envs: [
-     'browser', 'es6', 'react'
-   ],
-   plugins: ["react"],
-   extends: {
-     eslint: "recommended"
-   }
-    }))
-     // eslint.format() outputs the lint results to the console.
-     // Alternatively use eslint.formatEach() (see Docs).
-   .pipe(eslint.format())
-     // To have the process exit with an error code (1) on
-     // lint error, return the stream and pipe to failAfterError last.
-   .pipe(eslint.failAfterError())
    .pipe(babel())
    .pipe(concat(scriptname)) // renames to file w/ todays date for cachebusting
   //  .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
@@ -250,9 +207,52 @@ gulp.task('cachebustScripts', function() {
 
 // lints main javascript file for site
 gulp.task('lint', function() {
-  return gulp.src('source/scripts/functions.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
+  return gulp.src([paths.scripts.input, '!' + paths.scripts.inline, '!' +  paths.scripts.exclude, '!' + paths.scripts.vendor])
+    // .pipe(jshint())
+    .pipe(eslint({
+      "parser": "babel-eslint",
+    rules: {
+          'no-alert': 0,
+          'no-bitwise': 0,
+          'camelcase': 1,
+          'curly': 1,
+          'eqeqeq': 0,
+          'no-eq-null': 0,
+          'guard-for-in': 1,
+          'no-empty': 1,
+          'no-use-before-define': 1,
+          'no-obj-calls': 2,
+          'no-unused-vars': 1,
+          'new-cap': 1,
+          'no-shadow': 0,
+          'strict': 1,
+          'no-invalid-regexp': 2,
+          'comma-dangle': 2,
+          'no-undef': 1,
+          'no-new': 1,
+          'no-extra-semi': 1,
+          'no-debugger': 2,
+          'no-caller': 1,
+          'semi': 1,
+          'quotes': 1,
+          'no-unreachable': 2,
+          'jsx-quotes': 1
+        },
+    envs: [
+      'browser', 'es6', 'react'
+    ],
+    plugins: ["react"],
+    extends: {
+      eslint: "recommended"
+    }
+     }))
+      // eslint.format() outputs the lint results to the console.
+      // Alternatively use eslint.formatEach() (see Docs).
+    .pipe(eslint.format())
+      // To have the process exit with an error code (1) on
+      // lint error, return the stream and pipe to failAfterError last.
+    .pipe(eslint.failAfterError())
+    // .pipe(jshint.reporter(stylish));
 });
 
 //minifies scripts in the exclude folder and moves unminified to testing and minified to dist
@@ -876,6 +876,7 @@ gulp.task('default', [
   'collections',
   'css',
   'concat',
+  'lint',
   'minifyScripts',
 	'svg',
 	'bower',
