@@ -4,7 +4,8 @@ var gulp = require('gulp');
 //scripts
 var concat = require('gulp-concat'),
     minifyJS = require('gulp-uglify'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    babel = require("gulp-babel");
 
 //css
 var sass = require('gulp-sass'),
@@ -190,6 +191,7 @@ gulp.task('icons', function() {
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
    gulp.src([paths.scripts.input, '!' + paths.scripts.inline, '!' + paths.scripts.exclude])
+   .pipe(babel())
    .pipe(concat(scriptname)) // renames to file w/ todays date for cachebusting
   //  .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
    .pipe(gulp.dest(paths.scripts.testing))
@@ -212,6 +214,7 @@ gulp.task('lint', function() {
 //minifies scripts in the exclude folder and moves unminified to testing and minified to dist
 gulp.task('minifyScripts', function() {
    gulp.src(paths.scripts.exclude)
+   .pipe(babel())
    .pipe(gulp.dest(paths.scripts.testing))
    .pipe(minifyJS())
    .pipe(gulp.dest(paths.scripts.dist));
@@ -219,7 +222,8 @@ gulp.task('minifyScripts', function() {
 
 gulp.task('minifyInlineScripts', function() {
    gulp.src(paths.scripts.inline)
-    .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
+   .pipe(babel())
+   .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
    .pipe(minifyJS())
    .pipe(gulp.dest(paths.scripts.outputInline))
 });
@@ -800,7 +804,7 @@ gulp.task('listen', function () {
     });
     // css
     gulp.watch(paths.styles.watch).on('change', function(file) {
-      gulp.start(['css', 'css-inline', 'clean-css']);
+      gulp.start(['css', 'css-inline']);
     });
     gulp.watch(paths.sitemap.input).on('change', function(file) {
       gulp.start('sitemap');
@@ -821,12 +825,12 @@ gulp.task('default', [
   'minifyInlineScripts',
   'clean-js',
   'clean-css',
-  'css',
   'css-inline',
   'pages',
   'layouts',
   'includes',
   'collections',
+  'css',
   'concat',
   'minifyScripts',
 	'svg',

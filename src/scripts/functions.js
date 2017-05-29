@@ -207,8 +207,8 @@ var pageFunctions = {
       });
   },
   handleHeroAnimate: function() {
-    var self = this;
-        scrollPosition = self.getScrollPosition(),
+    var self = this
+    var scrollPosition = self.getScrollPosition(),
         el = self.heroArt,
         elHeight = el.clientHeight * 0.70,
         active = el.classList.contains('hero-art-portfolio--hidden');
@@ -227,7 +227,7 @@ var pageFunctions = {
     var header = self.header,
         nav = self.navMenu,
         logo = self.logo,
-        heroArt =self.heroArtHeight;
+        heroArt =self.heroArtHeight,
         active = header.classList.contains('nav-fixed-bar--display');
 
     if (active && pos >= heroArt) {
@@ -500,7 +500,7 @@ var pageFunctions = {
       resetEl(self.headerHeadline);
     }
     // logo out, headline in
-    if (!scrollOverriden && hedText && direction && scrollPosition > hedPos) {
+    if (!scrollOverriden && hedText && direction && sp > hedPos) {
       retractEl(self.logo);
       retractEl(self.anchor);
       extendEl(self.headSpace);
@@ -697,7 +697,7 @@ var pageFunctions = {
     }
   },
   getScrollPosition: function () {
-    return scrollPosition = window.scrollY;
+    return window.scrollY;
   },
   isElementVisible: function ( elem ) {
       var distance = elem.getBoundingClientRect();

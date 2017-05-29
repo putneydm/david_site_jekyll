@@ -1,9 +1,11 @@
 {
   "devDependencies": {
+    "babel-preset-env": "^1.5.1",
     "browser-sync": "^2.9.11",
     "cssnano": "^3.10.0",
     "del": "^2.0.2",
     "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.2",
     "gulp-base64": "^0.1.2",
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.4.1",
@@ -36,5 +38,10 @@
     "main-bower-files": "^2.8.2",
     "postcss-easing-gradients": "^1.2.3",
     "uglify": "^0.1.5"
+  },
+  "scripts": {
+    "start": "gulp && gulp listen",
+    "jekyll": "jekyll serve",
+    "deploy": "gulp deploy && firebase deploy"
   }
 }
