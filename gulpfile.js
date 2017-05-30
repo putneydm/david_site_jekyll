@@ -840,7 +840,7 @@ gulp.task('listen', function () {
     });
     // scripts
     gulp.watch(paths.scripts.input).on('change', function(file) {
-      gulp.start(['concat', 'pages', 'layouts', 'clean-js']);
+      gulp.start(['concat', 'pages', 'layouts', 'clean-js', 'lint']);
     });
     // scripts exclude
     gulp.watch(paths.scripts.exclude).on('change', function(file) {
