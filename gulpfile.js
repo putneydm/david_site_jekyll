@@ -6,7 +6,8 @@ var concat = require('gulp-concat'),
     minifyJS = require('gulp-uglify'),
     jshint = require('gulp-jshint'),
     babel = require("gulp-babel"),
-    eslint = require('gulp-eslint');
+    eslint = require('gulp-eslint'),
+    sourcemaps = require("gulp-sourcemaps");
 
 //css
 var sass = require('gulp-sass'),
@@ -192,11 +193,13 @@ gulp.task('icons', function() {
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
    gulp.src([paths.scripts.input, '!' + paths.scripts.inline, '!' + paths.scripts.exclude])
+   .pipe(sourcemaps.init())
    .pipe(babel())
    .pipe(concat(scriptname)) // renames to file w/ todays date for cachebusting
   //  .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
-   .pipe(gulp.dest(paths.scripts.testing))
    .pipe(minifyJS())
+   .pipe(sourcemaps.write("."))
+   .pipe(gulp.dest(paths.scripts.testing))
    .pipe(gulp.dest(paths.scripts.dist));
 });
 //adds cachebusted
@@ -258,17 +261,21 @@ gulp.task('lint', function() {
 //minifies scripts in the exclude folder and moves unminified to testing and minified to dist
 gulp.task('minifyScripts', function() {
    gulp.src(paths.scripts.exclude)
+   .pipe(sourcemaps.init())
    .pipe(babel())
-   .pipe(gulp.dest(paths.scripts.testing))
    .pipe(minifyJS())
+   .pipe(sourcemaps.write("."))
+   .pipe(gulp.dest(paths.scripts.testing))
    .pipe(gulp.dest(paths.scripts.dist));
 });
 
 gulp.task('minifyInlineScripts', function() {
    gulp.src(paths.scripts.inline)
+   .pipe(sourcemaps.init())
    .pipe(babel())
    .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
    .pipe(minifyJS())
+   .pipe(sourcemaps.write("."))
    .pipe(gulp.dest(paths.scripts.outputInline))
 });
 
@@ -281,7 +288,6 @@ gulp.task('clean-js', function() {
 
 // lints and minifies css, moves to testing and dist
 gulp.task('css', function() {
-
   var plugins = [
     autoprefixer({browsers: ['last 2 versions']}),
     gradient(),
@@ -290,19 +296,18 @@ gulp.task('css', function() {
       unit: "rem",
       exclude: ['border', 'border-left', 'border-right', 'border-top', 'border-bottom', 'background-size','box-shadow' ],
       mediaQueries: true
-    })
+    }),
+    cssnano()
   ];
   gulp.src([paths.styles.input, paths.styles.exclude])
+  .pipe(sourcemaps.init())
   .pipe(scsslint())
   .pipe(sass())
   .pipe(postcss(plugins))
-    .pipe(rename(filename))
-    .pipe(gulp.dest(paths.styles.testing))
-
-    .pipe(postcss([
-      cssnano()
-    ]))
-    .pipe(gulp.dest(paths.styles.dist));
+  .pipe(rename(filename))
+  .pipe(sourcemaps.write("."))
+  .pipe(gulp.dest(paths.styles.testing))
+  .pipe(gulp.dest(paths.styles.dist));
 });
 
 gulp.task('clean-css', function() {
