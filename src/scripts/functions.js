@@ -1,4 +1,4 @@
-let ready = function ( fn ) {
+const ready = function ( fn ) {
     console.log("ready");
     // Sanity check
     if ( typeof fn !== "function" ) return;
@@ -10,7 +10,7 @@ let ready = function ( fn ) {
     document.addEventListener( "DOMContentLoaded", fn, false );
 };
 
-let pageFunctions = {
+const pageFunctions = {
   intialize: function () {
     let self=this;
     self.initJsTest(); //test for js
