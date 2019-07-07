@@ -14,6 +14,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.2.1",
     "eslint-plugin-standard": "^3.0.1",
+    "firebase-tools": "^7.0.2",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.2",
     "gulp-base64": "^0.1.2",
@@ -55,5 +56,10 @@
     "start": "gulp && gulp listen",
     "jekyll": "jekyll serve",
     "deploy": "gulp deploy && firebase deploy"
+  },
+  "dependencies": {
+    "autoprefixer": "^8.6.4",
+    "node-sass": "^4.9.0",
+    "postcss-pixels-to-rem": "^0.8.0"
   }
 }
