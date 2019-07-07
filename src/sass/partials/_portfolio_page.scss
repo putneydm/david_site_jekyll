@@ -134,6 +134,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40000000', e
 	position:relative;
 	max-width:1rem(100);
 	padding:0 0 rem(30) 0;
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+		}
 	@media screen and (max-width:rem(600)) {
 		max-width:rem(400);
 		margin:0 auto;

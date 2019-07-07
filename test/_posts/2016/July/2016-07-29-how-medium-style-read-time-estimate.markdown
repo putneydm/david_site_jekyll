@@ -6,7 +6,7 @@ date: 2016-07-29
 categories: blog-entry
 tags: ['Jekyll', 'web design', 'web development', 'code', 'coding tricks']
 promo: "How to do a Medium-style read-time estimate in Jekyll"
----  
+---
 
 Medium has brought some interesting ideas to the idea of reading as user experience. Among them: estimated reading time.
 

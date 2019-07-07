@@ -38,10 +38,9 @@
  	{% assign ogTitle = page.head %}
 {% endif %}
 
-<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <!-- facebook -->
@@ -61,8 +60,8 @@
 <meta name="twitter:description" content="{{ogDescription | truncate: "200"}}" />
 <meta name="twitter:image" content="{{site.url}}/siteart/{{ogImage}}" />
 <!-- other -->
-<meta name="description" itemprop="description" content="{{ogDescription}}" />
-<meta name="keywords" itemprop="keywords" content="{% if ogKeywords %}{{ogKeywords}}, {% endif %}{{ogSiteKeywords}}" />
+<meta name="description" content="{{ogDescription}}" />
+<meta name="keywords" content="{% if ogKeywords %}{{ogKeywords}}, {% endif %}{{ogSiteKeywords}}" />
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
 <meta name="news_keywords" content="David Putney, design, web design, internet design, web sites, CSS, HTML, jQuery" />
 <meta name="geo.placename" content="Boston, Massachusetts">

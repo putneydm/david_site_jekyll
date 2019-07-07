@@ -4,13 +4,17 @@ var gulp = require('gulp');
 //scripts
 var concat = require('gulp-concat'),
     minifyJS = require('gulp-uglify'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    babel = require("gulp-babel"),
+    eslint = require('gulp-eslint'),
+    sourcemaps = require("gulp-sourcemaps");
 
 //css
 var sass = require('gulp-sass'),
     minifyCSS = require('gulp-minify-css'), // Add var prefix for consistency
     scsslint = require('gulp-scss-lint'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('autoprefixer'),
+    cssnano = require('cssnano');
 
 // html
  var minifyHTML = require('gulp-minify-html');
@@ -34,8 +38,7 @@ var rename = require('gulp-rename'),
     browserSync = require('browser-sync'),
     del = require('del'),
     replace = require('gulp-replace'),
-    cleanFiles = require('gulp-clean'),
-    flatten = require('gulp-flatten');
+    cleanFiles = require('gulp-clean');
 
 //svg
 var svgstore = require('gulp-svgstore'),
@@ -44,23 +47,18 @@ var svgstore = require('gulp-svgstore'),
 //bower
 var mainBowerFiles = require('main-bower-files');
 
+// postcss
+var postcss = require('gulp-postcss'),
+    pixelstorem = require('postcss-pixels-to-rem');
+    gradient = require('postcss-easing-gradients');
+
 // gets today's date
 var date = new Date(),
     rando = Math.floor((Math.random() * 1000000) + 1);
 
 // creates file names based on date
-// <<<<<<< HEAD
-var dateValue = date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear();
-
-var filename = 'styles-' + dateValue + '.css';
-var scriptname = 'script-' + dateValue + '.js';
-var searchAdminName = 'script-' + dateValue + '-search_admin.js';
-var searchName = 'script-' + dateValue + '-search.js';
-
-// =======
-// var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + 'xx.css';
-// var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
-// >>>>>>> master
+var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + 'xx.css';
+var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
 
 var googleAnalytics = 'UA-56763803-1';
 
@@ -80,7 +78,7 @@ var paths = {
     deploy: 'dist/'
   },
   includes: {
-   input: 'src/includes/*',
+   input: 'src/includes/*.html',
    testing: 'test/_includes/'
   },
   scripts: {
@@ -100,7 +98,7 @@ var paths = {
   },
   styles: {
     input: 'src/sass/styles.scss',
-    inputInline: 'src/sass/inline_styles/{blog_embedded_styles.scss,index_embeded_styles.scss,main_embedded_styles.scss,error_page.scss,search_page.scss}',
+    inputInline: 'src/sass/inline_styles/{blog_embedded_styles.scss,index_embeded_styles.scss,main_embedded_styles.scss,error_page.scss}',
     outputInline: 'test/_includes',
     exclude: '!src/sass/partials/*.scss',
     testing: 'test/css/',
@@ -152,11 +150,8 @@ gulp.task('layouts', function() {
      prefix: '@@',
      basepath: '@file'
    }))
-   // replaces placeholder text with cachebusted name
-  .pipe(replace(/\*cachebustthis\*/g,  scriptname )) //main js
-  .pipe(replace(/\*cachebustadmin\*/g,  searchAdminName )) // search admin
-  .pipe(replace(/\*cachebustsearch\*/g,  searchName )) // search page
-  .pipe(gulp.dest(paths.pageLayouts.testing))
+  .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
+   .pipe(gulp.dest(paths.pageLayouts.testing))
 });
 //  compiles pages from partials
 gulp.task('pages', function() {
@@ -165,6 +160,7 @@ gulp.task('pages', function() {
      prefix: '@@',
      basepath: '@file'
    }))
+  .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
    .pipe(gulp.dest(paths.pages.testing))
 });
 gulp.task('includes', function() {
@@ -174,7 +170,6 @@ gulp.task('includes', function() {
      basepath: '@file'
    }))
    .pipe(replace(/cachebustthiscss/g,  filename )) // adds cachebusted name of css to js links file
-   .pipe(flatten())
    .pipe(gulp.dest(paths.includes.testing))
 });
 
@@ -195,54 +190,92 @@ gulp.task('icons', function() {
   gulp.src(paths.icons.input)
   .pipe(gulp.dest(paths.icons.output));
 });
-// >>>>>>> master
 // concatenates scripts, but not items in exclude folder. includes vendor folder
 gulp.task('concat', function() {
    gulp.src([paths.scripts.input, '!' + paths.scripts.inline, '!' + paths.scripts.exclude])
+   .pipe(sourcemaps.init())
+   .pipe(babel())
    .pipe(concat(scriptname)) // renames to file w/ todays date for cachebusting
   //  .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
-   .pipe(gulp.dest(paths.scripts.testing))
    .pipe(minifyJS())
+   .pipe(sourcemaps.write("."))
+   .pipe(gulp.dest(paths.scripts.testing))
    .pipe(gulp.dest(paths.scripts.dist));
 });
-// <<<<<<< HEAD
-
-// gulp.task('cachebustScripts', function() {
-//   return gulp.src('source/layouts/js_links.html')
-//   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
-// });
-// =======
 //adds cachebusted
 gulp.task('cachebustScripts', function() {
   return gulp.src('source/layouts/js_links.html')
   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
 });
-// >>>>>>> master
 
 // lints main javascript file for site
 gulp.task('lint', function() {
-  return gulp.src('src/scripts/functions.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
+  return gulp.src([paths.scripts.input, '!' + paths.scripts.inline, '!' +  paths.scripts.exclude, '!' + paths.scripts.vendor])
+    // .pipe(jshint())
+    .pipe(eslint({
+      "parser": "babel-eslint",
+    rules: {
+          'no-alert': 0,
+          'no-bitwise': 0,
+          'camelcase': 1,
+          'curly': 1,
+          'eqeqeq': 0,
+          'no-eq-null': 0,
+          'guard-for-in': 1,
+          'no-empty': 1,
+          'no-use-before-define': 1,
+          'no-obj-calls': 2,
+          'no-unused-vars': 1,
+          'new-cap': 1,
+          'no-shadow': 0,
+          'strict': 1,
+          'no-invalid-regexp': 2,
+          'comma-dangle': 2,
+          'no-undef': 1,
+          'no-new': 1,
+          'no-extra-semi': 1,
+          'no-debugger': 2,
+          'no-caller': 1,
+          'semi': 1,
+          'quotes': 1,
+          'no-unreachable': 2,
+          'jsx-quotes': 1
+        },
+    envs: [
+      'browser', 'es6', 'react'
+    ],
+    plugins: ["react"],
+    extends: {
+      eslint: "recommended"
+    }
+     }))
+      // eslint.format() outputs the lint results to the console.
+      // Alternatively use eslint.formatEach() (see Docs).
+    .pipe(eslint.format())
+      // To have the process exit with an error code (1) on
+      // lint error, return the stream and pipe to failAfterError last.
+    .pipe(eslint.failAfterError())
+    // .pipe(jshint.reporter(stylish));
 });
 
 //minifies scripts in the exclude folder and moves unminified to testing and minified to dist
 gulp.task('minifyScripts', function() {
    gulp.src(paths.scripts.exclude)
-   .pipe(jshint())
-   .pipe(jshint.reporter(stylish))
-   .pipe(rename({
-       prefix: "script-" + dateValue + '-'
-     }))
-   .pipe(gulp.dest(paths.scripts.testing))
+   .pipe(sourcemaps.init())
+   .pipe(babel())
    .pipe(minifyJS())
+   .pipe(sourcemaps.write("."))
+   .pipe(gulp.dest(paths.scripts.testing))
    .pipe(gulp.dest(paths.scripts.dist));
 });
 
 gulp.task('minifyInlineScripts', function() {
    gulp.src(paths.scripts.inline)
-    .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
+   .pipe(sourcemaps.init())
+   .pipe(babel())
+   .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
    .pipe(minifyJS())
+   .pipe(sourcemaps.write("."))
    .pipe(gulp.dest(paths.scripts.outputInline))
 });
 
@@ -255,19 +288,26 @@ gulp.task('clean-js', function() {
 
 // lints and minifies css, moves to testing and dist
 gulp.task('css', function() {
+  var plugins = [
+    autoprefixer({browsers: ['last 2 versions']}),
+    gradient(),
+    pixelstorem({
+      base: 16,
+      unit: "rem",
+      exclude: ['border', 'border-left', 'border-right', 'border-top', 'border-bottom', 'background-size' ],
+      mediaQueries: true
+    }),
+    cssnano()
+  ];
   gulp.src([paths.styles.input, paths.styles.exclude])
+  .pipe(sourcemaps.init())
   .pipe(scsslint())
   .pipe(sass())
-  .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-   }))
-    .pipe(rename(filename))
-    .pipe(gulp.dest(paths.styles.testing))
-    .pipe(minifyCSS({
-      keepBreaks:false
-    }))
-    .pipe(gulp.dest(paths.styles.dist));
+  .pipe(postcss(plugins))
+  .pipe(rename(filename))
+  .pipe(sourcemaps.write("."))
+  .pipe(gulp.dest(paths.styles.testing))
+  .pipe(gulp.dest(paths.styles.dist));
 });
 
 gulp.task('clean-css', function() {
@@ -278,16 +318,21 @@ gulp.task('clean-css', function() {
 })
 
 gulp.task('css-inline', function() {
+  var plugins = [
+    autoprefixer({browsers: ['last 2 versions']}),
+    cssnano(),
+    gradient(),
+    pixelstorem({
+      base: 16,
+      unit: "rem",
+      exclude: ['border', 'border-left', 'border-right', 'border-top', 'border-bottom', 'background-size' ],
+      mediaQueries: true
+    })
+  ];
   gulp.src([paths.styles.inputInline])
-  //  .pipe(scsslint())
+   .pipe(scsslint())
    .pipe(sass())
-   .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-   }))
-    .pipe(minifyCSS({
-      keepBreaks:false
-    }))
+   .pipe(postcss(plugins))
     .pipe(gulp.dest(paths.styles.outputInline))
 });
 
@@ -800,7 +845,7 @@ gulp.task('listen', function () {
     });
     // scripts
     gulp.watch(paths.scripts.input).on('change', function(file) {
-      gulp.start(['concat', 'lint', 'pages', 'layouts', 'clean-js']);
+      gulp.start(['concat', 'pages', 'layouts', 'clean-js']);
     });
     // scripts exclude
     gulp.watch(paths.scripts.exclude).on('change', function(file) {
@@ -808,7 +853,7 @@ gulp.task('listen', function () {
     });
     // css
     gulp.watch(paths.styles.watch).on('change', function(file) {
-      gulp.start(['css', 'css-inline', 'clean-css']);
+      gulp.start(['css', 'css-inline']);
     });
     gulp.watch(paths.sitemap.input).on('change', function(file) {
       gulp.start('sitemap');
@@ -816,11 +861,6 @@ gulp.task('listen', function () {
 
     gulp.watch(paths.collections.input).on('change', function(file) {
       gulp.start('collections');
-    });
-    gulp.watch(paths.svg.input).on('change', function(file) {
-      gulp.start('svg');
-      gulp.start('layouts');
-      gulp.start('pages');
     });
 });
 
@@ -831,26 +871,20 @@ gulp.task('refresh', ['compile', 'pages', 'images'], function () {
 
 // Compile files, generate docs, and run unit tests (default)
 gulp.task('default', [
+  'minifyInlineScripts',
   'clean-js',
   'clean-css',
-  'css',
   'css-inline',
   'pages',
   'layouts',
   'includes',
   'collections',
+  'css',
   'concat',
+  // 'lint',
   'minifyScripts',
-  'minifyInlineScripts',
 	'svg',
 	'bower',
   'sitemap',
-  'lint',
-// <<<<<<< HEAD
-//   // 'drafts',
-//   'clean',
-// 	'minifyScripts'
-// =======
   'clean'
-// >>>>>>> master
 ]);

@@ -2,6 +2,11 @@
 .teaser-module	{
 	@include spanner_too (12, 1100, 0, 12);
 	margin:0 0 rem(60) 0;
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 .teaser-module-head	{
 	font-family:$sans;
@@ -51,7 +56,7 @@
 .teaser-module-art {
 	@include spanner_too (12, 1100, 0, 8);
 	float:left;
-	border-left:rem(1) solid $light;
+	border-left:1px solid $light;
 	@media screen and (max-width:em(750))
 		{
 		@include spanner_too (12, 1100, 0, 12);

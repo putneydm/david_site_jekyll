@@ -146,10 +146,13 @@
 .small-billboard {
 	.nav-fixed-bar--nodisplay {
 		&::after {
-			background-image: linear-gradient(to bottom, rgba(102,102,102,0.65) 0%,rgba(0,0,0,0) 100%);
+			background: scrim-gradient(
+			 black,
+			 transparent
+		 );
 			background-size: cover;
 			content:'';
-			height:120px;
+			height:180px;
 			width:100%;
 			position: absolute;
 			top:0;

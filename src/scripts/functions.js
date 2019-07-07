@@ -43,9 +43,6 @@ var pageFunctions = {
     self.handleNavAnimate(scrollPosition);
     self.initScrollListener('blogEntry');
     self.initQuoteAnimate(self.blogQuotes);
-    // self.handleHighlightClick();
-    self.intializeHighlight();
-
   },
   initializeIndex: function() {
     var self=this;
@@ -61,14 +58,13 @@ var pageFunctions = {
     self.setBackground(self.heroArt);
     self.initScrollListener('portfolio_entry');
   },
-  intializeMinimal: function() {
+  intializeError: function() {
     var self=this;
     self.initScrollListener();
   },
-  intializeSearch: function() {
+  intializeMinimal: function() {
     var self=this;
     self.initScrollListener();
-    self.getElementsHedSwap();
   },
   getElementsAll: function() {
     var self=this;
@@ -94,17 +90,6 @@ var pageFunctions = {
     self.blogQuotes = [].slice.call(document.querySelectorAll('.blog-pullquote'));
     self.blogTeasers = [].slice.call(document.querySelectorAll('.blog-teaser-item'));
     self.BlogTeaserList = document.querySelector('.blog-teaser-list');
-
-    // remove
-
-    self.headSpace = document.querySelector('#headspace');
-    self.headerHeadline = document.querySelector('#headspace .nav-blog-headline');
-    self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
-    self.logo = document.querySelector('#header-logo');
-    self.anchor = document.querySelector('.main-header-logo-link');
-  },
-  getElementsHedSwap: function() {
-    var self=this;
     self.headSpace = document.querySelector('#headspace');
     self.headerHeadline = document.querySelector('#headspace .nav-blog-headline');
     self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
@@ -138,15 +123,6 @@ var pageFunctions = {
        self.initQuoteAnimate(self.blogQuotes);
        self.handleHeadlineSwap(false);
      }
-     if (pageType === "search") {
-      //  self.setActiveBlogItem();
-      //  self.handleScrollProgress();
-      //  self.handleFootnoteButton (scrollPosition);
-       self.handleManualScrollback(scrollPosition);
-       self.initBlogTeasers();
-       self.initQuoteAnimate(self.blogQuotes);
-       self.handleHeadlineSwap(false);
-     }
      if (pageType === 'index' || pageType === 'portfolio_entry') {
       self.handleHeroAnimate(scrollPosition);
       self.handleNavAnimate(scrollPosition);
@@ -161,14 +137,24 @@ var pageFunctions = {
      self.handleScrollButton(scrollPosition);
      self.handleSiteFooter(scrollPosition);
      self.handleManualScrollback(scrollPosition);
-   };
+   }
   },
+  // initAnimListener: function() {
+  //   var self=this;
+  //   var headspace = document.querySelector('#headspace');
+  //
+  //
+  //   headspace.addEventListener('animationend',function(e){
+  //     headspace.classList.remove('nav-fixed-headspace--transout');
+  //   });
+  //
+  // },
   initResizeListener: function(){
     var self=this;
     window.onresize = function(e) {
     self.heroArtHeight = document.querySelector('#hero-image').clientHeight;
     self.entryList = [].slice.call(document.querySelectorAll(".blog-entry"));
-   };
+    }
   },
   initJsTest: function () {
     document.querySelectorAll('HTML')[0].classList.remove('no-js');
@@ -214,15 +200,15 @@ var pageFunctions = {
   initScrollBackButton: function () {
     var self = this;
     // var footnoteReturnButton = document.getElementById("btn-footnote-return");
-    self.footNoteReturnButton.classList.add('btn-footnote-return--trans');
+    self.footNoteReturnButton.classList.add('btn-footnote-return--trans')
     self.footNoteReturnButton.addEventListener("click", function(e) {
       e.preventDefault();
       self.setInactiveState(true);
       });
   },
   handleHeroAnimate: function() {
-    var self = this;
-        scrollPosition = self.getScrollPosition(),
+    var self = this
+    var scrollPosition = self.getScrollPosition(),
         el = self.heroArt,
         elHeight = el.clientHeight * 0.70,
         active = el.classList.contains('hero-art-portfolio--hidden');
@@ -241,7 +227,7 @@ var pageFunctions = {
     var header = self.header,
         nav = self.navMenu,
         logo = self.logo,
-        heroArt =self.heroArtHeight;
+        heroArt =self.heroArtHeight,
         active = header.classList.contains('nav-fixed-bar--display');
 
     if (active && pos >= heroArt) {
@@ -320,7 +306,8 @@ var pageFunctions = {
        active = el.classList.contains('blog-teaser-wrapper--active'),
        rect = el.getBoundingClientRect();
 
-   if (rect.top <= window.innerHeight * 0.75 && !active) {
+
+   if (rect.top <= window.innerHeight * .75 && !active) {
      self.addShit(el, 'blog-teaser-wrapper--active');
      self.handleWillChange('will-change-ot', self.BlogTeaserList, 'LI');
    }
@@ -376,7 +363,7 @@ var pageFunctions = {
           }
         });
       });
-      return p;
+      return p
     }
   },
   addLink: function() {
@@ -384,7 +371,7 @@ var pageFunctions = {
 
     linkList.forEach(function (el){
       var targetEl = document.querySelector('#' + el.name);
-      targetEl.innerHTML = "<a href=\"" + el.link + "\">" + targetEl.innerHTML + '</a>';
+      targetEl.innerHTML = "<a href=\"" + el.link + "\">" + targetEl.innerHTML + '</a>'
     });
   },
 // sets interactive functions on page
@@ -395,7 +382,7 @@ var pageFunctions = {
       scrollBackButton = document.querySelector('#btn-footnote-return'),
       linkLocation = self.getElemDistance(activeFootnoteLink),
       targetFootnoteLocation = self.getElemDistance( activeFootnote ) - (navHeight + 150);
-    self.addShit(scrollBackButton, 'btn-footnote-return-active');
+    self.addShit(scrollBackButton, 'btn-footnote-return-active')
     self.addShit(activeFootnoteLink, 'footnote-link-active');
     self.addShit(activeFootnote, 'list-item-active');
     self.scrollToGeneric(targetFootnoteLocation, 200, linkLocation);
@@ -437,13 +424,12 @@ var pageFunctions = {
     var self=this;
     var activeFootnoteLink = document.querySelectorAll('.footnote-link-active')[0],
         activeFootnote = document.querySelectorAll('.list-item-active'),
-        footNoteReturnButton = self.footNoteReturnButton,
-        bound;
+        footNoteReturnButton = self.footNoteReturnButton;
 
       if (activeFootnoteLink) {
-        bound = activeFootnoteLink.getBoundingClientRect();
+        var foo = activeFootnoteLink.getBoundingClientRect();
       }
-      if (bound && bound.top >= 250) {
+      if (foo && foo.top >= 250) {
         self.handleInactiveState();
       }
   },
@@ -455,8 +441,8 @@ var pageFunctions = {
     		scrollBackNote;
 
     if (footnoteLinkSelected && activeFootnote) {
-      scrollBackTo = (self.getElemDistance( footnoteLinkSelected )) - 250;
-      scrollBackNote = self.getElemDistance( activeFootnote );
+      var scrollBackTo = (self.getElemDistance( footnoteLinkSelected )) - 250;
+      var scrollBackNote = self.getElemDistance( activeFootnote );
     }
     else if (scrollPosition > scrollBackNote + 40) {
       this.setInactiveState(false);
@@ -485,7 +471,7 @@ var pageFunctions = {
       var active =
       el.classList.contains('blog-pullquote--set');
       if (!visible && !active) {
-        self.addShit(el, ['will-change-ot', 'blog-pullquote--set']);
+        self.addShit(el, ['will-change-ot', 'blog-pullquote--set'])
       } else if (visible && active) {
         self.handleWillChange('will-change-ot', el);
         el.classList.add('blog-pullquote--animate');
@@ -502,19 +488,19 @@ var pageFunctions = {
         hedText = blogHeadline.innerHTML || false,
         direction = self.scrollDirection(),
         hedPos = self.getElemDistance(blogHeadline),
-        scrollOverriden = self.headSpace.dataset.status === 'scrollOverride' || false,
-        scrollPosition = self.getScrollPosition();
+        scrollOverriden = self.headSpace.dataset.status === 'scrollOverride' || false;
 
     // swap in headline
     if (hedText && self.getElemDistance(blogHeadline) < sp && !hedVis && !hedNoVis) {
       self.headerHeadline.innerHTML = hedText;
       extendEl(self.headerHeadline);
     } else if (hedText && self.getElemDistance(blogHeadline) > sp && hedVis && !hedNoVis) {
-      retractEl(self.headerHeadline);
+      var hedText = self.getElemDistance(blogHeadline);
+      retractEl(self.headerHeadline)
       resetEl(self.headerHeadline);
     }
     // logo out, headline in
-    if (!scrollOverriden && hedText && direction && scrollPosition > hedPos) {
+    if (!scrollOverriden && hedText && direction && sp > hedPos) {
       retractEl(self.logo);
       retractEl(self.anchor);
       extendEl(self.headSpace);
@@ -579,7 +565,7 @@ var pageFunctions = {
     if (activeItem) {
       progressBar.classList.add('scroll-progress--trans');
       var percent = 100 - self.calculateBlogPercentage(activeItem);
-      progressBar.style.transform = "translateX(-" + percent + "%)";
+      progressBar.style.transform = "translateX(-" + percent + "%)"
     }
     if (!activeItem) {
       progressBar.style.transform = 'translateX(-100%)';
@@ -587,7 +573,7 @@ var pageFunctions = {
   },
   calculateBlogPercentage: function(activeItem) {
     var self=this;
-    var activeItemPos = activeItem.getBoundingClientRect().top - (window.innerHeight * 0.15),
+    var activeItemPos = activeItem.getBoundingClientRect().top - (window.innerHeight * .15),
         itemHeight = activeItem.clientHeight,
         percentCalc =  Math.round((activeItemPos / itemHeight) * -100);
       return percentCalc < 0 ? 0:
@@ -597,7 +583,7 @@ var pageFunctions = {
   setActiveBlogItem: function() {
     var self=this;
     var windowHeight = window.innerHeight,
-        triggerLine = windowHeight * 0.15;
+        triggerLine = windowHeight * .15;
 
     self.entryList.forEach(function(el) {
       var itemBounds = el.getBoundingClientRect(),
@@ -621,185 +607,6 @@ var pageFunctions = {
         el.dataset.status = 'none';
       }
     });
-  },
-  handleSearchTerm: function() {
-    var self=this;
-
-    var query = window.location.search.substring(1) || false;
-    if (query) {
-      var searchBtn = document.querySelector('#search-btn a');
-      searchBtn.href = '/search/?' + query;
-      // self.handleHighlight();
-    }
-    return query;
-  },
-  handleHighlight: function() {
-    var self=this;
-    var query = self.getQueryVariable('search_term') || false;
-    var cont = document.querySelector('.blog-entry-text');
-    var hed = document.querySelector('.blog-headline');
-    if (query) {
-      self.highlightTerm(query, cont);
-      self.highlightTerm(query, hed);
-    }
-    return self.getHighlightLocations() || false;
-  },
-  highlightTerm: function(text, element) {
-    var self=this;
-    text = text.split(' ').join('(\\W+|\s+)');
-    var pattern = new RegExp('\\b' + text + '\\b', 'ig');
-
-    element.childNodes.forEach(function (childNode) {
-      if (childNode.childNodes.length) {
-        childNode.parentNode.replaceChild(self.highlightTerm(text, childNode), childNode);
-      } else if (childNode.nodeValue) {
-        if (childNode.nodeValue.match(pattern)) {
-          var frag = document.createDocumentFragment();
-          var wrap = document.createElement('span');
-          wrap.innerHTML = String(childNode.nodeValue).replace(pattern, function (match) {
-            return '<span class="search-highlight">' + match + '</span>';
-          });
-          frag.appendChild(wrap);
-          childNode.parentNode.replaceChild(frag, childNode);
-        }
-      }
-    });
-    return element;
-  },
-  getHighlightLocations: function() {
-    var self=this;
-    var highlights = document.querySelectorAll('.search-highlight');
-    var nodes = Array.prototype.slice.call(highlights);
-    return highlights;
-  },
-  handleClickerStatus: function(el, action, status) {
-    var self=this;
-    var clicker = document.querySelector('#highlight-clicker');
-
-    console.log('clicker status');
-
-    // true = make it show up
-    // false = hide it
-
-    if (action === 'hide' && status) {
-      el.classList.remove('hidden');
-    } else if (action === "hide" && !status) {
-      el.classList.add('hidden');
-    }
-
-    // true = make it active
-    // false = remove active
-    if (action === 'active' && status) {
-      el.classList.add('active');
-    } else if (action === "active" && !status) {
-      el.classList.remove('active');
-    }
-  },
-  intializeHighlight: function() {
-    var self=this;
-
-    var query = self.handleSearchTerm();
-
-    if (query) {
-      var highlights = self.handleHighlight();
-    }
-    if (highlights && highlights.length > 0) {
-      var clicker = document.querySelector('#highlight-clicker');
-      self.handleMessageTally(highlights);
-      self.handleHighlightClick(highlights);
-      self.handleClickerStatus(clicker, 'hide', true);
-    }
-  },
-  handleHighlightClick: function(highlights) {
-    var self=this;
-
-    var clicker = document.querySelector('#highlight-clicker');
-
-    if (self.getScrollPosition() > window.innerHeight) {
-      self.handleClickerStatus(clicker, 'active', true);
-    }
-    clicker.addEventListener('click', function(e) {
-      if (!clicker.classList.contains('active')) {
-        self.handleClickerStatus(clicker, 'active', true);
-      }
-      if (e.target.id === 'highlight-clicker-down' || e.target.id === 'highlight-clicker-up') {
-        self.incrementSearchCounter(e.target, highlights);
-      }
-      if (e.target.id === 'highlight-clicker-close') {
-        self.handleClickerClose(highlights, clicker);
-      }
-    });
-  },
-  handleMessageTally: function(arr) {
-    var self=this;
-    var highlightCount = document.querySelector('#highlight-count');
-    var messageTally = arr.length === 1
-    ? ' match found'
-    : ' matches found'
-    highlightCount.innerHTML = arr.length + messageTally;
-  },
-  clickCounter: undefined,
-  incrementSearchCounter: function(el, arr) {
-    var self=this;
-      if (el.id === 'highlight-clicker-down') {
-        var clickerUp = document.querySelector('#highlight-clicker-up');
-
-        if (arr.length > 1 && !clickerUp.classList.contains('active')) {
-          clickerUp.classList.add('active');
-        }
-
-        if (self.clickCounter !== undefined) {
-          arr[self.clickCounter].classList.remove('active');
-        }
-        if (self.clickCounter < arr.length - 1) {
-          self.clickCounter++;
-        } else {
-          self.clickCounter = 0;
-        }
-        self.handleHighlightScroll(arr, self.clickCounter);
-      }
-      if (el.id === 'highlight-clicker-up') {
-        arr[self.clickCounter].classList.remove('active');
-        if (self.clickCounter === 0) {
-          self.clickCounter = (arr.length - 1);
-        } else {
-          self.clickCounter--;
-        }
-        self.handleHighlightScroll(arr, self.clickCounter);
-      }
-  },
-  truncateURL: function() {
-    var self=this;
-    console.log('truncate');
-    var urlNew = window.location.href.split('?')[0];
-    var obj = { url: urlNew, title: document.title };
-    history.pushState(obj, obj.title, obj.url);
-    return obj;
-  },
-  handleClickerClose: function(arr, el) {
-    var self=this;
-    self.handleClickerStatus(el, 'hide', false);
-    arr.forEach(function(el) {
-      el.classList.remove('search-highlight');
-    });
-    self.truncateURL();
-    document.querySelector('#search-btn a').href = '/search';
-  },
-  handleHighlightScroll: function(highlights, counter) {
-    var self=this;
-    var currLoc = self.getScrollPosition();
-    var highlightCount = document.querySelector('#highlight-count');
-    var loc = self.getElemDistance(highlights[counter]);
-
-    var foo = window.innerWidth < 450
-    ? window.innerHeight * 0.50
-    : window.innerHeight * 0.35;
-
-    self.scrollToGeneric(loc-foo, 200, currLoc);
-
-    highlights[counter].classList.add('active');
-
-    highlightCount.innerHTML = (counter + 1) + ' of ' + highlights.length;
   },
   // functions that return data or change elements
   getElemDistance: function ( elem ) {
@@ -839,7 +646,7 @@ var pageFunctions = {
     var self = this;
     setTimeout(function(){
       self.removeShit(el, style);
-    }, time);
+    }, time)
   },
   scrollToGeneric: function(to, duration, start) {
     // slow scrolls to location send destination, duration of scroll and start point
@@ -878,7 +685,7 @@ var pageFunctions = {
       self.addShit(topNav, 'nav-list--open');
       self.addShit(button, 'nav-menu-button--active');
       self.addShit(header, 'menu-container--active');
-      // self.handleHeadlineSwap(true) // boolean signals button press;
+      self.handleHeadlineSwap(true) // boolean signals button press;
     }
     if (active) {
       self.removeShit(topNav, 'nav-list--open');
@@ -889,18 +696,17 @@ var pageFunctions = {
       self.handleHeadlineSwap(true); // boolean signals button press;
     }
   },
-  getScrollPosition: function() {
-    var sp = window.scrollY;
-    return sp;
+  getScrollPosition: function () {
+    return window.scrollY;
   },
-  isElementVisible: function(elem) {
-    var distance = elem.getBoundingClientRect();
-    return (
-      distance.top >= 0 &&
-      distance.left >= 0 &&
-      distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      distance.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+  isElementVisible: function ( elem ) {
+      var distance = elem.getBoundingClientRect();
+      return (
+          distance.top >= 0 &&
+          distance.left >= 0 &&
+          distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
 },
 promiseCheck: function() {
     var promiseSupport = false;
@@ -908,41 +714,29 @@ promiseCheck: function() {
       var promiseFoo = new Promise(function (x, y) {});
       promiseSupport = true;
   } catch (e) {}
-  return promiseSupport;
+  return promiseSupport
 },
 scrollDirection: function() {
   var self=this;
-   var st = window.pageYOffset || document.documentElement.scrollTop;
 
-   var dir = st > self.lastScrollTop
-   ? true // downscroll
-   : false; //upscroll
-   self.lastScrollTop = st;
-   return dir;
-},
-getQueryVariable: function(variable) {
-  var self=this;
+  // var lastScrollTop = 0;
+     var st = window.pageYOffset || document.documentElement.scrollTop;
+     if (st > self.lastScrollTop){
+         // downscroll code
+         var dir = true;
+        //  console.log('down');
+        //  return true;
+     } else {
+        // upscroll code
+        var dir = false;
+        // console.log('up');
+        // return false
+     }
+     self.lastScrollTop = st;
 
-   var query = window.location.search.substring(1);
-   var vars = query.split("&");
+    //  console.log(dir);
 
-   for (var i=0;i<vars.length;i++) {
-    var pair = vars[i].split("=");
-    // console.log('pair', pair[0]);
-    if(pair[0] == variable){return pair[1].replace(/%20/g, ' ');}
-   }
-   return(false);
-},
-lsTest: function() {
-  try {
-    localStorage.setItem("name", "Hello World!"); //saves to the database, "key", "value"
-    localStorage.removeItem("name");
-    return true;
-  } catch (e) {
-    return false;
-  }
-},
-cleanPunctuation: function(term) {
-  return term.replace(/[\'.,\/#!$%\^&\*;:{}=\-_`~()–’“”]/g,"").replace(/\s+$/g,"");
-},
+     return dir;
+}
+
 };
