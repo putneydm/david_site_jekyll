@@ -31,7 +31,7 @@ var cssBase64 = require('gulp-css-base64');
 var rename = require('gulp-rename'),
     clean = require('gulp-rimraf'),
     stylish = require('jshint-stylish'),
-    rename = require('gulp-rename'),
+    // rename = require('gulp-rename'),
     watch = require('gulp-watch'),
     livereload = require('gulp-livereload'),
     fileinclude = require('gulp-file-include'),
@@ -59,6 +59,7 @@ var date = new Date(),
 // creates file names based on date
 var filename = 'styles-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + 'xx.css';
 var scriptname = 'script-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
+var searchname = 'search-' + date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear() + '.js';
 
 var googleAnalytics = 'UA-56763803-1';
 
@@ -151,8 +152,10 @@ gulp.task('layouts', function() {
      basepath: '@file'
    }))
   .pipe(replace(/\*cachebustthis\*/g,  scriptname )) // adds cachebusted name of scripts to js links file
+  .pipe(replace(/\*cachebustsearch\*/g, searchname)) // adds cachebusted name of scripts to js links file
    .pipe(gulp.dest(paths.pageLayouts.testing))
 });
+
 //  compiles pages from partials
 gulp.task('pages', function() {
    gulp.src(['!' + paths.pages.exclude, paths.pages.input])
@@ -259,14 +262,26 @@ gulp.task('lint', function() {
 });
 
 //minifies scripts in the exclude folder and moves unminified to testing and minified to dist
-gulp.task('minifyScripts', function() {
-   gulp.src(paths.scripts.exclude)
+gulp.task('minifySearch', function() {
+  gulp.src("src/scripts/exclude/search.js")
    .pipe(sourcemaps.init())
    .pipe(babel())
-   .pipe(minifyJS())
+   .pipe(rename(searchname))
+    // .pipe(minifyJS())
    .pipe(sourcemaps.write("."))
    .pipe(gulp.dest(paths.scripts.testing))
    .pipe(gulp.dest(paths.scripts.dist));
+});
+
+//minifies scripts in the exclude folder and moves unminified to testing and minified to dist
+gulp.task('minifyScripts', function () {
+  gulp.src("src/scripts/exclude/searchAdmin.js")
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(minifyJS())
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest(paths.scripts.testing))
+    .pipe(gulp.dest(paths.scripts.dist));
 });
 
 gulp.task('minifyInlineScripts', function() {
@@ -883,6 +898,7 @@ gulp.task('default', [
   'concat',
   // 'lint',
   'minifyScripts',
+  'minifySearch',
 	'svg',
 	'bower',
   'sitemap',

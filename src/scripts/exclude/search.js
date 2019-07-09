@@ -13,7 +13,7 @@ var searchFunctions = {
   getElements: function() {
     var self=this;
 
-    self.sessionAvail = pageFunctions.lsTest();
+    // self.sessionAvail = pageFunctions.lsTest();
     self.search = document.querySelector('#search-results');
     self.searchWrapper = document.querySelector('#search-results-wrapper');
     self.searchField = document.querySelector('#search-field');
@@ -165,7 +165,7 @@ var searchFunctions = {
       var searchResult = {};
       if (dualSearch) {
         // if it is a dual search, do dual search
-        dualSearchResult = self.handleDualSearch(searchTerm, i, dualSearch);
+        var dualSearchResult = self.handleDualSearch(searchTerm, i, dualSearch);
 
         /// if there's a result push build result and push to array
         if (dualSearchResult) {
@@ -209,7 +209,7 @@ var searchFunctions = {
 
     // Filters down the matchArr to only entries that are proximate to each other
     // filter function uses a 'some' loop to test if items are proximate. True stays in the array, false is filtered out
-    nearMatches = matchArr.filter(function(el) {
+    var nearMatches = matchArr.filter(function(el) {
       // this loop returns true if they are proximate, false if not.
         var proximityMatch = matchArr.some(function(element) {
           var startIndex = (el.index - query.length) - 30,
@@ -246,6 +246,7 @@ var searchFunctions = {
     });
 
     var matchArr = [];
+    var match;
     searchTermArr.forEach(function(el) {
       var regex = new RegExp('\\b' + el + '\\b', 'gi')
       while((match = regex.exec(self.entries[index].title + " " + self.entries[index].post)) !== null){
@@ -504,7 +505,7 @@ var searchFunctions = {
   searchActive: function(state) {
     var self=this;
 
-    var submitBtn = document.querySelector('#submit-search');
+    var submitBtn = document.querySelector('#submit-search'),
         searchField = document.querySelector('#search-field'),
         errorOverlay = document.querySelector('#error-overlay'),
         loader = document.querySelector('#loader');
