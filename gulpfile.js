@@ -866,6 +866,9 @@ gulp.task('listen', function () {
     gulp.watch(paths.scripts.exclude).on('change', function(file) {
       gulp.start('minifyScripts');
     });
+     gulp.watch("src/scripts/exclude/search.js").on('change', function (file) {
+       gulp.start('minifySearch');
+     });
     // css
     gulp.watch(paths.styles.watch).on('change', function(file) {
       gulp.start(['css', 'css-inline']);
