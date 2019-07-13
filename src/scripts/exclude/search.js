@@ -1,7 +1,7 @@
 const searchFunctions = {
-    initialize: function() {
+    initialize() {
         console.log('search works');
-        var self = this;
+        const self = this;
         self.windowWidth = document.documentElement.clientWidth;
         self.getElements();
         self.initializeListeners();
@@ -10,8 +10,8 @@ const searchFunctions = {
         self.initResizeListener();
         self.handleSearchHistory();
     },
-    getElements: function() {
-        var self = this;
+    getElements() {
+        const self = this;
         // self.sessionAvail = pageFunctions.lsTest();
         self.search = document.querySelector('#search-results');
         self.searchWrapper = document.querySelector('#search-results-wrapper');
@@ -23,14 +23,11 @@ const searchFunctions = {
         const searchField = document.querySelector('#search-field')
         const submitBtn = document.querySelector('#submit-search')
         const submitSearchRetry = document.querySelector('#submit-search-retry')
-            // searchResults = document.querySelector('#search-results-wrapper'),
         const clearSearch = document.querySelector('#clear-search')
-            // searchContainer = document.querySelector('#search-results-wrapper');
 
-        submitBtn.addEventListener('click', e => {
-            self.getSearchFieldData()
-            e.preventDefault()
-        });
+
+        self.handleSearchBtn(submitBtn)
+
         submitSearchRetry.addEventListener('click', e => {
             self.handleLoadingScreen(true);
             self.getData();
@@ -43,40 +40,39 @@ const searchFunctions = {
             if (errorState && e.keyCode !== 13) {
                 self.displaySearchError(false);
             }
-            // if (!errorState && searchField.value.length >= 1) {
-            //   submitBtn.disabled = false;
-            // }
-            // if (searchField.value.length === 0) {
-            //   submitBtn.disabled = true;
-            // }
-            submitBtn.disabled = searchField.value.length === 0 ? true : false
+            self.handleBtnState(submitBtn, searchField);
+
         });
         searchField.addEventListener('click', e => {
             const errorState = searchField.classList.contains('form-field--error');
             if (errorState && searchField.value !== '') {
                 self.displaySearchError(false);
             }
-            submitBtn.disabled = searchField.value.length === 0 ? true : false;
-            // if (searchField.value.length === 0) {
-            //   submitBtn.disabled = true;
-            // }
+            self.handleBtnState(submitBtn, searchField);
+
         });
         searchField.addEventListener('blur', e => {
-            // if (searchField.value.length === 0) {
-            //   submitBtn.disabled = true;
-            // }
-            submitBtn.disabled = searchField.value.length === 0 ? true : false;
+            self.handleBtnState(submitBtn, searchField);
         });
         clearSearch.addEventListener('click', function(e) {
             self.clearSearchHistory();
         });
+    },
+    handleSearchBtn(btn) {
+        const self = this;
+        btn.addEventListener('click', e => {
+            self.getSearchFieldData()
+            e.preventDefault()
+        })
+    },
+    handleBtnState(btn, field) {
+        btn.disabled = field.value.length === 0 || !field.value.match(/\w+/g)
     },
     dataTest() {
         var self = this;
 
         var entries = sessionStorage.entries || false,
             stopWords = sessionStorage.stopWords || false;
-
         entries && stopWords ?
             (
                 self.handleLoadingScreen(false),
@@ -91,6 +87,9 @@ const searchFunctions = {
                 // self.loadingTest() // turn this on, and you'll get a fake firebase load that randomly fails
                 self.getData()
             );
+    },
+    storageTest() {
+
     },
     handleSearchReload() {
         const self = this;
@@ -535,7 +534,7 @@ const searchFunctions = {
             })
         }, 100);
     },
-    displaySearchError: function(state, error) {
+    displaySearchError(state, error) {
         const errorField = document.querySelector('#search-field-error')
         const searchField = document.querySelector('#search-field')
         state ? (
@@ -546,40 +545,36 @@ const searchFunctions = {
             errorField.innerHTML = ''
         );
     },
-    handleLoadingError: function(state) {
-        var self = this;
-        var errorOverlay = document.querySelector('#error-overlay');
+    handleLoadingError(state) {
+        const self = this;
+        const errorOverlay = document.querySelector('#error-overlay');
 
         state ? (
             errorOverlay.classList.add('error-overlay--active'),
             self.handleLoadingScreen(false)
         ) : errorOverlay.classList.remove('error-overlay--active');
     },
-    firebaseInit: function() {
+    firebaseInit() {
         var self = this;
         console.log('firebaseInit');
         self.myFirebaseRef = new Firebase("https://putneysearch.firebaseio.com/");
     },
-    firebaseGet: function(child, db) {
-        var self = this;
+    firebaseGet(child, db) {
         // Get a database reference to our posts
-        var ref = db.child(child);
-        var p = new Promise(function(resolve, reject) {
-            ref.on("value", function(snapshot) {
+        return new Promise((resolve, reject) => {
+            db.child(child).on("value", (snapshot) => {
                 resolve(snapshot.val());
-            }, function(errorObject) {
+            }, (errorObject) => {
                 reject("The read failed: " + errorObject.code);
             });
         });
-        return p;
     },
-    sleep: function(time) {
-        var p = new Promise(function(resolve) {
-            setTimeout(function() {
+    sleep: (time) => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
                 resolve(time);
             }, time);
         });
-        return p;
     },
     cleanPunctuation: function(term) {
         return term.replace(/[\'.,\/#!$%\^&\*;:{}=\-_`~()–’“”"]/g, "").replace(/\+/gi, "").replace(/\s+$/g, "");
@@ -608,7 +603,7 @@ const searchFunctions = {
     },
     initResizeListener: function() {
         var self = this;
-        window.onresize = function(e) {
+        window.onresize = e => {
             self.windowWidth = document.documentElement.clientWidth;
         };
     },
