@@ -505,67 +505,55 @@ const searchFunctions = {
             errorOverlay.classList.add('error-overlay--active');
     },
     handleLoadingScreen: function(state) {
-        var self = this;
-        var loader = document.querySelector('#loader'),
-            loaderIcon = document.querySelector('#loader-icon'),
-            loaderShadow = document.querySelector('#loader-shadow');
+        const self = this;
+        const loader = document.querySelector('#loader')
+        const loaderIcon = document.querySelector('#loader-icon')
+        const loaderShadow = document.querySelector('#loader-shadow')
 
-        state
-            ?
-            (
-                play(),
-                loader.classList.add('error-overlay--active')
-            ) :
-            (
-                handleScreen(loader)
-            );
-
-        function handleScreen(loader) {
-            setTimeout(function() {
-                loader.addEventListener('transitionend', pause);
-                loader.classList.remove('error-overlay--active');
-            }, 2000);
-        }
-
-        function pause() {
-            console.log('pause');
-            loaderIcon.classList.add('paused');
-            loaderShadow.classList.add('paused');
-            setTimeout(function() {
-                loader.removeEventListener('transitionend', pause);
-            }, 100);
-        }
-
-        function play() {
-            loaderIcon.classList.remove('paused');
-            loaderShadow.classList.remove('paused');
-        }
+        state ? (
+            self.handlePlay(loaderIcon, loaderShadow),
+            loader.classList.add('error-overlay--active')
+        ) : (
+            self.handleScreen(loader, self.handlePause(loader, loaderIcon, loaderShadow))
+        );
+    },
+    handleScreen(loader) {
+        setTimeout(function() {
+            loader.addEventListener('transitionend', self.handlePause);
+            loader.classList.remove('error-overlay--active');
+        }, 2000);
+    },
+    handlePlay(loaderIcon, loaderShadow) {
+        loaderIcon.classList.remove('paused');
+        loaderShadow.classList.remove('paused');
+    },
+    handlePause(loader, loaderIcon, loaderShadow) {
+        setTimeout(function() {
+            loader.removeEventListener('transitionend', function() {
+                loaderIcon.classList.add('paused');
+                loaderShadow.classList.add('paused');
+            })
+        }, 100);
     },
     displaySearchError: function(state, error) {
-        var self = this;
-        var errorField = document.querySelector('#search-field-error'),
-            searchField = document.querySelector('#search-field');
-        state
-            ?
-            (
-                searchField.classList.add('form-field--error'),
-                errorField.innerHTML = error
-            ) :
-            (
-                searchField.classList.remove('form-field--error'),
-                errorField.innerHTML = ''
-            );
+        const errorField = document.querySelector('#search-field-error')
+        const searchField = document.querySelector('#search-field')
+        state ? (
+            searchField.classList.add('form-field--error'),
+            errorField.innerHTML = error
+        ) : (
+            searchField.classList.remove('form-field--error'),
+            errorField.innerHTML = ''
+        );
     },
     handleLoadingError: function(state) {
         var self = this;
         var errorOverlay = document.querySelector('#error-overlay');
 
-        state
-            ?
-            (
-                errorOverlay.classList.add('error-overlay--active'),
-                self.handleLoadingScreen(false)
-            ) : errorOverlay.classList.remove('error-overlay--active');
+        state ? (
+            errorOverlay.classList.add('error-overlay--active'),
+            self.handleLoadingScreen(false)
+        ) : errorOverlay.classList.remove('error-overlay--active');
     },
     firebaseInit: function() {
         var self = this;
