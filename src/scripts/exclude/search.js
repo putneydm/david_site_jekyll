@@ -73,6 +73,7 @@ const searchFunctions = {
 
         var entries = sessionStorage.entries || false,
             stopWords = sessionStorage.stopWords || false;
+        self.sessionAvail()
         entries && stopWords ?
             (
                 self.handleLoadingScreen(false),
@@ -88,15 +89,21 @@ const searchFunctions = {
                 self.getData()
             );
     },
-    storageTest() {
-
+    sessionAvail() {
+        const entries = sessionStorage.entries || false
+        const stopWords = sessionStorage.stopWords || false
+        console.log("storage test y", entries)
+        return entries && stopWords;
     },
     handleSearchReload() {
         const self = this;
         const retrievedObject = self.getQueryVariable('search_term')
-        document.querySelector('#search-field').value = retrievedObject ? retrievedObject : null
-        self.handleSearchResults(self.handleSearchTypes(retrievedObject), retrievedObject)
-        self.handleResultsTransition()
+
+        if (retrievedObject) {
+            document.querySelector('#search-field').value = retrievedObject ? retrievedObject : null
+            self.handleSearchResults(self.handleSearchTypes(retrievedObject), retrievedObject)
+            self.handleResultsTransition() 
+        }
     },
     handleURLChange(searchTerm) {
         const self = this
@@ -280,7 +287,7 @@ const searchFunctions = {
         var searchArr = sessionStorage.searches ?
             JSON.parse(sessionStorage.searches) : [];
 
-        if (self.sessionAvail) {
+        if (self.sessionAvail()) {
             searchArr.unshift(searchTerm);
             searchArr = searchArr.slice(0, 10);
             searchArr = JSON.stringify(searchArr);
@@ -467,22 +474,21 @@ const searchFunctions = {
     cleanSearchText(term) {
         return term.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").split(' ');
     },
-    getData: function() {
-        var self = this;
+    getData() {
+        const self = this;
         console.log('get data');
-        var p = self.firebaseGet('users/05db3ef7-a40d-4a16-9153-aa4f6bf8d25b', self.myFirebaseRef);
-        p.then(function(data) {
+        const p = self.firebaseGet('users/05db3ef7-a40d-4a16-9153-aa4f6bf8d25b', self.myFirebaseRef);
+        p.then(data =>{
                 self.stopWords = data.stopWords;
                 self.entries = data.entries;
-
-                if (self.sessionAvail) {
+                if (!self.sessionAvail()) {
                     sessionStorage.setItem('entries', JSON.stringify(data.entries));
                     sessionStorage.setItem('stopWords', JSON.stringify(data.stopWords));
                 }
                 self.searchActive(true);
                 self.handleLoadingError(false);
             }),
-            function(error) {
+            error => {
                 self.handleLoadingError(true);
             };
     },
