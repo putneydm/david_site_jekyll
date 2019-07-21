@@ -222,7 +222,7 @@ var pageFunctions = {
   },
   handleHeroAnimate: function () {
     var self = this;
-    scrollPosition = self.getScrollPosition(),
+    var scrollPosition = self.getScrollPosition(),
       el = self.heroArt,
       elHeight = el.clientHeight * 0.70,
       active = el.classList.contains('hero-art-portfolio--hidden');
@@ -242,7 +242,7 @@ var pageFunctions = {
       nav = self.navMenu,
       logo = self.logo,
       heroArt = self.heroArtHeight;
-    active = header.classList.contains('nav-fixed-bar--display');
+    var active = header.classList.contains('nav-fixed-bar--display');
 
     if (active && pos >= heroArt) {
       self.removeShit(header, 'nav-fixed-bar--display');
