@@ -120,24 +120,21 @@ const searchFunctions = {
     getWindowLocation() {
         return window.location.href.split("?")[0]
     },
-    getSearchFieldData: function() {
-        var self = this;
+    getSearchFieldData() {
+        const self = this;
 
-        var searchInput = document.querySelector('#search-field').value,
-            searchTerm = self.cleanPunctuation(searchInput),
-            stopWordsResult = self.stopWordsTest(searchInput), // false means there has been a stopwords match
-            containsWordChar = /\w+/gi.test(searchInput), // false means the items has no word characters in it
-            notWord = searchTerm.length <= 1; // true means its one character
-
-
-        // console.log(searchTerm);
-
+        var searchInput = document.querySelector('#search-field').value
+         const searchTerm = self.cleanPunctuation(searchInput)
+        const stopWordsResult = self.stopWordsTest(searchInput) // false means there has been a stopwords match
+        const containsWordChar = /\w+/gi.test(searchInput) // false means the items has no word characters in it
         var exception = /a/i.test(searchTerm) || /i/i.test(searchTerm);
+        console.log("ex", exception)
+        const notWord = exception || searchTerm.length <= 1; // true means its one character
 
-        var errorMessage = !containsWordChar || notWord ?
-            'C\'mon. That isn\'t even a word!' :
-            !stopWordsResult ? 'Whoops! Try narrowing down your search term a bit.' :
-            'Yeah, that search term doesn\'t really work for us.';
+
+        // var exception = /a/i.test(searchTerm) || /i/i.test(searchTerm);
+
+        // const errorMessage = self.searchErrorMessages(containsWordChar, notWord, stopWordsResult)
 
         //  stopwords result false = bad, true = good
         if (stopWordsResult && containsWordChar && !notWord) {
@@ -147,8 +144,14 @@ const searchFunctions = {
             self.displaySearchHistory();
             self.handleURLChange(searchInput);
         } else {
-            self.displaySearchError(true, errorMessage);
+            self.displaySearchError(true, self.searchErrorMessages(containsWordChar, notWord, stopWordsResult));
         }
+    },
+    searchErrorMessages(containsWordChar, notWord, stopWordsResult) { 
+        return !containsWordChar || notWord ?
+            'C\'mon. That isn\'t even a word!' :
+            !stopWordsResult ? 'Whoops! Try narrowing down your search term a bit.' :
+                'Yeah, that search term doesn\'t really work for us.';
     },
     handleSearchTypes: function(searchTerm) {
         var self = this;
