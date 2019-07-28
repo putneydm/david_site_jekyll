@@ -38,7 +38,8 @@ var rename = require('gulp-rename'),
     browserSync = require('browser-sync'),
     del = require('del'),
     replace = require('gulp-replace'),
-    cleanFiles = require('gulp-clean');
+    cleanFiles = require('gulp-clean'),
+    runSequence = require('run-sequence');
 
 //svg
 var svgstore = require('gulp-svgstore'),
@@ -99,7 +100,7 @@ var paths = {
   },
   styles: {
     input: 'src/sass/styles.scss',
-    inputInline: 'src/sass/inline_styles/{blog_embedded_styles.scss,index_embeded_styles.scss,main_embedded_styles.scss,error_page.scss}',
+    inputInline: 'src/sass/inline_styles/*.scss',
     outputInline: 'test/_includes',
     exclude: '!src/sass/partials/*.scss',
     testing: 'test/css/',
@@ -349,6 +350,18 @@ gulp.task('css-inline', function() {
    .pipe(sass())
    .pipe(postcss(plugins))
     .pipe(gulp.dest(paths.styles.outputInline))
+});
+
+// gulp.task('buildCSS', function (done) {
+//   runSequence('css-inline', 'css', function () {
+//     console.log('Run something else');
+//     done();
+//   });
+// });
+
+
+gulp.task('buildCSS', function () {
+  runSequence('css', 'css-inline');
 });
 
 // creates svg sprite and moves it to testing and dist
@@ -870,8 +883,14 @@ gulp.task('listen', function () {
        gulp.start('minifySearch');
      });
     // css
-    gulp.watch(paths.styles.watch).on('change', function(file) {
-      gulp.start(['css', 'css-inline']);
+    // gulp.watch(paths.styles.watch).on('change', function(file) {
+    //   gulp.start(['css']);
+    // });
+    gulp.watch(paths.styles.watch).on('change', function (file) {
+      gulp.start(['css-inline']);
+    });
+    gulp.watch(paths.styles.outputInline).on('change', function (file) {
+      gulp.start(['pages', 'layouts']);
     });
     gulp.watch(paths.sitemap.input).on('change', function(file) {
       gulp.start('sitemap');
@@ -892,12 +911,11 @@ gulp.task('default', [
   'minifyInlineScripts',
   'clean-js',
   'clean-css',
-  'css-inline',
+  'buildCSS',
   'pages',
   'layouts',
   'includes',
   'collections',
-  'css',
   'concat',
   // 'lint',
   'minifyScripts',

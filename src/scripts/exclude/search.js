@@ -92,7 +92,6 @@ const searchFunctions = {
     sessionAvail() {
         const entries = sessionStorage.entries || false
         const stopWords = sessionStorage.stopWords || false
-        console.log("storage test y", entries)
         return entries && stopWords;
     },
     handleSearchReload() {
@@ -127,14 +126,7 @@ const searchFunctions = {
          const searchTerm = self.cleanPunctuation(searchInput)
         const stopWordsResult = self.stopWordsTest(searchInput) // false means there has been a stopwords match
         const containsWordChar = /\w+/gi.test(searchInput) // false means the items has no word characters in it
-        var exception = /a/i.test(searchTerm) || /i/i.test(searchTerm);
-        console.log("ex", exception)
-        const notWord = exception || searchTerm.length <= 1; // true means its one character
-
-
-        // var exception = /a/i.test(searchTerm) || /i/i.test(searchTerm);
-
-        // const errorMessage = self.searchErrorMessages(containsWordChar, notWord, stopWordsResult)
+        const notWord = searchTerm.length <= 1; // true means its one character
 
         //  stopwords result false = bad, true = good
         if (stopWordsResult && containsWordChar && !notWord) {
@@ -495,24 +487,18 @@ const searchFunctions = {
                 self.handleLoadingError(true);
             };
     },
-    searchActive: function(state) {
-        var self = this;
-
-        var submitBtn = document.querySelector('#submit-search'),
-            searchField = document.querySelector('#search-field'),
-            errorOverlay = document.querySelector('#error-overlay'),
-            loader = document.querySelector('#loader');
-
-        state
-            ?
-            (
+    searchActive(state) {
+        const self = this;
+        const searchField = document.querySelector('#search-field')
+        const errorOverlay = document.querySelector('#error-overlay')
+        state ? (
                 searchField.disabled = false,
                 self.handleLoadingScreen(false),
                 self.handleSearchReload()
             ) :
             errorOverlay.classList.add('error-overlay--active');
     },
-    handleLoadingScreen: function(state) {
+    handleLoadingScreen(state) {
         const self = this;
         const loader = document.querySelector('#loader')
         const loaderIcon = document.querySelector('#loader-icon')
@@ -522,12 +508,14 @@ const searchFunctions = {
             self.handlePlay(loaderIcon, loaderShadow),
             loader.classList.add('error-overlay--active')
         ) : (
-            self.handleScreen(loader, self.handlePause(loader, loaderIcon, loaderShadow))
+                self.handleScreen(loader, loaderIcon, loaderShadow), 
+            self.handlePause(loader, loaderIcon, loaderShadow)
         );
     },
-    handleScreen(loader) {
+    handleScreen(loader, loaderIcon, loaderShadow) {
+        const self = this;
         setTimeout(function() {
-            loader.addEventListener('transitionend', self.handlePause);
+            loader.addEventListener('transitionend', self.handlePause(loader, loaderIcon, loaderShadow));
             loader.classList.remove('error-overlay--active');
         }, 2000);
     },
@@ -536,12 +524,13 @@ const searchFunctions = {
         loaderShadow.classList.remove('paused');
     },
     handlePause(loader, loaderIcon, loaderShadow) {
-        setTimeout(function() {
-            loader.removeEventListener('transitionend', function() {
+            loader.removeEventListener("transitionend", () => {
+                console.log("trans remove")
+            }, true);  
+            setTimeout(function () { 
                 loaderIcon.classList.add('paused');
                 loaderShadow.classList.add('paused');
-            })
-        }, 100);
+             }, 2000);
     },
     displaySearchError(state, error) {
         const errorField = document.querySelector('#search-field-error')

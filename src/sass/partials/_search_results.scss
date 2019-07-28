@@ -1,17 +1,112 @@
 .search-results {
-	margin-top:rem(60);
+  margin-top: rem(60);
 }
+
 .search-results-header {
-	font-family:$sans;
-	font-size:em(16);
-	margin:0 0 rem(60) 0;
-	border-bottom:1px solid $med;
-	padding:0 0 rem(10) 0;
+  font-family: $sans;
+  font-size: em(16);
+  margin: 0 0 rem(60) 0;
+  border-bottom: 1px solid $med;
+  padding: 0 0 rem(10) 0;
 }
+
 .search-results-link {
-	@extend .teaser-module-abstract-link;
-	font-size:em(14);
+  @extend .teaser-module-abstract-link;
+  font-size: em(14);
 }
+
 .search-results-entry {
-	@extend .blog-entry !optional;
+  @extend .blog-entry !optional;
+}
+
+input,
+button {
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+}
+
+#search-results-wrapper {
+  a {
+    display: block;
+    width: 100%;
+    background-image: none;
+  }
+}
+
+.search-results-alt {
+  padding-top: 0;
+  margin: 0 auto;
+  max-width: rem(700);
+
+  @media screen and (max-width: em(750)) {
+    margin: 0 rem(10) 0;
+  }
+}
+
+.search-results-wrapper {
+  opacity: 0;
+}
+
+.search-results-wrapper.active {
+  opacity: 1;
+  transition: .2s opacity;
+  transition-delay: .2s;
+}
+
+.search-results-header {
+  font-family: $sans;
+  font-size: em(16);
+  margin: 0 0 rem(60) 0;
+  border-bottom: 1px solid $med;
+  padding: 0 0 rem(10) 0;
+  color: $dark;
+}
+
+.search-results-header > span {
+  color: black;
+}
+
+.search-results-link {
+  @extend .teaser-module-abstract-link;
+  font-size: em(14);
+}
+
+.search-results-entry {
+  margin-bottom: rem(40);
+  padding-bottom: rem(30);
+  background-image: linear-gradient(to bottom, transparent 75%, $dark 75%);
+  background-size: 60% rem(2);
+  background-origin: padding-box;
+  background-position: center 100%;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: rem(600)) {
+    padding-bottom: rem(15);
+    margin-bottom: rem(20);
+  }
+
+  p {
+    font-size: em(16);
+    hyphens: auto;
+
+    @media screen and (max-width: em(500)) {
+      font-size: em(15);
+    }
+  }
+
+  .blog-headline {
+    @media screen and (max-width: rem(700)) {
+      font-size: rem(20);
+      padding-top: 0;
+    }
+  }
+}
+
+.loggedout-screen,
+.loggedin-screen {
+  position: absolute;
+  top: 0;
+  border: 1px;
+  height: rem(500);
+  width: 100%;
 }
