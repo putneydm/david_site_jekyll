@@ -6,7 +6,6 @@
 		}
 }
 .hero-art-portfolio--hidden {
-	// background-attachment: scroll;
 	&::before {
 		opacity: 1;
 		transition: opacity .5s ease-in;
@@ -16,14 +15,11 @@
 .main-header-nameplate--active { 
 	opacity:1;
 	transform: translateY(0);
-	// transform: scale(1,1);
 	transition:opacity .6s .3s ease-in, transform .4s .3s ease-out;
 }
 .navigation-menu--active {
-	// bottom:rem(60);
 	opacity:1;
 	transform: translateX(0);
-	// line-height:150%;
 	transition:opacity .6s .4s ease-out, transform .4s .4s ease-out;
 	@media screen and (max-width:em(425)) {
 		top:rem(160);
@@ -236,22 +232,73 @@
     transform: scale(1.2);
   }
 }
+
 // @keyframes bounceball {
-//    from {
-//      transform: translateY(0);
-//      height: 15px;
-//    }
-//    10%  {
-//      transform: translateY(0);
-//      height: 30px;
-//    }
-//    to   {
-//      transform: translateY(-100px);
-//    }
-// }
-// @keyframes shadow {
-//   0%{ opacity:1; transform: scale(1.8);}
-//   60%{ opacity:0; transform: scale(.9);}
-//   100%{ opacity:0; transform: scale(.9);}
+//   0% {
+//     -webkit-transform: translateY(-10.625rem);
+//     transform: translateY(-10.625rem);
+//   }
+
+//   30% {
+//     -webkit-transform: translateY(0rem);
+//     transform: translateY(0rem);
+//     height: 1.875rem;
+//     width: 1.875rem;
+//   }
+
+//   33% {
+//     -webkit-transform: translateY(0rem);
+//     transform: translateY(0rem);
+//     height: 0.9375rem;
+//     width: 2.375rem;
+//   }
+
+//   50% {
+//     height: 2.1875rem;
+//     width: 1.5625rem;
+//   }
+
+//   85% {
+//     -webkit-transform: translateY(-10.625rem);
+//     transform: translateY(-10.625rem);
+//     height: 1.875rem;
+//     width: 1.875rem;
+//   }
+
+//   100% {
+//     -webkit-transform: translateY(-10.625rem);
+//     transform: translateY(-10.625rem);
+//   }
 // }
 
+// @keyframes shadow {
+//   0% {
+//     opacity: 0;
+//     -webkit-transform: scale(1.2);
+//     transform: scale(1.2);
+//   }
+
+//   20% {
+//     opacity: 0;
+//     -webkit-transform: scale(1.2);
+//     transform: scale(1.2);
+//   }
+
+//   32% {
+//     opacity: 1;
+//     -webkit-transform: scale(1.8);
+//     transform: scale(1.8);
+//   }
+
+//   50% {
+//     opacity: 1;
+//     -webkit-transform: scale(1.8);
+//     transform: scale(1.8);
+//   }
+
+//   100% {
+//     opacity: 0;
+//     -webkit-transform: scale(1.2);
+//     transform: scale(1.2);
+//   }
+// }

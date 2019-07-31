@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "autoprefixer": "^8.6.4",
+    "gulp-clean-css": "^4.2.0",
     "node-sass": "^4.9.0",
     "postcss-pixels-to-rem": "^0.8.0"
   }
