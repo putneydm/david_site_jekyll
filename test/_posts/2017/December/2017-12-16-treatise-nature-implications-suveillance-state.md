@@ -8,7 +8,7 @@ subhead:
 tags: ['holidays', 'Santa Claus', 'philosophy', 'pop culture', 'music']
 image: "santa_theyworeredsuit"
 imageAlt: "Santa Claus, winking"
-promo: ""
+promo: "The nature and implications of Santa's surveillance state"
 quote: "He carries out his annual labors with dedication and efficiency and without complaint, a few stale cookies and some tepid milk as his only reward."
 quote2: "Perhaps the truth is that he doesn't actually need to watch our everyday actions and interactions. Only knowing when we are awake might not be a limitation at all."
 quote3: "It really depends on whose philosophy book is sitting on Santa's toilet tank."
