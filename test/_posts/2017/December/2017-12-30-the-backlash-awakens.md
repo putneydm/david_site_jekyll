@@ -68,7 +68,7 @@ Anger, impulsiveness, and petulance – them’s those Skywalker men fer ya.
 
 With that in mind, here’s a point I think people really are not getting:
 
-<div class="embed-container"><iframe src="https://www.youtube.com/embed/E6k3YBmIUYo" gesture="media" allow="encrypted-media" allowfullscreen="" width="100%" frameborder="0"></iframe></div>
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/U1MnMA0TzGI?start=49" gesture="media" allow="encrypted-media" allowfullscreen="" frameborder="0"></iframe></div>
 
 When Luke says that the Jedi must end, that should be read as Skywalker family drama must end. Because for three generations, the word Jedi has pretty much been synonymous with Skywalkers. And unceasing war <sup>[4][4]</sup>.
 
@@ -138,7 +138,7 @@ What’s important to the story is that Kylo Ren’s Darth Vader cosplay is smas
 
 For those who thought all that family tree and Mystery Box bullshit is important, here’s some advice from Basil Exposition:
 
-<div class="embed-container"><iframe src="https://www.youtube.com/embed/E6k3YBmIUYo" gesture="media" allow="encrypted-media" allowfullscreen="" width="100%" frameborder="0"></iframe></div>
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/x8w95xIdH4o?start=41" gesture="media" allow="encrypted-media" allowfullscreen="" frameborder="0"></iframe></div>
 
 _The Last Jedi_ is an iconoclast in the true definition of the word: One who topples icons.
 

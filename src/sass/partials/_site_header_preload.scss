@@ -139,8 +139,9 @@
 
         a {
             color: $med;
+
             @media (prefers-color-scheme: dark) {
-                color:$light;
+                color: $light;
             }
         }
 
@@ -194,7 +195,6 @@
 
         .main-header-logo {
             fill: $aqua;
-
             &:hover {
                 fill: $light-aqua
             }
@@ -203,6 +203,7 @@
         .nav-menu-button {
             a {
                 color: $med;
+                @media (prefers-color-scheme: dark) {color: $dm-light;}
             }
         }
 
@@ -214,6 +215,33 @@
             li {
                 a {
                     color: $med;
+                    @media (prefers-color-scheme: dark) {color: $light;}
+
+                }
+            }
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .nav-fixed-bar {
+            background-color: $dark_aqua;
+            box-shadow: none;
+
+            .main-header-logo {
+                fill: $dm-light;
+
+                &:hover {
+                    fill: $light-aqua
+                }
+
+                .nav-menu-button {
+                    a {
+                        color: $dm-light;
+                    }
+                }
+
+                .nav-menu-button-icn {
+                    fill: $dm-light;
                 }
             }
         }

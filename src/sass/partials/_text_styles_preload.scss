@@ -2,12 +2,6 @@
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: $dm-dark;
-        color: $dm-light;
-    }
-}
 
 //html, body { height: 100%; overflow:auto;}
 html {
@@ -19,7 +13,12 @@ body {
     margin: 0 0 rem(120);
     font-family: $droid;
     -webkit-font-smoothing: antialiased;
+    @media (prefers-color-scheme: dark) {
+        background-color: $dm-dark;
+        color: $dm-light;
+    }
 }
+
 
 p {
     line-height: 1.65
@@ -37,16 +36,13 @@ a {
     transition: color .2s ease-in, background .2s ease-in;
     text-decoration: none;
     color: $body;
-
     &:hover {
         @include underscore-body ($light-aqua, 90%);
     }
-
     @media (prefers-color-scheme: dark) {
         color: $x-light-aqua;
         @include underscore ($x-light-aqua, 90%);
         text-shadow: none;
-
         &:hover {
             color: $aqua;
             @include underscore ($aqua, 90%);

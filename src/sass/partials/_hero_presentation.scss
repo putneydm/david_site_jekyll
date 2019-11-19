@@ -30,9 +30,11 @@
         top: initial;
         opacity: 0.3;
     }
+
     &::before {
         background-color: white;
         opacity: 0;
+
         @media (prefers-color-scheme: dark) {
             background-color: $dm-dark;
         }
@@ -54,11 +56,8 @@
     @media screen and (min-width:rem(1440)) {
         bottom: -10px;
     }
-}
-
-@media (prefers-color-scheme: dark) {
-    .hero-art-curve {
-        fill: $dm-dark;
+    @media (prefers-color-scheme: dark) {
+            fill: $dm-dark;
     }
 }
 
