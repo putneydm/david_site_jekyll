@@ -38,6 +38,10 @@
 		}
 	}
 	@media screen and (max-width:em(400)) { margin:40px 10px 0;	}
+	@media ( prefers-color-scheme: dark ) {
+		box-shadow:none;
+		background-color: $dm-light;
+	}
 }
 }
 .footer-icon {
@@ -149,6 +153,9 @@
 	text-align:center;
 	margin:0 rem(20) rem(5);
 	padding:0;
+	@media ( prefers-color-scheme: dark ) {
+		color:$x-light-aqua;
+	}
 }
 .svg-import {
 	height:0;
@@ -188,7 +195,7 @@
 				margin:0 rem(5);
 				}
 			}
-			&:nth-child(4){
+			&:nth-child(3){
 				&::after	{content:''; margin:0;}
 			}
 			&:nth-child(5){
@@ -203,6 +210,11 @@
 			background:none;
 			text-shadow:none;
 			&:hover { color:$aqua;}
+		}
+		@media ( prefers-color-scheme: dark) {
+			a {
+				color:$light-aqua;
+			}
 		}
 	}
 }

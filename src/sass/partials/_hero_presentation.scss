@@ -1,160 +1,201 @@
 .hero-art {
-	@include aspect-ratio (100, 0, 23, 8.56);
-	background-position: center top;
-	position:relative;
-	background-attachment: fixed;
-	background-size: 100%;
-	background-repeat: no-repeat;
-	border-bottom: 1px solid white;
-	background-color:$xlight;
-	&::after, &::before {
-		position:absolute;
-		width:100%;
-		content:'';
-		top:0;
-		left:0;
-		display:block;
-		pointer-events: none;
-	}
-	&::after {
-		height:rem(225);
-		transform: translate(0,0);
-		// background: scrim-gradient(
-		// 	 transparent,
-		// 	 black
-		//  );
-		//  mix-blend-mode:multiply;
-		 bottom:0;
-		 top:initial;
-		 opacity: 0.3;
-	}
-	&::before {
-		background-color: white;
-		opacity:0;
-	}
+    @include aspect-ratio (100, 0, 23, 8.56);
+    background-position: center top;
+    position: relative;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid white;
+    background-color: $xlight;
+
+    @media (prefers-color-scheme: dark) {
+        filter: grayscale(20%);
+    }
+
+    &::after,
+    &::before {
+        position: absolute;
+        width: 100%;
+        content: '';
+        top: 0;
+        left: 0;
+        display: block;
+        pointer-events: none;
+    }
+
+    &::after {
+        height: rem(225);
+        transform: translate(0, 0);
+        bottom: 0;
+        top: initial;
+        opacity: 0.3;
+    }
+
+    &::before {
+        background-color: white;
+        opacity: 0;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: $dm-dark;
+        }
+    }
 }
+
 .hero-art-curve {
-	position:absolute;
-	bottom:-10px;
-	left:0;
-	z-index:3;
-	@include aspect-ratio (100, 0, 23, 1.30);
-	fill:white;
-	@media screen and (max-width:rem(500)){ bottom:-3px;}
-	@media screen and (min-width:rem(1440))	{	bottom:-10px; }
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: 3;
+    @include aspect-ratio (100, 0, 23, 1.30);
+    fill: white;
+
+    @media screen and (max-width:rem(500)) {
+        bottom: -3px;
+    }
+
+    @media screen and (min-width:rem(1440)) {
+        bottom: -10px;
+    }
+    @media (prefers-color-scheme: dark) {
+            fill: $dm-dark;
+    }
 }
+
 .loading-overlay--preset {
-	&::after {
-		z-index:2;
-		box-shadow: none;
-		background-position: center top;
-		background-attachment: fixed;
-		background-size: 100%;
-		opacity:1;
-	}
+    &::after {
+        z-index: 2;
+        box-shadow: none;
+        background-position: center top;
+        background-attachment: fixed;
+        background-size: 100%;
+        opacity: 1;
+    }
 }
+
 .loading-overlay--loaded {
-	&::after {
-		opacity:0;
-		transition:opacity .4s .3s;
-	}
+    &::after {
+        opacity: 0;
+        transition: opacity .4s .3s;
+    }
 }
+
 .small-billboard {
-	.hero-art {
-		@include aspect-ratio (100, 0, 23, 8.56);
-		min-height:rem(350);
-			@media screen and (max-width:em(950)){
-				background-size: auto 350px;
-				background-attachment: scroll;
-			}
-			&::before {
-				@include aspect-ratio (100, 0, 23, 8.56);
-				min-height:rem(350);
-			}
-			@media screen and (max-width:em(700)) {
-				&::before {
-					height:rem(90);
-				}
-			}
-			@media screen and (max-width:em(560)) {
-				&::before {
-					height:rem(180);
-				}
-			}
-		}
-		.loading-overlay--preset {
-			&::after {
-				@include aspect-ratio (100, 0, 23, 8.54);
-				min-height:rem(350);
-				background-attachment: scroll;
-			}
-			@media screen and (max-width:em(950)){
-				&::after {
-						background-size: auto 350px;
-						@include aspect-ratio (100, 0, 23, 8.56);
-						background-attachment: scroll;
-					}
-			}
-			@media screen and (max-width:em(700)) {
-				&::after {
-					height:rem(90);
-				}
-			}
-			@media screen and (max-width:em(560)) {
-				&::after {
-					height:rem(180);
-				}
-			}
-		}
+    .hero-art {
+        @include aspect-ratio (100, 0, 23, 8.56);
+        min-height: rem(350);
+
+        @media screen and (max-width:em(950)) {
+            background-size: auto 350px;
+            background-attachment: scroll;
+        }
+
+        &::before {
+            @include aspect-ratio (100, 0, 23, 8.56);
+            min-height: rem(350);
+        }
+
+        @media screen and (max-width:em(700)) {
+            &::before {
+                height: rem(90);
+            }
+        }
+
+        @media screen and (max-width:em(560)) {
+            &::before {
+                height: rem(180);
+            }
+        }
+    }
+
+    .loading-overlay--preset {
+        &::after {
+            @include aspect-ratio (100, 0, 23, 8.54);
+            min-height: rem(350);
+            background-attachment: scroll;
+        }
+
+        @media screen and (max-width:em(950)) {
+            &::after {
+                background-size: auto 350px;
+                @include aspect-ratio (100, 0, 23, 8.56);
+                background-attachment: scroll;
+            }
+        }
+
+        @media screen and (max-width:em(700)) {
+            &::after {
+                height: rem(90);
+            }
+        }
+
+        @media screen and (max-width:em(560)) {
+            &::after {
+                height: rem(180);
+            }
+        }
+    }
 }
+
 .large-billboard {
-	.hero-art {
-		@include aspect-ratio (100, 0, 23, 10.4);
-		min-height:em(365);
-		&::before {
-			@include aspect-ratio (100, 0, 23, 10.4);
-			min-height:rem(365);
-			z-index:1;
-		}
-			@media screen and (max-width:em(800)){
-				background-size: auto 366px;
-		}
-	}
+    .hero-art {
+        @include aspect-ratio (100, 0, 23, 10.4);
+        min-height: em(365);
+
+        &::before {
+            @include aspect-ratio (100, 0, 23, 10.4);
+            min-height: rem(365);
+            z-index: 1;
+        }
+
+        @media screen and (max-width:em(800)) {
+            background-size: auto 366px;
+        }
+    }
 }
+
 .large-billboard {
-	.loading-overlay--preset {
-		&::after {
-			@include aspect-ratio (100, 0, 23, 10.35);
-			min-height:rem(364);
-		}
-		@media screen and (max-width:em(800)){
-				&::after {
-				background-size: auto 366px;
-			}
-		}
-	}
+    .loading-overlay--preset {
+        &::after {
+            @include aspect-ratio (100, 0, 23, 10.35);
+            min-height: rem(364);
+        }
+
+        @media screen and (max-width:em(800)) {
+            &::after {
+                background-size: auto 366px;
+            }
+        }
+    }
 }
+
 .portfolio-introduction-container {
-	width:100%;
-	margin:rem(40) auto 0;
-	padding:0 rem(40);
-	@media screen and (max-width:rem(650)) {
-		padding:0 rem(20);
-		margin:rem(30) auto 0;
-		}
-	@media screen and (max-width:rem(500)) {
-		padding:0 rem(10);
-		margin:rem(20) auto 0;
-		}
+    width: 100%;
+    margin: rem(40) auto 0;
+    padding: 0 rem(40);
+
+    @media screen and (max-width:rem(650)) {
+        padding: 0 rem(20);
+        margin: rem(30) auto 0;
+    }
+
+    @media screen and (max-width:rem(500)) {
+        padding: 0 rem(10);
+        margin: rem(20) auto 0;
+    }
 }
+
 // preload page element sizes
-.teaser-module-container{
-	margin:0 auto;
-	padding:rem(80) rem(40) 0;
-	max-width:rem(1100);
-	position:relative;
-		@media screen and (max-width:em(450)) { padding:rem(40) 0 0;}
+.teaser-module-container {
+    margin: 0 auto;
+    padding: rem(80) rem(40) 0;
+    max-width: rem(1100);
+    position: relative;
+
+    @media screen and (max-width:em(450)) {
+        padding: rem(40) 0 0;
+    }
 }
+
 .blog-teaser-wrapper {
-	width:100%;
+    width: 100%;
 }

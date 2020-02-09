@@ -38,7 +38,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-rimraf": "^0.1.1",
-    "gulp-sass": "^2.1.1",
+    "gulp-sass": "^4.0.2",
     "gulp-scss-lint": "^0.2.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-svgmin": "^1.1.2",
@@ -47,9 +47,9 @@
     "gulp-util": "^3.0.1",
     "gulp-watch": "^4.2.4",
     "imagemin": "^3.1.0",
-    "imagemin-jpegtran": "^4.2.0",
+    "imagemin-jpegtran": "^4.3.2",
     "jshint-stylish": "^2.0.1",
-    "main-bower-files": "^2.8.2",
+    "main-bower-files": "^2.13.3",
     "postcss-easing-gradients": "^1.2.3",
     "uglify": "^0.1.5"
   },
@@ -61,6 +61,8 @@
   "dependencies": {
     "autoprefixer": "^8.6.4",
     "gulp-clean-css": "^4.2.0",
+    "jpegtran": "^1.0.6",
+    "jpegtran-bin": "^4.0.0",
     "node-sass": "^4.9.0",
     "postcss-pixels-to-rem": "^0.8.0"
   }

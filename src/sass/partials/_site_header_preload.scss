@@ -1,182 +1,249 @@
 .nav-fixed-bar {
-	position: fixed;
-	background-color:white;
-	z-index:10;
-	width:100%;
-	display:flex;
-	flex-wrap: nowrap;
-	align-items: center;
-	flex-direction:row;
-	justify-content:space-between;
-	top:0;
-	transform: translateY(-120px);
-	// box-shadow: 0 0 40px 15px rgba($med, .4);
-	box-shadow: 0 0 rem(175) rgba($dark, .3);
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    transform: translateY(-120px);
+    box-shadow: 0 0 40px 15px rgba($med, .4);
 
-		@media screen and (max-width:em($header-break-2)) {
-			flex-direction: column;
-		}
-		a {background-image: none;}
+    @media screen and (max-width:em(560)) {
+        flex-direction: column;
+    }
+
+    a {
+        background-image: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        background-color: $dark_aqua;
+        box-shadow: none;
+    }
+
 }
+
 .nav-fixed-bar--nodisplay {
-		transform: translateY(0);
-		background-color: transparent;
-		box-shadow: none;
-		position:absolute;
+    transform: translateY(0);
+    background-color: transparent;
+    box-shadow: none;
+    position: absolute;
 }
+
 .main-header-logo {
-	fill:$aqua;
-	// to get height divide the width by 4
-	height:rem(65);
-	width:rem(260);
-	margin:rem(12) 0 rem(12) rem(15);
-	opacity:1; //change back to 0
-	transform: scale(1,1);
-	transition:fill .2s;
-	cursor:pointer;
-			@media screen and (max-width:em($header-break-1)) {
-				height:rem(50);
-				width:rem(200);
-			}
-			@media screen and (max-width:em($header-break-3)) {
-				height:rem(50);
-				width:rem(200);
-				margin:rem(9) 0 0;
-			}
-		&:hover {fill:$x-light_aqua;transition:fill .2s;}
+    fill: $aqua;
+    // to get height divide the width by 4
+    height: rem(65);
+    width: rem(260);
+    margin: rem(12) 0 rem(12) rem(15);
+    opacity: 1; //change back to 0
+    transform: scale(1, 1);
+    transition: fill .2s;
+    cursor: pointer;
+
+    @media screen and (max-width:em(700)) {
+        height: rem(55);
+        width: rem(220);
+    }
+
+    @media screen and (max-width:em(430)) {
+        height: rem(50);
+        width: rem(200);
+        margin: rem(9) 0 0;
+    }
+
+    &:hover {
+        fill: $x-light_aqua;
+        transition: fill .2s;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        fill: $dm-light;
+    }
 }
+
 .main-header-logo--nodisplay {
-	fill:white;
+    fill: white;
 }
+
 .main-header-logo-link {
-	position: relative;
-	z-index:3;
+    position: relative;
+    z-index: 3;
 }
+
 .headspace-wrapper {
-	display:none;
-	pointer-events: none;
+    display: none;
+    pointer-events: none;
 }
+
 .nav-menu-button {
-	display:none;
-	font-size:rem(10);
-	font-family:$sans;
-	margin:0 0 rem(10);
-	text-align:center;
-		@media screen and (max-width:em($header-break-2)) {
-			display:block;
-		}
-	a{color:$x-light-aqua;display:block;}
+    display: none;
+    font-size: rem(10);
+    font-family: $sans;
+    margin: 0 0 rem(10);
+    text-align: center;
+
+    @media screen and (max-width:em(560)) {
+        display: block;
+    }
+
+    a {
+        color: $x-light-aqua;
+        display: block;
+    }
 }
+
 .nav-menu-button-icn {
-	width:rem(11);
-	height:rem(8);
-	fill:$x-light-aqua;
-	margin:0 auto;
+    width: rem(11);
+    height: rem(8);
+    fill: $x-light-aqua;
+    margin: 0 auto;
 }
-.icn-search-button {
-	width:rem(16);
-	height:rem(16);
-	fill:$med;
-	margin:0 rem(15) 0;
-	@media screen and (min-width:em($header-break-2)) {
-		margin:0 rem(10);
-	}
-	@media screen and (min-width:em($header-break-1)) {
-		margin:0 rem(25) 0 rem(15);
-	}
+
+.nav-list-wrapper {
+    width: 100%;
 }
-.nav-list-wrapper {width:100%;}
+
 .nav-list {
-	display:flex;
-	flex-direction:row;
-	justify-content: flex-end;
-	list-style-type: none;
-	margin:rem(5) rem(10) 0 0;
-	padding:0;
-	line-height:1;
-	list-style-type: none;
-	text-transform:uppercase;
-	font-family:$sans;
-	font-weight:bold;
-	@media screen and (max-width:em($header-break-2)) {
-		flex-direction: column;
-		justify-content: space-around;
-		height:0;
-		overflow:hidden;
-		margin:0;
-		transform: scale(.8);
-	}
-	li {
-		font-size:em(20);
-		margin:0 rem(5) 0 0;
-		padding:0 0 0 rem(18);
-		a {
-			color:$med;
-			 &:hover{color:$aqua;}
-		}
-		.icn-search-button {
-			fill:$med;
-			 &:hover{fill:$aqua;}
-		}
-		@media screen and (max-width:em($header-break-1)) {
-			font-size:rem(16);
-			margin:0 rem(5) 0 0;
-		}
-		@media screen and (max-width:em($header-break-2)) {
-			text-align:center;
-			font-size:rem(18);
-			margin:rem(8) 0;
-			padding:0;
-		}
-	}
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0 rem(10) 0 0;
+    flex-grow: 2;
+
+    @media screen and (max-width:em(560)) {
+        flex-direction: column;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        transform: scale(.8);
+    }
+
+    li {
+        font-size: em(20);
+        font-family: $sans;
+        text-transform: uppercase;
+        text-align: right;
+        margin: 0 rem(5) 0 0;
+        padding: 0 0 0 rem(18);
+        font-weight: 700;
+        line-height: 100%;
+        list-style-type: none;
+
+        a {
+            color: $med;
+
+            @media (prefers-color-scheme: dark) {
+                color: $light;
+            }
+        }
+
+        @media screen and (max-width:em(700)) {
+            font-size: rem(16);
+            margin: 0 rem(5) 0 0;
+        }
+
+        @media screen and (max-width:em(560)) {
+            text-align: center;
+            font-size: rem(18);
+            margin: 0 0 rem(20);
+            padding: 0;
+        }
+    }
 }
-.nav-list.nav-list--nodisplay {
-	 li {
-		 a {
-			 color:white;
-			 	&:hover{color:$x-light-aqua;}
-		 }
-		 .icn-search-button {
-			 fill:white;
-			 	&:hover{fill:$x-light-aqua;}
-		 }
-	 }
+
+.nav-list--nodisplay {
+    li {
+        a {
+            color: white;
+        }
+    }
 }
+
 // variations for different versions of header
 .small-billboard {
-	.nav-fixed-bar--nodisplay {
-		&::after {
-			background: scrim-gradient(
-			 black,
-			 transparent
-		 );
-			background-size: cover;
-			content:'';
-			height:180px;
-			width:100%;
-			position: absolute;
-			top:0;
-			left:0;
-			z-index: -1;
-			mix-blend-mode: multiply;
-			opacity:.6;
-		}
-		}
+    .nav-fixed-bar--nodisplay {
+        &::after {
+            background: scrim-gradient(black,
+                    transparent);
+            background-size: cover;
+            content: '';
+            height: 180px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            mix-blend-mode: multiply;
+            opacity: .6;
+        }
+    }
 }
+
 .no-billboard {
-	.nav-fixed-bar {
-		background-color:white;
-		box-shadow:0 0 40px 15px rgba($med, .4);
-		position: fixed;
-		.main-header-logo {
-				fill:$aqua;
-				&:hover {fill:$light-aqua}
-			}
-		.nav-menu-button {
-			a {color:$med;}
-		}
-		.nav-menu-button-icn {
-				fill:$light;
-		}
-	}
+    .nav-fixed-bar {
+        background-color: white;
+        box-shadow: 0 0 40px 15px rgba($med, .4);
+        position: fixed;
+
+        .main-header-logo {
+            fill: $aqua;
+            &:hover {
+                fill: $light-aqua
+            }
+        }
+
+        .nav-menu-button {
+            a {
+                color: $med;
+                @media (prefers-color-scheme: dark) {color: $dm-light;}
+            }
+        }
+
+        .nav-menu-button-icn {
+            fill: $light;
+        }
+
+        .nav-list {
+            li {
+                a {
+                    color: $med;
+                    @media (prefers-color-scheme: dark) {color: $light;}
+
+                }
+            }
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .nav-fixed-bar {
+            background-color: $dark_aqua;
+            box-shadow: none;
+
+            .main-header-logo {
+                fill: $dm-light;
+
+                &:hover {
+                    fill: $light-aqua
+                }
+
+                .nav-menu-button {
+                    a {
+                        color: $dm-light;
+                    }
+                }
+
+                .nav-menu-button-icn {
+                    fill: $dm-light;
+                }
+            }
+        }
+    }
 }

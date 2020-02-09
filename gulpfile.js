@@ -325,7 +325,7 @@ gulp.task('css', function () {
   ];
   gulp.src([paths.styles.input, paths.styles.exclude])
     .pipe(sourcemaps.init())
-    .pipe(scsslint())
+    // .pipe(scsslint())
     .pipe(sass())
     .pipe(postcss(plugins))
     .pipe(rename(filename))
@@ -354,7 +354,7 @@ gulp.task('css-inline', function () {
     })
   ];
   gulp.src([paths.styles.inputInline])
-    .pipe(scsslint())
+    // .pipe(scsslint())
     .pipe(sass())
     .pipe(postcss(plugins))
     .pipe(gulp.dest(paths.styles.outputInline))
@@ -411,8 +411,8 @@ gulp.task('blog-images', function () {
         gmfile.colorspace('sRGB'),
         gmfile.crop(1400, 824, 0, 0);
     }, {
-        imageMagick: true
-      }
+      imageMagick: true
+    }
     ))
 
     // Crunches Images
@@ -510,8 +510,8 @@ gulp.task('hero', function () {
         gmfile.colorspace('sRGB'),
         gmfile.crop(2300, 856, 0, 0);
     }, {
-        imageMagick: true
-      }))
+      imageMagick: true
+    }))
 
     // Crunches images
     .pipe(imagemin({
@@ -673,8 +673,8 @@ gulp.task('hero-index', function () {
 
       // gulp // Again, I don't think this belongs here
     }, {
-        imageMagick: true
-      }))
+      imageMagick: true
+    }))
 
     // Crunches images
     .pipe(imagemin({

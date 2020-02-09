@@ -1,5 +1,11 @@
-$droid: 'Droid Serif', georgia, times, serif;
-$sans: 'Ginger', helvetica, arial, sans-serif;
+$droid: 'Droid Serif',
+georgia,
+times,
+serif;
+$sans: 'Ginger',
+helvetica,
+arial,
+sans-serif;
 
 /* colors */
 $body:#3C3C3C;
@@ -15,9 +21,7 @@ $light:#d0d0d0;
 $xxlight:#f5f5f5;
 $xlight:#e4e2e2;
 
+$dm-dark:#222;
+$dm-light:#e6e6e6;
 
-// breakpoints
-
-$header-break-1:768;
-$header-break-2:650;
-$header-break-3:430;
+$image-ratio: 58.9%;

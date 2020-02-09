@@ -92,11 +92,15 @@
 		display:block;
 		content:' ';
 		width:100%;
-		padding-bottom:59%;
+		padding-bottom:$image-ratio;
 		box-shadow:0 0 rem(50) rgba($med, .3) inset;
 		transition: box-shadow .2s;
 		z-index:2;
+		mix-blend-mode: multiply;
+		@media (prefers-color-scheme: dark) {
+			box-shadow:0 0 rem(50) rgba($dm-dark, .7) inset;
 		}
+	}
 }
 .wide-photo-overlay{
 	&::after{
