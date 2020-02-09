@@ -8,7 +8,7 @@ subhead:
 tags: [feelings,happiness,life,personal shit,philosophy,spring]
 image:  renstimpy
 imageAlt: "\"Ren and Stimpy\" episode with the Happy Helmet."
-promo: "Happiness isn\'t a state of being. It\'s something you get for awhile."
+promo: "Happiness isn't a state of being. It's something you get for awhile."
 ---  
 
 One of the most poignant lines in all pop music I find in Weezer's disposable ditty *[Island in the Sun][1]*.

@@ -9,7 +9,7 @@ tags: ['Apple Watch', 'Apple', 'reviews', 'iPhone', 'reviews', 'technology', 'th
 image: apple_watch_cursor
 imageAlt: "Apple Watch with endlessly spinning load cursor"
 promo: "After six months of using the Apple Watch, a re-review"
-quote: "But the Watch is a far more ambitious product than that. That\'s where it runs into problems."
+quote: "But the Watch is a far more ambitious product than that. That's where it runs into problems."
 ---  
 
 I work many mornings from a coffee shop near my apartment before heading into the office.

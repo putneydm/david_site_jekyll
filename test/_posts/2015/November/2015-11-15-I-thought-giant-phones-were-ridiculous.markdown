@@ -9,7 +9,7 @@ tags: ['phones', 'iPhone', 'UX', 'size', 'design', 'technology']
 image: steve_jobs_three_devices
 imageAlt: "Steve Jobs introducing the iPhone as three devices in 2007."
 promo: "I thought giant phones were ridiculous. Until I got one"
-quote: "Yet Apple tends to have  a \"we know best\" attitude concerning UX  matters. It\'s not surprising that Apple stuck by its initial design choices."
+quote: "Yet Apple tends to have  a \"we know best\" attitude concerning UX  matters. It's not surprising that Apple stuck by its initial design choices."
 blogimage:
 blogalt:
 ---  

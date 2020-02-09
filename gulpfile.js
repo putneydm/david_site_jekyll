@@ -12,7 +12,7 @@ var concat = require('gulp-concat'),
 //css
 var sass = require('gulp-sass'),
   minifyCSS = require('gulp-clean-css'), // Add var prefix for consistency
-  scsslint = require('gulp-scss-lint'),
+  // scsslint = require('gulp-scss-lint'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano');
 
@@ -325,7 +325,7 @@ gulp.task('css', function () {
   ];
   gulp.src([paths.styles.input, paths.styles.exclude])
     .pipe(sourcemaps.init())
-    .pipe(scsslint())
+    // .pipe(scsslint())
     .pipe(sass())
     .pipe(postcss(plugins))
     .pipe(rename(filename))
@@ -354,7 +354,7 @@ gulp.task('css-inline', function () {
     })
   ];
   gulp.src([paths.styles.inputInline])
-    .pipe(scsslint())
+    // .pipe(scsslint())
     .pipe(sass())
     .pipe(postcss(plugins))
     .pipe(gulp.dest(paths.styles.outputInline))

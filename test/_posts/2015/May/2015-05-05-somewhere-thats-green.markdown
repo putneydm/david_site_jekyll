@@ -1,7 +1,7 @@
 ---
 layout: single_blog_entry
 pagetype: blog-entry
-title:  Somewhere that\'s green
+title:  Somewhere that's green
 date:   2015-03-03 21:57:52
 categories: blog-entry
 subhead:

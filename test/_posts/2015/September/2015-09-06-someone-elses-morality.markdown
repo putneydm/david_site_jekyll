@@ -8,7 +8,7 @@ subhead:
 tags: ["bad ideas for blog posts","controversial topics","gay marriage","morality"]
 image: moses
 imageAlt: "Moses carrying the Ten Commandments."
-promo: "Who\'s imposing their morality on the world? Everyone."
+promo: "Who's imposing their morality on the world? Everyone."
 ---  
 
 "She shouldn't impose her morality on others."

@@ -9,7 +9,7 @@ tags: ['Thanksgiving', 'cranberry sauce', 'I buried Paul', 'cooking', 'rants', '
 image: cranberry_sauce
 imageAlt: "Digusting canned cranberry sauce."
 promo: "C'mon, America. We can do better than canned cranberry sauce"
-quote: "If there is any food you could serve to guests that says \"I give zero fucks\" more than this I\'m not sure what it would be."
+quote: "If there is any food you could serve to guests that says \"I give zero fucks\" more than this I'm not sure what it would be."
 ---  
 Would you serve frozen turkey roll heated in a microwave to guests?
 
