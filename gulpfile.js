@@ -207,7 +207,7 @@ gulp.task('concat', function () {
     .pipe(sourcemaps.init())
     .pipe(babel())
     .pipe(concat(scriptname)) // renames to file w/ todays date for cachebusting
-    //  .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
+     .pipe(replace(/this\.loadCSS.*/g, 'this.loadCSS(\'/css/' + filename + '\');')) // adds cachebusted name of css to css lazyload
     .pipe(minifyJS())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(paths.scripts.testing))

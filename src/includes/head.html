@@ -10,10 +10,6 @@
       {% include index_embeded_styles.css %}
     {% elsif page.pagetype == "blog" or page.pagetype == "blog-entry" %}
       {% include blog_embedded_styles.css %}
-      {% elsif page.pagetype == "search" or page.pagetype == "searchAdmin" %}
-        {% include search_page.css %}
-        {% include search_animations.css %}
-        {% include blog_embedded_styles.css %}
     {% endif %}
     {% include main_embedded_styles.css %}
 
