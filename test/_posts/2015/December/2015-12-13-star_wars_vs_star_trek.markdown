@@ -9,7 +9,7 @@ image: star-trek-vs-star-wars
 imageAlt: "People in Star Trek uniforms next to people in Stormtrooper costumes."
 promo: "\"Star Wars\" or \"Star Trek\": Which is best? Is it possible to even know?"
 quote: "In the runup to the \"Star Trek\" relaunch he managed to repeatedly enrage fans by stating he didn't like \"Star Trek\" and didn't watch it."
-quotetwo: "Surely nothing in Trekdom is as bad as a cooing Diane Carroll providing virtual reality spank material for Chewbacca\'s grandfather Itchy."
+quotetwo: "Surely nothing in Trekdom is as bad as a cooing Diane Carroll providing virtual reality spank material for Chewbacca's grandfather Itchy."
 ---  
 S _tar Wars_ vs. _Star Trek_. Which is best?
 

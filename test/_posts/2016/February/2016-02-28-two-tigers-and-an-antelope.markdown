@@ -8,7 +8,7 @@ subhead:
 tags: []
 image: 'tiger-antelope'
 imageAlt: "A diorama of a tiger leaping at an antelope in a metaphor for how democracy works."
-promo: "This issue is not just an unusual situation, it\'s a political one too"
+promo: "This issue is not just an unusual situation, it's a political one too"
 quote: "Fights over rights aren't neat academic abstractions. It's why questions like these are so difficult."
 ---  
 

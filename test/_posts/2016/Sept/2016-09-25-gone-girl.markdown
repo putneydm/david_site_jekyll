@@ -9,7 +9,7 @@ tags: ['Star Trek', 'Star Trek IV: The Voyage Home', 'missing persons', 'movies'
 image: star_trek_four
 imageAlt: "Gillian Taylor talks to Spock and Capt. Kirk"
 promo: "The dark story hiding within the funnest Star Trek movie"
-quote: From her coworker\'s perspective the whole incident is a horrifying tragedy and mystery that would haunt them for the rest of their lives.
+quote: From her coworker's perspective the whole incident is a horrifying tragedy and mystery that would haunt them for the rest of their lives.
 ---  
 
 Of all the movies in the *Star Trek* canon, *Star Trek IV: The Voyage Home* is an outlier.

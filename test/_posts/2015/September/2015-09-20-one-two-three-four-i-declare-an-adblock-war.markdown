@@ -8,7 +8,7 @@ subhead:
 tags: ["ad blocking","apocalypses","end of times","news","newspapers","Star Trek","Whatever Happened to Baby Jane?"]
 image: newspapers_adblock
 imageAlt: "Dinosaurs watching the meteor that will wipe them out approach."
-promo: "Ad blocking is a crisis of news orgs\' own making, but it is a crisis nonetheless."
+promo: "Ad blocking is a crisis of news orgs' own making, but it is a crisis nonetheless."
 ---  
 
 It's the ad-block-apocalypse.

@@ -139,6 +139,9 @@
         font-size: em(18);
         color: $dark;
         margin: 0 0 5px;
+         @media ( prefers-color-scheme: dark) {
+            color:$x-light-aqua;
+        }
     }
 }
 

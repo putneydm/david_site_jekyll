@@ -8,7 +8,7 @@ subhead:
 tags: [careers,employment,jobs,me,news,newspapers,The Boston Globe]
 image:  mic
 imageAlt: "Mic drop"
-promo: "I fled the news today, oh boy. After 20 years, it\'s time for a change."
+promo: "I fled the news today, oh boy. After 20 years, it's time for a change."
 ---  
 
 I've worked at newspapers since 1987.

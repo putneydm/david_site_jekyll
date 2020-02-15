@@ -8,7 +8,7 @@ subhead:
 tags: [Apple,bugs,code,commentary,iOS,iPhone,keyboards]
 image:  starship
 imageAlt: "Image of tanker bug from \"Starship Troopers\""
-promo: "C\'mon, Apple. The only good bug is a dead bug"
+promo: "C'mon, Apple. The only good bug is a dead bug"
 ---  
 
 Marco Arment drew ire -- and admiration -- for [his blog post][1] arguing that Apple software had lost "the functional high ground."

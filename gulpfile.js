@@ -12,7 +12,7 @@ var concat = require('gulp-concat'),
 //css
 var sass = require('gulp-sass'),
   minifyCSS = require('gulp-clean-css'), // Add var prefix for consistency
-  scsslint = require('gulp-scss-lint'),
+  // scsslint = require('gulp-scss-lint'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano');
 

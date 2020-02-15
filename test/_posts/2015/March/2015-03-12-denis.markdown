@@ -8,7 +8,7 @@ subhead:
 tags: [appreciation,Denis Finley,news,newspapers,The Virginian-Pilot]
 image:  denis
 imageAlt: "Denis Finley, then-editor of The Virginian-Pilot, at his desk."
-promo: "He didn\'t want to leave the place worse off. That\'s just how it worked out."
+promo: "He didn't want to leave the place worse off. That's just how it worked out."
 ---  
 
 I got a text message a few hours ago from a longtime friend.

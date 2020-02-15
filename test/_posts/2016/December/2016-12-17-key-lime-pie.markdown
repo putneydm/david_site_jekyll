@@ -8,7 +8,7 @@ subhead:
 tags: ['recipes', 'pie', 'dessert', 'key lime pie', 'cooking']
 image: key-limes
 imageAlt: "Key limes"
-promo: "How to make the world\'s best key lime pie"
+promo: "How to make the world's best key lime pie"
 quote: Graham crackers are shit.
 ---  
 

@@ -8,7 +8,7 @@ subhead:
 tags: ['commentary', 'films', 'Mad Max: Fury Road', 'movie', 'navel gazing', 'violence' ]
 image: furiosa
 imageAlt: Imperator Furiosa screaming
-promo: "With Immortan Joe dead, Imperator Furiosa\'s problems were just beginning"
+promo: "With Immortan Joe dead, Imperator Furiosa's problems were just beginning"
 quote: "While the Citadel is a defensible position from a strategic standpoint, Furiosa is in a poor tactical situation."
 ---  
 

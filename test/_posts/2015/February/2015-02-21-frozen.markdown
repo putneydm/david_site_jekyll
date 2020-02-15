@@ -8,7 +8,7 @@ subhead:
 tags: [weather, Boston, cold, snow, snowpocalypse, winter, whining]
 image:  frozen
 imageAlt: "Aerial shot of Boston covered in snow."
-promo: "There's snow. And then there\'s snow. Make it stop."
+promo: "There's snow. And then there's snow. Make it stop."
 ---  
 
 I've been through four hurricanes and countless Nor'easters.

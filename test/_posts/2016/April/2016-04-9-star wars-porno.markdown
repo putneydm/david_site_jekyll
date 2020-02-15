@@ -8,7 +8,7 @@ subhead:
 tags: ["Star Wars", "Death Star", "movies", "porno", "lame jokes", "sexual innuendo", "nerd shit"]
 image: X-wing_Fathead
 imageAlt: "Close up shot of the front of an X-Wing fighter"
-promo: "30 lines from the \'Star Wars\' Death Star attack scene that could be from a porno movie"
+promo: "30 lines from the 'Star Wars' Death Star attack scene that could be from a porno movie"
 ---  
 * "Should be able to penetrate ..."
 * "You are required to maneuver straight down this trench ..."
