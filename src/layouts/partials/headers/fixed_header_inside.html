@@ -12,13 +12,16 @@
     </div>
   <nav class="nav-list-wrapper">
 
-{% if pageType  == 'blog-entry' or pageType == 'error' or pageType == 'tag-archive' %}
+{% if pageType == 'blog' or pageType == 'about' or pageType == 'portfolio_entry' %}
+<ul id="nav-menu" class="nav-list nav-list--nodisplay">
+  @@include('../shared/nav_links.html')
+</ul>
+{% else %}
   <ul id="nav-menu" class="nav-list">
-{% elsif pageType  == 'blog' or pageType == 'about' or pageType == 'portfolio_entry' %}
-  <ul id="nav-menu" class="nav-list nav-list--nodisplay">
-{% endif%}
     @@include('../shared/nav_links.html')
   </ul>
+{% endif%}
+
 </nav>
   @@include('components/menu_button.html')
   <div class="scroll-progress-wrapper">
