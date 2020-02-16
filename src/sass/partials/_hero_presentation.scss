@@ -137,6 +137,7 @@
 }
 
 .large-billboard {
+    z-index:1;
     .hero-art {
         @include aspect-ratio (100, 0, 23, 10.4);
         min-height: em(365);
