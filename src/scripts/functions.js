@@ -385,8 +385,8 @@ var pageFunctions = {
       "name": "email-link",
       "link": "mailto:david@davidputney.com?Subject=Website%20feedback"
     }, {
-      "name": "twitter-link",
-      "link": "https://twitter.com/putneydm"
+      "name": "linked-in",
+      "link": "https://www.linkedin.com/in/davidmputney"
     }, {
       "name": "facebook-link",
       "link": "https://www.facebook.com/david.putney"
