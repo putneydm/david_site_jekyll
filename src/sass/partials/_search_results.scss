@@ -8,6 +8,10 @@
   margin: 0 0 rem(60) 0;
   border-bottom: 1px solid $med;
   padding: 0 0 rem(10) 0;
+  color: $dark;
+  		@media (prefers-color-scheme: dark) {
+        color: $x-light-aqua;
+      }  
 }
 
 .search-results-link {
@@ -16,6 +20,29 @@
 
 .search-results-entry {
   @extend .blog-entry !optional;
+}
+em .search-results-entry p, em .search-results-entry h2 {
+  .search-results-entry {
+    p, h2 {
+      font-style: normal;
+    }
+  }
+}
+
+em {
+  .search-results-entry {
+    &>h2.blog-headline {
+      font-style: normal;
+      color:red;
+    }
+  }
+  .search-results-entry {
+    &>.blog-entry-text {
+      &>p {
+        font-style: normal;
+      }
+    }
+  }
 }
 
 input,
@@ -52,21 +79,11 @@ button {
   transition-delay: .2s;
 }
 
-.search-results-header {
-  font-family: $sans;
-  font-size: em(16);
-  margin: 0 0 rem(60) 0;
-  border-bottom: 1px solid $med;
-  padding: 0 0 rem(10) 0;
-  color: $dark;
-}
-
 .search-results-header > span {
   color: black;
 }
 
 .search-results-link {
-  // @extend .teaser-module-abstract-link;
   font-size: em(14);
 }
 
