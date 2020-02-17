@@ -19,6 +19,7 @@ var pageFunctions = {
     this.addLink();
     this.initResizeListener();
     this.getElementsAll();
+    this.handleDate();
   },
   intializeBlog: function () {
     var self = this;
@@ -901,6 +902,9 @@ var pageFunctions = {
       self.removeShitTimer(topNav, 'nav-list--close', 500);
       self.handleHeadlineSwap(true); // boolean signals button press;
     }
+  },
+  handleDate: function () {
+    document.querySelector('#current-year').innerHTML = new Date().getFullYear().toString();
   },
   getScrollPosition: function () {
     var sp = window.scrollY;
