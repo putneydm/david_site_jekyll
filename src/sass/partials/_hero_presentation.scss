@@ -141,7 +141,7 @@
     .hero-art {
         @include aspect-ratio (100, 0, 23, 10.4);
         min-height: em(365);
-
+        z-index:1;
         &::before {
             @include aspect-ratio (100, 0, 23, 10.4);
             min-height: rem(365);
