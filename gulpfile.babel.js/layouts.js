@@ -3,12 +3,17 @@ import { paths, cacheBustNames } from "./variables"
 
 const fileinclude = require('gulp-file-include');
 const replace = require('gulp-replace');
-
 const { scriptname, searchname, adminname } = cacheBustNames;
+const {
+    pageLayouts: {
+        input: input,
+        testing: test,
+    }
+} = paths;
 
 // moves page templates from src to testing
 function layouts() {
-    return src(paths.pageLayouts.input)
+    return src(input)
     .pipe(fileinclude({
         prefix: '@@',
         basepath: '@file'
@@ -17,7 +22,7 @@ function layouts() {
     .pipe(replace(/\*cachebustsearch\*/g, searchname)) // adds cachebusted name of scripts to js links file
     .pipe(replace(/\*cachebustadmin\*/g, adminname)) // adds cachebusted name of scripts to js links file
 
-    .pipe(dest(paths.pageLayouts.testing))
+    .pipe(dest(test))
 }
 
 exports.layouts = layouts;
