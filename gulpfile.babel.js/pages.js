@@ -5,14 +5,13 @@ const { scriptname } = cacheBustNames;
 const replace = require('gulp-replace');
 const fileinclude = require('gulp-file-include');
 
-const {
+const { 
     pages: {
         input: input,
         exclude: exclude,
         testing: test
     }
 } = paths;
-
 
 //  compiles pages from partials
 function pages() {
