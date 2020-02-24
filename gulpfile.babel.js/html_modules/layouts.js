@@ -1,5 +1,5 @@
 const { src, dest } = require('gulp');
-import { paths, cacheBustNames } from "./variables"
+import { paths, cacheBustNames } from "../variables"
 
 const fileinclude = require('gulp-file-include');
 const replace = require('gulp-replace');

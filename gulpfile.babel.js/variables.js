@@ -3,6 +3,7 @@ const paths = {
         input: 'src/layouts/**/{*.html,*shtml}',
         testing: 'test/_layouts/',
         watch: 'src/layouts/**/{*.html,*shtml}',
+        links: 'src/layouts/js_links.html',
         dist: 'dist/'
     },
     pages: {
@@ -25,7 +26,9 @@ const paths = {
         bower: 'src/scripts/bower_components/**/*.js',
         vendor: 'src/scripts/vendor/*.js',
         testing: 'test/scripts/',
-        dist: 'dist/scripts/'
+        dist: 'dist/scripts/',
+        admin: 'src/scripts/exclude/search_admin.js',
+        search: 'src/scripts/exclude/search.js'
     },
     bower: {
         components: 'bower_components',
