@@ -19,6 +19,7 @@ import { cleanFolders } from "./cleaners/cleanfolders"
 import { blogImages } from "./visuals/blogimages"
 import { heroImages } from "./visuals/heroimages"
 import { heroIndex } from "./visuals/heroimagesindex"
+import { cleanCSS } from "./cleaners/cleanCSS"
 
 const { src, dest, parallel, series } = require('gulp');
 
@@ -44,3 +45,4 @@ exports.cleanFolders = cleanFolders;
 exports.blogImages = blogImages;
 exports.heroImages = heroImages;
 exports.heroIndex = heroIndex;
+exports.cleanCSS = cleanCSS;
