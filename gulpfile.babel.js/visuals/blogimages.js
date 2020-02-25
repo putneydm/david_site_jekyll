@@ -12,7 +12,6 @@ const {
         input: input,
         testing: test,
         dist: dist,
-        output: output
     }
 } = paths;
 

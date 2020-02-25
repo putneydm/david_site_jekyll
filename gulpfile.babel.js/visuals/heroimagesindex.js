@@ -15,19 +15,21 @@ const {
     }
 } = paths;
 
-// Large heros
-function heroLarge() {
-    return src(input)
+// Large hero
+function largeHeroIndex(done) {
+    src(input)
         .pipe(gm(function (gmfile) {
             return gmfile.setFormat('jpg'),
                 gmfile.resample(72, 72),
-                gmfile.thumbnail(2300, '856^'),
+                gmfile.thumbnail(2300, '1040!'),
                 gmfile.quality(82),
                 gmfile.filter('triangle'),
                 gmfile.unsharp('0.25x0.25+8+0.065'),
                 gmfile.interlace('none'),
-                gmfile.colorspace('sRGB'),
-                gmfile.crop(2300, 856, 0, 0);
+                gmfile.colorspace('sRGB')
+            gmfile.crop(2300, 1040, 0, 0);
+
+            // gulp // Again, I don't think this belongs here
         }, {
             imageMagick: true
         }))
@@ -45,21 +47,23 @@ function heroLarge() {
 
         .pipe(dest(test))
         .pipe(dest(dist));
+        done()
 }
 
+
 // Medium
-function heroMedium() {     
-    return src(paths.images.input)
+function medHeroIndex(done) {
+    return src(input)
         .pipe(gm(function (gmfile) {
             return gmfile.setFormat('jpg'),
                 gmfile.resample(72, 72),
-                gmfile.thumbnail(1500, '558^'),
+                gmfile.thumbnail(1500, '679^'),
                 gmfile.quality(82),
                 gmfile.filter('triangle'),
                 gmfile.unsharp('0.25x0.25+8+0.065'),
                 gmfile.interlace('none'),
                 gmfile.colorspace('sRGB'),
-                gmfile.crop(1500, 558, 0, 0);
+                gmfile.crop(1500, 679, 0, 0);
         }, {
             imageMagick: true
         }))
@@ -77,21 +81,22 @@ function heroMedium() {
 
         .pipe(dest(test))
         .pipe(dest(dist));
+        done()
 }
 
-// Small
-function heroSmall() {
-    return src(paths.images.input)
+    // Small
+function smallHeroIndex(done) {
+    return src(input)
         .pipe(gm(function (gmfile) {
             return gmfile.setFormat('jpg'),
                 gmfile.resample(72, 72),
-                gmfile.thumbnail(1000, '372^'),
+                gmfile.thumbnail(1000, '453^'),
                 gmfile.quality(82),
                 gmfile.filter('triangle'),
                 gmfile.unsharp('0.25x0.25+8+0.065'),
                 gmfile.interlace('none'),
                 gmfile.colorspace('sRGB'),
-                gmfile.crop(1000, 372, 0, 0);
+                gmfile.crop(1000, 453, 0, 0);
         }, {
             imageMagick: true
         }))
@@ -109,21 +114,22 @@ function heroSmall() {
 
         .pipe(dest(test))
         .pipe(dest(dist));
+        done()
 }
 
-// Large PL
-function plLarge() {
+    // Large PL
+function largePlIndex(done) {
     return src(input)
         .pipe(gm(function (gmfile) {
             return gmfile.setFormat('jpg'),
                 gmfile.resample(20, 20),
-                gmfile.thumbnail(700, '260^'),
+                gmfile.thumbnail(900, '407^'),
                 gmfile.quality(10),
                 gmfile.filter('triangle'),
                 gmfile.unsharp('0.25x0.25+8+0.065'),
                 gmfile.interlace('none'),
                 gmfile.colorspace('sRGB'),
-                gmfile.crop(700, 261, 0, 0);
+                gmfile.crop(900, 407, 0, 0);
         }, {
             imageMagick: true
         }))
@@ -141,21 +147,22 @@ function plLarge() {
 
         .pipe(dest(test))
         .pipe(dest(dist));
+        done()
 }
 
-    // Small PL
-function plSmall() { 
+// Small PL
+function smallPlIndex(done) {
     return src(input)
         .pipe(gm(function (gmfile) {
             return gmfile.setFormat('jpg'),
                 gmfile.resample(20, 20),
-                gmfile.thumbnail(300, '112^'),
-                gmfile.quality(10),
+                gmfile.thumbnail(500, '227^'),
+                gmfile.quality(82),
                 gmfile.filter('triangle'),
                 gmfile.unsharp('0.25x0.25+8+0.065'),
                 gmfile.interlace('none'),
                 gmfile.colorspace('sRGB'),
-                gmfile.crop(300, 112, 0, 0);
+                gmfile.crop(500, 227, 0, 0);
         }, {
             imageMagick: true
         }))
@@ -172,6 +179,7 @@ function plSmall() {
         }))
         .pipe(dest(test))
         .pipe(dest(dist));
+        done()
 }
 
-exports.heroImages = parallel(heroLarge, heroMedium, heroSmall, plLarge, plSmall);
+exports.heroIndex = parallel(largeHeroIndex, medHeroIndex, smallHeroIndex, largePlIndex, smallPlIndex)

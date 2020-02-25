@@ -18,6 +18,7 @@ import { collections } from "./movers/collections"
 import { cleanFolders } from "./cleaners/cleanfolders"
 import { blogImages } from "./visuals/blogimages"
 import { heroImages } from "./visuals/heroimages"
+import { heroIndex } from "./visuals/heroimagesindex"
 
 const { src, dest, parallel, series } = require('gulp');
 
@@ -42,3 +43,4 @@ exports.collections = collections;
 exports.cleanFolders = cleanFolders;
 exports.blogImages = blogImages;
 exports.heroImages = heroImages;
+exports.heroIndex = heroIndex;
