@@ -8,10 +8,16 @@ import { cachebustScripts } from "./js_modules/cachebustscripts"
 import { lintJS } from "./js_modules/lintjs"
 import { minifyScripts } from "./js_modules/minifyScripts"
 import { minifySearch } from "./js_modules/minifySearch"
-import { cleanJS } from "./cleanjs"
+import { cleanJS } from "./cleaners/cleanjs"
 import { minifyInlineScripts } from "./js_modules/minifyinlinescripts"
 import { css } from "./css_modules/css"
 import { cssInline } from "./css_modules/cssinline"
+import { svg } from "./visuals/svg"
+import { bower } from "./movers/bower"
+import { collections } from "./movers/collections"
+import { cleanFolders } from "./cleaners/cleanfolders"
+import { blogImages } from "./visuals/blogimages"
+import { heroImages } from "./visuals/heroimages"
 
 const { src, dest, parallel, series } = require('gulp');
 
@@ -30,3 +36,9 @@ exports.cleanJS = cleanJS;
 exports.minifyInlineScripts = minifyInlineScripts;
 exports.css = css;
 exports.cssInline = cssInline;
+exports.svg = svg;
+exports.bower = bower;
+exports.collections = collections;
+exports.cleanFolders = cleanFolders;
+exports.blogImages = blogImages;
+exports.heroImages = heroImages;
