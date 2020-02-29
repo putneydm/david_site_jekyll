@@ -3,7 +3,7 @@ const paths = {
         input: 'src/layouts/**/{*.html,*shtml}',
         testing: 'test/_layouts/',
         watch: 'src/layouts/**/{*.html,*shtml}',
-        links: 'src/layouts/js_links.html',
+        links: 'src/layouts/partials/js_links.html',
         dist: 'dist/'
     },
     pages: {
@@ -33,7 +33,7 @@ const paths = {
     bower: {
         components: 'bower_components',
         json: 'bower.json',
-        vendor: 'src/scripts/vendor/'
+        vendor: 'src/scripts/vendor/' 
     },
     styles: {
         input: 'src/sass/styles.scss',
