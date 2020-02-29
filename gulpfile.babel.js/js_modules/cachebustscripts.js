@@ -5,7 +5,7 @@ const { scriptname } = cacheBustNames;
 const replace = require('gulp-replace');
 
 const {
-    pageLayouts: {
+    pageLayouts: { 
         links: links
     }
 } = paths;
