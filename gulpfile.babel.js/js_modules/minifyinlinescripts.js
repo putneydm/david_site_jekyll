@@ -15,7 +15,7 @@ const {
     }
 } = paths;
 
-function minifyInlineScripts() {
+function minifyInlineScripts(done) {
     return src(input)
     .pipe(sourcemaps.init())
     .pipe(babel())
@@ -23,6 +23,7 @@ function minifyInlineScripts() {
     .pipe(minifyJS())
     .pipe(sourcemaps.write("."))
     .pipe(dest(output))
+    done()
 }
 
 exports.minifyInlineScripts = minifyInlineScripts;

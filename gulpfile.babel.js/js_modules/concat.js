@@ -18,7 +18,7 @@ const {
     }
 } = paths;
 
-function concatJs() {
+function concatJs(done) {
     return src([input, `!${inline}`, `!${exclude}`])
         .pipe(sourcemaps.init())
         // .pipe(babel())
@@ -28,6 +28,7 @@ function concatJs() {
         .pipe(sourcemaps.write("."))
         .pipe(dest(test))
         .pipe(dest(dist));
+        done()
 }
 
 exports.concatJs = concatJs;
