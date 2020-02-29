@@ -20,8 +20,13 @@ import { blogImages } from "./visuals/blogimages"
 import { heroImages } from "./visuals/heroimages"
 import { heroIndex } from "./visuals/heroimagesindex"
 import { cleanCSS } from "./cleaners/cleanCSS"
+import { cleanPages } from "./cleaners/cleanPages"
+
+import { paths } from "./variables"
 
 const { src, dest, parallel, series } = require('gulp');
+
+
 
 exports.default = series(layouts, pages, includes);
 exports.deploy = deploy;
