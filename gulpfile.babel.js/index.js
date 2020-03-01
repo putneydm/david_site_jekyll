@@ -68,7 +68,6 @@ exports.heroIndex = heroIndex;
 exports.deploy = deploy;
 exports.animations = animations;
 
-
 // combined tasks
 exports.default = series(parallel(cleanCSS, cleanJS, cleanPages), bower, svg, parallel(css, cssInline), parallel(concatJs, minifyInlineScripts), cachebustScripts, parallel(includes, layouts, pages, collections))
 
