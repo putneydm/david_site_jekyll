@@ -51,3 +51,35 @@ exports.blogImages = blogImages;
 exports.heroImages = heroImages;
 exports.heroIndex = heroIndex;
 exports.cleanCSS = cleanCSS;
+// watcher
+const {
+  styles: {
+    watch: inputCSS,
+    inputInline: inputInlineCSS
+  },
+  scripts: {
+    input: inputJS,
+    inline: inlineJS
+  },
+  includes: {
+    input: includesInput
+  },
+  pageLayouts: {
+    input: layoutsInput
+    },
+  pages: {
+    input: pagesInput
+    },
+} = paths;
+
+function watchTask() {
+  watch(
+    [inputCSS, inputInlineCSS, inputJS, inlineJS, includesInput, layoutsInput, pagesInput],
+    series(parallel(cleanCSS, cleanJS, cleanPages), parallel(css, cssInline), parallel(concatJs, minifyInlineScripts), cachebustScripts, parallel(includes, layouts, pages, collections))
+  );
+}
+
+exports.watcher = watchTask;
+
+
+
