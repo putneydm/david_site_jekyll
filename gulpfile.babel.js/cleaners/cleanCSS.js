@@ -10,11 +10,12 @@ const {
     }
 } = paths;
 
-function cleanCss() {
+function cleanCss(cb) {
     return src([
         `${test}/*.css`, `${dist}/*.css`, `${test}/*.css.map`, `${dist}/*.css.map`,
     ], { read: false })
         .pipe(cleanFiles())
+        cb();
 }
 
 exports.cleanCSS = cleanCss;

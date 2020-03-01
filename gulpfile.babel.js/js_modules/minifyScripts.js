@@ -15,7 +15,7 @@ const {
     }
 } = paths;
 
-function minifyScripts(done) {
+function minifyScripts() {
     src(admin)
     .pipe(sourcemaps.init())
     //  .pipe(babel())
@@ -24,7 +24,6 @@ function minifyScripts(done) {
     .pipe(sourcemaps.write("."))
     .pipe(dest(test))
     .pipe(dest(dist));
-    done();
 }
 
 exports.minifyScripts = minifyScripts;

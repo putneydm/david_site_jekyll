@@ -16,7 +16,7 @@ const {
     }
 } = paths;
 
-function minifySearch(done) {
+function minifySearch() {
     return src(search)
     .pipe(sourcemaps.init())
     .pipe(babel())
@@ -25,7 +25,6 @@ function minifySearch(done) {
     .pipe(sourcemaps.write("."))
     .pipe(dest(test))
     .pipe(dest(dist))
-    done()
 }
 
 exports.minifySearch = minifySearch;

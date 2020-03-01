@@ -10,10 +10,11 @@ const {
     }
 } = paths;
 
-function cleanImages() {
+function cleanImages(cb) {
     src(input)
     .pipe(clean())
     .pipe(dest(output));
+    cb();
 }
 
 exports.cleanImages = cleanImages;

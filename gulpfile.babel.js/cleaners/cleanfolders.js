@@ -8,10 +8,11 @@ const {
     }
 } = paths;
 
-function cleanFolders() {
+function cleanFolders(cb) {
     return del([
         input, exclude
     ]);
+    cb()
 }
 
 exports.cleanFolders = cleanFolders;

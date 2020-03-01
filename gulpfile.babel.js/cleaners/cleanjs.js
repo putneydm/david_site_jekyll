@@ -15,6 +15,7 @@ function cleanJS() {
         `${test}/*.js`, `${dist}/*.js`, `${test}/*.js.map`, `${dist}/*.js.map`
     ], { read: false })
         .pipe(cleanFiles())
+        cb();
 }
 
 exports.cleanJS = cleanJS;

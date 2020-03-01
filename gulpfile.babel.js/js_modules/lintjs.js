@@ -12,7 +12,7 @@ const {
     }
 } = paths;
 
-function lintJS() {
+function lintJS(cb) {
     return src([input, `!${inline}`, `!${exclude}`, `!${vendor}`])
         // .pipe(jshint())
         .pipe(eslint({
@@ -59,6 +59,7 @@ function lintJS() {
         // lint error, return the stream and pipe to failAfterError last.
         .pipe(eslint.failAfterError())
     // .pipe(jshint.reporter(stylish));
+    cb()
 }
 
 exports.lintJS = lintJS;
