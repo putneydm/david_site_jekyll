@@ -4,6 +4,7 @@ import { paths, cacheBustNames } from "../variables"
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require("gulp-sourcemaps");
+const scsslint = require('gulp-scss-lint');
 // postcss plugins
 const postcss = require('gulp-postcss');
 const pixelstorem = require('postcss-pixels-to-rem');
@@ -37,7 +38,6 @@ function css() {
     ];
     return src([input, exclude])
         .pipe(sourcemaps.init())
-        // .pipe(scsslint())
         .pipe(sass())
         .pipe(postcss(plugins))
         .pipe(rename(filename))
