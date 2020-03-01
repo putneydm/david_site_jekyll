@@ -1,56 +1,79 @@
-import { deploy } from "./deploy"
+// cleaners
+import { cleanJS } from "./cleaners/cleanjs"
+import { cleanFolders } from "./cleaners/cleanfolders"
+import { cleanCSS } from "./cleaners/cleanCSS"
+import { cleanPages } from "./cleaners/cleanPages"
+// css modules
+import { css } from "./css_modules/css"
+import { cssInline } from "./css_modules/cssinline"
+// html 
 import { layouts } from "./html_modules/layouts"
-import { concatJs } from "./js_modules/concat"
 import { pages } from "./html_modules/pages"
 import { includes } from "./html_modules/includes"
-import { animations } from "./animations"
+// scripts
 import { cachebustScripts } from "./js_modules/cachebustscripts"
+import { concatJs } from "./js_modules/concat"
 import { lintJS } from "./js_modules/lintjs"
 import { minifyScripts } from "./js_modules/minifyScripts"
 import { minifySearch } from "./js_modules/minifySearch"
-import { cleanJS } from "./cleaners/cleanjs"
 import { minifyInlineScripts } from "./js_modules/minifyinlinescripts"
-import { css } from "./css_modules/css"
-import { cssInline } from "./css_modules/cssinline"
-import { svg } from "./visuals/svg"
+// movers
 import { bower } from "./movers/bower"
 import { collections } from "./movers/collections"
-import { cleanFolders } from "./cleaners/cleanfolders"
+// util
+
+// visuals
+import { svg } from "./visuals/svg"
 import { blogImages } from "./visuals/blogimages"
 import { heroImages } from "./visuals/heroimages"
 import { heroIndex } from "./visuals/heroimagesindex"
-import { cleanCSS } from "./cleaners/cleanCSS"
-import { cleanPages } from "./cleaners/cleanPages"
 
+// other
+import { animations } from "./animations"
 import { paths } from "./variables"
+import { deploy } from "./deploy"
 
-const { src, dest, parallel, series } = require('gulp');
+// variables
+const { parallel, series, watch } = require('gulp');
 
 
-
-exports.default = series(layouts, pages, includes);
-exports.deploy = deploy;
+// cleaners
+exports.cleanJS = cleanJS;
+exports.cleanFolders = cleanFolders;
+exports.cleanCSS = cleanCSS;
+exports.cleanPages = cleanPages; 
+// css
+exports.css = css;
+exports.cssInline = cssInline;
+// html
 exports.layouts = layouts;
-exports.concatJs = concatJs;
 exports.pages = pages;
 exports.includes = includes;
-exports.animations = animations;
+// scripts
 exports.cachebustScripts = cachebustScripts;
 exports.lintJS = lintJS;
 exports.minifyScripts = minifyScripts;
 exports.minifySearch = minifySearch;
-exports.cleanJS = cleanJS;
+exports.concatJs = concatJs;
 exports.minifyInlineScripts = minifyInlineScripts;
-exports.css = css;
-exports.cssInline = cssInline;
-exports.svg = svg;
+// movers
 exports.bower = bower;
 exports.collections = collections;
-exports.cleanFolders = cleanFolders;
+// visuals
+exports.svg = svg;
 exports.blogImages = blogImages;
 exports.heroImages = heroImages;
 exports.heroIndex = heroIndex;
-exports.cleanCSS = cleanCSS;
+// other
+exports.deploy = deploy;
+exports.animations = animations;
+
+
+// combined tasks
+exports.default = series(parallel(cleanCSS, cleanJS, cleanPages), bower, svg, parallel(css, cssInline), parallel(concatJs, minifyInlineScripts), cachebustScripts, parallel(includes, layouts, pages, collections))
+
+exports.rebuild = series(parallel(cleanCSS, cleanJS, cleanPages), parallel(css, cssInline), parallel(concatJs, minifyInlineScripts), cachebustScripts, parallel(includes, layouts, pages, collections))
+
 // watcher
 const {
   styles: {
