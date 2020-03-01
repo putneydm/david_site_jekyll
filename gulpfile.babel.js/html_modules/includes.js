@@ -2,7 +2,6 @@ const { src, dest } = require('gulp');
 import { paths, cacheBustNames } from "../variables"
 
 const { filename } = cacheBustNames;
-
 const {
     includes: {
         input: input,
