@@ -12,7 +12,10 @@ permalink: /:year/:month/:title.html
 # Build settings
 markdown: kramdown
 
+plugins: [jekyll/tagging, jekyll-paginate, jekyll-sitemap]
+
 gems:
+  - jekyll-tagging
   - jekyll-paginate
   - jekyll-sitemap
 
