@@ -1,0 +1,13 @@
+/*woff2*/
+@font-face {
+    font-family: 'Droid Serif';
+    src: url(fonts_in/woff2/droidserif-regular-webfont.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ginger';
+    src: url(fonts_in/woff2/f37ginger-bold-webfont.woff2);
+    font-weight: bold;
+    font-style: normal;
+}

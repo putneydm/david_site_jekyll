@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+// @import 'bourbon/bourbon';
+@import 'partials/mixins';
+@import 'partials/variables';
+
+@import 'partials/text_styles';
+
+@import 'partials/footer';
+@import 'partials/index';
+@import 'partials/portfolio_page';
+@import 'partials/about';
+@import 'partials/blog';
+@import 'partials/blog_preload';
+@import 'partials/forms';
+@import 'partials/search_results';
+@import 'partials/icons';
+// @import 'partials/404_page';
+@import 'partials/animations';
+@import 'partials/no_js';
+@import 'partials/no_fonts';
+
+@import 'partials/syntax-highlighting';

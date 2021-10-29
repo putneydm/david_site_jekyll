@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+  {% include head.html %}
+  {% assign hero-art = page.heroArt %}
+
+<body id="index-page" class="one" data-pagetype="index-page">
+  @@include('partials/skip_links.html')
+  <div class="svg-import hidden" aria-hidden="true">
+      @@include('../svg/svgsprite.svg')
+  </div>
+  @@include('partials/index/index_hero_presentation.html')
+<main id="main" class="main">
+  @@include('partials/index/intro_text_block.html')
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+  </main>
+
+  @@include('partials/footer/footer.html')
+  </body>
+  @@include('partials/js_links.html')
+  {% include js_embeds.html %}
+
+  {% include google_analytics.html %}
+</html>

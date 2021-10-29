@@ -1,0 +1,38 @@
+<article class="teaser-module-container">
+  
+    @@include('partials/blog_components/blog_image_test.html')
+  
+
+<div class="portfolio-text-block">
+    <article class="teaser-module-container">
+  {% if page.slides %}
+    @@include('partials/portfolio/slide_show.html')
+  {% else %}
+    @@include('partials/blog_components/blog_image_test.html')
+  {% endif %}
+
+<div class="portfolio-text-block">
+    {{page.content}}
+</div>
+{% if page.images %}
+  @@include('partials/portfolio/triple_image.html')
+{% endif %}
+
+{% if page.video %}
+  @@include('partials/portfolio/video_embed.html')
+{% endif %}
+
+{% if page.url %}
+  @@include('partials/portfolio/button.html')
+{% endif %}
+</article>
+
+</div>
+
+
+
+
+
+  @@include('partials/portfolio/button.html')
+
+</article>

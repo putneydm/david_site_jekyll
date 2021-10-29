@@ -1,0 +1,77 @@
+
+	<aside id="blog-teaser-wrapper" class="blog-teaser-wrapper">
+	<h4 class="blog-teaser-label">You might also like</h4>
+	<ul class="blog-teaser-list">
+
+		<!-- {% assign currentEntry = page %} -->
+
+		{% assign myArray = site.array %}
+		{% assign postArray = site.array %}
+
+		{% for post in site.categories.blog-entry limit: 3 offset:1 %}
+			{% assign postArray = postArray | push: post.title %}
+		{% endfor %}
+
+		{% for post in site.categories.promo %}
+				{% if post.title != postArray[0] or item.title != postArray[1] or item.title != postArray[2] %}
+					{% assign myArray = myArray | push: post %}
+				{% endif %}
+		{% endfor %}
+		{% assign size = myArray.size %}
+		{% assign randompost = site.time | date: "%s%N" | modulo: size %}
+
+		<li class="blog-teaser-item blog-teaser-highlight will-change-ot">
+			<a href="{{ myArray[randompost].url }}" rel="canonical">
+			<figure class="blog-teaser-image med-photo-overlay">
+			{% if myArray[randompost].image %}
+			<img class="lazyload" data-src="/siteart/xsmall_{{ myArray[randompost].image}}.jpg" alt="{{ myArray[randompost].imageAlt}}">
+			{% else %}
+			<img class="lazyload" data-src="/siteart/xsmall_placeholder.jpg" alt="Davidputney.com logo">
+			{% endif %}
+				<noscript>
+					{% if myArray[randompost].image %}
+					<img src="/siteart/xsmall_{{ myArray[randompost].image}}.jpg" alt="{{ myArray[randompost].imageAlt}}">
+					{% else %}
+					<img src="/siteart/xsmall_placeholder.jpg" alt="Davidputney.com logo">
+					{% endif %}
+				</noscript>
+			</figure>
+				<h2 class="blog-teaser-hed">{{ myArray[randompost].promo }}
+				<svg class="teaser-arrow-icon">
+					<use xlink:href="#arrow-right" />
+				</svg>
+			</h2>
+			</a>
+		</li>
+
+		{% assign countArray = site.array %}
+		{% for post in site.categories.blog-entry limit: 5 %}
+		{% if post.promo != currentEntry.promo and countArray.size < 3 %}
+			<li class="blog-teaser-item will-change-ot">
+					<a href="{{post.url}}" rel="canonical">
+					<figure class="blog-teaser-image med-photo-overlay">
+					{% if post.image %}
+					<img class="lazyload" data-src="/siteart/xsmall_{{post.image}}.jpg" alt="{{post.imageAlt}}">
+					{% else %}
+					<img class="lazyload" data-src="/siteart/xsmall_placeholder.jpg" alt="Davidputney.com logo">
+					{% endif %}
+					<noscript>
+						{% if post.image %}
+						<img src="/siteart/xsmall_{{post.image}}.jpg"  alt="{{post.imageAlt}}">
+						{% else %}
+						<img src="/siteart/xsmall_placeholder.jpg" alt="Davidputney.com logo">
+						{% endif %}
+					</noscript>
+					</figure>
+						<h2 class="blog-teaser-hed">{{ post.promo }}
+						<svg class="teaser-arrow-icon">
+							<use xlink:href="#arrow-right" />
+						</svg>
+					</h2>
+					</a>
+				</li>
+				{% assign countArray = countArray | push: post.title %}
+		{% endif %}
+	{% endfor %}
+</ul>
+</aside>

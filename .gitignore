@@ -8,7 +8,7 @@ source/scripts/vendor/
 src/scripts/bower_components/
 src/photos_out/
 src/inline_css/
-src/photos_in/
+!src/photos_in/
 src/svg/svgsprite.svg
 node_modules/
 src/sass/bourbon/

@@ -1,0 +1,43 @@
+<div id="error-overlay" class="error-overlay">
+  <div class="error-wrapper">
+  <p class="login-error-message">
+    Whoops! We couldn't load the entries.
+  </p>
+    <input id="submit-search-retry" class="button form-btn" type="button"  value="Try again">
+  </div>
+</div>
+<div id="loader" class="error-overlay">   
+  <div class="error-wrapper">
+    <p class="login-error-message">
+      Loading entries &#8230;
+    </p>
+    <div id="loader-icon" class="loader-icon bounce"></div>
+    <div id="loader-shadow" class="loader-shadow bounce">   
+    </div>
+  </div>
+</div> 
+
+<section class="search-main">
+    <div id="search-field-wrapper" class="form-field-wrapper">
+      <form class="search-form">
+        <div id="search-form-wrapper" class="search-form-wrapper">
+          <input id="search-field" placeholder="Search term" class="form-field search-form-field" type="search" disabled>
+        <input id="submit-search" class="button form-btn form-btn-mini" type="submit"  value="Search" disabled>
+        </div>
+          <p id="search-field-error" class="login-error-message"></p>
+    </form>
+</section>
+  <section class="search-results-alt">
+    <div id="search-history-wrapper" class="search-history-wrapper hide">
+      <h2 class="search-history-hed">Search History</h2>
+      <ul id="search-history" class="search-history-list">
+      </ul>
+        <svg id="clear-search" class="search-history-clear" aria-hidden="true">
+          <use xlink:href="#clear" />
+      </svg>
+    </div>
+    <div id="search-results" class="search-results">
+      <div id="search-results-wrapper" class="search-results-wrapper">
+      </div>
+    </div>
+  </section>

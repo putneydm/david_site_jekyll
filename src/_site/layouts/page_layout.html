@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	{% include head.html %}
+<body>
+	@@include('partials/skip_links.html')
+	<div class="svg-import hidden" aria-hidden="true">
+			@@include('../svg/svgsprite.svg')
+	</div>
+	@@include('partials/portfolio_pages/hero_presentation.html')
+<main id="main">
+	@@include('partials/portfolio_pages/intro_text_block.html')
+
+	{{content}}
+
+</main>
+	@@include('partials/footer/footer.html')
+</body>
+  @@include('partials/js_links.html')
+	{% include google_analytics.html %}
+</html>

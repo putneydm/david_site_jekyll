@@ -1,0 +1,32 @@
+<!-- figure -->
+{% if page.image %}
+{% assign image = page.image %}
+{% assign alt = page.imageAlt %}
+{% endif %}
+
+{% if post.image %}
+{% assign image = post.image %}
+{% assign alt = post.imageAlt %}
+{% endif %}
+
+{% if page.image or post.image %}
+<figure class="blog-image med-photo-overlay">
+	<img
+		data-srcset="/siteart/large_{{ image }}.jpg 1400w,
+		        /siteart/med_{{ image }}.jpg 900w,
+		        /siteart/xsmall_{{ image }}.jpg 450w"
+		sizes="(min-width:43.75rem) 43.75rem, 100vw"
+		data-src="/siteart/med_{{ image }}.jpg"
+		class="lazyload"
+		  {% if alt %}
+				alt="{{ alt }}">
+      {% endif%}
+	</img>
+	<noscript>
+		<img src="/siteart/large_{{ image }}.jpg"
+		{% if alt %}
+				alt="{{ alt }}">
+      {% endif%}
+	</noscript>
+</figure>
+{% endif %}

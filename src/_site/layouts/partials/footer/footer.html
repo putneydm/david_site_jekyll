@@ -1,0 +1,17 @@
+<a href="#page-top" id="scroll-to-top" class="scroll-to-top">
+	<span class="hidden">Scroll to top</span>
+	<svg class="scroll-up-icon" aria-hidden="true">
+      <use xlink:href="#up-arrow" />
+    </svg>
+</a>
+<footer id="site-footer" class="site-footer will-change-o">
+<ul id="footer-nav" class="footer-navigation-menu clearfix">
+	@@include('../shared/nav_links.html')
+</ul>
+
+@@include('../../partials/footer/components/footer_links.html')
+<p class="hidden"><a href="https://inevitableriseofthemachines.com/">Inevitable Rise of the Machines</a></p>
+<p class="footer-tagline">{{ site.disclaimer }}</p>
+<!-- date will automatically set -->
+<p class="footer-tagline">&#169; Copyright 2015-<span id="current-year">{{ site.time | date: '%Y' }}</span> David M. Putney</p>
+</footer>  

@@ -1,0 +1,68 @@
+{% assign pageType = page.pagetype %}
+{% assign ogSiteKeywords = site.sitekeywords | join: ', ' %}
+<!-- og image -->
+{% if page.heroArt %}
+	{% capture ogImage %}hero_{{page.heroArt }}.jpg{% endcapture %}
+{% elsif page.image %}
+		{% capture ogImage %}med_{{page.image }}.jpg{% endcapture %}
+{% else %}
+	{% capture ogImage %}med_placeholder.jpg{% endcapture %}
+{% endif %}
+
+<!-- of keywords  -->
+{% if pageType == 'blog-entry' %}
+	{% assign ogKeywords = page.tags | join: ', ' %}
+{% else %}
+	{% assign ogKeywords = page.keywords | join: ', ' %}
+{% endif %}
+
+<!-- og description -->
+{% if pageType == 'blog-entry' or pageType == 'portfolio_entry' %}
+	{% assign ogDescription = page.content | truncatewords: "120" | strip_html | xml_escape %}
+{% elsif pageType == 'tag-archive' or pageType == 'index' %}
+	{% assign ogDescription = site.description %}
+{% else %}
+	{% assign ogDescription = page.description %}
+{% endif %}
+
+<!-- og title -->
+{% if pageType == 'blog' or  pageType == portfolio' %}
+	{% assign ogTitle = page.head %}
+{% elsif pageType == 'tag-archive' %}
+	{% capture ogTitle %}{{  page.tag | capitalize }} archive | {{site.title}}{% endcapture %}
+{% elsif pageType == 'blog-entry' %}
+	{% assign ogTitle = page.title | xml_escape %}
+{% elsif pageType == 'index' %}
+	{% assign ogTitle = site.tagLine %}
+{% else %}
+ 	{% assign ogTitle = page.head %}
+{% endif %}
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<!-- facebook -->
+<meta property="og:title" content="{{ogTitle}}" />
+<meta property="og:site_name" content="David Putney | This is my site"/>
+<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+<meta property="og:description" content="{{ogDescription}}" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image" content="{{site.url}}/siteart/{{ogImage}}" />
+<meta property="article:author" content="https://www.facebook.com/david.putney" />
+<meta property="article:publisher" content="https://www.facebook.com/david.putney" />
+<!-- twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@putneydm" />
+<meta name="twitter:title" content="{{ogTitle}}" />
+<meta name="twitter:description" content="{{ogDescription | truncate: "200"}}" />
+<meta name="twitter:image" content="{{site.url}}/siteart/{{ogImage}}" />
+<!-- other -->
+<meta name="description" content="{{ogDescription}}" />
+<meta name="keywords" content="{% if ogKeywords %}{{ogKeywords}}, {% endif %}{{ogSiteKeywords}}" />
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+<meta name="news_keywords" content="David Putney, design, web design, internet design, web sites, CSS, HTML, jQuery" />
+<meta name="geo.placename" content="Boston, Massachusetts">
+<meta name="author" content="David Putney">
