@@ -11,11 +11,11 @@ const paths = {
         exclude: 'src/pages/{_partials,_partials/**}',
         testing: 'test/',
         watch: 'src/pages/**/*.html',
-        site: 'test/_site/**/*html',
+        site: 'test/_site/**/*.html',
         deploy: 'dist/'
     },
     includes: {
-        input: 'src/includes/*.html',   
+        input: 'src/includes/partials/*.html',
         testing: 'test/_includes/'
     },
     scripts: {

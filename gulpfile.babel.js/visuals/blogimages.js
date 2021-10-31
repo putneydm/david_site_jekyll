@@ -1,5 +1,6 @@
-const { src, dest, parallel } = require('gulp');
+const { src, dest, parallel, series } = require('gulp');
 import { paths } from "../variables"
+import { moveImages } from "../movers/moveImages"
 
 //images
 const imagemin = require('gulp-imagemin');
@@ -14,6 +15,8 @@ const {
         dist: dist,
     }
 } = paths;
+
+exports.moveImages = moveImages;
 
 // Large images
 function blogImagesLarge(done) {
@@ -115,5 +118,4 @@ function blogImagesMed(done) {
         done()
 }
 
-
-exports.blogImages = parallel(blogImagesLarge, blogImagesXSmall, blogImagesMed);
+exports.blogImages = series(parallel(blogImagesLarge, blogImagesXSmall, blogImagesMed), series(moveImages));

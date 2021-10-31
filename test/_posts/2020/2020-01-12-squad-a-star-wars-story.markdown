@@ -1,7 +1,7 @@
 ---
 layout: single_blog_entry
 pagetype: blog-entry
-title:  "The Squad: A Star Wars Story"
+title:  "Werner Herzog Presents: A Jedi Makes His Return"
 date:   2020-01-12 
 categories: blog-entry
 subhead:

@@ -1,7 +1,7 @@
 ---
 layout: single_blog_entry
 pagetype: blog-entry
-title: "\"The Squad: A Star Wars Story\" supplemental materials"
+title: "\"Werner Herzog Presents: A Jedi Makes His Return\" supplemental materials"
 date: 2019-12-28 
 categories: blog-entry
 subhead:
@@ -10,7 +10,7 @@ image: herzog
 imageAlt: "Image of an idiot wearing a Werner Herzog T-shirt"
 promo: "Davidputney.com presents Werner Herzog's \"A Jedi Returns\""
 ---  
-Ewoks are <a href="https://en.wikipedia.org/wiki/Apex_predator">apex predators</a> in the Endor ecosystem. I came to this realization while writing <a href="/2020/01/squad-a-star-wars-story.html">_The Squad_</a>.
+Ewoks are <a href="https://en.wikipedia.org/wiki/Apex_predator">apex predators</a> in the Endor ecosystem. I came to this realization while writing <a href="/2020/01/squad-a-star-wars-story.html">_A Jedi Makes His Return_</a>.
 
 Sure, there’s some Endor equivalent of bears or mountain lions, but the Ewoks simply rule. Evidence of this is shown throughout _Return of the Jedi_. It’s made clear in the movie that they will <a href="https://www.youtube.com/watch?v=XJzNh_pCaD8">absolutely wreck</a> you. They will bring the pain. Cute, fuzzy pain.
 

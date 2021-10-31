@@ -24,5 +24,6 @@ function fonts() {
         .pipe(dest(dist));
 }
 
+console.log("fonts", fonts)
 
 exports.fonts = fonts;
