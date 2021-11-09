@@ -7,6 +7,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const concat = require('gulp-concat');
 const minifyJS = require('gulp-uglify');
 const replace = require('gulp-replace');
+const babel = require("gulp-babel");
 
 const {
     scripts: {
@@ -21,7 +22,7 @@ const {
 function concatJs() {
     return src([input, `!${inline}`, `!${exclude}`])
         .pipe(sourcemaps.init())
-        // .pipe(babel())
+        .pipe(babel())
         .pipe(concat(scriptname)) // renames to file w/ todays date for cachebusting
         .pipe(replace(/this\.loadCSS.*/g, `this.loadCSS('/css/${filename}');`)) // adds cachebusted name of css to css lazyload
         .pipe(minifyJS())

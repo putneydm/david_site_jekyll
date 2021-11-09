@@ -18,7 +18,7 @@ const {
 function minifyScripts() {
     src(admin)
     .pipe(sourcemaps.init())
-    //  .pipe(babel())
+    .pipe(babel())
     .pipe(rename(adminname))
     .pipe(minifyJS())
     .pipe(sourcemaps.write("."))
