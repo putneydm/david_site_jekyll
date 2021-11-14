@@ -57,9 +57,10 @@ var pageFunctions = {
   },
   initializePortfolio: function () {
     var self = this;
-    self.getElementsHero();
-    self.setBackground(self.heroArt);
+    // self.getElementsHero();
+    // self.setBackground(self.heroArt);
     self.initScrollListener('portfolio_entry');
+    // console.log("port init")
   },
   intializeMinimal: function () {
     var self = this;
@@ -77,7 +78,7 @@ var pageFunctions = {
     self.logo = document.querySelector('#header-logo');
     self.menuButton = document.querySelector('#menu-button');
     self.topNav = document.querySelector('#nav-menu'),
-      self.siteFooter = document.querySelector('#site-footer');
+    self.siteFooter = document.querySelector('#site-footer');
     self.siteFooterLinks = [].slice.call(document.querySelectorAll('#footer-links li'));
     self.scrollButton = document.querySelector('#scroll-to-top');
   },
@@ -123,6 +124,7 @@ var pageFunctions = {
     self.lastScrollTop = 0;
     document.onscroll = function () {
       var scrollPosition = self.getScrollPosition();
+      console.log("scroll")
 
       if (pageType === "blog") {
         self.handleInsideNavTransition(scrollPosition);
@@ -134,9 +136,10 @@ var pageFunctions = {
         self.handleScrollProgress();
         self.handleFootnoteButton(scrollPosition);
         self.handleManualScrollback(scrollPosition);
-        self.initBlogTeasers();
+        self.initBlogTeasers(); 
         self.initQuoteAnimate(self.blogQuotes);
         self.handleHeadlineSwap(false);
+        console.log("scroll blog")
       }
       if (pageType === "search") {
         //  self.setActiveBlogItem();
@@ -147,7 +150,7 @@ var pageFunctions = {
         self.initQuoteAnimate(self.blogQuotes);
         self.handleHeadlineSwap(false);
       }
-      if (pageType === 'index' || pageType === 'portfolio_entry') {
+      if (pageType === 'index') {
         self.handleHeroAnimate(scrollPosition);
         self.handleNavAnimate(scrollPosition);
       }
@@ -155,6 +158,7 @@ var pageFunctions = {
         self.handleIndexNavTransition(scrollPosition);
         self.initBlogTeasers();
       }
+      console.log("test", pageType === 'portfolio_entry')
       if (pageType === 'portfolio_entry') {
         self.handleInsideNavTransition(scrollPosition);
       }
@@ -558,6 +562,7 @@ var pageFunctions = {
   },
   handleSiteFooter: function (scrollPosition) {
     var self = this;
+    console.log("footer")
     var siteFooter = self.siteFooter,
       isVisible = self.isElementVisible(siteFooter),
       active = siteFooter.classList.contains('site-footer-active');
