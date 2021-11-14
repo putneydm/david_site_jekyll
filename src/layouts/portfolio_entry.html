@@ -1,18 +1,25 @@
 ---
-layout: page_layout
+layout: minimal_layout
 pageType: portfolio_entry
 ---
-<article class="teaser-module-container">
+<article class="portfolio-wrapper">
+  {% if page.title %}
+	<h1 class="portfolio-project-name">{{ page.title | markdownify | strip_html }}  
+  {% endif %}
+  {% if page.subhead %}
+  <h2 class="page-subhead">{{ page.subhead | markdownify | strip_html }}</h2>
+  {% endif %}
   {% if page.slides %}
     @@include('partials/portfolio/slide_show.html')
   {% else %}
     @@include('partials/blog_components/blog_image_test.html')
-  {% endif %}
+  {% endif %}    
 
-<div class="portfolio-text-block">
+<div class="blog-container">  
+<div class="blog-entry-text">
     {{page.content}}
 </div>
-{% if page.images %}
+<!-- {% if page.images %}
   @@include('partials/portfolio/triple_image.html')
 {% endif %}
 
@@ -22,5 +29,6 @@ pageType: portfolio_entry
 
 {% if page.url %}
   @@include('partials/portfolio/button.html')
-{% endif %}
+{% endif %} -->
+</div>
 </article>
