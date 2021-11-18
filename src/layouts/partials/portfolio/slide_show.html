@@ -1,50 +1,20 @@
-<!-- <div class="slideshow slideshow-big-image slideshow-big-image med-photo-overlay">
-   <figure class="slideshow-image">
-    <picture>
-     <source data-srcset="/siteart/xlarge_{{page.slides[0]}}.jpg" media="(min-width:700px)">
-     <source data-srcset="/siteart/large_{{page.slides[0]}}.jpg" media="(min-width: 450px)">
-     <source data-srcset="/siteart/med_{{page.slides[0]}}.jpg">
-     <img src="/siteart/large_{{page.slides[0]}}.jpg" alt="">
-   </picture>
-    <noscript>
-      <img class="lazyload" data-src="/siteart/large_{{page.slides[0]}}.jpg" alt="">
-    </noscript>
-    </figure>
-   <figure class="slideshow-image">
-     <picture>
-      <source data-srcset="/siteart/xlarge_{{page.slides[1]}}.jpg" media="(min-width:700px)">
-      <source data-srcset="/siteart/large_{{page.slides[1]}}.jpg" media="(min-width: 450px)">
-      <source data-srcset="/siteart/med_{{page.slides[1]}}.jpg">
-      <img class="lazyload" data-src="/siteart/large_{{page.slides[1]}}.jpg" alt="">
-    </picture>
-    <noscript>
-      <img src="/siteart/large_{{page.slides[1]}}.jpg" alt="">
-    </noscript>      
-  </figure>
-</div> -->
-
-
-
 <section class="gallery-wrapper"> 
   <button class="slide-button right" id="advance" value="advance"><span>Next</span></button>     
   <button class="slide-button left" id="back" value="back"><span>Back</span></button> 
   <p class="gallery-count"><span>1</span> | {{ page.slides.size }}</p>   
   <div class="gallery">  
 {% for slide in page.slides %}
-
-{% if forloop.first %}
-<figure class="slide med-photo-overlay center">
-{% else %}
-<figure class="slide med-photo-overlay"> 
-{% endif %}
-<!-- <img class="lazyload slide-sizing" data-src="/siteart/large_{{ slide] }}.jpg" alt="">  -->
-  <picture>
-    <source data-srcset="/siteart/xlarge_{{ slide }}.jpg" media="(min-width:700px)">
-    <source data-srcset="/siteart/large_{{ slide }}.jpg" media="(min-width: 450px)">
-    <source data-srcset="/siteart/med_{{ slide }}.jpg">
-    <img class="lazyload" data-src="/siteart/large_{{ slide] }}.jpg" alt=""> 
-  </picture>
-</figure>  
+  {% if forloop.first %}
+    <figure class="slide med-photo-overlay center">
+  {% else %}
+   <figure class="slide med-photo-overlay">
+  {% endif %}
+      <picture>
+        <source data-srcset="/siteart/xlarge_{{ slide }}.jpg" media="(min-width:700px)">
+        <source data-srcset="/siteart/large_{{ slide }}.jpg" media="(min-width: 450px)">
+        <source data-srcset="/siteart/med_{{ slide }}.jpg">
+        <img class="lazyload" data-src="/siteart/large_{{ slide }}.jpg" alt=""> 
+      </picture>
+    </figure>  
 {% endfor %}
-</section>   
-
+</section>
