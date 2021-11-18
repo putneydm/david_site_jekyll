@@ -1,6 +1,6 @@
 {% assign pageType = page.pagetype %}
 <script src="/scripts/*cachebustthis*"></script>
-<script src="/scripts/*cachebustthis*"></script>
+<!-- <script src="/scripts/*cachebustthis*"></script> -->
 {% if pageType == 'searchAdmin' %}
 <script src="/scripts/*cachebustadmin*"></script>
 {% endif%}
@@ -21,7 +21,7 @@
     {% if pageType == 'index' %}
       pageFunctions.initializeIndex();
     {% endif%}
-    {% if pageType == 'portfolio_entry' or pageType == 'about' %}
+    {% if pageType == 'portfolio_entry' or pageType == 'about' or pageType == 'portfolio' %}
       pageFunctions.initializePortfolio();
     {% endif%}
     {% if pageType == 'searchAdmin' %}
@@ -45,4 +45,4 @@
     {% endif%}
   });
 })();
-</script>
+</script> 
