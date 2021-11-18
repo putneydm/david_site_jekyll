@@ -390,9 +390,6 @@ var pageFunctions = {
     }, {
       "name": "linked-in",
       "link": "https://www.linkedin.com/in/davidmputney"
-    }, {
-      "name": "facebook-link",
-      "link": "https://www.facebook.com/david.putney"
     }];
 
     linkList.forEach(function (el) {
