@@ -3,12 +3,11 @@ title:  "BDCwire.com"
 subhead: A news and lifestyle website aimed at younger readers
 image: bdcwire_fp_one
 imageAlt: Screenshot of the BDCwire home page.
-layout: portfolio_entry
-pagetype: portfolio_entry
+layout: minimal_layout
+pageType: portfolio_entry
 heroArt: bdcwire
 head: BDCwire
-images: ['bcdw_circ_1', 'bcdw_circ_2', 'bcdw_circ_3']
-url: http://www.bdcwire.com/
+slides: ['bcdw_circ_1', 'bcdw_circ_2', 'bcdw_circ_3']
 ---
 
 BDCwire was conceived as a way of bringing the energy and speed of a startup to a large news organization. It was a site aimed at college-age and young-professional readers around Boston. It had more freedom in its topics, with a focus is music, movies, pop culture ephemera and local events.

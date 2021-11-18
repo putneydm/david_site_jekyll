@@ -2,13 +2,11 @@
 title:  "Link"
 subhead: A colorful, lively daily newspaper aimed at a younger audience
 image: PotterCover
-imageAlt: Image of Liunk cover with Daniel Radcliff as Harry Potter
-layout: portfolio_entry
-pagetype: portfolio_entry
-heroArt: nflinsidec
+imageAlt: Image of Link cover with Daniel Radcliff as Harry Potter
+layout: minimal_layout
+pageType: portfolio_entry
 head: Link
-images: ['kitty', 'link2', 'link3']
-slides: ['southside1017', 'PotterCover']
+slides: ['kitty', 'link2', 'link3']
 ---
 
 Link began with the idea of a newspaper for younger readers. My job was to give that idea form and voice.

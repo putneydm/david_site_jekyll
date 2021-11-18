@@ -3,12 +3,9 @@ title:  "RadioBDC"
 subhead: A website for Boston.com’s internet radio station
 image: radiobdc_fp_one
 imageAlt: Screenshot of RadioBDC home page
-layout: portfolio_entry
-pagetype: portfolio_entry
-heroArt: radiobdc
-head: RadioBDC
-images: ['rbdc_playing_1', 'rbdc_playing_2', 'rbdc_social']
-url: http://www.radiobdc.com/
+layout: minimal_layout
+pageType: portfolio_entry
+slides: ['rbdc_playing_1', 'rbdc_playing_2', 'rbdc_social']
 ---
 
 RadioBDC was conceived as a sister site to BDCwire to share resources and cross-promote events. My role was to design the site.
