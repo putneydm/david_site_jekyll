@@ -158,7 +158,6 @@ var pageFunctions = {
         self.handleIndexNavTransition(scrollPosition);
         self.initBlogTeasers();
       }
-      console.log("test", pageType === 'portfolio_entry')
       if (pageType === 'portfolio_entry') {
         self.handleInsideNavTransition(scrollPosition);
       }
@@ -991,8 +990,7 @@ const advanceSlide = (curr, next) => {
 }
 const slideCount = (slide) => counter.replaceChild(document.createTextNode(slide+1), counter.childNodes[0]);
 
-console.log(findI(images(), "center")+1);
-
+if (galleryWrapper) {
 galleryWrapper.addEventListener('click', (e) => {  
   const imgArr = images();
   // finds the slide with the class current
@@ -1013,6 +1011,8 @@ galleryWrapper.addEventListener('click', (e) => {
     :  activeSlide + 1
    )
 });
+}
+
 })();
 
 
