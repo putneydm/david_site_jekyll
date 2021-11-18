@@ -1,0 +1,36 @@
+{% assign teasers = site.design %}
+{% for item in teasers %}
+{% if item.title == page.title and forloop.index != 1 and forloop.index != teasers.size %}
+        {% assign prevnum = forloop.index | minus: 2 %}
+        {% assign prev = teasers[prevnum] %}
+        {% assign next = teasers[forloop.index] %}
+        {% assign current = forloop.index %}
+    {% elsif item.title == page.title and forloop.first %}
+        {% assign prev = teasers.last %}
+        {% assign next = teasers[forloop.index] %}
+        {% assign current = forloop.index %}
+    {% elsif item.title == page.title and forloop.last %}
+        {% assign next = teasers.first %} 
+        {% assign num = forloop.index | minus: 2 %}
+        {% assign prev = teasers[num] %}
+        {% assign current = forloop.index %}   
+    {% endif %}  
+{% endfor %}
+
+<div class="pagination-wrapper">
+    <p class="page-number">Page {{ current }} of {{ teasers.size }}</p>
+    <div class="pagination">
+        <div class="pagination-direction back">
+            <svg class="teaser-arrow-icon arrow-icon-left">
+                <use xlink:href="#arrow-right" />
+            </svg>
+            <a href="{{ prev.url }}" rel="prev" class="">{{ prev.title }}</a>
+        </div>
+        <div class="pagination-direction">
+            <a href="{{ next.url }}" rel="next" class="next">{{ next.title }}</a>
+            <svg class="teaser-arrow-icon">
+                <use xlink:href="#arrow-right" />
+            </svg>
+        </div>
+    </div>
+</div>
