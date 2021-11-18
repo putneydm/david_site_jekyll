@@ -169,31 +169,31 @@
     }
 }
 
-.portfolio-introduction-container {
-    width: 100%;
-    margin: rem(40) auto 0;
-    padding: 0 rem(40);
+// .portfolio-introduction-container {
+//     width: 100%;
+//     margin: rem(40) auto 0;
+//     padding: 0 rem(40);
 
-    @media screen and (max-width:rem(650)) {
-        padding: 0 rem(20);
-        margin: rem(30) auto 0;
-    }
+//     @media screen and (max-width:rem(650)) {
+//         padding: 0 rem(20);
+//         margin: rem(30) auto 0;
+//     }
 
-    @media screen and (max-width:rem(500)) {
-        padding: 0 rem(10);
-        margin: rem(20) auto 0;
-    }
-}
+//     @media screen and (max-width:rem(500)) {
+//         padding: 0 rem(10);
+//         margin: rem(20) auto 0;
+//     }
+// }
 
 // preload page element sizes
 .teaser-module-container {
     margin: 0 auto;
-    padding: rem(80) rem(40) 0;
+    padding: rem(40) rem(40) 0;
     max-width: rem(1100);
     position: relative;
 
     @media screen and (max-width:em(450)) {
-        padding: rem(40) 0 0;
+        padding: rem(20) 0 0;
     }
 }
 
