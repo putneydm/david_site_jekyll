@@ -11,18 +11,25 @@
 .teaser-module-head	{
 	font-family:$sans;
 	font-size:em(20);
-	border-bottom:rem(1) solid #d0d0d0;
+	border-bottom:rem(1) solid $light;
 	font-weight:800;
 	margin:0 0 0 0;
 	padding:0 0 rem(2) 0;
 		a{
 		color:$body;
 		background-image:none;
-			&:hover{
-			color:$aqua;
-			background-image:none;
+			&:hover {
+				color:$aqua;
+				background-image:none;
 			}
+			@media screen and (prefers-color-scheme: dark) {
+				color:$light-aqua;
+			} 	
 	}
+	@media screen and (prefers-color-scheme: dark) {
+		color:$light-aqua;
+		border-bottom:rem(1) solid $dark;
+	} 	
 }
 .teaser-module-abstract {
 	@include spanner_too (12, 1100, 0, 4);
@@ -47,11 +54,21 @@
 	text-transform:uppercase;
 	letter-spacing:.07em;
 	background-image:none;
-		&:hover {
-			background:none;color:$dark-aqua;
-			svg {fill:$aqua;}
+	&:hover {
+		background:none;
+		color:$dark-aqua;
+		&>svg.teaser-arrow-icon {
+			fill:$aqua;
+			transition: fill .2s;
+		}	
+		@media screen and (prefers-color-scheme: dark) {
+			color:$aqua;
 		}
-		.teaser-arrow-icon {vertical-align: -1px;margin-left:rem(5);}  
+	}
+	@media screen and (prefers-color-scheme: dark) {
+		color:$light-aqua;
+	} 
+	.teaser-arrow-icon {vertical-align: -1px;margin-left:rem(5);}  
 }
 .teaser-module-art {
 	@include spanner_too (12, 1100, 0, 8);
