@@ -9,8 +9,40 @@
 	<header class="no-billboard">
 		@@include('partials/headers/fixed_header_inside.html')
 	</header>
-<main id="main">
-{{content}}
+
+
+{% if pageType == portfolio_entry %}	
+<article class="portfolio-wrapper">
+<h1 class="portfolio-project-name">{{ page.title | markdownify | strip_html }}</h1>  
+<h2 class="page-subhead">{{ page.subhead | markdownify | strip_html }}</h2>
+{% endif %}
+
+{% if pageType == portfolio_entry and page.slides %}
+	  @@include('partials/portfolio/slide_show.html')
+{% elsif pageType == portfolio_entry and page.slides == false %}
+		<p>foo</p>
+	  @@include('partials/blog_components/blog_image_test.html')
+{% endif %}  
+	
+{% if page.pageType == "portfolio" %}
+	<div class="teaser-module-container">
+{% elsif pageType == portfolio_entry %}
+	<div class="blog-container"> 
+	<div class="blog-entry">	 
+	<div class="blog-entry-text">
+{% endif %}	
+	{{content}}	
+	{% if page.pageType == "portfolio" %}
+	</div>
+  {% elsif pageType == portfolio_entry %}
+  	</div>
+	</div> 
+	  {% if pageType == portfolio_entry %}
+	  @@include('partials/portfolio_pages/teasers.html')
+	  {% endif %}
+	</div>
+</article>
+  {% endif %}
 </main>
 	@@include('partials/footer/footer.html')
 	@@include('partials/js_links.html')
