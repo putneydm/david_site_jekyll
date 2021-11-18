@@ -49,6 +49,9 @@ background: -ms-linear-gradient(top,  rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%); /
 background: linear-gradient(to bottom,  rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40000000', endColorstr='#00000000',GradientType=0 ); /* IE6-8 */
 }
+.portfolio-wrapper {
+    margin-top:rem(140);
+}
 .big-image-module{
 	@include spanner_too (12, 1100, 0, 12);
 	margin:0 0 rem(40);
