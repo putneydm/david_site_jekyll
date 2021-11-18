@@ -14,21 +14,5 @@ pageType: portfolio_entry
   {% else %}
     @@include('partials/blog_components/blog_image_test.html')
   {% endif %}    
-
-<div class="blog-container">  
-<div class="blog-entry-text">
     {{page.content}}
-</div>
-<!-- {% if page.images %}
-  @@include('partials/portfolio/triple_image.html')
-{% endif %}
-
-{% if page.video %}
-  @@include('partials/portfolio/video_embed.html')
-{% endif %}
-
-{% if page.url %}
-  @@include('partials/portfolio/button.html')
-{% endif %} -->
-</div>
 </article>
