@@ -6,8 +6,8 @@ date:   2014-12-02 17:55:21
 categories: blog-entry
 subhead:
 tags: [CSS,design,HTML,mixins,SASS,shortcuts,typography]
-image:  underlines
-imageAlt: "Whale breaching off Maui"
+image: 
+imageAlt: 
 promo: "Designers don't have to live with terrible browser default underlines"
 ---  
 
