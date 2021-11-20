@@ -50,17 +50,18 @@ var pageFunctions = {
   initializeIndex: function () {
     var self = this;
     self.getElementsIndex();
-    self.getElementsHero();
-    self.setBackground(self.heroArt);
     self.nameplateAnimate(); // animates nameplate
     self.initScrollListener('index');
   },
   initializePortfolio: function () {
     var self = this;
-    // self.getElementsHero();
-    // self.setBackground(self.heroArt);
     self.initScrollListener('portfolio_entry');
-    // console.log("port init")
+  },
+  initializeHero: function () {
+    var self = this;
+    self.getElementsHero();
+    self.setBackground(self.heroArt);
+    console.log("init hero y")
   },
   intializeMinimal: function () {
     var self = this;
@@ -346,6 +347,8 @@ var pageFunctions = {
   // sets bg image on hero image
   setBackground: function (el) {
     var self = this;
+    console.log("hero image")
+
     //  var heroImage = document.querySelector('#hero-image'),
     var heroImageName = el.getAttribute('data-image'),
       windowWidth = window.innerWidth, // finds width of browser window
@@ -353,6 +356,8 @@ var pageFunctions = {
       imageURL = windowWidth > 700 ?
       '/siteart/hero_' + heroImageName + '.jpg' :
       '/siteart/sm_hero_' + heroImageName + '.jpg';
+
+      // console.log("XX", heroImageName);
 
     var img = new Image();
     img.src = imageURL;
@@ -558,7 +563,6 @@ var pageFunctions = {
   },
   handleSiteFooter: function (scrollPosition) {
     var self = this;
-    console.log("footer")
     var siteFooter = self.siteFooter,
       isVisible = self.isElementVisible(siteFooter),
       active = siteFooter.classList.contains('site-footer-active');
@@ -566,6 +570,7 @@ var pageFunctions = {
       self.addShit(siteFooter, 'site-footer-active');
       self.handleWillChange("will-change-ot", siteFooter, 'LI');
       self.handleWillChange("will-change-o", siteFooter);
+      console.log("footer")
     }
   },
   handleWillChange: function (style, mainEl, subEl) {
@@ -912,6 +917,7 @@ var pageFunctions = {
   },
   isElementVisible: function (elem) {
     var distance = elem.getBoundingClientRect();
+    console.log("vis", elem)
     return (
       distance.top >= 0 &&
       distance.left >= 0 &&
