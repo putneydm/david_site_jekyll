@@ -20,9 +20,13 @@
     {% endif%}
     {% if pageType == 'index' %}
       pageFunctions.initializeIndex();
+      pageFunctions.initializeHero();
     {% endif%}
     {% if pageType == 'portfolio_entry' or pageType == 'about' or pageType == 'portfolio' %}
       pageFunctions.initializePortfolio();
+    {% endif%}
+    {% if pageType == 'about' or pageType == 'portfolio' %}
+      pageFunctions.initializeHero();
     {% endif%}
     {% if pageType == 'searchAdmin' %}
       searchAdminFunctions.initialize();
