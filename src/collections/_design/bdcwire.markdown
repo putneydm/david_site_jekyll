@@ -8,6 +8,7 @@ pageType: portfolio_entry
 heroArt: bdcwire
 head: BDCwire
 slides: ['bcdw_circ_1', 'bcdw_circ_2', 'bcdw_circ_3']
+sequence: 3
 ---
 
 BDCwire was conceived as a way of bringing the energy and speed of a startup to a large news organization. It was a site aimed at college-age and young-professional readers around Boston. It had more freedom in its topics, with a focus is music, movies, pop culture ephemera and local events.

@@ -7,6 +7,7 @@ layout: minimal_layout
 pageType: portfolio_entry
 slides: ['whitmore_speech', 'redwoods', 'star-wars-the-last-jedi-trailer', 'santa_theyworeredsuit', 'ensign_obrien']
 url: http://www.cruxnow.com/
+sequence: 2
 ---
 ### Subhead
 

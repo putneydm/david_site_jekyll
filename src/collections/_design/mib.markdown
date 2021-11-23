@@ -6,6 +6,7 @@ imageAlt: Screenshot of MIB EHR app
 layout: minimal_layout
 pageType: portfolio_entry
 slides: ['rbdc_playing_1', 'rbdc_playing_2', 'rbdc_social']
+sequence: 1
 ---
 ### The Client
 

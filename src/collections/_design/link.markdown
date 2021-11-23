@@ -7,6 +7,7 @@ layout: minimal_layout
 pageType: portfolio_entry
 head: Link
 slides: ['kitty', 'link2', 'link3']
+sequence: 4
 ---
 
 Link began with the idea of a newspaper for younger readers. My job was to give that idea form and voice.

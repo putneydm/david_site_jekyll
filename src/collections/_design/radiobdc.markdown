@@ -6,6 +6,7 @@ imageAlt: Screenshot of RadioBDC home page
 layout: minimal_layout
 pageType: portfolio_entry
 slides: ['rbdc_playing_1', 'rbdc_playing_2', 'rbdc_social']
+sequence: 5
 ---
 
 RadioBDC was conceived as a sister site to BDCwire to share resources and cross-promote events. My role was to design the site.
