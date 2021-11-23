@@ -166,10 +166,15 @@
             @include aspect-ratio (100, 0, 23, 10.35);
             min-height: rem(364);
         }
-
         @media screen and (max-width:em(800)) {
             &::after {
                 background-size: auto 366px;
+            }
+        }
+        @media screen and (max-width:em(430)) {
+            &::after {
+                background-size: auto 130vw;
+                @include aspect-ratio (100, 0, 23, 30);
             }
         }
     }
