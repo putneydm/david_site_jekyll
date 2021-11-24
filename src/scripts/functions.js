@@ -33,6 +33,7 @@ var pageFunctions = {
     this.initScrollBackButton();
     self.handleNavAnimate(scrollPosition);
     self.handleHeroAnimate(scrollPosition);
+    self.initButtonHandler();
   },
   intializeBlogEntry: function () {
     var self = this;
@@ -125,7 +126,7 @@ var pageFunctions = {
     self.lastScrollTop = 0;
     document.onscroll = function () {
       var scrollPosition = self.getScrollPosition();
-      console.log("scroll")
+      // console.log("scroll")
 
       if (pageType === "blog") {
         self.handleInsideNavTransition(scrollPosition);
@@ -140,7 +141,7 @@ var pageFunctions = {
         self.initBlogTeasers(); 
         self.initQuoteAnimate(self.blogQuotes);
         self.handleHeadlineSwap(false);
-        console.log("scroll blog")
+        // console.log("scroll blog")
       }
       if (pageType === "search") {
         //  self.setActiveBlogItem();
@@ -195,13 +196,21 @@ var pageFunctions = {
       e.preventDefault();
     });
   },
+  initButtonHandler: function () {
+    const cont = document.querySelector('#blog-container');
+    cont.addEventListener("click", (e) => {
+      const scroll = document.documentElement.scrollTop
+      const val = document.querySelector(`#${e.target.value}`).classList.remove("closed");
+      document.documentElement.scrollTop = document.body.scrollTop = scroll;
+    })
+
+  },
   initFootnoteClick: function () {
     // this adds listener to sup tags
     var self = this;
     var blogContainer = document.querySelector("#blog-container");
 
     blogContainer.addEventListener("click", function (e) {
-      // e.preventDefault();
       var linkType = e.target.parentNode.tagName === 'SUP'; //
       var activeItems = [].slice.call(document.querySelectorAll(".footnote-link-active"));
       if (activeItems) {
@@ -570,7 +579,7 @@ var pageFunctions = {
       self.addShit(siteFooter, 'site-footer-active');
       self.handleWillChange("will-change-ot", siteFooter, 'LI');
       self.handleWillChange("will-change-o", siteFooter);
-      console.log("footer")
+      // console.log("footer")
     }
   },
   handleWillChange: function (style, mainEl, subEl) {
@@ -693,7 +702,7 @@ var pageFunctions = {
     var self = this;
     var clicker = document.querySelector('#highlight-clicker');
 
-    console.log('clicker status');
+    // console.log('clicker status');
 
     // true = make it show up
     // false = hide it
@@ -787,7 +796,7 @@ var pageFunctions = {
   },
   truncateURL: function () {
     var self = this;
-    console.log('truncate');
+    // console.log('truncate');
     var urlNew = window.location.href.split('?')[0];
     var obj = {
       url: urlNew,
@@ -917,7 +926,7 @@ var pageFunctions = {
   },
   isElementVisible: function (elem) {
     var distance = elem.getBoundingClientRect();
-    console.log("vis", elem)
+    // console.log("vis", elem)
     return (
       distance.top >= 0 &&
       distance.left >= 0 &&
