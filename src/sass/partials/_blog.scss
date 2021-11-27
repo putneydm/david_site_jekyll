@@ -558,7 +558,7 @@ pre {
 .pagination-direction {
     flex-basis: 50%;
     font-family: $sans;
-    font-size: rem(24);
+    font-size: rem(18);
     padding: 0 rem(15);
     a {
         background: none;
@@ -575,6 +575,9 @@ pre {
                 color: $aqua;
             } 
         }
+    }
+    @media screen and (min-width:em(450)) {
+        font-size: rem(24);
     }
 }
 .pagination .back {
@@ -622,9 +625,13 @@ pre {
             z-index: 2;
             display: block;
             border-width:0;
-            margin:0 rem(10);
+            margin:0 10%;
+            width:80%;
+            @media screen and (min-width:em(520)) {
+                margin: auto;
+            }
         }
 }
-.button.blog-more-button.archive {
+.button.blog-more-button.archive { 
    display:none;
 }
