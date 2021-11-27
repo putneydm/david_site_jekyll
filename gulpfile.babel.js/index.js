@@ -27,6 +27,7 @@ import { svg } from "./visuals/svg"
 import { blogImages } from "./visuals/blogimages"
 import { heroImages } from "./visuals/heroimages"
 import { heroIndex } from "./visuals/heroimagesindex"
+import { slideImages } from "./visuals/slides"
 
 // other
 import { animations } from "./animations"
@@ -64,6 +65,7 @@ exports.svg = svg;
 exports.blogImages = blogImages;
 exports.heroImages = heroImages;
 exports.heroIndex = heroIndex;
+exports.slideImages = slideImages;
 // other
 exports.deploy = deploy;
 exports.animations = animations;
