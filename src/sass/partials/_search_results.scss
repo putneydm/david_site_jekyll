@@ -45,6 +45,12 @@ em {
   }
 }
 
+.search-results-entry {
+  &:last-child {
+    background:none;
+  }
+}
+
 input,
 button {
   -webkit-border-radius: 0;

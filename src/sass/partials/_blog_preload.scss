@@ -8,14 +8,10 @@
 .blog-entry {
     margin-bottom: rem(40);
     padding-bottom: rem(30);
-    background-image: linear-gradient(to bottom, transparent 75%, $dark 75%);
     background-size: 60% 2px;
     background-origin: padding-box;
     background-position: center 100%;
     background-repeat: no-repeat;
-    @media (prefers-color-scheme: dark) {
-        background-image: linear-gradient(to bottom, transparent 75%, $light 75%);
-    } 
 }
 .tag-results {
   padding-top: 0;
@@ -44,10 +40,6 @@
 
     @media screen and (max-width:em(560)) {
         margin-top: rem(111);
-    }
-
-    .blog-entry {
-        background-image: none;
     }
 }
 .blog-headline {
