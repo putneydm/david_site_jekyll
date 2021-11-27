@@ -54,6 +54,12 @@ const paths = {
         testing: 'test/siteart/',
         dist: 'dist/siteart/'
     },
+    slides: {
+        input: 'src/slides_in/{*.jpg,*.tiff,*.png}',
+        output: 'src/slides_out/',
+        testing: 'test/siteart/slides',
+        dist: 'dist/siteart/slides'
+    },  
     svg: {
         input: 'src/svg/svg_in/*.svg',
         output: 'src/svg/'
