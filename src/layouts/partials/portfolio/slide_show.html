@@ -10,11 +10,19 @@
    <figure class="slide med-photo-overlay">
   {% endif %}
       <picture>
-        <source data-srcset="/siteart/xlarge_{{ slide }}.jpg" media="(min-width:700px)">
-        <source data-srcset="/siteart/large_{{ slide }}.jpg" media="(min-width: 450px)">
-        <source data-srcset="/siteart/med_{{ slide }}.jpg">
-        <img class="lazyload" data-src="/siteart/large_{{ slide }}.jpg" alt=""> 
+        <source data-srcset="/siteart/slides/large_{{ slide }}.jpg" media="(min-width:900px)">
+        <source data-srcset="/siteart/slides/med_{{ slide }}.jpg" media="(min-width: 450px)">
+        <source data-srcset="/siteart/slides/small_{{ slide }}.jpg">
+        <img class="lazyload" data-src="/siteart/slides/large_{{ slide }}.jpg" alt=""> 
       </picture>
-    </figure>  
+    </figure>     
 {% endfor %}
 </section>
+
+
+
+<!-- 3600 2x 1800
+1800 2x 900
+900 2x 450 -->
+
+

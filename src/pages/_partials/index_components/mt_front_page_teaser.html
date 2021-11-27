@@ -6,15 +6,14 @@
 				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
 				</svg></a></p>
 		</div>
-
 		<a href="{{post.url}}" rel="next">
 		<div class="teaser-module-art">
 		<figure class="teaser-module-mainart med-photo-overlay">
 			<picture>
-				<source data-srcset="/siteart/large_{{post.image}}.jpg" media="(min-width:550px)">
-				<source data-srcset="/siteart/med_{{post.image}}.jpg" media="(min-width:350px)">
-				<source data-srcset="/siteart/xsmall_{{post.image}}.jpg">
-				<img class="lazyload" data-src="/siteart/large_{{post.image}}.jpg" alt="">
+				<source data-srcset="/siteart/slides/large_{{post.slides.first }}.jpg" media="(min-width:900px)">
+				<source data-srcset="/siteart/slides/med_{{post.slides.first}}.jpg" media="(min-width:450px)">
+				<source data-srcset="/siteart/slides/small_{{post.slides.first }}.jpg">
+				<img class="lazyload" data-src="/siteart/slides/large_{{post.slides.first}}.jpg" alt="">
         <noscript>
           <img src="/siteart/large_{{post.image}}.jpg">
         </noscript>
