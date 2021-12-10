@@ -29,7 +29,7 @@ function slideImagesLarge(done) {
                 gmfile.unsharp('0.25x0.25+8+0.065'),
                 gmfile.interlace('none'),
                 gmfile.colorspace('sRGB'),
-                gmfile.crop(1400, 824, 0, 0);
+                gmfile.crop(3600, 2120, 0, 0);
         }, {
             imageMagick: true
         }
@@ -63,7 +63,7 @@ function slideImagesMed(done) {
                 gmfile.unsharp('0.25x0.25+8+0.065'),
                 gmfile.interlace('none'),
                 gmfile.colorspace('sRGB'),
-                gmfile.crop(1400, 824, 0, 0);
+                gmfile.crop(1800, 1060, 0, 0);
         }, {
             imageMagick: true
         }
