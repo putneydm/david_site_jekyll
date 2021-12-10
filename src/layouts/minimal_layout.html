@@ -24,23 +24,30 @@
 	  @@include('partials/portfolio/slide_show.html')
 {% elsif pageType == portfolio_entry and page.slides == false %}
 		<p>foo</p>
-	  @@include('partials/blog_components/blog_image_test.html')
+	  @@include('partials/blog_components/blog_image_test.html') 
 {% endif %}  
 	
 {% if page.pageType == "portfolio" %}
 	<div class="teaser-module-container">
 {% elsif pageType == portfolio_entry %}
 	<div class="blog-container"> 
-	<div class="blog-entry">	 
+	<div class="blog-entry">  		
+
 	<div class="blog-entry-text">
-{% endif %}	
-	{{content}}	
+		@@include('partials/portfolio_pages/icons.html') 
+{% endif %}
+  
+	{{content}}
+	
+	{% if page.pageType == "portfolio_entry" and page.urllink %}
+		<a class="button portfolio" href="{{ page.urllink }}" rel="next" target="new">{{ page.title }} on the Internet Archive</a>   
+	{% endif %}
 	{% if page.pageType == "portfolio" %}
 	</div>
   {% elsif pageType == portfolio_entry %}
   	</div>
 	</div> 
-	  @@include('partials/portfolio_pages/teasers.html')
+	  @@include('partials/portfolio_pages/teasers.html') 
 	</div>
 </article>
   {% endif %}
