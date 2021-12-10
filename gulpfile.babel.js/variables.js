@@ -64,6 +64,10 @@ const paths = {
         input: 'src/svg/svg_in/*.svg',
         output: 'src/svg/'
     },
+    portfolioSVG: {
+        input: 'src/svg/porfolio_svg_in/*.svg',
+        output: 'src/svg/'
+    },
     fonts: {
         input: 'src/fonts/*.css',
         testing: 'test/fonts/',
