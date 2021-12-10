@@ -5,6 +5,9 @@
 	@@include('partials/skip_links.html')
 	<div class="svg-import hidden" aria-hidden="true">
 			@@include('../svg/svgsprite.svg')
+	{% if pageType == portfolio_entry %}	
+		@@include('../svg/port_svgsprite.svg')
+	{% endif %}
 	</div>
 	<header class="no-billboard">
 		@@include('partials/headers/fixed_header_inside.html')
