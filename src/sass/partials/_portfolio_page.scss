@@ -398,3 +398,72 @@ background: -ms-linear-gradient(top,  rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%); /
 background: linear-gradient(to bottom,  rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40000000', endColorstr='#00000000',GradientType=0 ); /* IE6-8 */
 }
+
+
+.portfolio-role-container {
+	width:100%;
+}
+.portfolio-role-group {
+	margin:0 0 30px 0;
+}
+
+.blog-entry-text {
+	ul.portfolio-role-list {
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		margin:0;
+		li.portfolio-role-text {
+			margin:0 0 12px;
+			padding:0 3px;
+			flex-shrink: 0;
+			flex-basis: 33.33%;
+			font-size: 10px;
+			text-transform: uppercase;
+			font-family: $sans;
+			letter-spacing: .05em;
+			text-align: center;   
+			min-width:88px;
+			max-width: 116px;
+			// flex-grow: 1;
+			@media screen and (min-width:rem(352)) {
+				flex-basis: 25%;
+			}
+			@media screen and (min-width:rem(440)) {
+				flex-basis: 20%;
+				margin:0 0 12px;
+				padding:0 6px;
+			}	
+			@media screen and (min-width:rem(528)) {
+				flex-basis: 16%;
+			}
+			&::before {
+				display:none;
+			}
+			&:first-child {
+				.portfolio-role-icon {
+					border:3px solid $light_aqua !important;
+				}
+				.footer-icon {
+					fill:$light_aqua;
+				}
+			}	
+		}
+	}
+}	
+.portfolio-role-icon {
+	width:60px;
+	height:60px;
+	border:1px solid $aqua;
+	margin:0 auto 8px;
+	border-radius: 50%;
+	flex-shrink: 0;
+	flex-grow:0;
+}
+hr {
+	width: 50%;
+	border-color:$dark;
+	border-width: 1px 0 0;
+	margin-top:30px;
+	margin-bottom:30px;
+}
