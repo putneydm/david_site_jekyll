@@ -5,27 +5,59 @@ image: crux_fp_one
 imageAlt: Screenshot of cruxnow.com
 layout: minimal_layout
 pageType: portfolio_entry
-slides: ['whitmore_speech', 'redwoods', 'star-wars-the-last-jedi-trailer', 'santa_theyworeredsuit', 'ensign_obrien']
-url: http://www.cruxnow.com/
+slides: ['crux_one','crux_two','crux_three','crux_seven','crux_four','crux_five', 'crux_eight','crux_nine', 'crux_ten', 'crux_eleven', 'crux_thirteen', 'crux_fourteen', 'crux_twelve']
+role: [Design Lead, Developer]
+design: [Design Lead, Prototypes, Information Architecture,  Visual Design, Typography, Logo Design]
+developer: [Developer, HTML, CSS, JavaScript]
+project: "Create a destination site about the Catholic Church aimed at members in the United States and elsewhere. It would have news, opinion and lifestyle news, advice and features with a distinctly Catholic bent."
+client: "Boston Globe Media Company, circa July-October 2015"
+urllink: https://web.archive.org/web/20160310104001/http://www.cruxnow.com/
 sequence: 2
 ---
-### Subhead
 
-Crux was launched by The Boston Globe in the fall of 2014 and aimed at a worldwide audience of Catholics. It mixes serious discussions of theocracy and in-depth reporting with a lighter touch on matters of faith in modern culture.
+### Unique Challenges 
 
-My role was to design the site and build the front end ober a four-month period.
+*Crux had a short genstation perioid -- about four momths from*
 
-The Crux logo design was a sticky point of the project. My goal was for it to feel timeless — as if it belonged alongside logos of venerable publications such as Time, Newsweek or The Boston Globe itself. It is set in Sentinel with some minor tweaks.
+Design needed to be timeless
 
-### Subhead
+____
 
-From the outset, I built and designed Crux in code. It began as an HTML/CSS wireframe that was enhanced into a visual prototype that was reworked into the final site. I made a modular design that allowed me to pull out a component and swap in another quickly across all pages on the site or to build multiple versions of pages. We tested and approved designs by viewing HTML pages on native devices - iPads, iPhones, Android devices or desktops.
+*Crux had a short genstation perioid -- about four momths from*
 
-<aside class="blog-pullquote">
-  <blockquote>He would never bother himself with the affairs of privileged scions of the galaxy’s most powerful family and their daddy issues
-</blockquote>
-</aside>
+Design needed to be timeless
 
-The type is the voice of the site. I tried several faces and settled on Hoefler & Co.'s Sentinel for its classic-yet-modern feel and its sturdiness in a variety of uses. The face speaks with authority and, specially in italic, has a throwback elegance appropriate to the content.
+____
 
-The rest of the site's visual feel grew out of the tone set by the type.
+*Crux had a short genstation perioid -- about four momths from*
+
+Design needed to be timeless
+
+
+
+<!-- 
+Varied presentations
+I made a modular design that allowed me to pull out a component and swap in another quickly across all pages on the site or to build multiple versions of pages.
+
+
+
+### Unique challenges
+The site was built on a short schedule for a fall launch. We worked with an offshore developer for Wordpress integration and engineering. 
+
+### Opportunities
+The site was to be a news and lifestyle site in the vein of a secular news site — no crosses, no stained glass. We had a budget to work with, a rarity in the in the “can you get it for free somehow?” World of news design. The site’s audience goals also meant it was a unique brand that could be set apart from the parent company’s news verticals. 
+
+### What went well
+The site launched on time. 
+
+### What I learned
+Xxxx
+
+### Interesting factoids
+I was asked to not use the color  hex value `#666 `after someone spotted it in the source code.
+The 404 screen featured the prayer of St. Anthony, the patron saint of lost items. -->
+<!-- 
+### Where is it now?
+Crux was launched with no real business plan or market research. Many of its ambitious goals — the Vox Populi section — failed to resonate. “Catholics” in and of themselves are not a market segment, so targeted advertising was not successful. Eventually the site was sold to the Knights of Columbus, who redesigned the site. However, my logo is still in use.  -->
+
+

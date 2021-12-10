@@ -5,7 +5,7 @@ image: radiobdc_fp_one
 imageAlt: Screenshot of MIB EHR app
 layout: minimal_layout
 pageType: portfolio_entry
-slides: ['rbdc_playing_1', 'rbdc_playing_2', 'rbdc_social']
+slides: ['dialog_box', 'assigned', 'grid']
 sequence: 1
 ---
 ### The Client
