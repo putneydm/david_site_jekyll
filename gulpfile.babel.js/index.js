@@ -24,6 +24,7 @@ import { collections } from "./movers/collections"
 
 // visuals
 import { svg } from "./visuals/svg"
+import { portfolioSVG } from "./visuals/portfolioSVG"
 import { blogImages } from "./visuals/blogimages"
 import { heroImages } from "./visuals/heroimages"
 import { heroIndex } from "./visuals/heroimagesindex"
@@ -62,6 +63,7 @@ exports.bower = bower;
 exports.collections = collections;
 // visuals
 exports.svg = svg;
+exports.portfolioSVG = portfolioSVG;
 exports.blogImages = blogImages;
 exports.heroImages = heroImages;
 exports.heroIndex = heroIndex;
@@ -71,7 +73,7 @@ exports.deploy = deploy;
 exports.animations = animations;
 
 // combined tasks
-exports.default = series(parallel(cleanCSS, cleanJS, cleanPages), bower, svg, parallel(css, cssInline), parallel(concatJs, minifyInlineScripts), cachebustScripts, parallel(includes, layouts, pages, collections))
+exports.default = series(parallel(cleanCSS, cleanJS, cleanPages), bower, svg, portfolioSVG, parallel(css, cssInline), parallel(concatJs, minifyInlineScripts), cachebustScripts, parallel(includes, layouts, pages, collections))
 
 exports.rebuild = series(parallel(cleanCSS, cleanJS, cleanPages), parallel(css, cssInline), parallel(concatJs, minifyInlineScripts), cachebustScripts, parallel(includes, layouts, pages, collections))
 
