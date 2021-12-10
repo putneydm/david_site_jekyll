@@ -1,0 +1,64 @@
+<h3>Client</h3>
+<p>{{ page.client }}</p>
+
+<h3>The Project</h3>
+<p>{{ page.project }}</p>
+
+<section class="portfolio-role-container">
+
+
+<h3>My Role yy</h3>
+{% if page.design %}   
+<div class="portfolio-role-group">
+    <ul class="portfolio-role-list">
+        {% for item in page.design %}
+        <li class="portfolio-role-text">
+            <div class="portfolio-role-icon">
+                <span class="svg-container" aria-hidden="true">
+                    <svg class="footer-icon">
+                        <use xlink:href="#{{ item | replace:' ','_' | downcase }}" />
+                    </svg>
+                </span>
+            </div>  
+            {{ item }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>  
+{% endif %} 
+
+{% if page.developer %}
+<div class="portfolio-role-group">
+    <ul class="portfolio-role-list">
+        {% for item in page.developer %}
+        <li class="portfolio-role-text">
+            <div class="portfolio-role-icon">
+                <span class="svg-container" aria-hidden="true">
+                    <svg class="footer-icon">
+                        <use xlink:href="#{{ item | replace:' ','_' | downcase }}" />
+                    </svg>
+                </span>
+            </div>  
+            {{ item }}
+        </li> 
+        {% endfor %}
+    </ul>
+</div> 
+{% endif %}
+<!-- 
+    DESIGN
+    research
+    prototypes
+    User Testing
+    Information Architecture
+    Stakeholder Interviews
+    Documentation
+    Design System
+    Visual Design
+    Typography 
+    Logo Design
+    Branding
+    Discovery Sessions
+    User Stories and Jira
+ -->
+</section>
