@@ -3,16 +3,23 @@ layout: minimal_layout
 pageType: portfolio_entry
 ---
 <article class="portfolio-wrapper">
-  {% if page.title %}
-	<h1 class="portfolio-project-name">{{ page.title | markdownify | strip_html }}  
-  {% endif %}
-  {% if page.subhead %}
-  <h2 class="page-subhead">{{ page.subhead | markdownify | strip_html }}</h2>
-  {% endif %}
-  {% if page.slides %}
-    @@include('partials/portfolio/slide_show.html')
-  {% else %}
-    @@include('partials/blog_components/blog_image_test.html')
-  {% endif %}    
-    {{page.content}}
+<h1 class="portfolio-project-name">{{ page.title | markdownify | strip_html }}</h1>  
+<h2 class="page-subhead">{{ page.subhead | markdownify | strip_html }}</h2>
+{% if page.slides %}
+	@@include('partials/portfolio/slide_show.html')
+{% elsif page.slides == false %}
+	@@include('partials/blog_components/blog_image_test.html') 
+{% endif %}  
+	<div class="blog-container"> 
+    <div class="blog-entry">  		
+      <div class="blog-entry-text">
+        @@include('partials/portfolio_pages/icons.html') 
+          {{content}}    
+          {% if page.urllink %}
+            <a class="button portfolio" href="{{ page.urllink }}" rel="next" target="new">{{ page.title }} on the Internet Archive</a>   
+          {% endif %}
+      </div>
+    </div> 
+    @@include('partials/portfolio_pages/teasers.html') 
+	</div>
 </article>
