@@ -3,7 +3,7 @@ title:  "Cruxnow.com"
 subhead: A news and lifestyle website aimed at Catholics worldwide
 image: crux_fp_one
 imageAlt: Screenshot of cruxnow.com
-layout: minimal_layout
+layout: portfolio_entry
 pageType: portfolio_entry
 slides: ['crux_one','crux_two','crux_three','crux_seven','crux_four','crux_five', 'crux_eight','crux_nine', 'crux_ten', 'crux_eleven', 'crux_thirteen', 'crux_fourteen', 'crux_twelve']
 role: [Design Lead, Developer]
