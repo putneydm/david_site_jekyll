@@ -15,7 +15,7 @@ const paths = {
         deploy: 'dist/'
     },
     includes: {
-        input: 'src/includes/partials/*.html',
+        input: 'src/includes/**/*.html',
         testing: 'test/_includes/'
     },
     scripts: {
