@@ -33,7 +33,6 @@ em {
   .search-results-entry {
     &>h2.blog-headline {
       font-style: normal;
-      color:red;
     }
   }
   .search-results-entry {
@@ -48,7 +47,6 @@ em {
 .search-results-entry {
   &:last-child {
     background:none;
-    border:1px solid red;
   }
 }
 
