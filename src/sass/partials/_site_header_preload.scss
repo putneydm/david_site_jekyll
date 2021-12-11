@@ -171,7 +171,7 @@
 .small-billboard {
     .nav-fixed-bar--nodisplay {
         &::after {
-            background: scrim-gradient(black,
+            background: linear-gradient(black,
                     transparent);
             background-size: cover;
             content: '';
