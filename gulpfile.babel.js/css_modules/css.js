@@ -26,7 +26,7 @@ const {
 // lints and minifies css, moves to testing and dist
 function css() {
     var plugins = [
-        autoprefixer({ browsers: ['last 2 versions'] }),
+        autoprefixer({ overrideBrowserslist:['last 2 version','>1%','ios 7'] }),
         gradient(),
         pixelstorem({
             base: 16,

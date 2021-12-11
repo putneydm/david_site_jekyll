@@ -21,7 +21,7 @@ const {
 
 function cssInline() {
     const plugins = [
-        autoprefixer({ browsers: ['last 2 versions'] }),
+        autoprefixer({ overrideBrowserslist:['last 2 version','>1%','ios 7'] }),
         cssnano(),
         gradient(),
         pixelstorem({
