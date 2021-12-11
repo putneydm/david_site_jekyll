@@ -20,7 +20,9 @@ import { minifyInlineScripts } from "./js_modules/minifyinlinescripts"
 // movers
 import { bower } from "./movers/bower"
 import { collections } from "./movers/collections"
-// util
+
+// fonts
+import { fonts } from "./util/fonts"
 
 // visuals
 import { svg } from "./visuals/svg"
@@ -34,6 +36,7 @@ import { slideImages } from "./visuals/slides"
 import { animations } from "./animations"
 import { paths } from "./variables"
 import { deploy } from "./deploy"
+import { util } from "babel-core"
 
 // variables
 const { parallel, series, watch } = require('gulp');
@@ -51,6 +54,10 @@ exports.cssInline = cssInline;
 exports.layouts = layouts;
 exports.pages = pages;
 exports.includes = includes;
+
+// util
+exports.fonts = fonts;
+
 // scripts
 exports.cachebustScripts = cachebustScripts;
 exports.lintJS = lintJS;
