@@ -1,0 +1,11 @@
+---
+layout: minimal_layout
+pageType: portfolio
+--- 
+<article class="portfolio-wrapper">
+<div class="teaser-module-container"> 
+    <h1 class="portfolio-project-name">{{ page.title | markdownify | strip_html }}</h1>  
+    <h2 class="page-subhead">{{ page.subhead | markdownify | strip_html }}</h2>
+{{content}}
+</div>
+</article>
