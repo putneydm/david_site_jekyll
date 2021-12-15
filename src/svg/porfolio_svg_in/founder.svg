@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Line_Icons</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="location-flag" transform="translate(-1.999000, -1.998000)" fill-rule="nonzero">
+            <g id="Group" transform="translate(1.999000, 1.998000)">
+                <path d="M15,12.54 L15,14.44 C16.827,14.807 18,15.368 18,16 C18,17.106 14.419,18 10,18 C5.581,18 2,17.106 2,16 C2,15.368 3.173,14.807 5,14.44 L5,12.54 C2.014,13.231 0,14.52 0,16 C0,18.21 4.478,20 10,20 C15.522,20 20,18.21 20,16 C20,14.52 17.986,13.231 15,12.54 Z" id="Path"></path>
+                <path d="M11,8 L18,8 C18.552,8 19,7.552 19,7 L19,1 C19,0.448 18.552,0 18,0 L10,0 C9.448,0 9,0.448 9,1 L9,16 L11,16 L11,8 Z M11,2 L17,2 L17,6 L11,6 L11,2 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
