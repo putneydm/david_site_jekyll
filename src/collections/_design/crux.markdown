@@ -5,9 +5,9 @@ image: crux_fp_one
 imageAlt: Screenshot of cruxnow.com
 layout: portfolio_entry
 pageType: portfolio_entry
-slides: ['crux_one','crux_two','crux_three','crux_seven','crux_four','crux_five', 'crux_eight','crux_nine', 'crux_ten', 'crux_eleven', 'crux_thirteen', 'crux_fourteen', 'crux_twelve']
+slides: ['crux_1','crux_2','crux_3','crux_4','crux_5','crux_6', 'crux_7','crux_8', 'crux_9', 'crux_10', 'crux_11', 'crux_12', 'crux_13']
 role: [Design Lead, Developer]
-design: [Design Lead, Prototypes, Information Architecture,  Visual Design, Typography, Logo Design]
+design: [Design Lead, Prototypes, Information Architecture, Visual Design, Typography, Logo Design]
 developer: [Developer, HTML, CSS, JavaScript]
 project: "Create a destination site about the Catholic Church aimed at members in the United States and elsewhere. It would have news, opinion and lifestyle news, advice and features with a distinctly Catholic bent."
 client: "Boston Globe Media Company, circa July-October 2015"
@@ -17,19 +17,25 @@ sequence: 2
 
 ### Unique Challenges 
 
-*Crux had a short genstation perioid -- about four momths from*
+*Crux was to be a secular site about religion, not a specifically religious site. The design aesthetic needed to reflect this -- no crosses, no stained glass.*
 
 Design needed to be timeless
 
 ____
 
-*Crux had a short genstation perioid -- about four momths from*
+*Crux needed variety in its presentation based on content type*
 
 Design needed to be timeless
 
 ____
 
-*Crux had a short genstation perioid -- about four momths from*
+*Crux needed a logo and brand.*
+
+Design needed to be timeless
+
+____
+
+### Crux had a short gestation perioid -- about four months from kickoff to launch.
 
 Design needed to be timeless
 

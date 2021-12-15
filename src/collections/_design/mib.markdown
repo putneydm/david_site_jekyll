@@ -1,11 +1,10 @@
 ---
-title:  "MIB Group"
+title:  "MIB EHR Portal"
 subhead: Fast search and retrieval of Electronic Medical Records
-image: radiobdc_fp_one
-imageAlt: Screenshot of MIB EHR app
-layout: minimal_layout
+imageAlt: Screenshot of MIB Electronic Medical Records Portal
+layout: portfolio_entry
 pageType: portfolio_entry
-slides: ['dialog_box', 'assigned', 'grid']
+slides: ['mib_1', 'mib_2', 'mib_3', 'mib_4', 'mib_5', 'mib_6', 'mib_7', 'mib_8', 'mib_9', 'mib_10', 'mib_11', 'mib_12', 'mib_13']
 sequence: 1
 ---
 ### The Client

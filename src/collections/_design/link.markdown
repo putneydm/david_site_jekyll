@@ -1,23 +1,51 @@
 ---
 title:  "Link"
-subhead: A colorful, lively daily newspaper aimed at a younger audience
+subhead: A colorful, lively daily newspaper aimed at reluctant newspaper readers
 image: PotterCover
 imageAlt: Image of Link cover with Daniel Radcliff as Harry Potter
-layout: minimal_layout
+layout: portfolio_entry
 pageType: portfolio_entry
 head: Link
-slides: ['kitty', 'link2', 'link3']
+client: Landmark Communications, circa 2005-2007
+project: "Link was an ambitous project to reach a group of readers who currently "
+slides: ['link_1', 'link_2', 'link_3', 'link_14', 'link_13', 'link_4', 'link_5', 'link_6', 'link_7', 'link_8', 'link_9', 'link_10', 'link_11', 'link_12']
+role: [Design Lead, Developer]
+design: [Founder, Design Lead, Branding, Prototypes, Content Strategy, Visual Design, Typography, Logo Design, ]
 sequence: 4
 ---
 
-Link began with the idea of a newspaper for younger readers. My job was to give that idea form and voice.
+## Unique Challenges 
 
-It began in the fall of 2006 with a secret brainstorming session at my apartment. I became design director, and my job was to build the design prototypes. I chose the typography, colors, created the flow through the product and shaped its overall presentation of the news.
+### Starting a new print publication from scratch
 
-From the outset, I meant for Link to be the opposite of newspapers. Short, punchy and colorful, it spoke with a clear, loud voice — like a friend excited to tell you about something cool. It was meant to be a product that people had genuine affection for.
+Design needed to be timeless
 
-I took a cue from magazines and filled the front part of Link with fun, short lively items. The popular Kitty Sez dished out daily snark. The Daily Fortune added a dose of affirmation. Something to Talk About Today gave everyone a conversation starter.
+____
 
-Link articles were short and snappy. Designs were lively, with an emphasis on visuals, graphics and tight editing. This was produced by a design and editing dream-team whose work won several Society of News Design Awards of Excellence. Most notably, Link was a finalist for World's Best Designed Newspaper in 2006, after only three months of issues.
+### Understanding an audience generating interest in potential readers who might otherwise never consider a print publication.
 
-Our readers an advertisers loved us, but our parent company didn’t share that feeling. Link was victim of the 2008 recession and the decline of newspapers. Revenue was ahead of schedule, but our parent company cleared anything not currently turning a profit off its books. Link was killed, and its staffers, who designed pages featured here, were laid off.
+Design needed to be timeless
+
+____
+
+### Creating a fresh brand in an industry that was itself a damaged brand.
+
+In the news business, *your content is your brand.* So Link needed to emphatically not be what had come before.
+
+The core Link group did a brand exercise, and landed on several keywords. Among them: "genuine," "lively" and "active." Being cool wasn't our aim. We didn't want to be [Poochie the Dog][1]. *Editorial voice* was far more key to success than design alone. We focused on *how* it spoke as well as what it spoke about. Link was:
+
+* Conversational -- Written in normal language and not "newspaper speak."
+* Excited -- Tell stories we are excited to share them with readers. If we can't be excited about them, how can readers?
+* Explain, don't tell -- Stories were informed by the key parameters of what happened, what it means and what's next.
+* Active stories -- Readers should be able to go do  -- concerts, crafts, get-togethers, etc.
+* Solve problems for readers -- Life-hack type stories would take precedence, such has health, home, cooking and lifestyle.
+
+____
+
+### Delivering at a consistently high level with a limited-bones staff.
+
+Design needed to be timeless
+
+
+
+1: https://www.youtube.com/watch?v=AySXu8x-RnA
