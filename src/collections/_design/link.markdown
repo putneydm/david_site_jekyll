@@ -7,10 +7,10 @@ layout: portfolio_entry
 pageType: portfolio_entry
 head: Link
 client: Landmark Communications, circa 2005-2007
-project: "Link was an ambitous project to reach a group of readers who currently "
+project: "Link was an ambitous project to reach a group of readers who had fully lost interest in traditional newspapers. It was a full reinvention of the genre that was years ahead of its time but doomed by the economics of the industry."
 slides: ['link_1', 'link_2', 'link_3', 'link_14', 'link_13', 'link_4', 'link_5', 'link_6', 'link_7', 'link_8', 'link_9', 'link_10', 'link_11', 'link_12']
-role: [Design Lead, Developer]
-design: [Founder, Design Lead, Branding, Prototypes, Content Strategy, Visual Design, Typography, Logo Design, ]
+roleDes: [Founder, Design Director]
+design: [Branding, Prototypes, Content Strategy, Visual Design, Typography, Logo Design]
 sequence: 4
 ---
 

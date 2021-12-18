@@ -6,9 +6,10 @@ imageAlt: Screenshot of cruxnow.com
 layout: portfolio_entry
 pageType: portfolio_entry
 slides: ['crux_1','crux_2','crux_3','crux_4','crux_5','crux_6', 'crux_7','crux_8', 'crux_9', 'crux_10', 'crux_11', 'crux_12', 'crux_13']
-role: [Design Lead, Developer]
-design: [Design Lead, Prototypes, Information Architecture, Visual Design, Typography, Logo Design]
-developer: [Developer, HTML, CSS, JavaScript]
+roleDes: [Design Lead]
+design: [Prototypes, Information Architecture, Visual Design, Typography, Logo Design]
+roleDev: [Developer]
+developer: [HTML, CSS, JavaScript]
 project: "Create a destination site about the Catholic Church aimed at members in the United States and elsewhere. It would have news, opinion and lifestyle news, advice and features with a distinctly Catholic bent."
 client: "Boston Globe Media Company, circa July-October 2015"
 urllink: https://web.archive.org/web/20160310104001/http://www.cruxnow.com/
