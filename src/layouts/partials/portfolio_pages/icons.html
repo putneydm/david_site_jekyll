@@ -10,10 +10,22 @@
 {% if page.design %}   
 <div class="portfolio-role-group">
     <ul class="portfolio-role-list">
+        {% for item in page.roleDes %}
+        <li class="portfolio-role-text">
+            <div class="portfolio-role-icon main">
+                <span class="svg-container" aria-hidden="true">
+                    <svg class="footer-icon">
+                        <use xlink:href="#{{ item | replace:' ','_' | downcase }}" />
+                    </svg>
+                </span>
+            </div>  
+            {{ item }} 
+        </li>
+        {% endfor %}
         {% for item in page.design %}
         <li class="portfolio-role-text">
             <div class="portfolio-role-icon">
-                <span class="svg-container" aria-hidden="true">
+                <span class="svg-container" aria-hidden="true"> 
                     <svg class="footer-icon">
                         <use xlink:href="#{{ item | replace:' ','_' | downcase }}" />
                     </svg>
@@ -29,6 +41,18 @@
 {% if page.developer %}
 <div class="portfolio-role-group">
     <ul class="portfolio-role-list">
+        {% for item in page.roleDev %}
+        <li class="portfolio-role-text">
+            <div class="portfolio-role-icon main">
+                <span class="svg-container" aria-hidden="true">
+                    <svg class="footer-icon">
+                        <use xlink:href="#{{ item | replace:' ','_' | downcase }}" />
+                    </svg>
+                </span>
+            </div>  
+            {{ item }}
+        </li>
+        {% endfor %}
         {% for item in page.developer %}
         <li class="portfolio-role-text">
             <div class="portfolio-role-icon">
@@ -38,7 +62,7 @@
                     </svg>
                 </span>
             </div>  
-            {{ item }}
+            {{ item }}  
         </li> 
         {% endfor %}
     </ul>
