@@ -79,6 +79,7 @@ button.slide-button {
     z-index:5;
     transition: background-color .2s, transform .2s ease-in-out;
     box-shadow: 0 0 rem(50) 0 rgba($dark, .4);
+    cursor:pointer;
     &::after {
         display:block;
         content:"";
