@@ -425,7 +425,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40000000', e
 			text-align: center;   
 			min-width:88px;
 			max-width: 116px;
-			// flex-grow: 1;
 			@media screen and (min-width:rem(352)) {
 				flex-basis: 25%;
 			}
@@ -440,21 +439,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40000000', e
 			&::before {
 				display:none;
 			}
-			// &:first-child {
-			// 	// .portfolio-role-icon {
-			// 	// 	border:3px solid $light_aqua !important;
-			// 	// }
-			// 	// .footer-icon {
-			// 	// 	fill:$light_aqua;
-			// 	// }
-			// }	
 		}
 	}
 }	
 .portfolio-role-icon {
 	width:60px;
 	height:60px;
-	border:1px solid $aqua;
+	border:2px solid $aqua;
 	margin:0 auto 8px;
 	border-radius: 50%;
 	flex-shrink: 0;
