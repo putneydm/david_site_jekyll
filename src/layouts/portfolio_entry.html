@@ -7,11 +7,12 @@ pageType: portfolio_entry
 <h2 class="page-subhead">{{ page.subhead | markdownify | strip_html }}</h2>
 {% if page.slides %}
 	@@include('partials/portfolio/slide_show.html')
-{% elsif page.slides == false %}
-	@@include('partials/blog_components/blog_image_test.html') 
 {% endif %}  
 	<div class="blog-container"> 
-    <div class="blog-entry">  		
+    <div class="blog-entry"> 
+  {% if page.image %}
+	@@include('partials/blog_components/blog_image_test.html')  
+  {% endif %}  		
       <div class="blog-entry-text">
         @@include('partials/portfolio_pages/icons.html') 
           {{content}}    

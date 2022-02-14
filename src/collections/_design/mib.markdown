@@ -4,10 +4,10 @@ subhead: Fast search and retrieval of Electronic Medical Records
 imageAlt: Screenshot of MIB Electronic Medical Records Portal
 layout: portfolio_entry
 pageType: portfolio_entry
-client: MIB Group, Framingham, Mass.
-project: MIB-EHR was the XXX-year-old company's entry into the fast-growing field of electronic medical records delivery. It was targeted at life insurance companies and aimed to deliver records from multiple vendors, cut weeks off record delivery times, allow for automation and hugely reduce costs.
+client: MIB Group, Braintree, Mass.
+project: MIB-EHR was a legacy company's entry into the fast-growing field of electronic medical records for life insurance companies. It delivered records from multiple vendors, cut weeks off record delivery times and hugely reduced costs. I designed, built and devlivered a simple perfomant front end along with extensive documentation.
 roleDes: [Design Lead]
-design: [Stakeholder Interviews, Discovery Sessions, Information Architecture, Visual Design, Typography, Prototypes, User Testing, Design System, Documentation]
+design: [Stakeholder Interviews, Discovery Sessions, Information Architecture, Visual Design, Typography, Prototypes, User Testing, Design System, Documentation, User Stories and Jira]
 roleDev: [Developer]
 developer: [HTML, CSS, JavaScript]
 slides: ['mib_1', 'mib_2', 'mib_3', 'mib_4', 'mib_5', 'mib_6', 'mib_7', 'mib_8', 'mib_9', 'mib_10', 'mib_11', 'mib_12', 'mib_13']
