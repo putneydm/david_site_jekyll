@@ -76,7 +76,7 @@ button.slide-button {
     border-radius:50%;
     position: absolute;
     top:calc(100% - 30px);
-    z-index:5;
+    z-index:9;
     transition: background-color .2s, transform .2s ease-in-out;
     box-shadow: 0 0 rem(50) 0 rgba($dark, .4);
     cursor:pointer;
@@ -100,7 +100,6 @@ button.slide-button {
     }
     &.right {
         left:calc(50% + 30px);
-        z-index:5;
       &:after {
         border-left: 6px solid $dark_aqua;
       }
