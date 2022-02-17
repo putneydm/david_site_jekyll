@@ -356,18 +356,14 @@ var pageFunctions = {
   // sets bg image on hero image
   setBackground: function (el) {
     var self = this;
-    console.log("hero image")
-
-    //  var heroImage = document.querySelector('#hero-image'),
+    var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     var heroImageName = el.getAttribute('data-image'),
       windowWidth = window.innerWidth, // finds width of browser window
-      pageType = document.querySelector('BODY').dataset.pagetype,
-      imageURL = windowWidth > 700 ?
-      '/siteart/hero_' + heroImageName + '.jpg' :
-      '/siteart/sm_hero_' + heroImageName + '.jpg';
-
-      // console.log("XX", heroImageName);
-
+      pageType = document.querySelector('BODY').dataset.pagetype,   
+      imageURL = windowWidth > 700 && dark ? '/siteart/hero_dark_' + heroImageName + '.jpg' :
+      windowWidth <= 700 && dark ? '/siteart/sm_hero_dark_' + heroImageName + '.jpg':
+      windowWidth > 700 && !dark ? '/siteart/hero_' + heroImageName + '.jpg' :
+      '/siteart/sm_hero_' + heroImageName + '.jpg';  
     var img = new Image();
     img.src = imageURL;
 
