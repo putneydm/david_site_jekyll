@@ -9,7 +9,8 @@ roleDes: [Design Lead]
 design: [Prototypes, Information Architecture, Visual Design, Typography, Branding, Logo Design]
 roleDev: [Developer]
 developer: [HTML, CSS, JavaScript]
-project: "Crux was to be a destination site about the Catholic Church, with news, advice and lifestyle features aimed at members in the United States and elsewhere. It was a green-field project. I served as design lead, front-end developer, visual designer and more, essentailly crafting the brand identity as well as the site itself."
+myRole: Lead UI/UX & visual designer and front-end developer
+project: "Crux was to be a destination site about the Catholic Church, with news, advice and lifestyle features aimed at members in the United States and elsewhere. It was a green-field project. I served as design lead, front-end developer, visual designer and more, essentially crafting the brand identity as well as the site itself."
 client: "Boston Globe Media Company, circa July-October 2015"
 urllink: https://web.archive.org/web/20160310104001/http://www.cruxnow.com/
 sequence: 3
@@ -22,9 +23,9 @@ sequence: 3
 
 ## Unique Challenges 
 
-### Crux needed brand and visual identity -- including a wordmark
+### No. 1 | Crux needed brand and visual identity -- including a wordmark
 
-When Crux was formulated, it basically had a name and an editor. The face -- branding, colors, typography -- the overall visual design of the site -- was TBD. What was know was that it was to be a *news* site, not a *religous* site -- summed up by one stakeholder as "no stained glass, no crosses." 
+When Crux was formulated, it basically had a name and an editor. The face -- branding, colors, typography -- the overall visual design of the site -- was TBD. What was known was that it was to be a *news* site, not a *religious* site -- summed up by one stakeholder as "no stained glass, no crosses." 
 
 To set a design direction, I did:
 * A series of mood boards to determine which direction was desirable
@@ -34,30 +35,31 @@ To set a design direction, I did:
 
 ___
 
-### Crux needed variety in its presentation
+### No. 2 | Crux needed variety in its presentation
 
-News sites -- at least at that time -- tended to package all their news in the same type of container, whether it fit or not. Crux wanted to have a unique displays for different types of stories
+News sites -- at least at that time -- tended to package all their news in the same type of container, whether it fit or not. Crux wanted to have unique displays for different types of stories
 * A standard news template
 * A news template highlighting stories written by Crux staff
-* A softer, feature template for reviews, human interest and the like
+* A softer feature template for reviews, human interest and the like
 * A columnist or opinion template
-* A point, counterpoint template
+* A point / counterpoint template
 Additionally, these story pages were reflected on homepage presentation styles for the individual story tiles. 
 
 ____
 
-### Do it fast -- so design in browser
+### No. 3 | Do it fast -- so design in browser
 
-Crux was a rush job. It went from inception to launch in just a few months, so Crux was built *in browser*. This was an enormous challenge for me as developer and designer, in terms of workload and design reviews and dev reviews were the same thing, essentially. 
+Crux was a rush job. It went from inception to launch in just a few months, so Crux was built *in browser*. This was an enormous challenge for me as developer and designer, in terms of workload. Design reviews and dev reviews were the same thing, essentially. 
 
 Among the strengths of this approach:
 * Speed of napkin sketch to design to code
 * Very little time gap between ending design and shipping site
+
 Among the weaknesses
 * Small design changes -- eg "can that be moved to the left side" -- can require big code changes
 * Inflexibility of code-first means less experimentation and iteration
 
 ___
 
-### Crux had an awesome 404 screen
-OK, not a challenge. But I love a good hidden bit, and Crux had a good one -- and a sense of humor. The Cruxnow.com 404 screen was an image of St. Anthony, patron saint of lost items, and a link to his page in the Saints and Popes database. Additionally, because a 404 page should not leave users, lost, it also directed them back to the main site. 
+### No. 4 | Crux had an awesome 404 screen
+OK, not a challenge. But I love a good hidden bit, and Crux had a good one -- and a sense of humor. The Cruxnow.com 404 screen was an image of St. Anthony, patron saint of lost items. It linked to his page in the Saints and Popes database. Additionally, because a 404 page should not leave users, lost, it also directed them back to the main site. 
