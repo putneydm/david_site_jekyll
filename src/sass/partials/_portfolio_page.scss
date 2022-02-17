@@ -449,17 +449,32 @@
 	flex-shrink: 0;
 	flex-grow:0;
 	&.main {
-		border:3px solid $light_aqua !important;
-		fill:$light_aqua;
-		.footer-icon {
+		border:3px solid $aqua;
+		background-color: $aqua;
+		// fill:$dark_aqua;
+		@media ( prefers-color-scheme: dark) {
+			border:3px solid $light_aqua;
 			fill:$light_aqua;
+			background: transparent;
+        }
+		.footer-icon {
+			fill:white;
+			@media ( prefers-color-scheme: dark) {
+				fill:$light_aqua;
+			}
 		}
+	}
+	@media ( prefers-color-scheme: dark) {
+		border:2px solid $aqua;
 	}
 }
 hr {
 	width: 50%;
-	border-color:$dark;
+	border-color:$light;
 	border-width: 1px 0 0;
 	margin-top:30px;
 	margin-bottom:30px;
+	@media ( prefers-color-scheme: dark) {
+		border-color:$med;
+	}
 }

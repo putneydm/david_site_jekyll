@@ -12,6 +12,7 @@
 <article class="teaser-module clearfix">
     <h1 class="teaser-module-head"><a href="{{ post.url}}" rel="next">{{ post.title | markdownify | strip_html }}</a></h1>
 		<div class="teaser-module-abstract">
+		<h2 class="teaser-module-subhead">{{ post.myRole}}</h2>	
 		<p>	{{ post.project | truncatewords: 70 | strip_html }} <a href="{{post.url}}" rel="next" class="teaser-module-abstract-link">More
 			<svg class="teaser-arrow-icon">
 				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
