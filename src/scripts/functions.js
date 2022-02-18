@@ -922,7 +922,6 @@ var pageFunctions = {
   },
   isElementVisible: function (elem) {
     var distance = elem.getBoundingClientRect();
-    // console.log("vis", elem)
     return (
       distance.top >= 0 &&
       distance.left >= 0 &&
@@ -978,17 +977,17 @@ var pageFunctions = {
   },
 };
 
+// slideshow
 (function(){
-const galleryWrapper = document.querySelector('.gallery-wrapper');
-const slideWrapper = document.querySelector('.gallery');
-const counter = document.querySelector('.gallery-count');
-const images = () => Array.from(document.querySelectorAll('.slide'));
-//finds the index of an element sent to it if the class matches
-const findI = (r, cl) => r.findIndex((el) => el.classList.contains(cl));
-const remove = (el, cl) => el.classList.remove(cl);
-const add = (el, cl) => el.classList.add(cl);
-const getSlide = (r, active) => r.filter((el, i) => i === active);
-const trans = (el) => slideWrapper.addEventListener('transitionend', (e) => { remove(el, "move-out")}); 
+  const galleryWrapper = document.querySelector('.gallery-wrapper');
+  const counter = document.querySelector('.gallery-count');
+  const images = () => Array.from(document.querySelectorAll('.slide'));
+  //finds the index of an element sent to it if the class matches
+  const findI = (r, cl) => r.findIndex((el) => el.classList.contains(cl));
+  const remove = (el, cl) => el.classList.remove(cl);
+  const add = (el, cl) => el.classList.add(cl);
+  const getSlide = (r, active) => r.filter((el, i) => i === active);
+  const trans = (el) => document.querySelector('.gallery').addEventListener('transitionend', (e) => { remove(el, "move-out")} ); 
 
 const advanceSlide = (curr, next) => {
   add(next, "center"),
@@ -998,27 +997,58 @@ const advanceSlide = (curr, next) => {
 }
 const slideCount = (slide) => counter.replaceChild(document.createTextNode(slide+1), counter.childNodes[0]);
 
-if (galleryWrapper) {
-galleryWrapper.addEventListener('click', (e) => {  
+const handleAction = (val) => {
+    // Do something...
   const imgArr = images();
   // finds the slide with the class current
   const activeSlide = findI(imgArr, "center");  
   // gets dom object of current slide from array
   const [current] = getSlide(imgArr, activeSlide);     
   const [next] =  
-    e.target.value === "advance" && activeSlide === imgArr.length - 1 ? imgArr.slice(0,1) 
-    : e.target.value === "advance"? getSlide(imgArr, activeSlide + 1)
-    : e.target.value === "back" && activeSlide === 0 ? imgArr.slice(-1)    
-    : e.target.value === "back"? getSlide(imgArr, activeSlide - 1)
+    val === "advance" && activeSlide === imgArr.length - 1 ? imgArr.slice(0,1) 
+    : val === "advance"? getSlide(imgArr, activeSlide + 1)
+    : val === "back" && activeSlide === 0 ? imgArr.slice(-1)    
+    : val === "back"? getSlide(imgArr, activeSlide - 1)
     : false;
     advanceSlide(current, next);
     slideCount(
-    activeSlide + 1 === imgArr.length && e.target.value === "advance"? 0
-    : activeSlide === 0 && e.target.value === "back"? imgArr.length - 1
-    : e.target.value === "back"? activeSlide - 1
+    activeSlide + 1 === imgArr.length && val === "advance"? 0
+    : activeSlide === 0 && val === "back"? imgArr.length - 1
+    : val === "back"? activeSlide - 1
     :  activeSlide + 1
    )
-});
+};
+
+ // Swipe Up / Down / Left / Right
+ let initialX = null;
+ let initialY = null;
+
+const startTouch = (e) => {
+   initialX = e.touches[0].clientX;
+   initialY = e.touches[0].clientY;
+ };
+
+const moveTouch = (e) => {
+  if (initialX === null) {
+    return;
+  }
+  if (initialY === null) {
+    return;
+  }
+  const dir = Math.abs(initialX - e.touches[0].clientX) > Math.abs(initialY - e.touches[0].clientY) && initialX - e.touches[0].clientX > 0 ? "advance": "back";
+
+  handleAction(dir);
+  initialX = null;
+  initialY = null;
+  e.preventDefault();
+};
+
+const clickMove = (e) => handleAction(e.target.value);
+
+if (galleryWrapper) {
+  galleryWrapper.addEventListener('touchstart', startTouch, false);
+  galleryWrapper.addEventListener('touchmove', moveTouch, false);
+  galleryWrapper.addEventListener("click", clickMove, false);
 }
 
 })();
