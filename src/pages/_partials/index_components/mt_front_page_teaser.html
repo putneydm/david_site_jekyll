@@ -8,7 +8,6 @@
 {% assign alt = post.imageAlt %}
 {% endif %}
 
-
 <article class="teaser-module clearfix">
     <h1 class="teaser-module-head"><a href="{{ post.url}}" rel="next">{{ post.title | markdownify | strip_html }}</a></h1>
 		<div class="teaser-module-abstract">
@@ -27,7 +26,11 @@
 				<source data-srcset="/siteart/slides/small_{{ image }}.jpg">
 				<img class="lazyload" data-src="/siteart/slides/large_{{ image }}.jpg" alt="">
         <noscript>
-          <img src="/siteart/large_{{image}}.jpg">
+			{% if post.slides %}
+			<img src="/siteart/slides/large_{{image}}.jpg">		
+			{% elsif post.image %}
+			<img src="/siteart/large_{{image}}.jpg">
+			{% endif %}
         </noscript>
 			</picture>
 		</figure>
