@@ -3,7 +3,7 @@ layout: single_blog_entry
 pagetype: blog-entry
 title: The past and the Furiosa
 date: 2016-03-21
-categories: blog-entry
+categories: blog-entry promo
 subhead:
 tags: ['commentary', 'films', 'Mad Max: Fury Road', 'movie', 'navel gazing', 'violence' ]
 image: furiosa

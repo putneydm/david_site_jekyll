@@ -6,9 +6,10 @@ pageType: portfolio_entry
 head: Link
 client: Landmark Communications, circa 2005-2007
 doneFor: Landmark Communications, circa 2005-2007
-project: "Link was an ambitous project to capture a group of readers who had rejected traditional newspapers. It was not just color and photos and pop culture. It was a full-on reinvention that proved to be years ahead of its time."
+project: "Link was a legacy-media project to capture the attention of a group of readers who had rejected traditional newspapers. It was not just color and photos and pop culture. It was a full-on reinvention of the form that news took that proved to be years ahead of its time. I was a cofounder who saw the project into production and guided it to success."
 slides: ['link_1', 'link_2', 'link_3', 'link_14', 'link_13', 'link_4', 'link_5', 'link_6', 'link_7', 'link_8', 'link_9', 'link_10', 'link_11', 'link_12']
 roleDes: [Founder, Design Director]
+myRole: Co-founder and design director
 design: [Branding, Prototypes, Content Strategy, Visual Design, Typography, Logo Design]
 sequence: 4
 ---
@@ -16,7 +17,7 @@ sequence: 4
 * Reach an audience alienated by traditional newspapers
 * Bring some color, fun and innovation to a stodgy and cautious business
 * Capture advertisers who might not otherwise be interested in or afford newspaper advertising. 
-* Generate passionate readers, not just eyeballs but fans -- loyalists.
+* Generate passionate readers, not just eyeballs, but fans -- loyalists.
 
 ## Unique Challenges 
 ### No. 1 | Starting a print publication from scratch

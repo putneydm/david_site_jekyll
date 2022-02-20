@@ -1,6 +1,17 @@
+{% if post.slides %}
+{% assign image = post.slides.first %}
+{% assign alt = page.imageAlt %}
+{% endif %}
+
+{% if post.image %}
+{% assign image = post.image %}
+{% assign alt = post.imageAlt %}
+{% endif %}
+
 <article class="teaser-module clearfix">
     <h1 class="teaser-module-head"><a href="{{ post.url}}" rel="next">{{ post.title | markdownify | strip_html }}</a></h1>
 		<div class="teaser-module-abstract">
+		<h2 class="teaser-module-subhead">{{ post.myRole}}</h2>	
 		<p>	{{ post.project | truncatewords: 70 | strip_html }} <a href="{{post.url}}" rel="next" class="teaser-module-abstract-link">More
 			<svg class="teaser-arrow-icon">
 				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
@@ -10,15 +21,19 @@
 		<div class="teaser-module-art">
 		<figure class="teaser-module-mainart med-photo-overlay">
 			<picture>
-				<source data-srcset="/siteart/slides/large_{{post.slides.first }}.jpg" media="(min-width:900px)">
-				<source data-srcset="/siteart/slides/med_{{post.slides.first}}.jpg" media="(min-width:450px)">
-				<source data-srcset="/siteart/slides/small_{{post.slides.first }}.jpg">
-				<img class="lazyload" data-src="/siteart/slides/large_{{post.slides.first}}.jpg" alt="">
+				<source data-srcset="/siteart/slides/large_{{ image }}.jpg" media="(min-width:900px)">
+				<source data-srcset="/siteart/slides/med_{{ image }}.jpg" media="(min-width:450px)">
+				<source data-srcset="/siteart/slides/small_{{ image }}.jpg">
+				<img class="lazyload" data-src="/siteart/slides/large_{{ image }}.jpg" alt="">
         <noscript>
-          <img src="/siteart/large_{{post.image}}.jpg">
+			{% if post.slides %}
+			<img src="/siteart/slides/large_{{image}}.jpg">		
+			{% elsif post.image %}
+			<img src="/siteart/large_{{image}}.jpg">
+			{% endif %}
         </noscript>
 			</picture>
 		</figure>
 	</div>
 	</a>
-</article>
+</article> 

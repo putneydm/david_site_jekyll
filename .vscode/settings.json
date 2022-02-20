@@ -1,4 +1,7 @@
 {
     "eslint.enable": true,
-    "jshint.enable": false
+    "jshint.enable": false,
+    "spellchecker.ignoreWordsList": [
+        "mantainence"
+    ]
 }

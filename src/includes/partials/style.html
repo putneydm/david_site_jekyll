@@ -1,5 +1,45 @@
 <style>
-  {% if page.heroArt %}.loading-overlay--preset::after{background-image:url('/siteart/pl_hero_{{page.heroArt}}.jpg');}@media screen and (max-width: 46.875em){.loading-overlay--preset::after{background-image:url('/siteart/pl_hero_small_{{page.heroArt}}.jpg');}}{% endif %}
+  {% if page.heroArt %}
+.loading-overlay--preset::after {
+    background-image:url('/siteart/pl_hero_{{page.heroArt}}.jpg');
+  }
+@media screen and (max-width: 46.875em){
+    .loading-overlay--preset::after{
+      background-image:url('/siteart/pl_hero_small_{{page.heroArt}}.jpg');
+    }
+}
+@media screen and (prefers-color-scheme: dark) {
+    .loading-overlay--preset::after {
+      background-image:url('/siteart/pl_hero_dark_{{page.heroArt}}.jpg');
+    }
+}  
+@media screen and (max-width: 46.875em) and (prefers-color-scheme: dark) {
+      .loading-overlay--preset::after{
+        background-image:url('/siteart/pl_hero_small_dark_{{page.heroArt}}.jpg');
+  }
+}
+
+.no-js. hero-art {
+    background-image:url('/siteart/hero_{{page.heroArt}}.jpg');
+  } 
+	@media screen and (max-width: 46.875em){
+    .no-js .hero-art {
+      background-image:url('/siteart/sm_hero_{{page.heroArt}}.jpg');
+    }
+	}
+	@media screen and (prefers-color-scheme: dark) {
+    .no-js .hero-art {
+      background-image:url('/siteart/hero_dark_{{page.heroArt}}.jpg');
+    }
+	}  
+	@media screen and (max-width: 46.875em) and (prefers-color-scheme: dark) {
+    .no-js .hero-art {
+      background-image:url('/siteart/sm_hero_dark_{{page.heroArt}}.jpg');
+    }
+	}
+
+    
+  {% endif %}
   {% if page.pagetype == "index" %}
     {% include index_embeded_styles.css %}
   {% elsif page.pagetype == "blog" or page.pagetype == "blog-entry" %}
@@ -7,5 +47,5 @@
   {% elsif page.pagetype == "error" %}
     {% include error_page.css %}
   {% endif %}
-  {% include main_embedded_styles.css %}
+  {% include main_embedded_styles.css %} 
 </style>

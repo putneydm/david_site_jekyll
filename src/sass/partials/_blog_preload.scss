@@ -15,17 +15,14 @@
 }
 .tag-results {
   padding-top: 0;
-  margin: 0 auto;
+  margin: 140px auto 0;
   max-width: rem(700);
-
   @media screen and (max-width: em(720)) {
-    margin: 0 rem(10);
+    margin: 140px rem(10);
   }
-
-  @media screen and (max-width: em(450)) {
-    margin: 0 rem(10);
+  @media screen and (max-width: em(560)) {
+    margin: 160px rem(10) 0;
   }
-
   .blog-entry-text {
     padding: 0;
   }
@@ -90,6 +87,7 @@
 
 .blog-image {
     width: 100%;
+    max-width:700px;
     margin: 0 auto;
     position: relative;
     padding: 58.8% 0 0;

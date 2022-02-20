@@ -1,15 +1,12 @@
 {
-  "firebase": "davidsite",
-  "public": "./",
-  "clean_urls": true,
-  "error_page": "404.html",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
-  ],
-  
-  "headers": [ {
+  "hosting": {
+    "public": "./",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [ {
       "source" : "/fonts/*.css",
       "headers" : [ {
       "key" : "Cache-Control",
@@ -40,4 +37,5 @@
       "value" : "max-age=7200"
       } ]
     } ]
+  }
 }

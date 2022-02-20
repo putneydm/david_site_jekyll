@@ -7,13 +7,18 @@
 	justify-content: center;
 	align-items: center;
 	position:absolute;
-	bottom:rem(100);
+	top:25%;
 	width:100%;
 	z-index:3;
-		@media screen and (max-width:rem(430))	{
-			top:0;
-			bottom:initial;
+	@media screen and (max-width:em(900)) {
+		top:45px;
+		bottom:initial;
 		}
+	@media screen and (max-width:rem(430))	{
+		top:0;
+		bottom:initial;
+	}
+
 	.nav-menu-button{ display:none; }
 }
 .main-header-logo--display {
@@ -23,7 +28,7 @@
 	width:rem(500);
 	opacity:0;
 	transform: translateY(-50px);
-	// transform: scale(1,1);
+	filter: drop-shadow(0 0 12px $dark);
 			@media screen and (max-width:em(800)) {
 			height:rem(100);
 			width:rem(400);
@@ -31,7 +36,7 @@
 			@media screen and (max-width:em(430)) {
 			height:rem(70);
 			width:rem(280);
-			margin:rem(45) rem(30) rem(10);
+			margin:rem(75) rem(30) rem(10);
 			}
 }
 .nav-list--display {

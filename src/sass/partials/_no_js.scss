@@ -55,4 +55,15 @@
 	.loading-overlay--preset {
 		&::after {content:'';display:none;}
 	}
+	.blog-entry.closed .button.blog-more-button.archive {
+		display:none;
+	}
+	.blog-entry.closed.expandable {
+		height:auto;
+	}
+	.blog-entry.closed::before {
+		display:none;
+	}
+
 }
+
