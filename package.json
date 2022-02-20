@@ -70,7 +70,7 @@
     "gulp-clean-css": "^4.3.0",
     "jpegtran": "^1.1.0",
     "jpegtran-bin": "^4.0.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "postcss": "^8.4.4",
     "postcss-pixels-to-rem": "^0.8.0"
   }
