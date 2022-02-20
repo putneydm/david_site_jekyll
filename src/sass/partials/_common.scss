@@ -5,3 +5,28 @@ main
 	clear:both;
 	position:relative;
 }
+.skip-links{
+	position:absolute;
+	left:-1000000px;
+	width:0px;
+	height:0ps;
+	overflow:hidden;
+	&:focus {
+		left:10px;
+		top:10px;
+		width:300px;
+		color:$dark_aqua;
+		display:block;
+		padding:30px;
+		background-color:$haze;
+		background-image:none;
+		z-index:20;
+		font-size:18px;
+		text-align: center;
+		&:hover {
+			background-image:none;
+			background-color: $dark_aqua;
+			color:white;
+		}
+	}
+}
