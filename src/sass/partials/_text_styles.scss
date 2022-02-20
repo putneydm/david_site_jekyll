@@ -24,14 +24,13 @@ a {
     img {
         border: 0;
     }
-
-    // &:focus {
-    //     box-shadow: none;
-    //     background: $x-light-aqua !important;
-    //     box-shadow: 0 0 rem(8) $x-light-aqua;
-    //     outline-style: none;
-    //     color: black !important;
-    // }
+    &:focus {
+        box-shadow: none;
+        background: $x-light-aqua !important;
+        box-shadow: 0 0 rem(8) $x-light-aqua;
+        outline-style: none;
+        color: black !important;
+    }
 }
 
 p {
@@ -259,12 +258,15 @@ ol li::before {
         box-shadow: none;
         background-color: $dm-light;
     }
-
+    &:focus {
+        outline-style: auto;
+        outline-color: $aqua;
+        outline-width: 2px;
+    }
     &:hover {
         background-color: $aqua;
         color: white;
         background-image: none;
-
         .button-icon {
             fill: white;
             transition: fill .2s;
