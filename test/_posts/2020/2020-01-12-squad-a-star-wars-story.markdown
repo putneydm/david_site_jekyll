@@ -14,7 +14,7 @@ promo: "Stormtroopers went into the woods. Something was waiting."
 
 **“Are we still** waiting?”
 
-This was the fifth time time the lieutenant had come forward to the cockpit. Maybe it was a different one. Most Imperial officers, like the shuttle captain, paid little attention to Stormtroopers. Or their officers. They may as well be clone troopers.
+This was the fifth time time the lieutenant had come forward to the cockpit. Maybe it was a different one. Most Imperial officers, like the shuttle captain, paid little attention to Stormtroopers, and cared less about them. Or their officers. They may as well be clone troopers.
 
 Anyway, both pilots were occupied. The Imperial shuttle _Arrik_ had been waiting for some time as the shuttle ahead of them dealt with some sort of issue.
 
@@ -34,9 +34,9 @@ In the distance, a tiny dot against a backdrop of stars, the shuttle _Tydirium_ 
 
 Scanners showed shuttle traffic continuing to back up behind their own shuttle, thanks to the _Tydirium_. Much closer behind, the lieutenant still wasn’t budging.
 
-“We’ll be on the surface shortly. It's just this shuttle ahead of us holding things up.”
+“We’ll be on the surface shortly. It's just this shuttle ahead of us holding things up. It has an outdated clearance code.”
 
-The co-pilot could hear in his earpiece that the admiral of the fleet himself had stepped in to handle the situation with the _Tydirium_. Proper security protocols were strictly adhered to in the Death Star construction zone. No exceptions because of – well – what happened the last time. As soon as the _Tydirium_ captain touched down, he'd pay for his sloppiness. The shuttle crew would be also if he let this footsoldier keep distracting them. Even if he was a lieutenant. But he wasn’t letting up.
+The co-pilot could hear in his earpiece that the admiral of the fleet himself had stepped in to handle the situation with the _Tydirium_. Proper security protocols were strictly adhered to in the Death Star construction zone. No exceptions because of – well – what happened the last time. As soon as the _Tydirium_ captain touched down, he'd pay for his sloppiness. This shuttle crew would also if he let this footsoldier keep distracting them. Even if he was a lieutenant. But he wasn’t letting up.
 
 “Our orders were to report to the Death Star,” the lieutenant said so matter of factly that it was almost surprising.
 
@@ -50,7 +50,7 @@ The lieutenant turned to the captain.
 
 “Would you tell me what is going on here?”
 
-“What’s going on here,” the shuttle captain finally said without turning, is that Ensign Zythor is about to pilot this through an opening in an energy shield only a couple meters wider than the ship. Unless you want to be flaming vapors, return to the hold.”
+“What’s going on here,” the shuttle captain finally said without turning, is that Ensign Zythor is about to pilot us through an opening in an energy shield only a couple meters wider than this ship. Unless you want to be flaming vapors, return to the hold.”
 
 _Goddamn Stormtroopers._
 
@@ -72,19 +72,19 @@ The lieutenant sighed, and with a hint of irritation, said "We're headed down to
 
 **“Wait here,” the** lieutenant said with a bit of salt in his voice to his squad of stormtroopers neatly standing at attention near the shuttle’s landing ramp.
 
-The shuttle sat toward the edge of the vast Imperial landing platform at the Endor base. It had just touched down moments ago. The engines were still winding down when the lieutenant decided to head out to wherever he was going.
+The shuttle sat toward the edge of the vast Imperial landing platform at Endor Base 1. It had just touched down moments ago. The engines were still winding down when the lieutenant decided to head out to wherever he was going.
 
-The troopers watched him head toward the edge of the landing platform. His was a snappy, purposeful stride of the officer class, albeit somewhat awkardly, as if his limbs were a bit too long and he wasn't used to operating them. His uniform seemed to be made for someone of more average proportions and then draped onto him. He made it to the edge before he stopped, looked around a bit and finally motioned a ground crewman over to him. He gesticulated broadly at the crewman. He seemed to be yelling at him. The crewman motioned in the direction of a ladder over the edge to a vertiginous climb several stories down from the landing platform.
+The troopers watched him walk toward the edge of the landing platform. His was the practiced, snappy, purposeful stride of the officer class, albeit somewhat awkardly, as if his limbs were a bit too long and he wasn't used to operating them. His uniform seemed to be made for someone of more average proportions and then draped onto him. He made it to the edge before he stopped, looked around a bit and finally motioned a ground crewman over to him. He gesticulated broadly at the crewman. He seemed to be yelling at him. The crewman motioned in the direction of a ladder over the edge to a vertiginous climb several stories down from the landing platform.
 
 Once the lieutenant was out of sight, the crewman turned to another, said something, and the two began laughing.
 
-“At-ease,” the leader of the stormtrooper squad said as the lieutenant disappeared over the edge.
+“At-ease,” the leader of the stormtroopers said to his squad as the lieutenant disappeared over the edge.
 
-The five Stormtroopers in the squad shifted to at-ease. Even though the day was still early, the hot Endor sun was beating down, mixing with the heat from the shuttle engines. It could be even felt through their armor. The shuttle’s hull popped and clicked as it cooled off, and occasionally a burst of gas would emit from one of the blowoff vents. The smell of the landing platform was overwhelming — acrid shuttle fuel and exhaust, but the squad leader noticed that the air was thin — as if breathing didn’t quite work well enough.
+The five Stormtroopers in the squad shifted to at-ease. Even though the day was still early, the hot Endor sun was beating down, mixing with the heat from the shuttle engines. It could be even felt through stormtrooper armor. The shuttle’s hull popped and clicked as it cooled off, and occasionally a burst of gas would emit from one of the blowoff vents. The smell of the landing platform was overwhelming — acrid shuttle fuel and exhaust, but the squad leader noticed that the air was thin — as if breathing didn’t quite work well enough.
 
 He also noticed that one of his at-ease soldiers was a little too at-ease.
 
-“Trooper FD-472, you’re an Imperial trooper. Let’s look like one.” The trooper, a gangly youth despite his armor, had been staring upward, seemingly entranced at the ghostly outline of the Death Star hanging low in the Endor sky. It almost seemed reachable. 
+“Trooper FD-472, you’re an Imperial trooper. Let’s look like one.” The trooper, who clearly had the appearce of a gangly youth despite his armor, had been staring upward, seemingly entranced at the ghostly outline of the Death Star hanging low in the Endor sky. It almost seemed reachable. 
 
 "Sir, sorry, sir. It won't happen again, sir" he said, shifting to attention and then shifting to at-ease as the squad leader glared at him.
 
@@ -94,7 +94,7 @@ He also noticed that one of his at-ease soldiers was a little too at-ease.
 
 For a moment the leader found himself wondering how old the trooper was before he turned his gaze elsewhere. *New recruits. Always the same."*
 
-The squad leader began to consider what this moon was all about. Another place he'd never even heard of but now had to understand. He gave little thought to the scenery beyond what he and his squad might be facing. The landing pad towered so tall that it dwarfed even the giant trees that surrounded it. These ancient behemoths stretched off into the distance. Treetops nearest the platform had been scorched and burned away by comings and goings of countless shuttles. But beyond, as far at the squad leader could see, stretched a sea of green treetops swaying in the breeze. What was beneath was unknown. 
+The squad leader began to consider what this moon was all about. Another place he'd never even heard of but now had to understand. He gave little thought to the scenery beyond what he and his squad might be facing. The landing pad towered so tall that it dwarfed even the giant trees that surrounded it. These ancient behemoths stretched off into the distance. Treetops nearest the platform had been scorched and burned away by comings and goings of countless shuttles. But beyond, as far at the squad leader could see, stretched a sea of green treetops swaying in the breeze. What was beneath that green surface was unknown. 
 
 Not the best situation, to be sure. He'd seen worse -- been in far worse. If the squad leader was anything, he was a trooper who had long defied the odds. A squad coming back with fewer troopers was not uncommon. Leaders like him had survived this brutal attrition -- often by chance. He'd been in -- what -- dozens of firefights. More than once he'd been the only to return. Luck had kept him alive, but staying alive had honed his instincts.
 
@@ -108,7 +108,7 @@ He looked at his assembled squad. They looked like any other group he'd led. He'
 
 “Sir, I’m not able to answer that, sir!”
 
-The General’s eyes traveled up and down the line of assembled troopers. Their armor gleamed in the sunlight. Not only was it new, but the troopers had spent endless hours polishing it in training. His eyes lit on the squad leader a stocky, bullet-shaped man. His armor, gleaming but  betraying his years of service -- strained to contain the sinewy bulk beneath -- like one-and-a-half men next to young troopers who made up the squad. 
+The General’s eyes traveled up and down the line of assembled troopers. Their armor gleamed in the sunlight. Not only was it new, but the troopers had spent endless hours polishing it in training. His eyes lit on the squad leader a stocky, bullet-shaped man. His armor, gleaming but betraying his years of service -- strained to contain the sinewy bulk beneath -- like one-and-a-half men next to young troopers who made up the squad. 
 
 “A fresh squad I see.”
 
@@ -148,7 +148,7 @@ If that news was meant to be encouraging, it didn’t last long. The lieutenant 
 
 “Squad leader, we are to proceed at bearing 157.23 for 12 kilometers and engage in a grid search pattern. We are to surveil a band of Rebels planning sabotage and terrorism of this facility and its crew. We are to track and report their position. We are to avoid contact at all costs. If we are seen by Rebels we are not to engage. Prepare your squad. We leave in one hour.”
 
-His delivery had sounded less than enthusiastic to the squad leader. Especially about the “we are not to engage” part.” But an order had been given.
+His delivery had sounded less than enthusiastic to the squad leader. Especially about the “we are not to engage part.” But an order had been given.
 
 Shortly after, someone from the quartermaster’s office arrived with equipment for the mission. Among it was a long-range commlink for contacting the Imperial base. Their standard commlinks, made for intrasquad communications, had too short a range. Also included were portable trackers that could detect nearby life forms and the other troopers’ personal transponders. Knowing where the Rebels are, as well as one’s own squad, would be useful for such a stealthy mission.
 
@@ -162,7 +162,7 @@ The quartermaster also had something for the lieutenant: a set of stormtrooper a
 
 “My orders were to provide you with armor,” the quartermaster said flipping through papers on a clipboard. “No rank insignia visible. Yeah, those Rebels go straight for the officers these days.”
 
-The lieutenant pulled him aside and in a low whisper said “I need an officer’s uniform. I’m an officer. I’m not going to go on patrol dressed like,” he paused, and said incredulously “… a stormtrooper.”
+The lieutenant pulled him aside and in a low whisper said “I need an officer’s uniform. I’m an officer. I’m not going to go on patrol dressed like ....” he paused, and then finished incredulously “… a stormtrooper.”
 
 “Trust me, where you’re headed, you do.” He paused before adding, “sir.” He shoved the clipboard at him. “I got a lot of squads to equip today. Can you sign?”
 
@@ -170,7 +170,7 @@ The lieutenant pulled him aside and in a low whisper said “I need an officer�
 
 With the lieutenant gone, the squad took the opportunity to prepare for their patrol. The equipment made an impressive pile on the landing platform. Within a half hour it was carefully packed and stowed, ready for the mission that awaited.
 
-By then, the lieutenant had returned wearing a decided scowl. The squad stood at attention, as the quartermaster, who was clearly reaching the end of his patience, helped the lieutenant on with his armor. The lieutenant’s unfamiliarity with it and his lack of cooperation dragged the process out. The boots were particularly difficult. As the lieutenant struggled, squad leader carefully studied every contour and crevice of the armor, looking for some mark or tell. He didn’t want to mistake him for one of his troopers.
+By then, the lieutenant had returned wearing a decided scowl. The squad stood at attention, as the quartermaster, who was clearly reaching the end of his patience, helped the lieutenant on with his armor. The lieutenant’s unfamiliarity with it and his lack of cooperation dragged the process out. The boots were particularly difficult. As the lieutenant struggled, the squad leader carefully studied every contour and crevice of the armor, looking for some mark or tell. He didn’t want to mistake him for one of his troopers.
 
 When the lieutenant finally finished, the squad’s scheduled departure time had long passed. Holding his helmet under his arm and looking uncomfortable, the lieutenant gave the order, “Move out,” adding a sigh. On the order, the troopers shouldered their packs with a heave — they were easily 20 kilograms each. In a crisp line, the squad headed to the elevator. They got just a glimpse of the bustle of activity at the Imperial base before they passed out the rear blast doors.
 
@@ -196,7 +196,7 @@ The troop stood proudly at attention, just outside the doors, ready to head into
 
 "FD. I like that." He laughed. "Trooper Fedd. You know what that is?" Before the trooper could answer he continued, "Where I'm when you're 'fedd' you're still too green to pick yet. Needs more time." 
 
-"Sir, I serve the Emperor regardless of my color, sir!" the trooper answered unprompted.
+"Sir, I serve the Emperor regardless of my green color, sir!" the trooper answered unprompted.
 
 The squad leader let the protocol slight go. He decided to keep an eye on this FD-472. *His fervor could be infectious. Or get troopers killed*. He turned back to the full group.
 
@@ -376,7 +376,7 @@ He made his decision. He picked up his pace, stepping over logs and under a down
 
 **The young Stormtrooper** couldn’t sleep.
 
-But not for trying. He’d returned from first watch after the squad leader had disappeared into the woods. His absence has been enough to pique interest. Squad leaders didn’t normally go on patrol. Or he thought so. His training certainly hadn't suggested it possible. But FD-472 wasn't troubled by it. If the squad leader wanted to take a patrol, he could. He would not question that and had simply gotten on with his orders.
+But not for trying. He’d returned from first watch after the squad leader had disappeared into the woods. The leader's absence has been enough to pique interest. Squad leaders didn’t normally go on patrol. Or he thought so. His training certainly hadn't suggested it possible. But FD-472 wasn't troubled by it. If the squad leader wanted to take a patrol, he could. He would not question that and had simply gotten on with his orders.
 
 But not all that well, so far. *Get rest* was the order. But sleep would not come, orders or not. He was bone tired from the day’s patrol — enough that he should have slept no matter what. Conditions at the camp were harsh by most standards. Hard ground. Cold nibbling at him. Squawks and cries of unseen creatures penetrating the darkness. 
 
@@ -384,19 +384,19 @@ Odd. None of that should matter. His training allowed him to sleep on anything, 
 
 So he stared. Stared upward, his eyes fixed on the Death Star floating in the ethereal star field that arced above the treetops from edge to edge of the clearing. 
 
-He'd glanced it a dozen times during the day, but now he had a chance to study it. The station was a silent, dominating presence -- still, steely and unmoving, hanging in the sky in a blue-gray glow. Despite its placid face, blotched by partially completed superstructures, the station was the center of activity. Ships tending to its construction were like insects that had buzzed around him all day. They crisscrossed and circled the station, like a plague. He pictured its vast spaces equally bustling with officers and troopers. Perhaps Vader was there. Or the Emperor himself, looking down on them. To simply glimpse one of the in a corridor ... The  vast station and its possibilities entranced his restless mind.
+He'd glanced it a dozen times during the day, but now he had a chance to study it. The station was a silent, dominating presence -- still, steely and unmoving, hanging in the sky in a blue-gray glow. Despite its placid face, blotched by partially completed superstructures, the station was the center of activity. Ships tending to its construction were like insects that had buzzed around him all day. They crisscrossed and circled the station, like a plague. He pictured its vast spaces equally bustling with officers and troopers. Perhaps Vader was there. Or the Emperor himself, looking down on them. To simply glimpse one of them in a corridor ... 
 
 He knew its every curve and feature. Every auxiliary exhaust port and gun emplacement and landing bay from the toys and the books of his youth. He devoured every bit of news about it that came over the Imperial news feed. Its deployment at Alderaan, its destruction of the Rebel base at Yavin and the Emperor's decision to retire it and replace it with a newer, bigger Death Star. He'd re-enacted the victory at Alderaan and Yavin dozens of times with the toy. Sometime he sat and just started at it, awed by the children's trinket. And here he was -- wherever that is -- laying on his back staring up at the station that lit his childhood dreams, a glittering veil of stars spread out behind it.
 
-This was nothing like he'd known. The Death Star of his young imagination was nothing like this. He had rarely even seen the stars. A pall of smoke and dust hung over his home planet like a pallid dome, closing off the sky. The tops of buildings would hide in the swirls of smog. His world had been an orange-brown haze -- a dull bubble with him at the center. 
+The Death Star of his young imagination was nothing like this. He had rarely even seen the stars. A pall of smoke and dust hung over his home planet like a pallid dome, closing off the sky. The tops of buildings would hide in the swirls of smog. His world had been an orange-brown haze -- a dull bubble with him at the center. 
 
-In training, the desert horizon disappeared in every direction. They marched for days and never reached the end of it. Endless sky became even more endless sky at night. He’d wondered if he made the right decision, joining up. He could have remained on his home world and served the Empire in the mines or factories. But not after he’d seen those stars.
+In training, the world opened up. The desert horizon disappeared in every direction. They marched for days and never reached the end. Above him endless sky became even more endless sky at night. He’d wondered if he made the right decision, joining up. He could have remained on his home world and served the Empire in the mines or factories. But not after he’d seen those stars.
 
-He felt a sense of contentedness as he studied the Death Star and its starry backdrop. He imagined the station's SuperLaser staring out at all of them, every one a vast world. The entire Empire spread out before him in a single vista. Yet it paled next the magnificence of the Death Star floating just out of reach. That was the true Empire — the Death Star. As if the Emperor had the Universe to use for his will. The trooper longed to be aboard.
+He felt a sense of contentedness as he studied the Death Star and its starry backdrop. He imagined the station's SuperLaser staring out at all of the stars, every one a vast world. He sensed the entire Empire spread out before him in a single starry vista. Yet it paled next the power of the Death Star floating just out of reach. That was the true Empire — the Death Star. With it, the Emperor had the entire Universe to use for his will. 
 
-He felt a sudden rush. His childhood dreams. His enlistment. Months of training. The moment his feet touched the Imperial landing platform looming over this planet. He could finally feel the presence of the Empire -- in the soil under him, the tree, the rock, everywhere. This entire moon, the stars, the Death Star, his mission -- surrounding him, binding it all together. It was all one, all the Empire. The very stuff of the galaxy itself. 
+He had a sudden rush. His childhood dreams, his enlistment, months of training. It had all brought him here. The moment his feet touched the Imperial landing platform looming over this planet, he sensed something but couldn't really understand it. But now he could finally feel the full presence of the Empire -- in the soil under him, the tree, the rock, the stars, this mission, everywhere. The Empire was surrounding him, binding it all together. It was all one, everything he saw or touched. All Empire. The very stuff of the galaxy itself. 
 
-Longing to be up there -- he needed to stop thinking about that. He and his squadmates were here to serve a purpose beyond anything he could imagine. The Empire -- the galaxy -- had sent him. 
+He and his squadmates were here to serve a purpose beyond anything he could imagine. The Empire -- the galaxy -- had sent him to do its will. He whispered his sworn oath. "I am a Stormtrooper, and my will is your will, and my will is to serve."  
 
 "Trooper Fedd" was still pondering the Death Star when he finally drifted off into sleep. He had been so enthralled with it that he didn't even notice the squad leader still hadn't returned.
 
@@ -1040,7 +1040,7 @@ Nowhere to go, he headed on.
 
 <p>&nbsp;</p>
 
-**He felt it** in hishand. A tree branch. It almost fell into his grasp. 
+**He felt it** in his hand. A tree branch. It almost fell into his grasp. 
 
 He hadn't even seen it, not consciously. It was low enough to pull himself to what seemed to be the shore. Soon he was at the base of the tree. He paused for a moment on the solid ground to catch his breath and feel the solid ground again.
 
@@ -1116,11 +1116,19 @@ Minutes passed before the creature finally fell limp. One moment it was alive an
 
 He looked into the sky and screamed again. He could see a glimpse of the Death Star, lit up in the inky blue sky, through the treetops. The sight made him drop to his knees as he felt everything in him burst out.
 
-He thought of just giving up – but he’d done this, all this to survive. But simply surviving held no joy. The need to get away was all he had. And even then he’d find no relief in his escape. But somewhere deep in his brain, something drove him forward. He ran off into the forest, leaving the body in a golden pool of morning light, with bits of his armor scattered about it.
+And then he heaerd a noise behind him and turned at the waist. He arose to his feet, his eyes locked on the sight behind him. A camp had been set up just a few feet away. A small animal-skin tent with a tiny campfire burned in front of it. A couple of packs lay nearby, as well as some baskets of what looked like dark fruit. 
 
-He expected to hear howls of recognition behind him, as other creatures discovered the body. He expected them to suddenly come after him again, this time in vengeance. But he heard nothing. Not the sounds of other creatures. Just the sounds of the forest. His own breathing. Still he ran.
+His eyes adjusted further. Next to the camp stood another one of creatures, one arm cradling a bundle of sticks. And two half-sized creatures -- juveniles, apparently -- were just behind it. The large creature was quaking, its eyes wide with fear. Soundlessly, the creature, its suacer eyes never blinking or breaking its stare at the trooper, reached out its one unbrudened hand, felt around and drew the two smaller creatures behind itself. He could hear its raspy, uneven breathing.
 
-Farther and farther into the dark woods.
+The trooper stared back for a long pause. He backed away and raised his hands in supplication. "No, no. I'm sorry. I didn't know. I won't ... I won't ..." He stumbled over a log and went down, still apologizing. 
+
+The creature dropped its armload of sticks with a crash and ran toward its fallen comrade, a sorrowfull shriek piercing the quiet and dorwing out the trooper's entrieties. The creature buried its head into the other's crummpled body.
+
+The trooper was finally was back on his feet. "No, no, no. It's OK." he mumbled before turning to run into the woods, and running.
+
+He heard nothing but the wail of the creature behind him. Soon it disappeared into the sounds of the forest and of his own breathing. Still he ran.
+
+Farther and farther into the darkening woods, lit only be the pale glow of the battlestation.
 
 <p>&nbsp;</p>
 
@@ -1166,8 +1174,6 @@ Then he deleted the squad members from the Empire database, one by one. He had m
 
 <p>&nbsp;</p>
 
-### Epilogue
-
 **Trooper FD-472 sat** on a log. His log. 
 
 He had wandered the woods for hours in the dark, aimless and with no real goal. His squad was gone. His blaster was gone. Most of his armor was broken or missing. Even his commlink had been left behind somewhere. But any report would just be pointless. There was nothing for him to do.
@@ -1182,7 +1188,7 @@ As he sat on his log he realized that wherever his orders were meant to take him
 
 He pulled off the last few battered bits of his armor and tossed them aside into the greenery. A searing, bright flash caused him to instinctively shade his eyes. He looked around, thinking it had been a blaster shot or explosion. He remembered his trainers, "you'll never hear the shot that kills you." Finally he realized it had come from above, the sky. Wandering a few meters, he found a clearing in the treetops. A huge explosion was filling the sky where the Death Star had been.
 
-He watched it. He felt as if he were falling into it for a moment. It was actually kind of beautiful. He never really noticed things like that. Then he returned to his log and sat down.
+He watched it. He felt as if he were falling into it for a moment. It was actually kind of beautiful. He never really noticed things like that. Then he returned to his log and sat down. And felt the green swallow him. 
 
 <p>&nbsp;</p>
 
