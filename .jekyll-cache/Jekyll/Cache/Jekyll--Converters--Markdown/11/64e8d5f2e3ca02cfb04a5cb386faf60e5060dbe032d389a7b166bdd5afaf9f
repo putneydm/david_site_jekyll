@@ -1,0 +1,99 @@
+I"�)<p>Medium has brought some interesting ideas to the idea of reading as user experience. Among them: estimated reading time.</p>
+
+<p>A developer or designer using Jekyll who wants to add a <a href="https://medium.com/">Medium-style</a> reading time estimate to a blog template will likely find that accomplishing this a simple matter of getting Jekyll to do some math and output the result – sorta.</p>
+
+<p>The reading time equation is the number of words divided by typical reading speed of <a href="https://en.wikipedia.org/wiki/Words_per_minute">words per minute</a>. The only catch is that Jekyll’s math syntax is a bit uglier than syntax used in programming languages such as JavaScript.</p>
+
+<p>For sheer simplicity, I prefer to assign the calculation to a variable – in this case <code class="language-plaintext highlighter-rouge">readCalc</code> – using Jekyll’s <code class="language-plaintext highlighter-rouge">assign</code> function. First the word count of the post.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>  <span class="p">{</span><span class="sx">% assign </span><span class="n">readCalc</span> <span class="o">=</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="o">|</span> <span class="n">number_of_words</span> <span class="sx">%}  </span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Average reading speed is around 180 to 220 words per minute. The lower end of that stat, 180, will be our divisor.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>  <span class="p">{</span><span class="sx">% assign </span><span class="n">readCalc</span> <span class="o">=</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="o">|</span> <span class="n">number_of_words</span> <span class="o">|</span> <span class="ss">divided_by: </span><span class="mi">180</span><span class="p">}</span>  
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>For purposes of display, a nice neat number with no decimals is  better, so rounding our result is the next step in the equation.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>  <span class="p">{</span><span class="sx">% assign </span><span class="n">readCalc</span> <span class="o">=</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="o">|</span> <span class="n">number_of_words</span> <span class="o">|</span> <span class="ss">divided_by: </span><span class="mi">180</span> <span class="o">|</span> <span class="n">round</span> <span class="sx">%} </span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>At this point, just plugging the number into the correct bit of text in your Jekyll template might suffice. However, it’s also important to <a href="http://www.wikihow.com/Refinish-a-Dresser">sand the bottom</a> of the drawers where no one will see. Numbers below nine are typically <a href="http://writingexplained.org/ap-style/ap-style-numbers">written out</a>. Any <code class="language-plaintext highlighter-rouge">readCalc</code> value of less than one minute needs to be handled.</p>
+
+<p>This is done with a series of <code class="language-plaintext highlighter-rouge">if</code> and <code class="language-plaintext highlighter-rouge">elsif</code> statements that <code class="language-plaintext highlighter-rouge">assign</code> a string value to a variable <code class="language-plaintext highlighter-rouge">readTime</code>. In cases where <code class="language-plaintext highlighter-rouge">redCalc</code> is less than a minute:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>  <span class="p">{</span><span class="sx">% if </span><span class="n">readCalc</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="s2">"Less than one"</span> <span class="o">%</span><span class="p">}</span>  
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>The rest of values are assigned via <code class="language-plaintext highlighter-rouge">elsif</code>.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>  <span class="p">{</span><span class="sx">% elsif </span><span class="n">readCalc</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="s2">"One"</span> <span class="o">%</span><span class="p">}</span>  
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Be sure to close the <code class="language-plaintext highlighter-rouge">if</code> statement. The full code block looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="code"><pre>  <span class="p">{</span><span class="sx">% if </span><span class="n">readCalc</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">%</span><span class="p">}</span>
+     <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="s2">"Less than one"</span> <span class="o">%</span><span class="p">}</span>
+   <span class="p">{</span><span class="sx">% elsif </span><span class="n">readCalc</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">%</span><span class="p">}</span>
+     <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="s2">"One"</span> <span class="o">%</span><span class="p">}</span>
+   <span class="p">{</span><span class="sx">% elsif </span><span class="n">readCalc</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">%</span><span class="p">}</span>
+     <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="s2">"Two"</span> <span class="o">%</span><span class="p">}</span>
+   <span class="p">{</span><span class="sx">% elsif </span><span class="n">readCalc</span> <span class="o">==</span> <span class="mi">3</span> <span class="o">%</span><span class="p">}</span>
+     <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="s2">"Three"</span> <span class="o">%</span><span class="p">}</span>
+   <span class="p">{</span><span class="sx">% elsif </span><span class="n">readCalc</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">%</span><span class="p">}</span>
+     <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="s2">"Four"</span> <span class="o">%</span><span class="p">}</span>
+   <span class="p">{</span><span class="sx">% elsif </span><span class="n">readCalc</span> <span class="o">==</span> <span class="mi">5</span> <span class="o">%</span><span class="p">}</span>
+     <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="s2">"Five"</span> <span class="o">%</span><span class="p">}</span>
+   <span class="p">{</span><span class="sx">% elsif </span><span class="n">readCalc</span> <span class="o">==</span> <span class="mi">6</span> <span class="o">%</span><span class="p">}</span>
+       <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="s2">"Six"</span> <span class="o">%</span><span class="p">}</span>
+   <span class="p">{</span><span class="sx">% elsif </span><span class="n">readCalc</span> <span class="o">==</span> <span class="mi">7</span> <span class="o">%</span><span class="p">}</span>
+     <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="s2">"Seven"</span> <span class="o">%</span><span class="p">}</span>
+   <span class="p">{</span><span class="sx">% elsif </span><span class="n">readCalc</span> <span class="o">==</span> <span class="mi">8</span> <span class="o">%</span><span class="p">}</span>
+     <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="s2">"Eight"</span> <span class="o">%</span><span class="p">}</span>
+   <span class="p">{</span><span class="sx">% elsif </span><span class="n">readCalc</span> <span class="o">==</span> <span class="mi">9</span> <span class="o">%</span><span class="p">}</span>
+     <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="s2">"Nine"</span> <span class="o">%</span><span class="p">}</span>
+   <span class="p">{</span><span class="sx">% else </span><span class="o">%</span><span class="p">}</span>
+     <span class="p">{</span><span class="sx">% assign </span><span class="n">readTime</span> <span class="o">=</span> <span class="n">readCalc</span> <span class="sx">%}
+   {% endif %}</span>   
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>The final result is displayed in the template by plugging in the value of <code class="language-plaintext highlighter-rouge">readTime</code> with this bit:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"blog-read-time"</span><span class="nt">&gt;</span>{{ readTime }}-minute read<span class="nt">&lt;/p&gt;</span>  
+</pre></td></tr></tbody></table></code></pre></figure>
+
+:ET

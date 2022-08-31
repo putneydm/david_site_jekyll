@@ -1,0 +1,67 @@
+I"Q<p>Have you every had a dozen people coming over for dinner in 20 minutes only to discover that you need to convert a bunch of CSS with items sized in pixels over to <a href="https://css-tricks.com/theres-more-to-the-css-rem-unit-than-font-sizing/">relative sizes</a> such as <code class="language-plaintext highlighter-rouge">rems</code> or <code class="language-plaintext highlighter-rouge">ems</code>? Who doesn’t face this problem at least <em>several times a week</em>.</p>
+
+<p>Up until now the only way to fix this problem was to learn assembly language, make your own CPUs and write your own operating system. Well, no more!</p>
+
+<p><code class="language-plaintext highlighter-rouge">postcss-pixels-to-rem</code> is a <a href="http://postcss.org/">PostCSS</a> plugin that finds several types of pixel notations and converts them to either <code class="language-plaintext highlighter-rouge">rems</code> or <code class="language-plaintext highlighter-rouge">ems</code>. It is designed as a way to bring legacy SASS files written using <code class="language-plaintext highlighter-rouge">pixels to rem</code> mixins forward and into the <a href="https://www.davidputney.com/2015/07/that-postcss.html">postCSS world</a> with as seamlessly as possible.</p>
+
+<p>For example, it’s intended as a fix for legacy code that uses the now deprecated Bourbon <code class="language-plaintext highlighter-rouge">px to rem</code> and <code class="language-plaintext highlighter-rouge">px to em</code> <a href="http://bourbon.io/docs/#px-to-em">mixins</a>.</p>
+
+<p>Does it work? Well, you’re <a href="https://www.youtube.com/watch?v=dzmTtusvjR4">soaking</a> in it! The <a href="https://github.com/putneydm/david_site_jekyll/tree/master/src/sass/partials">CSS</a> for this site is <a href="https://www.youtube.com/watch?v=eVhO3JO5F1k">compiled</a> with it.</p>
+
+<h2 id="how-it-works">How it works</h2>
+
+<p>It takes in several types of notations and spits out finished CSS at the other end.</p>
+
+<ul>
+  <li>Notation of <code class="language-plaintext highlighter-rouge">rem(&lt;value&gt;)</code> or <code class="language-plaintext highlighter-rouge">em(&lt;value&gt;)</code> is converted to <code class="language-plaintext highlighter-rouge">&lt;value&gt;rem</code> and <code class="language-plaintext highlighter-rouge">&lt;value&gt;em</code> respectively.</li>
+  <li>Notation of <code class="language-plaintext highlighter-rouge">&lt;value&gt;px</code> is converted to <code class="language-plaintext highlighter-rouge">&lt;value&gt;rem</code>.</li>
+</ul>
+
+<p>It also allows for several user-set options.</p>
+
+<ul>
+  <li>Base font size. Default is <code class="language-plaintext highlighter-rouge">16px</code>.</li>
+  <li>Default unit. Setting it to <code class="language-plaintext highlighter-rouge">rem</code> or <code class="language-plaintext highlighter-rouge">em</code> will override <code class="language-plaintext highlighter-rouge">rem(&lt;value&gt;)</code> or <code class="language-plaintext highlighter-rouge">em(&lt;value&gt;)</code> notation. All items will be output in the user-set unit.</li>
+  <li>Media queries can be excluded from conversion.</li>
+  <li>Specific declarations can be excluded from conversion, e.g. <code class="language-plaintext highlighter-rouge">border-width</code>.</li>
+</ul>
+
+<h2 id="how-to-use-it">How to use it</h2>
+
+<p>After reading this, everyone will want to get their hands on <code class="language-plaintext highlighter-rouge">postcss-pixels-to-rem</code>. No need to resort to <em>The Purge</em> style theft and murder <sup><a href="#footnote-plugin-one">1</a></sup>. There’s plenty to go around at the low, low price of free <sup><a href="#footnote-plugin-two">2</a></sup>.</p>
+
+<p>Unfortunately we released it a little too late for Valentine’s, Mother’s Day and graduation gift-giving, but there’s still birthdays and anniversaries – and don’t forget all-important early Christmas shopping.</p>
+
+<p>It’s available <a href="https://www.npmjs.com/package/postcss-pixels-to-rem">over here</a> on NPM. Or install it by:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save-dev postcss-pixels-to-rem
+</code></pre></div></div>
+
+<p>To use it with <a href="http://gulpjs.com/">Gulp</a>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var postcss = require('gulp-postcss')
+var pixelstorem = require('postcss-pixels-to-rem');    
+</code></pre></div></div>
+
+<p>and</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gulp.task('css', function() {
+    var plugins = [
+        pixelstorem()
+    ];      
+gulp.src('source/sass/styles.scss')
+.pipe(postcss(plugins))
+.pipe(gulp.dest(public/css));
+});
+</code></pre></div></div>
+
+<p>Find full installation and usage instructions here on <a href="https://www.npmjs.com/package/postcss-pixels-to-rem">NPM</a> or <a href="https://github.com/putneydm/pixelstorem">Github</a>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">postcss-pixels-to-rem</code> not only comes with a full money-back guarantee, and is also guaranteed to make you better looking, thinner, wittier, more popular and bring you happiness, all while converting your <code class="language-plaintext highlighter-rouge">pixels</code> to <code class="language-plaintext highlighter-rouge">rems</code> or <code class="language-plaintext highlighter-rouge">ems</code>.</p>
+
+<ol>
+  <li><span id="footnote-plugin-one"></span>Unless you want to.</li>
+  <li><span id="footnote-plugin-two"></span>We deal in volume and pass the savings on to our customers.</li>
+</ol>
+
+:ET

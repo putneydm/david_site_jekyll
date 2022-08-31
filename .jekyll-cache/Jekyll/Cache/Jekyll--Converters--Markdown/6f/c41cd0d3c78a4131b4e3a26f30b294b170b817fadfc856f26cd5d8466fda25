@@ -1,0 +1,39 @@
+I"�<p>I’ve been writing about my efforts to make my site load faster. Read Part 1 <a href="http://www.davidputney.com/2014/11/making-davidputneycom-go-fast.html">here</a>.</p>
+
+<p>But like that young Jedi so long ago, I was not always able to <a href="http://www.youtube.com/watch?v=M_QcRPNfUuE&amp;t=1m16s">levitate the ship</a> out of the swamp. Probably because I didn’t believe enough.</p>
+
+<p>Either, way, here are some methods that I tried and ended up not using.</p>
+
+<p>###What was a wash</p>
+
+<ul>
+  <li><strong>Lazy loading or concatenating</strong> my javascript and didn’t make much of a difference. Likely because my concatenated scripts are only 18K.</li>
+  <li><strong>Paying extra for CDN web hosting.</strong> My time to first byte varies widely, from as low as .2 seconds to sometimes more than .7 seconds. My non-CDN hosting on another account is just as fast or faster. Didn’t seem to be worth the extra money.</li>
+  <li><strong>Responsive images</strong> with Picturefill 2. It reduces page weight for mobile devices, but didn’t speed load times appreciably. Creating images of multiple sizes of the various photo shapes for dozens of images was a huge pain, even with a <a href="https://www.npmjs.org/package/gulp-gm">Gulp task/ImageMagick</a> doing most of the hard work. Absolutely a must have for any site, but it won’t make you faster.</li>
+</ul>
+
+<p>###What didn’t work</p>
+
+<ul>
+  <li><strong>Inline data URIs</strong> not only didn’t work, they <em>really</em> didn’t work. I tried inline <a href="http://blog.teamtreehouse.com/using-data-uris-speed-website">data URIs</a> for my hero images in an effort to cut HTTP calls for above-the-fold page content. In short: Browsers are optimized for common tasks such as grabbing images off a server and rendering them as fast as possible. Data URIs, <a href="http://www.mobify.com/blog/data-uris-are-slow-on-mobile/">not so much</a>.</li>
+  <li><strong>Image compression</strong> I used the <a href="http://www.filamentgroup.com/lab/compressive-images.html">double-size low-res JPEG technique</a> for images. It cut my page weight but I needed to start with billboard-sized images and they still ended up looking <a href="http://www.davidputney.com/siteart/hero_crux.jpg">overcompressed</a>. Also, if you do this <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fdavidputney.com%2F">Google Page Speed Insights</a> will falsely accuse of not optimizing and compressing your images.</li>
+  <li><strong>Lazyloading images</strong>  <a href="http://css-tricks.com/picturefill-2/">Picturefill 2</a> was still new enough when I built my site that this was always going to be a problem. I tried <a href="http://afarkas.github.io/lazysizes/">LazySizes</a> which claims to be compatible, but its main effect was to kill my page load times. Your experience may be different, but I’d advise some testing first.</li>
+  <li><strong>Asynchronous loading</strong> of concatenated scripts broke <a href="https://github.com/filamentgroup/tappy">Tappy.js</a>. I need to look into this further, but haven’t had time.</li>
+  <li><strong>Minifiying HTML</strong> saved about 20K overall. But my CMS uses custom tags for content, and the minifier broke them.</li>
+</ul>
+
+<p>###Takeaways</p>
+
+<ul>
+  <li><strong>Modularize all the things</strong> The trend on every project I’ve tackled has been to make it <em>more</em> modular. SASS obviously makes this simpler with CSS files and partials. I’ve been using <a href="https://incident57.com/codekit/">Codekit</a> to modularize my pages but you can use <a href="https://www.npmjs.org/package/gulp-include">Gulp</a>, Grunt or other methods.</li>
+  <li><strong>Experiment</strong> Speed gains seemed to be in the details for me and seemed to vary from other people’s. Every site is a little bit different.</li>
+  <li><strong>Gulp and CodeKit FTW</strong> Or use <a href="http://gruntjs.com/">Grunt</a>, if that’s your bag. Either way task runners make an enormous difference.</li>
+  <li><strong>Lazy load</strong> any <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp?hl=en">blocking files</a> that you can.</li>
+  <li><strong>Yeah, and fonts too.</strong> A blank page waiting for a font to load is worse that <a href="http://en.wikipedia.org/wiki/Flash_of_unstyled_content">flash of unstyled text</a>.</li>
+  <li><strong>Give up some image quality</strong> to <a href="http://www.websiteoptimization.com/services/analyze/">reduce page weight</a>.</li>
+  <li><strong>Latency</strong> slows your page more than page weight, so your efforts should concentrate on optimizing for that.</li>
+  <li><strong>Start render times</strong> are important that total load times (although these should be low, too) because that’s what the user sees.</li>
+  <li><strong>There’s no magic bullet</strong> to speed a page. It’s cumulative and achieved by trimming tenths of a second here and there.</li>
+</ul>
+
+:ET

@@ -1,0 +1,108 @@
+I"�.<p>Web developers suffer from the worst kind of <a href="https://www.youtube.com/watch?v=ueZ6tvqhk8U">imposter syndrome</a>.</p>
+
+<p>My theory is that it’s because devs are faced with a constant barrage of the new hotness. Generally it goes something like this:</p>
+
+<ul>
+  <li><strong>9 a.m.</strong> “OMG! They just released Widget.js this morning and it’s amazeballs awesome! Everyone is using it! I’m moving all my projects to it!</li>
+  <li><strong>5 p.m.</strong> “What? Are you still using Widget.js? LOL! Dingus.js just came out this afternoon and it’s amazeballs awesome!</li>
+</ul>
+
+<p>CSS preprocessors have been on this new hotness treadmill for a few years. We have <a href="http://gulpjs.com/">Sass</a> that supplanted <a href="http://gruntjs.com/">LESS</a> and now <a href="https://www.npmjs.com/">Stylus</a> aims to replace Sass <sup><a href="http://www.renovation-headquarters.com/images6/flat-pack-furniture.jpg">1</a></sup>. Into this enters <a href="s://www.formula1.com">PostCSS</a> <sup><a href="http://cssnext.io/">2</a></sup>.</p>
+
+<p>Oh, great another preprocessor. <em>Eye roll</em>. Another new thing to learn just to do my job.</p>
+
+<p>But what if it offers something significantly different than the other three? Might it be worth it?</p>
+
+<p>PostCSS comes at the problem from another direction. Preprocessors are all elaborate hacks. They aim to solve problems inherent in CSS, mainly that CSS is pretty dumb compared with JavaScript.</p>
+
+<p>The programmy stuff – loops, logic variables and other niceties – added by preprocessors makes CSS a lot more usable.</p>
+
+<p>If we were to play the <em>Which of these things is not like the other</em> <a href="https://www.youtube.com/watch?v=ueZ6tvqhk8U">game</a> from <em>Sesame Street,</em> PostCSS is the outlier. Rather than just solving problems inherent in CSS it also aims to solve problems with preprocessors themselves.</p>
+
+<p>LESS, Sass and Stylus are powerful but monolithic – web developers write against an established list of functions that the preprocessor offers. Preprocessor code is centrally maintained. Additional features and functions come with an update.</p>
+
+<p>PostCSS resembles the task runners <a href="http://gulpjs.com/">Gulp</a> or <a href="http://gruntjs.com/">Grunt</a> in that all alone it doesn’t actually do anything. Its power comes from plugins written in JavaScript. And those plugins can do anything a developer might need. Theoretically, at least.</p>
+
+<p>Like Gulp and Grunt it’s meant to be extensible, flexible and customizable for a developer or project’s particular needs.</p>
+
+<p>Those who use Gulp or Grunt for their projects will likely find even more to like. PostCSS runs on Node and installs via <a href="https://www.npmjs.com/">NPM</a>. This is the install code for Gulp. It should be familiar.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> gulp-postcss</code></pre></figure>
+
+<p>This allows PostCSS to fit easily into existing Grunt or Gulp workflows. In Gulp, it’s included like any other task. NPM also installs the plugins, and they can be saved as dev dependencies.</p>
+
+<p>To use them, pass plugins to the PostCSS task as an argument. If there’s more than one, use square brackets.</p>
+
+<p>Here’s Gulp code for adding an autoprefixer:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">postcss</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">gulp-postcss</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">autoprefixer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">autoprefixer-core</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="dl">'</span><span class="s1">css</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">processors</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nx">autoprefixer</span><span class="p">({</span><span class="na">browsers</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">last 1 version</span><span class="dl">'</span><span class="p">]})</span>
+    <span class="p">];</span>
+<span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="dl">'</span><span class="s1">./src/*.css</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">postcss</span><span class="p">(</span><span class="nx">processors</span><span class="p">))</span>
+<span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="dl">'</span><span class="s1">./dest</span><span class="dl">'</span><span class="p">));</span>
+<span class="p">});</span>
+  </code></pre></figure>
+
+<p>Because of the modular nature of PostCSS, getting it up and going is more involved than installing SASS or LESS. On a basic level, using it involves figuring out what you need your preprocessor to do – loops, nesting, variables, autoprefixing, etc – and getting everything in place.</p>
+
+<p>For a developer comfortable in the command line – comfortable enough to troubleshoot errors and sift through occasionally poor documentation – PostCSS can still feel sort of like assembling a <a href="http://www.renovation-headquarters.com/images6/flat-pack-furniture.jpg">chest of drawers</a> from Ikea.</p>
+
+<p>For someone not as well-versed, perhaps someone trying to graduate from <a href="https://incident57.com/codekit/">CodeKit</a> to Gulp, PostCSS can feel more like being presented with a pile of parts and asked to assemble them into a <a href="s://www.formula1.com">Formula 1</a> car.</p>
+
+<p>But in the end you do get something powerful. Several-dozen plugins offer enough interesting functionality to get even the most cranky developer excited. Here’s a few:</p>
+
+<ul>
+  <li><strong><a href="http://cssnext.io/">cssnext</a></strong> Allows developers to use future CSS features now, but it compiles them into current standards.</li>
+  <li><strong><a href="https://github.com/jonathantneal/postcss-conic-gradient">postcss-conic-gradient</a></strong> Supports conic gradients, although such gradients only work with a polyfill.</li>
+  <li><strong><a href="https://github.com/cssdream/cssgrace">cssgrace</a></strong> Compiles CSS3 for backward compatibility with older versions of Internet Explorer.</li>
+  <li><strong><a href="https://github.com/markgoodyear/postcss-vertical-rhythm">postcss-vertical-rhythm</a></strong> Adds vertical rhythm to styles.</li>
+  <li><strong><a href="https://github.com/corysimmons/lost">lost</a></strong> One of several grid systems available as a plugin.</li>
+  <li><strong><a href="https://github.com/vovanbo/css2modernizr">css2modernizr</a></strong> Creates a Modernizr config file based on your CSS so you get only the functions you need.</li>
+  <li><strong><a href="https://github.com/HashanP/postcss-spiffing">postcss-spiffing</a></strong> Lets you use British spellings such as “colour” and “grey” in your code.</li>
+</ul>
+
+<p>The quality of these plugins is an open question. But users of Grunt and Gulp and other task runners have accepted this risk already with their own plug-in based build systems.</p>
+
+<p>Preprocessors also add a layer of complication – another thing to learn, another thing to deal with – when shipping code. If a developer chooses to go the Gulp or Grunt route, that’s more of workflow complication. The PostCSS plug-in structure can seem like more cogs for a machine that can already feel on the verge of smoking and clattering to a halt.</p>
+
+<p>The plug-in based structure poses an even larger question. The <a href="https://www.youtube.com/watch?v=ML1OZCHixR0&amp;t=2m10s">monolithic</a> structure of LESS, SASS and Stylus can be a weakness, but it’s also a considerable strength.</p>
+
+<p>When writing code in these, a developer is writing to a standard. They are themselves languages. Anyone can pull the code and compile it against a preprocessor.</p>
+
+<p>Likewise, anyone versed in Sass should be able to read and understand anyone else’s code written in Sass.</p>
+
+<p>With PostCSS, it’s not quite as simple. Code is written against and compiled by a list of dependencies – often a long list. These dependencies might change unexpectedly, be deprecated or become unavailable altogether.</p>
+
+<p>The uncompiled source code might only be understandable by the team or developer who writes it. The code is harder to share on Github. Future <a href="https://en.wikipedia.org/wiki/Technical_debt">technical debt</a> should figure heavily into any choice to go with PostCSS.</p>
+
+<p>Moving a project from Sass to PostCSS might take some work too. I spent a couple hours trying to line up the right mix of plugins to get some existing SASS code to compile, but without success.</p>
+
+<p>Developers depending on Sass mixin libraries such as <a href="http://bourbon.io/">Bourbon</a> and <a href="http://neat.bourbon.io/">Neat</a> might face considerable difficulty porting projects over. Although I’m not discounting that someone with more will and knowledge than me couldn’t eventually get it to work.</p>
+
+<p>Small glitchiness also proved problematic. Global variables didn’t work across partial stylesheets. I like to keep my variables in a single partial, and I never found a fix for this. Sometimes just the order of plugins affected my outcomes.</p>
+
+<p>It comes down to weighing quite a few factors before making a decision.</p>
+
+<p>Business theorist <a href="http://www.claytonchristensen.com/">Clayton Christiansen</a> – the “disruption guy” – has argued that just <a href="http://jobstobedone.org/">being better</a> isn’t enough to get someone to switch products or services. Anxiety about leaving the old product and adopting the new one has to be overcome.</p>
+
+<p>To be honest, PostCSS comes with a lot of questions to be considered. I’m not sure I would want to embark on a large project with PostCSS as my main solution, at least not yet. As the old saw goes, “No one ever got fired for buying IBM.” Established preprocessors seem the safe choice right now.</p>
+
+<p>But I could see it fitting into a workflow to supplement Sass or LESS or Stylus with features those preprocessors don’t have yet.</p>
+
+<p>Even if the final call is to forgo PostCSS this time, the technology is certainly worth watching. On a podcast last week, analyst <a href="http://www.asymco.com/">Horace Dediu</a> said that criticizing products too early is a mistake. It’s like looking at a baby and thinking that it’s not a very good human. <em>Look, it can’t even walk!</em> We should judge by potential.</p>
+
+<p>And PostCSS seems like a tool with enormous potential, that is if enthusiasm around it grows and it gets a solid developer community behind it.</p>
+
+<p>Or it may just turn out to be yet another old new hotness. Hopefully not.</p>
+
+<ol>
+  <li><span id="footnote-postcss-one"></span>SASS seems to have won the day right now, at least.</li>
+  <li><span id="footnote-postcss-two"></span>The PostCSS people really need to do something about that logo, though. It looks like something the Blair Witch would draw in the dirt outside someone’s tent.</li>
+</ol>
+
+:ET

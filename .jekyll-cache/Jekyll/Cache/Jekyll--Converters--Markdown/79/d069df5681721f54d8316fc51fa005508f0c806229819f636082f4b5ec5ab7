@@ -1,0 +1,29 @@
+I"<p>A few years ago, I made a <a href="http://en.wikipedia.org/wiki/Key_Lime_Pie_%28album%29">key lime pie</a> for a party. One of my friends was raving about it. “Oh my God. You <em>have</em> to give me the recipe.”</p>
+
+<p>“Well,” I said. “There’s no secret. It’s the <a href="http://www.keylimejuice.com/recipes/nellie-joes-key-lime-pie.htm">recipe</a> on the key lime juice bottle.”</p>
+
+<p>This is sort of how I feel about my web optimization efforts. Smart people at Filament Group and Google and elsewhere have already figured it out. Just follow the <a href="http://www.filamentgroup.com/lab/performance-rwd.html">recipe</a>.</p>
+
+<p>If it was that easy, we’d all be Gordon Ramsay. Err, maybe <a href="https://www.youtube.com/watch?v=UjE-cBDFphQ">not</a>.</p>
+
+<p>But, like with pie, experience has taught me some finesse. For instance, make your key lime pie crust with vanilla wafers and a little bit of cocoanut.</p>
+
+<p>Recipes are only general directions. Every site is a little bit different. The browser is always right. And sometimes the browser is like a <a href="https://twitter.com/jpamental">cranky toddler</a> banging a spoon on its highchair.</p>
+
+<p>With this site, my results have been <a href="http://www.webpagetest.org/result/141126_M6_XJ2/">solid</a>. My index page has a start-render time of ~.2 seconds and load time of around 2 seconds. It’s among the top 3 percent of fastest pages on webpagetest.org. Not bad for an image-driven site with giant hero art.</p>
+
+<p>Mainly trying out these techniques was a learning experience. Here are a few insights that I gained that might help others trying to optimize a site.</p>
+
+<p>###What worked</p>
+
+<ul>
+  <li><strong>Inlining “above the fold” CSS</strong> doesn’t speed up overall load times so much as make the page <em>seem</em> to <a href="http://www.webpagetest.org/video/compare.php?tests=141126_M6_XJ2-r:1-c:0">load faster</a>.  So fast it seems to be loading from cache. In terms of user experience <a href="http://css-tricks.com/authoring-critical-fold-css/">inlining CSS</a> is a big win. Beware, though. It can be difficult – well, crazy-making – to implement and maintain manually. Next time I’ll probably try <a href="https://github.com/addyosmani/critical">this.</a></li>
+  <li><strong>Hot-swapping hero images</strong> This Google-suggested technique loads a super-low-res version of hero art and then swaps with it a high-res image on DOM ready. Downsides include Javascript implementation, increased page weight, a double download, and the lead art looks <a href="http://www.davidputney.com/siteart/pl_hero_design.jpg">gross</a> until the real image loads. The designer in me should hate this. But the most damning thing of all … I think I can <a href="http://www.youtube.com/watch?v=K-YyL7X4CWw&amp;t=0m53s">live with it</a>.</li>
+  <li><strong>Lazy loading fonts</strong> gave me a large overall speed improvement. I saw <a href="https://twitter.com/jpamental">Jason Parmentel’s</a> session on this at <a href="http://artifactconf.com/providence/">Artifact</a> and went home that night and added the Adobe <a href="https://github.com/typekit/webfontloader">webfontloader</a> to my dev site. My start render time dropped below 1 second after this. The downside is flash of unstyled text, but a blank page awaiting a font download is a worse user experience.</li>
+  <li><strong>Lazy loading CSS</strong> After testing, I’d scrapped this because it was actually slowing load times. I tried another technique suggested by Google, but the site was breaking in <em>– wait for it –</em> IE. A few days later I took yet another crack at it and inlined all of Filament Group’s <a href="https://github.com/filamentgroup/loadCSS">loadCSS</a> tool in the header. Success. It cut about a half-second off my start render time. If you are bothered by inline JS, I’d forego this one.</li>
+  <li><strong>Inline SVGs</strong> were another huge win for initial render times. Codekit made building out pages with <a href="http://css-tricks.com/svg-sprites-use-better-icon-fonts/">inline SVGs</a> quite easy (and fun!). Although inlining them made the <a href="http://validator.w3.org/">HTML5 validator</a> head for its fainting couch like <a href="http://en.wikipedia.org/wiki/Tallulah_Bankhead">Tallulah Bankhead</a> until I cleaned up the SVG code. The downside of this technique is graphics can’t be cached and your nice, neat HTML pages are a horror show of SVG code. If you do plan to use inline SVGs, this icon <a href="http://css-tricks.com/svg-sprites-use-better-icon-fonts/">sprite method</a> combined with CSS styling is the best way to go.</li>
+</ul>
+
+<p>So that’s the positives. I also learned some negatives and gained some insights, but this post was getting pretty long so I’ll cover those in Parts 2 and 3 in a few days.</p>
+
+:ET

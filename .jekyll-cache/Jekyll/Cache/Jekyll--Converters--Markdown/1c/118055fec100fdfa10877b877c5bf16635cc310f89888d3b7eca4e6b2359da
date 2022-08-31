@@ -1,0 +1,19 @@
+I"
+<p>As part of the Davidputney.com policy of constantly updating the site, we have updated the site.</p>
+
+<ul>
+  <li>We have completely rewritten the site’s JavaScript. For the less tech-oriented out there, <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> is the code that among other things controls the performance-sapping, battery-draining, processor hogging animations we have gratuitously sprinkled throughout the site to surprise and delight our readers. The code is <a href="http://yellowlab.tools/result/eeggd4nig7">much better</a> from a purely academic best-practices standpoint, and it’s more efficient.</li>
+  <li>We once again rewrote the site headers and navigation so that the animations will be smoother, and as a side benefit, the HTML code at the top of the site will be cleaner, as developer types like to say.</li>
+  <li>We had reduced the use of the <a href="http://www.losttype.com/font/?name=lavanderia">Lavenderia</a> font on the site to such a degree that it made no sense to have it load as a separate font. We swapped all instances of it out with SVG logos. As a result, users won’t have to download a largish font file every time they come to the site.</li>
+  <li>We fixed a problem that was causing certain elements of the page to break when it was loaded in Incognito or Private Browsing mode. Readers who forget to switch their browser mode back after looking at porn will appreciate this change.</li>
+  <li>We added estimated reading times to all of our posts. It’s part of our effort to improve reader experience on the site. Last year we added a scroll progress bar to posts so people <a href="https://en.wikipedia.org/wiki/Siren_(mythology)">lured</a> to the site by our <a href="https://www.davidputney.com/2016/04/star-wars-porno.html">shamelessly</a> clickbaity headlines could know just how much story remains when they give up reading. With this latest update they can see what kind of a tedious slog they are in for and bug out before even beginning.</li>
+  <li>We also fixed multiple <a href="https://www.youtube.com/watch?v=Lz9810Y7ZRw">glitches</a>.</li>
+</ul>
+
+<p>As a result of all this refactoring and a cutting back on code and eliminating fonts, we are proud to say that the front page is – <em>erp</em> – ever so slightly heavier.</p>
+
+<p>However, the page is actually extremely lightweight for what it needs to be. Our goal is to make a site that looks good, loads as fast as possible and is as lightweight as it can be and works without JavaScript.</p>
+
+<p>And to constantly update it.</p>
+
+:ET

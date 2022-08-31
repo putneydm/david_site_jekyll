@@ -1,0 +1,96 @@
+I"�"<p>It’s the ad-block-apocalypse.</p>
+
+<p>When iOS 9 was announced this spring, the <a href="https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html">feature</a> that allowed for the creation of ad blockers was barely mentioned, let alone touted as one of its headline features.</p>
+
+<p>Thanks to the <a href="https://en.wikipedia.org/wiki/Streisand_effect">Streisand effect</a>, it’s <em>the</em> story of iOS9 launch weekend. Many users are finding out about ad blockers for the first time thanks to the kerfuffle.</p>
+
+<p>Notably, Marco Arment, creator of Instapaper<sup><a href="#footnote-adblock-one">1</a></sup>, introduced Peace, an ad and tracker blocking app based on <a href="http://www.marco.org/2015/08/11/ad-blocking-ethics">Ghostery</a>. It quickly shot to the top of the App Store charts despite its $2.99 price.</p>
+
+<p>In a move that will spawn dozens of hot takes<sup><a href="#footnote-adblock-two">2</a></sup>, on Friday afternoon, <a href="http://www.marco.org/2015/09/18/just-doesnt-feel-good">he pulled</a> it from the App Store, saying on his blog that it didn’t feel right.</p>
+
+<p>He’d been a <a href="http://www.marco.org/2015/08/11/ad-blocking-ethics">vocal proponent</a> of ad tracking, but it’s maybe one thing to favor something and another to be the means through which it’s carried out.</p>
+
+<p>Just as <a href="http://www.imdb.com/title/tt0701153/quotes?item=qt0205502">Rabbi Krustofsy</a> needed car-buying questions phrased as a moral quandry, some view the decision to use an ad blocker as an ethical question. The choice actually strikes me as a little more <a href="https://en.wikipedia.org/wiki/Realpolitik">realpolitik</a> than moral.</p>
+
+<p>Two things are not in dispute:</p>
+
+<ul>
+  <li>The current state of ads and ad tracking create a terrible user experience, bloat page size, slow download speeds and violate privacy.</li>
+  <li>Publishers have no choice but to use them.</li>
+</ul>
+
+<p>This first point is made clear by <a href="http://crystalapp.co/">Crystal</a>, another popular ad blocker in the app store. It has a simple sales pitch. They just show it in <a href="http://murphyapps.co/blog/2015/7/21/teasing-crystal-an-ad-blocker-for-ios-9">action</a>.</p>
+
+<p>Sites such as The Washington Post and CNET have begun to <a href="http://www.loopinsight.com/2015/09/18/and-so-it-begins/">retaliate</a> by blocking ad blockers. But this doesn’t change the underlying facts or get at the actual problem.</p>
+
+<p>One of the basic tenets of creating a good user experience – whether it’s summoning a taxi with an app, tracking a package online or designing a pair of headphones - is that you don’t shift problems onto users.</p>
+
+<p>They don’t see the boardroom fights or the deadlines or the budget constraints. All they see the final product. That’s all that matters.</p>
+
+<p>But legacy news orgs, who are most often the worst offenders, don’t see it that way. The main consideration is what they can extract. It’s why sites are almost diabolical in implementing <a href="http://www.davidputney.com/2015/04/ux-from-hell.html">bad UX</a>.</p>
+
+<p>It’s <a href="https://www.youtube.com/watch?v=A0i52Grd7A4">not unusual</a> to follow a link from social, get somewhere into the second paragaph of the story and have a paywall or takeover ad slam down like a castle portcullis.</p>
+
+<p>Here’s a short video that sums up many readers’ feelings on takeover ads, Taboola and privacy violating ad trackers.</p>
+
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/Jln3mi0vfJU" frameborder="0" allowfullscreen=""></iframe></div>
+
+<p>It’s a world ripe for a <a href="https://www.youtube.com/watch?v=6DGNZnfKYnU">strategic counterstrike</a> of ad blockers.</p>
+
+<p>Ad blockers will become more reponsible, some argue. Or, another line of thinking can be found here.</p>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/mathewi">@mathewi</a> <a href="https://twitter.com/dangillmor">@dangillmor</a> <a href="https://twitter.com/jeffjarvis">@jeffjarvis</a> <a href="https://twitter.com/zeynep">@zeynep</a> we need a system to monetize news; even headlines have value. But who does it, who do we trust?</p>&mdash; Rasmus Vuori (@rasmusvuori) <a href="https://twitter.com/rasmusvuori/status/645247781184118784">September 19, 2015</a></blockquote>
+
+<p>But, there’s no nice way to put it. If ad blocking on mobile becomes popular or the norm, legacy news orgs are completely screwed.</p>
+
+<p>There’s no “whatever doesn’t kill us only makes us stronger” happy face to put on it.</p>
+
+<p>Financially, legacy news orgs have nowhere left to go. The old business model is going and is nearly gone. The new model isn’t working, and paywalls as a savior are proving to be a pipe dream.<sup><a href="#footnote-adblock-three">3</a></sup></p>
+
+<p>But it’s not just money woes that are dragging publishing down.</p>
+
+<p>Publishers’ ability to innovate is in a quite literal way hemmed in by orgs themselves. The news business model was disrupted by the internet, but what is often overlooked is that <em>news culture</em> was also disrupted along with it.</p>
+
+<p>Yet even as the business side tries to adapt, the cultural side hasn’t. It’s openly resistant to the idea despite the fact that they two are inextricably linked</p>
+
+<p>For most of the postwar era, print publications and magazines were a license to print money. Margins of 25 to 30 percent were typical.</p>
+
+<p>With this came freedom of news coverage apart from financial considerations. A certain disdain or even hostility for these business interests took hold in newsrooms, even as such interests were making large, journalistically independent newsrooms possible.</p>
+
+<p>But last-century’s newsrooms are a type of business that literally <em>can’t</em> exist any more. The world has changed.</p>
+
+<p>It used to be <em>really</em> hard to publish. Anyone could buy desks and typwriters and hire a bunch of reporters in <a href="https://www.youtube.com/watch?v=inLVUVh_izg">fedoras</a>. But news organizations were also light manufacturing.</p>
+
+<p>I could get up from my desk in <em>The Boston Globe’s</em> digital department walk down the hallway 30 feet and suddenly find myself in a factory – with a <a href="http://451heat.com/wp-content/uploads/2013/04/Boston-globe-photo-10-presses-2.jpg">pressroom</a>, robots hauling giant paper rolls, etc.</p>
+
+<p>The “you have to own a factory” aspect gave them a near monopoly on mass distribution to local audiences and they could set ad rates – both display and classified – accordingly. This barrier to entry is what the internet disrupted, not the paid subscription model.</p>
+
+<p>What was once a feudal estate with carefully demarcated borders and neatly trimmed lawns is now like <a href="http://www.washingtonpost.com/blogs/style-blog/files/2013/06/win559.jpg">Max Yasgur’s</a> farm during Woodstock.</p>
+
+<p>The new business model is Crazy Eddie’s Discount Mattress Outlet in the local strip mall. They deal in volume. Ads go for pennies on the dollar compared with print. Stories must get millions of clicks.</p>
+
+<p>It’s a business built on going viral. The 1,500-word story about school board members yawning through a meeting is no longer financially viable.</p>
+
+<p>Stuck with a newsroom that won’t downsize or reorganize into a modern online publication, what else is a news org business manager to do?</p>
+
+<p>News orgs have no <a href="https://upload.wikimedia.org/wikipedia/en/d/dd/Gnomes_plan.png">secret business plan</a> sitting on a shelf somewhere waiting to be dusted off to save the day. Quite simply, the news business has always been supported by ads, and ads can no longer support it in its previous form.</p>
+
+<p>If those ads are blocked, there’s no alternative.</p>
+
+<p>Perhaps if publishers had given users a simple opt-out on tracking they wouldn’t be finding users wanting to burn the entire village to the ground and sow the land with salt.</p>
+
+<p>Publishers can say “if we weren’t in this trouble …” or “if we could just have more time …” or “if we could find some other funding …”</p>
+
+<p><em>If, if if …</em> But as a <a href="https://www.youtube.com/watch?v=_jv0uUV2YaI">sage observer</a> once said:</p>
+
+<p><em>“You aaaarre, Blanche. You aaaaarrrre in that chair.”</em></p>
+
+<p>And is that the situation they must now live with.</p>
+
+<ol>
+  <li><span id="footnote-adblock-one"></span>Which also strips out ads, by the way.</li>
+  <li><span id="footnote-adblock-two"></span>Guilty</li>
+  <li><span id="footnote-adblock-three"></span>Genie-back-in-the-bottle moves like paywalls have huge appeal inside newsrooms. It’s an attempt to bundle up readers so that news orgs can claim some sort of exclusive access to them and charge more.</li>
+</ol>
+
+:ET

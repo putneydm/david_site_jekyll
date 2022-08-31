@@ -1,0 +1,35 @@
+I"�<p>One of the first things I noticed about iOS8 was that the default underscore style for anchor tags is a proper <a href="https://eager.io/blog/smarter-link-underlines/">typographical underline</a>.</p>
+
+<p>Safari in Yosemite has also adopted this method.</p>
+
+<p>These are nice touches that draw the traditions of print typography and the type of sanding-the-bottoms-of-the drawers attention to detail that websites need.</p>
+
+<p>But the state of default browser underlines remains fairly lousy across the board. In an era when more refined web type is common, it’s particularly bothersome for typographical pedants.</p>
+
+<p>When building <a href="http://www.cruxnow.com/">Cruxnow.com</a>, I adopted the Medium design team’s <a href="https://medium.com/designing-medium/crafting-link-underlines-on-medium-7c03a9274f9">method</a> of creating bespoke underlines. If you want to know how it looks – well, as <a href="https://www.youtube.com/watch?v=dzmTtusvjR4">Madge</a> the sassy manicurist would say, you’re soaking in it. The underscores on this site use a more refined version of it.</p>
+
+<p>Like many methods in CSS, it’s a clever-yet-hideous <a href="http://starwars.rossiters.com/images/anh-002-01_lg.jpg">hack</a> that uses a <a href="http://www.w3schools.com/css/css3_gradients.asp">background gradient</a> to mimic a typographical underline.</p>
+
+<p>I’ve created a <a href="http://sass-lang.com/">SASS</a> mixin that automagically creates the background gradient. You pass it an argument for the color and top position for the underscore, the latter expressed as percentage.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="k">@mixin</span> <span class="n">underscore</span> <span class="p">(</span><span class="err">$</span><span class="n">color</span><span class="p">,</span> <span class="err">$</span><span class="n">position</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span><span class="err">$</span><span class="n">color</span><span class="p">;</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="n">-moz-linear-gradient</span><span class="p">(</span><span class="nb">top</span><span class="p">,</span> <span class="nb">transparent</span> <span class="m">75%</span><span class="p">,</span> <span class="err">$</span><span class="n">hover_color</span> <span class="m">75%</span><span class="p">);</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="n">-webkit-linear-gradient</span><span class="p">(</span><span class="nb">top</span><span class="p">,</span> <span class="nb">transparent</span> <span class="m">75%</span><span class="p">,</span> <span class="err">$</span><span class="n">hover_color</span> <span class="m">75%</span><span class="p">);</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="n">-o-linear-gradient</span><span class="p">(</span><span class="nb">top</span><span class="p">,</span> <span class="nb">transparent</span> <span class="m">75%</span><span class="p">,</span> <span class="err">$</span><span class="n">hover_color</span> <span class="m">75%</span><span class="p">);</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="n">to</span> <span class="nb">bottom</span><span class="p">,</span> <span class="nb">transparent</span> <span class="m">75%</span><span class="p">,</span> <span class="err">$</span><span class="n">hover_color</span> <span class="m">75%</span><span class="p">);</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="m">2px</span> <span class="m">2px</span><span class="p">;</span>
+  <span class="nl">background-origin</span><span class="p">:</span> <span class="n">padding-box</span><span class="p">;</span>
+  <span class="nl">background-position</span><span class="p">:</span> <span class="m">0</span> <span class="err">$</span><span class="n">position</span><span class="p">;</span>
+  <span class="nl">background-repeat</span><span class="p">:</span> <span class="nb">repeat-x</span><span class="p">;</span>
+  <span class="nl">text-shadow</span><span class="p">:</span><span class="m">1px</span> <span class="m">1px</span> <span class="m">0px</span> <span class="no">white</span><span class="p">,</span> <span class="m">-1px</span> <span class="m">1px</span> <span class="m">0px</span> <span class="no">white</span> <span class="p">;</span>
+  <span class="p">}</span></code></pre></figure>
+
+<p>Like most hacky CSS fixes, it’s not really <a href="http://en.wikipedia.org/wiki/Fire-and-forget">fire and forget</a>. You’ll probably have to counteract its effects in some other declarations.</p>
+
+<p>A few tips: It’s span level, so if you wrap an anchor tag around a block of items it won’t work properly. You also have to apply the mixin for a hover state. The text shadow is white, so if you use it over a color background, it may cause issues.</p>
+
+<p>It also doesn’t work in – wait for it  – IE8 or &lt;, so you’ll have to fall back to the browser default. But then again, people who still use IE8 don’t deserve nice things anyway.</p>
+
+:ET

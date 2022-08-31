@@ -1,0 +1,59 @@
+I"1<p>Some time this week, some items changed in a database that controls Internet domains and this site quietly made a major technical shift.</p>
+
+<p>It all went well enough that probably no one really noticed a difference. I did take the opportunity to make a few design tweaks here and there that some might notice. But the change to the site is all on the back end.</p>
+
+<p>I’m calling this version Davidputney.com Snow Leopard.</p>
+
+<p>For about the last 10 years, my site has been published using <a href="https://movabletype.org/">Movable Type</a>. It did its job quietly and competently, but as a technology it badly dated and therefore was deeply uncool.</p>
+
+<p>At the time I chose it, which publishing platform to embrace wasn’t quite so clear as it is now. A nascent blogger really had to choose between WordPress and Movable Type. I went with Movable Type. And, well …</p>
+
+<div class="embed-container">
+<iframe width="420" height="315" src="https://www.youtube.com/embed/Ubw5N8iVDHI" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<p>In some ways I <em>did</em> make the right choice. Movable Type is dead simple compared with <a href="https://wordpress.com/website/?utm_source=adwords&amp;utm_campaign=WordPress-Generic-Exact-US-GP&amp;gclid=CPXe8pC68MgCFVcRHwodoUoP1w">WordPress</a> and its hideous <a href="http://www.wpbeginner.com/glossary/php/">PHP-based templates</a>. As time went on, I knew Movable Type so well that I could build sites extremely quickly and efficiently in it.<sup><a href="#footnote-one-jekyll">1</a></sup></p>
+
+<p>But it was also becoming clear years ago that I needed to switch. Key plugins were four and five years old, and new ones were not being written. Googling for answers when I encountered a problem would often turn up nothing.</p>
+
+<p>I needed to build my site on something with an active community. My choice was – <em>not WordPress</em>. Rather, I went with <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+
+<p>For those non-technically inclined who have stayed with me this far, Jekyll is a static site generator, which means that, unlike WordPress, it doesn’t require a database and other elaborate server-side software to create and publish a site. Or to maintain.</p>
+
+<p>And, unlike WordPress, if a static site gets hit with a heavy server load, it won’t melt down like <a href="http://www.world-nuclear.org/info/Safety-and-Security/Safety-of-Plants/Chernobyl-Accident/">Chernobyl</a>. If Drudge Report wants to link to us, all we have to say is “Come at me, bro.” <sup><a href="#footnote-two-jekyll">2</a></sup></p>
+
+<p>And, from my own perspective, I no longer have to run a local web server, MySQL database and other complicated <a href="https://www.mamp.info/en/">stuff</a> on my laptop to update my site. With a simpler dev environment, it’s easier for me to build items for the site.</p>
+
+<p>The best news is that because of this switch, readers have a whole new way to enjoy Davidputneycom!</p>
+
+<p>The <a href="https://github.com/putneydm/david_site_jekyll">source code</a> for the entire site, including all posts, is on Github.</p>
+
+<p>Readers comfortable with a Unix command line,<sup><a href="#footnote-three-jekyll">3</a></sup> need only do a <code class="language-plaintext highlighter-rouge">git clone</code> on the repo, install the dependencies – Node, NPM, Gulp, LibSass, Homebrew, ImageMagick, Jekyll, etc – do a quick compile and they will have their very own version of this site running on their computer for their offline reading convenience. Yes, it’s just that simple!</p>
+
+<p>For a while we considered making this easy, convenient, fun method the only way to enjoy the site, but this is a mobile first world and the command line options for iOS are fairly poor right now. If someone can find a decent command line Git client for iPhone let us know so we can hopefully pull the trigger on this option soon.</p>
+
+<p>Or, if folks want a full Davidputney.com experience, they can pull the repo and use it to run their own guerrilla version of Davidputney.com on their own domain. All we ask is that they not attempt to assume our identity by murdering us and wearing our skin like a suit, <a href="http://www.biography.com/people/ed-gein-11291338">Edward Gein</a> style.</p>
+
+<p>The visible changes are few, but you will still see some differences:</p>
+
+<ul>
+  <li>The pages begin rendering twice as fast as the previous version of the site, in just about a <a href="http://www.webpagetest.org/result/151105_Z3_4Z6/">half second</a> in optimal conditions.</li>
+  <li>To save bandwidth on mobile, we are now lazyloading our responsive images using <a href="xhttps://afarkas.github.io/lazysizes/">Lazysizes</a>.</li>
+  <li>We cleaned up the underlines on hyperlinks.</li>
+  <li>We tweaked some key animations to make them better.</li>
+  <li>We fixed a glitch that was causing fonts to redownload with some page loads.</li>
+  <li>We fixed other glitches that were slowing page rendering a bit.</li>
+  <li>The blog is now paginated.</li>
+  <li>We added photos onto the blog front and subsequent pages.</li>
+  <li>We cleaned up some of our URLs. For example portfolio items now reside at <code class="language-plaintext highlighter-rouge">davidputney.com/design</code> rather than <code class="language-plaintext highlighter-rouge">davidputney.com/archive/projects.html</code></li>
+</ul>
+
+<p>But, as Vincent said in <em>Pulp Fiction</em>, it’s the little differences. Eventually they start to add up.</p>
+
+<ol>
+  <li><span id="footnote-one-jekyll"></span>This version of my site was built and launched a year ago with (then) job hunting in mind. I needed to build it fast and not get bogged down in learning WordPress too.</li>
+  <li><span id="footnote-two-jekyll"></span> He will, however, quickly run through our bandwidth allotment.</li>
+  <li><span id="footnote-three-jekyll"></span>And I sure that’s most people.</li>
+</ol>
+
+:ET

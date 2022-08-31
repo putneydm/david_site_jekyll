@@ -1,0 +1,33 @@
+I"<p>I blame my friend for becoming internet famous.</p>
+
+<p>While writing about his <a href="http://www.davidputney.com/2015/05/into-the-maw.html">voyage through</a> the viral media sausage making machine, I realized that my blog templates had a serious design flaw. I had no place to put my snarky asides.</p>
+
+<p>I needed footnotes. All the cool kids have them on their blogs. <sup><a href="#footnotes-footnote-one">1</a></sup>  <a href="http://daringfireball.net/">John Gruber</a>, for instance.</p>
+
+<p>One of the nice things about having locally sourced, artisanal site that I made <a href="http://www.davidputney.com/about">myself</a> is that I can just add items as needed. I opened my <a href="http://www.barebones.com/products/bbedit/">code editor</a> and wrote up styles for superscript and an ordered list style.</p>
+
+<p>But I hated them almost immediately. They operated as <a href="http://www.nomensa.com/blog/2004/what-are-skip-links">skip links</a>, which are simple and basic, but are also gross and confusing because they can easily leave a reader feeling stranded on the page.</p>
+
+<p>I set out to make the best skip links ever. They zip a user to the bottom of the page, then return them to where they were reading. Try it! <sup><a href="#footnotes-footnote-two">2</a></sup> They’re both easy and fun! In the spirit of <a href="http://en.wikipedia.org/wiki/Progressive_enhancement">progressive enhancement</a>, users with JavaScript turned off, or if JS doesn’t load, get basic skip links.</p>
+
+<p>I spent the last week or so, a couple hours a night, writing the JavaScript to make that happen. Then I tossed all of that out this weekend and rewrote the entire thing from scratch.</p>
+
+<p>It was working smoothly on the local version of my site. Satisfied that it was ready, I published the code to my live site where it <a href="http://twitter.com/Raelshark/status/607757783258120193">immediately broke</a>.</p>
+
+<p>I’m fairly new to writing in straight-up JavaScript. I’ve done <a href="https://jquery.com/">jQuery</a> for about five years. There’s a jQuery vs. JavaScript <a href="http://gomakethings.com/ditching-jquery/">debate</a> going on. Both methods have their strengths and weaknesses, but the jQuery partisans <em>are</em> correct that jQuery solves a lot of problems with JavaScript.</p>
+
+<p>Finding and targeting items in the DOM is <em>much</em> easier with jQuery. In my case it was made doubly difficult because I write my entries in <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>. They are just raw HTML with no styles, IDs or data tags to grab onto with JavaScript.</p>
+
+<p>But it all appears to be working. For now. Except in Firefox. And maybe Internet Explorer. Frankly, we can’t be bothered to check.</p>
+
+<p>We are offering a money back guarantee<sup><a href="#footnotes-footnote-three">3</a></sup> to anyone encountering issues with our footnotes.</p>
+
+<p>Please contact the David Putney.com <a href="http://www.warnerbros.com/archive/spacejam/movie/jam.htm">complaints department</a> where your issue will be given all the attention it deserves. We will contact you in six to eight weeks once your complaint has been settled to our satisfaction.</p>
+
+<ol>
+  <li><span id="footnotes-footnote-one"></span>Despite having footnotes on my blog, I am still not one of the cool kids.</li>
+  <li><span id="footnotes-footnote-two"></span>Like this. If you hit the “Take me back to where I was reading” button. It  will. At least, I hope so.</li>
+  <li><span id="footnotes-footnote-three"></span>Not a guarantee.</li>
+</ol>
+
+:ET

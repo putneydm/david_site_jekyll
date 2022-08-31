@@ -1,0 +1,27 @@
+I"�<p>It was supposed to just be a tech revision, a release I’d dubbed Davidputney.com Snow Leopard.</p>
+
+<p>But my penchant for tinkering has once again outrun my good sense. So this site also has a visual refresh, too. In fact, Davidputney.com has been visually refreshed more times than <a href="https://www.youtube.com/watch?v=Bnx95KyQEAA">Katherine Helmond</a> in <em>Brazil.</em> it’s more of <a href="https://en.wikipedia.org/wiki/Ship_of_Theseus">ship of Theseus</a> in that it isn’t the same site any more.</p>
+
+<p>Here was what it <a href="https://web.archive.org/web/20141116184009/http://www.davidputney.com/">looked like</a> when I launched it last fall. Since then a bunch of it has been rewritten to take advantage of modern browser technologies.<sup><a href="#footnote-site-update-one">1</a></sup> I’ve changed the fonts several times before settling on <a href="http://www.losttype.com/font/?name=lavanderia">Lavenderia</a> and <a href="http://www.hypefortype.com/browse-fonts/font-categories/headline/ginger.html">Ginger</a>. I’ve reshuffled the content presentation.</p>
+
+<p>Here’s a quick rundown of the latest changes:</p>
+
+<ul>
+  <li>The header and hero images – the entire top of every page, basically – has been rewritten using <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flexbox</a>. After wrestling with floats, percentage widths, clearfixes and other layout hacks for the better part of a decade, flexbox feels like a huge improvement. If you are a web dev you should probably learn it, as it will make your life much easier.</li>
+  <li>I rewrote all the animations and transitions for these page-topping items. Key among them was a switch to <code class="language-plaintext highlighter-rouge">transform:translate( )</code> to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">animate</a> positioning of elements. These are aimed at improving performance.</li>
+  <li>A large CSS refactor that cut out a bunch of orphaned styles and reduced the size of <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/index?hl=en">critical path</a> styles embedded in my page headers by a significant amount.</li>
+  <li>The site navigation underwent a redesign at mobile widths. It’s larger, <sup><a href="#footnote-site-update-two">2</a></sup> but more importantly it has all-new performance sapping, battery-draining, processor hogging, showy and gratuitous animations. So, enjoy!</li>
+  <li>Other redesign stuff continues my efforts to strip away artifice that detracts from content. By artifice I mean the ugly shade of <a href="http://davidputney.com/xx">tan</a> I used on the site nav/headers for some reason. It’s gone now. You’ll never have to see it there again.</li>
+  <li>I switched from embedded SVGs to embedded <a href="https://css-tricks.com/svg-sprites-use-better-icon-fonts/">SVG sprites</a>.</li>
+</ul>
+
+<p>It probably seems bizarre to constantly revise a site that was generally fine to begin with. At least partly this was driven by me transforming the site from a mainly portfolio site into a blogging site. Davidputney.com is also a place for me to try out new techniques and technologies.</p>
+
+<p>The end result is that Theseus’ ship hasn’t just replaced piecemeal, it’s a whole new, better ship.</p>
+
+<ol>
+  <li><span id="footnote-site-update-one"></span> Suck it hard, IE users.</li>
+  <li><span id="footnote-site-update-two"></span> All the better to build my personal brand!</li>
+</ol>
+
+:ET

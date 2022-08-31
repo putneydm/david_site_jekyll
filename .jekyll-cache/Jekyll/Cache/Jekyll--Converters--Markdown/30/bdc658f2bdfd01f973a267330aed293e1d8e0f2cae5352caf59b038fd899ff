@@ -1,0 +1,35 @@
+I"w<p>I’m like a <a href="https://screen.yahoo.com/unfrozen-cave-man-lawyer-1-223412426.html">caveman</a> finding a new shiny pebble.</p>
+
+<p>There’s nothing wrong with the old shiny pebble I’d been enamored with seconds ago, it’s just that …  <em>It’s new! Look how shiny it is!</em></p>
+
+<p>I’ve been experimenting with <a href="http://www.davidputney.com/2014/11/making-davidputneycom-go-fast.html">various</a> methods <a href="http://www.davidputney.com/2014/11/making-davidputneycom-go-fast-part-2.html">of cutting</a> this site’s load time, particularly through asynchronously loading blocking files like webfonts and scripts.</p>
+
+<p>I’d been using the <a href="https://github.com/typekit/webfontloader">Adobe/Google</a> asynchronous font loader, but Adam Beres-Deak’s <a href="http://bdadam.com/blog/loading-webfonts-with-high-performance.html">method</a> became my latest new shiny pebble. His script loader limits the font palette to <a href="http://en.wikipedia.org/wiki/Web_Open_Font_Format">WOFF</a> and <a href="http://www.w3.org/TR/WOFF2/">WOFF2</a> files which have been encoded as <a href="http://en.wikipedia.org/wiki/Base64">base-64</a> data URIs into an <a href="http://www.w3schools.com/cssref/css3_pr_font-face_rule.asp">@font-face</a> stylesheet. This loads asynchronously, is added to the head of the page and is saved to <a href="http://diveintohtml5.info/storage.html">local storage</a> rather than being cached.</p>
+
+<p>I use three faces and bold and italic variants of my body type, so it had the advantage of reducing font-related HTTP calls from five to one, even if my overall font file download size stayed roughly the same. I decided to implement it.</p>
+
+<p>As they say on “Top Gear,” <a href="http://en.wikipedia.org/wiki/Top_Gear_challenges#How_hard_can_it_be.3F">how hard can it be</a>?</p>
+
+<p>To create my CSS with data URIs I turned to <a href="http://www.fontsquirrel.com/tools/webfont-generator">FontSquirrel</a>’s advanced settings. Subsetting and other cool stuff is available here in a UX that looks like the <a href="http://upload.wikimedia.org/wikipedia/commons/5/50/B747-cockpit.jpg">control panel</a> of a 747.</p>
+
+<p>I ran into problems with FontSquirrel’s base-64 converter, which consistently turns out a CSS file with no embedded base-64 data URIs for WOFF2 files.</p>
+
+<p>A better option, and the one I ended up using, is the <a href="http://gulpjs.com/">Gulp</a> plugin <a href="https://www.npmjs.com/package/gulp-css-base64">cssBase64</a>, although several other Gulp options are available. FontSquirrel-generated CSS takes a bit of editing to fix font names and properly assign weights and styles. Base-64 is as ugly as a <a href="http://blogs-images.forbes.com/briancaulfield/files/2011/05/300px-Kommunar.jpg">Soviet tractor</a>, so it’s best to not have to go into the output files anyway.</p>
+
+<p>After a couple days of messing with this part in my spare time I had my font files in place. But it still wasn’t working properly due to a <a href="http://stream1.gifsoup.com/view7/2906451/harmony-vs-xander-o.gif">slapfight</a> between Safari and Chrome over apparent differing opinions of <a href="http://davidwalsh.name/cdn-fonts">cross-domain</a> loading.</p>
+
+<p>For various technical reasons I’ll not get into, I was using a full http link instead of a relative path for my font files. Safari treats http://davidputney.com … as cross domain and requires a www for fonts to load. Chrome treats http://www.davidputney.com as cross domain.</p>
+
+<p>It took some time to nail down the problem, but I got it working in both browsers with a somewhat ugly CMS hack that – suddenly stares blankly off into the middle distance – <em>I’ve seen things, man.”</em></p>
+
+<p>Then my testing revealed another problem: It doesn’t work at all in Safari – desktop or mobile – in <a href="http://support.apple.com/en-us/HT203036">private browsing mode</a>.</p>
+
+<p>On the one hand, this site isn’t a porn site. Few will likely ever visit in private mode. But I use private mode on my phone and iPad almost exclusively to defeat <a href="http://thelearnsomethingnew.com/2013/01/17/the-easiest-way-to-get-around-paywalls/">site paywalls</a>, so it’s pretty much broken for me on those devices.</p>
+
+<p>I’d be less concerned about this if the effect on site speed wasn’t negligible. Overall load time and render speed are about 1 second faster. But first render is incrementally slower, about .2 to .3 seconds. This pushes first render from a less than a half second to closer to one second.</p>
+
+<p>For most visitors less than a second load time feels immediate, but I’m going for glory on this. Data URIs in general aren’t all that fast. Faster methods appeal to me.</p>
+
+<p>I spent enough time implementing this I want to leave it in place for at least a few days. I’ll weigh the benefits and decide then whether to stick with my new shiny pebble or go back to the old one.</p>
+
+:ET

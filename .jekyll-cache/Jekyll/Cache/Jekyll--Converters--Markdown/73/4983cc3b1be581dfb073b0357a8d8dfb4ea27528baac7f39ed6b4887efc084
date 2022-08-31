@@ -1,0 +1,56 @@
+I"}<p>I’ve become Internet famous in the past few days.</p>
+
+<p>I’d always hoped it would be because I pulled a really good internet prank. Turns out it was because I wrote a blog post.</p>
+
+<p>So far, it’s be tweeted out or linked from Harvard’s <a href="https://www.youtube.com/watch?v=My2FRPA3Gf8">Nieman Lab</a> and included in their e mail newsletter, it made Neiman Labs’ <a href="http://www.davidputney.com/design/link/">Fuego</a>, and has been shared by <a href="http://www.lincolncourier.com/">Commarts.com</a>, NewsWhip, PBS Idea Lab, <a href="http://www.capitalnewyork.com/article/media/2015/01/8559274/more-fallout-bostoncom-after-retraction">PBS Mediashift</a> and by countless editors and designers. Tweets about the post have been <a href="http://daringfireball.net/">linked</a> to, favorited and retweeted more times than I can count. As of this writing, it’s going on 7,000 pageviews.</p>
+
+<p>It’s by far most-read thing I’ve ever had on my site. Yet, I’m not sure how I feel about the post. It got a lot of hits, to be sure. And it’s something I’ve wanted to say for a good long while. That’s doesn’t mean I should say it, or necessarily say it in that fashion.</p>
+
+<p>After a few day’s reflection I have some quick thoughts:</p>
+
+<ul>
+  <li>If I had known that my post was going to go so wide, I’d have held it back and worked on it some more. Previous longer entries took me as long as a month to write and rewrite. To my eyes, the post reads graceless and choppy, like a rough second draft.</li>
+  <li>I published it just after I’d pushed out a major site update. Almost very piece of the site had been altered, and the site javascript was a complete rewrite. I hadn’t ironed out the kinks, so my site had broken stuff all over it when the flood of visitors showed up.</li>
+  <li>My <a href="http://www.phlmetropolis.com/Canute.jpg">webhost</a> completely shat the bed. My site slowed to a crawl midday Monday. I ran a speed test that showed the web server was taking nine seconds just to send the first bit of data. I had to call them twice to get it fixed. Considering that my post argued about the importance of fast load times, the irony is not lost on me.</li>
+  <li>I made a fact error, mistaking smart person <a href="http://www.imdb.com/title/tt0382932/?ref_=nv_sr_2">Benedict Evans</a> for other smart person <a href="http://www.asymco.com/">Horace Dediu</a>. In my college journalism class, a fact error in a story was an automatic F. If my former J-prof is reading this, I owe you a make-up story.</li>
+</ul>
+
+<p>Those are only small takeaways. Something bigger has been eating at me. I have the creeping feeling that perhaps I was being just a smidge unfair. Not that what I wrote wasn’t true – many news sites <em>do</em> have terrible UX because they put stakeholder interest over reader needs.</p>
+
+<p>Or, to put it in more pithy terms, readers don’t care about stakeholders or office politics or bullshit arguments made around a conference table. All they see is the site.</p>
+
+<p>I suspect what I wrote resonated with so many in the industry because does contain fundamental truth. Anyone who’s ever dealt with a stakeholder riding a wrecking ball like [Miley Cyrus][11] as it destroys a project knows what I mean.</p>
+
+<p>This sentiment was best summed up by a friend who described a colleague as someone who always seemed nice, but “I really only knew her as someone who showed up at meetings and made ridiculous demands.”</p>
+
+<p>So why do I feel the way I do about my post?</p>
+
+<p>The best I can do is try to explain it. In a past life as a [print designer][12], I attended a design conference session in which the speaker mainly made fun bad design from small newspapers – awkward photos of groundbreakings, pages jammed with ads, etc – while he and the audience laughed at it.</p>
+
+<p>Once I thought about the session, even though everything he said was true, the session felt a little ugly. Most examples he showed were from small papers that were just doing the best that they could with limited resources and staffs. I worked at a [6,000-circ][13] paper once, so I know what it’s like.</p>
+
+<p>But even more than being unfair, the session wasn’t enlightening. The takeaway was “let us laugh at bad stuff that is bad.”</p>
+
+<p>What my post was doing mainly was letting fly with everything I’d bottled up and wanted to say through the years, something made significantly easier by disentangling myself from the news industry and its [omerta][14] against internal dissent. Here’s a helpful video of me publishing my blog post last week:</p>
+
+<div class="embed-container"><iframe src="http://www.youtube.com/embed/LQA6yyA-Ajk" frameborder="0" allowfullscreen=""></iframe></div>
+
+<p>What I am not saying is that current and former media members should abstain from calling out bad decisions and their bad results.</p>
+
+<p>But jumping around and shouting isn’t the way I’d like to go about it. [DaringFireball.net][15] blogger John Gruber sets the bar for what I’m trying to do here. His longform pieces are clearly reasoned and carefully stated, and even when I disagree with him, it’s still obvious he’s considered the topic in a deep and thoughtful fashion.</p>
+
+<p>I also realize have also set up myself as a target. I have a paper trail of my [own work][16] that leaves me more than open to critique. Much of it is displayed on and linked from this site. That work also includes this site you’re reading now.</p>
+
+<p>And, boy howdy are there some clangers in that portfolio. A couple things in particular that I argued <em>vehemently</em> for at the time I now look at and cringe. Someone steamrolling through a bad ideas goes both ways.</p>
+
+<p>Poorly designed news sites aren’t necessarily the results of noble UX designers like [King Canute][17] at the seaside trying to stem the tide of bad stakeholder ideas. Bad UX could just as easily be the result of a designer failing to synthesize stakeholder wishes into something coherent.</p>
+
+<p>My design work – and the design of this site – are the most real statement about how I think a site should be. The only true critique of bad UX or design is to try to do better oneself. That sentiment can be found in the unlikeliest of places, the movie [“Ratatouille”][18]:</p>
+
+<blockquote>
+  <p>“But the bitter truth we critics must face, is that in the grand scheme of things, the average piece of junk is probably more meaningful than our criticism designating it so.”</p>
+</blockquote>
+
+<p>Despite my misgivings, I would retract nothing. I’d just hope that the lesson from my post is that critique is as disposable as Kleenex. Trying every day to do better is far harder and more important.</p>
+
+:ET

@@ -1,0 +1,114 @@
+I"�A<p>As Flash dies a lingering, welcome death and its larger functions are replaced by native code, developers are finding themselves needing alternatives to smaller things it did too. Among them is Flash-based copy to clipboard.</p>
+
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> code to do the copy is quite simple, just a single line. Perhaps that’s why when I went looking for JavaScript copy-to-clipboard tips and methods, I found them mainly limited to Stack Overflow threads and the like. I’ve put cobbled them together insights from several and some of my own testing and some insights into a tutorial of sorts.</p>
+
+<p>I also threw in some other code to improve the overall experience of doing a copy for the end user.</p>
+
+<p>What is being done in the process is fairly straightforward.</p>
+
+<ul>
+  <li>Listen for a button click,</li>
+  <li>Select the form field or item to copy.</li>
+  <li>Copy the form contents or the item</li>
+  <li>Test for success</li>
+  <li>Offer a success or failure message</li>
+  <li>Reset for another copy process</li>
+</ul>
+
+<p>By breaking it into a step-by-step process, it becomes a much more solvable problem. And this version throws in some UX features that make the overall process better for users.</p>
+
+<p>The first step is the HTML. I’m omitting the CSS, but in this case the markup would need a class that sets the class <code class="language-plaintext highlighter-rouge">message</code> to <code class="language-plaintext highlighter-rouge">display:none</code> by default and another that set them to <code class="language-plaintext highlighter-rouge">display:block</code> on active state. This is the markup for the form and button.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"form-field"</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">value=</span><span class="s">"Stuff that will be copied"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/input&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"copy-button"</span> <span class="na">value=</span><span class="s">"Copy"</span><span class="nt">&gt;&lt;/input&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"success-message"</span> <span class="na">class=</span><span class="s">"message"</span><span class="nt">&gt;</span>Copied<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">id =</span><span class="s">"fail-message"</span> <span class="na">class=</span><span class="s">"message"</span><span class="nt">&gt;</span>Something went wrong<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>The JavaScript is just one piece of the problem at a time. Add a listener to the button and find the form field with the content on click.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">copyButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">copy-button</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">formField</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">form-field</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">copyButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="c1">//copy code will go here here</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>A these lines will set the form field to active, select the contents and place it into a variable. The copy is accomplished using <code class="language-plaintext highlighter-rouge">document.execCommand()</code>.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">formField</span><span class="p">.</span><span class="nx">select</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">success</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">execCommand</span><span class="p">(</span><span class="dl">'</span><span class="s1">copy</span><span class="dl">'</span><span class="p">);</span></code></pre></figure>
+
+<p>Testing this variable as true / false determines whether the copy was successful and shows the user a message with the outcome. Simply adding a success message without this test means the copy could fail silently.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">success-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">message--active</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">fail-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">message--active</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>However, a copy process returning an error is also possible, so I’ve included some <code class="language-plaintext highlighter-rouge">try / catch</code> code.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">handleMessage</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="nx">formField</span><span class="p">.</span><span class="nx">select</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">success</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">execCommand</span><span class="p">(</span><span class="dl">'</span><span class="s1">copy</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">success-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">message--active</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">resetForm</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">fail-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">message--active</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">resetForm</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>  <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">fail-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">message--active</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">resetForm</span><span class="p">();</span>     
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The form field needs to be reset back to its default state once the paste is complete so the user can copy again or alter the form text. I’ve used a 2-second delay.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">resetForm</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">reset</span><span class="dl">'</span><span class="p">)</span>
+   <span class="nx">formField</span><span class="p">.</span><span class="nx">blur</span><span class="p">();</span>
+   <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">active</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="dl">'</span><span class="s1">message--active</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="dl">'</span><span class="s1">message--active</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+ <span class="p">};</span></code></pre></figure>
+
+<p>These are the basic steps needed to to a copy to clipboard with success confirmation. I’ve put them all together into a <a href="http://codepen.io/putneydm/pen/eJpNwQ">CodePen</a>.</p>
+
+<p>However, these steps can be refactored into a more compact form – 17 lines vs. 45 – and, in this case altered to better fit an implementation – in this case, my own – without changing the basic principles behind what has been described. In my own version, the active state is applied to a <code class="language-plaintext highlighter-rouge">div</code> that wraps the form field. Also the function that does the active state set and reset is refactored into a single function that receives the specific pass or fail style as an argument.</p>
+
+<p>In the interest of space I’ve converted my <code class="language-plaintext highlighter-rouge">if</code> statements into a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">ternary operator</a>. This is my finished code as I used on the site I’m building.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">embedCode</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">embed-code</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// get the form with embed code</span>
+<span class="kd">var</span> <span class="nx">embedContainer</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="dl">'</span><span class="s1">form-container</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// get the container of the form</span>
+
+<span class="c1">// handle the active and inactive state of the form container</span>
+<span class="kd">var</span> <span class="nx">inputActive</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">style</span><span class="p">)</span> <span class="p">{</span>
+ <span class="nx">embedContainer</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">form-container--active</span><span class="dl">'</span><span class="p">,</span> <span class="nx">style</span><span class="p">);</span> <span class="c1">// set container to active and include error or success message</span>
+  <span class="nx">embedCode</span><span class="p">.</span><span class="nx">blur</span><span class="p">();</span> <span class="c1">// deselect the form field</span>
+  <span class="c1">// remove the active state from the form container once the 2-second animation has run</span>
+  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">embedContainer</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="dl">'</span><span class="s1">form-container--active</span><span class="dl">'</span><span class="p">,</span> <span class="nx">style</span><span class="p">);</span>
+  <span class="p">},</span> <span class="mi">2100</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="k">try</span> <span class="p">{</span>
+  <span class="nx">embedCode</span><span class="p">.</span><span class="nx">select</span><span class="p">();</span> <span class="c1">// select the form field</span>
+   <span class="kd">var</span> <span class="nx">successful</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">execCommand</span><span class="p">(</span><span class="dl">'</span><span class="s1">copy</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// copy the contents</span>
+   <span class="nx">successful</span> <span class="p">?</span> <span class="nx">inputActive</span><span class="p">(</span><span class="dl">'</span><span class="s1">form-container--success</span><span class="dl">'</span><span class="p">)</span> <span class="p">:</span><span class="nx">inputActive</span><span class="p">(</span><span class="dl">'</span><span class="s1">form-container--fail</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// test if it was successful</span>
+ <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+     <span class="nx">inputActive</span><span class="p">(</span><span class="dl">'</span><span class="s1">form-container--fail</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// if there is an error give an error message</span>
+ <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This copy-to-clipboard method should work in any browser that supports the feature. Universal support, however, remains a problem.</p>
+
+<p>Safari for both Mac and iOS do not support it for security reasons, but Chrome and Firefox and Internet Explorer are both good with it. No JS method will work for Safari.</p>
+
+:ET

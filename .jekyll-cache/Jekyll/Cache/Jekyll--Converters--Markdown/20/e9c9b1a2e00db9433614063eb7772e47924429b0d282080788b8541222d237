@@ -1,0 +1,111 @@
+I"�0<p>Responsive design not only caused designers and developers to rethink their entire design process, it caused numerous little head-scratchers along the way.</p>
+
+<p>One problem is how to maintain an an exact aspect ratio on a DOM object on page resize. It’s easy if it contains a presized object, hard if it does not. Adjusting top or bottom padding was always a <a href="http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/">favorite technique</a>.</p>
+
+<p>Recently I needed a square figure wrapper to contain an image of undetermined size and aspect ratio. The image could be either tall or wide. Despite this, the image would need to center and fill out the container. Any overflow would be cropped off.</p>
+
+<p>In the past, I’d used a clever <a href="https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/">aspect-ratio mixin</a> that, similar to the most-used technique, used an ::after pseudo element on the container and padding to force the correct aspect ratio. Though useful, the mixin also resulted in some gross and hacky code because it involved absolute positioning elements inside the container.</p>
+
+<p>But, applying a combination of viewport units, calc, object-fit and flexbox to the container and image can solve aspect ratio/photo problems in a much cleaner fashion.</p>
+
+<p>First step: set the width of the container. My image container needed have a 55px<sup><a href="#footnote-aspect-ratio-one">1</a></sup> margin on the left and the page had a 15px left and right margin. I was targeting mobile, so I set my container width at 100 percent of the <a href="http://blog.teamtreehouse.com/new-viewport-relative-units">viewport width</a> minus these amounts.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nc">.container</span> <span class="p">{</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">100vw</span> <span class="n">-</span> <span class="m">85px</span><span class="p">);</span>
+    <span class="p">}</span>
+  </code></pre></figure>
+
+<p>Since the container will be square, use the width of the container to set the height using viewport width units:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nc">.container</span> <span class="p">{</span>
+        <span class="nl">height</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">100vw</span> <span class="n">-</span> <span class="m">85px</span><span class="p">);</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>Use <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flexbox</a> on the wrapper to center the contents vertically and horizontally.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nc">.container</span> <span class="p">{</span>
+        <span class="nl">display</span><span class="p">:</span><span class="n">flex</span><span class="p">;</span>
+        <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="nl">overflow</span><span class="p">:</span><span class="nb">hidden</span><span class="p">;</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>The full code for the container looks like this.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nc">.container</span> <span class="p">{</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">100vw</span> <span class="n">-</span> <span class="m">85px</span><span class="p">);</span>
+        <span class="nl">height</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">100vw</span> <span class="n">-</span> <span class="m">85px</span><span class="p">);</span>
+        <span class="nl">display</span><span class="p">:</span><span class="n">flex</span><span class="p">;</span>
+        <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="nl">overflow</span><span class="p">:</span><span class="nb">hidden</span><span class="p">;</span>
+    <span class="p">}</span>
+  </code></pre></figure>
+
+<p>Since the size and shape of the image in the container isn’t defined, the image will need some styles to handle this. Set the image to always be 100 percent of its container height and width.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nt">image</span> <span class="p">{</span>
+        <span class="nl">width</span><span class="p">:</span><span class="m">100%</span><span class="p">;</span>
+        <span class="nl">height</span><span class="p">:</span><span class="m">100%</span><span class="p">;</span>
+    <span class="p">}</span>
+  </code></pre></figure>
+
+<p>However, this distorts the image to the shape of the container. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">Object-fit</a> handles this problem by sizing the image to always fill the container without distorting it, similar to background-size:cover. Here’s the finished code:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nt">image</span> <span class="p">{</span>
+        <span class="nl">object-fit</span><span class="p">:</span><span class="n">cover</span><span class="p">;</span>
+        <span class="nl">width</span><span class="p">:</span><span class="m">100%</span><span class="p">;</span>
+        <span class="nl">height</span><span class="p">:</span><span class="m">100%</span><span class="p">;</span>
+    <span class="p">}</span>
+  </code></pre></figure>
+
+<p>The result is an image that is centered and cropped inside a container that maintains a perfect aspect ratio on window resize. Here’s a <a href="http://codepen.io/putneydm/pen/JdwNJv">CodePen</a> with an example of the code and how it works.</p>
+
+<p>And, since the container height is a function of width, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">calc</a> can be used to create any aspect ratio, such as 16 x 9:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">  <span class="nt">width</span><span class="o">:</span> <span class="err">30</span><span class="nt">vw</span><span class="o">;</span>
+  <span class="nt">height</span><span class="o">:</span> <span class="nt">calc</span><span class="o">(</span><span class="err">30</span><span class="nt">vw</span> <span class="o">*</span> <span class="o">.</span><span class="err">5625</span><span class="o">);</span></code></pre></figure>
+
+<p>I made a mixin that can be passed viewport width, margins, and aspect ratio and do all the math.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss">    <span class="k">@mixin</span> <span class="nf">aspect-ratio</span><span class="p">(</span><span class="nv">$viewport</span><span class="o">,</span><span class="nv">$margin</span><span class="o">,</span><span class="nv">$width</span><span class="o">,</span><span class="nv">$height</span><span class="p">){</span>
+        <span class="nv">$ratio</span><span class="p">:</span><span class="nv">$height</span> <span class="o">/</span> <span class="nv">$width</span><span class="p">;</span>
+        <span class="nv">$elHeight</span><span class="p">:</span><span class="nv">$viewport</span> <span class="o">*</span> <span class="nv">$ratio</span><span class="p">;</span>
+        <span class="nt">width</span><span class="nd">:calc</span><span class="o">(</span><span class="si">#{</span><span class="nv">$viewport</span><span class="si">}</span><span class="nt">vw</span> <span class="nt">-</span> <span class="si">#{</span><span class="nv">$margin</span><span class="si">}</span><span class="nt">px</span><span class="o">)</span><span class="p">;</span>
+        <span class="nt">height</span><span class="nd">:calc</span><span class="o">(</span><span class="si">#{</span><span class="nv">$elHeight</span><span class="si">}</span><span class="nt">vw</span> <span class="nt">-</span> <span class="si">#{</span><span class="nv">$margin</span><span class="si">}</span><span class="nt">px</span><span class="o">)</span><span class="p">;</span>
+        <span class="nt">display</span><span class="nd">:flex</span><span class="p">;</span>
+        <span class="nt">align-items</span><span class="nd">:center</span><span class="p">;</span>
+        <span class="nt">justify-content</span><span class="nd">:center</span><span class="p">;</span>
+        <span class="nt">overflow</span><span class="nd">:hidden</span><span class="p">;</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>If it is passed a viewport width of 30, a margin of 10px, and a ratio of 16 x 9,</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss">    <span class="k">@include</span> <span class="nd">aspect-ratio</span><span class="p">(</span><span class="m">30</span><span class="o">,</span> <span class="m">10</span><span class="o">,</span> <span class="m">16</span><span class="o">,</span> <span class="m">9</span><span class="p">);</span></code></pre></figure>
+
+<p>It compiles to:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nc">.image-wrapper-test</span> <span class="p">{</span>
+        <span class="nl">margin</span><span class="p">:</span> <span class="m">10px</span> <span class="nb">auto</span> <span class="m">40px</span><span class="p">;</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">30vw</span> <span class="n">-</span> <span class="m">10px</span><span class="p">);</span>
+        <span class="nl">height</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">16.875vw</span> <span class="n">-</span> <span class="m">10px</span><span class="p">);</span>
+        <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+        <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+
+<p>This comes with some caveats. This is still a complicated solution to a simple problem, as viewport units are not the easiest measure to work with. You’ll need an <a href="https://www.npmjs.com/package/gulp-autoprefixer">autoprefixer</a>. It also runs into support problems on <a href="http://caniuse.com/#search=vw">Opera Mini</a>, and – wait for it  – <a href="http://caniuse.com/#search=object-fit">Internet Explorer</a>.</p>
+
+<p>Both appear solvable with <a href="http://modernizr.com/">Modernizr</a> fallbacks.<sup><a href="#footnote-aspect-ratio-three">2</a></sup></p>
+
+<p>In addition, it’s always best to crop images to the correct size for their container<sup><a href="#footnote-aspect-ratio-two">3</a></sup>. This was made for quick build-and-deploy situation where that wasn’t possible.</p>
+
+<p>And, most importantly the mixin is a one-off made specifically for this project. I haven’t thoroughly battle tested it, so your mileage may vary.</p>
+
+<ol>
+  <li><span id="footnote-aspect-ratio-one"></span>Usually I work in rems, but I’m using pixels for demo purposes because they are easier to understand.</li>
+  <li><span id="footnote-aspect-ratio-three"></span>Although my official browser support policy for Davidputney.com is that we can’t be bothered to test IE bug fixes because people who use Internet Explorer don’t deserve nice things.</li>
+  <li><span id="footnote-aspect-ratio-two"></span>And please, use responsive images, for the love of god.</li>
+</ol>
+
+:ET
