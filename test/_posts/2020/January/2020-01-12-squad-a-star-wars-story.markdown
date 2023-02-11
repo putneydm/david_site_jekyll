@@ -14,7 +14,7 @@ promo: "Stormtroopers went into the woods. Something was waiting."
 
 **“Are we still** waiting?”
 
-This was the fifth time time the lieutenant had come forward to the cockpit. Maybe it was a different one. Most Imperial officers, like the shuttle captain, paid little attention to Stormtroopers. Or their officers. They may as well be clone troopers.
+This was the fifth time the lieutenant had come forward to the cockpit. Maybe it was a different one. Most Imperial officers, like the shuttle captain, paid little attention to Stormtroopers. Or their officers. They may as well be clone troopers.
 
 Anyway, both pilots were occupied. The Imperial shuttle _Arrik_ had been waiting for some time as the shuttle ahead of them dealt with some sort of issue.
 
@@ -42,7 +42,7 @@ The co-pilot could hear in his earpiece that the admiral of the fleet himself ha
 
 The shuttle and hundreds of others just like it had flown dozens of missions the past few weeks, bringing in troops from all over the galaxy to the Death Star and to the Imperial Base on the moon below. Something big was clearly happening. Really big. But this went unspoken among the pilots in the officer’s mess. Too many opportunities to be branded a spy. But everyone knew it.
 
-“Um, well, orders change?” the copilot said trying to gather his response. He looked at his captain, who was offering him no help. “Our flight plan is to proceed to the surface where your squad are to disembark. I could pull it up.”
+“Um, well, orders change?” the copilot said, trying to gather his response. He looked at his captain, who was offering him no help. “Our flight plan is to proceed to the surface where your squad is to disembark. I could pull it up.”
 
 In his earpiece he could hear the _Tydirium_ finally get clearance to proceed through the energy shield.
 
@@ -74,7 +74,7 @@ The lieutenant sighed, and with a hint of irritation, said "We're headed down to
 
 The shuttle sat toward the edge of the vast Imperial landing platform at the Endor base. It had just touched down moments ago. The engines were still winding down when the lieutenant decided to head out to wherever he was going.
 
-The troopers watched him head toward the edge of the landing platform. His was a snappy, purposeful stride of the officer class, albeit somewhat awkardly, as if his limbs were a bit too long and he wasn't used to operating them. His uniform seemed to be made for someone of more average proportions and then draped onto him. He made it to the edge before he stopped, looked around a bit and finally motioned a ground crewman over to him. He gesticulated broadly at the crewman. He seemed to be yelling at him. The crewman motioned in the direction of a ladder over the edge to a vertiginous climb several stories down from the landing platform.
+The troopers watched him head toward the edge of the landing platform. His was a snappy, purposeful stride of the officer class, albeit somewhat awkwardly, as if his limbs were a bit too long and he wasn't used to operating them. His uniform seemed to be made for someone of more average proportions and then draped onto him. He made it to the edge before he stopped, looked around a bit and finally motioned a ground crewman over to him. He gesticulated broadly at the crewman. He seemed to be yelling at him. The crewman motioned in the direction of a ladder over the edge to a vertiginous climb several stories down from the landing platform.
 
 Once the lieutenant was out of sight, the crewman turned to another, said something, and the two began laughing.
 
@@ -108,7 +108,7 @@ He looked at his assembled squad. They looked like any other group he'd led. He'
 
 “Sir, I’m not able to answer that, sir!”
 
-The General’s eyes traveled up and down the line of assembled troopers. Their armor gleamed in the sunlight. Not only was it new, but the troopers had spent endless hours polishing it in training. His eyes lit on the squad leader a stocky, bullet-shaped man. His armor, gleaming but  betraying his years of service -- strained to contain the sinewy bulk beneath -- like one-and-a-half men next to young troopers who made up the squad. 
+The General’s eyes traveled up and down the line of assembled troopers. Their armor gleamed in the sunlight. Not only was it new, but the troopers had spent endless hours polishing it in training. His eyes landed on the squad leader, a stocky, bullet-shaped man. His armor, gleaming but  betraying his years of service -- strained to contain the sinewy bulk beneath -- like one-and-a-half men next to young troopers who made up the squad. 
 
 “A fresh squad I see.”
 
@@ -144,13 +144,13 @@ The lieutenant looked ashen and finally held out his hand. The squad leader took
 
 He stepped back in line.
 
-If that news was meant to be encouraging, it didn’t last long. The lieutenant became increasingly agitated as he flipped through the dozen or so pages. Then he paused to be think for several minutes. Finally, he turned to the squad.
+If that news was meant to be encouraging, it didn’t last long. The lieutenant became increasingly agitated as he flipped through the dozen or so pages. Then he paused to think for several minutes. Finally, he turned to the squad.
 
 “Squad leader, we are to proceed at bearing 157.23 for 12 kilometers and engage in a grid search pattern. We are to surveil a band of Rebels planning sabotage and terrorism of this facility and its crew. We are to track and report their position. We are to avoid contact at all costs. If we are seen by Rebels we are not to engage. Prepare your squad. We leave in one hour.”
 
 His delivery had sounded less than enthusiastic to the squad leader. Especially about the “we are not to engage” part.” But an order had been given.
 
-Shortly after, someone from the quartermaster’s office arrived with equipment for the mission. Among it was a long-range commlink for contacting the Imperial base. Their standard commlinks, made for intrasquad communications, had too short a range. Also included were portable trackers that could detect nearby life forms and the other troopers’ personal transponders. Knowing where the Rebels are, as well as one’s own squad, would be useful for such a stealthy mission.
+Shortly after, someone from the quartermaster’s office arrived with equipment for the mission. Among them was a long-range commlink for contacting the Imperial base. Their standard commlinks, made for intrasquad communications, had too short a range. Also included were portable trackers that could detect nearby life forms and the other troopers’ personal transponders. Knowing where the Rebels are, as well as one’s own squad, would be useful for such a stealthy mission.
 
 Also included was camping equipment and food rations for at least two weeks. Unusually, grenades, mines or other explosives were not included. Not even small demolition charges. But the quartermaster did have a gift of sorts.
 
@@ -160,7 +160,7 @@ Also included was camping equipment and food rations for at least two weeks. Unu
 
 The quartermaster also had something for the lieutenant: a set of stormtrooper armor. The officer gave it a once over and demurred. His face was red. “Get me an officer’s field uniform.”
 
-“My orders were to provide you with armor,” the quartermaster said flipping through papers on a clipboard. “No rank insignia visible. Yeah, those Rebels go straight for the officers these days.”
+“My orders were to provide you with armor,” the quartermaster said, flipping through papers on a clipboard. “No rank insignia visible. Yeah, those Rebels go straight for the officers these days.”
 
 The lieutenant pulled him aside and in a low whisper said “I need an officer’s uniform. I’m an officer. I’m not going to go on patrol dressed like,” he paused, and said incredulously “… a stormtrooper.”
 
@@ -170,7 +170,7 @@ The lieutenant pulled him aside and in a low whisper said “I need an officer�
 
 With the lieutenant gone, the squad took the opportunity to prepare for their patrol. The equipment made an impressive pile on the landing platform. Within a half hour it was carefully packed and stowed, ready for the mission that awaited.
 
-By then, the lieutenant had returned wearing a decided scowl. The squad stood at attention, as the quartermaster, who was clearly reaching the end of his patience, helped the lieutenant on with his armor. The lieutenant’s unfamiliarity with it and his lack of cooperation dragged the process out. The boots were particularly difficult. As the lieutenant struggled, squad leader carefully studied every contour and crevice of the armor, looking for some mark or tell. He didn’t want to mistake him for one of his troopers.
+By then, the lieutenant had returned wearing a decided scowl. The squad stood at attention, as the quartermaster, who was clearly reaching the end of his patience, helped the lieutenant on with his armor. The lieutenant’s unfamiliarity with it and his lack of cooperation dragged the process out. The boots were particularly difficult. As the lieutenant struggled, the squad leader carefully studied every contour and crevice of the armor, looking for some mark or tell. He didn’t want to mistake him for one of his troopers.
 
 When the lieutenant finally finished, the squad’s scheduled departure time had long passed. Holding his helmet under his arm and looking uncomfortable, the lieutenant gave the order, “Move out,” adding a sigh. On the order, the troopers shouldered their packs with a heave — they were easily 20 kilograms each. In a crisp line, the squad headed to the elevator. They got just a glimpse of the bustle of activity at the Imperial base before they passed out the rear blast doors.
 
@@ -198,7 +198,7 @@ The troop stood proudly at attention, just outside the doors, ready to head into
 
 "Sir, I serve the Emperor regardless of my color, sir!" the trooper answered unprompted.
 
-The squad leader let the protocol slight go. He decided to keep an eye on this FD-472. *His fervor could be infectious. Or get troopers killed*. He turned back to the full group.
+The squad leader let the slight to protocol slight. He decided to keep an eye on this FD-472. *His fervor could be infectious. Or get troopers killed*. He turned back to the full group.
 
 “We are to be the eyes and ears of the Emperor, and if fortune favors us, his swift and deadly hand. Are you ready stormtroopers!”
 
@@ -210,7 +210,7 @@ His troopers were ready, indeed. He didn’t need to see their faces to know. He
 
 <p>&nbsp;</p>
 
-**The trip through** the forest moon proved far more arduous then it had first seemed.
+**The trip through** the forest moon proved far more arduous than it had first seemed.
 
 As promised, the scanner mapped the terrain and surroundings with uncanny accuracy. This was a big help in unfamiliar territory, the squad leader found. And this was as unfamiliar as any he’d experienced. Even with the maps, the terrain was rough, littered with fallen logs and tree limbs. Giant ferns and other plants provided obstacles at every turn. Even a boulder had to be traversed now and then.
 
@@ -238,7 +238,7 @@ Despite the pauses, the troop continued to make swift progress through the green
 
 "Enough," the squad leader said. "We have a mission."
 
-As the day lingered on, the squad’s path took them farther and farther away from the Imperial base. The landing platform towering over the trees had disappeared from view hours ago. The thump of the AT-ATs walking around had faded. After awhile, the hum of the shield generator and the roar of shuttles taking off, all signs of the Empire’s might, was lost. Only sounds of the forest, birds, insects, the wind and rustle of branches and the crunching of their footsteps could be heard.
+As the day lingered on, the squad’s path took them farther and farther away from the Imperial base. The landing platform towering over the trees had disappeared from view hours ago. The thump of the AT-ATs walking around had faded. After a while, the hum of the shield generator and the roar of shuttles taking off, all signs of the Empire’s might, was lost. Only sounds of the forest, birds, insects, the wind and rustle of branches and the crunching of their footsteps could be heard.
 
 The six troopers and their lieutenant were but tiny white dots among the vast greenery, in perfect formation, heading deeper and deeper into the woods.
 
@@ -252,13 +252,13 @@ He seemed to just not care sometimes. The squad’s progress report to base was 
 
 The squad leader had a different issue. He wondered what the reaction might be if he queried the lieutenant. Many officers he’d served with could be harsh to those who displeased them. But they’d all been terse disciplinarians. This one seemed – he paused to think for a second – bored? No, disengaged.
 
-“Halt” the lieutenant finally signaled to the rest the squad. Far ahead, trooper FD-472 still out on point, signaled halt to the squad and slipped behind a large fern. The squad leader, taking cover behind logs, plants and a large tree, quickly worked his way to the lieutenant’s position. Unlike the rest of the squad under cover, he was standing in the open. 
+“Halt” the lieutenant finally signaled to the rest of the squad. Far ahead, trooper FD-472 still out on point, signaled halt to the squad and slipped behind a large fern. The squad leader, taking cover behind logs, plants and a large tree, quickly worked his way to the lieutenant’s position. Unlike the rest of the squad under cover, he was standing in the open. 
 
 “Sir, permission to call in our progress report, sir.”
 
 The lieutenant didn’t answer. Instead, his vision seemed fixed on something in the distance, up in the trees. The squad leader turned his head toward whatever the lieutenant had fixated upon. A few seconds passed before he even saw it. It was high up in the canopy in a tangle of branches, more than 200 meters distant. A shapeless, fuzzy dot. At first it looked like a nest or possibly just a tangle of sticks and needles from the tree. Then it slightly shifted its position. Or maybe it was just the breeze.
 
-“Sir?” the squad leader asked, not really knowing what he was querying. Perhaps the lieutenant had seen a Rebel scout. the squad leader reached back to his pack to grab his electrobinoculars to get a better look. Turned out he wouldn’t need them.
+“Sir?” the squad leader asked, not really knowing what he was querying. Perhaps the lieutenant had seen a Rebel scout. The squad leader reached back to his pack to grab his electrobinoculars to get a better look. Turned out he wouldn’t need them.
 
 In one swift move the lieutenant raised his blaster rifle and fired past the squad leader’s head at the spot in the distance. The branches exploded in a shower of sparks and smoke. He waited a second to see if anything fell. Then he fired again. The squad leader was able to regain his bearing and reacted. He grabbed the lieutenant’s rifle and wrestled the muzzle toward the ground.
 
@@ -268,7 +268,7 @@ Their faces were inches apart -- helmet to nose. The squad leader stared into th
 
 Before the squad leader could begin to contemplate his insubordination, he could feel the lieutenant wrestling the gun upward, perhaps to shoot him too. The squad leader could easily overpower the man, but hesitated. The lieutenant kept his eyes locked. 
 
-“Sir,” the squad leader said keeping his grip on the blaster muzzle. Heat. Burning heat. Right through his gloves. “Sir!” As his words cut through the melee, he could feel the lieutenant wilt slightly. “Please sir, the mission,” he said plaintively, yet firmly.
+“Sir,” the squad leader said, keeping his grip on the blaster muzzle. Heat. Burning heat. Right through his gloves. “Sir!” As his words cut through the melee, he could feel the lieutenant wilt slightly. “Please sir, the mission,” he said plaintively, yet firmly.
 
 The two gripped the blaster, at an impasse. A passing cloud blotted the sun, and the lieutenant's eyes seemed to cloud into darkness as well. 
 
@@ -292,11 +292,11 @@ Caution from what, he was unsure. But he felt he needed to say it.
 
 **Darkness was falling** over the forest moon and the temperature dropped along with it. The squad had gathered in a small clearing to set up camp. Though one would hardly recognize it as a camp.
 
-This was a stealth mission, and the squad leader made sure all protocols were strictly followed. A Rebel could look right at their camp and never see it, so carefully was it set up. The team carried a thermal unit, but its heat signature was too easily spotted on the Rebels’ electrobinoculars. The squad leader could tell his troopers were disappointed when he’d ordered it stowed. Cold food rations and uncomfortably frigid nights were going to be the norm for awhile. He also ordered the troopers to keep chatter to necessity only, and then at a mere whisper. He busied them with cleaning their armor.
+This was a stealth mission, and the squad leader made sure all protocols were strictly followed. The team carried a thermal unit, but its heat signature was too easily spotted on the Rebels’ electrobinoculars. Cold food rations and uncomfortably frigid nights were going to be the norm for a while. He busied the squad with cleaning their armor.
 
 This was going to be a tough mission, the squad leader could tell. He preferred a straight fight to all this sneaking around. The sleeping rough, the unfamiliar terrain, the stealth — these were all somehow much more daunting. It required a kind of discipline that his troops were trained, but not practiced, in.
 
-He sat in the dark. As always, he was thinking about the mission. Had he made any errors that might give them away to the enemy? What's their next move? The next hour, The next day. But he was having trouble with focus. His mind returned again and again to the incident with the lieutenant. Grabbing an officer's blaster ... His hand still felt the burns from the muzzle.
+He sat in the dwindling light. As always, he was thinking about the mission. Had he made any errors that might give them away to the enemy? What's their next move? The next hour, The next day. But he was having trouble with focus. His mind returned again and again to the incident with the lieutenant. Grabbing an officer's blaster ... His hand still felt the burns from the muzzle.
 
 But he did it knowing the consequences of rash acts by anyone in the squad -- even a lieutenant -- firing without discipline. He’d learned that lesson years ago while trying to recover some missing droids. He saw an eager young squad leader order fire on a pair of homesteaders. They'd been petulant, sure. Even as he stood there, watching acrid smoke billowing from the homesteader's house, their burned skeletons near the doorway, he realized that the mission had failed. I was *the droids*. Deciding not to fire could be more important than knowing when to fire.
 
@@ -318,43 +318,71 @@ The lieutenant held up a bar that he was eating.
 
 “Sure.”
 
-The squad leader paused for what seemed like several seconds. He continued, a bit more hesitantly this time.
+The squad leader paused for what seemed like several seconds. Stepping forward, leaning toward the lieutenant, his voice low, but with a slight note of urgency to it. 
 
 "Sir, when you fired earlier today ... " He decided not to add "against orders" and simply added a quick "sir" on the end. 
 
 The lieutenant finally turned his eyes downward from the Death Star, staring ahead.
 
-"Sir, was it Rebels? Should we report, sir?"
+"Sir, was it Rebels? What was out there? Sir."
 
-"No," he replied. "It was just some ... some ... *thing*". The way he said the last word had a particular air of disdain. He turned his eyes skyward again. "This place," he added with contempt.
+The lieutenant fell silent for so long that the squad leader wasn't sure whether to walk away or wait. Finally the officer rose from his seat. He was clearly trying to be dramatic, but his skinny frame and unfamiliarity with Stormtrooper armor made the move drawn out and awkward. He loomed over the much shorter squad leader, whose physical bulk dominated the officer's slight build. The officer leaned in until his nose was almost touching the squad leader's helmet.
 
-The lieutenant fell silent for so long that the squad leader wasn't sure whether to walk away or wait. Finally the officer rose from his seat. He was clearly trying to be dramatic, but his skinny frame and unfamiliarity with Stormtrooper armor made the move drawn out and awkward. He loomed over the much shorter squad leader, but the leader's physical bulk dominated the officer slight build. The officer leaned in until his nose was almost touching the squad leader's helmet.
+In a stage whisper he said "These troopers, all this -- orders, rules, reports -- it's ... it's ..." He seemed to stop and then exploded at him. "We! Are! Dead! We are all DEAD!" The shorter trooper was impassive even as the lieutenant's face grew red and his body shook with rage.  
 
-In a stage whisper he said "These troopers, all this, it's ... it's ..." His tone shifted. As if he had a secret to share. "I need to you get me back to base." He stared into the empty black eyes of the squad leader's helmet looking for a sign. 
+"Sir, what do you wish me to do, sir?"
 
-The shorter trooper was impassive. His body was as rock solid immobile as the frozen visage of his helmet. *"Is he even breathing?"* the lieutenant thought as he struggled to hold his awkward position over the squad leader. The lieutenant became aware of the ambient noise of the forest around him. Some sort of insect was buzzing his head. Finally the squad leader broke the silence.
+The officer lunged forward and grabbed the larger trooper's helmet. He twisted it around until and shouted into the earpiece.
 
-“Sir, At mission completion, in accordance with our orders, sir. Is there anything else you require of me or the troops, sir.”
+"I need you to get me off this fucking moon, you useless piece of shit!" 
 
-"No," he replied, as he slumped a bit and settled back to his seat as awkwardly as he had arisen.
+He released the trooper's helmet with a shove, as if tossing aside a ball. The trooper stumbled back a step. After a short pause, he methodically, slowly ungripped his hand from his sidearm, and then reached up with one hand to grasp his helmet by the crown. Just as methodically he slowly rotated his helmet until the black eyes were staring at the Lieutenant. 
 
-"Sir, very good, sir," the squad leader replied briskly. "Sir, I'll return to our mission, sir." He began to walk away.
+"Fuck off. You're useless," the officer spat at him.
 
-“Wait," the lieutenant said, as if he was thinking. He seemed to change his mind. "Bring me the thermal device. It’s freezing.”
+The trooper remained statue-still. 
+
+"Very good, sir," he replied.
+
+The officer slumped a bit and settled back to his seat as awkwardly as he had arisen.
+
+“Wait," the lieutenant said, as if he was thinking. "Come here."
+
+His voice was disturbingly calm. "Something was in the tree. We are being followed. I ..." He paused for a second. "I need you at your best if we are going to get out of here." He seemed to be pleading. 
+
+"Sir, you need never question my loyalty."
+
+"It's not your loyalty." He sounded annoyed. "Regardless of what happens, I just need you to bring me back alive."
+
+"Sir, are those your orders, sir?" 
+
+Exasperated, the lieutenant shot back, "Yes, those are my orders. And bring me the thermal device. It’s fucking freezing.”
 
 “Sir, yes, sir.”
 
-As the squad leader walked away, he paused for a few moments out of the lieutenant's sight. Not that he would have noticed. The officer was still fixed on the Death Star. 
+He strode away and stopped after a few meters. He glanced back to the lieutenant. Then to the camp. He could see his troopers in the thick greenery. The lieutenant's white armor was stark against the backdrop even in the dwindling light. 
 
-The squad leader had learned long ago to follow his orders, but to not trust the officers who gave them. He had that feeling, that unease he sometimes got in his gut, right before the situation got really bad. He could sense something -- something he'd not felt since ... what was that planet again? Everything there was fine. A milk run. And then ...  
+He saw it. The lieutenant wasn't crazy. He was ... terrified. But of what? What had he seen? What did he know? 
 
-He glanced back the lieutenant. He was right about at least one thing: something was following them. He was now sure of it. He walked the short distance across the clearing to the Stormtroopers who had finished setting up camp and were awaiting fresh orders. 
+His mind shifted. He fixed his stare on the camp. He saw them as an enemy might see them. *Something was watching them.* He could feel it. 
 
-"Bed down for the night, he told the assembled group. "I don't want anyone lagging tomorrow." *Especially with FD-472 at point, walking everyone into the ground*, he thought. "When FD-472 and LW-312 return in" -- he looked at his chronometer -- "a few minutes, BR-682 and VS-552 you have second watch." 
+He walked the rest of the distance across the clearing to the Stormtroopers. They'd finished setting up camp and were at attention awaiting fresh orders. He stood before them. 
+
+"Don't fight to live. Fight to win." 
+
+"Sir, are those your orders, sir?" one trooper queried.
+
+"No, it's something someone told me once."
 
 "Sir, yes, sir, the troopers said in unison. 
 
-The squad leader paused, looked out into darkened woods and finally said almost as if talking to himself, "I'm going to go take a look around."
+"Well, it's bullshit." He paused.
+
+"Sir, yes, sir, the troopers said in unison. The squad leader paused for a few seconds. 
+
+"Bed down for the night, " he told the assembled group. "I don't want anyone lagging tomorrow." 
+
+The squad leader paused, looked out into darkening woods and finally said almost as if talking to himself, "I'm going to go take a look around."
 
 He turned and headed out. "And someone take a thermal heater to the lieutenant. He's cold," he said as disappeared into the woods.
 
@@ -374,7 +402,7 @@ He had tried out his tracker earlier. If something was out here, it would show o
 
 He considered turning back. Range and bearing showed that he wasn’t lost. But then, what was lost anyway? He was right here regardless of where he was supposed to be.
 
-Exhaustion had set in awhile ago and hung on him like a weight. Aside from a short nap on the shuttle ride in, he’d not slept in at least 20 hours. He willed himself awake.
+Exhaustion had set in a while ago and hung on him like a weight. Aside from a short nap on the shuttle ride in, he’d not slept in at least 20 hours. He willed himself awake.
 
 His patrol had revealed nothing of use. No signs of Rebels, no enemies of the Empire, no animals even. Massive lifeform readings that were just bugs and trees. Swarms of bugs that seemed drawn to his Stormtrooper armor. Around him the sounds of night — chirping, squawking, buzzing — filled the air. He puzzled that something so empty could also be so full.
 
@@ -388,7 +416,7 @@ He made his decision. He picked up his pace, stepping over logs and under a down
 
 **The young Stormtrooper** couldn’t sleep.
 
-But not for trying. He’d returned from first watch after the squad leader had disappeared into the woods. The leader's absence has been enough to pique interest. Squad leaders didn’t normally go on patrol. Or he thought so. His training certainly hadn't suggested it possible. But FD-472 wasn't troubled by it. If the squad leader wanted to take a patrol, he could. He would not question that and had simply gotten on with his orders.
+But not for trying. He’d returned from the first watch after the squad leader had disappeared into the woods. The leader's absence has been enough to pique interest. Squad leaders didn’t normally go on patrol. Or he thought so. His training certainly hadn't suggested it possible. But FD-472 wasn't troubled by it. If the squad leader wanted to take a patrol, he could. He would not question that and had simply gotten on with his orders.
 
 But not all that well, so far. *Get rest* was the order. But sleep would not come, orders or not. He was bone tired from the day’s patrol — enough that he should have slept no matter what. Conditions at the camp were harsh by most standards. Hard ground. Cold nibbling at him. Squawks and cries of unseen creatures penetrating the darkness. 
 
@@ -396,21 +424,23 @@ Odd. None of that should matter. His training allowed him to sleep on anything, 
 
 So he stared. Stared upward, his eyes fixed on the Death Star floating in the ethereal star field that arced above the treetops from edge to edge of the clearing. 
 
-He'd glanced it a dozen times during the day, but now he had a chance to study it. The station was a silent, dominating presence -- still, steely and unmoving, hanging in the sky in a blue-gray glow. Despite its placid face, blotched by partially completed superstructures, the station was the center of activity. Ships tending to its construction were like insects that had buzzed around him all day. They crisscrossed and circled the station, like a plague. He pictured its vast spaces equally bustling with officers and troopers. Perhaps Vader was there. Or the Emperor himself, looking down on them. To simply glimpse one of them in a corridor ... 
+He'd glanced at it a dozen times during the day, but now he had a chance to study it. The station was a silent, dominating presence -- still, steely and unmoving, hanging in the sky in a blue-gray glow. Despite its placid face, blotched by partially completed superstructures, the station was the center of activity. Ships tending to its construction were like insects that had buzzed around him all day. They crisscrossed and circled the station, like a plague. He pictured its vast spaces equally bustling with officers and troopers. Perhaps Vader was there. Or the Emperor himself, looking down on them. To simply glimpse one of them in a corridor ... 
 
-He knew its every curve and feature. Every auxiliary exhaust port and gun emplacement and landing bay from the toys and the books of his youth. He devoured every bit of news about it that came over the Imperial news feed. Its deployment at Alderaan, its destruction of the Rebel base at Yavin and the Emperor's decision to retire it and replace it with a newer, bigger Death Star. He'd re-enacted the victory at Alderaan and Yavin dozens of times with the toy. Sometime he sat and just started at it, awed by the children's trinket. And here he was -- wherever that is -- laying on his back staring up at the station that lit his childhood dreams, a glittering veil of stars spread out behind it.
+He knew its every curve and feature. Every auxiliary exhaust port and gun emplacement and landing bay from the toys and the books of his youth. He devoured every bit of news about it that came over the Imperial news feed. Its deployment at Alderaan, its destruction of the Rebel base at Yavin and the Emperor's decision to retire it and replace it with a newer, bigger Death Star. He'd re-enacted the victory at Alderaan and Yavin dozens of times with the toy. Sometimes he sat and just stared at it, awed by the children's trinket. And here he was -- wherever that is -- laying on his back staring up at the station that lit his childhood dreams, a glittering veil of stars spread out behind it.
 
 The Death Star of his young imagination was nothing like this. He had rarely even seen the stars. A pall of smoke and dust hung over his home planet like a pallid dome, closing off the sky. The tops of buildings would hide in the swirls of smog. His world had been an orange-brown haze -- a dull bubble with him at the center. 
 
 In training, the world opened up. The desert horizon stretched in every direction. They marched for days and never reached the end. Above him endless sky became even more endless sky at night. He’d wondered if he made the right decision, joining up. He could have remained on his home world and served the Empire in the mines or factories. But not after he’d seen those stars.
 
-He felt a sense of contentedness as he studied the Death Star and its starry backdrop. He imagined the station's SuperLaser staring out at all of the stars, every one a vast world. He sensed the entire Empire spread out before him in a single starry vista. Yet it paled next the power of the Death Star floating just out of reach. That was the true Empire — the Death Star. With it, the Emperor had the entire Universe to use for his will. 
+He felt a sense of contentment as he studied the Death Star and its starry backdrop. He imagined the station's SuperLaser staring out at all of the stars, every one a vast world. He sensed the entire Empire spread out before him in a single starry vista. Yet it paled next to the power of the Death Star floating. That was the true Empire — the Death Star. With it, the Emperor had the entire Universe to use for his will. 
 
 He had a sudden rush. His childhood dreams, his enlistment, months of training. It had all brought him here. The moment his feet touched the Imperial landing platform looming over this planet, he sensed something but couldn't really understand it. But now he could finally feel the full presence of the Empire -- in the soil under him, the tree, the rock, the stars, this mission, everywhere. The Empire was surrounding him, binding it all together. It was all one, everything he saw or touched. All Empire. The very stuff of the galaxy itself. 
 
 He and his squadmates were here to serve a purpose beyond anything he could imagine. The Empire -- the galaxy -- had sent him to do its will. He whispered his sworn oath. "I am a Stormtrooper, and my will is your will, and my will is to serve."  
 
-"Trooper Fedd" was still pondering the Death Star when he finally drifted off into sleep. He had been so enthralled with it that he didn't even notice the squad leader still hadn't returned.
+He would have his moment. He already saw it in his mind, as real as the battlestation above him. He could feel it. A Rebel in his sights. Leveling his blaster. His finger squeezing the trigger without hesitation. 
+
+"Trooper Fedd" was still pondering the Death Star when he finally drifted off into sleep. He had been so enthralled that he didn't even notice the squad leader still hadn't returned.
 
 <p>&nbsp;</p>
 
@@ -438,7 +468,7 @@ He saw nothing but an inky green darkness framed by the fronds of an oversized f
 
 The vision blurred for a second and then snapped into a sharp view. He strained his eyes again. He could just make out two small round shapes that seemed to be floating, less than a meter from the forest floor. What is it? Had he been seen? Was it even there at all? He considered firing, but “do not engage.” If it wasn’t a Rebel, he knew the report of his blaster shot would be heard for kilometers. His finger squeezed and then relaxed. He had to be sure.
 
-He stared more, as the enhance mode struggled to lock onto something, anything in the nighttime shadows. He was sure he could begin to make something out. But what was it? Was it moving? The shapes disappeared for a split second. He was trying to process what he was seeing. They floated like two glowing discs in the darkness. They vanished and reappeared again.
+He stared more, as the enhanced mode struggled to lock onto something, anything in the nighttime shadows. He was sure he could begin to make something out. But what was it? Was it moving? The shapes disappeared for a split second. He was trying to process what he was seeing. They floated like two glowing discs in the darkness. They vanished and reappeared again.
 
 Suddenly he realized what he was seeing. Eyes in the dark. Blinking.
 
@@ -498,7 +528,7 @@ Ever since he'd received their orders on the landing pad, he'd felt a growing de
 
 He sat down on a log to think about his position and how he might improve it. 
 
-He’d been a junior officer on the Death Star, fresh out of the training academy, when the Rebels broke out their terrorist leader right under the nose of the Dark Lord. He was was part of a crew sent all the way out to Dantooine to check out reports of a Rebel base. But he remembered talk among the junior officers: Strange orders were coming down. “These make no sense!” one officer raged. Only after, did they. The lieutenant had figured them out, pieced them together to discover a fact that he alone -- the only survivor to see the orders -- knew and dared not utter aloud: *They let them go*. It was the only explanation. Their escape was too easy. 
+He’d been a junior officer on the Death Star, fresh out of the training academy, when the Rebels broke out their terrorist leader right under the nose of the Dark Lord. He was part of a crew sent all the way out to Dantooine to check out reports of a Rebel base. But he remembered talk among the junior officers: Strange orders were coming down. “These make no sense!” one officer raged. Only after, did they. The lieutenant had figured them out, pieced them together to discover a fact that he alone -- the only survivor to see the orders -- knew and dared not utter aloud: *They let them go*. It was the only explanation. Their escape was too easy. 
 
 The TIE Fighter squadron commander was livid at his orders, at the humiliation of losing fighters and crews to a beat-up Corrilian freighter. Imperial Stormtroopers, known for their precision, not allowed to even aim at the fleeing Rebels! His only respite was that he did not have to witness it.
 
@@ -516,7 +546,7 @@ Across the clearing Trooper VS-552 was breaking down the camp. The sun had moved
 
 Another band of Rebels was on the move, this time against the Empire’s new weapon. It would be yet another repeat with a grander scale, bigger battles and higher stakes. But so much of it, including the fact that there was another Death Star, seemed in a way unimaginative. A retread.
 
-Why are we doing this all again? Had the mighty Empire run out of ideas? Now he found himself in the same position as those other commanders. His job wasn’t to stop the Rebels, to stare them in the eye and call them scum as his troopers extinguished them in a hail of blaster fire. Track them. Don’t engage even if spotted. What kind of orders were those?
+Why are we doing this all again? Had the mighty Empire run out of ideas, just repeating what worked before? Now he found himself in the same position as those other commanders. His job wasn’t to stop the Rebels, to stare them in the eye and call them scum as his troopers extinguished them in a hail of blaster fire. Track them. Don’t engage even if spotted. What kind of orders were those?
 
 He continued to stare at the Death Star, its awkward half-completed, one-eyed visage seemed to stare back. The station was ugly and corrupted. The more he looked at it, the more he hated it. As he stared, something else caught his eye. He noticed something in the treetops at the edge of the clearing. *It ... It ... It was that thing he saw the day before.* But it could not be. He was sure he'd hit it. But not sure enough to discount that it was the same creature.
 
@@ -558,7 +588,7 @@ When the sound finally began receding in the distance, the two troopers emerged.
 
 “Rebel scum,” LW-312 said contemptuously.
 
-“We need to report,” FD-472 said. He paused a pick off a leaf and brush off some dirt that had been become stuck to his armor.
+“We need to report,” FD-472 said. He paused to pick off a leaf and brush off some dirt that had become stuck to his armor.
 
 Their commlinks offered nothing but a squeal of feedback and static. The Rebels were jamming communications, turning the Empire’s technology against itself. Just the kind of chaos they liked to spread.
 
@@ -606,7 +636,7 @@ Safely under cover, FD-472 engaged his commlink. Still jammed. He switched to hi
 
 “We need to be on alert.” LW-312 said.
 
-The two troopers slipped through the underbrush from log to log as they silently approached the location. Both troopers tensed, their training taking over. Nothing was making sense about anything right now. But if the Rebels were going to spring their trap — their real trap not some easily detectable snare — it would likely be here.
+The two troopers slipped through the underbrush from log to log as they silently approached the location. Both troopers tensed, their training taking over. Nothing was making sense about anything right now. But if the Rebels were going to spring their trap — their real trap, not some easily detectable snare — it would likely be here.
 
 The homing signal was just ahead, coming from a depression in the forest floor. A thick overhang of ferns, branches and leaves gave it a domelike appearance, almost as if the cluster had been formed into a makeshift hut. Taking one last look for signs of danger, FD-472 slipped through the opening into it. LW-312, gun raised, alert to any danger, took cover to watch over the clearing.
 
@@ -650,7 +680,7 @@ That thing was out there.
 
 The trooper was overcome by sheer terror. Something primal had set in. It had swept over him and overwhelmed his training. That monster. He had to get away.
 
-The towering giants of this world looked down on the tiny white figure struggling his way through the underbrush, becoming tangled in bushes and vines, a thrashing panicked figure. He seemed to going nowhere. He was just heading deeper and deeper into the forest, away from whatever creature that was. He was so lost he could have been headed toward it.
+The towering giants of this world looked down on the tiny white figure struggling his way through the underbrush, becoming tangled in bushes and vines, a thrashing panicked figure. He seemed to be going nowhere. He was just heading deeper and deeper into the forest, away from whatever creature that was. He was so lost he could have been headed toward it.
 
 But even in the face of terror, a stormtrooper has limits. At last exhaustion overtook him and he collapsed into a heap. He could go no farther.
 
@@ -724,7 +754,7 @@ The transmission was badly garbled. He just could not be sure. Then another thou
 
 It was gone. He felt a wave of panic. He’d set it down when he … He’d made the commlink call … It should be right over there.
 
-He searched the clearing. He looked in the hut. He was really panicked now. How could he just lose his blaster? It was no longer leaning against the log. He was sure he’d left it there, for just a minute or two.
+He searched the clearing. He looked in the hut. He was really panicking now. How could he just lose his blaster? It was no longer leaning against the log. He was sure he’d left it there, for just a minute or two.
 
 He felt his gut clench. _Someone had to have taken it_.
 
@@ -742,7 +772,7 @@ It was more of those creatures. Those vile things. Their inexpressive faces, tho
 
 If the creatures were in league with the Rebels, they certainly were not acting like it. No one had been in to question him. No typical Rebel procedures. No threats. Nothing. No, this felt like something else. Exactly what, though …
 
-He had no idea exactly what the creatures even were. The pre-mission briefing had mentioned something of them them in passing. Troopers on patrol had seen creatures about a meter tall, covered in fur. The first reports were even laughed off as paranoid hallucinations. “You’ve been on this shithole planet too long. You’re seeing tiny Wookiees.” But a few days ago, one had wandered a bit too close the the shield generator facility. A barrage of fire by three squads of the Empire’s most elite stormtroopers failed to bring it down.
+He had no idea exactly what the creatures even were. The pre-mission briefing had mentioned something of them them in passing. Troopers on patrol had seen creatures about a meter tall, covered in fur. The first reports were even laughed off as paranoid hallucinations. “You’ve been on this shithole planet too long. You’re seeing tiny Wookiees.” But a few days ago, one had wandered a bit too close to the shield generator facility. A barrage of fire by three squads of the Empire’s most elite stormtroopers failed to bring it down.
 
 The Empire’s official assessment was that whatever the creatures were, they seemed to avoid any kind of contact. They were highly primitive and offered no signs of advanced intelligence. They were of course subject to the Empire, but not at all worth contacting, let alone conquering. The Empire was certainly correct on that count, the lieutenant thought. His contempt at being captured by such a useless foe only grew at the thought.
 
@@ -772,13 +802,13 @@ With no weapon, no squad mate, the only viable remaining part of the mission was
 
 Even if he made it back, he’d meet a rough fate. They’d failed to recover the squad leader. And they’d found but just as quickly lost the Rebels. He had no position to report. No status report to share. His status was failure.
 
-He looked down at his armor. He was filthy disheveled mess. The pure white surface was spattered with mud. He noticed a large black scuff across his chest plate. He panicked at this, rubbing and scraping at it vigorously. It was some kind of gummy substance, and rubbing it only made it worse.
+He looked down at his armor. He was a filthy disheveled mess. The pure white surface was spattered with mud. He noticed a large black scuff across his chest plate. He panicked at this, rubbing and scraping at it vigorously. It was some kind of gummy tree sap, and rubbing it only made it worse.
 
 The whole mission was a disaster, a shameful failure, a travesty. Pretty much everything pointed to him. He had failed the Empire – no – the Emperor himself. That thought made him ache. _To serve the Emperor and fail_. It weighed on every step as he drew closer and closer to base camp. All he could think about was his total failure.
 
 He was so consumed in this that he hadn’t even realized that he’d entered the clearing with the base camp. What was once a textbook example of Imperial order, a perfect base camp — the squad leader had made sure of that — was a scene of chaos. Packs ripped open, equipment tossed about. The lieutenant and squad members were nowhere to be seen. Failure became utter despair at the sight.
 
-Was it The Rebels? Or maybe there really was monster? These two seemed the most likely culprits. Rebels in the area, the trap, the dead squad leader – Rebels made a lot of sense. But the commlink message rang in his ears. A creature would be capable of all this – the missing troopers, the destroyed camp. But it didn’t really look like it. The destruction would be primal, gory. But his job wasn’t to decide. He needed to report.
+Was it The Rebels? Or maybe there really was a monster? These two seemed the most likely culprits. Rebels in the area, the trap, the dead squad leader – Rebels made a lot of sense. But the commlink message rang in his ears. A creature would be capable of all this – the missing troopers, the destroyed camp. But it didn’t really look like it. The destruction would be primal, gory. But his job wasn’t to decide. He needed to report.
 
 But first, he needed to sort out this mess.
 
@@ -808,7 +838,7 @@ He still had at least that much.
 
 By bouncing his weight on the pole, the lieutenant had managed to scoot the pole end right up to the edge of the box it was resting on. Just a bounce or two or three and he’d be free of at least that thing. He’d deal with the ropes next. And then deal with those things that had captured him. When he was back at the Imperial base he would lead a squad himself to see that they were eliminated.
 
-Any time he felt his will waiver, any time he doubted he’d work free, any time the pain just seemed too much, he would glance over at the body of his one-time squad leader field dressed like a side of nerf. Losing troopers under his command was normal for a lieutenant. But this? That was different. He wasn’t about to let himself end up like him. That alone got him thorough all the pain and exhaustion.
+Any time he felt his will waiver, any time he doubted he’d work free, any time the pain just seemed too much, he would glance over at the body of his one-time squad leader field dressed like a side of nerf. Losing troopers under his command was normal for a lieutenant. But this? That was different. He wasn’t about to let himself end up like him. That alone got him through all the pain and exhaustion.
 
 He heaved, and then heaved again. So close. He could feel the pole slipping off the box.
 
@@ -988,19 +1018,19 @@ His armor did its job, but pain exploded through his body with the impact. He bl
 
 He knew he was alive -- but ... His mind went blank as everything fell away.
 
-He rolled over onto his back. He noticed darkness set with dozens of twinkling lights in the fuzz around him. Orange end yellow spots shimmered far above him in the ether. He was floating, skyward into the vista of the sky. He was swimming weightless among the lights. He felt drawn to them. He reached up to touch them and sharp pain stabbed his shoulder and down his arm. The pain, the stars. They meant something ... he'd been hurt. It was like a scrap of information that he'd realized, but didn't know.
+He rolled over onto his back. He noticed darkness set with dozens of twinkling lights in the fuzz around him. Orange and yellow spots shimmered far above him in the ether. He was floating, skyward into the vista of the sky. He was swimming weightless among the lights. He felt drawn to them. He reached up to touch them and sharp pain stabbed his shoulder and down his arm. The pain, the stars. They meant something ... he'd been hurt. It was like a scrap of information that he'd realized, but didn't know.
 
 He had no idea where he was. How he’d gotten there. What those twinkling lights were. His thoughts were mere wisps of smoke. In the distance, from above, he heard – _was it_ – screaming? Yes, it was someone screaming for help. _That's strange. Someone should do something._ Above him he also heard a commotion – footsteps thumping on wood, chattering voices. It was getting louder. Then a thought crossed his mind: He was going to die.
 
-It seemed an odd thought. Hadn't he just -- fallen. A wave of dread swept him, but he wasn't sure why. Just fear, of something. Another thought flitted in. He was staring up into the treeptops. Up into the creatures’ village. _Yes, creatures! There were creatures!_ And he’d just fallen from ... from -- all the way up there. So far from up there. He was almost amused at the thought. 
+It seemed an odd thought. Hadn't he just -- fallen. A wave of dread swept him, but he wasn't sure why. Just fear of something. Another thought flitted in. He was staring up into the treeptops. Up into the creatures’ village. _Yes, creatures! There were creatures!_ And he’d just fallen from ... from -- all the way up there. So far from up there. He was almost amused at the thought. 
 
-The passage of time had stopped. Moments were flashing by thoughts arising and vanishing like the twinkling lights above him. He realized those starts were torches and fires, dots of light in the waving branches. And they were bigger. And suddenly bigger still. The creatures were on the move, somewhere above him, in the treetops. As the sound grew, it was all around him, rumbling as the footsteps grew ever louder and closer. 
+The passage of time had stopped. Moments were flashing by thoughts arising and vanishing like the twinkling lights above him. He realized those stars were torches and fires, dots of light in the waving branches. And they were bigger. And suddenly bigger still. The creatures were on the move, somewhere above him, in the treetops. As the sound grew, it was all around him, rumbling as the footsteps grew ever louder and closer. 
 
 They were coming, he finally realized. He wasn't exactly sure why, but it meant ... it meant ... It meant he had to go. Away from them. _Now_. He sat upright in the pile of branches and leaves and felt the world spin momentarily. Movement sent a wave of pain through him. He let out a groan and then a scream. So much pain from so many sources that he couldn't even tell what and where at first.
 
 He pulled himself up onto his feet. Sharp stabs in his chest made breathing difficult. He was unable to rest his weight on his right leg at first. His right arm was numb and throbbing. He took a step, just to see if he could. And then another. Instinctively he knew he had to get moving -- for some reason. 
 
-A mission. *Yes. I have a mission to complete*. If he could somehow get back up the stairs again, he could somehow complete his mission. He had to get back. Up those stairs. He remembered running up them. He balanced, felt himself toppling, righted himself and stepped forward, limping, wobbling. But with each step he ignored the pain and became more sure-footed. 
+A mission. *Yes. I have a mission to complete*. If he could somehow get back up the stairs again, he could somehow complete his mission. He had to get back. Up those stairs. He remembered running up to them. He balanced, felt himself toppling, righted himself and stepped forward, limping, wobbling. But with each step he ignored the pain and became more sure-footed. 
 
 His fall should have ended everything. But somehow he was here to carry on. Or did he live just to survive? He felt an urge. These … these – _creatures_. He had to get away. No. He wasn’t afraid to die. He was trained to die in battle. _Not like this_. It was shouting in his head. He could hear them coming.
 
@@ -1014,7 +1044,7 @@ The creatures were undaunted, advancing empty-handed at the trooper. At this mom
 
 The trooper quickly hobbled off in another direction – the one with the fewest creatures. Step, pain. Step, pain. Step, pain. He bore down against it and took on a full run. Even in his injured state, he was faster than the stubby-legged animals. Stumble. He felt his knee give way. He recovered. Step, pain. Step, pain. Soon he heard the creatures chattering and laughing as a mass of them tore through the underbrush after him. He had to get back to his lieutenant. _His orders._ But nothing remained here but death. And his helmet.
 
-So his path took him away from the torchlights and the stairs and into the dark of the forest. Onward he ran. No idea where, just farther from the village. He gave not a thought to turning back -- to his mission. Just fear that the creatures bewhind him would engulf him. 
+So his path took him away from the torchlights and the stairs and into the dark of the forest. Onward he ran. No idea where, just farther from the village. He gave not a thought to turning back -- to his mission. Just fear that the creatures behind him would engulf him. 
 
 He wasn't watching where he was headed. In the darkness, he felt his footing give way. Foot sliding. Balance. Falling. He tried to right himself, but his pain-wracked body simply wouldn't move fast enough. Slipping and stumbling down an embankment. Grabbed for anything. It was no use. He slid downward in greasy mud.
 
@@ -1026,7 +1056,7 @@ He barely had time to mutter a curse as he tumbled over the edge.
 
 This was partly to hide, but was mostly because he had found himself embedded in a mire. He could feel the mud oozing about him and the water began to seep into the spaces in his armor. He was breathing so hard that he was sure they could hear him over the sounds of the forest.
 
-His feet and hands sunk in far enough that he was almost unable to move in the soupy glop. Water and muck spattered over him from above. He looked up to see an outlet pipe right over him. The smell around him was putrid decay, a combination of swampy muck and rotting food and sewage. He felt himself wretch. He had stumbled into the place they dumped their garbage, and – other stuff, he guessed. 
+His feet and hands sunk in far enough that he was almost unable to move in the soupy glop. Water and muck spattered over him from above. He looked up to see an outlet pipe right over him. The smell around him was putrid decay, a combination of swampy muck and rotting food and sewage. He felt himself retch. He had stumbled into the place they dumped their garbage, and – other stuff, he guessed. 
  
 At least they weren't chasing him. *For now*. If the creatures had any intelligence they'd easily deduce that he'd disappeared into their garbage dump. He could go back -- right into the thick of them. "*I'm not going to die in this swamp, laying here covered in shit.*" He had one choice. Onward. "You're not actually going into a swamp?" he thought to himself. *They'd be crazy to follow me, wouldn't they?* 
 
@@ -1034,15 +1064,15 @@ But who knew what was out there? Or even how big it was. He put it all out of hi
 
 *They found me!* 
 
-The panic hit. He felt it all come back in a rush. Helpless. The way the creatures hands clawed at him. Their raspy breath. Creature after creature flinging themselves at him. Unable to move. Wave after wave of panic. It came crashing onto him. He gasped for air.
+The panic hit. He felt it all come back in a rush. Helpless. The way the creatures’ hands clawed at him. Their raspy breath. Creature after creature flinging themselves at him. Unable to move. Wave after wave of panic. It came crashing onto him. He gasped for air.
 
-"No," he told himself, between breaths. "*You panic, you die.*" His instructors had taught him that much. He struggled to focus. He had to calm himself. Almost as if he had summoned to being, he saw the Death Star, a dull, blotchy, gray disc just above the trees ahead. He focused on that. Latched onto it. Head toward it. Just go. One more step. Panic gave way to purpose. *Stay focused*. 
+"No," he told himself, between breaths. "*You panic, you die.*" His instructors had taught him that much. He struggled to focus. He had to calm himself. Almost as if he had summoned it to being, he saw the Death Star, a dull, blotchy, gray disc just above the trees ahead. He focused on that. Latched onto it. *Head toward it. Just go. One more step.* Panic gave way to purpose. *Stay focused*. 
 
 All around he heard sudden bursts chattering. Ahead. Then to the left. He could hear the sounds of the creatures moving through the brush, rustling leaves and snapping twigs. He heard shouts in their growling, gutteral tones. Then to his right. Still more. They were giving orders, planning their moves, fanning out around him, flanking him. "*I'm surrounded*."
 
-He felt panic rise again. Did they know he was in here? Had they lost him? It didn’t really matter what they knew. They’d already closed in on him from all sides, trapping him. Again he focused on the Death Star in the sky. Head toward that, straight on -- and maybe solid ground. "*Solve one problem at a time*." Another lesson he recalled. He locked his eyes and continued to thrash ahead through the muck and filth in the direction of the battle station. He didn't know if it was leading him to safety. But it was leading him. Solid ground had to be ahead somewhere. He had to get there if he was to have any chance, even they were waiting. 
+He felt panic rise again. Did they know he was in here? Had they lost him? It didn’t really matter what they knew. They’d already closed in on him from all sides, trapping him. Again he focused on the Death Star in the sky. Head toward that, straight on -- and maybe solid ground. "*Solve one problem at a time*." Another lesson he recalled. He locked his eyes and continued to thrash ahead through the muck and filth in the direction of the battle station. He didn't know if it was leading him to safety. But it was leading him. Solid ground had to be ahead somewhere. He had to get there if he was to have any chance, even if they were waiting. 
 
-It was an arduous, horrifying path. He had to stop himself from wretching several times. His splashing about was noisy enough as it was. By now the slimy gunk was up to his knees. Every step was labor. Every step was pain. He managed to wrench a foot loose, step forward, only to have it sink into the mingling slop. He had to pull, grab his leg and hoist his other foot from the sucking mire. Step after step. Wallowing and pulling himself forward. He felt as if each step would be the one that would drag him down and in. The one to trap him. The one with no bottom. But still he moved onward.
+It was an arduous, horrifying path. He had to stop himself from retching several times. His splashing about was noisy enough as it was. By now the slimy gunk was up to his knees. Every step was labor. Every step was pain. He managed to wrench a foot loose, step forward, only to have it sink into the mingling slop. He had to pull, grab his leg and hoist his other foot from the sucking mire. Step after step. Wallowing and pulling himself forward. He felt as if each step would be the one that would drag him down and in. The one to trap him. The one with no bottom. But still he moved onward.
 
 Every time he felt as if this step might be his last, he was able to do one more step. "*One by one*," he thought. "*That will get us to the other side*." 
 
@@ -1060,11 +1090,11 @@ He weighed his options, looking out into the dark woods and then up the tree. It
 
 Climbing up was stupid, he knew. But he couldn’t head into the woods teeming with those creatures. Maybe hide instead. He would wait. Catch his breath. Think of his next move. Hope that they would not track him here. 
 
-He was a kinda short for a stormtrooper, but he could probably just reach that branch, even in his wrecked-body state. He leapt, and leapt and leapt and finally caught the branch. He swung up and looped over it with his feet. His arm, shoulders and chest seared with pain, and he groaned loudly. He realized his mistake, and hung awkardly from the branch listening for any sign they'd heard him. After what seemed like several painful minutes of silence with his weight hanging from his damaged limbs, he pulled himself up. Soon he was standing on it. He climbed the next branch, and the next, and the next, up and up. Away and away.
+He was a little short for a stormtrooper, but he could probably just reach that branch, even in his wrecked-body state. He leapt, and leapt and leapt and finally caught the branch. He swung up and looped over it with his feet. His arm, shoulders and chest seared with pain, and he groaned loudly. He realized his mistake, and hung awkwardly from the branch listening for any sign they'd heard him. After what seemed like several painful minutes of silence with his weight hanging from his damaged limbs, he pulled himself up. Soon he was standing on it. He climbed the next branch, and the next, and the next, up and up. Away and away.
 
-He straddled a branch, wet and dripping with muck. The smell was still overwhelming. The cold was biting. His quick asessment of his condition and predicament were not good. But at least he was out of that swamp. His vantage point gave him glimpses of what was unfolding below and around him, but not much. He could hear splashes as some of the creatures waded into the dump. They must have finally figured it out. Occasional laughs punctuated darkness. Those things kept up their capering even while wallowing in filth!
+He straddled a branch, wet and dripping with muck. The smell was still overwhelming. The cold was biting. His quick assessment of his condition and predicament were not good. But at least he was out of that swamp. His vantage point gave him glimpses of what was unfolding below and around him, but not much. He could hear splashes as some of the creatures waded into the dump. They must have finally figured it out. Occasional laughs punctuated darkness. Those things kept up their capering even while wallowing in filth!
 
-From his treetop hiding place, he could occasionally spot the creatures moving in and out of patches of light. Furry splotches in golden patches of illumination. That was all he could see with his own eyes. His helmet and its sensors was long gone. The spectral glimpses did show one fact: The swamp was slowing their progress. Their short legs and awkward movements left them struggling to move at times.
+From his treetop hiding place, he could occasionally spot the creatures moving in and out of patches of light. Furry splotches in golden patches of illumination. That was all he could see with his own eyes. His helmet and its sensors were long gone. The spectral glimpses did show one fact: The swamp was slowing their progress. Their short legs and awkward movements left them struggling to move at times.
 
 At least they were busy instead of right on his tail. He considered his next move.
 
@@ -1088,21 +1118,21 @@ Neither was he. Even if he escaped the creatures, he needed somewhere to go. Som
 
 He waited until all sounds of the creatures died away. He waited a little longer. Longer still. How long. Seemed like hours. He still had the cover of darkness and had to make his move soon. Finally, the trooper quickly and quietly slid down the tree, slowly and too noisily. Pain. All over. He landed back on the ground. He turned his eyes upward but was still unable to spot the battle station. 
 
-He squatted down and spied his surroundings. More pain. His legs, side. Just nightime, forest and darkness. Staying squatted, gritting his teeth, he moved as silently as possible from shadow to shadow, tree to tree. He paused and listened again. The hours of silence -- "*they had to have given up by now*". He wasn't relieved quite yet. His next goal -- a downed tree 100 meters distant. He took a deep breath and set off as stealthily as possible. A few steps. More pain. Breathing hurt. He's stopped even before he realized it was there. 
+He squatted down and spied his surroundings. More pain. His legs, side. Just nighttime, forest and darkness. Staying squatted, gritting his teeth, he moved as silently as possible from shadow to shadow, tree to tree. He paused and listened again. The hours of silence -- "*they had to have given up by now*". He wasn't relieved quite yet. His next goal -- a downed tree 100 meters distant. He took a deep breath and set off as stealthily as possible. A few steps. More pain. Breathing hurt. He stopped even before he realized it was there. 
 
-A creature pulled a rock from a bag, leveled a slingshot. Thwak. A hard blow to the chest. His breastplate cracked and threw shards. Gasping, falling back. Thwak. His head. First shock and the warmth as blood streamed down his forehead. He staggered. Fury was building.
+A creature pulled a rock from a bag, leveled a slingshot. *Thwak*. A hard blow to the chest. His breastplate cracked and threw off shards. Gasping, falling back. *Thwak*. His head. First shock and the warmth as blood streamed down his forehead. He staggered. Fury was building.
 
-A piece of the his armor. Right there. Grabbed. He brandished it like a knife and charged. It dropped its slingshot and flapped its arms in fear as it ran off. *An opening!*. Run. Away. Away from here.
+A piece of his armor. Right there. Grabbed. He brandished it like a knife and charged. It dropped its slingshot and flapped its arms in fear as it ran off. *An opening!*. Run. Away. Away from here.
 
 Behind him, the creature chattering. *Over there. Over there.* More creatures began chattering, then crashing through the underbrush. Behind him and on both sides. _They were everywhere_.
 
-Run. Step, step, step, the rythm of his feet on the forest litter. He could move no faster. The forest was sheer darkness dotted by small pools of light. Searching for movement – a presence, anything. Just forward. Plunging forward. Stumbling, running, stumbling. A creature was on him. Its weight stuck him and he stumbled. His right rear. Arms wrapped around his leg -- his bad leg. It chattered loudly – _I found him_. He heard others respond from the darkness. Soon they would swarm him, engulf him like before. Pawing, trapping. Hot smelly breath. He could sense it again. 
+Run. Step, step, step, the rhythm of his feet on the forest litter. He could move no faster. The forest was sheer darkness dotted by small pools of light. Searching for movement – a presence, anything. Just forward. Plunging forward. Stumbling, running, stumbling. A creature was on him. Its weight stuck him and he stumbled. His right rear. Arms wrapped around his leg -- his bad leg. It chattered loudly – _I found him_. He heard others respond from the darkness. Soon they would swarm him, engulf him like before. Pawing, trapping. Hot smelly breath. He could sense it again. 
 
 The creature was trying to wrap itself around him. Bring him down. Strong – so strong. It couldn’t get a good grasp. Its breathing – heavy, asthmatic, animalistic. Arms tight around him. He stabbed with the shard of armor. Nothing, nothing. Pain. His own leg. He pulled it out. The shard slipped in the blood of his hand. He saw the wound on his hand. Dropped the weapon and beat and pried at the creature. Finally unbuckled his leg armor, and the creature fell away. Run. Leave it. Creatures still behind him. They were getting closer.
 
-A few steps. A creature leapt from the darkness. The trooper reacted instinctively. Swinging and punching. His fists connected. It fell back and lunged again. He swung awkwardly, spasticly. Again, again again, enough to drive it back. He turned and ran. Away -- toward ... Not sure.
+A few steps. A creature leapt from the darkness. The trooper reacted instinctively. Swinging and punching. His fists connected. It fell back and lunged again. He swung awkwardly, spasticly. Again, again, again, enough to drive it back. He turned and ran. Away -- toward ... Not sure.
 
-Over downed trees, over rocks and past the timeless giants of this forested world he ran. The forest and its inky blackness was simply swallowing him. He’d never run so far and fast in his life. Not even in stormtrooper training. He drove past any physical limit. _Get away. They're coming. Get away._ All else had fallen away. A jolt. His arm. It was caught on abranch. He  wrenched the piece off and kept going. Even as the sound of the creatures behind him at long last died out, still he ran. 
+Over downed trees, over rocks and past the timeless giants of this forested world he ran. The forest and its inky blackness was simply swallowing him. He’d never run so far and fast in his life. Not even in stormtrooper training. He drove past any physical limit. _Get away. They're coming. Get away._ All else had fallen away. A jolt. His arm. It was caught on a branch. He  wrenched the piece off and kept going. Even as the sound of the creatures behind him at long last died out, still he ran. 
 
 They had to give up sometime. He wasn’t stopping until he was sure.
 
@@ -1110,37 +1140,37 @@ They had to give up sometime. He wasn’t stopping until he was sure.
 
 **Streaks of light** were at last showing. He could see bits of sky through the forest canopy turning from black to dark blue tinged with pink and orange. 
 
-The forest below was still as dark as night as the trooper slowly and painfully wandered on. He wasn't sure how long he'd been walking. Seemed like hours. He wasn't sure how long he'd run. He had no idea where he was, where he was even going, what direction. The sounds and chattering of the creatures had died out long ago. The woods was eerily silent, with only random insect clicking or buzzing every once in awhile to interrupt the crunch of his boots on the forest litter and the sound of his breathing.
+The forest below was still as dark as night as the trooper slowly and painfully wandered on. He wasn't sure how long he'd been walking. Seemed like hours. He wasn't sure how long he'd run. He had no idea where he was, where he was even going, what direction. The sounds and chattering of the creatures had died out long ago. The woods was eerily silent, with only random insects clicking or buzzing every once in a while to interrupt the crunch of his boots on the forest litter and the sound of his breathing.
 
-His equipment was gone. He had no maps. He had no bearings. He had to stay on the move. Stay ahead of them and get to the Endor Base and its safety. The base could be ahead, behind. But for now it was his only hope. The Death Star, which had been so omnipresent in the sky just hours ago was reluctant to show itself. As he walked, he repeatedly glanced upward though gaps in the canopy trying to catch a glimpse -- anything. 
+His equipment was gone. He had no maps. He had no bearings. He had to stay on the move. Stay ahead of them and get to the Endor Base and its safety. The base could be ahead, behind. But for now it was his only hope. The Death Star, which had been so omnipresent in the sky just hours ago was reluctant to show itself. As he walked, he repeatedly glanced upward through gaps in the canopy trying to catch a glimpse -- anything. 
 
 He was so distracted that he stumbled over a root on the forest floor and went face-down in a crashing pile. He lay there to absorb the pain. As he stoob back up, he heard it before he saw it. It sounded startled. Scared, almost.
 
-The creature was in front of him as if it had actually appeared there. The trooper had could have tripped over it instead. Both jumped back. The creature growled. The trooper studied it. He stared into its eyes, and it stared back. He discovered no kinship, no understanding, no mercy. He saw only the overwhelming indifference of nature. A blank stare that speaks only of a half-bored interest in food.
+The creature was in front of him as if it had actually appeared there. The trooper had could have tripped over it instead. Both jumped back. The creature growled. The trooper studied it. He stared into its eyes, and it stared back. He discovered no kinship, no understanding, no mercy. He saw only the overwhelming indifference. A blank stare that speaks only of a half-bored interest in food.
 
 The trooper lunged.
 
 The two tumbled together down a small hill, a wriggling bundle of stormtrooper white and the creature’s brown fur. The trooper ended up on top. The creature was beneath him, a squirming furry ball of muscle beating him with its tiny fists. The trooper pummeled it back, hitting its head and torso with multiple blows, but in his exhaustion and physical pain, was unable to overcome it.
 
-The trooper's intial panic coalesced into rage. _Why won’t they just leave me alone!_ He found the creature’s neck and he felt his hands close around it. He squeezed down as tightly as he could, the rage in him building. Its neck felt substantial, like a tree trunk. He could feel its tendons tense as he crushed down on its windpipe with both thumbs. Its pulse quickened – _fear_. It could be felt through even his heavy trooper gloves. The creature was pounding the trooper even harder, kicking desperately, squirming about under him, trying to wrestle itself free. Their eyes met again. The trooper stared into them, their empty blackness. He despised them. 
+The trooper's intial panic coalesced into rage. _Why won’t they just leave me alone!_ He found the creature’s neck and he felt his hands close around it. He squeezed down as tightly as he could, his rage building. Its neck felt substantial, like a tree trunk. He could feel its tendons tense as he crushed down on its windpipe with both thumbs. Its pulse quickened – _fear_. It could be felt through even his heavy trooper gloves. The creature was pounding the trooper even harder, kicking desperately, squirming about under him, trying to wrestle itself free. Their eyes met again. The trooper stared into them, their empty blackness. He despised them. 
 
 Minutes passed before the creature finally fell limp. One moment it was alive and the next it just felt dead in the trooper’s hands. He let go and the creature dropped to the forest floor. He saw it laying at his feet. Its blank eyes stared upward. _Those empty eyes._ He felt immediate revulsion – _rage_. He kicked the corpse and screamed. He tore at the remaining bits of his armor.
 
 He looked into the sky and screamed again. He could see a glimpse of the Death Star, lit up in the inky blue sky, through the treetops. The sight made him drop to his knees as he felt everything in him burst out.
 
-And then he heaerd a noise behind him and turned at the waist. He arose to his feet, his eyes locked on the sight behind him. A camp had been set up just a few feet away. A small animal-skin tent with a tiny campfire burned in front of it. A couple of packs lay nearby, as well as some baskets of what looked like dark fruit. 
+And then he heard a noise behind him and turned at the waist. He arose to his feet, his eyes locked on the sight behind him. A camp had been set up just a few feet away. A small animal-skin tent with a tiny campfire burned in front of it. A couple of packs lay nearby, as well as some baskets of what looked like dark fruit. 
 
-His eyes adjusted further. Next to the camp stood another one of creatures, one arm cradling a bundle of sticks. And two half-sized creatures -- juveniles, apparently -- were just behind it. The large creature was quaking, its eyes wide with fear. Soundlessly, the creature, its suacer eyes never blinking or breaking its stare at the trooper, reached out its one unbrudened hand, felt around and drew the two smaller creatures behind itself. He could hear its raspy, uneven breathing.
+His eyes adjusted further. Next to the camp stood another one of creatures, one arm cradling a bundle of sticks. And two half-sized creatures -- juveniles, apparently -- were just behind it. The large creature was quaking, its eyes wide with fear. Soundlessly, the creature, its saucer eyes never blinking or breaking its stare at the trooper, reached out its one unburdened hand, felt around and drew the two smaller creatures behind itself. He could hear its raspy, uneven breathing.
 
 The trooper stared back for a long pause. He backed away and raised his hands in supplication. "No, no. I'm sorry. I didn't know. I won't ... I won't ..." He stumbled over a log and went down, still apologizing. 
 
-The creature dropped its armload of sticks with a crash and ran toward its fallen comrade, a sorrowfull shriek piercing the quiet and dorwing out the trooper's entrieties. The creature buried its head into the other's crummpled body.
+The creature dropped its armload of sticks with a crash and ran toward its fallen comrade, a sorrowful shriek piercing the quiet and drowing out the trooper's entreaties. The creature buried its head into the other's crumpled body.
 
-The trooper was finally was back on his feet. "No, no, no. It's OK." he mumbled before turning to run into the woods.
+The trooper was finally back on his feet. "No, no, no. It's OK." he mumbled before turning to run into the woods.
 
 He heard nothing but the wail of the creature behind him. Soon it disappeared into the sounds of the forest and of his own breathing. Still he ran.
 
-Farther and farther into the darkening woods, lit only be the pale glow of the battlestation.
+Farther and farther into the darkening woods, lit only by the pale glow of the battlestation.
 
 <p>&nbsp;</p>
 
@@ -1174,7 +1204,7 @@ The general was looking irritated at the long explanation.
 
 "The point is they said they were not interested in it further.”
 
-“Neither am I," the gneral said. "Any of it. Deal with this yourself.”
+“Neither am I," the general said. "Any of it. Deal with this yourself.”
 
 “Sir?”
 
@@ -1204,6 +1234,3 @@ He pulled off the last few battered bits of his armor and tossed them aside into
 
 He watched it. He felt as if he were falling into it for a moment. It was actually kind of beautiful. He never really noticed things like that. Then he returned to his log and sat down. And felt the green swallow him. 
 
-<p>&nbsp;</p>
-
-**Author’s note** _You made it this far. Good on you. If you’d like to lose a few more minutes of your life that you will never get back, check out the <a href="/2019/12/supplemental-materials.html">supplemental materials</a>._
