@@ -22,7 +22,7 @@ I mention this not to judge my fellow humans (for a crime for which I am also gu
 
 I also mention this because it illustrates what the Apple Watch is not:  A compelling device.
 
-That sounds like a _"whoa, Nelly!"_ bombshell, as if to pronounce the Watch anything other than brilliant is to pronounce it terrible. Not so.
+That sounds like a _"whoa, Nelly!"_ bombshell, as if to pronounce the Watch anything other than brilliant is to pronounce it terrible. Not so.  
 
 I have had my Apple Watch for a little over six months. I [reviewed it][5] when it first came out, but I've felt the need to revisit my thoughts. Like so many tech reviews, much of my first take was based on testing and first impressions all while wrapped in a gossamer cloud of new-buyer excitement. But what is the device like when, as the [voiceover][6] on _The Real World_ used to say, things stop being polite and start getting real.
 

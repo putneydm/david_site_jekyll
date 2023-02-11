@@ -1,0 +1,19 @@
+I"�<p>I have a particular methodology that I use to write all my JavaScript.</p>
+
+<p>First, I decide to add some sort of gratuitous, showy, processor-hogging, performance sapping JavaScript animation to my site. Then I spend two weeks writing code that is a horrible disorganized mess that is about 90 percent functional but completely breaks every time I try to fix it.</p>
+
+<p>Then throw it out and rewrite it all in about three hours.</p>
+
+<p>Which brings me to the latest addition to this site. I’ve added a scroll progress meter to the top menu bar. I even consulted for several months with Pixar to make sure the animation was as polished as possible. <sup><a href="#footnote-progress-meter">1</a></sup></p>
+
+<p>Scroll up and down on this page and experience mindblowing scroll meter action! Now try it on your phone and watch the eye candy make your battery meter drop every time you scroll!</p>
+
+<p>It was also a good UI/UX exercise. I decided to put the progress meter in the menu bar so people can get a quick, convenient glance at how much story is still unread when they click the browser’s back button.</p>
+
+<p>I’ll probably spend some more time refactoring the code. Until then, it’s probably not a good idea to look at my source code. <a href="http://darkroom.shortlist.com/980/73729fcc49e5778022c2214858532c0e:2242abb88c22cf80e6ce3d4342cc012a/candle3.jpg">This is what happened</a> to the last guy who did.</p>
+
+<ol>
+  <li><span id="footnote-progress-meter"></span>This is not even remotely true.</li>
+</ol>
+
+:ET

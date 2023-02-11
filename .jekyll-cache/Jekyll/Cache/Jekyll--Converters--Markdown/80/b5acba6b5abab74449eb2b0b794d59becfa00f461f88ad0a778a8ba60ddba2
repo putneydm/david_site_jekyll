@@ -1,0 +1,89 @@
+I"�!<p>A couple weeks ago a UX designer Twitter friend <a href="http://ben-evans.com/benedictevans/2014/10/28/presentation-mobile-is-eating-the-world">tweeted</a> “Web peeps: Is there a particularly industry, segment, or niche that–generally speaking–has REALLY bad mobile web experiences?”</p>
+
+<p>I didn’t even have to have to think about it before replying: News sites. And it isn’t just that some news site have been slow to adopt responsive design or to redesign in general. Newly designed sites are terrible.</p>
+
+<p>And, in particular, they aren’t conducive to the way people use web sites today.</p>
+
+<p>A large swath of readers don’t go directly to news sites and enter through the front page. Twitter or Facebook, usually on some sort of mobile device, is many readers’ front page now.</p>
+
+<p>When I clicked through a link to a Baltimore Sun story, I was presented with this mess:</p>
+
+<figure class="blog-embed-image">
+<img class="half-width" src="http://davidputney.com/siteart/IMG_3050.jpg" />
+</figure>
+
+<p>I <a href="https://blog.kissmetrics.com/speed-is-a-killer/">worked</a> in newspapers for years, most recently for BostonGlobe.com. I sat in enough meetings with enough <a href="http://www.adweek.com/news/technology/news-sites-top-list-slowest-loading-web-pages-161619">stakeholders</a> (and any Globe project in particular has more stakeholders on a project than most startups have employees) that this page or any other news page doesn’t surprise me at all.</p>
+
+<p>Here’s a screenshot I took of the Globe’s groundbreaking responsive site during the Boston Marathon bombing trial.</p>
+
+<figure class="blog-embed-image">
+<img class="half-width" src="http://davidputney.com/siteart/IMG_3048.jpg" />
+</figure>
+
+<p>Someone at the Sun or the Globe’s digital business units could go through their dog’s breakfast of a UX and explain why each individual item is there. A good case can be made for each, no doubt – business interests, user surveys, clickthrough rates, etc.</p>
+
+<p>But it’s like watching a <a href="https://twitter.com/asymco/status/400297561124532224">Dr. Zasio</a> on <em>Hoarders</em> argue with a patient about why they don’t need 40 vacuum cleaners. Yes, they are all in working condition and sweeping floors <em>is</em> important, but can’t you take a step back, look at the big picture and see that this is bad?</p>
+
+<p>But it’s not one person responsible for the mess. It takes collective effort of an entire organization to achieve this. As they <a href="http://www.despair.com/meetings.html">say</a>, none of us is as dumb as all of us.</p>
+
+<p>Here are a couple screenshots of the Denver Post that I’ve annotated in yellow using non-technical language to explain the UX problems and perhaps add some clarity to why bad UX is a problem.</p>
+<figure class="blog-embed-image"><img class="full-width" src="http://davidputney.com/siteart/dp_image_two.jpg" /></figure>
+<figure class="blog-embed-image"><img class="full-width" src="http://davidputney.com/siteart/dp_image_one.jpg" /></figure>
+
+<p>There’s a high correlation between useless shit the newspaper feels <em>must</em> be on the page and complete reader disinterest.</p>
+
+<p>The UX problem goes beyond poor content presentation. I’ve collected in <a href="https://www.flickr.com/photos/21162212@N07/sets/72157651788983150">this gallery</a> some screenshots of UX shitshows I’ve encountered on news sites in the past few days. I didn’t really have to go looking for examples. I’ve linked to common problems.</p>
+
+<ul>
+  <li>CNN.com: Content pushed so far down the page that the reader is presented with a <a href="https://www.flickr.com/photos/21162212@N07/17094174709/">complete muddle</a>.</li>
+  <li>PilotOnline.com: Useless <a href="https://www.flickr.com/photos/21162212@N07/16660145333/">clutter</a> of tiny type, bright colors, boxes and junk.</li>
+  <li>Slate: Timing a <a href="https://www.flickr.com/photos/21162212@N07/16657925804/in/photostream/">paywall modal</a> to appear just as visitors are reading the first sentence.</li>
+  <li>LA Times: Cluttered <a href="https://www.flickr.com/photos/21162212@N07/17094176879/">messy</a> reading experiences and tortured text blocks.</li>
+  <li>The Hill: Modal <a href="https://www.flickr.com/photos/21162212@N07/17094178129/">ads</a> with the close box off the page.</li>
+  <li>LA Weekly: Modal <a href="https://www.flickr.com/photos/21162212@N07/17094177689/">newsletter</a> sign-up forms.</li>
+  <li>Washington Examiner: Visual <a href="https://www.flickr.com/photos/21162212@N07/17092840760/">assault</a> by horrifying Taboola images you can’t unsee.</li>
+  <li>The Verge: Needlessly overdesigned <a href="https://www.flickr.com/photos/21162212@N07/17092608748/">parallax shit</a> that fails on mobile.</li>
+  <li>Yahoo News: Demands that I download their <a href="https://www.flickr.com/photos/21162212@N07/17255657736/in/set-72157651788983150">app</a>.</li>
+</ul>
+
+<p>Put in design industry terms, none of this even remotely conforms to long-established UX <a href="http://www.nngroup.com/articles/ten-usability-heuristics/">best-practices</a>. Put in simpler terms, no reader could possibly like or want any of this.</p>
+
+<p>A junky reader experience is actively harmful to news orgs’ brands and reputations, even if the line between messy UX and outright broken is hard quantify.</p>
+
+<p>Mobile is eating the world, in the words of analyst <a href="http://ben-evans.com/benedictevans/2014/10/28/presentation-mobile-is-eating-the-world">Benedict Evans</a>. Most news site hits come from mobile devices these days, and a sizable subset of those come from Twitter and Facebook on these devices.</p>
+
+<p>In this context, news sites aren’t the grand journalistic banquets they fancy themselves to be. They are something akin to the impulse aisle at the supermarket. Snap decisions are easy make and just as easy to abandon.</p>
+
+<p>Half of mobile users <a href="https://blog.kissmetrics.com/speed-is-a-killer/">give up</a> on a page that takes more than 3 seconds to load, according to Google research. News sites’ load times are some of the <a href="http://www.adweek.com/news/technology/news-sites-top-list-slowest-loading-web-pages-161619">slowest</a> on the internet, Adweek found.</p>
+
+<p>When readers finally do see a loaded page, was it worth the wait? Or do the paywall modals, interstitial ads, app store teases and generally terrible UX send them away disappointed?</p>
+
+<p>News organizations allow this UX horror show because, like me on a first date, they are covered in the <a href="https://twitter.com/asymco/status/400297561124532224">flop sweat</a> of desperation and failure. And, like me on that date telling a lengthy story about how I finally got my rash to clear up, news orgs know what they are doing is a mistake but still can’t stop themselves.</p>
+
+<p>The primary metric of news sites is hits. Other metrics such as bounce rates – how many people come to a page and then leave – and time on site – how long people stay on a page – don’t really tell the full story. Did readers just skim the story quickly and leave? Or did they get frustrated and close it in disgust?</p>
+
+<p>Either way, the site got the click. And that’s how news sites set ad rates, earn revenue and measure their popularity, reach and reader interest in stories.</p>
+
+<p>Success as a business gives freedom to make decisions that benefit readers, but the entire industry is in a death spiral and gaining speed. News org’s own interests will come before readers’ for the foreseeable future.</p>
+
+<p>Where will it end? I’ve often joked that the end game of news site advertising strategy is an ad that takes over the entire screen that can only be closed by clicking a Facebook “like” button.</p>
+
+<p>Although, I never told this joke to the advertising department. It just might give them an idea.</p>
+
+<p> </p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>**Related</td>
+      <td>** <a href="http://www.davidputney.com/2015/01/i-fled-the-news-today-oh-boy.html">The news business is in a death spiral</a></td>
+      <td><a href="http://www.davidputney.com/2015/01/i-fled-the-news-today-oh-boy.html">Why I am leaving the news business</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p> </p>
+
+<p><strong>D’oh!</strong> <em>An earlier version of this attributed “Mobile is eating the world” to the wrong guy. It’s <a href="http://ben-evans.com/">Benedict Evans</a>, not <a href="http://www.asymco.com/">Horace Dediu</a>. The responsible parties have been sacked. Thanks, <a href="https://twitter.com/charlesarthur">@charlesarthur</a> for letting me know.</em></p>
+
+:ET

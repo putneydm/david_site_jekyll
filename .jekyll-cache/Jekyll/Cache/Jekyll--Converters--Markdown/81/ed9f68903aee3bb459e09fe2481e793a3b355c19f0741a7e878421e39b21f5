@@ -1,0 +1,119 @@
+I"�6<p>I find myself drawn to clever solutions for common problems.</p>
+
+<p>One recent design I built called for side-by-side buttons. The user could click a button, which would maximize while other the choices would minimize. One solution would be declare CSS styles – <code class="language-plaintext highlighter-rouge">btn -- default</code> and <code class="language-plaintext highlighter-rouge">btn -- active</code> – and then toggle states on click using JavaScript or jQuery.</p>
+
+<p>Even though the controls were buttons <em>visually</em>, functionally they behaved like <a href="http://www.w3schools.com/html/html_forms.asp">radio buttons</a>, something devs already have in their HTML toolbox.</p>
+
+<p>Styling forms can be tricky, but it is possible to apply a little CSS <a href="http://giphy.com/gifs/harry-potter-james-NxLWZYEM4l5ug">sorcery</a> to style radio buttons like any other element. The buttons themselves are hidden and the styles are applied to clickable labels.</p>
+
+<p>Not only does this allow design freedom, presentation stays in the CSS and more <a href="http://www.amazon.com/Designing-Web-Standards-Jeffrey-Zeldman/dp/0321385551/">semantic markup</a> is possible – a big deal for those who depend on <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">screen readers</a>. Strip away the CSS and any JS, and the functions of the buttons would be entirely unchanged.</p>
+
+<p>Here’s the basic markup for two side-by-side buttons. The <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> allows button text to be targeted. But any markup would work.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"btn-one"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"one"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"btn-one"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span&gt;</span>Label text<span class="nt">&lt;/span&gt;</span>
+     <span class="nt">&lt;/label&gt;</span>
+
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"btn-two"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"two"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"btn-two"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span&gt;</span>label text<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/label&gt;</span></code></pre></figure>
+
+<p>The first step is to hide the radio button itself. Don’t use <code class="language-plaintext highlighter-rouge">display:none</code> or <code class="language-plaintext highlighter-rouge">aria-hidden</code> because the buttons need to remain accessible:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s1">"radio"</span><span class="o">]</span> <span class="p">{</span>
+         <span class="nl">border</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+         <span class="nl">clip</span><span class="p">:</span> <span class="n">rect</span><span class="p">(</span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span><span class="p">);</span>
+         <span class="nl">height</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span> <span class="nl">margin</span><span class="p">:</span> <span class="m">-1px</span><span class="p">;</span>
+         <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+         <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+         <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+         <span class="nl">width</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>Next, style the label to look like a button. Use <code class="language-plaintext highlighter-rouge">+</code> to target the first <code class="language-plaintext highlighter-rouge">&lt;label&gt;</code> after the radio.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s1">"radio"</span><span class="o">]</span> <span class="o">+</span> <span class="nt">label</span> <span class="p">{</span>
+         <span class="nl">width</span><span class="p">:</span><span class="m">5rem</span><span class="p">;</span>
+         <span class="nl">height</span><span class="p">:</span><span class="m">5rem</span><span class="p">;</span>
+         <span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span>
+         <span class="nl">margin</span><span class="p">:</span><span class="m">0</span> <span class="m">.125rem</span><span class="p">;</span>
+         <span class="nl">padding</span><span class="p">:</span><span class="m">2rem</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+         <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+         <span class="nl">font-size</span><span class="p">:</span><span class="m">1rem</span><span class="p">;</span>
+         <span class="nl">border-radius</span><span class="p">:</span><span class="m">50%</span><span class="p">;</span>
+         <span class="nl">background-color</span><span class="p">:</span><span class="no">red</span><span class="p">;</span>
+         <span class="nl">transform</span><span class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">.8</span><span class="p">);</span>
+         <span class="nl">transition</span><span class="p">:</span><span class="n">transform</span> <span class="m">.3s</span> <span class="n">cubic-bezier</span><span class="p">(</span><span class="m">.94</span><span class="p">,</span><span class="m">-0.66</span><span class="p">,</span><span class="m">.33</span><span class="p">,</span><span class="m">2.56</span><span class="p">)</span> <span class="m">.1s</span><span class="p">;</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>This creates a default button. The next step is the active state using <code class="language-plaintext highlighter-rouge">:checked</code>.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s1">"radio"</span><span class="o">]</span><span class="nd">:checked</span> <span class="o">+</span> <span class="nt">label</span> <span class="p">{</span>
+         <span class="nl">transform</span><span class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1.1</span><span class="p">,</span><span class="m">1.1</span><span class="p">);</span>
+         <span class="nl">transition</span><span class="p">:</span><span class="n">transform</span> <span class="m">.3s</span> <span class="n">cubic-bezier</span><span class="p">(</span><span class="m">.94</span><span class="p">,</span><span class="m">-0.66</span><span class="p">,</span><span class="m">.33</span><span class="p">,</span><span class="m">2.56</span><span class="p">);</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>These “buttons” can be styled any way they need to be just like any other element. Transitions add some bounce between states.</p>
+
+<p>Here’s the result:</p>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="pJXmLx" data-default-tab="result" data-user="putneydm" class="codepen">See the Pen <a href="http://codepen.io/putneydm/pen/pJXmLx/">pJXmLx</a> by David Putney (<a href="http://codepen.io/putneydm">@putneydm</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p> </p>
+
+<p>###Wait, there’s more …</p>
+
+<p>Combining styled radio buttons with <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">flexbox source order</a> controls adds even more options.</p>
+
+<p>Another design called for a three-option selector. Click on the button and the selector would accordion open to show additional options. Click an option and the selector would accordion closed and only the active option would remain visible.</p>
+
+<p>The markup for the buttons is the same as previously shown, with one addition.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-wrapper"</span><span class="nt">&gt;</span>
+
+         <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"btn-one"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"one"</span> <span class="nt">/&gt;</span>
+         <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"btn-one"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>
+             <span class="nt">&lt;span&gt;</span>Label text<span class="nt">&lt;/span&gt;</span>
+         <span class="nt">&lt;/label&gt;</span>
+
+         <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"btn-two"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"two"</span> <span class="nt">/&gt;</span>
+         <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"btn-two"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>
+             <span class="nt">&lt;span&gt;</span>label text<span class="nt">&lt;/span&gt;</span>
+         <span class="nt">&lt;/label&gt;</span>
+
+         <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"btn-three"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"two"</span> <span class="nt">/&gt;</span>
+         <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"btn-three"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>
+             <span class="nt">&lt;span&gt;</span>label text<span class="nt">&lt;/span&gt;</span>
+         <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Because flexbox is needed for the buttons to work properly, they are inside a flexbox wrapper and arranged in a column that is justified at flex start.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nc">.btn-wrapper</span> <span class="p">{</span>
+         <span class="nl">width</span><span class="p">:</span><span class="m">9rem</span><span class="p">;</span>
+         <span class="nl">height</span><span class="p">:</span><span class="nb">auto</span><span class="p">;</span>
+         <span class="nl">display</span><span class="p">:</span><span class="n">flex</span><span class="p">;</span>
+         <span class="nl">flex-direction</span><span class="p">:</span><span class="n">column</span><span class="p">;</span>
+         <span class="nl">justify-content</span><span class="p">:</span> <span class="n">flex-start</span><span class="p">;</span>
+         <span class="nl">margin</span><span class="p">:</span><span class="m">2.5rem</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>Flexbox source order is how the magic happens. The radio buttons will default to a source order of 1, 2, 3, … . If the checked radio button is a assigned a source order of -1 it will always be ahead of these other elements.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s1">"radio"</span><span class="o">]</span><span class="nd">:checked</span> <span class="o">+</span> <span class="nt">label</span> <span class="p">{</span>
+         <span class="nl">order</span><span class="p">:</span><span class="m">-1</span><span class="p">;</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>A few lines of jQuery/JS adds the accordion action. Here’s the result:</p>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="yNdmdp" data-default-tab="result" data-user="putneydm" class="codepen">See the Pen <a href="http://codepen.io/putneydm/pen/yNdmdp/">yNdmdp</a> by David Putney (<a href="http://codepen.io/putneydm">@putneydm</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>After shifting so much functionality from JS to native CSS/HTML, it may seem like a bit of a letdown to throw in JS at this point. But, the goal here isn’t to cut out JS entirely but to use the best tool for the job. Anything that can be kept native probably should be.</p>
+
+<p>And, with so much browser support for CSS/HTML native these days, exploring options can yield some clever solutions.</p>
+
+:ET

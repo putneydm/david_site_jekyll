@@ -1,0 +1,66 @@
+I"8<p>I remember the first time I saw someone using a giant phone. One of those really oversized <a href="http://www.tech2date.com/wp-content/uploads/2013/05/Update-your-Samsung-Galaxy-Note-with-Jelly-Bean-on-ATT.jpg">Samsung phones</a>.</p>
+
+<p>It looked silly, as if the person was holding an iPad Mini against their head to make a call. Who wants to look silly?</p>
+
+<p>Not me. I had my iPhone.</p>
+
+<p>When the iPhone debuted in <a href="https://static-ssl.businessinsider.com/image/540b1b64ecad045934de8851-960-720/steve-jobs-revealed-the-original-iphone-on-january-9-2007-dazzling-the-world-with-its-multitouch-display-and-mobile-apps.jpg">2007</a>, it was the thinnest, smallest smartphone available. In typical Apple fashion, they had designed a phone years ahead of others in capability and then made it impossibly small. <sup><a href="#footnote-one">1</a></sup></p>
+
+<p>Some of bulkiness of their competitors was due to  limitations of the era. Miniaturization is costly and hard, but then again, the players <a href="http://ecx.images-amazon.com/images/I/417Cjane7aL._AC_UL320_SR286,320_.jpg">extant</a> at the time hadn’t really pushed the boundaries either.</p>
+
+<p>But by making the phone so small Apple wasn’t just showing off. It was pursuing a design goal. That iPhone was made to be used one handed. The 4.3 inch screen was <a href="https://www.youtube.com/watch?v=zcTt8-lD67E">roughly the arc</a> of an adult thumb if the phone was held in a choke-down grip.</p>
+
+<p>Phones are stowed in pockets. Smallness also helps handling the device in general especially for women, who on average have <a href="http://www.theaveragebody.com/average_hand_size.php">smaller hands</a> than men.</p>
+
+<p>For all these reason, people who prefer small phones aren’t wrong. Small is a good design choice. Or it would be if user needs never change.</p>
+
+<p>Steve Jobs famously introduced the iPhone as <a href="https://www.youtube.com/watch?v=c_m2F_ph_uU&amp;t=1m25s">three devices</a>: a widescreen iPod with touch controls, a revolutionary mobile phone and a breakthrough Internet communications device.</p>
+
+<p>However, if one were to rank those “three devices” by importance now, the phone and iPod aspects are barely worth mentioning, basically table stakes for any phone maker. Phones now are best defined by the third aspect, but even that doesn’t even really apply any more. They are a “magic pocket computer”.</p>
+
+<p>The iPhone – or phone of any kind – is a device that must serve changed user priorities. It’s a reading device. People write on it. People shop on it. People find dates on it. For a growing number of people, it’s their only computer.</p>
+
+<p>And it’s become an app driven device, unlike that first iPhone that shipped with a mere <a href="http://stratechery.com/wp-content/uploads/2013/04/original-iPhone-screen-264x300.jpg">15 apps</a> and no App Store. The phone is a general purpose computing device in the way a desktop machine was during the <a href="https://upload.wikimedia.org/wikipedia/en/e/eb/Windows_95_at_first_run.png">Windows 95</a> era. It’s a platform in the truest sense, not just a device.</p>
+
+<p>Apple, pioneer that they were in the mobile space, was slow to build a device to jump on this trend.</p>
+
+<p>Apple tends to have a “we know best” attitude concerning UX matters. It’s not surprising that Apple stuck by its initial design choices through four generations <sup><a href="#footnote-two">2</a></sup> even as terrible phones like the Galaxy S series caught on mainly for their larger size.</p>
+
+<aside class="blog-pullquote">
+  <blockquote>Yet Apple tends to have  a “we know best” attitude concerning UX  matters. It’s not surprising that Apple stuck by its initial design choices.
+</blockquote>
+  </aside>
+
+<p>Easier handling, pocketability and on-screen reachability pale next to better overall usability of a larger device.</p>
+
+<p>I realized this recently when I had to test a site on an iPhone 5. Everything seemed impossibly tiny. Typing on the cramped keyboard was difficult. Really, it was just harder to use for almost everything. Getting a site to scale down to 320px width made me realize the usability sacrifices we designers make to accomplish this.</p>
+
+<p>So much more can be done on a larger device. The overall UX for task completion and general comfort is even better with the plus-sized device than the regular 6. I’m writing and editing this blog post on my iPhone 6 Plus, for instance.</p>
+
+<p>Getting a larger phone wasn’t all good. The iPhone 6 had all the shortcomings of a larger device – and more. Some were made worse by the design, with its rounded corners and smooth aluminum back.</p>
+
+<p>It was like holding a bar of soap. I always felt like I was on the verge of dropping it, a feeling that led me to put my phone in a case just to make it more grippy. <sup><a href="#footnote-three">3</a></sup></p>
+
+<p>I switched this year from a 6 to a 6s Plus based on the theory that if I was going to be fumbling my phone anyway, I may as well be fumbling one with an even bigger screen.</p>
+
+<p>Sizing up my phone has made me reflect on one of the basic tenets of the design practice: Design is about making choices. Also, sometimes it’s about revisiting choices.</p>
+
+<p>Think of designing UX in terms of a <a href="http://www.amazon.com/The-Secret-Lives-Buildings-Parthenon/dp/0312655363">building</a>.</p>
+
+<p>Structures are built with intent. The architect makes decisions based on this intent – where does the entryway go? Where are the stairs? What does it look like?</p>
+
+<p>Yet, the life of the building changes. The office I work out of was originally built as a warehouse for an industrial part of town. The architect couldn’t have foreseen that it would someday be an office in the magical future year of 2015.</p>
+
+<p>But UX design need not be as constrained as brick and mortar. It must be ephemeral, changeable. It’s based on context. It’s based on emotion. It’s based on shifting outlook and needs.</p>
+
+<p>Keeping up with changing needs is central to the practice. Sometimes that means throwing out core concepts we have clung to for years.</p>
+
+<p>Sometimes we have to go big even if it does look kind of silly.</p>
+
+<ol>
+  <li><span id="footnote-one"></span> I still have my original iPhone. It feels small now, but for different reasons.</li>
+  <li><span id="footnote-two"></span> The iPhone 6 is actually the fifth-generation iPhone as there was no iPhone 2.</li>
+  <li><span id="footnote-three"></span> I’m not sure what Apple did, but the iPhone 6s is significantly more grippy. It’s noticeable when holding a 6 in one hand a 6s in the other.</li>
+</ol>
+
+:ET
