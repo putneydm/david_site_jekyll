@@ -198,7 +198,7 @@ The troop stood proudly at attention, just outside the doors, ready to head into
 
 "Sir, I serve the Emperor regardless of my color, sir!" the trooper answered unprompted.
 
-The squad leader let the slight to protocol slight. He decided to keep an eye on this FD-472. *His fervor could be infectious. Or get troopers killed*. He turned back to the full group.
+The squad leader let the slight to protocol slide. He decided to keep an eye on this FD-472. *His fervor could be infectious. Or get troopers killed*. He turned back to the full group.
 
 “We are to be the eyes and ears of the Emperor, and if fortune favors us, his swift and deadly hand. Are you ready stormtroopers!”
 
@@ -216,7 +216,7 @@ As promised, the scanner mapped the terrain and surroundings with uncanny accura
 
 As obstacles, none of this compared to the trees. The view from the landing platform had not done justice to their sheer scale. They were towering ancient giants, mere seedlings when the Old Republic was founded. Their tops stretched hundreds of meters overhead, blotting out the sun, offering only occasional glimpses of the sky above. The squad leader, on his many missions, had never seen anything like them.
 
-But the squad members spent no time reveling in their grandeur. As trained troopers their minds dwelt on their tactical situation, their mission, _the Emperor’s mission_. Whereas mere a visitor might gape at these towering trees, the trooper, sharp and true, might see a hiding place for a Rebel scout or a sniper’s nest. Where someone might see a downed log, a trooper would see cover to set up an ambush. A fern — well, that was still a fern. But a trooper was always ready to be attacked or, more importantly, to attack.
+But the squad members spent no time reveling in their grandeur. As trained troopers, their minds dwelt on their tactical situation, their mission, _the Emperor’s mission_. Whereas mere a visitor might gape at these towering trees, the trooper, sharp and true, might see a hiding place for a Rebel scout or a sniper’s nest. Where someone might see a downed log, a trooper would see cover to set up an ambush. A fern — well, that was still a fern. But a trooper was always ready to be attacked or, more importantly, to attack.
 
 The woods, the greenery, the forest itself was a disconcerting place for these troopers. Just another stop of what would probably be many. True, the squad leader had fought Rebels on many alien worlds — deserts, swamps, beaches. And the rest of the troopers, though inexperienced, had training to prepare them for unusual topographies and ecosystems. But none of this felt like a place they should be.
 
@@ -256,7 +256,7 @@ The squad leader had a different issue. He wondered what the reaction might be i
 
 “Sir, permission to call in our progress report, sir.”
 
-The lieutenant didn’t answer. Instead, his vision seemed fixed on something in the distance, up in the trees. The squad leader turned his head toward whatever the lieutenant had fixated upon. A few seconds passed before he even saw it. It was high up in the canopy in a tangle of branches, more than 200 meters distant. A shapeless, fuzzy dot. At first it looked like a nest or possibly just a tangle of sticks and needles from the tree. Then it slightly shifted its position. Or maybe it was just the breeze.
+The lieutenant didn’t answer. Instead his helmet was off, his vision fixed on something in the distance, up in the trees. The squad leader turned his head toward whatever the lieutenant had fixated upon. A few seconds passed before he even saw it. It was high up in the canopy in a tangle of branches, more than 200 meters distant. A shapeless, fuzzy dot. At first it looked like a nest or possibly just a tangle of sticks and needles from the tree. Then it slightly shifted its position. Or maybe it was just the breeze.
 
 “Sir?” the squad leader asked, not really knowing what he was querying. Perhaps the lieutenant had seen a Rebel scout. The squad leader reached back to his pack to grab his electrobinoculars to get a better look. Turned out he wouldn’t need them.
 
@@ -298,7 +298,7 @@ This was going to be a tough mission, the squad leader could tell. He preferred 
 
 He sat in the dwindling light. As always, he was thinking about the mission. Had he made any errors that might give them away to the enemy? What's their next move? The next hour, The next day. But he was having trouble with focus. His mind returned again and again to the incident with the lieutenant. Grabbing an officer's blaster ... His hand still felt the burns from the muzzle.
 
-But he did it knowing the consequences of rash acts by anyone in the squad -- even a lieutenant -- firing without discipline. He’d learned that lesson years ago while trying to recover some missing droids. He saw an eager young squad leader order fire on a pair of homesteaders. They'd been petulant, sure. Even as he stood there, watching acrid smoke billowing from the homesteader's house, their burned skeletons near the doorway, he realized that the mission had failed. I was *the droids*. Deciding not to fire could be more important than knowing when to fire.
+But he did it knowing the consequences of rash acts by anyone in the squad -- even a lieutenant -- firing without discipline. He’d learned that lesson years ago while trying to recover some missing droids. He saw an eager young squad leader order fire on a pair of homesteaders. They'd been petulant, sure. Even as he stood there, watching acrid smoke billowing from the homesteader's house, their burned skeletons near the doorway, he realized that the mission had failed. The mission was *the droids*. Deciding not to fire could be more important than knowing when to fire.
 
 Still, a thought was in his head, and he could not clear it out. It pushed everything else aside. Something *was* out there. 
 
@@ -336,7 +336,7 @@ The officer lunged forward and grabbed the larger trooper's helmet. He twisted i
 
 "I need you to get me off this fucking moon, you useless piece of shit!" 
 
-He released the trooper's helmet with a shove, as if tossing aside a ball. The trooper stumbled back a step. After a short pause, he methodically, slowly ungripped his hand from his sidearm, and then reached up with one hand to grasp his helmet by the crown. Just as methodically he slowly rotated his helmet until the black eyes were staring at the Lieutenant. 
+He released the trooper's helmet with a shove, as if tossing aside a ball. The trooper stumbled back a step. After a short pause, he methodically, slowly ungripped his hand from his sidearm, and then reached up with one hand to grasp his helmet by the crown. Just as methodically, he slowly rotated his helmet until the black eyes were staring at the Lieutenant. 
 
 "Fuck off. You're useless," the officer spat at him.
 
