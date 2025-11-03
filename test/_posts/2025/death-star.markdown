@@ -449,7 +449,7 @@ XXXX would have liked to answer them. Trouble, was, he realized, was that he did
 
 
 
-It was late afternoon when he finally found himself at his destination Dock 57, Stack 22, Level 13. Or, what he hoped was his destination. The sun had been overhead for most of his walk. He had sweated trough his uniform, both from the heat and an ever-growing unease.
+It was late afternoon when he finally found himself at his destination Dock 57, Stack 22, Level 13. Or, what he hoped was his destination. The sun had been overhead for most of his walk. 
  
 While his map showed a red dot where the office was to be, he was once again unsure where the exact passage was to get to it. It was somewhere in the cobbled together stack of cargo containers, masonry and rusty scrap metal that towered before him. The complex stretched for -- it was hard to tell. It just seemed to disappear into other vast stacks and crumbling structures. Rusty ladders and rickety stairs snaked around the complex, up and down, into passageways and over roofs. One of these would lead him to the right place. Although climbing up any of them seemed a terrifying prospect. 
 
@@ -457,35 +457,37 @@ He zoomed the resolution on his map. An alleyway a few hundred meters ahead seem
 
 He shut it out of his mind and walked confidently toward the passage. It led into the stacks. Walls of containers reached up and disappeared into the darkness. A string of dim light bulbs swayed overhead to light the way. A slightly rotten smell hung in the air. 
 
-Looking down at his map every few seconds, he wound his way though the alley, as it twisted and turned into the structure. He saw a pair of glowing eyes watching him from a dark doorway. "Don't look," he thought, but still glanced over several times. They followed him as he passed and faded back into the dark. With each step his uncertainty grew -- a rising feeling of danger. He jumped at the sound of a sudden sharp clank. Once again he tried to tamp his fear down but it was growing from a buzz into an alarm. He repeatedly felt for his sidearm, as if seeking reassurance of its presence. A ladder, stairs, even a lift -- something had to be there to take him up to the office. Nothing. Dead end after dead end. 
+Looking down at his map every few seconds, he wound his way though the alley, as it twisted and turned into the structure. He saw a pair of glowing eyes watching him from a dark doorway. "Don't look," he thought, but still glanced over several times. They followed him as he passed and faded back into the dark. With each step his uncertainty grew -- a rising feeling of danger. He jumped at the sound of a sudden sharp clank. Once again he tried to tamp his fear down as it was grew from a buzz into an alarm. He repeatedly felt for his sidearm, as if seeking reassurance of its presence. A ladder, stairs, even a lift -- something had to be there to take him up to the office. Nothing. Dead end after dead end. 
 
 His worry had grown into a mild panic. A type of danger he'd never felt. He'd never commanded a battle group. He'd gone straight from the academy to his adjunct role. He wasn't really a combat guy. But this wasn't combat. It was a general feeling of menace, as if anything ...
 
 He was lost. He decided to backtrack following the path on his map. He looked for familiar sights on the passage back, but the complex was so chaotic, so cobbled together and to be completely nondescript. He continued to glance down at the map. That cargo stack -- he recognized the bright green containers. The rubbish piled around. It made sense. The street was just beyond. 
 
-But the passageway ended on a blank wall. A Stack of cargo crates was now blocking the exit. He could hear the mechanical whirring and clanking of a cargo doid, and a loud metallic boom as it set down another crate, shaking the whole stack. He saw light along the side. Maybe just enough space for him to squeeze his way past. Maybe if he climbed up.
+But the passageway ended on a blank wall. Was he lost? No. A Stack of cargo crates was now blocking what should be the exit. He could hear the mechanical whirring and clanking of a cargo doid and a loud metallic boom as it set down another crate, shaking the whole stack. He saw light along the side. Maybe just enough space for him to squeeze his way past. Maybe if he climbed up.
 
 From behind a loud thud and clank shook the ground as a cargo crate dropped to the ground, blocking the other end of the passageway. A visceral wave of fear swept over him. Then he heard a voice.
 
 "Well, well, well. Seems weef got a bit lost, eh? My directions not so good are they?" It was a lilting, lower-class patois from one of the Outer Rim worlds. 
 
-A stormtrooper stepped from the darkness. Several others quickly flanked him, their blaster rifles trained on the young officer. The lead trooper doffed his helmet and let his blaster flop down and hang on its strap. Before the officer could een react that troopers had fanned out to encircle him. 
+A stormtrooper stepped from the darkness. Several others quickly flanked him, their blaster rifles trained on the young officer. The lead trooper doffed his helmet and let his blaster flop down and hang on its strap. Before the officer could even react that troopers had fanned out to encircle him. 
 
 "We sees you flying in dees Imperial Shuttle. A real good one not no cargo ship like we get all de time and the boys we start thinking." He paused. "Ahh, don' do dat." He motioned to a trooper to take the officer's sidearm. Another cargo container thudded into place. 
 
 "You're stormtroopers," the officer stammered. "This is an Imperial facility." 
 
-"Dis facility Imperial. Sure true. We Black Hand." He said it as if the officer should know how it is. "Black Hand sell to Bothans. Bothans sell to Rebels. We loyal." He let out a laugh.
+"Dis facility Imperial. Sure true. We Storms but we also Black Hand." He said it as if the officer should know how it is. 
 
 "You're traitors," he hissed at them. 
 
-The lead stormtrooper paused, as if taking offense at the reply. He shouldered his gun strap and slowly walked over to the officer. He circled about him, looking him over. He stopped and leaned in, just inches from his face. 
+"Loyal Imperial. Black Hand one sell to Bothans. Bothans one sell to Rebels. We loyal." He let out a laugh.
 
-"We no traitors. We Imperial. Just sell. They buy. Everyone happy." His eyes darkened. His tone became serious. "I know why yee be at here. You be traitor. Your boss be traitor. Big traitor."
+The lead stormtrooper shouldered his gun strap and slowly walked over to the officer. He circled about him, looking him over. He stopped and leaned in, just inches from his face. 
+
+"We no traitors. Just sell. They buy. Everyone happy." His eyes darkened. His tone became serious. "I know why yee be at here. You be traitor. You admiral be traitor. Big traitor."
 
 The trooper stepped back. He paused as if thinking. Then he took on an almost theatrical air.
 
-"Here be deal. We take ship." He swung his arms in toward his chest as if grasping. "You help, unlock codes, maybe we let live." He laughed and turned to the other troopers as if waiting for them to laugh. "No I kid you be fine. We like you." He spread his arms as if to give him a big hug. His tone changed again. "No help. That different." He grabbed his rifle and bounced it up and down a couple times. 
+"Here deal. Take ship we do." He swung his arms in toward his chest as if grasping. "You help, unlock codes, maybe live." He laughed and turned to the other troopers as if waiting for them to laugh. "No I kid you be fine. We like you." He spread his arms as if to give him a big hug. His tone changed again. "No help. That different." He grabbed his rifle and bounced it up and down a couple times. 
 
 "I'll never join you," the officer snapped in horror.
 
@@ -497,11 +499,11 @@ The officer felt a hand on his shoulder roughly shove him down onto his knees. A
 
 "Please," he barely croaked out. "I'll do anything."
 
-"Anything?" a voice said. It wasn't the stormtrooper. It was a thin reedy voice, slow yet deliberate. Despite his head being forced down, the officer could see a man move out of the shadows and walk toward the stormtroopers. They immediately lowered their blasters and began stepping backward. The stormtrooper behind the officer stepped away.
+"Anything?" a voice said. "That's good to know." It wasn't the stormtrooper. It was a thin reedy voice, slow yet deliberate. Soft spoken. The officer could barely see a man move out of the shadows and walk toward the stormtroopers. They immediately lowered their blasters and began stepping backward. The stormtrooper behind the officer stepped away.
 
 The man pulled the young officer up to his feet. "You'll be fine." He turned and glared at the lead stormtrooper, who bowed his head like a chastened child. 
 
-The man was relatively average height for a human, with a rotund gut, round-faced, with an angular chin set off by a neatly trimmed dark beard and a dome-shaped double chin. He had a thick almost luxurious dark hair neatly combed back with a few flecks of gray to match his beard. He wore spectacles and button-up shirt with large red and black checkers and some sort of denim work pants. 
+The man was relatively average height for a human, middle aged with a rotund gut, round-faced, with an angular chin set off by a neatly trimmed dark beard and a dome-shaped double chin. He had a thick almost luxurious dark hair neatly combed back with a few flecks of gray to match his beard. He wore spectacles and button-up shirt with large red and black checkers and some sort of denim work pants. 
 
 "Uh, wait here," he said to the officer. His voice was calm and he spoke softly. 
 
@@ -509,11 +511,11 @@ The man walked around the alley, surveying the troopers, looking them up and dow
 
 The officer sensed no effort by his sudden savior to intimidate. Just calm intensity. The man was far too retiring to command the scene. Yet the stormtroopers were no longer just slinking away. Their gait quickly went from rapid walk to running. 
 
-"Wait," the man said to the fleeing lead trooper. "Who told you why he was here?" But the trooper was out of range for the man's soft voice to be heard. "Doesn't really matter, I guess," the man said.
+"Wait," the man said to the fleeing lead trooper. "Who told you why he was here?" But the trooper was out of range for the man's soft voice to be heard. "Doesn't really matter, I guess," the man said. 
 
 The man seemed to be slightly confused for a few seconds. Behind him a swarm of cargo droids were quickly dismantling the pile of cargo crates blocking their exit. 
 
-"Do you want to go talk business or something?" He asked. 
+"I'm sorry about that ..." He seemed to drift off into a thought. "Yeah. That wasn't best. I didn't ... Uh ... Do you want to go talk business at my office or something?" He asked. 
 
 
 
@@ -526,182 +528,117 @@ The man seemed to be slightly confused for a few seconds. Behind him a swarm of 
 
 
 
+The young officer was dead man walking. 
 
+He was shaking with fear the whole walk, each step leaden. His mind kept flashing back. That feeling. On his knees, cold metal pressed against his head. A swell of anxiety swept across his body. 
 
+Breathing was hard. He tried to calm himself, but the crowds, the endless noises -- shouting, clanking, whirring and thumping -- hit him all at once over and over. Thoughts exploded in his head. His knees weak, he stumbled and fumbled his way over the muddy, rutted streets of the depot.
 
+Despite his disjointed thoughts, one warning alarm kept sounding: Run! Run away! But something kept him going forward to his doom. Fear, perhaps. Somehow he knew that he could not escape. The fear of the stormtroopers for this otherwise unremarkable man. His simple presence was enough to save the young officer. But that meant this was a man who dealt out punishment -- even death -- casually. He could not escape such a man, not here. 
 
+He had no choice but to keep moving forward toward whatever the man had in store for him.
 
+the officer had unbuttoned his uniform jacket. From the heat and the fear sweat had soaked his uniform and with the slop that lined the streets had caked and spattered him. He was utterly filthy with the place. But he was still alive and that counted for something.
 
+The stranger led him into a small, squat masonry building in a dark alcove under towering stacks of cargo containers. It was painted a dull yellow, but was stained and streaked with filth like everything and everyone in  this place. Thick, ropey black wires held up by poles were haphazardly strung overhead. A land speeder sat parked and a couple of four-legged beasts were tied up outside. 
 
+The stranger stood in front of the door. The officer was filled with dread at whatever lay ahead inside, yet still felt driven to move ahead. The stranger apparently noticed the positively terrible state of his guest. He looked him up and down, surveying the filthy, shaking, sodden officer in front of him. He appeared disappointed. 
 
+He started to say something, paused, and then finally said "I'm not here to kill you." He nodded his head affirmatively, and pushed open the door. The door slid open with a groan. The still-shaken officer flinched at the sound.
 
+The office was a crowded, cluttered mess — utter chaos really. Tables and shelves sagged with papers piled all the way up to the ceiling. Boxes and containers overflowing with more paper were piled on chairs and in corners. An open CommLink channel randomly blasted out orders and updates in dozens of languages, punctuated only by bursts of static. A musty, moldy smell mixed with industrial solvents and sweat hung in the humid air. A small cooling unit clattered above a desk groaning under the weight of papers. Judging by the temperature in the room, it wasn’t winning. 
 
-It was late afternoon when he finally found himself at his destination. Or, what he hoped was his destination. The sun had been overhead for most of his walk.
+"Sorry about the mess," the stranger said. "Running the galaxy takes a lot more paperwork than you'd think." 
 
-Finally ignoring protocol in favor of survival, he’d unbuttoned his uniform jacket. He’d spent all his money to get some water at a makeshift food stand. He was sweat-soaked and caked and spattered with the slop that lined the streets of this place. But he was here. And it was not what he expected. Could this really be the headquarters of a man spoken of only in whispers, a man so … He set that thought aside and considered his next move. 
+The stranger gestured toward a chair almost hidden in stacks of papers. He walked around to the other side of his desk and sat down with a slight groan. He sat staring at the officer for a few seconds, as if thinking. He began speaking in a deliberate but somewhat detached style, paying little attention to the rattled officer sitting in front of him.
 
-The Dock 57 headquarters was a small, squat building made of some sort of masonry in a dark alcove under towering stacks of cargo. Probably originally a bunker.  It was painted a dull yellow — though not for maybe a decade or more. It was stained and streaked and generally filthy as this place’s residents. Thick, ropey black wires held up by poles were haphazardly strung overhead. A land speeder sat parked and a couple of four-legged beasts were tied up outside. 
+“Name is Konn. Friends call me Rett. Petty officer second class. I run this office, which runs this base. Logistics, that kind of stuff. Not much can happen without me hearing about it.” 
 
-He moved toward it, if only to get out of the blistering sun. He stood in front of the door. Despite all his misgivings he was here. He was filled with dread, yet still felt driven to move ahead.
+He paused, noticing the officer was staring into space. “We don’t get many admiral's shuttles here." No reaction by the officer. "I'm really sorry about that whole thing. They wanted your shuttle. It's a whole thing with them," He waved his hand as if dismissing it. "They won't bother you again."
 
-The door slid open with a groan. The officer jumped at the sound. “Walk in. You can do this.” he thought to himself. 
+A fly began buzzing around the young officer’s face.
 
-He stepped in. It was a crowded, cluttered office — utter chaos really. Papers were stacked on tables and shelves, all the way up to the ceiling. Boxes and  containers were strewn around, piled on chairs and in corners. An open channel on the comm  was randomly blasting out orders and updates in dozens of languages from the facilities’ seemingly endless workforce, punctuated only by bursts of static. The room had a musty moldy smell, mixed with industrial solvents, and sweat. A small cooling unit clattered against the strain of the oppressive heat. Judging by the temperature in the room, it wasn’t winning. 
+“Uh, Rett, so what is this place?” He seemed dumbfounded. His throat was so dry he could hardly get the words out. “I’ve never seen anything like it. Were those stormtroopers?”
 
-“Hello?” he asked, somewhat sheepishly. 
+"Konn," the petty officer corrected him, almost as an offhand comment. “Those guys? Yeah. Sorry." He seemed to pause again to think. "Can we maybe talk business? Saving you took a lot of time. I'm very busy."
 
-A man stepped out from behind a stack of boxes. He wore a dishelved uniform top with gray sweatpants. Large sweat stains darkened both armpits and the front of his shirt. He was average height, but large — not so much fat as just big. Scraggly curls rimmed his round face, with small darting eyes and thin lips. He had bits of gray in his unshaven chin. 
+The man had an odd air of disconnect that the officer could not quite process. Nothing about him suggested menace. He was dispassionate in his speech, slightly awkward in movement, utterly nondescript. Yet, as they had walked down the street, people scrambled to move aside. Activity stopped. Others stared. Hushed whispers surrounded them. 
 
-“Lieutenant,” the man said flatly. “You look a mess.” He paused, perhaps because the lieutenant failed to find any levity in his shabby appearance. “Sorry. We don’t get many from your parts out this way. “
+And the stormtroopers. They ran from him. Stormtroopers followed orders, but those -- they were terrified. 
 
-“Have a seat.” He gestured toward a chair. “I’ve been waiting for you.”
+"Who are you again?" the officer said.
 
-The officer felt his guts clench.
+"Let me explain it this way. You work for the Empire. I am the Empire." The man wasn't a bragging. He said it matter-of-factly. "We do dirty work here. Your Empire with the capital ships and shiny floors and neatly pressed uniforms — that’s just for the people to see. Nothing happens without me. Well, us. But mostly me." 
 
-“H — how?” he croaked.
+He sounded proud. “Half the galaxy gets supplies from us. The other half gets supplies from them.” 
 
-“I do logistics. Not much can go missing in this galaxy without me hearing about it.” He paused, noticing the officer’s quizzical look. “Your ship.”
+The officer, still shaken by the day's events, blurted out angrily "Smugglers, thieves and black markets. Stealing from the Empire. Those Black Hand guys, they sell to the Rebels!"
 
-“Please, have a seat.” When the officer failed to oblige, he continued. “We don’t get many officers shuttles here. Especially one without any tail numbers.” 
+"Black Hand? Black Hand?" He seemed to be lost in thought. "Rebels? Nah, Black Hand sells to the Bothans."
 
-“I — uh — no one can …”
+“How have I not heard of any of this?” the officer asked. Konn didn't seem to be listening. 
 
-“Don’t worry. People come in here to talk to me all the time. I listen. I don’t talk. Please, have a seat.”
+“That was such a terrible thing that happened at Sedlar Prime,” he said sincerely. “I know, it’s classified. I saw the logistics reports. I see everything. I've seen it all. 
 
-He felt himself settle into the chair. He didn’t even take the files off it before he sat. A fly began buzzing around the officer’s face.
+“Bad scene. Three destroyers and 13 cargo vessels. "The parts, the droids, the crews came through the depot." He shook his head. “Cryogenic plant failure."
 
-“What is this place?” His throat was so dry he could hardly get the words out. “The Empire — I’ve never seen anything like it.”
+“Sorry. That whole scene should've never happened. No one can get spares. Most of the stuff we ship goes to the Death Star these days.”
 
-“This? We do the dirty work. The Empire you work for with the capital ships and shiny floors and neatly pressed uniforms — that’s just for the people to see. We do everything else.
+"Death Star?" the officer queried.
 
-“Half the galaxy gets it supplies from us. The other had gets their supplies from the first half.” 
+"Forget I mentioned that." Konn pushed a tumbler of water across the desk toward the lieutenant. “You seem upset. You need this.” It was slightly brown.  
 
-“How come I’ve never heard of any of this?”
+The stranger leaned forward, his hands on the desk. For a moment the officer felt an intensity that startled him. The stranger's eyes fixed on him. “You can relax, you know. I just do logistics -- moving stuff about. Nothing more.”
 
-“If you had heard of it, would you even care? You may work for The Galactic Empire, but I am the Galactic Empire.” He punctuated his last statement with a loud laugh. 
+"What do you want with me then?" The officer's body seemed to deflate a little.
 
-The man pushed a tumbler of water across the desk at the lieutenant. “I think you need this.” It was slightly brown, but the officer didn’t care. He downed it all. He sat the glass back down and summoned his thoughts. 
+"Fleet admirals don't normally send out personal aides in their own shuttle to buy equipment from smugglers do they?" he asked. He seemed to be watching for the officer to react. "Let's see what the old man wants. We go way back, me and him, you know?"
 
-“I’ve heard of you. Are you …”
+He got out of his chair and walked to a large stack of papers. He looked as if he was concentrating a second or two before he reached out, slowly hovered his and as if honing in and quickly yanked a folder from the midst of the stack. He paused as it teetered slightly but didn't fall. Back at his desk he flipped it open. The young officer saw the admiral's seal and the words Top Secret inscribed on it. 
 
-“Rhett Conn,” the man said and stuck out his hand. 
+The expression dropped from Konn's face as his brow furrowed in thought. He lit up with a realization and a smile formed. "You clever bastard," he muttered. He turned to the officer. "No, not you. You seem quite average. No offense." 
 
-The lieutenant’s mind was racing. It was really him. The man, never named, but whispered about. Unseen, yet always there. A man that others had given their lives to help  him find. He had found him. But what had he found? He was trying to get a read on him. He was … The officer was unsure.  He seemed gregarious, to be sure. But it was practiced — the way diplomats shroud their cutting remarks in a veneer of comity. The way she shrugged off statements as jokes. He seemed too perfect. He seemed off.
+Konn seemed to be thinking out loud. "This is the most interesting request to come across my desk in a long time." He paused. Clearly the gears were turning. Finally he refocused on the officer. His eyes were glinting with excitement. He held up the folder.
 
-Before he could finish the thought, Conn asked “ya gonna leave me hanging here?” His hand was still out.
+"This request is really hard to get. Very, very hard to get. The people you were here for, they can't get it. They would have taken your credits and then killed you." He was quite matter of fact. 
 
-XXXXX shook it and sat back down. The two stared at each other as the cooling unit rattled away and the comms squawked.
+"What? What's hard to get." 
 
-Finally Conn spoke. “Aren’t you gonna say something? After all, you came to me.”
+"A Polylaminate Lateral Orthogenic Tesseract."
 
-He leaned forward, his hands on the desk. For a moment the gregariousness melted away. XXXX felt an intensity that startled him. Conn’s eyes were fixed on him. “You can relax. I know all about logistics. And when you know about logistics, you know about everything. The emperor doesn’t take a shit without us knowing about it because we send the toilet paper.”
+The lieutenant suddenly remembered the admiral's phrase "not striclty legal." 
 
-This time he didn’t end it with a laugh. He let the thought hang just long enough that his next words rung like a bell.
+"Wait. Forget that too. In fact, forget all this." Konn leaned in. "Tell no one about this meeting. No one. Not even the admiral. Actually, tell the Admiral about the Poly thing. Just don't tell him I got it. Does this make sense?"
 
-“I know why you’re here. I know who you work for …” 
+"Not really."
 
-XXXXX started to say something, but Conn held up his hand. 
+"Don't tell him you met with me." Once again he paused. He set the folder down and tapped on it. 
 
-“Terrible thing that happened at Sedlar Prime,”  he said. “I know, it’s classified. I saw the logistics reports. I see all the reports. Everything comes across my desk. 
+“You’ll want get back to your ship,” he finally said, but it was as if he was talking to no one. “Bay 35. Those stormtroopers won't bother you again. No one will." 
 
-“Bad scene, Three destroyers and 13 cargo vessels,” he whistled in awe. “A lot of the cargo — hell, most of the parts, the droids, some of the crews — on those ships came through the depot. Damn shame.” He shook his head. “Damn shame.” 
+Konn fell back in his chair and twisted and spun it partially around and seemed to disappear into thought. After a long moment, he realized the young officer hadn't moved. 
 
-“Cryogenic failure. That’s tough. You know, we carry replacement cryogenic plants in stock,” he added hopefully. He could see the young officer had a displeased look on his face. 
+“You really should go. It's safe. I assure you. No one will bother you." 
 
-“Sorry. What I’m saying that if I’d known you had a problem that could be solved by logistics, that whole scene would have never happened.  Coulda stopped int like that,” he said, snapping his fingers. Like I said, I know logistics.” He emphasized the word “know.” “So, tell me your logistics problem.” 
+The annoying comms fell silent, with only the rattle of the cooling unit. The officer wasn’t sure how much time had passed before he assumed the discussion really was over and awkwardly backed his way to the door. It opened and he stumbled into the bedlam of the streets beyond. 
 
-“Well,” the lieutenant said. “We have a problem. We have this really …” he paused to get his phrasing right  “big shipment.” 
+He glimpsed Konn spin around in this chair. A hologram appeared on his desk. The door slid closed with a rude scrape and rumble, narrowly missing the lieutenant. 
 
-He could hear himself saying the words but it wasn’t really him. He had to stop to think. “This — uh — shipment isn’t something we need. It’s a problem. It’s taking up a ton of space. It’s expensive. We don’t really know how to deal with it any more.”
+He pulled out his geolocator, looking for his ship. The door slid open. Konn was standing in the doorway with a blaster. 
 
-“That’s a common problem.” 
+"You'll need your sidearm." he said, handing it over. "No, no. not for that. You're fine. If you don't have it they'll ask too many questions." 
 
-“No, it’s a really big shipment.” 
+The door slid shut again. 
 
-“It’s a common problem. It comes in all sizes.” 
+On the way to Bay 35, the young officer was somehow both numb and overwrought. It had all been way too much, like the static and chatter on the comm system in that smothering, stinky office. Thoughts were forming so fast that he could barely complete them before another and another would spawn. He was a tad ill — was it the water or was he sick with worry? He remembered so little of the walk, not the crowds, not the cargo stacks, not even his own thoughts, that his ship seemingly appeared in front of him.
 
-Conn leaned back in his chair. He thought for a few seconds. 
+At his presence the ramp began to lower. The warm yellow glow was a familiar sight at last. He made his way forward, wondering what else this mission had in store. Thoughts of sabotage popped off. 
 
-“I think I know of the shipment. And it is big.”
+"Tell no one," the man had said to him. Tell them what? That he'd found the most insane place in the galaxy? He wasn't entirely sure what had really happened. Would anyone even believe him? He settled into the pilot's seat and rubbed his eyes. Only then he realized a handwritten note tacked to the control panel.
 
-The lieutenant considered his next words and then uttered them: “Can you do anything about it.”
+*It's in the cargo hold.*
 
- “Well if it’s legal and it’s important enough.”
-
-“It’s important enough.”
-
-The lieutenant paused to see if Conn reacted. Conn leaned far back before beginning talking as if no one was there. 
-
-“Back when I was second assistant to the adjunct quartermaster on the Devastator, we got this shipment of self-sealing stem bolts. We need, like, five of them. But we got 500,000. Twenty five crates of them! They sat in the cargo hold for months.
-
-“The cargo depot wouldn’t take them back. We had enough stem bolts for the next 50 fucking years. No other ship wanted them.
-
-“Finally one day I get an idea. So the next time we go to hyperspace, there’s a shower of 500,000 stem bolts among all the other trash we dumped. I would have gotten away with it, but the bolts were made of a special alloy. They lit up like an enormous cloud of glitter when we ignited the engines.
-
-He paused to laugh.
-
-“But at least we were rid of them,” he said before descending into more laughter. 
-
-“So what happened to you?’ the  lieutenant asked. Punishment was on his mind a lot these days.
-
-“I got sent here,” Conn said and turned toward the lieutenant, flashing a broad smile as he held both his arms out. 
-
-“What happened to me was that I learned something very important. I’d made a stupid mistake. Just because I didn’t need something right then, I did not see it as useful. There are many uses for something, most of which are not apparent.
-
-“Those stem bolts — we could have done dozens of things with them. The material they were made from had value. Rebels use stem bolts too. We could have lured them with promises of cheap parts. Hell, we could have thrown them at the Rebels if our Turbolasers broke.
-
-“Never let anything go to waste. That’s what I learned. It can be helpful in ways that are hard to imagine, right up until you can imagine them.”
-
-“Are you saying that I shouldn’t worry about the shipment?” the lieutenant asked? 
-
-“You should always worry about everything,” Conn said back quickly. “Or you should worry about nothing. Sometimes it just resolves itself.”
-
-“Are you saying there’s a resolution?”
-
-“Always is. You just have to be able to see it.”
-
-“But I’m not in a position to …”
-
-“Sometimes that resolution is coming to me.” Conn’s broad laugh exploded into the room. 
-
-The lieutenant suddenly felt his chest tighten. He gasped for air and choked. Conn quickly produced another tumbler of sickly looking water and pushed it toward the lieutenant. 
-
-“You’ll want to finish that and get back to your ship,” he said. “The streets can be mighty dangerous to strangers at night. I’d send some Troopers to guard you, but they don’t seem to like you officer types very much.
-
-“They seem to die whenever you all are around.”
-
-Conn fell back in his chair and twisted and spun it partially around and seemed to disappear into thought. 
-
-“Really, if I were you i’d head out now.”
-
-The lieutenant mustered his ability to speak. 
-
-“What’s going to happen?” His question went unacknowledged. 
-
-The comms fell silent, with only the rattle of the cooling unit. The officer wasn’t sure how much time had passed before he assumed the discussion was over and awkwardly backed his way to the door. It opened and he backed out of it into the chaos of the streets beyond. 
-
-Before it closed he glimpsed Conn spin around in this chair. A hologram appeared on his desk. 
-
-The young officer could not make out what Conn said as the door slid closed with a scrape and rumble, narrowly missing the lieutenant, who stumbled out into the waning sun.
-
-He glimpsed the setting sun a few times as he made his way back toward the dot on his geolocator, but his mind was too numb with thoughts. to really notice. It was like the static and chatter on the comm system in that smothering, stinky office. He was feeling a tad ill — was it the water or was he sick with worry? He remembered so little of the walk that it seemed as if his ship was just suddenly in front of him.
-
-At his presence the ramp began to lower. The inside of the ship was a warm yellow glow in the gloaming. Deep in the stacks of cargo the light was quickly falling. He wondered what he would be headed back to.
-
-What had he done? What had he unleashed? Or had he done nothing? 
-
-But whatever had he had done, it was in already motion. This meeting could change the course of galactic history but would be no record of any of this would remain. It would even be stripped from the ship’s memory banks. He wondered how often history turned on events like this. The future, at his behest, had been cast into chaos. 
-
-Far across the galaxy, someone else was having a similar thought. She’d just gotten off the comm with Rhett Conn. Her mind too was racing. But her incredibly intelligent, insightful mind lacked the chaos of the young officer. Her thoughts were well ordered, each building on the other. She was formulating. Weighing a gameplan. Calculating odds of various scenarios. Crafting details. The chaos the officer saw was being narrowed into absolute certainty in her mind.
-
-She was considering Conn’s proposal. It was risky. Insane, really. Most of his plans were. But this one was big. And he was right. It would work. It was as flawless as her porcelain skin, deep green eyes and long black hair. 
-
-She’d be crazy to pass it up. 
-
-
-
-
-
+*Rett*
 
 
 
@@ -1230,6 +1167,8 @@ He returned to the table.
 
 
 
+
+Han has been staring into his drink for hours. 
 
 
 
