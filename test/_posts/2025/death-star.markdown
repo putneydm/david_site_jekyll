@@ -1,4 +1,20 @@
 
+Fleet Admiral Javrick Vost
+Lt Rylan Tracee
+
+Revanche - flagship
+Wrath 
+Infernus
+
+commander Thorne Kael -- capt of Kriegs
+
+Jindon Krell
+
+Sorna Prime -- his destination to meet with the grand admiral
+
+
+
+
 Plot notes: 
 
 Rett mentioned that they have enough irisidium tricobalt to blow up a small moon
@@ -70,6 +86,138 @@ Six months of repairs and testing — for a puff of dust. The reactor was still 
 
 
 
+"This doesn't work?"
+
+The admiral sitting at his desk was holding up a pen. His aide rushed over to take the defective item from the officer's upheld hand. The Admiral didn't bother to look up.
+
+"My apologies, Admiral Vost." The junior lieutenant pulled a pen he kept at the ready from the breast pocket of his uniform and put it into the Fleet Admiral's hand. The admiral realized it still had the cap on. He threw a glance at the lieutenant. 
+
+"Lieutenant Tracee ..." The officer braced for the admiral's response to the oversight. None came. "What is next on the agenda," the old man asked. His voice echoed in the vast empty space of the room. 
+
+Most admirals of his rank dreaded their morning briefing. It was meant to give them an overview of fleet operations, but it mainly was paperwork -- endless signing of orders, transfers, requisitions and all the other blizzard of paperwork required to run a vast Imperial Fleet.
+
+But Vost rather enjoyed it all. He'd even set up a special office just for this purpose on the Star Destroyer *Revanche* where he kept his flag. He'd converted an expansive auxilliary hanger bay. He'd schedule his briefings here, with those in attendence standing before an imposing desk made of sharp, faceted obsidian set in front of floor-to-ceiling windows, his fleet and endless star backdrop framing the Admiral's icy blue stare.
+
+"Next is a penal issue, "sir." Tracee carefully set down, flipped open and then and aligned the folder on the desk in front of Vost. "A case adjudicated by Commander Kael of the Trooper Assault Carrier *Kriegs*. Several of his Stormtroopers were running a black market ring. Stolen goods, gambling, other crimes not befitting the service," The young officer put just enough disdain into the statement that Vost would know he disapproved of the crimes. "Your signature is required on their termination order, sir."
+
+The admiral flipped through several pages in the folder. "Termination," he muttered. His eyes lingered on the list of the guilty troopers, barely a change to the admiral's face. 
+
+"Lieutenant, give me a number." 
+
+"Thirty-seven, sir."
+
+"No, between 1 and 8."
+
+"Four, sir."
+
+"Splitting the difference, I see." The Admiral circled the fourth name on the list and scribbled a note next to it. "He flipped to the last page and affixed his signature."
+
+"See that Kael ..." he paused to flip back to the page to read the circled name. "... returns Trooper MT-6391 to duty with reduced rank." He turned to his aide. 
+
+"Am I not merciful?" he asked without looking over. 
+
+"Sir, I, uh ..." The admiral didn't wait for his answer. "Mercy has nothing to do with it. Discipline requires fear. Fear requires a witness. Let it be the trooper." 
+
+Tracee removed the file from the admiral's desk and quickly replaced it with another. This time he spread the papers, but as had been the norm the last few cycles, the list was quite lengthy requiring quite a bit of shuffling. "Sir, crew transfers." 
+
+The admiral scanned them, and again his eyes stopped at a lengthy list of names on one of the pages. 
+
+"What's this?"
+
+The lieutenant leaned over, to look at the list. "Sir, that is the engineering crew of the *Revanche*, I believe, sir."
+
+"You brought orders to transfer away the engineering crew of my flagship?" It wasn't a question so much as a statement. The admiral continued scanning the list. "Officers, enlisted, troopers, TIe fighter squadrons and their fighters ..." He seemed to think. "Every week you bring me transfer orders but almost no replacements. What is this."
+
+"Sir, I uh ..." Tracee stammered to form an answer. "I, uh, bring reports as prepared by Fleet Logistics. Commander Krell, uh ..."  
+
+Krell was an officer than Vost knew well. A small, portly man in an ill-fitting uniform who was more of an accountant than a fleet officer. He had an uncanny ability to answer questions without really providing information. But he had never failed the admiral either. He ran his office with ruthless efficiency, something that Vost respected even while despising the man.
+
+"I want Krell here in 10 minutes." 
+
+"Sir, he's aboard the *Driver*."
+
+"Then he'd better head out now," the admiral snapped.
+
+
+Krell arrived at the admiral's office and stood before that towering blast doors. He took several breaths. Somehow he'd been able to avoid this moment for a six cycles of his service to the 11th Fleet and Admiral Vost. But here he was.
+
+
+This was a well-known ritual for unlucky officers. Few returned from his office with their careers and service intact. Some never returned. 
+
+The blast doors slid open with a mechanical groan. Far beyond them sat the admiral at his desk, with light glinting off its faceted surface. Behind him the *Infernus* was making a leisurely turn as several TIE fighters swept past the windows. He began the long walk across the former hanger bay, careful to be as brisk as possible, but not rushed. His footsteps echoed off the walls, emphasizing each step toward the admiral.
+
+The admiral sat waiting, his youthful aide, a standing beside him. He was a tall man. A little too tall, and thin-but-fit for his age. He had a long face with angular surfaces to match the desk he sat before. A large shock of white hair framed his face. He was known for his hair, and for not wearing his uniform hat. Probably something he can get away with as a flag officer. The admiral betrayed no emotion save for his blue eyes that followed the logistic officer as he approached. 
+
+The logistics officer stood before the admiral waiting. The background thrumm of the ship's engines filled the room. The admiral looked the officer up and down several times. He motioned for his aide to leave.  
+
+When the aide's footsteps finally receded, the admiral motioned to the report spread across his desk. "Explain this."
+
+"Sir, these are the crew transfers ..."
+
+"My engineering crew. Lt. Tracee informs me that they were working on a cryogenic plant upgrade."
+
+"Sir, that project is at least a half cycle delayed because of parts and ..."
+
+"Think carefully before answering. These words might be your last," the admiral said, in a chiding tone. The admiral watched the officer. A bead of sweat was rolling down his temple. He knew men, and he was weak. 
+
+"Sir, these orders come ..." He seemed hesitant. "These come from ..." He seemed deeply reluctant to say. His life had just been threatened and yet, he paused. Finally he blurted out. "They come from the Directorate. They arrive and I am to sign them. I have no say."
+
+"You serve this fleet and its needs. You report to me. Hiding this is inexcusible." 
+
+"Sir, if I may," Krell stammered. 
+
+"You may not. You are relieved of duty. I want you off my ship and out of my fleet." 
+
+Krell seemed to find an inner strength. "Sir, you can't."
+
+"I can't!" he thundered, his voice resonating around the office.
+
+"Sir, I, I mean you literally can't. Sorry. Sorry sorry sorry. I work ... I work for the Directorate. They ..." He seemed hesitant. "They ... they ... removed me from your command, sir. I had no choice." He was sounding increasingly urgent and desperate. 
+
+"I simply pass along their orders." There was deep fear in his voice. "Sir, I ... I ... "
+
+The admiral held up his hand, silencing the officer trembling before him. He leaned back in his chair. His mind was weighing possibilities. His fleet had bee suffering shortages and supply problems for months now. Death Star construction. The battle station was known to the admiralty but also an open secret among even low-ranking officers. The amdiral had bristled at the cutbacks and shortages. But the directorate had planted a spy in his own fleet. 
+
+He looked back toward the pathetic officer in front of him. 
+
+"How long?"
+
+"Always. Since always. Three cycles."
+
+"Who?" 
+
+"I don't know. Someone who works in the supply chain at the directorate. He recruited me." 
+
+The admiral sat and calculated again. He had to be careful. The Directorate could not know that he had compromised their man. If the Directorate found out, Krell would be expended. Another thought: Their knowing would certainly compromise the admiral's position. *But what does that mean?* Vost continued to work the problem. 
+
+Krell certainly knew the former was true. The admiral could see the wreck standing before him. But he had not seen the danger the admiral faced. If Krell figured that out, well, the admiral would in as much danger as himself ... But, Vost's mind quickly shifted. Krell did not seem a devious man. The admiral knew he had long outsmarted those who opposed him, far more formidable men than this. He trusted his earlier read of the officer. Weak men don't push back. But Vost interrupted that thought. Such men can flail about and cause damage.
+
+He had but a moment to make a decision.
+
+"You belong to me now." the admiral said, flatly. "Continue as if this conversation never happened. I don't know what you've heard, but I protect those who work for me." This did little to calm Krell, who was a sweaty rumpled mess.
+
+"Clean yourself off and return to your post." he looked directly at him. "If this conversation never happened, then nothing changes. Understand?"
+
+"I do." 
+
+"Go."
+
+The admiral watched him walk out, feeling contempt with each of his steps. He hated him for breaking, he hated him for their agreement, and hated him for leaving. 
+
+"He leaned over and pushed a button on his desk."
+
+"Follow him. Monitor his communications," he paused considering one more time the move he was about to make. "And make sure he has an accident." He signaled his aide to return.
+
+"Bring me the last six weeks of logistics and personnel reports. Everything." 
+
+"Sir, we will be leaving for Sorna Prime shortly."
+
+"Have them ready on my shuttle." He sat back again. 
+
+Talking to Krell had been a mistake. He knew that now. But eliminating him would not be. He had to send a message. He knew and didn't care. No, that he wasn't afraid of them. They might come for him, sure. *Let them try*. 
+
+
+
 
 
 
@@ -78,31 +226,106 @@ Six months of repairs and testing — for a puff of dust. The reactor was still 
 
 “Nothing works.” He was exasperated. 
 
-The admiral lifted his eyes to see what the commotion at the back of the cabin was all about. The officer was lounged deep in the passenger seats in the Imperial shuttle. 
+The admiral lifted his eyes to see what the commotion at the back of the cabin was all about. The officer was lounged deep in the passenger seats in the Imperial shuttle. More muffled muttering and swears came from the galley. 
 
-He could hear muffled muttering and swears coming from the galley. He was annoyed at the break in protocol — but his young aide — there was something about him — that it also amused the old man. Maybe he saw bits of what he wished he could be. What he once had been. Things a life of service In the Imperial Fleet has not yet disposed of. He often found himself having an unexpected soft spot toward the young man. 
+The ensign appeared in the doorway. He stood bolt upright, a uniform hanging on rather than covering his thin frame. His eyes were fixed on some distant position. 
 
-He mustered a little will and shouted toward the back. “Protocol. You’re an officer.” It was instinctive as much as anything.
+“Sir, the jaffe dispenser is not working. Maintenance assured me it was fixed. I don’t think they even touched it.”
 
-The lieutenant appeared in the doorway. He stood bolt upright. His eyes fixed on some distant position. 
+“Protocol, Ensign Voss. You’re an officer.”
 
-“Sir, apologies, sir! Such behavior is inexcusable.” He seemed to soften a bit. “Sir, it’s just that the jaffe dispenser is not working. Maintenance assured me it was fixed. I don’t think they even touched it, sir.”
+“Sir, apologies! Such behavior is inexcusable.”
 
-“It’s fine,” the admiral said. I’ll just take some water, then.” 
+"I’ll just take some water, then," the admiral said."
 
-“Sir, thank you. I will see if I can get it working for you before we land, sir.” He paused.  “If I may, if they lie to me, then they lie to you. If they lie to you, then they lie to the Empire. I’ll not stand for that.” He paused again before adding “sir.”
+The ensign returned with a tumbler. The admiral set it aside. He went back to the sheaf of papers spread out in front of him. Maintenance schedules, invoices for materials, manpower rosters. He’d been dealing with them since he was as young as his aide. “The fleet runs on paperwork” his old mentor used to say.
 
-That was the kind of youthful impertinence the old man rarely tolerated. But he felt himself holding back and smile and chuckle. The admiral nodded and added a grunt. He kept his impassive visage — years of training and practice made sure of that. The young man’s idealistic zeal. They all arrived out of the Academy this way. The Empire can do anything! Yes that was true. The Empire  had done much. But the youthful can-do could be a bit much. They couldn’t see the hard work and years of decisions and toil and loss that had made that possible. But he’d rather have the likes of him running the Empire than the officers he dealt with on a daily basis. Maybe, not. 
+The young man continued standing at attention. The admiral finally realized. 
 
-Once he was to of the cabin, the admiral cracked a slight smile. 
+"Speak."
 
-He went back to the sheaf of papers spread out in front of him. Maintenance schedules, invoices for materials, manpower rosters. He’d been dealing with them since he was as young as his aide. “The fleet runs on paperwork” his old mentor used to say. The. Add with a wry smile “let’s see the Sith deal with that shit.” 
+"Sir, Captain Yost requests to speak with you immediately about efforts to find the Rebel base in the Kartom System." 
 
-If this was true, he wasn’t sure what the fleet was running on these days. The paperwork in front of him was a disorganized mess. As far the admiral could tell, the same people and it’s were just being shifted from place to place inside the fleet. Maintenance  schedules were all over the place. Funds were diverted from one project to another and then diverted back. Didn’t matter. His operations chief sent it up to him to sign. Nor did he have the time. He signed the last page, stuffed it into folder and handed, it to his aide, who had arrived to hand him a tumbler full of water. 
+The admiral hated Yost. He had considerable skill and cunning. He didn't even mind the arrogance. But Imperial command clearly wanted him to be the next fleet admiral -- the admirals' current command. So did Yost. The admiral had him out hunting the Rebellion for now, but sooner or later an man of Yost's ability was actually going to fnd them. 
 
-“We’ll be landing on Mons Damore in about 20 minutes,” the said aid said softly. “Sir, I will have that dispenser working,” he reassured him again. “I’ll find the people responsible.” 
+"Put him through," he said, sitting up straight and adjusting his uniform. A hologram of the captain flickered on.
 
-“Yes,” the old man said, and added with a mumble. “I’m sure you will.” 
+"Sir, the hunt goes well. We have found the remains of a Rebel Base." 
+
+"The remains? Aren't you hunting Rebels?," the admiral said with a slightly withering tone. 
+
+"Sir, we are. This is an important clue."
+
+"You contacted me to tell me that?"
+
+"Not entirely, sir."
+
+"Go on."
+
+"Sir, I must vehemently protest the transfer of our chief engineer and staff to the Death Star. Our cryogenic plant refurbishment is ..."
+
+The admiral cut him off. "I know nothing of this."
+
+"This is outrageous. The orders came from your command!" The captain was furious. "Our staff is right in the middle of ..."
+
+"I told you that I know nothing." He waved his hand and the hologram muted.
+
+"Ensign!" he shouted. The officer appeared almost instantly. "I need you to find out who in my office issued orders to reassign the engineering crew of the *Vengence*." He nodded and stepped out.
+
+The admiral waved his hand again and returned to the captain. 
+
+"I did not order the transfer. My office will look into it. Out." He dismissed the call. Arrogant ass, he thought. 
+
+He went back to the papers in front of him. He was fuming over the exchange and found it hard to concentrate. Even if it wasn't him, why would anyone take away an entire engineering crew? 
+
+The paperwork spread in front of him probably held the answers. Except he wasn’t actually sure what his fleet was running on these days. Despite the ensign's typically efficient efforts, paperwork had increasingly shown a fleet  in crisis. Crews were being shifted from place to place across his fleet and others. Maintenance schedules were months behind or outright canceled. Funds were diverted away from one projects. All this was coming from the Imperial Directorate. Even if he objected, nothing could be done. 
+
+If the order did come from his office without his knowledge, he'd deal with that. But no apology would be forthcoming to the captain. Not ever. Not to him.
+
+He was still ruminating when the ensign reappeared. 
+
+“The pilot says we're experiencing a slight problem with the landing gear, but we’ll be landing on Mons Damore in about an hour,” the aid said softly. 
+
+"Good. 
+
+
+
+The ship touched down with a solid clank on the deck. 
+
+The admiral barely noticed as he was so deep into the papers in front of him. He'd not really paid close attention before. Logistics and requisition reports were just part of the job, something he signed off on regularly. He depended on his procurement and logistics officer to handle the details. But he now had several cycles of reports spread out in front of spread out on his desk. He was seeing was an alarming pattern. 
+
+Crews members being pulled for "unspecified duty" was common. Most postings almost 25 percent below operational requirements. Parts and supplies were in short supply, with some in particular back-ordered for multiple cycles. The XXXXXX had been awaiting an engineering overhaul for multiple cycles. But parts and crews were listed as "not available."
+
+The entire fleet had multiple cycles of deferred maintenance. Even if it began immediately it would stretch out far into the future to just get caught up. 
+
+As he shuffled each paper, as each problem became clear, he could feel his irritation rise. Even this analysis was clearly not the full picture, just a glimpse. Why had his staff not briefed him on the situation? His mind turned to the most obvious reason. While the Death Star was well known among the Imperial Admiralty, it was more of an open secret among leadership. 
+
+Diversion of crews and material had long been a sign of its construction. The work had dragged on longer and longer. Despite the eager briefings of the engineering directorate on construction progress, the end date seemed to always be moving out further and further. 
+
+No one wanted to be seen as questioning the decision to undertake such a massive endeavor. Logistics and supply issues were simply the price of grand ambition he told himself. The admiral had his own doubts, kept strictly private. He'd driven ships and now an whole fleet for his entire career. He was a military man first and foremost, and thought like one. The Death Star was a terror weapon. Artillary, really. He saw no strategic need for it. 
+
+"The ultimate power in the universe." That was what they called it. But the galaxy already feared the Empire and its reach. And he -- his fleet -- had been and still were central this fear. A turbolaser bombardment from space would devastate an entire planet. Not as quickly, but it would achieve the same end. Much of the Empire had been conquered by threat alone, with barely a shot fired. He'd fought major battles early on. He'd put down insurrection. Rebellious systems learned that an imperial fleet entering their star system was threat enough. The fleet had already become the ultimate power. The Death Star, it was just a symbol of that power. A single nexus of fear.
+
+All this disruption and deterioration of the fleet didn't seem worth a symbol. He knew this deep down. He suspected others did. But he was also loyal. He had his duty, and it filled his days. He'd soon be back with his fleet in the command ship *Vindicator*, commanding his Star Destroyers to hunt down the Rebel base and every last soldier of their pathetic band. He'd have the the entire operation finished before the Death Star ever came on line. 
+
+He was mulling these thoughts when his aide approached. 
+
+"Sir, we've landed."
+
+He stood so the young officer could go over the details of the admiral's uniform, checking for creases, lint or any imperfection. The admiral was a stickler for such details. When the lieutenant was satisfied, he gave the admiral a nod.
+
+"Would you like to organize your papers," he said, looking at the desk in an unusual state of disorder. 
+
+"No. I'm in the middle of work."
+
+"Very good, sir. They'll be extending the ramp in a minute or so."
+
+"Tell flight crew to keep the engines cycling. I want to get back to the fleet as soon as we finish here." The mechaical whirr of ramp filled the cabin. He started to walk out. "Also, set up a briefing with my procurement and logistics staff. I have some questions for them." 
+
+
+
+
+
 
 
 
@@ -520,14 +743,6 @@ The man seemed to be slightly confused for a few seconds. Behind him a swarm of 
 
 
 
-
-
-
-
-
-
-
-
 The young officer was dead man walking. 
 
 He was shaking with fear the whole walk, each step leaden. His mind kept flashing back. That feeling. On his knees, cold metal pressed against his head. A swell of anxiety swept across his body. 
@@ -594,11 +809,37 @@ The stranger leaned forward, his hands on the desk. For a moment the officer fel
 
 "Fleet admirals don't normally send out personal aides in their own shuttle to buy equipment from smugglers do they?" he asked. He seemed to be watching for the officer to react. "Let's see what the old man wants. We go way back, me and him, you know?"
 
-He got out of his chair and walked to a large stack of papers. He looked as if he was concentrating a second or two before he reached out, slowly hovered his and as if honing in and quickly yanked a folder from the midst of the stack. He paused as it teetered slightly but didn't fall. Back at his desk he flipped it open. The young officer saw the admiral's seal and the words Top Secret inscribed on it. 
+He got out of his chair and walked to a large stack of papers. He looked as if he was concentrating a second or two before he reached out, slowly hovered his and as if honing in and quickly yanked a folder from the midst of the stack. He paused as it teetered slightly but didn't fall. Back at his desk he flipped it open. The young officer saw the admiral's seal inscribed on it. 
 
-The expression dropped from Konn's face as his brow furrowed in thought. He lit up with a realization and a smile formed. "You clever bastard," he muttered. He turned to the officer. "No, not you. You seem quite average. No offense." 
+He flipped through the file. "Supplies. Spares. Parts. Standard requisitions. Nothing out of the ordinary," he said, setting the file down. "It's certainly nothing they'd send you all the way out here for." He leaned in toward the officer.  
 
-Konn seemed to be thinking out loud. "This is the most interesting request to come across my desk in a long time." He paused. Clearly the gears were turning. Finally he refocused on the officer. His eyes were glinting with excitement. He held up the folder.
+"So, why are you here?" He waited for an answer. 
+
+Hearing none, Konn held up a datacard, the gold disc in the center glinting as he flipped it around with his fingers and deftly inserted it into a slot in his desk. Yet his gaze was fixed on the young officer. He saw Tracee's eyes widen and the young officer's hand instincitively reach toward the inner pocket of his uniform. 
+
+Konn pulled his disc out of the slot and set it down. "Perhaps we should see what's on the one in your pocket instead." 
+
+"I need to go," Tracee muttered and fumbled into a semi-standing position.
+
+"Please, please, please. Sit." Konn said calmly. "I'm not Black Hand. Listen and understand. I am just an obtainer of things. Mundane or rare. Legal or, well, not. I see everything. Whatever you are afraid of, I have seen it before. Whatever you want, I've gotten it for someone before. I pulled you here because I figured whatever it is was more interesting than whatever all this is." He gestured at the mess of paperwork surrounding him.
+
+"Also, Black Hand will kill you for your ship." 
+
+The young man fumbled the rest of his way up to his feet. 
+
+"Wait. That wasn't a threat," Konn said. "Sorry. Sorry. Basic isn't my native language. They're the threat. They are the danger. I'm not trying to rob you. I'm trying to help you. I'm just a supply clerk." 
+
+Konn's hand was outstretched. 
+
+Tracee considered his options. In the Empire, consorting with black marketeers meant death. The prospect of returning empty handed was almost as unappealing. A successful mission granted him the Admiral's protection. He felt his hand go into his pocket and hand over the datacard even as the options rolled in his mind. 
+
+Konn deftly inserted it into the slot. A hologram of some sort of tecnhological device appeared. It was roughly box shaped. As it rotated, some sort of field emitters came into view, and then a interface panel.
+
+The expression dropped from Konn's face as his brow furrowed in thought. "Is that a ..." He lit up with a realization and a smile formed. "You clever bastard," he muttered. He turned to the officer. "No, not you. You seem quite average. You reslly did hand over that datacard pretty easily. No offense." 
+
+"None taken," the officer said in a tone that seem to indicate that actually he did take offense. 
+
+Konn seemed to be thinking out loud. "This is the most interesting request to come across my desk in a long time." He paused. Clearly the gears were turning. Finally he refocused on the officer. His eyes were glinting with excitement. 
 
 "This request is really hard to get. Very, very hard to get. The people you were here for, they can't get it. They would have taken your credits and then killed you." He was quite matter of fact. 
 
@@ -606,7 +847,7 @@ Konn seemed to be thinking out loud. "This is the most interesting request to co
 
 "A Polylaminate Lateral Orthogenic Tesseract."
 
-The lieutenant suddenly remembered the admiral's phrase "not striclty legal." 
+The lieutenant remembered the admiral's phrase "not striclty legal." 
 
 "Wait. Forget that too. In fact, forget all this." Konn leaned in. "Tell no one about this meeting. No one. Not even the admiral. Actually, tell the Admiral about the Poly thing. Just don't tell him I got it. Does this make sense?"
 
@@ -642,37 +883,10 @@ At his presence the ramp began to lower. The warm yellow glow was a familiar sig
 
 
 
+## Conspiracy
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-“Are they sure that the plans are on board and in the hands of Rebels.”
+“Are they sure the plans are on board and in the hands of Rebels.”
 
 The two men were looking at a tactical display.  They’d received an order minutes ago. Vital Imperial plans had been stolen and were in the hands of Rebels. They were to pursue and intercept. Take passengers and cargo alive.”
 
@@ -688,7 +902,7 @@ He turned to his weapons officer.
 
 Exiting hyperpace in 5-4-3-2 … 
 
-The long streaks of the star field suddenly snapped into exact points of light. Tatooine was just a tiny bight spot. 
+The long streaks of the star field suddenly snapped into exact points of light. Tatooine was just a tiny bright spot. 
 
 “Scanning for vessel” the tactial officer reported. “Their transponder is off. If they’re out there, they’re running silent.”
 
@@ -736,7 +950,7 @@ The destroyer in hot pursuit flew through the flaming cloud. Bits of debris clan
 
 “Shit.” a voice said from somewhere on the bridge. “Fuck me” another voice added. “Did that just happen?” another said. 
 
- “Weps, what the fucking fuck?” the captain asked. 
+“Weps, what the fucking fuck?” the captain asked. 
 
 “Sir, it was a lucky shot. I mean an unlucky lucky shot.”
 
@@ -807,7 +1021,7 @@ He’d hardly said the words when a blast door at the back of the room opened, s
 
 “In this room sit the most powerful men to have ever inhabited the galaxy,” the figure began walking toward the group his footsteps and voice echoing around the chamber. He was darkly silhouetted by the light poring through the doorway. “Yet you come here all of you, top squabbling like schnape in some pathetic show of weakness. You know the answer, but dare not say it.”
 
- One of the admirals signaled toward his guards. The man sitting next to him put his hand on the first man’s shoulder. He quickly relented, and waved his guards back.
+One of the admirals signaled toward his guards. The man sitting next to him put his hand on the first man’s shoulder. He quickly relented, and waved his guards back.
 
 The figure continued toward the table, “So here I am,” the figure said, finally stepping into the illumination over the table. He was wore a rumpled, sweat-stained uniform shirt with empire insignia and a no rank markers that strained to contain is ample gut. His pants were not empire-issued. Rather they were baggy loose fitting and made of gray cloth. He has an almost square face, a thick crop of dark hair and a nearly trimmed beard. A bulge of a double chin hung from his neck that wattled each time he spoke. 
 
@@ -823,7 +1037,7 @@ The admiral, almost reflexively, in a half gasp that betrayed his shock and dism
 
 “Surely I have made my meaning plain,” the man replied.
 
-One Grand Admiral finally cut into the exchange. “Who is this man? Why is he here?”
+One Grand Admiral finally cut into the exchange. “Who is this Konn anyway?”
 
 “May I sit down,” the man said, flopping down into a chair before anyone could answer. He slumped back, seemed to consider putting his feet on the table for a second, but then didn’t. He motioned to the Admiral. “Please continue.”
 
